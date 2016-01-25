@@ -39,6 +39,21 @@ module.exports = function(app){
 
 			}
 
+    		if (req.query.action.toLowerCase() == 'byterm'){
+    				
+
+					app.resources.byTerm(req.query.value, function(resource){    	
+						res.type('application/json')
+			    		res.status(200).send(JSON.stringify(resource, null, 2))
+			    		return true
+			    	})
+
+			}
+
+
+
+
+
 		}else{
 
 			res.type('application/json')
