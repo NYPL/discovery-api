@@ -73,7 +73,7 @@ if (cluster.isMaster) {
 
 
 	app.get('/', function(req, res) {
-		res.send(':) test ' );
+		res.send(':) YAY! ' );
 	});
 
 
