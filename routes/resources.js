@@ -20,7 +20,7 @@ module.exports = function(app){
     		if (req.query.action.toLowerCase() == 'search'){
 
 
-					app.resources.findById(req.query.value, function(resource){    	
+					app.resources.findById(req.query.value, function(resource){
 						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(resource, null, 2))
 			    		return true
@@ -29,9 +29,9 @@ module.exports = function(app){
 			}
 
     		if (req.query.action.toLowerCase() == 'overview'){
-    				
 
-					app.resources.overview(req.query.value, function(resource){    	
+
+					app.resources.overview(req.query.value, function(resource){
 						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(resource, null, 2))
 			    		return true
@@ -40,7 +40,7 @@ module.exports = function(app){
 			}
 
     		if (req.query.action.toLowerCase() == 'ntriples'){
-					app.resources.overviewNtriples(req.query.value, function(triples){    	
+					app.resources.overviewNtriples(req.query.value, function(triples){
 						res.type('text/plain')
 			    		res.status(200).send(triples)
 			    		return true
@@ -48,7 +48,7 @@ module.exports = function(app){
 			}
 
     		if (req.query.action.toLowerCase() == 'jsonld'){
-					app.resources.overviewJsonld(req.query.value, function(resource){    	
+					app.resources.overviewJsonld(req.query.value, function(resource){
 						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(resource, null, 2))
 			    		return true
@@ -57,9 +57,9 @@ module.exports = function(app){
 
 
     		if (req.query.action.toLowerCase() == 'byterm'){
-    				
 
-					app.resources.byTerm(req.query.value, function(resource){    	
+
+					app.resources.byTerm(req.query.value, function(resource){
 						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(resource, null, 2))
 			    		return true
@@ -70,7 +70,7 @@ module.exports = function(app){
     		if (req.query.action.toLowerCase() == 'searchold'){
 
 
-					app.resources.findByOldId(req.query.value, function(resource){    	
+					app.resources.findByOldId(req.query.value, function(resource){
 						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(resource, null, 2))
 			    		return true
@@ -78,6 +78,16 @@ module.exports = function(app){
 
 			}
 
+    		if (req.query.action.toLowerCase() == 'byowi'){
+
+
+					app.resources.findByOwi(req.query.value, function(resource){
+						res.type('application/ld+json')
+			    		res.status(200).send(JSON.stringify(resource, null, 2))
+			    		return true
+			    	})
+
+			}
 
 
 		}else{
