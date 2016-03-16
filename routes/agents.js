@@ -11,30 +11,31 @@ module.exports = function(app){
 
 
 
-    app.get('/api/agents', function(req, res){
+    app.get('/api/v1/agents', function(req, res){
 
 
     	if (req.query.action){
 
+    		//if no "value" parm given error out except if...
     		if (!req.query.value && ['random'].indexOf(req.query.action.toLowerCase()) == -1){
-				res.type('application/json')
+				res.type('application/ld+json')
 				res.status(500).send(JSON.stringify({error: "No Value supplied"}, null, 2))
 				return
     		}
 
-    		if (req.query.action.toLowerCase() == 'search'){
-
+    		if (req.query.action.toLowerCase() == 'lookup'){
 					app.agents.findById(req.query.value, function(agent){    	
-						res.type('application/json')
+						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(agent, null, 2))
 			    		return true
 			    	})
-
 			}
     		if (req.query.action.toLowerCase() == 'searchbyname'){
 
-					app.agents.searchByName(req.query.value, function(agent){    	
-						res.type('application/json')
+    				if (!req.query.page) req.query.page = 1
+
+					app.agents.searchByName(req.query.value, req.query.page, function(agent){    	
+						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(agent, null, 2))
 			    		return true
 			    	})
@@ -44,25 +45,25 @@ module.exports = function(app){
     		if (req.query.action.toLowerCase() == 'overview'){
 
 					app.agents.overview(req.query.value, function(agent){    	
-						res.type('application/json')
+						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(agent, null, 2))
 			    		return true
 			    	})
 
 			}
-    		if (req.query.action.toLowerCase() == 'resourcereport'){
+   //  		if (req.query.action.toLowerCase() == 'resourcereport'){
 
-					app.agents.reportResourceType(req.query.value, function(agent){    	
-						res.type('application/json')
-			    		res.status(200).send(JSON.stringify(agent, null, 2))
-			    		return true
-			    	})
+			// 		app.agents.reportResourceType(req.query.value, function(agent){    	
+			// 			res.type('application/ld+json')
+			//     		res.status(200).send(JSON.stringify(agent, null, 2))
+			//     		return true
+			//     	})
 
-			}
+			// }
+
     		if (req.query.action.toLowerCase() == 'imagesof'){
-
 					app.agents.imagesOf(req.query.value, function(agent){    	
-						res.type('application/json')
+						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(agent, null, 2))
 			    		return true
 			    	})
@@ -71,7 +72,7 @@ module.exports = function(app){
     		if (req.query.action.toLowerCase() == 'resources'){
 
 					app.agents.resources(req.query.value, function(agent){    	
-						res.type('application/json')
+						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(agent, null, 2))
 			    		return true
 			    	})
@@ -81,7 +82,7 @@ module.exports = function(app){
     		if (req.query.action.toLowerCase() == 'random'){
 
 					app.agents.randomAgents(function(agents){   
-						res.type('application/json')
+						res.type('application/ld+json')
 			    		res.status(200).send(JSON.stringify(agents, null, 2))
 			    		return true
 			    	})
@@ -91,7 +92,7 @@ module.exports = function(app){
 
 		}else{
 
-			res.type('application/json')
+			res.type('application/ld+json')
 			res.status(500).send(JSON.stringify({error: "No Action requested"}, null, 2))
 
 

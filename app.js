@@ -41,6 +41,8 @@ if (cluster.isMaster) {
 	require('./routes/agents')(app)
 	require('./routes/resources')(app)
 
+	require('./routes/misc')(app)
+
 	db.databaseConnectTripleStore()
 
 	app.esClient =  new elasticsearch.Client({

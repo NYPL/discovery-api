@@ -7,6 +7,7 @@
     "elasticsearch": "^10.1.2",
     "express": "^4.13.3",
     "jsonapi-serializer": "^2.0.0",
+    "jsonld": "^0.4.5",
     "md5": "^2.0.0",
     "moment": "^2.10.3",
     "mongodb": "^2.0.39",
@@ -16,8 +17,8 @@
     "string_score": "^0.1.22"
   },
   "devDependencies": {
-    "mocha": "2.2.5",
-    "should": "7.0.2"
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
   },
   "scripts": {
     "test": "mocha test"
