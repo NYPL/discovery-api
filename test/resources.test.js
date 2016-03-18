@@ -1,6 +1,6 @@
 var request = require("request"),
     assert = require('assert'),
-    base_url = "http://localhost:3000"
+    base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : "http://localhost:3000")
 
 describe("Test Resources responses", function() {
 
