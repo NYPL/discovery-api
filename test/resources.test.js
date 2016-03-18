@@ -27,6 +27,17 @@ describe("Test Resources responses", function() {
     })
   })
 
+  describe('GET resources random', function() {
+    var randomUrl = `${base_url}/api/v1/resources?action=search`
+    it('Resource random has requested page size', function(done) {
+      request.get(`${randomUrl}&per_page=13`, function(error, response, body) {
+        var doc = JSON.parse(body)
+        assert.equal(13, doc.itemListElement.length)
+        done()
+      })
+    })
+  })
+
   describe('GET resources search', function() {
 
     var searchAllUrl = `${base_url}/api/v1/resources?action=search`
