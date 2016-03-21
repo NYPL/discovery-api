@@ -21,7 +21,7 @@
     "should": "^7.0.2"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "standard && mocha test"
   },
   "description": "",
   "license": "MIT",
