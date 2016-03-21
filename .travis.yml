@@ -3,5 +3,5 @@ dist: trusty
 language: node_js
 node_js:
   - "stable"
-  env:
-  - NODE_ENV=travis
+env:
+- NODE_ENV=travis
