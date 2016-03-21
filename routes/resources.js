@@ -39,13 +39,15 @@ module.exports = function (app) {
         res.type('application/json')
         res.status(500).send(JSON.stringify({error: 'Invalid Action'}, null, 2))
       } else {
-        var handlerConfig
-        if (handlerConfig = actionHandlers[action]) {
+        var handlerConfig = null
+        if ((handlerConfig = actionHandlers[action])) {
           // If specific params configured, pass those to handler
           // otherwise just pass `value` param (i.e. keyword search)
           var acceptedParams = handlerConfig.params ? handlerConfig.params : standardParams
           var params = {}
-          acceptedParams.forEach(k => params[k] = req.query[k])
+          acceptedParams.forEach((k) => {
+            params[k] = req.query[k]
+          })
           handlerConfig.handler(params, function (_resp) {
             res.type(handlerConfig.contentType ? handlerConfig.contentType : 'application/ld+json')
             res.status(200).send(JSON.stringify(_resp, null, 2))

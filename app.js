@@ -1,7 +1,8 @@
 var cluster = require('cluster')
+var path = require('path')
 
 if (cluster.isMaster) {
-  var numCPUs = require('os').cpus().length
+  // var numCPUs = require('os').cpus().length
 
   for (var i = 0; i < 1; i++) {
     cluster.fork()
@@ -16,11 +17,11 @@ if (cluster.isMaster) {
   var config = require('config')
 
   var express = require('express')
-  var serveStatic = require('serve-static')
+  // var serveStatic = require('serve-static')
   var elasticsearch = require('elasticsearch')
   var pjson = require('./package.json')
 
-  var db = require(__dirname + '/lib/db.js')
+  var db = require(path.join(__dirname, '/lib/db.js'))
   var app = express()
 
   app.db = db
@@ -265,7 +266,7 @@ if (cluster.isMaster) {
   // 	})
   // })
 
-  var server = app.listen(config['Port'], function () {
+  app.listen(config['Port'], function () {
     console.log('Server started on port ' + config['Port'])
   })
 }
