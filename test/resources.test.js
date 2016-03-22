@@ -51,7 +51,7 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it('Resource search all returns > 10mil results', function (done) {
+    it(`Resource search all (${searchAllUrl}) returns > 10mil results`, function (done) {
       request.get(searchAllUrl, function (err, response, body) {
         if (err) throw err
         var doc = JSON.parse(body)
