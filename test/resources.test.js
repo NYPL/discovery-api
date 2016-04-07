@@ -5,7 +5,8 @@ var assert = require('assert')
 var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3000')
 
 describe('Test Resources responses', function () {
-  var sampleResources = [{uri: 101164830, type: 'nypl:Component'}, {uri: 100037340, type: 'nypl:Item'}]
+  // var sampleResources = [{uri: 101164830, type: 'nypl:Component'}, {uri: 100037340, type: 'nypl:Item'}]
+  var sampleResources = [{uri: 101164830, type: 'resourcetypes:col'}, {uri: 100037340, type: 'resourcetypes:txt'}]
 
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
@@ -21,7 +22,7 @@ describe('Test Resources responses', function () {
         request.get(`${base_url}/api/v1/resources/${spec.uri}`, function (err, response, body) {
           if (err) throw err
           var doc = JSON.parse(body)
-          assert.equal(spec.type, doc['rdf:type'][0]['objectUri'])
+          assert.equal(spec.type, doc.type) // ['rdf:type'][0]['objectUri'])
           done()
         })
       })

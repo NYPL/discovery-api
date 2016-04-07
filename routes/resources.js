@@ -15,14 +15,15 @@ module.exports = function (app) {
   })
 
   app.get('/api/v1/resources', function (req, res) {
-    var standardParams = ['page', 'per_page', 'value']
+    var standardParams = ['page', 'per_page', 'value', 'q']
 
     var actionHandlers = {
       // Redundant if we use resources/:id path above:
       'lookup': { handler: app.resources.findById },
 
       'searchbytitle': { handler: app.resources.searchByTitle },
-      'search': { handler: app.resources.search, params: standardParams.concat(['value', 'filters']) },
+      'search': { handler: app.resources.search, params: standardParams.concat(['filters']) },
+      'aggregations': { handler: app.resources.searchAggregations, params: standardParams.concat(['filters', 'fields']) },
       'overview': { handler: app.resources.overview },
       'ntriples': { handler: app.resources.overviewNtriples, contentType: 'text/plain' },
       'jsonld': { handler: app.resources.overviewJsonld },
@@ -48,6 +49,7 @@ module.exports = function (app) {
           acceptedParams.forEach((k) => {
             params[k] = req.query[k]
           })
+          if (req.query.q) params.value = req.query.q
           handlerConfig.handler(params, function (_resp) {
             res.type(handlerConfig.contentType ? handlerConfig.contentType : 'application/ld+json')
             res.status(200).send(JSON.stringify(_resp, null, 2))
