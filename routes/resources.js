@@ -1,3 +1,5 @@
+var gatherParams = require('../lib/util').gatherParams
+
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
@@ -42,14 +44,8 @@ module.exports = function (app) {
       } else {
         var handlerConfig = null
         if ((handlerConfig = actionHandlers[action])) {
-          // If specific params configured, pass those to handler
-          // otherwise just pass `value` param (i.e. keyword search)
-          var acceptedParams = handlerConfig.params ? handlerConfig.params : standardParams
-          var params = {}
-          acceptedParams.forEach((k) => {
-            params[k] = req.query[k]
-          })
-          if (req.query.q) params.value = req.query.q
+          var params = gatherParams(req, handlerConfig.params)
+
           handlerConfig.handler(params, function (_resp) {
             res.type(handlerConfig.contentType ? handlerConfig.contentType : 'application/ld+json')
             res.status(200).send(JSON.stringify(_resp, null, 2))

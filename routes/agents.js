@@ -1,3 +1,5 @@
+var gatherParams = require('../lib/util').gatherParams
+
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
@@ -6,61 +8,47 @@ module.exports = function (app) {
     next()
   })
 
+  app.get('/api/v1/agents/:id', function (req, res) {
+    app.agents.findById(req.params, function (_resp) {
+      res.type('application/ld+json')
+      res.status(200).send(JSON.stringify(_resp, null, 2))
+      return true
+    })
+  })
+
   app.get('/api/v1/agents', function (req, res) {
+    var standardParams = ['page', 'per_page', 'value', 'q']
+
+    var actionHandlers = {
+      // Redundant if we use resources/:id path above:
+      'lookup': { handler: app.agents.findById },
+
+      'searchbyname': { handler: app.agents.searchByName },
+      'search': { handler: app.agents.search, params: standardParams.concat(['filters']) },
+      'aggregations': { handler: app.agents.searchAggregations, params: standardParams.concat(['filters', 'fields']) },
+      'overview': { handler: app.agents.overview },
+      'random': { handler: (v, cb) => app.agents.randomAgents(v, cb) },
+      'resources': { handler: app.agents.resources },
+      'imagesof': { handler: app.agents.imagesOf }
+    }
     if (req.query.action) {
-      // if no "value" parm given error out except if...
-      if (!req.query.value && ['random'].indexOf(req.query.action.toLowerCase()) === -1) {
-        res.type('application/ld+json')
-        res.status(500).send(JSON.stringify({error: 'No Value supplied'}, null, 2))
-        return
-      }
+      var action = req.query.action.toLowerCase()
 
-      if (req.query.action.toLowerCase() === 'lookup') {
-        app.agents.findById(req.query.value, function (agent) {
-          res.type('application/ld+json')
-          res.status(200).send(JSON.stringify(agent, null, 2))
-          return true
-        })
-      }
-      if (req.query.action.toLowerCase() === 'searchbyname') {
-        if (!req.query.page) req.query.page = 1
+      // Error if action invalid:
+      if (Object.keys(actionHandlers).indexOf(action) < 0) {
+        res.type('application/json')
+        res.status(500).send(JSON.stringify({error: 'Invalid Action'}, null, 2))
+      } else {
+        var handlerConfig = null
+        if ((handlerConfig = actionHandlers[action])) {
+          var params = gatherParams(req, handlerConfig.params)
 
-        app.agents.searchByName(req.query.value, req.query.page, function (agent) {
-          res.type('application/ld+json')
-          res.status(200).send(JSON.stringify(agent, null, 2))
-          return true
-        })
-      }
-
-      if (req.query.action.toLowerCase() === 'overview') {
-        app.agents.overview(req.query.value, function (agent) {
-          res.type('application/ld+json')
-          res.status(200).send(JSON.stringify(agent, null, 2))
-          return true
-        })
-      }
-
-      if (req.query.action.toLowerCase() === 'imagesof') {
-        app.agents.imagesOf(req.query.value, function (agent) {
-          res.type('application/ld+json')
-          res.status(200).send(JSON.stringify(agent, null, 2))
-          return true
-        })
-      }
-      if (req.query.action.toLowerCase() === 'resources') {
-        app.agents.resources(req.query.value, function (agent) {
-          res.type('application/ld+json')
-          res.status(200).send(JSON.stringify(agent, null, 2))
-          return true
-        })
-      }
-
-      if (req.query.action.toLowerCase() === 'random') {
-        app.agents.randomAgents(function (agents) {
-          res.type('application/ld+json')
-          res.status(200).send(JSON.stringify(agents, null, 2))
-          return true
-        })
+          handlerConfig.handler(params, function (_resp) {
+            res.type(handlerConfig.contentType ? handlerConfig.contentType : 'application/ld+json')
+            res.status(200).send(JSON.stringify(_resp, null, 2))
+            return true
+          })
+        }
       }
     } else {
       res.type('application/ld+json')

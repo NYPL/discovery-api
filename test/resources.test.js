@@ -5,8 +5,8 @@ var assert = require('assert')
 var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3000')
 
 describe('Test Resources responses', function () {
-  // var sampleResources = [{uri: 101164830, type: 'nypl:Component'}, {uri: 100037340, type: 'nypl:Item'}]
-  var sampleResources = [{uri: 101164830, type: 'resourcetypes:col'}, {uri: 100037340, type: 'resourcetypes:txt'}]
+  var sampleResources = [{uri: 101164830, type: 'nypl:Component'}, {uri: 100037340, type: 'nypl:Item'}]
+  // var sampleResources = [{uri: 101164830, type: 'resourcetypes:col'}, {uri: 100037340, type: 'resourcetypes:txt'}]
 
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
@@ -143,6 +143,24 @@ describe('Test Resources responses', function () {
           if (err) throw err
           var doc = JSON.parse(body)
           assert(doc.totalResults > prevTotal)
+
+          done()
+        })
+      })
+    })
+
+    var parents = [101669044]
+    parents.forEach((parentId) => {
+      var url = `${searchAllUrl}&filters[parent]=${parentId}`
+      it('Resources by parent (' + url + ')', function (done) {
+        // First just filter on the first date (objects whose start/end date range include 1984)
+        request.get(url, function (err, response, body) {
+          if (err) throw err
+          var doc = JSON.parse(body)
+
+          var firstItem = doc.itemListElement[0].result
+          var rootParent = firstItem.memberOf[firstItem.memberOf.length - 1]
+          assert(parseInt(rootParent['@id']) === parentId)
 
           done()
         })
