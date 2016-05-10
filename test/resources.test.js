@@ -8,6 +8,8 @@ describe('Test Resources responses', function () {
   var sampleResources = [{uri: 101164830, type: 'nypl:Component'}, {uri: 100037340, type: 'nypl:Item'}]
   // var sampleResources = [{uri: 101164830, type: 'resourcetypes:col'}, {uri: 100037340, type: 'resourcetypes:txt'}]
 
+  this.timeout(10000)
+
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.uri} returns status code 200`, function (done) {
@@ -42,8 +44,6 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources search', function () {
-    this.timeout(6000)
-
     var searchAllUrl = `${base_url}/api/v1/resources?action=search`
 
     it('Resource search all returns status code 200', function (done) {
@@ -166,6 +166,23 @@ describe('Test Resources responses', function () {
             assert(parseInt(rootParent['@id']) === parentId)
           }
           assert(parseInt(firstItem.parentUri) === parentId)
+
+          done()
+        })
+      })
+    })
+
+    var map = {
+      'romeo & juliet': 10012622
+    }
+    Object.keys(map).forEach((q) => {
+      it(`Agent search relevance: ${q} => agents:${map[q]}`, function (done) {
+        request.get(`${searchAllUrl}&q=${q}`, function (err, response, body) {
+          if (err) throw err
+          var doc = JSON.parse(body)
+
+          var expectedAgentUri = `agents:${map[q]}`
+          assert(doc.itemListElement[0].result['@id'] === expectedAgentUri)
 
           done()
         })

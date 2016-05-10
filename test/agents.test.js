@@ -7,6 +7,8 @@ var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://loca
 describe('Test Agents responses', function () {
   var sampleAgents = [{uri: 13777690, type: 'foaf:Person'}, {uri: 11981434, type: 'foaf:Person'}]
 
+  this.timeout(10000)
+
   describe('GET sample agents', function () {
     sampleAgents.forEach(function (spec) {
       it(`Agent ${spec.uri} returns status code 200`, function (done) {
@@ -117,6 +119,25 @@ describe('Test Agents responses', function () {
           if (err) throw err
           var doc = JSON.parse(body)
           assert(doc.totalResults > prevTotal)
+
+          done()
+        })
+      })
+    })
+
+    var map = {
+      'shakespeare': 10012622,
+      'dostoyevsky': 10017133,
+      'hamilton': 10071824
+    }
+    Object.keys(map).forEach((q) => {
+      it(`Agent search relevance: ${q} => agents:${map[q]}`, function (done) {
+        request.get(`${searchAllUrl}&q=${q}`, function (err, response, body) {
+          if (err) throw err
+          var doc = JSON.parse(body)
+
+          var expectedAgentUri = `agents:${map[q]}`
+          assert(doc.itemListElement[0].result['@id'] === expectedAgentUri)
 
           done()
         })
