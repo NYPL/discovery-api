@@ -42,6 +42,8 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources search', function () {
+    this.timeout(6000)
+
     var searchAllUrl = `${base_url}/api/v1/resources?action=search`
 
     it('Resource search all returns status code 200', function (done) {
