@@ -172,6 +172,7 @@ describe('Test Resources responses', function () {
       })
     })
 
+    /*
     var map = {
       'romeo & juliet': 10012622
     }
@@ -188,5 +189,6 @@ describe('Test Resources responses', function () {
         })
       })
     })
+    */
   })
 })
