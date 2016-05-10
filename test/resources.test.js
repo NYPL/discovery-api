@@ -159,8 +159,11 @@ describe('Test Resources responses', function () {
           var doc = JSON.parse(body)
 
           var firstItem = doc.itemListElement[0].result
-          var rootParent = firstItem.memberOf[firstItem.memberOf.length - 1]
-          assert(parseInt(rootParent['@id']) === parentId)
+          if (firstItem.memberOf) {
+            var rootParent = firstItem.memberOf[firstItem.memberOf.length - 1]
+            assert(parseInt(rootParent['@id']) === parentId)
+          }
+          assert(parseInt(firstItem.parentUri) === parentId)
 
           done()
         })
