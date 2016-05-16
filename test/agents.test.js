@@ -91,7 +91,7 @@ describe('Test Agents responses', function () {
         request.get(`${searchAllUrl}&page=2&per_page=100`, function (err, response, body) {
           if (err) throw err
           var doc = JSON.parse(body)
-          assert.equal(doc.itemListElement[0].result.uri, item101.uri)
+          assert.equal(doc.itemListElement[0].result['@uri'], item101['@uri'])
           done()
         })
       })

@@ -21,7 +21,9 @@ describe('util', function () {
     util.returnNtJsonLd(resourceMoby, 'resource', function (err, results) {
       if (err) throw err
       results['@id'].should.equal('res:121544959')
-      results['dcterms:created']['@value'].should.equal('1949')
+      // PB: Since adding created to @context as mapping to dcterms:created, this fails because it's compacted
+      // results['dcterms:created']['@value'].should.equal('1949')
+      results['created']['@value'].should.equal('1949')
       done()
     })
 

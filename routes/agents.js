@@ -8,8 +8,24 @@ module.exports = function (app) {
     next()
   })
 
+  var standardParams = ['page', 'per_page', 'value', 'q', 'expandContext']
+
+  var actionHandlers = {
+    'lookup': { handler: app.agents.findById },
+
+    'searchbyname': { handler: app.agents.searchByName },
+    'search': { handler: app.agents.search, params: standardParams.concat(['filters']) },
+    'aggregations': { handler: app.agents.searchAggregations, params: standardParams.concat(['filters', 'fields']) },
+    'overview': { handler: app.agents.overview },
+    'random': { handler: (v, cb) => app.agents.randomAgents(v, cb) },
+    'resources': { handler: app.agents.resources },
+    'imagesof': { handler: app.agents.imagesOf }
+  }
+
   app.get('/api/v1/agents/:id', function (req, res) {
-    app.agents.findById(req.params, function (_resp) {
+    var params = gatherParams(req, actionHandlers['lookup'].params || standardParams)
+    params.id = req.params.id
+    app.agents.findById(params, function (_resp) {
       res.type('application/ld+json')
       res.status(200).send(JSON.stringify(_resp, null, 2))
       return true
@@ -17,20 +33,6 @@ module.exports = function (app) {
   })
 
   app.get('/api/v1/agents', function (req, res) {
-    var standardParams = ['page', 'per_page', 'value', 'q']
-
-    var actionHandlers = {
-      // Redundant if we use resources/:id path above:
-      'lookup': { handler: app.agents.findById },
-
-      'searchbyname': { handler: app.agents.searchByName },
-      'search': { handler: app.agents.search, params: standardParams.concat(['filters']) },
-      'aggregations': { handler: app.agents.searchAggregations, params: standardParams.concat(['filters', 'fields']) },
-      'overview': { handler: app.agents.overview },
-      'random': { handler: (v, cb) => app.agents.randomAgents(v, cb) },
-      'resources': { handler: app.agents.resources },
-      'imagesof': { handler: app.agents.imagesOf }
-    }
     if (req.query.action) {
       var action = req.query.action.toLowerCase()
 

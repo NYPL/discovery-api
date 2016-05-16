@@ -24,7 +24,7 @@ describe('Test Resources responses', function () {
         request.get(`${base_url}/api/v1/resources/${spec.uri}`, function (err, response, body) {
           if (err) throw err
           var doc = JSON.parse(body)
-          assert.equal(spec.type, doc.type) // ['rdf:type'][0]['objectUri'])
+          assert(doc['@type'].indexOf(spec.type) >= 0)
           done()
         })
       })
@@ -38,6 +38,39 @@ describe('Test Resources responses', function () {
         if (err) throw err
         var doc = JSON.parse(body)
         assert.equal(13, doc.itemListElement.length)
+        done()
+      })
+    })
+  })
+
+  describe('GET resources fields', function () {
+    it('Resource data for 136050732 are what we expect', function (done) {
+      request.get(`${base_url}/api/v1/resources/136050732`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        assert(doc.idLccCoarse[0], 'PN6157-6222')
+        assert(doc.language[0].prefLabel, 'English')
+        assert(doc.type[0].prefLabel === 'Audio')
+        assert(doc.type[0]['@id'] === 'resourcetypes:aud')
+
+        // Comic Relief (Fund raising enterprise) is a contrib:
+        assert(doc.contributor.length > 10)
+        assert(doc.contributor.filter((contrib) => contrib['@id'] === 'agents:10473263').length === 1)
+
+        // George Carlin is a contrib:
+        assert(doc.contributor.filter((contrib) => contrib['@id'] === 'agents:11230376').length === 1)
+
+        // Billy Crystal is a perf:
+        assert(doc['roles:prf'].length > 10)
+        assert(doc['roles:prf'].filter((perf) => perf.prefLabel.indexOf('Crystal, Billy') >= 0).length === 1)
+
+        assert(doc.subject.length >= 2)
+        assert(doc.subject.filter((subj) => subj.prefLabel.indexOf('Wit and humor') >= 0).length === 1)
+
         done()
       })
     })
@@ -91,7 +124,7 @@ describe('Test Resources responses', function () {
         request.get(`${searchAllUrl}&page=2&per_page=100`, function (err, response, body) {
           if (err) throw err
           var doc = JSON.parse(body)
-          assert.equal(doc.itemListElement[0].result.uri, item101.uri)
+          assert.equal(doc.itemListElement[0].result['@id'], item101['@id'])
           done()
         })
       })
@@ -122,22 +155,29 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it('Resource search date range', function (done) {
-      var dates = [1984, 1985]
+    var dates = [1984, 1985]
+    var initialUrl = `${searchAllUrl}&filters[date]=${dates[0]}`
+    // First just filter on the first date (objects whose start/end date range include 1984)
+    request.get(initialUrl, function (err, response, body) {
+      if (err) throw err
+      var doc = JSON.parse(body)
 
-      // First just filter on the first date (objects whose start/end date range include 1984)
-      request.get(`${searchAllUrl}&filters[date]=${dates[0]}`, function (err, response, body) {
-        if (err) throw err
-        var doc = JSON.parse(body)
-
+      it(`Resource search date: first item in range ( ${initialUrl} )`, function (done) {
         // Obj date range encompases queried date:
         assert(doc.itemListElement[0].result.dateStartYear <= dates[0])
         assert(doc.itemListElement[0].result.dateEndYear >= dates[0])
+        done()
+      })
 
+      var prevTotal
+      it(`Resource search date: count < 50K ( ${initialUrl} )`, function (done) {
         // At writing, this returns 42,209 docs
         assert(doc.totalResults < 50000)
+        done()
+      })
 
-        var prevTotal = doc.totalResults
+      it(`Resource search date: Adding end-date increases results ( ${initialUrl} )`, function (done) {
+        prevTotal = doc.totalResults
 
         // Now filter on both dates (adding objects whose date range includes 1985)
         var yearFilter = dates.map((a) => `filters[date][]=${a}`).join('&')
@@ -163,9 +203,8 @@ describe('Test Resources responses', function () {
           var firstItem = doc.itemListElement[0].result
           if (firstItem.memberOf) {
             var rootParent = firstItem.memberOf[firstItem.memberOf.length - 1]
-            assert(parseInt(rootParent['@id']) === parentId)
+            assert(rootParent['@id'] === `res:${parentId}`)
           }
-          assert(parseInt(firstItem.parentUri) === parentId)
 
           done()
         })

@@ -8,8 +8,28 @@ module.exports = function (app) {
     next()
   })
 
+  var standardParams = ['page', 'per_page', 'value', 'q', 'expandContext']
+
+  var actionHandlers = {
+    // Redundant if we use resources/:id path above:
+    'lookup': { handler: app.resources.findById },
+
+    'searchbytitle': { handler: app.resources.searchByTitle },
+    'search': { handler: app.resources.search, params: standardParams.concat(['filters']) },
+    'aggregations': { handler: app.resources.searchAggregations, params: standardParams.concat(['filters', 'fields']) },
+    'overview': { handler: app.resources.overview },
+    'ntriples': { handler: app.resources.overviewNtriples, contentType: 'text/plain' },
+    'jsonld': { handler: app.resources.overviewJsonld },
+    'byterm': { handler: app.resources.byTerm },
+    'searchold': { handler: app.resources.findByOldId },
+    'byowi': { handler: app.resources.findByOwi },
+    'random': { handler: (v, cb) => app.resources.randomResources(v, cb) }
+  }
+
   app.get('/api/v1/resources/:id', function (req, res) {
-    app.resources.findById(req.params, function (_resp) {
+    var params = gatherParams(req, actionHandlers['lookup'].params || standardParams)
+    params.id = req.params.id
+    app.resources.findById(params, function (_resp) {
       res.type('application/ld+json')
       res.status(200).send(JSON.stringify(_resp, null, 2))
       return true
@@ -17,23 +37,6 @@ module.exports = function (app) {
   })
 
   app.get('/api/v1/resources', function (req, res) {
-    var standardParams = ['page', 'per_page', 'value', 'q']
-
-    var actionHandlers = {
-      // Redundant if we use resources/:id path above:
-      'lookup': { handler: app.resources.findById },
-
-      'searchbytitle': { handler: app.resources.searchByTitle },
-      'search': { handler: app.resources.search, params: standardParams.concat(['filters']) },
-      'aggregations': { handler: app.resources.searchAggregations, params: standardParams.concat(['filters', 'fields']) },
-      'overview': { handler: app.resources.overview },
-      'ntriples': { handler: app.resources.overviewNtriples, contentType: 'text/plain' },
-      'jsonld': { handler: app.resources.overviewJsonld },
-      'byterm': { handler: app.resources.byTerm },
-      'searchold': { handler: app.resources.findByOldId },
-      'byowi': { handler: app.resources.findByOwi },
-      'random': { handler: (v, cb) => app.resources.randomResources(v, cb) }
-    }
     if (req.query.action) {
       var action = req.query.action.toLowerCase()
 
