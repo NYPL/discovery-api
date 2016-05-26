@@ -19,7 +19,6 @@ if (cluster.isMaster) {
   var express = require('express')
   // var serveStatic = require('serve-static')
   var elasticsearch = require('elasticsearch')
-  var pjson = require('./package.json')
 
   var db = require(path.join(__dirname, '/lib/db.js'))
   var app = express()
@@ -31,6 +30,13 @@ if (cluster.isMaster) {
   require('./lib/agents')(app)
   require('./lib/resources')(app)
 
+  app.all('*', function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
+    res.header('Access-Control-Allow-Headers', 'Content-Type')
+    res.header('Link', '<http://' + req.headers.host + '/doc/>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"')
+    next()
+  })
   // routes
   require('./routes/agents')(app)
   require('./routes/resources')(app)
@@ -54,17 +60,6 @@ if (cluster.isMaster) {
   // 	}
 
   // }
-
-  app.all('*', function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*')
-    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
-    res.header('Access-Control-Allow-Headers', 'Content-Type')
-    next()
-  })
-
-  app.get('/', function (req, res) {
-    res.send(pjson.version)
-  })
 
   // app.get('/api/lccrange/:range', function(req, res) {
   // 	db.sampleByLccRange(req.params.range, function(err,results){
