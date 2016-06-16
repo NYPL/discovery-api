@@ -52,24 +52,24 @@ describe('Test Resources responses', function () {
 
         var doc = JSON.parse(body)
 
-        assert(doc.idLccCoarse[0], 'PN6157-6222')
-        assert(doc.language[0].prefLabel, 'English')
-        assert(doc.type[0].prefLabel === 'Audio')
-        assert(doc.type[0]['@id'] === 'resourcetypes:aud')
+        assert.equal(doc.idLccCoarse[0], 'PN6157-6222')
+        assert.equal(doc.language[0].prefLabel, 'English')
+        assert.equal(doc.type[0].prefLabel, 'Audio')
+        assert.equal(doc.type[0]['@id'], 'resourcetypes:aud')
 
         // Comic Relief (Fund raising enterprise) is a contrib:
         assert(doc.contributor.length > 10)
-        assert(doc.contributor.filter((contrib) => contrib['@id'] === 'agents:10473263').length === 1)
+        assert.equal(doc.contributor.filter((contrib) => contrib['@id'] === 'agents:10473263').length, 1)
 
         // George Carlin is a contrib:
-        assert(doc.contributor.filter((contrib) => contrib['@id'] === 'agents:11230376').length === 1)
+        assert.equal(doc.contributor.filter((contrib) => contrib['@id'] === 'agents:11230376').length, 1)
 
         // Billy Crystal is a perf:
         assert(doc['roles:prf'].length > 10)
-        assert(doc['roles:prf'].filter((perf) => perf.prefLabel.indexOf('Crystal, Billy') >= 0).length === 1)
+        assert.equal(doc['roles:prf'].filter((perf) => perf.prefLabel.indexOf('Crystal, Billy') >= 0).length, 1)
 
         assert(doc.subject.length >= 2)
-        assert(doc.subject.filter((subj) => subj.prefLabel.indexOf('Wit and humor') >= 0).length === 1)
+        assert.equal(doc.subject.filter((subj) => subj.prefLabel.indexOf('Wit and humor') >= 0).length, 1)
 
         done()
       })
@@ -203,7 +203,7 @@ describe('Test Resources responses', function () {
           var firstItem = doc.itemListElement[0].result
           if (firstItem.memberOf) {
             var rootParent = firstItem.memberOf[firstItem.memberOf.length - 1]
-            assert(rootParent['@id'] === `res:${parentId}`)
+            assert.equal(rootParent['@id'], `res:${parentId}`)
           }
 
           done()

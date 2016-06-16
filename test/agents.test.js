@@ -137,7 +137,7 @@ describe('Test Agents responses', function () {
           var doc = JSON.parse(body)
 
           var expectedAgentUri = `agents:${map[q]}`
-          assert(doc.itemListElement[0].result['@id'] === expectedAgentUri)
+          assert.equal(doc.itemListElement[0].result['@id'], expectedAgentUri)
 
           done()
         })
