@@ -102,4 +102,28 @@ class ResourceResultsSerializer extends SearchResultsSerializer {
   }
 }
 
-module.exports = { ResourceSerializer, ResourceResultsSerializer }
+/*
+ *  Search Results: Resources
+ */
+
+class AdjacentResourcesSerializer extends SearchResultsSerializer {
+  constructor (items, extra) {
+    super(items, extra)
+    this.resultType = 'nypl:Resource'
+  }
+
+  resultId (result) {
+    return `resources:${result.uri}`
+  }
+
+  static serialize (responses) {
+    console.log('respon: ', responses)
+    // First resultset contains the previous entries, ordered backwards
+    // Second resultset has later entries, which we join to former:
+    var sources = responses[0].hits.hits.reverse().concat(responses[1].hits.hits)
+    var results = sources.map((h) => ResourceSerializer.serialize(h._source))
+    // console.log('serializing results: ', results)
+    return (new AdjacentResourcesSerializer(results)).format()
+  }
+}
+module.exports = { ResourceSerializer, ResourceResultsSerializer, AdjacentResourcesSerializer }

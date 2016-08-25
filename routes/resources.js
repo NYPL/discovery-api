@@ -17,7 +17,8 @@ module.exports = function (app) {
     'byterm': { handler: app.resources.byTerm },
     'searchold': { handler: app.resources.findByOldId },
     'byowi': { handler: app.resources.findByOwi },
-    'random': { handler: (v, cb) => app.resources.randomResources(v, cb) }
+    'random': { handler: (v, cb) => app.resources.randomResources(v, cb) },
+    'adjacents': { handler: app.resources.adjacents, params: standardParams.concat(['id']) }
   }
 
   app.get('/api/v1/resources(/:id)?', function (req, res) {
