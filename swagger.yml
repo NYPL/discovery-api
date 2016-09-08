@@ -1,0 +1,490 @@
+# Rough swagger documentation of https://waffle.io/NYPL-discovery/registry-api
+swagger: '2.0'
+info:
+  title: Discovery API
+  description: Move your app forward with the Discovery API
+  version: "0.1.0"
+# the temporary domain of the service
+host: 45.55.45.240
+schemes:
+  - http
+basePath: /api/v1
+produces:
+  - application/json
+paths:
+  /resources/{id}:
+    get:
+      summary: Fetch a resource by ID
+      description: |
+        Fetch a resource. Aliased by action=lookup
+      parameters:
+        - name: id
+          in: path
+          description: ID
+          required: true
+          type: string
+      tags:
+        - Resources
+        - Lookup
+      responses:
+        200:
+          description: A single resource
+          schema:
+            $ref: '#/definitions/Resource'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /resources?action={SPECIAL_FORMAT}&__context=special:
+    get:
+      summary: Fetch a resource by ID in a special format
+      description: |
+        Fetch a resource
+      parameters:
+        - name: SPECIAL_FORMAT
+          in: path 
+          description: Specify format
+          required: true
+          type: string
+          enum: ['overview', 'ntriples', 'jsonld']
+        - name: value
+          in: query
+          description: ID
+          required: true
+          type: string
+      tags:
+        - Resources
+        - Lookup
+      responses:
+        200:
+          description: An array of resources search aggregations
+          schema:
+            description: Very action dependent
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error' 
+  /resources?action=search:
+    get:
+      summary: Search resources
+      description: |
+        Search resources
+      parameters:
+        - name: value
+          in: query
+          description: Terms to match
+          required: true
+          type: string
+      tags:
+        - Resources
+        - Search
+      responses:
+        200:
+          description: An array of resources
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResourcesResponse'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /resources?action=aggregations:
+    get:
+      summary: Resource Search Aggregations
+      description: |
+        Fetch resources search aggs
+      parameters:
+        - name: value
+          in: query
+          description: Search terms
+          required: true
+          type: string
+      tags:
+        - Resources
+        - Aggregations
+      responses:
+        200:
+          description: An array of resources search aggregations
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ResourceAggregationResponse'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /agents/{id}:
+    get:
+      summary: Fetch an agent by ID
+      description: |
+        Fetch an agent. Aliased by action=lookup
+      parameters:
+        - name: id
+          in: path
+          description: ID
+          required: true
+          type: string
+      tags:
+        - Agents
+        - Lookup
+      responses:
+        200:
+          description: A single agent
+          schema:
+            $ref: '#/definitions/Agent'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /agents?action={SPECIAL_FORMAT}&__context=special:
+    get:
+      summary: Fetch an agent by ID in a special format
+      description: |
+        Fetch an agent
+      parameters:
+        - name: SPECIAL_FORMAT
+          in: path 
+          description: Specify format
+          required: true
+          type: string
+          enum: ['overview']
+        - name: value
+          in: query
+          description: ID
+          required: true
+          type: string
+      tags:
+        - Resources
+        - Lookup
+      responses:
+        200:
+          description: An array of resources search aggregations
+          schema:
+            description: Very action dependent
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error' 
+  /agents?action=search:
+    get:
+      summary: Search agents
+      description: |
+        Search agents
+      parameters:
+        - name: value
+          in: query
+          description: Terms to match
+          required: true
+          type: string
+      tags:
+        - Agents
+        - Search
+      responses:
+        200:
+          description: An array of agents
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AgentsResponse'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /agents?action=aggregations:
+    get:
+      summary: Agent Search Aggregations
+      description: |
+        Fetch agent search aggs
+      parameters:
+        - name: value
+          in: query
+          description: Search terms
+          required: true
+          type: string
+      tags:
+        - Agents
+        - Aggregations
+      responses:
+        200:
+          description: An array of agent search aggregations
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AgentAggregationResponse'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  ResourcesResponse:
+    type: object
+    properties:
+      '@context': 
+        type: string
+        format: url
+        description: URL for JSONLD doc mapping short-hand property names to IRIs
+      '@type': 
+        type: string
+        enum: [itemList]
+      itemListElement:
+        type: array
+        items:
+          $ref: '#/definitions/ResourceResult'
+  ResourceResult:
+    type: object
+    properties:
+      '@type':
+        type: string
+        enum: [searchResult]
+      result:
+        $ref: '#/definitions/Resource'
+  ResourceAggregationResponse:
+    type: object
+    properties:
+      '@context': 
+        type: string
+        format: url
+        description: URL for JSONLD doc mapping short-hand property names to IRIs
+      '@type':
+        type: string
+        enum: [itemListElement]
+      itemListElement:
+        type: array
+        items:
+          $ref: '#/definitions/Aggregation'
+  Resource:
+    type: object
+    properties:
+      '@type':
+        type: array
+        items:
+          type: string
+        description: RDF type(s), e.g. "nypl:Item", "nypl:Resource"
+      '@id':
+        type: string
+        description: ID, e.g. "res:105173159"
+      contributor:
+        type: array
+        items:
+          $ref: '#/definitions/EntityStub'
+        description: Contributor stubs
+      created:
+        type: string
+        description: Raw, unparsed date string
+      createdYear:
+        type: integer
+        description: Year of creation
+      depiction:
+        type: string
+        description: URL of an image for the resource
+      description:
+        type: string
+        description: Description of resource
+      endYear:
+        type: integer
+        description: Ending year of coverage
+      holdingCount:
+        type: integer
+        description: Rough number of copies across institutions
+      'id[IDENTIFIERTYPE]':
+        type: string
+        description: "Various identifiers given as 'idAcqnum', 'idBarcode', 'idBnum', 'idCallNum', 'idCatnyp', 'idDcc', 'idExhib', 'idHathi', 'idIsbn', 'idIssn', 'idLcc', 'idLccCoarse', 'idMmmsDb', 'idMss', 'idObjNum', 'idOclc', 'idOwi', 'idRlin', 'idUuid'"
+      language:
+        type: array
+        description: Language(s), if known
+        items:
+          $ref: '#/definitions/EntityStub'
+      memberOf:
+        type: array
+        description: Parent resource(s)
+        items:
+          $ref: '#/definitions/EntityStub'
+      note:
+        type: array
+        items:
+          type: string
+        description: Note fields
+      title:
+        type: array
+        items:
+          type: string
+        description: Title(s)
+      prefLabel:
+        type: array
+        items:
+          type: string
+        description: Best title(s)
+      owner:
+        $ref: '#/definitions/EntityStub'
+      'roles:ROLE':
+        $ref: '#/definitions/ContribStub'
+      startYear:
+        type: integer
+        description: Beggining year of coverage
+      subject:
+        type: array
+        items:
+          $ref: '#/definitions/EntityStub'
+      suppressed:
+        type: boolean
+        description: Indicates whether or not resource should be suppressed from view
+  ContribStub:
+    type: object
+    description: Identifies a contributing Agent by ROLE
+    properties:
+      '@type':
+        type: string
+        enum: ['nypl:Agent']
+      '@id':
+        type: string
+      prefLabel:
+        type: string
+        description: Friendly label for this contributor
+      note:
+        type: string
+        description: Contributor role (with respect to enclosing resource)
+  EntityStub:
+    type: object
+    properties:
+      '@type':
+        type: string
+        enum: ['nypl:Agent', 'nypl:Term']
+      '@id':
+        type: string
+      prefLabel:
+        type: string
+        description: Friendly label for this entity
+  AgentsResponse:
+    type: object
+    properties:
+      '@context': 
+        type: string
+        format: url
+        description: URL for JSONLD doc mapping short-hand property names to IRIs
+      '@type': 
+        type: string
+        enum: [itemList]
+      itemListElement:
+        type: array
+        items:
+          $ref: '#/definitions/AgentResult'
+  AgentResult:
+    type: object
+    properties:
+      '@type':
+        type: string
+        enum: [searchResult]
+      result:
+        $ref: '#/definitions/Agent'
+  AgentAggregationResponse:
+    type: object
+    properties:
+      '@context': 
+        type: string
+        format: url
+        description: URL for JSONLD doc mapping short-hand property names to IRIs
+      '@type':
+        type: string
+        enum: [itemListElement]
+      itemListElement:
+        type: array
+        items:
+          $ref: '#/definitions/Aggregation'
+  Aggregation:
+    type: object
+    properties:
+      '@type':
+        type: string
+        enum: ['nypl:Aggregation']
+      '@id':
+        type: string
+        description: Identifies field being aggregated
+      field:
+        type: string
+        description: Identifies field being aggregated
+      values:
+        type: array
+        items:
+          type: object
+          properties:
+            value:
+              type: string
+              description: term aggregated
+            count:
+              type: integer
+              description: number of records matching term
+  Agent:
+    type: object
+    properties:
+      '@type':
+        type: string
+        enum: ['nypl:Agent']
+      '@id':
+        type: string
+      birthDate:
+        type: string
+        description: raw, unparsed birth date
+      birthYear:
+        type: integer
+        description: parsed year of birth
+      birthDecade:
+        type: integer
+        description: parsed decade of birth
+      deathDate:
+        type: string
+        description: raw, unparsed death date
+      deathYear:
+        type: integer
+        description: parsed year of death
+      deathDecade:
+        type: integer
+        description: parsed decade of death
+      topFiveTermsString:
+        type: array
+        items:
+          type: string
+          description: denormalized term strings 
+      topFiveRolesString:
+        type: array
+        items:
+          type: string
+          description: denormalized contrib strings 
+      description:
+        type: string
+        description: Description of agent, if any
+      uriViaf:
+        type: string
+        description: Viaf URI
+      uriWikidata:
+        type: string
+        description: wikidata URI
+      uriLc:
+        type: string
+        description: LC URI
+      uriDbpedia:
+        type: string
+        description: Dbpedia URI
+      depiction:
+        type: string
+        description: filename of image
+      wikipedia:
+        type: string
+        format: url
+        description: URL of wiki page
+      prefLabel:
+        type: string
+        description: Best name
+      useCount:
+        type: integer
+        description: Rough measure of popularity/coverage
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
