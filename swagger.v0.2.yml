@@ -1,8 +1,8 @@
 # Rough swagger documentation of https://waffle.io/NYPL-discovery/registry-api
 swagger: '2.0'
 info:
-  title: Discovery API
-  description: Move your app forward with the Discovery API
+  title: NYPL Discovery API v0.2
+  description: NYPL research holdings as linked data
   version: "0.2.0"
 # the temporary domain of the service
 host: 45.55.45.240
@@ -11,6 +11,8 @@ schemes:
 basePath: /api/v1
 produces:
   - application/json
+  - text/turtle
+  - text/plain
 paths:
   /resources/{id}{format}:
     get:
@@ -23,7 +25,6 @@ paths:
           description: ID
           required: true
           type: string
-      parameters:
         - name: format
           in: path
           description: Optional alternate format
@@ -42,57 +43,153 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-  /resources?action=search:
+  /resources:
     get:
       summary: Search resources
       description: |
-        Search resources
+        Search resources by keyword, filters, or no qualifiers at all.
+
+        Keywords (matching title, description, notes, subjects, contributors):
+
+        `/resources?q=fortitude`
+
+        By subject id:
+
+        `/resources?q=subject:terms:10004719`
+
+        By contributor id:
+
+        `/resources?q=contributor:agents:13447571`
+
+        By date (year), matching resources with start/end overlap on given date:
+
+        `/resources?q=date:1984`
+
+        Filter by date range (resources with dates overlapping the range given):
+
+        `/resources?q=date:1984-2016`
+
+        Filters can be combined. Unless otherwise specified, filters of different type are AND'd; filters of same type are OR'd.
+
+        This returns resources from either agents:10112414 OR agents:10378651:
+
+        `/resources?contributor:(agents:10112414 OR agents:10378651)`
+
+        This returns resources associated with agents:10112414 AND owned by orgs:1000:
+
+        `/resources?contributor:agents:10112414 AND owner:orgs:1000`
+
+        This restricts the above to resources matching "Bandquart":
+
+        `/resources?contributor:agents:10112414 AND owner:orgs:1000 AND Bandquart`
+
+        Get 5 random resources:
+
+        `/resources?order_by=random&per_page=5`
       parameters:
-        - name: value
+        - name: q
           in: query
-          description: Terms to match
-          required: true
+          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
+          required: false
           type: string
+        - name: page
+          in: query
+          description: Page number to return
+          required: false
+          type: integer
+          minimum: 1
+        - name: per_page
+          in: query
+          description: Number of results to return
+          required: false
+          type: integer
+          default: 50
+          maximum: 100
+          minimum: 1
+        - name: order_by
+          in: query
+          description: Specify how to order results
+          required: false
+          type: string
+          enum: ['relevance', 'title', 'idLcc', 'random']
+          default: 'relevance'
+          minimum: 1
       tags:
         - Resources
-        - Search
       responses:
         200:
           description: An array of resources
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ResourcesResponse'
+            $ref: '#/definitions/ResourcesResponse'
         default:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-  /resources?action=aggregations:
+  /resources/aggregations:
     get:
       summary: Resource Search Aggregations
       description: |
-        Fetch resources search aggs
+        Fetch resources search aggregations.
       parameters:
-        - name: value
+        - name: q
           in: query
-          description: Search terms
+          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
           required: true
           type: string
       tags:
         - Resources
-        - Aggregations
       responses:
         200:
           description: An array of resources search aggregations
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ResourceAggregationResponse'
+            $ref: '#/definitions/ResourceAggregationsResponse'
         default:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-  /agents/{id}:
+  /resources/aggregation/{id}:
+    get:
+      summary: Get a specific resources aggregation
+      description: |
+        Fetch a specific resources search aggregation. This provides ability to consume the long tail of values for a given aggregation.
+      parameters:
+        - name: id
+          in: path
+          type: string
+          description: Identifies field being aggregated, e.g. "language"
+        - name: q
+          in: query
+          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
+          required: false
+          type: string
+        - name: page
+          in: query
+          description: Page number to return
+          required: false
+          type: integer
+          minimum: 1
+          default: 1
+        - name: per_page
+          in: query
+          description: Number of results to return
+          required: false
+          type: integer
+          default: 50
+          maximum: 100
+          minimum: 1
+      tags:
+        - Resources
+      responses:
+        200:
+          description: An array of resources search aggregations
+          schema:
+            $ref: '#/definitions/ResourceAggregationResponse'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+ 
+  /agents/{id}{format}:
     get:
       summary: Fetch an agent by ID
       description: |
@@ -103,9 +200,15 @@ paths:
           description: ID
           required: true
           type: string
+        - name: format
+          in: path
+          description: Optional alternate format
+          required: false
+          type: string
+          enum: ['.ntriples', '.turtle', '.jsonld']
+          default: '.jsonld'
       tags:
         - Agents
-        - Lookup
       responses:
         200:
           description: A single agent
@@ -115,61 +218,51 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-  /agents?action={SPECIAL_FORMAT}&__context=special:
-    get:
-      summary: Fetch an agent by ID in a special format
-      description: |
-        Fetch an agent
-      parameters:
-        - name: SPECIAL_FORMAT
-          in: path 
-          description: Specify format
-          required: true
-          type: string
-          enum: ['overview']
-        - name: value
-          in: query
-          description: ID
-          required: true
-          type: string
-      tags:
-        - Resources
-        - Lookup
-      responses:
-        200:
-          description: An array of resources search aggregations
-          schema:
-            description: Very action dependent
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error' 
-  /agents?action=search:
+  /agents:
     get:
       summary: Search agents
       description: |
         Search agents
       parameters:
-        - name: value
+        - name: q
           in: query
-          description: Terms to match
+          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
           required: true
           type: string
+        - name: page
+          in: query
+          description: Page number to return
+          required: false
+          type: integer
+          minimum: 1
+        - name: per_page
+          in: query
+          description: Number of results to return
+          required: false
+          type: integer
+          default: 50
+          maximum: 100
+          minimum: 1
+        - name: order_by
+          in: query
+          description: Specify how to order results
+          required: false
+          type: string
+          enum: ['relevance', 'name', 'random']
+          default: 'relevance'
+          minimum: 1
       tags:
         - Agents
-        - Search
       responses:
         200:
           description: An array of agents
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/AgentsResponse'
+            $ref: '#/definitions/AgentsResponse'
         default:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-  /agents?action=aggregations:
+  /agents/aggregations:
     get:
       summary: Agent Search Aggregations
       description: |
@@ -182,14 +275,11 @@ paths:
           type: string
       tags:
         - Agents
-        - Aggregations
       responses:
         200:
           description: An array of agent search aggregations
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/AgentAggregationResponse'
+            $ref: '#/definitions/AgentAggregationResponse'
         default:
           description: Unexpected error
           schema:
@@ -217,6 +307,23 @@ definitions:
         enum: [searchResult]
       result:
         $ref: '#/definitions/Resource'
+  ResourceAggregationsResponse:
+    type: object
+    properties:
+      '@context': 
+        type: string
+        format: url
+        description: URL for JSONLD doc mapping short-hand property names to IRIs
+      '@type':
+        type: string
+        enum: [itemListElement]
+      '@id':
+        type: string
+        description: ID, e.g. "language"
+      itemListElement:
+        type: array
+        items:
+          $ref: '#/definitions/Aggregation'
   ResourceAggregationResponse:
     type: object
     properties:
@@ -227,10 +334,8 @@ definitions:
       '@type':
         type: string
         enum: [itemListElement]
-      itemListElement:
-        type: array
-        items:
-          $ref: '#/definitions/Aggregation'
+      item:
+        $ref: '#/definitions/Aggregation'
   Resource:
     type: object
     properties:
@@ -384,14 +489,16 @@ definitions:
       values:
         type: array
         items:
-          type: object
-          properties:
-            value:
-              type: string
-              description: term aggregated
-            count:
-              type: integer
-              description: number of records matching term
+          $ref: '#/definitions/AggregationValue'
+  AggregationValue:
+    type: object
+    properties:
+      value:
+        type: string
+        description: term aggregated
+      count:
+        type: integer
+        description: number of records matching term
   Agent:
     type: object
     properties:
