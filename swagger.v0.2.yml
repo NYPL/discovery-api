@@ -14,24 +14,19 @@ produces:
   - text/turtle
   - text/plain
 paths:
-  /resources/{id}{format}:
+  /resources/{id}:
     get:
       summary: Fetch a resource by ID
       description: |
-        Fetch a resource.
+        Fetch a resource. Note alternate response formats:
+
+        `.ntriples, .turtle, .jsonld (default)`
       parameters:
         - name: id
           in: path
           description: ID
           required: true
           type: string
-        - name: format
-          in: path
-          description: Optional alternate format
-          required: false
-          type: string
-          enum: ['.ntriples', '.turtle', '.jsonld']
-          default: '.jsonld'
       tags:
         - Resources
       responses:
@@ -155,6 +150,7 @@ paths:
       parameters:
         - name: id
           in: path
+          required: true
           type: string
           description: Identifies field being aggregated, e.g. "language"
         - name: q
@@ -188,25 +184,20 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
- 
-  /agents/{id}{format}:
+
+  /agents/{id}:
     get:
       summary: Fetch an agent by ID
       description: |
-        Fetch an agent. Aliased by action=lookup
+        Fetch an agent. Note alternate response formats:
+
+        `.ntriples, .turtle, .jsonld (default)`
       parameters:
         - name: id
           in: path
           description: ID
           required: true
           type: string
-        - name: format
-          in: path
-          description: Optional alternate format
-          required: false
-          type: string
-          enum: ['.ntriples', '.turtle', '.jsonld']
-          default: '.jsonld'
       tags:
         - Agents
       responses:
@@ -288,11 +279,11 @@ definitions:
   ResourcesResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
-      '@type': 
+      '@type':
         type: string
         enum: [itemList]
       itemListElement:
@@ -310,7 +301,7 @@ definitions:
   ResourceAggregationsResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
@@ -327,7 +318,7 @@ definitions:
   ResourceAggregationResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
@@ -370,7 +361,7 @@ definitions:
       holdingCount:
         type: integer
         description: Rough number of copies across institutions
-      'id[IDENTIFIERTYPE]':
+      '^id':
         type: string
         description: "Various identifiers given as 'idAcqnum', 'idBarcode', 'idBnum', 'idCallNum', 'idCatnyp', 'idDcc', 'idExhib', 'idHathi', 'idIsbn', 'idIssn', 'idLcc', 'idLccCoarse', 'idMmmsDb', 'idMss', 'idObjNum', 'idOclc', 'idOwi', 'idRlin', 'idUuid'"
       language:
@@ -441,11 +432,11 @@ definitions:
   AgentsResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
-      '@type': 
+      '@type':
         type: string
         enum: [itemList]
       itemListElement:
@@ -463,7 +454,7 @@ definitions:
   AgentAggregationResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
@@ -529,12 +520,12 @@ definitions:
         type: array
         items:
           type: string
-          description: denormalized term strings 
+          description: denormalized term strings
       topFiveRolesString:
         type: array
         items:
           type: string
-          description: denormalized contrib strings 
+          description: denormalized contrib strings
       description:
         type: string
         description: Description of agent, if any
