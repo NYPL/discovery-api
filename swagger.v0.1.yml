@@ -25,7 +25,6 @@ paths:
           type: string
       tags:
         - Resources
-        - Lookup
       responses:
         200:
           description: A single resource
@@ -54,7 +53,6 @@ paths:
           type: string
       tags:
         - Resources
-        - Lookup
       responses:
         200:
           description: An array of resources search aggregations
@@ -77,7 +75,6 @@ paths:
           type: string
       tags:
         - Resources
-        - Search
       responses:
         200:
           description: An array of resources
@@ -102,7 +99,6 @@ paths:
           type: string
       tags:
         - Resources
-        - Aggregations
       responses:
         200:
           description: An array of resources search aggregations
@@ -127,7 +123,6 @@ paths:
           type: string
       tags:
         - Agents
-        - Lookup
       responses:
         200:
           description: A single agent
@@ -156,7 +151,6 @@ paths:
           type: string
       tags:
         - Resources
-        - Lookup
       responses:
         200:
           description: An array of resources search aggregations
@@ -179,7 +173,6 @@ paths:
           type: string
       tags:
         - Agents
-        - Search
       responses:
         200:
           description: An array of agents
@@ -204,7 +197,6 @@ paths:
           type: string
       tags:
         - Agents
-        - Aggregations
       responses:
         200:
           description: An array of agent search aggregations
