@@ -12,7 +12,7 @@ Much of our [v0.2 aspirational spec](https://nypl-discovery.github.io/discovery-
 
 Keywords (matching title, description, notes, subjects, contributors):
 
-/resources?q=war
+> /resources?q=war
 
 By language:
 
