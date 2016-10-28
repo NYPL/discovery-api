@@ -20,8 +20,6 @@ By language:
 
 > /resources?q=language:"lang:spa"
 
-> /resources?q=subject:terms:10004719
-
 By contributor (literal):
 
 > /resources?q=contributor:"Rowling, J. K."
