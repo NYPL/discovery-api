@@ -1,8 +1,7 @@
 var cluster = require('cluster')
-// var path = require('path')
-//
+
 const log = require('loglevel')
-log.setLevel('trace')
+log.setLevel('info')
 
 if (cluster.isMaster) {
   // var numCPUs = require('os').cpus().length
@@ -22,10 +21,7 @@ if (cluster.isMaster) {
   var elasticsearch = require('elasticsearch')
   var pjson = require('./package.json')
 
-  // var db = require(path.join(__dirname, '/lib/db.js'))
   var app = express()
-
-  // app.db = db
 
   app.thesaurus = config.thesaurus
 
@@ -37,8 +33,6 @@ if (cluster.isMaster) {
   require('./routes/resources')(app)
 
   require('./routes/misc')(app)
-
-  // db.databaseConnectTripleStore()
 
   app.esClient = new elasticsearch.Client({
     host: config['Elasticsearch'].host
