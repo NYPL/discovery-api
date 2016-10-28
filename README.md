@@ -4,7 +4,7 @@
 
 This is a fork of the old Registry API with revised endpoints. It's currently deployed here:
 
-[http://discovery-api.nypltech.org](http://discovery-api.nypltech.org)
+[http://discovery-api.nypltech.org/api/v1](http://discovery-api.nypltech.org/api/v1)
 
 # Documentation
 
