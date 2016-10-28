@@ -2,68 +2,67 @@
 
 # Status
 
-This is a temporary fork of the old Registry API, which demonstrates a lot of the conventions we plan for the Discovery API. It is deployed at this temporary DO box at 45.55.210.240 and connected to a truncated resource index containing ~8M records. I.e.:
+This is a fork of the old Registry API with revised endpoints. It's currently deployed here:
 
-http://45.55.210.240/api/v1/resources?action=search&value=
+[http://discovery-api.nypltech.org](http://discovery-api.nypltech.org)
 
-## Caveat
+# Documentation
 
-This is deployed to support front-end experimentation but these endpoints and response formats are not final. In particular note that Discovery API is expected to flatten the concepts of bibliographic records and item records into a single set of item records linked through `hasEquivelant` statements. The API currently deployed only contains bibliographic records, so does not demonstrate the method by which sibling item records will share metadata with each other via `hasEquivelant` links.
-
-# Sample Queries
-
-Full documentation is TK
-
-## Resources
+Much of our [v0.2 aspirational spec](http://discovery-api.nypltech.org/api/v1/resources) is now functional (Resources only). Some filtering methods are still sketchy. Here are some sample queries known to currently work:
 
 Keywords (matching title, description, notes, subjects, contributors):
 
-`/api/v1/resources?action=search&value=fortitude`
+/resources?q=war
 
-By subject id:
+By language:
 
-`/api/v1/resources?action=search&filters[subject]=terms:10004719`
+/resources?q=language:"lang:eng"
+/resources?q=language:"lang:spa"
 
-By contributor id:
+/resources?q=subject:terms:10004719
 
-`/api/v1/resources?action=search&filters[contributor]=agents:13447571`
+By contributor (literal):
 
-By date (year), matching resources with start/end overlap on given date:
+/resources?q=contributor:"Rowling, J. K."
 
-`/api/v1/resources?action=search&filters[date]=1984`
+By date created (year)
 
-When two dates are provided, a range is assumed; All resources overlapping the range defined by the two dates will be returned:
+/resources?q=date:1999
 
-`/api/v1/resources?action=search&filters[date]=1984&filters[date]=2016`
+Filter by date range (resources created anywhere inside the range given):
 
-Filters can be combined. Filters of different type are AND'd; filters of same type are OR'd.
+/resources?q=date:[1999 TO 2012]
 
-This returns resources from either `agents:10112414` OR `agents:10378651`:
+Get things created in 1999 *or later*:
 
-`/api/v1/resources?action=search&filters[contributor]=agents:10112414&filters[contributor]=agents:10378651`
+/resources?q=date:>1999
 
-This returns resources associated with `agents:10112414` AND owned by `orgs:1000`:
+This is an alternate way of specifying above query, matching from 1999 ('{' indicates non-inclusive) to * (whenever):
 
-`/api/v1/resources?action=search&filters[contributor]=agents:10112414&filters[contributor]=agents:10378651&filters[owner]=orgs:1000`
+/resources?q=date:{1999 TO \*}
 
-This restricts the above to resources matching "Bandquart":
+Filter by material type (Text, Still Image, Audio, ...):
 
-`/api/v1/resources?action=search&filters[contributor]=agents:10112414&filters[contributor]=agents:10378651&filters[owner]=orgs:1000&value=Bandquart`
+/resources?q=materialType:"resourcetypes:img"
 
-Faceting ("aggregations") are performed by replacing `action=search` with `action=aggregations` in any query:
+Filter by publisher:
 
-`/api/v1/resources?action=aggregations&filters[contributor]=agents:10112414&filters[contributor]=agents:10378651&filters[owner]=orgs:1000&value=Bandquart`
+/resources?q=publisher:"Oxford University Press,"
 
-Get 5 random resources:
+Filters can be combined!
 
-`/api/v1/resources?action=random&per_page=5`
+English resources about 'war':
 
-Get full resource (by uri/id):
+/resources?q=language:"lang:eng" war
 
-`/api/v1/resources/100301756`
+English resources about 'war' and/or 'peace':
 
-OR
+/resources?q=language:"lang:eng" (war OR peace)
 
-`/api/v1/resources?action=lookup&value=100301756`
+Finally, get a single result by top-level (bib) @id:
 
+/resources/b15704876
 
+.. Or by any item @id:
+
+/resources/b15704876-i25375512

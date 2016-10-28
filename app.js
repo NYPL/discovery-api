@@ -1,7 +1,7 @@
 var cluster = require('cluster')
 
 const log = require('loglevel')
-log.setLevel('info')
+log.setLevel('debug')
 
 if (cluster.isMaster) {
   // var numCPUs = require('os').cpus().length
