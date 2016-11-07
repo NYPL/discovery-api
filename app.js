@@ -35,7 +35,7 @@ if (cluster.isMaster) {
   require('./routes/misc')(app)
 
   app.esClient = new elasticsearch.Client({
-    host: config['Elasticsearch'].host
+    host: config['elasticsearch'].host
   })
 
   app.all('*', function (req, res, next) {
