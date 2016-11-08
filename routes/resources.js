@@ -10,7 +10,7 @@ module.exports = function (app) {
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'expandContext', 'ext', 'field']
+  var standardParams = ['page', 'per_page', 'q', 'expandContext', 'ext', 'field', 'sort', 'sort_direction']
 
   const VER = config.get('major_version')
 
@@ -41,7 +41,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/resources/aggregations`, function (req, res) {
-    var params = req.params
+    var params = gatherParams(req, standardParams)
 
     return app.resources.aggregations(params)
       .then((resp) => respond(res, resp, params))

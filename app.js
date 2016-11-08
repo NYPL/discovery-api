@@ -1,7 +1,9 @@
 var cluster = require('cluster')
 
+const config = require('config')
 const log = require('loglevel')
-log.setLevel('debug')
+
+log.setLevel(config.get('loglevel'))
 
 if (cluster.isMaster) {
   // var numCPUs = require('os').cpus().length
@@ -15,8 +17,6 @@ if (cluster.isMaster) {
     cluster.fork()
   })
 } else {
-  var config = require('config')
-
   var express = require('express')
   var elasticsearch = require('elasticsearch')
   var pjson = require('./package.json')
