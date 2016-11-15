@@ -10,6 +10,8 @@ This is a fork of the old Registry API with revised endpoints. It's currently de
 
 Much of our [v0.2 aspirational spec](https://nypl-discovery.github.io/discovery-api/#/Resources) is now functional (Resources only). Some filtering methods are still sketchy. Here are some sample queries known to currently work:
 
+## Searching
+
 Keywords (matching title, description, notes, subjects, contributors):
 
 > /resources?q=war
@@ -59,6 +61,12 @@ English resources about 'war' and/or 'peace':
 > /resources?q=language:"lang:eng" (war OR peace)
 
 Finally, get a single result by top-level (bib) @id:
+
+## Sorting
+
+All search queries support `sort`ing on `title` or `date`. To set a non-default direction use `sort_direction=(asc|desc)`. To sort by relevance, omit the `sort` param.
+
+## Get a single bib/item resource by id
 
 > /resources/b15704876
 
