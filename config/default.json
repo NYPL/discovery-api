@@ -1,11 +1,14 @@
 {
   "loglevel": "error",
 
-	"Elasticsearch": {
+  "host": "discovery-api.nypltech.org",
+  "proto": "http",
+
+	"elasticsearch": {
 		"host": "111.111.111.111:9200"
 	},
-	"Port": 3000,
-	"TripleStore": {
+	"port": 3000,
+	"triplestore": {
 		"mongoConnectURL": "mongodb://localhost:27017/discovery",
 		"mongoDb": "registry",
 		"mongoIp": "tripleStore",

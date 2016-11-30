@@ -40,7 +40,7 @@ if (cluster.isMaster) {
 
   app.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
-    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
+    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
     next()
   })
@@ -49,8 +49,10 @@ if (cluster.isMaster) {
     res.send(pjson.version)
   })
 
-  app.listen(config['Port'], function () {
-    console.log('Server started on port ' + config['Port'])
+  require('./lib/globals')(app).then((app) => {
+    app.listen(config['port'], function () {
+      console.log('Server started on port ' + config['port'])
+    })
   })
 }
 

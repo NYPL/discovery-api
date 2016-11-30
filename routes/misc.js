@@ -8,9 +8,9 @@ module.exports = function (app) {
     next()
   })
 
-  app.get('/api/v1/context_all.jsonld', function (req, res) {
+  app.get('/api/v1/context_:which.jsonld', function (req, res) {
     res.type('application/ld+json')
-    res.status(200).send(JSON.stringify({ '@context': util.context }, null, 2))
+    util.context(req.params.which).then((c) => res.status(200).send(JSON.stringify({ '@context': c }, null, 2)))
     return
   })
 
