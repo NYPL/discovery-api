@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "nyplapp": "http://data.nypl.org/nypl-application/",
+    "schema": "http://schema.org/",
+
+    "searchResultScore": "nyplapp:searchResultScore",
+    "searchResult": "nyplapp:searchResult",
+    "totalResults": "nyplapp:totalResults",
+    "currentPage": "nyplapp:searchResultPage",
+    "morePages": "nyplapp:searchResultMorePages",
+    "result": "schema:result",
+    "itemListElement": "schema:itemListElement",
+    "itemList": "schema:ItemList"
+  }
+}
