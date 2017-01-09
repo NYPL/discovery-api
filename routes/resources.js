@@ -59,7 +59,6 @@ module.exports = function (app) {
   app.get(`/api/v${VER}/resources/:uri\.:ext?`, function (req, res) {
     var params = { uri: req.params.uri }
 
-    // var handler = app.resources.findById
     var handler = app.resources.findByUri
 
     if (req.params.ext === 'ntriples') {

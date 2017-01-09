@@ -13,6 +13,4 @@ module.exports = function (app) {
     util.context(req.params.which).then((c) => res.status(200).send(JSON.stringify({ '@context': c }, null, 2)))
     return
   })
-
-// other routes..
 }
