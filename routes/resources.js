@@ -10,7 +10,7 @@ module.exports = function (app) {
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'expandContext', 'ext', 'field', 'sort', 'sort_direction']
+  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction']
 
   const VER = config.get('major_version')
 
