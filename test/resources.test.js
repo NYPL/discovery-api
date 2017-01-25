@@ -1,6 +1,6 @@
 /* global describe it */
 
-var request = require('request')
+var request = require('request-promise')
 var assert = require('assert')
 var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3000')
 
@@ -161,42 +161,38 @@ describe('Test Resources responses', function () {
     })
     */
 
-    var dates = [1984, 1985]
-    var initialUrl = `${searchAllUrl}&filters=date:${dates[0]}`
-    // First just filter on the first date (objects whose start/end date range include 1984)
-    request.get(initialUrl, function (err, response, body) {
-      if (err) throw err
-      var doc = JSON.parse(body)
+    it('Ensure a chain of added filters reduces resultset correctly', function (done) {
+      var dates = [1984, 1985]
 
-      it(`Resource search date: first item in range ( ${initialUrl} )`, function (done) {
+      var initialUrl = `${searchAllUrl}&filters=date:>=${dates[0]}`
+      // First just filter on the first date (objects whose start/end date range include 1984)
+      return request.get(initialUrl, function (err, response, body) {
+        if (err) throw err
+        var doc = JSON.parse(body)
+
         // Obj date range encompases queried date:
-        assert(doc.itemListElement[0].result.dateStartYear <= dates[0])
-        assert(doc.itemListElement[0].result.dateEndYear >= dates[0])
-        done()
-      })
+        assert(doc.itemListElement[0].result.dateStartYear >= dates[0])
 
-      var prevTotal
-      it(`Resource search date: count < 50K ( ${initialUrl} )`, function (done) {
-        // At writing, this returns 42,209 docs
-        assert(doc.totalResults < 50000)
-        done()
-      })
+        // At writing, this returns 111,217 docs
+        assert(doc.totalResults > 100000)
+        assert(doc.totalResults < 150000)
 
-      it(`Resource search date: Adding end-date increases results ( ${initialUrl} )`, function (done) {
+        var prevTotal
         prevTotal = doc.totalResults
 
         // Now filter on both dates (adding objects whose date range includes 1985)
-        // var yearFilter = dates.map((a) => `filters[date][]=${a}`).join('&')
-        request.get(`${searchAllUrl}&filters=date:[${dates.join(' TO ')}}`, function (err, response, body) {
+        return request.get(`${searchAllUrl}&filters=date:[${dates.join(' TO ')}}`, function (err, response, body) {
           if (err) throw err
+
           var doc = JSON.parse(body)
-          assert(doc.totalResults > prevTotal)
+          assert(doc.totalResults < prevTotal)
 
           // Now add language filter:
-          request.get(`${searchAllUrl}&filters=date:[${dates.join(' TO ')}} language.id:\"lang:kan\"`, function (err, response, body) {
+          return request.get(`${searchAllUrl}&filters=date:[${dates.join(' TO ')}} language.id:\"lang:kan\"`, function (err, response, body) {
             if (err) throw err
+
             var doc = JSON.parse(body)
-            assert(doc.totalResults > prevTotal)
+            assert(doc.totalResults < prevTotal)
 
             done()
           })
