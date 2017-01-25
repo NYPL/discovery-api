@@ -12,55 +12,55 @@ Much of our [v0.2 aspirational spec](https://nypl-discovery.github.io/discovery-
 
 ## Searching
 
+In general, at writing, `q` and `filters` params accept [Elastic "Query String Query" strings](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)
+
 Keywords (matching title, description, notes, subjects, contributors):
 
 > /resources?q=war
 
 By language:
 
-> /resources?q=language:"lang:eng"
+> /resources?filters=language:"lang:eng"
 
-> /resources?q=language:"lang:spa"
+> /resources?filters=language:"lang:spa"
 
 By contributor (literal):
 
-> /resources?q=contributor:"Rowling, J. K."
+> /resources?filters=contributor:"Rowling, J. K."
 
 By date created (year)
 
-> /resources?q=date:1999
+> /resources?filters=date:1999
 
 Filter by date range (resources created anywhere inside the range given):
 
-> /resources?q=date:[1999 TO 2012]
+> /resources?filters=date:[1999 TO 2012]
 
 Get things created in 1999 *or later*:
 
-> /resources?q=date:>1999
+> /resources?filters=date:>1999
 
 This is an alternate way of specifying above query, matching from 1999 ('{' indicates non-inclusive) to * (whenever):
 
-> /resources?q=date:{1999 TO \*}
+> /resources?filters=date:{1999 TO \*}
 
 Filter by material type (Text, Still Image, Audio, ...):
 
-> /resources?q=materialType:"resourcetypes:img"
+> /resources?filters=materialType:"resourcetypes:img"
 
 Filter by publisher:
 
-> /resources?q=publisher:"Oxford University Press,"
+> /resources?filters=publisher:"Oxford University Press,"
 
 Filters can be combined!
 
 English resources about 'war':
 
-> /resources?q=language:"lang:eng" war
+> /resources?filters=language:"lang:eng"&q=war
 
 English resources about 'war' and/or 'peace':
 
-> /resources?q=language:"lang:eng" (war OR peace)
-
-Finally, get a single result by top-level (bib) @id:
+> /resources?filters=language:"lang:eng"&q=(war OR peace)
 
 ## Sorting
 
