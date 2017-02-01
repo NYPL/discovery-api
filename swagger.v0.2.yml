@@ -8,38 +8,98 @@ info:
 host: 45.55.45.240
 schemes:
   - http
+tags:
+- name: discovery
+  description: Discovery API
 basePath: /api/v1
 produces:
   - application/json
   - text/turtle
   - text/plain
 paths:
-  /resources/{id}:
+  "/v0.1/discovery/aggregations":
     get:
-      summary: Fetch a resource by ID
-      description: |
-        Fetch a resource. Note alternate response formats:
-
-        `.ntriples, .turtle, .jsonld (default)`
-      parameters:
-        - name: id
-          in: path
-          description: ID
-          required: true
-          type: string
       tags:
-        - Resources
+      - discovery
+      summary: Resource Search Aggregations
+      description: Fetch resources search aggregations.
+      parameters:
+      - name: q
+        in: query
+        description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax)
+        required: true
+        type: string
       responses:
-        200:
-          description: A single resource
+        '200':
+          description: An array of resources search aggregations
           schema:
-            $ref: '#/definitions/Resource'
+            "$ref": "#/definitions/ResourceAggregationsResponse"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'
-  /resources:
+            "$ref": "#/definitions/ResourceError"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+  "/v0.1/discovery/aggregation/{id}":
     get:
+      summary: Get a specific resources aggregation
+      description: 'Fetch a specific resources search aggregation. This provides ability
+        to consume the long tail of values for a given aggregation.'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+        description: Identifies field being aggregated, e.g. "language"
+      - name: q
+        in: query
+        description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax)
+        required: false
+        type: string
+      - name: page
+        in: query
+        description: Page number to return
+        required: false
+        type: integer
+        minimum: 1
+        default: 1
+      - name: per_page
+        in: query
+        description: Number of results to return
+        required: false
+        type: integer
+        default: 50
+        maximum: 100
+        minimum: 1
+      tags:
+      - discovery
+      responses:
+        '200':
+          description: An array of resources search aggregations
+          schema:
+            "$ref": "#/definitions/ResourceAggregationResponse"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/ResourceError"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+  "/v0.1/discovery/resources":
+    get:
+      tags:
+      - discovery
       summary: Search resources
       description: |
         Search resources by keyword, filters, or no qualifiers at all.
@@ -82,108 +142,86 @@ paths:
 
         `/resources?order_by=random&per_page=5`
       parameters:
-        - name: q
-          in: query
-          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
-          required: false
-          type: string
-        - name: page
-          in: query
-          description: Page number to return
-          required: false
-          type: integer
-          minimum: 1
-        - name: per_page
-          in: query
-          description: Number of results to return
-          required: false
-          type: integer
-          default: 50
-          maximum: 100
-          minimum: 1
-        - name: order_by
-          in: query
-          description: Specify how to order results
-          required: false
-          type: string
-          enum: ['relevance', 'title', 'idLcc', 'random']
-          default: 'relevance'
-          minimum: 1
-      tags:
-        - Resources
+      - name: q
+        in: query
+        description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax)
+        required: false
+        type: string
+      - name: page
+        in: query
+        description: Page number to return
+        required: false
+        type: integer
+        minimum: 1
+      - name: per_page
+        in: query
+        description: Number of results to return
+        required: false
+        type: integer
+        default: 50
+        maximum: 100
+        minimum: 1
+      - name: order_by
+        in: query
+        description: Specify how to order results
+        required: false
+        type: string
+        enum:
+        - relevance
+        - title
+        - idLcc
+        - random
+        default: relevance
+        minimum: 1
       responses:
-        200:
+        '200':
           description: An array of resources
           schema:
-            $ref: '#/definitions/ResourcesResponse'
+            "$ref": "#/definitions/ResourcesResponse"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'
-  /resources/aggregations:
+            "$ref": "#/definitions/ResourceError"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+  "/v0.1/discovery/resources/{id}":
     get:
-      summary: Resource Search Aggregations
+      summary: Fetch a resource by ID
       description: |
-        Fetch resources search aggregations.
+        Fetch a resource. Note alternate response formats:
+
+        `.ntriples, .turtle, .jsonld (default)`
       parameters:
-        - name: q
-          in: query
-          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
-          required: true
-          type: string
+      - name: id
+        in: path
+        description: ID
+        required: true
+        type: string
       tags:
-        - Resources
+      - discovery
       responses:
-        200:
-          description: An array of resources search aggregations
+        '200':
+          description: A single resource
           schema:
-            $ref: '#/definitions/ResourceAggregationsResponse'
+            "$ref": "#/definitions/Resource"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'
-  /resources/aggregation/{id}:
-    get:
-      summary: Get a specific resources aggregation
-      description: |
-        Fetch a specific resources search aggregation. This provides ability to consume the long tail of values for a given aggregation.
-      parameters:
-        - name: id
-          in: path
-          required: true
-          type: string
-          description: Identifies field being aggregated, e.g. "language"
-        - name: q
-          in: query
-          description: Terms to match (and/or structured ES "Query String Query" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )
-          required: false
-          type: string
-        - name: page
-          in: query
-          description: Page number to return
-          required: false
-          type: integer
-          minimum: 1
-          default: 1
-        - name: per_page
-          in: query
-          description: Number of results to return
-          required: false
-          type: integer
-          default: 50
-          maximum: 100
-          minimum: 1
-      tags:
-        - Resources
-      responses:
-        200:
-          description: An array of resources search aggregations
-          schema:
-            $ref: '#/definitions/ResourceAggregationResponse'
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
+            "$ref": "#/definitions/ResourceError"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
 
   /agents/{id}:
     get:

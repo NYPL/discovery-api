@@ -1,57 +1,53 @@
-var cluster = require('cluster')
+const config = require('config');
+const log = require('loglevel');
+const swaggerDocs = require('./swagger.v0.2.json');
 
-const config = require('config')
-const log = require('loglevel')
+require('dotenv').config();
 
-log.setLevel(config.get('loglevel'))
+var express = require('express');
+var elasticsearch = require('elasticsearch');
 
-if (cluster.isMaster) {
-  // var numCPUs = require('os').cpus().length
+var app = express();
 
-  for (var i = 0; i < 1; i++) {
-    cluster.fork()
-  }
+app.thesaurus = config.thesaurus;
 
-  cluster.on('exit', function () {
-    console.log('A worker process died, restarting...')
-    cluster.fork()
-  })
-} else {
-  var express = require('express')
-  var elasticsearch = require('elasticsearch')
-  var pjson = require('./package.json')
+require('./lib/agents')(app);
+require('./lib/resources')(app);
 
-  var app = express()
+// routes
+require('./routes/agents')(app);
+require('./routes/resources')(app);
+require('./routes/misc')(app);
 
-  app.thesaurus = config.thesaurus
+app.esClient = new elasticsearch.Client({
+  host: config['elasticsearch'].host
+});
 
-  require('./lib/agents')(app)
-  require('./lib/resources')(app)
+app.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 
-  // routes
-  require('./routes/agents')(app)
-  require('./routes/resources')(app)
-  require('./routes/misc')(app)
+app.get('/', function (req, res) {
+  res.send("0.0.6")
+});
 
-  app.esClient = new elasticsearch.Client({
-    host: config['elasticsearch'].host
-  })
+// Just testing route
+app.get('/api/v0.1/discovery', function (req, res) {
+  res.send("0.0.6");
+});
 
-  app.all('*', function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*')
-    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
-    res.header('Access-Control-Allow-Headers', 'Content-Type')
-    next()
-  })
+app.get('/api/v0.1/discovery/swagger', function (req, res) {
+  res.send(swaggerDocs);
+});
 
-  app.get('/', function (req, res) {
-    res.send(pjson.version)
-  })
+// Could be removed for the Lambda but necessary for locally running the app.
+require('./lib/globals')(app).then((app) => {
+  app.listen(config['port'], function () {
+    console.log('Server started on port ' + config['port']);
+  });
+});
 
-  require('./lib/globals')(app).then((app) => {
-    app.listen(config['port'], function () {
-      console.log('Server started on port ' + config['port'])
-    })
-  })
-}
-
+module.exports = app;
