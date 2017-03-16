@@ -1,6 +1,7 @@
 const config = require('config');
 const log = require('loglevel');
 const swaggerDocs = require('./swagger.v0.2.json');
+const pjson = require('./package.json');
 
 require('dotenv').config();
 
@@ -31,12 +32,12 @@ app.all('*', function (req, res, next) {
 });
 
 app.get('/', function (req, res) {
-  res.send("0.0.6")
+  res.send(pjson.version)
 });
 
 // Just testing route
 app.get('/api/v0.1/discovery', function (req, res) {
-  res.send("0.0.6");
+  res.send(pjson.version)
 });
 
 app.get('/api/v0.1/discovery/swagger', function (req, res) {
