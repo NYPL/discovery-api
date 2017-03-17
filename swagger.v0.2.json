@@ -1,0 +1,722 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.1",
+    "title": "Discovery API",
+    "description": "NYPL research holdings as linked data"
+  },
+  "host": "api.nypltech.org",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "tags": [
+    {
+      "name": "discovery",
+      "description": "Discovery API"
+    }
+  ],
+  "paths": {
+    "/v0.1/discovery/aggregations": {
+      "get": {
+        "tags": [
+          "discovery"
+        ],
+        "summary": "Resource Search Aggregations",
+        "description": "Fetch resources search aggregations.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of resources search aggregations",
+            "schema": {
+              "$ref": "#/definitions/ResourceAggregationsResponse"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.querystring.q"
+          ]
+        }
+      }
+    },
+    "/v0.1/discovery/aggregation/{id}": {
+      "get": {
+        "summary": "Get a specific resources aggregation",
+        "description": "Fetch a specific resources search aggregation. This provides ability to consume the long tail of values for a given aggregation.\n",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Identifies field being aggregated, e.g. \"language\""
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to return",
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of results to return",
+            "required": false,
+            "type": "integer",
+            "default": 50,
+            "maximum": 100,
+            "minimum": 1
+          }
+        ],
+        "tags": [
+          "discovery"
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of resources search aggregations",
+            "schema": {
+              "$ref": "#/definitions/ResourceAggregationResponse"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.querystring.q",
+            "method.request.querystring.page",
+            "method.request.querystring.per_page",
+            "method.request.path.id"
+          ],
+          "contentHandling": "CONVERT_TO_TEXT"
+        }
+      }
+    },
+    "/v0.1/discovery/resources": {
+      "get": {
+        "tags": [
+          "discovery"
+        ],
+        "summary": "Search resources",
+        "description": "Search resources by keyword, filters, or no qualifiers at all.\n\nKeywords (matching title, description, notes, subjects, contributors):\n\n`/resources?q=fortitude`\n\nBy subject id:\n\n`/resources?q=subject:terms:10004719`\n\nBy contributor id:\n\n`/resources?q=contributor:agents:13447571`\n\nBy date (year), matching resources with start/end overlap on given date:\n\n`/resources?q=date:1984`\n\nFilter by date range (resources with dates overlapping the range given):\n\n`/resources?q=date:1984-2016`\n\nFilters can be combined. Unless otherwise specified, filters of different type are AND'd; filters of same type are OR'd.\n\nThis returns resources from either agents:10112414 OR agents:10378651:\n\n`/resources?contributor:(agents:10112414 OR agents:10378651)`\n\nThis returns resources associated with agents:10112414 AND owned by orgs:1000:\n\n`/resources?contributor:agents:10112414 AND owner:orgs:1000`\n\nThis restricts the above to resources matching \"Bandquart\":\n\n`/resources?contributor:agents:10112414 AND owner:orgs:1000 AND Bandquart`\n\nGet 5 random resources:\n\n`/resources?order_by=random&per_page=5`\n",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to return",
+            "required": false,
+            "type": "integer",
+            "minimum": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of results to return",
+            "required": false,
+            "type": "integer",
+            "default": 50,
+            "maximum": 100,
+            "minimum": 1
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "Specify how to order results",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "relevance",
+              "title",
+              "idLcc",
+              "random"
+            ],
+            "default": "relevance",
+            "minimum": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of resources",
+            "schema": {
+              "$ref": "#/definitions/ResourcesResponse"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.querystring.q",
+            "method.request.querystring.per_page",
+            "method.request.querystring.page",
+            "method.request.querystring.order_by"
+          ]
+        }
+      }
+    },
+    "/v0.1/discovery/resources/{id}": {
+      "get": {
+        "summary": "Fetch a resource by ID",
+        "description": "Fetch a resource. Note alternate response formats:\n\n`.ntriples, .turtle, .jsonld (default)`\n",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "discovery"
+        ],
+        "responses": {
+          "200": {
+            "description": "A single resource",
+            "schema": {
+              "$ref": "#/definitions/Resource"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.path.id"
+          ]
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ResourcesResponse": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "format": "url",
+          "description": "URL for JSONLD doc mapping short-hand property names to IRIs"
+        },
+        "@type": {
+          "type": "string",
+          "enum": [
+            "itemList"
+          ]
+        },
+        "itemListElement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ResourceResult"
+          }
+        }
+      }
+    },
+    "ResourceResult": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "searchResult"
+          ]
+        },
+        "result": {
+          "$ref": "#/definitions/Resource"
+        }
+      }
+    },
+    "ResourceAggregationsResponse": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "format": "url",
+          "description": "URL for JSONLD doc mapping short-hand property names to IRIs"
+        },
+        "@type": {
+          "type": "string",
+          "enum": [
+            "itemListElement"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "description": "ID, e.g. \"language\""
+        },
+        "itemListElement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Aggregation"
+          }
+        }
+      }
+    },
+    "ResourceAggregationResponse": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "format": "url",
+          "description": "URL for JSONLD doc mapping short-hand property names to IRIs"
+        },
+        "@type": {
+          "type": "string",
+          "enum": [
+            "itemListElement"
+          ]
+        },
+        "item": {
+          "$ref": "#/definitions/Aggregation"
+        }
+      }
+    },
+    "Resource": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "RDF type(s), e.g. \"nypl:Item\", \"nypl:Resource\""
+        },
+        "@id": {
+          "type": "string",
+          "description": "ID, e.g. \"res:105173159\""
+        },
+        "contributor": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          },
+          "description": "Contributor stubs"
+        },
+        "created": {
+          "type": "string",
+          "description": "Raw, unparsed date string"
+        },
+        "createdYear": {
+          "type": "integer",
+          "description": "Year of creation"
+        },
+        "depiction": {
+          "type": "string",
+          "description": "URL of an image for the resource"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of resource"
+        },
+        "endYear": {
+          "type": "integer",
+          "description": "Ending year of coverage"
+        },
+        "holdingCount": {
+          "type": "integer",
+          "description": "Rough number of copies across institutions"
+        },
+        "^id": {
+          "type": "string",
+          "description": "Various identifiers given as 'idAcqnum', 'idBarcode', 'idBnum', 'idCallNum', 'idCatnyp', 'idDcc', 'idExhib', 'idHathi', 'idIsbn', 'idIssn', 'idLcc', 'idLccCoarse', 'idMmmsDb', 'idMss', 'idObjNum', 'idOclc', 'idOwi', 'idRlin', 'idUuid'"
+        },
+        "language": {
+          "type": "array",
+          "description": "Language(s), if known",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "memberOf": {
+          "type": "array",
+          "description": "Parent resource(s)",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "note": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Note fields"
+        },
+        "title": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Title(s)"
+        },
+        "prefLabel": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Best title(s)"
+        },
+        "owner": {
+          "$ref": "#/definitions/EntityStub"
+        },
+        "roles:ROLE": {
+          "$ref": "#/definitions/ContribStub"
+        },
+        "startYear": {
+          "type": "integer",
+          "description": "Beggining year of coverage"
+        },
+        "subject": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "suppressed": {
+          "type": "boolean",
+          "description": "Indicates whether or not resource should be suppressed from view"
+        }
+      }
+    },
+    "ContribStub": {
+      "type": "object",
+      "description": "Identifies a contributing Agent by ROLE",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "nypl:Agent"
+          ]
+        },
+        "@id": {
+          "type": "string"
+        },
+        "prefLabel": {
+          "type": "string",
+          "description": "Friendly label for this contributor"
+        },
+        "note": {
+          "type": "string",
+          "description": "Contributor role (with respect to enclosing resource)"
+        }
+      }
+    },
+    "EntityStub": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "nypl:Agent",
+            "nypl:Term"
+          ]
+        },
+        "@id": {
+          "type": "string"
+        },
+        "prefLabel": {
+          "type": "string",
+          "description": "Friendly label for this entity"
+        }
+      }
+    },
+    "AgentsResponse": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "format": "url",
+          "description": "URL for JSONLD doc mapping short-hand property names to IRIs"
+        },
+        "@type": {
+          "type": "string",
+          "enum": [
+            "itemList"
+          ]
+        },
+        "itemListElement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AgentResult"
+          }
+        }
+      }
+    },
+    "AgentResult": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "searchResult"
+          ]
+        },
+        "result": {
+          "$ref": "#/definitions/Agent"
+        }
+      }
+    },
+    "AgentAggregationResponse": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "format": "url",
+          "description": "URL for JSONLD doc mapping short-hand property names to IRIs"
+        },
+        "@type": {
+          "type": "string",
+          "enum": [
+            "itemListElement"
+          ]
+        },
+        "itemListElement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Aggregation"
+          }
+        }
+      }
+    },
+    "Aggregation": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "nypl:Aggregation"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "description": "Identifies field being aggregated"
+        },
+        "field": {
+          "type": "string",
+          "description": "Identifies field being aggregated"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AggregationValue"
+          }
+        }
+      }
+    },
+    "AggregationValue": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "term aggregated"
+        },
+        "count": {
+          "type": "integer",
+          "description": "number of records matching term"
+        }
+      }
+    },
+    "Agent": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "nypl:Agent"
+          ]
+        },
+        "@id": {
+          "type": "string"
+        },
+        "birthDate": {
+          "type": "string",
+          "description": "raw, unparsed birth date"
+        },
+        "birthYear": {
+          "type": "integer",
+          "description": "parsed year of birth"
+        },
+        "birthDecade": {
+          "type": "integer",
+          "description": "parsed decade of birth"
+        },
+        "deathDate": {
+          "type": "string",
+          "description": "raw, unparsed death date"
+        },
+        "deathYear": {
+          "type": "integer",
+          "description": "parsed year of death"
+        },
+        "deathDecade": {
+          "type": "integer",
+          "description": "parsed decade of death"
+        },
+        "topFiveTermsString": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "denormalized term strings"
+          }
+        },
+        "topFiveRolesString": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "denormalized contrib strings"
+          }
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of agent, if any"
+        },
+        "uriViaf": {
+          "type": "string",
+          "description": "Viaf URI"
+        },
+        "uriWikidata": {
+          "type": "string",
+          "description": "wikidata URI"
+        },
+        "uriLc": {
+          "type": "string",
+          "description": "LC URI"
+        },
+        "uriDbpedia": {
+          "type": "string",
+          "description": "Dbpedia URI"
+        },
+        "depiction": {
+          "type": "string",
+          "description": "filename of image"
+        },
+        "wikipedia": {
+          "type": "string",
+          "format": "url",
+          "description": "URL of wiki page"
+        },
+        "prefLabel": {
+          "type": "string",
+          "description": "Best name"
+        },
+        "useCount": {
+          "type": "integer",
+          "description": "Rough measure of popularity/coverage"
+        }
+      }
+    },
+    "Term": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "RDF type(s), e.g. \"nypl:Term\""
+        },
+        "@id": {
+          "type": "string",
+          "description": "ID, e.g. \"term:105173159\""
+        },
+        "prefLabel": {
+          "type": "string",
+          "description": "Term label"
+        }
+      }
+    },
+    "ResourceError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,9 @@
   "author": "Matt Miller",
   "dependencies": {
     "async": "^1.5.2",
+    "aws-serverless-express": "^1.2.0",
     "config": "1.12.0",
+    "dotenv": "^4.0.0",
     "elasticsearch": "^10.1.2",
     "express": "^4.14.0",
     "fast-csv": "^2.3.0",
@@ -29,9 +31,9 @@
   "scripts": {
     "test": "standard && mocha test"
   },
-  "description": "",
+  "description": "Discovery API as an AWS Lambda.",
   "license": "MIT",
-  "name": "registry-api",
+  "name": "discovery-api",
   "preferGlobal": false,
   "private": false,
   "version": "0.0.6"

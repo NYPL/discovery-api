@@ -32,7 +32,7 @@ module.exports = function (app) {
     return false
   }
 
-  app.get(`/api/v${VER}/resources$`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
     var params = gatherParams(req, standardParams)
 
     return app.resources.search(params)
@@ -40,7 +40,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/resources/aggregations`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res) {
     var params = gatherParams(req, standardParams)
 
     return app.resources.aggregations(params)
@@ -48,7 +48,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/resources/aggregation/:field`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
     var params = req.params
 
     return app.resources.aggregation(params)
@@ -56,7 +56,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/resources/:uri\.:ext?`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
     var params = { uri: req.params.uri }
 
     var handler = app.resources.findByUri
