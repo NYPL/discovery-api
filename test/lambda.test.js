@@ -24,7 +24,9 @@ describe('AWS Lambda Tests', () => {
         })
         .then(() => done())
         .catch((error) => {
-          expect(error.result.body).to.equal('Cannot GET /api/v0.1/discovery/bad/path\n')
+          expect(error.result.body).to.equal('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta ' +
+            'charset="utf-8">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /api/v0.1' +
+            '/discovery/bad/path</pre>\n</body>\n</html>\n')
         })
     })
   })
@@ -65,7 +67,12 @@ describe('AWS Lambda Tests', () => {
 
     it('should return data from a query', () => {
       return lambdaTester(handler)
-        .event({ path: '/api/v0.1/discovery/resources?q=france' })
+        .event({
+          path: '/api/v0.1/discovery/resources',
+          queryStringParameters: {
+            q: 'france'
+          }
+        })
         .expectSucceed((result) => {
           const data = JSON.parse(result.body)
 
@@ -74,6 +81,7 @@ describe('AWS Lambda Tests', () => {
           expect(data.itemListElement[0]['@type']).to.equal('searchResult')
           expect(data.totalResults).to.equal(36558)
         })
+        // .verify(done())
     })
 
     // The next test keeps failing but the one after works. Maybe /resources/aggregations returns
@@ -93,7 +101,12 @@ describe('AWS Lambda Tests', () => {
 
     it('should return filters from the aggregation path with a query', () => {
       return lambdaTester(handler)
-        .event({ path: '/api/v0.1/discovery/resources/aggregations?q=france' })
+        .event({
+          path: '/api/v0.1/discovery/resources/aggregations',
+          queryStringParameters: {
+            q: 'france'
+          }
+        })
         .expectSucceed((result) => {
           const data = JSON.parse(result.body)
 
