@@ -61,6 +61,7 @@ describe('AWS Lambda Tests', () => {
           expect(result.statusCode).to.equal(200)
           expect(data['@type']).to.equal('itemList')
           expect(data.itemListElement[0]['@type']).to.equal('searchResult')
+          // The total number is expected to get updated over time
           expect(data.totalResults).to.equal(9880162)
         })
     })
@@ -95,7 +96,8 @@ describe('AWS Lambda Tests', () => {
     //       expect(result.statusCode).to.equal(200)
     //       expect(data['@type']).to.equal('itemList')
     //       expect(data.itemListElement[0]['@type']).to.equal('nypl:Aggregation')
-    //       expect(data.totalResults).to.equal(9880162)
+    //       // The total number of aggregations is expected to get updated over time
+    //       expect(data.totalResults).to.equal(9880161)
     //     })
     // })
 
@@ -116,19 +118,19 @@ describe('AWS Lambda Tests', () => {
           expect(data.totalResults).to.equal(36558)
         })
     })
-  })
 
-  it('should return data for one resource', () => {
-    return lambdaTester(handler)
-      .event({ path: '/api/v0.1/discovery/resources/b10000204' })
-      .expectSucceed((result) => {
-        const data = JSON.parse(result.body)
+    it('should return data for one resource', () => {
+      return lambdaTester(handler)
+        .event({ path: '/api/v0.1/discovery/resources/b10000204' })
+        .expectSucceed((result) => {
+          const data = JSON.parse(result.body)
 
-        expect(result.statusCode).to.equal(200)
-        // had to use toString() because `typeof data.type` says it's an object even
-        // though data.type = [ 'nypl:Item' ]
-        expect(data.type.toString()).to.equal('nypl:Item')
-        expect(data.idBnum.toString()).to.equal('10000204')
-      })
+          expect(result.statusCode).to.equal(200)
+          // had to use toString() because `typeof data.type` says it's an object even
+          // though data.type = [ 'nypl:Item' ]
+          expect(data.type.toString()).to.equal('nypl:Item')
+          expect(data.idBnum.toString()).to.equal('10000204')
+        })
+    })
   })
 })
