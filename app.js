@@ -45,7 +45,7 @@ app.get('/api/v0.1/discovery/swagger', function (req, res) {
 })
 
 // Only start the Express server locally:
-if (process.env.AWS_LAMBDA_FUNCTION_NAME) {
+if (process.env.LOCAL) {
   require('./lib/globals')(app).then((app) => {
     app.listen(config['port'], function () {
       console.log('Server started on port ' + config['port'])
