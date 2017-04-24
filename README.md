@@ -74,7 +74,15 @@ All search queries support `sort`ing on `title` or `date`. To set a non-default 
 
 > /resources/b15704876-i25375512
 
-## AWS Services
+## Running
+
+The API can be run locally by running the following command:
+
+> npm start
+
+This will bypass the AWS Serverless Express package that wraps the API and allows it to run on AWS as a Lambda.
+
+# AWS Services
 
 Currently, the Discovery API is deployed as an AWS Lambda and the endpoints from the Express app are behind an AWS API Gateway called NYPL API - Lambda. Because the API Gateway has a specific endpoint structure, the Discovery API had to conform to that, specifically updating to `/api/v[VERSION_OF_API]/discovery/resources`. The Discovery API can still be run locally, or on a server, through the `node app.js` command.
 
@@ -95,6 +103,14 @@ The node-lambda npm package is used to invoke the lambda locally and to deploy i
 * Index.js - is the wrapper file and handler that the Lambda uses. The `aws-serverless-express` npm package is used to allow the Express server to be access as a Lambda, turning the server application into a serverless application.
 
 To push to AWS run `node-lambda deploy`.
+
+### Test locally
+
+The Discovery API can be tested locally as an AWS Lambda by running
+
+> node-lambda run
+
+This will use the `path` property found in `event.json` as the parameter passed to the API. The `event.json` file is mocking an AWS HTTP request that is similar to what the AWS API Gateway receives/sends.
 
 ### API Gateway
 
