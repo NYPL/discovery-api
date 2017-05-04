@@ -2,7 +2,7 @@
 
 var request = require('request-promise')
 var assert = require('assert')
-var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3000')
+var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3003')
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
@@ -12,7 +12,7 @@ describe('Test Resources responses', function () {
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.id} has correct type ${spec.type}`, function (done) {
-        request.get(`${base_url}/api/v1/resources/${spec.id}`, function (err, response, body) {
+        request.get(`${base_url}/api/v0.1/discovery/resources/${spec.id}`, function (err, response, body) {
           if (err) throw err
           assert.equal(200, response.statusCode)
           var doc = JSON.parse(body)
@@ -25,7 +25,7 @@ describe('Test Resources responses', function () {
 
   describe('GET resources fields', function () {
     it('Resource data for b10015541 are what we expect', function (done) {
-      request.get(`${base_url}/api/v1/resources/b10022950`, function (err, response, body) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -58,7 +58,7 @@ describe('Test Resources responses', function () {
 
   describe('GET resources fields', function () {
     it('Resource data for b10022734 are what we expect', function (done) {
-      request.get(`${base_url}/api/v1/resources/b10022734`, function (err, response, body) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b10022734`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -80,7 +80,7 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources search', function () {
-    var searchAllUrl = `${base_url}/api/v1/resources?q=`
+    var searchAllUrl = `${base_url}/api/v0.1/discovery/resources?q=`
 
     it('Resource search all returns status code 200', function (done) {
       request.get(searchAllUrl, function (err, response, body) {
