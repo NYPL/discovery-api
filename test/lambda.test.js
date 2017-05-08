@@ -24,9 +24,8 @@ describe('AWS Lambda Tests', () => {
         })
         .then(() => done())
         .catch((error) => {
-          expect(error.result.body).to.equal('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta ' +
-            'charset="utf-8">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /api/v0.1' +
-            '/discovery/bad/path</pre>\n</body>\n</html>\n')
+          expect(error.result.body).to.contain('Cannot GET /api/v0.1' +
+            '/discovery/bad/path')
         })
     })
   })
@@ -62,7 +61,7 @@ describe('AWS Lambda Tests', () => {
           expect(data['@type']).to.equal('itemList')
           expect(data.itemListElement[0]['@type']).to.equal('searchResult')
           // The total number is expected to get updated over time
-          expect(data.totalResults).to.equal(9880162)
+          expect(data.totalResults).to.be.above(4000000)
         })
     })
 
@@ -80,7 +79,7 @@ describe('AWS Lambda Tests', () => {
           expect(result.statusCode).to.equal(200)
           expect(data['@type']).to.equal('itemList')
           expect(data.itemListElement[0]['@type']).to.equal('searchResult')
-          expect(data.totalResults).to.equal(36558)
+          expect(data.totalResults).to.be.above(15000)
         })
         // .verify(done())
     })
@@ -115,7 +114,7 @@ describe('AWS Lambda Tests', () => {
           expect(result.statusCode).to.equal(200)
           expect(data['@type']).to.equal('itemList')
           expect(data.itemListElement[0]['@type']).to.equal('nypl:Aggregation')
-          expect(data.totalResults).to.equal(36558)
+          expect(data.totalResults).to.be.above(15000)
         })
     })
 
