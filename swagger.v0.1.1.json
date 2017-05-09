@@ -31,7 +31,19 @@
             "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "search_scope",
+            "in": "query",
+            "description": "Specify what (group of) fields to match against",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "all", "title", "contributor", "subject", "series", "callnumber"
+            ],
+            "default": "all"
           }
+
         ],
         "responses": {
           "200": {
@@ -100,7 +112,19 @@
             "default": 50,
             "maximum": 100,
             "minimum": 1
+          },
+          {
+            "name": "search_scope",
+            "in": "query",
+            "description": "Specify what (group of) fields to match against",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "all", "title", "contributor", "subject", "series", "callnumber"
+            ],
+            "default": "all"
           }
+
         ],
         "tags": [
           "discovery"
@@ -186,6 +210,17 @@
             ],
             "default": "relevance",
             "minimum": 1
+          },
+          {
+            "name": "search_scope",
+            "in": "query",
+            "description": "Specify what (group of) fields to match against",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "all", "title", "contributor", "subject", "series", "callnumber"
+            ],
+            "default": "all"
           }
         ],
         "responses": {
