@@ -2,7 +2,10 @@
 
 var request = require('request-promise')
 var assert = require('assert')
-var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3003')
+const config = require('config')
+const expect = require('chai').expect
+
+var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:' + config.get('port'))
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
@@ -33,7 +36,7 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         assert(doc.title)
-        assert.equal(doc.title[0], 'Religion--love or hate? /')
+        assert.equal(doc.title[0], 'Religion--love or hate?')
 
         assert(doc.contributor)
         assert.equal(doc.contributor.length, 1)
@@ -66,13 +69,13 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         assert(doc.title)
-        assert.equal(doc.title[0], 'When Harlem was in vogue /')
+        assert.equal(doc.title[0], 'When Harlem was in vogue')
 
         assert.equal(doc.createdYear, 1981)
 
         assert(doc.items)
         assert.equal(doc.items.length, 3)
-        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780').length, 1)
+        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780 ---').length, 1)
 
         done()
       })
@@ -173,9 +176,9 @@ describe('Test Resources responses', function () {
         // Obj date range encompases queried date:
         assert(doc.itemListElement[0].result.dateStartYear >= dates[0])
 
-        // At writing, this returns 111,217 docs
-        assert(doc.totalResults > 100000)
-        assert(doc.totalResults < 150000)
+        // At writing, this returns 1,660,660 docs
+        expect(doc.totalResults).to.be.above(1000000)
+        expect(doc.totalResults).to.be.below(2000000)
 
         var prevTotal
         prevTotal = doc.totalResults

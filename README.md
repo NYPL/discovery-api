@@ -62,10 +62,29 @@ English resources about 'war' and/or 'peace':
 
 > /resources?filters=language:"lang:eng"&q=(war OR peace)
 
-## Sorting
+### Sorting
 
 All search queries support `sort`ing on `title` or `date`. To set a non-default direction use `sort_direction=(asc|desc)`. To sort by relevance, omit the `sort` param.
 
+### Aggregations
+
+All searches above can be retrieved as aggregations. To fetch the standard set of aggregations, append '/aggregations' to a search path. For example:
+
+> /resources/aggregations?filters=date:{1999 TO \*}
+
+All aggregations (no filter):
+
+> /resources/aggregations
+
+To fetch a specific aggregation (especially useful when fetching more than the default number of buckets):
+
+> /resources/aggregation/[aggregation id]
+
+For example to fetch the first 100 subject aggregations:
+
+> /resources/aggregation/subject?per_page=100
+
+Note that `page=` is not supported for aggregations (ES doesn't seem to offer a way to jump to an offset https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html#_size )
 ## Get a single bib/item resource by id
 
 > /resources/b15704876

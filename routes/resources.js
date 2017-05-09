@@ -49,7 +49,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
-    var params = req.params
+    var params = Object.assign({}, gatherParams(req, standardParams), req.params)
 
     return app.resources.aggregation(params)
       .then((resp) => respond(res, resp, params))
