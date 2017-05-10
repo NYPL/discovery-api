@@ -38,9 +38,9 @@ describe('Test Resources responses', function () {
         assert(doc.title)
         assert.equal(doc.title[0], 'Religion--love or hate?')
 
-        assert(doc.contributor)
-        assert.equal(doc.contributor.length, 1)
-        assert.equal(doc.contributor[0], 'Kirshenbaum, D. (David), 1902-')
+        assert(doc.contributorLiteral)
+        assert.equal(doc.contributorLiteral.length, 1)
+        assert.equal(doc.contributorLiteral[0], 'Kirshenbaum, D. (David), 1902-')
 
         assert(doc.materialType)
         assert.equal(doc.materialType[0]['@id'], 'resourcetypes:txt')

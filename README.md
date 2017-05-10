@@ -64,7 +64,13 @@ English resources about 'war' and/or 'peace':
 
 ### Sorting
 
-All search queries support `sort`ing on `title` or `date`. To set a non-default direction use `sort_direction=(asc|desc)`. To sort by relevance, omit the `sort` param.
+All search queries support `sort`ing on:
+
+ - `title`: Case insensitive sort on title. Default ascending.
+ - `date`: Sort on dateStartYear. Default descending.
+ - `creator`: Case insensitive sort on first creator. (Note the "first" creator may not be the best creator.) Default ascending.
+
+To set a non-default direction use `sort_direction=(asc|desc)`. To sort by relevance (i.e. keyword query), omit the `sort` param.
 
 ### Aggregations
 
