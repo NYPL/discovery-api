@@ -62,8 +62,18 @@
               "creator",
               "date"
             ],
-            "default": "relevance",
-            "minimum": 1
+            "default": "relevance"
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "description": "Override the default direction for the current sort (asc, desc). Default depends on the field.",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
           },
           {
             "name": "search_scope",
@@ -115,9 +125,11 @@
           "type": "aws_proxy",
           "cacheKeyParameters": [
             "method.request.querystring.q",
-            "method.request.querystring.per_page",
+            "method.request.querystring.search_scope",
             "method.request.querystring.page",
-            "method.request.querystring.sort"
+            "method.request.querystring.per_page",
+            "method.request.querystring.sort",
+            "method.request.querystring.sort_direction"
           ]
         }
       }
@@ -232,7 +244,10 @@
           "httpMethod": "POST",
           "type": "aws_proxy",
           "cacheKeyParameters": [
-            "method.request.querystring.q"
+            "method.request.querystring.q",
+            "method.request.querystring.search_scope",
+            "method.request.querystring.filters",
+            "method.request.querystring.per_page"
           ]
         }
       }
@@ -321,8 +336,11 @@
           "type": "aws_proxy",
           "cacheKeyParameters": [
             "method.request.querystring.q",
+            "method.request.querystring.search_scope",
             "method.request.querystring.page",
             "method.request.querystring.per_page",
+            "method.request.querystring.sort",
+            "method.request.querystring.sort_direction",
             "method.request.path.id"
           ],
           "contentHandling": "CONVERT_TO_TEXT"
