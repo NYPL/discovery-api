@@ -46,6 +46,8 @@ app.get('/api/v0.1/discovery/swagger', function (req, res) {
   res.send(swaggerDocs)
 })
 
+app.baseUrl = `/api/v${config.get('major_version')}/discovery`
+
 // Could be removed for the Lambda but necessary for locally running the app.
 require('./lib/globals')(app).then((app) => {
   app.listen(config['port'], function () {

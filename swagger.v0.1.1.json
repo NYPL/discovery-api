@@ -17,159 +17,13 @@
     }
   ],
   "paths": {
-    "/v0.1/discovery/aggregations": {
-      "get": {
-        "tags": [
-          "discovery"
-        ],
-        "summary": "Resource Search Aggregations",
-        "description": "Fetch resources search aggregations.",
-        "parameters": [
-          {
-            "name": "q",
-            "in": "query",
-            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "search_scope",
-            "in": "query",
-            "description": "Specify what (group of) fields to match against",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "all", "title", "contributor", "subject", "series", "callnumber"
-            ],
-            "default": "all"
-          }
-
-        ],
-        "responses": {
-          "200": {
-            "description": "An array of resources search aggregations",
-            "schema": {
-              "$ref": "#/definitions/ResourceAggregationsResponse"
-            }
-          },
-          "default": {
-            "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/ResourceError"
-            }
-          }
-        },
-        "x-amazon-apigateway-integration": {
-          "responses": {
-            "default": {
-              "statusCode": "200"
-            }
-          },
-          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
-          "passthroughBehavior": "when_no_match",
-          "httpMethod": "POST",
-          "type": "aws_proxy",
-          "cacheKeyParameters": [
-            "method.request.querystring.q"
-          ]
-        }
-      }
-    },
-    "/v0.1/discovery/aggregation/{id}": {
-      "get": {
-        "summary": "Get a specific resources aggregation",
-        "description": "Fetch a specific resources search aggregation. This provides ability to consume the long tail of values for a given aggregation.\n",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "Identifies field being aggregated, e.g. \"language\""
-          },
-          {
-            "name": "q",
-            "in": "query",
-            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "description": "Page number to return",
-            "required": false,
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          {
-            "name": "per_page",
-            "in": "query",
-            "description": "Number of results to return",
-            "required": false,
-            "type": "integer",
-            "default": 50,
-            "maximum": 100,
-            "minimum": 1
-          },
-          {
-            "name": "search_scope",
-            "in": "query",
-            "description": "Specify what (group of) fields to match against",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "all", "title", "contributor", "subject", "series", "callnumber"
-            ],
-            "default": "all"
-          }
-
-        ],
-        "tags": [
-          "discovery"
-        ],
-        "responses": {
-          "200": {
-            "description": "An array of resources search aggregations",
-            "schema": {
-              "$ref": "#/definitions/ResourceAggregationResponse"
-            }
-          },
-          "default": {
-            "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/ResourceError"
-            }
-          }
-        },
-        "x-amazon-apigateway-integration": {
-          "responses": {
-            "default": {
-              "statusCode": "200"
-            }
-          },
-          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
-          "passthroughBehavior": "when_no_match",
-          "httpMethod": "POST",
-          "type": "aws_proxy",
-          "cacheKeyParameters": [
-            "method.request.querystring.q",
-            "method.request.querystring.page",
-            "method.request.querystring.per_page",
-            "method.request.path.id"
-          ],
-          "contentHandling": "CONVERT_TO_TEXT"
-        }
-      }
-    },
     "/v0.1/discovery/resources": {
       "get": {
         "tags": [
           "discovery"
         ],
         "summary": "Search resources",
-        "description": "Search resources by keyword, filters, or no qualifiers at all.\n\nKeywords (matching title, description, notes, subjects, contributors):\n\n`/resources?q=fortitude`\n\nBy subject id:\n\n`/resources?q=subject:terms:10004719`\n\nBy contributor id:\n\n`/resources?q=contributor:agents:13447571`\n\nBy date (year), matching resources with start/end overlap on given date:\n\n`/resources?q=date:1984`\n\nFilter by date range (resources with dates overlapping the range given):\n\n`/resources?q=date:1984-2016`\n\nFilters can be combined. Unless otherwise specified, filters of different type are AND'd; filters of same type are OR'd.\n\nThis returns resources from either agents:10112414 OR agents:10378651:\n\n`/resources?contributor:(agents:10112414 OR agents:10378651)`\n\nThis returns resources associated with agents:10112414 AND owned by orgs:1000:\n\n`/resources?contributor:agents:10112414 AND owner:orgs:1000`\n\nThis restricts the above to resources matching \"Bandquart\":\n\n`/resources?contributor:agents:10112414 AND owner:orgs:1000 AND Bandquart`\n",
+        "description": "Match by keyword\n\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> /resources?filters[property1]=value1&filters[property2]=value2\n\nWhere `property*` is one of: \n\n> 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL-discovery/discovery-api/blob/master/README.md)\n",
         "parameters": [
           {
             "name": "q",
@@ -199,7 +53,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "Specify how to order results",
+            "description": "Specify how to order results (relevance, title, creator, date)",
             "required": false,
             "type": "string",
             "enum": [
@@ -214,13 +68,25 @@
           {
             "name": "search_scope",
             "in": "query",
-            "description": "Specify what (group of) fields to match against",
+            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber)",
             "required": false,
             "type": "string",
             "enum": [
-              "all", "title", "contributor", "subject", "series", "callnumber"
+              "all",
+              "title",
+              "contributor",
+              "subject",
+              "series",
+              "callnumber"
             ],
             "default": "all"
+          },
+          {
+            "name": "filters[*]",
+            "in": "query",
+            "description": "Specify a hash of filters to apply, where key is: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -299,6 +165,167 @@
           "cacheKeyParameters": [
             "method.request.path.id"
           ]
+        }
+      }
+    },
+    "/v0.1/discovery/aggregations": {
+      "get": {
+        "tags": [
+          "discovery"
+        ],
+        "summary": "Resource Search Aggregations",
+        "description": "Fetch resources search aggregations.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "search_scope",
+            "in": "query",
+            "description": "Specify what (group of) fields to match against",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "all",
+              "title",
+              "contributor",
+              "subject",
+              "series",
+              "callnumber"
+            ],
+            "default": "all"
+          },
+          {
+            "name": "filters[*]",
+            "in": "query",
+            "description": "Specify a hash of filters to apply, where key is: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of resources search aggregations",
+            "schema": {
+              "$ref": "#/definitions/ResourceAggregationsResponse"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.querystring.q"
+          ]
+        }
+      }
+    },
+    "/v0.1/discovery/aggregation/{id}": {
+      "get": {
+        "summary": "Get a specific resources aggregation",
+        "description": "Fetch a specific resources search aggregation. This provides ability to consume the long tail of values for a given aggregation.\n",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Identifies field being aggregated, e.g. \"language\""
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Terms to match (and/or structured ES \"Query String Query\" https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax )",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to return",
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of results to return",
+            "required": false,
+            "type": "integer",
+            "default": 50,
+            "maximum": 100,
+            "minimum": 1
+          },
+          {
+            "name": "search_scope",
+            "in": "query",
+            "description": "Specify what (group of) fields to match against",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "all",
+              "title",
+              "contributor",
+              "subject",
+              "series",
+              "callnumber"
+            ],
+            "default": "all"
+          }
+        ],
+        "tags": [
+          "discovery"
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of resources search aggregations",
+            "schema": {
+              "$ref": "#/definitions/ResourceAggregationResponse"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.querystring.q",
+            "method.request.querystring.page",
+            "method.request.querystring.per_page",
+            "method.request.path.id"
+          ],
+          "contentHandling": "CONVERT_TO_TEXT"
         }
       }
     }
@@ -620,7 +647,6 @@
           "description": "Internal identifier for resource"
         }
       }
-
     },
     "Aggregation": {
       "type": "object",

@@ -33,6 +33,7 @@ module.exports = function (app) {
   }
 
   app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
+    console.log('params: ', JSON.stringify(req.query, null, 2))
     var params = gatherParams(req, standardParams)
 
     return app.resources.search(params)
