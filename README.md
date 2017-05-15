@@ -70,9 +70,9 @@ Filter by date range (resources created anywhere inside the range given, inclusi
 
 > /resources?filters[dateAfter]=1999&filters[dateBefore]=2012
 
-Note that dateStartYear and dateEndYear are often very broad, causing the above to match many things catalogued with range 999-9999. To match against the specific catalogued "created" year, use `dateCreated`:
+Note that dateStartYear and dateEndYear are often very broad, causing the above to match many things catalogued with range 999-9999. To match against the specific catalogued "created" year, use `createdYear`:
 
-> /resources?filters[dateCreated]=1999
+> /resources?filters[createdYear]=1999
 
 ### Pagination
 
