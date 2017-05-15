@@ -1,5 +1,6 @@
 const config = require('config')
 const log = require('loglevel')
+
 log.setLevel(process.env.LOGLEVEL || config.get('loglevel') || 'error')
 
 const swaggerDocs = require('./swagger.v0.1.1.json')
@@ -46,13 +47,13 @@ app.get('/api/v0.1/discovery/swagger', function (req, res) {
   res.send(swaggerDocs)
 })
 
-app.baseUrl = `/api/v${config.get('major_version')}/discovery`
-
-// Could be removed for the Lambda but necessary for locally running the app.
-require('./lib/globals')(app).then((app) => {
-  app.listen(config['port'], function () {
-    console.log('Server started on port ' + config['port'])
+// Only start the Express server locally:
+if (process.env.LOCAL) {
+  require('./lib/globals')(app).then((app) => {
+    app.listen(config['port'], function () {
+      console.log('Server started on port ' + config['port'])
+    })
   })
-})
+}
 
 module.exports = app
