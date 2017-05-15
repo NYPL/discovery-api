@@ -10,7 +10,7 @@ module.exports = function (app) {
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction']
+  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope']
 
   const VER = config.get('major_version')
 
@@ -49,7 +49,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
-    var params = req.params
+    var params = Object.assign({}, gatherParams(req, standardParams), req.params)
 
     return app.resources.aggregation(params)
       .then((resp) => respond(res, resp, params))

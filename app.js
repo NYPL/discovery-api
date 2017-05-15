@@ -1,6 +1,9 @@
 const config = require('config')
 const log = require('loglevel')
-const swaggerDocs = require('./swagger.v0.2.json')
+
+log.setLevel(process.env.LOGLEVEL || config.get('loglevel') || 'error')
+
+const swaggerDocs = require('./swagger.v0.1.1.json')
 const pjson = require('./package.json')
 
 require('dotenv').config()

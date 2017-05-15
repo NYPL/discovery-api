@@ -2,7 +2,10 @@
 
 var request = require('request-promise')
 var assert = require('assert')
-var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:3000')
+const config = require('config')
+const expect = require('chai').expect
+
+var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:' + config.get('port'))
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
@@ -12,7 +15,7 @@ describe('Test Resources responses', function () {
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.id} has correct type ${spec.type}`, function (done) {
-        request.get(`${base_url}/api/v1/resources/${spec.id}`, function (err, response, body) {
+        request.get(`${base_url}/api/v0.1/discovery/resources/${spec.id}`, function (err, response, body) {
           if (err) throw err
           assert.equal(200, response.statusCode)
           var doc = JSON.parse(body)
@@ -25,7 +28,7 @@ describe('Test Resources responses', function () {
 
   describe('GET resources fields', function () {
     it('Resource data for b10015541 are what we expect', function (done) {
-      request.get(`${base_url}/api/v1/resources/b10022950`, function (err, response, body) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -33,11 +36,11 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         assert(doc.title)
-        assert.equal(doc.title[0], 'Religion--love or hate? /')
+        assert.equal(doc.title[0], 'Religion--love or hate?')
 
-        assert(doc.contributor)
-        assert.equal(doc.contributor.length, 1)
-        assert.equal(doc.contributor[0], 'Kirshenbaum, D. (David), 1902-')
+        assert(doc.contributorLiteral)
+        assert.equal(doc.contributorLiteral.length, 1)
+        assert.equal(doc.contributorLiteral[0], 'Kirshenbaum, D. (David), 1902-')
 
         assert(doc.materialType)
         assert.equal(doc.materialType[0]['@id'], 'resourcetypes:txt')
@@ -58,7 +61,7 @@ describe('Test Resources responses', function () {
 
   describe('GET resources fields', function () {
     it('Resource data for b10022734 are what we expect', function (done) {
-      request.get(`${base_url}/api/v1/resources/b10022734`, function (err, response, body) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b10022734`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -66,13 +69,13 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         assert(doc.title)
-        assert.equal(doc.title[0], 'When Harlem was in vogue /')
+        assert.equal(doc.title[0], 'When Harlem was in vogue')
 
         assert.equal(doc.createdYear, 1981)
 
         assert(doc.items)
         assert.equal(doc.items.length, 3)
-        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780').length, 1)
+        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780 ---').length, 1)
 
         done()
       })
@@ -80,7 +83,7 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources search', function () {
-    var searchAllUrl = `${base_url}/api/v1/resources?q=`
+    var searchAllUrl = `${base_url}/api/v0.1/discovery/resources?q=`
 
     it('Resource search all returns status code 200', function (done) {
       request.get(searchAllUrl, function (err, response, body) {
@@ -173,9 +176,9 @@ describe('Test Resources responses', function () {
         // Obj date range encompases queried date:
         assert(doc.itemListElement[0].result.dateStartYear >= dates[0])
 
-        // At writing, this returns 111,217 docs
-        assert(doc.totalResults > 100000)
-        assert(doc.totalResults < 150000)
+        // At writing, this returns 1,660,660 docs
+        expect(doc.totalResults).to.be.above(1000000)
+        expect(doc.totalResults).to.be.below(2000000)
 
         var prevTotal
         prevTotal = doc.totalResults
