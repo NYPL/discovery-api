@@ -31,7 +31,8 @@
     "standard": "^6.0.8"
   },
   "scripts": {
-    "test": "standard && mocha test"
+    "test": "standard && mocha test",
+    "start": "LOCAL=true node app.js"
   },
   "description": "Discovery API as an AWS Lambda.",
   "license": "MIT",

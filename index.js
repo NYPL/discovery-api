@@ -3,6 +3,7 @@
 const awsServerlessExpress = require('aws-serverless-express')
 const app = require('./app')
 const server = awsServerlessExpress.createServer(app)
+
 var log = null
 const config = require('config')
 
