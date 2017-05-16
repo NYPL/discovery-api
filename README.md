@@ -4,63 +4,82 @@
 
 This is a fork of the old Registry API with revised endpoints. It's currently deployed here:
 
-[http://discovery-api.nypltech.org/api/v1](http://discovery-api.nypltech.org/api/v1)
+[https://api.nypltech.org/api/v0.1/discovery/resources ](https://api.nypltech.org/api/v0.1/discovery/resources)
 
 # Documentation
 
-Much of our [v0.2 aspirational spec](https://nypl-discovery.github.io/discovery-api/#/Resources) is now functional (Resources only). Some filtering methods are still sketchy. Here are some sample queries known to currently work:
+Check the [v0.1.1 swagger](https://github.com/NYPL-discovery/discovery-api/blob/master/swagger.v0.1.1.json) for the machine readable api contract.
 
 ## Searching
 
-In general, at writing, `q` and `filters` params accept [Elastic "Query String Query" strings](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html)
+Match by keyword:
 
-Keywords (matching title, description, notes, subjects, contributors):
+> /resources?q=war peace
 
-> /resources?q=war
+Match by exact phrase:
 
-By language:
+> /resources?q="war and peace"
 
-> /resources?filters=language:"lang:eng"
+In general, `q` param accepts [Elastic "Query String Query" strings](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html), which supports field-specific and/or boolean searches.
 
-> /resources?filters=language:"lang:spa"
+For example, you could `q` alone without filters to retrieve records matching war with a `dateStartYear` overlap on 1999-2012:
+
+> /resources?q=war dateStartYear:[1999 TO 2012]
+
+.. Or get things created in 1999 *or later*:
+
+> /resources?q=dateStartYear:>1999
+
+Or match "war" or "peace":
+
+> /resources?q=war OR peace
+
+Check the [Elastic "Query String Query" strings docs for more information](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html).
+
+### Filters
+
+Filters are applied using a `filters` param that expects this syntax on the query string:
+
+> /resources?filters[property1]=value1&filters[property2]=value2
+
+Where `property*` is one of: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.
+
+The value given should be *exact*. Do not use quotes.
+
+For example, to filter by English language:
+
+> /resources?filters[language]=lang:eng
 
 By contributor (literal):
 
-> /resources?filters=contributor:"Rowling, J. K."
+> /resources?filters[contributorLiteral]=Dostoyevsky, Fyodor, 1821-1881.
 
-By date created (year)
+Filters can be combined across different properties to form a boolean AND. This will match only English books written by Dostoyevsky:
 
-> /resources?filters=date:1999
+> /resources?filters[language]=lang:eng&filters[contributorLiteral]=Dostoyevsky, Fyodor, 1821-1881.
 
-Filter by date range (resources created anywhere inside the range given):
+Using two filters for the same property combines them as a boolean OR. This will match Dostoyevsky books written in English OR Russian:
 
-> /resources?filters=date:[1999 TO 2012]
-
-Get things created in 1999 *or later*:
-
-> /resources?filters=date:>1999
-
-This is an alternate way of specifying above query, matching from 1999 ('{' indicates non-inclusive) to * (whenever):
-
-> /resources?filters=date:{1999 TO \*}
-
-Filter by material type (Text, Still Image, Audio, ...):
-
-> /resources?filters=materialType:"resourcetypes:img"
+> /resources?filters[language]=lang:eng&filters[language]=lang:rus&filters[contributorLiteral]=Dostoyevsky, Fyodor, 1821-1881.
 
 Filter by publisher:
 
-> /resources?filters=publisher:"Oxford University Press,"
+> /resources?filters[publisher]=Oxford University Press,
 
-Filters can be combined!
+Filter by date range (resources created anywhere inside the range given, inclusive):
 
-English resources about 'war':
+> /resources?filters[dateAfter]=1999&filters[dateBefore]=2012
 
-> /resources?filters=language:"lang:eng"&q=war
+Note that dateStartYear and dateEndYear are often very broad, causing the above to match many things catalogued with range 999-9999. To match against the specific catalogued "created" year, use `createdYear`:
 
-English resources about 'war' and/or 'peace':
+> /resources?filters[createdYear]=1999
 
-> /resources?filters=language:"lang:eng"&q=(war OR peace)
+### Pagination
+
+All search queries support:
+
+ - `page`: Integer. Page number to retrieve. (Default 1)
+ - `per_page`: Integer. Number of results to retrieve at a time. Default 50. Valid range 0-100.
 
 ### Sorting
 
@@ -76,7 +95,7 @@ To set a non-default direction use `sort_direction=(asc|desc)`. To sort by relev
 
 All searches above can be retrieved as aggregations. To fetch the standard set of aggregations, append '/aggregations' to a search path. For example:
 
-> /resources/aggregations?filters=date:{1999 TO \*}
+> /resources/aggregations?q=dateStartYear:{1999 TO \*}
 
 All aggregations (no filter):
 
@@ -91,6 +110,7 @@ For example to fetch the first 100 subject aggregations:
 > /resources/aggregation/subject?per_page=100
 
 Note that `page=` is not supported for aggregations (ES doesn't seem to offer a way to jump to an offset https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html#_size )
+
 ## Get a single bib/item resource by id
 
 > /resources/b15704876
