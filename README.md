@@ -10,6 +10,18 @@ This is a fork of the old Registry API with revised endpoints. It's currently de
 
 Check the [v0.1.1 swagger](https://github.com/NYPL-discovery/discovery-api/blob/master/swagger.v0.1.1.json) for the machine readable api contract.
 
+## Installing & Running Locally
+
+This app uses [nvm](https://github.com/creationix/nvm).
+
+1.  Clone this repo.
+1.  `cd` into the newly cloned directory
+1.  `nvm use`
+1.  `npm install`
+1.  `cp ./config/local.json.example ./config/local.json` and get values from a coworker.
+
+`npm start` to start the app!
+
 ## Searching
 
 Match by keyword:
