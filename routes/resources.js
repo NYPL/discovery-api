@@ -2,17 +2,18 @@ var gatherParams = require('../lib/util').gatherParams
 
 const config = require('config')
 
+const VER = config.get('major_version')
+
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
+    app.baseUrl = `http${req.secure ? 's' : ''}://${req.headers.host}/api/v${VER}/discovery`
     next()
   })
 
   var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope']
-
-  const VER = config.get('major_version')
 
   const respond = (res, _resp, params) => {
     var contentType = 'application/ld+json'
@@ -35,7 +36,7 @@ module.exports = function (app) {
   app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
     var params = gatherParams(req, standardParams)
 
-    return app.resources.search(params)
+    return app.resources.search(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })
@@ -43,7 +44,7 @@ module.exports = function (app) {
   app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res) {
     var params = gatherParams(req, standardParams)
 
-    return app.resources.aggregations(params)
+    return app.resources.aggregations(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })
@@ -51,7 +52,7 @@ module.exports = function (app) {
   app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
     var params = Object.assign({}, gatherParams(req, standardParams), req.params)
 
-    return app.resources.aggregation(params)
+    return app.resources.aggregation(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })
@@ -65,7 +66,7 @@ module.exports = function (app) {
       handler = app.resources.overviewNtriples
     }
 
-    return handler(params)
+    return handler(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })
