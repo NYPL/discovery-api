@@ -4,7 +4,7 @@ const expect = require('chai').expect
 
 const parseParams = require('../lib/util').parseParams
 
-describe.only('Util', () => {
+describe('Util', () => {
   describe('parseParams', () => {
     it('should parse an int', () => {
       var incoming = { 'foo': '3' }
