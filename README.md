@@ -10,6 +10,18 @@ This is a fork of the old Registry API with revised endpoints. It's currently de
 
 Check the [v0.1.1 swagger](https://github.com/NYPL-discovery/discovery-api/blob/master/swagger.v0.1.1.json) for the machine readable api contract.
 
+## Installing & Running Locally
+
+This app uses [nvm](https://github.com/creationix/nvm).
+
+1.  Clone this repo.
+1.  `cd` into the newly cloned directory
+1.  `nvm use`
+1.  `npm install`
+1.  `cp ./config/local.json.example ./config/local.json` and get values from a coworker.
+
+`npm start` to start the app!
+
 ## Searching
 
 Match by keyword:
@@ -129,7 +141,43 @@ This will bypass the AWS Serverless Express package that wraps the API and allow
 
 # AWS Services
 
-Currently, the Discovery API is deployed as an AWS Lambda and the endpoints from the Express app are behind an AWS API Gateway called NYPL API - Lambda. Because the API Gateway has a specific endpoint structure, the Discovery API had to conform to that, specifically updating to `/api/v[VERSION_OF_API]/discovery/resources`. The Discovery API can still be run locally, or on a server, through the `node app.js` command.
+The Discovery API can be deployed as an AWS Lambda or as an AWS Elastic Beanstalk Application.
+
+The endpoints from the Express app are behind an AWS API Gateway called NYPL API - Lambda. Because the API Gateway has a specific endpoint structure, the Discovery API had to conform to that, specifically updating to `/api/v[VERSION_OF_API]/discovery/resources`. The Discovery API can still be run locally, or on a server, through the `node app.js` command.
+
+### AWS Elastic Beanstalk
+
+#### Initial Environment Creation
+
+1. `.ebextensions` directory needed at application's root directory
+2. `.ebextensions/00_environment.config` to store environment variables. For environment variables that needs to be hidden,
+3. `.ebextensions/03_nodecommand.config` to start node app after deployment.
+4. `eb init -i --profile <<your AWS profile>>`
+5. Initial creation of instance on Beanstalk:
+
+Please use the instance profile of _cloudwatchable-beanstalk_.
+Which has all the permissions needed for a traditional or Docker-flavored Beanstalk
+machine that wants to log to CloudWatch.
+
+```bash
+eb create discovery-api-dev 
+    --instance_type t2.small 
+    --instance_profile cloudwatchable-beanstalk 
+    --cname discovery-api-dev 
+    --vpc.id vpc-1e293a7b 
+    --vpc.elbsubnets subnet-be4b2495,subnet-4aa9893d 
+    --vpc.ec2subnets subnet-12aa8a65,subnet-fc4a25d7 
+    --vpc.elbpublic 
+    --tags Project=Discovery 
+    --keyname dgdvteam 
+    --scale 2 
+    --envvars ELASTICSEARCH_HOST="xxx" 
+```
+
+#### Deployment
+
+For subsequent deployment, run:
+`eb deploy <<environment name>> --profile <<your AWS profile>>`
 
 ### Lambda
 
