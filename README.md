@@ -149,6 +149,8 @@ The endpoints from the Express app are behind an AWS API Gateway called NYPL API
 
 #### Initial Environment Creation
 
+First install `eb`. See http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
+
 1. `.ebextensions` directory needed at application's root directory
 2. `.ebextensions/00_environment.config` to store environment variables. For environment variables that needs to be hidden,
 3. `.ebextensions/03_nodecommand.config` to start node app after deployment.
@@ -177,7 +179,9 @@ eb create discovery-api-dev
 #### Deployment
 
 For subsequent deployment, run:
-`eb deploy <<environment name>> --profile <<your AWS profile>>`
+`eb deploy <<environment name>> [--profile <<your AWS profile>>`]
+
+If you have not run `eb deploy..` on your system previously, you will be prompted to run `eb init` first. Choose 'us-east-1' and application 'discovery-api'.
 
 ### Lambda
 
