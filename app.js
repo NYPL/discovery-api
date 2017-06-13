@@ -1,7 +1,31 @@
 const config = require('config')
-const log = require('loglevel')
 
-log.setLevel(process.env.LOGLEVEL || config.get('loglevel') || 'error')
+const winston = require('winston')
+winston.emitErrs = false
+
+const logLevel = (process.env.NODE_ENV === 'production') ? 'info' : 'debug'
+
+const logger = new winston.Logger({
+  transports: [
+    new winston.transports.File({
+      level: logLevel,
+      filename: './log/discovery-api.log',
+      handleExceptions: true,
+      json: true,
+      maxsize: 5242880, //5MB
+      maxFiles: 5,
+      colorize: false
+    }),
+    new winston.transports.Console({
+      level: logLevel,
+      handleExceptions: true,
+      json: true,
+      stringify: true,
+      colorize: true
+    })
+  ],
+  exitOnError: false
+})
 
 const swaggerDocs = require('./swagger.v0.1.1.json')
 const pjson = require('./package.json')
@@ -13,6 +37,7 @@ var elasticsearch = require('elasticsearch')
 
 var app = express()
 
+app.logger = logger
 app.thesaurus = config.thesaurus
 
 require('./lib/agents')(app)
@@ -53,7 +78,7 @@ if (process.env.LOCAL) {
 
   require('./lib/globals')(app).then((app) => {
     app.listen(port, function () {
-      console.log('Server started on port ' + port)
+      app.logger.info('Server started on port ' + port)
     })
   })
 }
