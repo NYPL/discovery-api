@@ -27,7 +27,7 @@ module.exports = function (app) {
   }
 
   const handleError = (res, error, params) => {
-    console.error('Resources#handleError:', error)
+    app.logger.error('Resources#handleError:', error)
     res.status(500).send({ error: error.message ? error.message : error })
     return false
   }
