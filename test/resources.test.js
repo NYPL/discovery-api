@@ -181,7 +181,11 @@ describe('Test Resources responses', function () {
         nextUrl = `${nextUrl}&filters[dateAfter]=${dates[0]}`
         return request.get(nextUrl, function (err, response, body) {
           if (err) throw err
+
           var doc = JSON.parse(body)
+
+          // Ensure count decreased:
+          expect(doc.totalResults).to.be.below(prevTotal)
 
           // Ensure first bib dateEndYear overlaps date
           expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
@@ -194,6 +198,8 @@ describe('Test Resources responses', function () {
             if (err) throw err
 
             var doc = JSON.parse(body)
+
+            // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
             // Ensure first bib dateStartYear-dateEndYear overlaps dates
@@ -208,6 +214,8 @@ describe('Test Resources responses', function () {
               if (err) throw err
 
               var doc = JSON.parse(body)
+
+              // Ensure count decreased:
               expect(doc.totalResults).to.be.below(prevTotal)
 
               done()
