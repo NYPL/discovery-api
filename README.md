@@ -19,6 +19,7 @@ This app uses [nvm](https://github.com/creationix/nvm).
 1.  `nvm use`
 1.  `npm install`
 1.  `cp ./config/local.json.example ./config/local.json` and get values from a coworker.
+1.  `cp ./.env.example ./.env` and get values from a coworker.
 
 `npm start` to start the app!
 
