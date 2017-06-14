@@ -5,7 +5,9 @@ const expect = require('chai').expect
 
 const handler = require('../index.js').handler
 
-describe('AWS Lambda Tests', () => {
+describe('AWS Lambda Tests', function () {
+  this.timeout(10000)
+
   describe('No paths given in AWS events', () => {
     it('should throw an error message', () => {
       return lambdaTester(handler)

@@ -28,7 +28,7 @@
     "request-promise": "^4.1.1"
   },
   "scripts": {
-    "test": "standard && mocha test",
+    "test": "./node_modules/.bin/standard && ./node_modules/.bin/mocha test",
     "start": "LOCAL=true node app.js"
   },
   "description": "Discovery API as an AWS Lambda.",
