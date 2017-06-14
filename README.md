@@ -19,6 +19,7 @@ This app uses [nvm](https://github.com/creationix/nvm).
 1.  `nvm use`
 1.  `npm install`
 1.  `cp ./config/local.json.example ./config/local.json` and get values from a coworker.
+1.  `cp ./.env.example ./.env` and get values from a coworker.
 
 `npm start` to start the app!
 
@@ -160,18 +161,18 @@ Which has all the permissions needed for a traditional or Docker-flavored Beanst
 machine that wants to log to CloudWatch.
 
 ```bash
-eb create discovery-api-dev 
-    --instance_type t2.small 
-    --instance_profile cloudwatchable-beanstalk 
-    --cname discovery-api-dev 
-    --vpc.id vpc-1e293a7b 
-    --vpc.elbsubnets subnet-be4b2495,subnet-4aa9893d 
-    --vpc.ec2subnets subnet-12aa8a65,subnet-fc4a25d7 
-    --vpc.elbpublic 
-    --tags Project=Discovery 
-    --keyname dgdvteam 
-    --scale 2 
-    --envvars ELASTICSEARCH_HOST="xxx" 
+eb create discovery-api-dev
+    --instance_type t2.small
+    --instance_profile cloudwatchable-beanstalk
+    --cname discovery-api-dev
+    --vpc.id vpc-1e293a7b
+    --vpc.elbsubnets subnet-be4b2495,subnet-4aa9893d
+    --vpc.ec2subnets subnet-12aa8a65,subnet-fc4a25d7
+    --vpc.elbpublic
+    --tags Project=Discovery
+    --keyname dgdvteam
+    --scale 2
+    --envvars ELASTICSEARCH_HOST="xxx" SCSB_URL="xxx" SCSB_API_KEY="xxx"
 ```
 
 #### Deployment
