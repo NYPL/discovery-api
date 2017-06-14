@@ -167,35 +167,37 @@ describe('Test Resources responses', function () {
     it('Ensure a chain of added filters reduces resultset correctly', function (done) {
       var dates = [1984, 1985]
 
-      var initialUrl = `${searchAllUrl}&filters=date:>=${dates[0]}`
+      var nextUrl = `${searchAllUrl}&filters[dateAfter]=${dates[0]}`
       // First just filter on the first date (objects whose start/end date range include 1984)
-      return request.get(initialUrl, function (err, response, body) {
+      return request.get(nextUrl, function (err, response, body) {
         if (err) throw err
         var doc = JSON.parse(body)
 
         // Obj date range encompases queried date:
-        assert(doc.itemListElement[0].result.dateStartYear >= dates[0])
+        expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
 
-        // At writing, this returns 1,660,660 docs
-        expect(doc.totalResults).to.be.above(1000000)
+        // At writing, this returns 394,100
+        expect(doc.totalResults).to.be.above(390000)
         expect(doc.totalResults).to.be.below(2000000)
 
         var prevTotal
         prevTotal = doc.totalResults
 
         // Now filter on both dates (adding objects whose date range includes 1985)
-        return request.get(`${searchAllUrl}&filters=date:[${dates.join(' TO ')}}`, function (err, response, body) {
+        nextUrl += `&filters[dateBefore]=${dates[1]}`
+        return request.get(nextUrl, function (err, response, body) {
           if (err) throw err
 
           var doc = JSON.parse(body)
-          assert(doc.totalResults < prevTotal)
+          expect(doc.totalResults).to.be.below(prevTotal)
 
           // Now add language filter:
-          return request.get(`${searchAllUrl}&filters=date:[${dates.join(' TO ')}} language.id:\"lang:kan\"`, function (err, response, body) {
+          nextUrl += '&filters[language]=lang:kan'
+          return request.get(nextUrl, function (err, response, body) {
             if (err) throw err
 
             var doc = JSON.parse(body)
-            assert(doc.totalResults < prevTotal)
+            expect(doc.totalResults).to.be.below(prevTotal)
 
             done()
           })

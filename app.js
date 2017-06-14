@@ -1,10 +1,7 @@
 const config = require('config')
-const log = require('loglevel')
-
-log.setLevel(process.env.LOGLEVEL || config.get('loglevel') || 'error')
-
 const swaggerDocs = require('./swagger.v0.1.1.json')
 const pjson = require('./package.json')
+const logger = require('./lib/logger')
 
 require('dotenv').config()
 
@@ -13,6 +10,7 @@ var elasticsearch = require('elasticsearch')
 
 var app = express()
 
+app.logger = logger
 app.thesaurus = config.thesaurus
 
 require('./lib/agents')(app)
@@ -24,7 +22,7 @@ require('./routes/resources')(app)
 require('./routes/misc')(app)
 
 app.esClient = new elasticsearch.Client({
-  host: config['elasticsearch'].host
+  host: process.env.ELASTICSEARCH_HOST || config['elasticsearch'].host
 })
 
 app.all('*', function (req, res, next) {
@@ -49,9 +47,11 @@ app.get('/api/v0.1/discovery/swagger', function (req, res) {
 
 // Only start the Express server locally:
 if (process.env.LOCAL) {
+  const port = process.env.PORT || config['port']
+
   require('./lib/globals')(app).then((app) => {
-    app.listen(config['port'], function () {
-      console.log('Server started on port ' + config['port'])
+    app.listen(port, function () {
+      app.logger.info('Server started on port ' + port)
     })
   })
 }
