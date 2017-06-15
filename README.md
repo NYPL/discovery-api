@@ -183,6 +183,20 @@ For subsequent deployment, run:
 
 If you have not run `eb deploy..` on your system previously, you will be prompted to run `eb init` first. Choose 'us-east-1' and application 'discovery-api'.
 
+#### Config
+
+The following config is managed exlusively by env vars:
+ * ELASTICSEARCH_HOST
+ * LOCAL (Boolean. Controls whether to listen on the configured port. Should be true for local testing or running in EB.)
+ * PORT
+ * SCSB_URL (Base url of SCSB API)
+ * SCSB_API_KEY (SCSB API key)
+ * RESOURCES_INDEX (Name of the current ES resources index)
+
+To update config (adding or ammending variables):
+
+`eb setenv "FOO=bar FOO2=bar2"`
+
 ### Lambda
 
 The Discovery API is a NodeJS Express app and we wanted to convert this into an AWS Lambda. Lambdas are serverless so we used the `aws-serverless-express` npm package to "convert" the server and its endpoints into paths that the Lambda would understand. This was done in order to have all and any NYPL API endpoints in the same location.
