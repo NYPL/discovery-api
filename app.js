@@ -45,15 +45,12 @@ app.get('/api/v0.1/discovery/swagger', function (req, res) {
   res.send(swaggerDocs)
 })
 
-// Only start the Express server locally:
-if (process.env.LOCAL) {
-  const port = process.env.PORT || config['port']
+const port = process.env.PORT || config['port']
 
-  require('./lib/globals')(app).then((app) => {
-    app.listen(port, function () {
-      app.logger.info('Server started on port ' + port)
-    })
+require('./lib/globals')(app).then((app) => {
+  app.listen(port, function () {
+    app.logger.info('Server started on port ' + port)
   })
-}
+})
 
 module.exports = app
