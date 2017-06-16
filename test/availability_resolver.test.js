@@ -18,7 +18,7 @@ describe('Response with updated availability', function () {
                     console.log(item.uri + " : " + JSON.stringify(item.status))
                 if(item.uri === 'i10283665'){
                     expect(item.status[0].id).to.equal('status:a')
-                    expect(item.status[0].label).to.equal('Available (For Unit Tests)')
+                    expect(item.status[0].label).to.equal('Available')
                 }else if(item.uri === 'i10283664'){
                     expect(item.status[0].id).to.equal('status:u')
                     expect(item.status[0].label).to.equal('Temporarily unavailable')
