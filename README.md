@@ -19,6 +19,12 @@ This app uses [nvm](https://github.com/creationix/nvm).
 
 `npm start` to start the app!
 
+### About Environment Variables
+
+See `.env.example` for a description the variables.
+**If you're adding new variables please add them to .env.example and
+`./lib/preflight_check.js`**
+
 ## Initial Creation / Deployment to Elastic Beanstalk
 
 1. `.ebextensions` directory needed at application's root directory
