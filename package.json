@@ -3,8 +3,6 @@
   "author": "Matt Miller",
   "dependencies": {
     "async": "^1.5.2",
-    "aws-serverless-express": "^2.2.0",
-    "chai": "^3.5.0",
     "config": "1.12.0",
     "dotenv": "^4.0.0",
     "elasticsearch": "^10.1.2",
@@ -12,27 +10,24 @@
     "fast-csv": "^2.3.0",
     "jsonapi-serializer": "^2.0.0",
     "jsonld": "^0.4.5",
-    "loglevel": "^1.4.1",
     "md5": "^2.0.0",
-    "moment": "^2.10.3",
-    "mongodb": "^2.0.39",
     "nypl-registry-utils-lexicon": "nypl-registry/utils-lexicon",
     "ramda": "^0.21.0",
     "request": "2.53.0",
-    "request-promise": "^4.1.1",
     "serve-static": "^1.10.0",
-    "simple-node-logger": "^0.92.21",
-    "string_score": "^0.1.22"
+    "string_score": "^0.1.22",
+    "winston": "2.3.1"
   },
   "devDependencies": {
-    "lambda-tester": "^2.8.1",
     "mocha": "^2.2.5",
     "should": "^7.0.2",
-    "standard": "^6.0.8"
+    "standard": "^6.0.8",
+    "chai": "^3.5.0",
+    "request-promise": "^4.1.1"
   },
   "scripts": {
-    "test": "standard && mocha test",
-    "start": "LOCAL=true node app.js"
+    "test": "./node_modules/.bin/standard && ./node_modules/.bin/mocha test",
+    "start": "node app.js"
   },
   "description": "Discovery API as an AWS Lambda.",
   "license": "MIT",
