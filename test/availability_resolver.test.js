@@ -2,37 +2,35 @@
 
 let AvailabilityResolver = require('../lib/availability_resolver.js')
 let expect = require('chai').expect
-let sinon  = require('sinon')
 
-function getFakeRestClient() {
+function getFakeRestClient () {
   return {
-      getItemsAvailabilityForBarcodes: function (barcodes) {
-        return Promise.resolve([
-  {
-    "itemBarcode": "33433058338470",
-    "itemAvailabilityStatus": "Item Barcode doesn't exist in SCSB database.",
-    "errorMessage": null
-  },
-  {
-    "itemBarcode": "32101071572406",
-    "itemAvailabilityStatus": "Available",
-    "errorMessage": null
-  },
-  {
-    "itemBarcode": "1000546836",
-    "itemAvailabilityStatus": "Not Available",
-    "errorMessage": null
-  }
-])
-      }
+    getItemsAvailabilityForBarcodes: function (barcodes) {
+      return Promise.resolve([
+        {
+          'itemBarcode': '33433058338470',
+          'itemAvailabilityStatus': "Item Barcode doesn't exist in SCSB database.",
+          'errorMessage': null
+        },
+        {
+          'itemBarcode': '32101071572406',
+          'itemAvailabilityStatus': 'Available',
+          'errorMessage': null
+        },
+        {
+          'itemBarcode': '1000546836',
+          'itemAvailabilityStatus': 'Not Available',
+          'errorMessage': null
+        }
+      ])
     }
+  }
 }
 
 describe('Response with updated availability', function () {
-
-  it ('will change an items status to "Available" if ElasticSearch says it\'s unavailable but SCSB says it is Available')
-  it ('will change an items status to "Unavailable" if ElasticSearch says it\'s Available but SCSB says it is Unvailable')
-  it ('will return the original ElasticSearch response if the response contains nothing with barcodes')
+  it('will change an items status to "Available" if ElasticSearch says it\'s unavailable but SCSB says it is Available')
+  it('will change an items status to "Unavailable" if ElasticSearch says it\'s Available but SCSB says it is Unvailable')
+  it('will return the original ElasticSearch response if the response contains nothing with barcodes')
 
   it('includes the latest availability status of items', function () {
     let elasticSearchResponse = require('./fixtures/elastic_search_response.json')
