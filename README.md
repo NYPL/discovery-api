@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/nypl-registry/registry-api.svg?branch=master)](https://travis-ci.org/nypl-registry/registry-api) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
 # Status
 
 This is a fork of the old Registry API with revised endpoints. It's currently deployed here:
