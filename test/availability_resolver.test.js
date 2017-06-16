@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 var AvailabilityResolver = require('../lib/availability_resolver.js')
 var expect = require("chai").expect;
 
