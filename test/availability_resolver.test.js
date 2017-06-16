@@ -36,7 +36,7 @@ function getFakeRestClient (fakeResponse = null) {
 }
 
 describe('Response with updated availability', function () {
-  it('will change an items status to "Available" if ElasticSearch says it\'s unavailable but SCSB says it is Available', function() {
+  it('will change an items status to "Available" if ElasticSearch says it\'s unavailable but SCSB says it is Available', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse)
 
     availabilityResolver.restClient = getFakeRestClient([{
@@ -56,7 +56,6 @@ describe('Response with updated availability', function () {
 
     return availabilityResolver.responseWithUpdatedAvailability()
     .then((modifedResponse) => {
-
       let theItem = modifedResponse.hits.hits[0]._source.items.find((item) => {
         return item.uri === indexedAsUnavailableURI
       })
@@ -65,7 +64,6 @@ describe('Response with updated availability', function () {
       expect(theItem.status[0].id).to.equal('status:a')
       expect(theItem.status[0].label).to.equal('Available')
     })
-
   })
 
   it('will change an items status to "Unavailable" if ElasticSearch says it\'s Available but SCSB says it is Unvailable')
