@@ -1,7 +1,7 @@
-/* eslint-env mocha */
 /* eslint no-new:0*/
-const expect = require('chai').expect
-const SCSBRestClient = require('../lib/scsb_rest_client.js')
+
+require('./test_helper')
+let SCSBRestClient = require('../lib/scsb_rest_client.js')
 
 describe('SCSBRestClient', function () {
   it('Throws an exception if instaniated without an API Key', function () {

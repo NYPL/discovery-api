@@ -1,9 +1,6 @@
-/* global describe it */
-
 var request = require('request-promise')
 var assert = require('assert')
 const config = require('config')
-const expect = require('chai').expect
 
 var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:' + config.get('port'))
 
