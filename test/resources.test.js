@@ -2,7 +2,7 @@ var request = require('request-promise')
 var assert = require('assert')
 const config = require('config')
 
-var base_url = (process.env.API_ADDRESS ? process.env.API_ADDRESS : 'http://localhost:' + config.get('port'))
+var base_url = ('http://localhost:' + config.get('port'))
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
