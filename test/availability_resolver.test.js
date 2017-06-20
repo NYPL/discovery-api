@@ -1,5 +1,7 @@
 /* eslint-env mocha */
 
+require('dotenv').config()
+
 let AvailabilityResolver = require('../lib/availability_resolver.js')
 let expect = require('chai').expect
 let elasticSearchResponse = require('./fixtures/elastic_search_response.js')
