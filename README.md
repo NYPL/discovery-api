@@ -19,6 +19,10 @@ This app uses [nvm](https://github.com/creationix/nvm).
 
 `npm start` to start the app!
 
+## About Environment Variables
+
+See `.env.example` for a description the variables. **If you're adding new variables please add them to .env.example and `./lib/preflight_check.js`**
+
 ## Git & Deployment Workflow
 
 [`master`](https://github.com/NYPL-discovery/discovery-api/tree/master) has the lastest-and-greatest commits, [`production`](https://github.com/NYPL-discovery/discovery-api/tree/production) should represent what's in
@@ -39,7 +43,7 @@ will often be in parity.
 We're still discussing how and when we want to create release tags.
 We're dedicated to:
 
-* Making sure release tag version mirror the app version in `package.json`.
+* Making sure release tag version mirrors the app version in `package.json`.
 * Bumping that version on each deployment.
 
 ## Initial Creation / Deployment to Elastic Beanstalk
