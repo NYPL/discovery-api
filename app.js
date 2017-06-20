@@ -4,6 +4,7 @@ const pjson = require('./package.json')
 const logger = require('./lib/logger')
 
 require('dotenv').config()
+require('./lib/preflight_check')
 
 var express = require('express')
 var elasticsearch = require('elasticsearch')
