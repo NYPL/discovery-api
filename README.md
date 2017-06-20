@@ -19,6 +19,12 @@ This app uses [nvm](https://github.com/creationix/nvm).
 
 `npm start` to start the app!
 
+### About Environment Variables
+
+See `.env.example` for a description the variables.
+**If you're adding new variables please add them to .env.example and
+`./lib/preflight_check.js`**
+
 ## Initial Creation / Deployment to Elastic Beanstalk
 
 1. `.ebextensions` directory needed at application's root directory
@@ -37,13 +43,13 @@ eb create discovery-api-dev
     --instance_profile cloudwatchable-beanstalk
     --cname discovery-api-dev
     --vpc.id vpc-1e293a7b
-    --vpc.elbsubnets subnet-be4b2495,subnet-4aa9893d
-    --vpc.ec2subnets subnet-12aa8a65,subnet-fc4a25d7
+    --vpc.elbsubnets public-subnet-id-1,public-subnet-id-2
+    --vpc.ec2subnets private-subnet-id-1,private-subnet-id-2
     --vpc.elbpublic
     --tags Project=Discovery
     --keyname dgdvteam
     --scale 2
-    --envvars ELASTICSEARCH_HOST="xxx" SCSB_URL="xxx" SCSB_API_KEY="xxx"
+    --envvars VAR_NAME_1="xxx" VAR_NAME_2="xxx"
 ```
 
 ## Deployment
