@@ -1,6 +1,6 @@
-/* eslint no-new:0*/
+/* eslint no-new:0 */
+/* eslint-env mocha */
 
-require('./test_helper')
 let SCSBRestClient = require('../lib/scsb_rest_client.js')
 
 describe('SCSBRestClient', function () {

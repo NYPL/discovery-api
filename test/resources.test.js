@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 var request = require('request-promise')
 var assert = require('assert')
 const config = require('config')
