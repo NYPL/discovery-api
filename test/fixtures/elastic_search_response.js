@@ -1,4 +1,5 @@
-{
+exports.fakeElasticSearchResponse = (() => {
+  return  {
    "_shards" : {
       "failed" : 0,
       "successful" : 1,
@@ -33,7 +34,16 @@
                "level" : "debug",
                "items" : [
                   {
-                     "uri" : "i22566485"
+                     "uri" : "i22566485",
+                     "identifier" : [
+                        "urn:barcode:33433058338470"
+                     ],
+                     "status" : [
+                        {
+                           "label" : "Available",
+                           "id" : "status:a"
+                        }
+                     ]
                   },
                   {
                      "uri" : "i22566489"
@@ -287,4 +297,5 @@
       ]
    },
    "timed_out" : false
-}
+   }
+})
