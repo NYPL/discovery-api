@@ -167,39 +167,59 @@ describe('Test Resources responses', function () {
     it('Ensure a chain of added filters reduces resultset correctly', function (done) {
       var dates = [1984, 1985]
 
-      var nextUrl = `${searchAllUrl}&filters[dateAfter]=${dates[0]}`
-      // First just filter on the first date (objects whose start/end date range include 1984)
-      return request.get(nextUrl, function (err, response, body) {
+      var nextUrl = searchAllUrl
+
+      // Fetch all results:
+      request.get(nextUrl, function (err, response, body) {
         if (err) throw err
+
         var doc = JSON.parse(body)
+        // Establish ALL count:
+        var prevTotal = doc.totalResults
 
-        // Obj date range encompases queried date:
-        expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
-
-        // At writing, this returns 394,100
-        expect(doc.totalResults).to.be.above(390000)
-        expect(doc.totalResults).to.be.below(2000000)
-
-        var prevTotal
-        prevTotal = doc.totalResults
-
-        // Now filter on both dates (adding objects whose date range includes 1985)
-        nextUrl += `&filters[dateBefore]=${dates[1]}`
+        // Next, add filter on the first date (objects whose start/end date range include 1984)
+        nextUrl = `${nextUrl}&filters[dateAfter]=${dates[0]}`
         return request.get(nextUrl, function (err, response, body) {
           if (err) throw err
 
           var doc = JSON.parse(body)
+
+          // Ensure count decreased:
           expect(doc.totalResults).to.be.below(prevTotal)
 
-          // Now add language filter:
-          nextUrl += '&filters[language]=lang:kan'
+          // Ensure first bib dateEndYear overlaps date
+          expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
+
+          prevTotal = doc.totalResults
+
+          // Now filter on both dates (adding objects whose date range includes 1985)
+          nextUrl += `&filters[dateBefore]=${dates[1]}`
           return request.get(nextUrl, function (err, response, body) {
             if (err) throw err
 
             var doc = JSON.parse(body)
+
+            // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
-            done()
+            // Ensure first bib dateStartYear-dateEndYear overlaps dates
+            expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
+            expect(doc.itemListElement[0].result.dateStartYear).to.be.below(dates[1])
+
+            prevTotal = doc.totalResults
+
+            // Now add language filter:
+            nextUrl += '&filters[language]=lang:kan'
+            return request.get(nextUrl, function (err, response, body) {
+              if (err) throw err
+
+              var doc = JSON.parse(body)
+
+              // Ensure count decreased:
+              expect(doc.totalResults).to.be.below(prevTotal)
+
+              done()
+            })
           })
         })
       })
