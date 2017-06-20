@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-/* eslint no-new:0*/
+/* eslint no-new:0 */
 const expect = require('chai').expect
 const SCSBRestClient = require('../lib/scsb_rest_client.js')
 
