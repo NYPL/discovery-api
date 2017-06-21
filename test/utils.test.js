@@ -1,5 +1,3 @@
-/* global describe it */
-
 const expect = require('chai').expect
 
 const parseParams = require('../lib/util').parseParams
