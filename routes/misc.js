@@ -8,7 +8,6 @@ module.exports = function (app) {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
-    app.baseUrl = `http${req.secure ? 's' : ''}://${req.headers.host}/api/v${VER}/discovery`
     next()
   })
 
