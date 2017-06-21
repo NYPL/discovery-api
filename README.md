@@ -19,11 +19,32 @@ This app uses [nvm](https://github.com/creationix/nvm).
 
 `npm start` to start the app!
 
-### About Environment Variables
+## About Environment Variables
 
-See `.env.example` for a description the variables.
-**If you're adding new variables please add them to .env.example and
-`./lib/preflight_check.js`**
+See `.env.example` for a description the variables. **If you're adding new variables please add them to .env.example and `./lib/preflight_check.js`**
+
+## Git & Deployment Workflow
+
+[`master`](https://github.com/NYPL-discovery/discovery-api/tree/master) has the lastest-and-greatest commits, [`production`](https://github.com/NYPL-discovery/discovery-api/tree/production) should represent what's in
+our production environment. Because we deploy often, `master` and `production`
+will often be in parity.
+
+### Ideal Workflow
+
+1. Cut a feature branch off of `master`.
+1. Commit changes to your feature branch.
+1. File a pull request against `master` and assign reviewers.
+1. After the PR is accepted, merge into `master`.
+1. Merge / promote master into `production` and push to origin.
+1. [Deploy](#deployment) to production when appropriate (Ideally very soon)
+
+### Release Tags
+
+We're still discussing how and when we want to create release tags.
+We're dedicated to:
+
+* Making sure release tag version mirrors the app version in `package.json`.
+* Bumping that version on each deployment.
 
 ## Initial Creation / Deployment to Elastic Beanstalk
 
@@ -54,8 +75,9 @@ eb create discovery-api-dev
 
 ## Deployment
 
-For subsequent deployment, run:
+`git checkout [APPROPRIATE BRANCH]`
 `eb deploy <<environment name>> --profile <<your AWS profile>>`
+`eb deploy` will **always deploy the currently checked out branch.**
 
 ## Searching
 
