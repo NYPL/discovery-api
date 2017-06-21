@@ -75,8 +75,9 @@ eb create discovery-api-dev
 
 ## Deployment
 
-For subsequent deployment, run:
+`git checkout [APPROPRIATE BRANCH]`
 `eb deploy <<environment name>> --profile <<your AWS profile>>`
+`eb deploy` will **always deploy the currently checked out branch.**
 
 ## Searching
 
