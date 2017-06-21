@@ -145,15 +145,15 @@ exports.fakeElasticSearchResponse = () => {
                 ],
                 'status': [
                   {
-                    'id': 'status:u',
-                    'label': 'Temporarily unavailable'
+                    'id': 'status:na',
+                    'label': 'Not available'
                   }
                 ],
                 'owner_packed': [
                   'orgs:1000||Stephen A. Schwarzman Building'
                 ],
                 'requestable': [
-                  true
+                  false
                 ],
                 'identifier': [
                   'urn:barcode:1000546836'
