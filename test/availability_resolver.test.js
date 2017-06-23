@@ -40,8 +40,9 @@ describe('Response with updated availability', function () {
     })
 
     // Test that it's unavailable at first
-    expect(indexedAsUnavailable.status[0].id).to.equal('status:u')
-    expect(indexedAsUnavailable.status[0].label).to.equal('Temporarily unavailable')
+    expect(indexedAsUnavailable.status[0].id).to.equal('status:na')
+    expect(indexedAsUnavailable.status[0].label).to.equal('Not available')
+    expect(indexedAsUnavailable.requestable[0]).to.equal(false)
 
     return availabilityResolver.responseWithUpdatedAvailability()
     .then((modifedResponse) => {
@@ -52,6 +53,7 @@ describe('Response with updated availability', function () {
       // Test AvailabilityResolver munges it into availability
       expect(theItem.status[0].id).to.equal('status:a')
       expect(theItem.status[0].label).to.equal('Available')
+      expect(theItem.requestable[0]).to.equal(true)
     })
   })
 
@@ -75,8 +77,8 @@ describe('Response with updated availability', function () {
         })
 
         // Test AvailabilityResolver munges it into temporarily unavailable
-        expect(theItem.status[0].id).to.equal('status:u')
-        expect(theItem.status[0].label).to.equal('Temporarily unavailable')
+        expect(theItem.status[0].id).to.equal('status:na')
+        expect(theItem.status[0].label).to.equal('Not available')
       })
   })
   it('will return the original ElasticSearchResponse\'s status for the item if the SCSB can\'t find an item with the barcode', function () {
@@ -117,8 +119,8 @@ describe('Response with updated availability', function () {
           var unavailableItem = items.find((item) => {
             return item.uri === 'i10283665'
           })
-          expect(unavailableItem.status[0].id).to.equal('status:u')
-          expect(unavailableItem.status[0].label).to.equal('Temporarily unavailable')
+          expect(unavailableItem.status[0].id).to.equal('status:na')
+          expect(unavailableItem.status[0].label).to.equal('Not available')
 
           var availableItem = items.find((item) => {
             return item.uri === 'i10283664'
