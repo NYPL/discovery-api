@@ -57,6 +57,16 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
+  app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res) {
+    var params = gatherParams(req, ['barcodes'])
+
+    var handler = app.resources.deliveryLocationsByBarcode
+
+    return handler(params, { baseUrl: app.baseUrl })
+      .then((resp) => respond(res, resp, params))
+      .catch((error) => handleError(res, error, params))
+  })
+
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
     var params = { uri: req.params.uri }
 
