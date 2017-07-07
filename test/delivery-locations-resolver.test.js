@@ -41,19 +41,19 @@ var sampleItems = [
 describe('Delivery-locations-resolver', function () {
   it('will ammend the deliveryLocation property for an onsite NYPL item', function () {
     return resolveDeliveryLocations([sampleItems[0]]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.empty
+      expect(items[0].deliveryLocation).to.not.be.empty
     })
   })
 
   it('will ammend the deliveryLocation property for an offsite NYPL item', function () {
     return resolveDeliveryLocations([sampleItems[1]]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.empty
+      expect(items[0].deliveryLocation).to.not.be.empty
     })
   })
 
   it('will ammend the deliveryLocation property for a PUL item', function () {
     return resolveDeliveryLocations([sampleItems[2]]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.empty
+      expect(items[0].deliveryLocation).to.not.be.empty
     })
   })
 })

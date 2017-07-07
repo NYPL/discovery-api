@@ -57,6 +57,12 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
+  /*
+   * Return items with `deliveryLocation`s matching the supplied barcodes
+   *
+   * For example, to fetch Delivery Locations for item barcodes 12345, 45678, and 78910:
+   *   /api/v${VER}/request/deliveryLocationsByBarcode?barcodes[]=12345&barcodes[]=45678&barcodes=[]=78910
+   */
   app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res) {
     var params = gatherParams(req, ['barcodes'])
 
