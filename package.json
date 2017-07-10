@@ -2,6 +2,8 @@
   "analyze": true,
   "author": "Matt Miller",
   "dependencies": {
+    "@nypl/nypl-core-objects": "^1.1.2",
+    "@nypl/scsb-rest-client": "https://github.com/NYPL/scsb-rest-client.git#v1.0.1",
     "async": "^1.5.2",
     "config": "1.12.0",
     "dotenv": "^4.0.0",
@@ -14,7 +16,6 @@
     "nypl-registry-utils-lexicon": "nypl-registry/utils-lexicon",
     "ramda": "^0.21.0",
     "request": "2.53.0",
-    "@nypl/scsb-rest-client": "https://github.com/NYPL/scsb-rest-client.git#v1.0.1",
     "serve-static": "^1.10.0",
     "string_score": "^0.1.22",
     "winston": "2.3.1"
