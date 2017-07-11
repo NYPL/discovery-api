@@ -350,7 +350,7 @@
     "/v0.1/request/deliveryLocationsByBarcode": {
       "get": {
         "summary": "Get items mapped to deliveryLocation(s) by barcode(s)",
-        "description": "Accepts multiple item barcodes, returns a special serialization of those items with an array of deliveryLocation objects.\n",
+        "description": "Accepts multiple item barcodes, returns a special serialization of those items with an array of deliveryLocation objects.",
         "parameters": [
           {
             "name": "barcodes",
