@@ -358,6 +358,12 @@
             "required": true,
             "type": "string",
             "description": "Item barcode(s) to match."
+          },
+          {
+            "name": "patronId",
+            "in": "query",
+            "type": "string",
+            "description": "Patron ID, whose patron type will govern visibility of certain delivery locations."
           }
         ],
         "tags": [
@@ -720,6 +726,13 @@
         "requestable": {
           "type": "array",
           "description": "Boolean indicating whether or not a hold request may be placed on this item based on its status, location, and other concerns.",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "eddRequestable": {
+          "type": "array",
+          "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
           "items": {
             "type": "boolean"
           }
