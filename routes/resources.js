@@ -29,7 +29,16 @@ module.exports = function (app) {
 
   const handleError = (res, error, params) => {
     app.logger.error('Resources#handleError:', error)
-    res.status(500).send({ error: error.message ? error.message : error })
+
+    var statusCode = 500
+    switch (error.name) {
+      case 'InvalidParameterError':
+        statusCode = 422
+        break
+      default:
+        statusCode = 500
+    }
+    res.status(statusCode).send({ error: error.message ? error.message : error })
     return false
   }
 
@@ -64,7 +73,7 @@ module.exports = function (app) {
    *   /api/v${VER}/request/deliveryLocationsByBarcode?barcodes[]=12345&barcodes[]=45678&barcodes=[]=78910
    */
   app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res) {
-    var params = gatherParams(req, ['barcodes'])
+    var params = gatherParams(req, ['barcodes', 'patronId'])
 
     var handler = app.resources.deliveryLocationsByBarcode
 
