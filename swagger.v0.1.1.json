@@ -731,11 +731,8 @@
           }
         },
         "eddRequestable": {
-          "type": "array",
           "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
-          "items": {
-            "type": "boolean"
-          }
+          "type": "boolean"
         },
         "shelfMark": {
           "type": "array",
