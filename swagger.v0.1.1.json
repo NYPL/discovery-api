@@ -346,6 +346,59 @@
           "contentHandling": "CONVERT_TO_TEXT"
         }
       }
+    },
+    "/v0.1/request/deliveryLocationsByBarcode": {
+      "get": {
+        "summary": "Get items mapped to deliveryLocation(s) by barcode(s)",
+        "description": "Accepts multiple item barcodes, returns a special serialization of those items with an array of deliveryLocation objects.",
+        "parameters": [
+          {
+            "name": "barcodes",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Item barcode(s) to match."
+          },
+          {
+            "name": "patronId",
+            "in": "query",
+            "type": "string",
+            "description": "Patron ID, whose patron type will govern visibility of certain delivery locations."
+          }
+        ],
+        "tags": [
+          "request"
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of items",
+            "schema": {
+              "$ref": "#/definitions/Item"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "GET",
+          "type": "http",
+          "cacheKeyParameters": [
+            "method.request.querystring.barcodes",
+            "method.request.querystring.patronId"
+          ],
+          "contentHandling": "CONVERT_TO_TEXT"
+        }
+      }
     }
   },
   "definitions": {
@@ -632,6 +685,30 @@
         "@id": {
           "type": "string"
         },
+        "accessMessage": {
+          "type": "array",
+          "description": "OPAC Access Message",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "deliveryLocation": {
+          "type": "array",
+          "description": "Delivery locations",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "holdingLocation": {
+          "type": "array",
+          "description": "Delivery locations",
+          "items": {
+            "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "idBarcode": {
+          "type": "string"
+        },
         "identifier": {
           "type": "array",
           "description": "Array of identifiers (e.g. urn:barcode:33433058873765)",
@@ -645,6 +722,17 @@
           "items": {
             "$ref": "#/definitions/EntityStub"
           }
+        },
+        "requestable": {
+          "type": "array",
+          "description": "Boolean indicating whether or not a hold request may be placed on this item based on its status, location, and other concerns.",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "eddRequestable": {
+          "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
+          "type": "boolean"
         },
         "shelfMark": {
           "type": "array",

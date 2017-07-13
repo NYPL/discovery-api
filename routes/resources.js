@@ -35,10 +35,13 @@ module.exports = function (app) {
       case 'InvalidParameterError':
         statusCode = 422
         break
+      case 'NotFoundError':
+        statusCode = 404
+        break
       default:
         statusCode = 500
     }
-    res.status(statusCode).send({ error: error.message ? error.message : error })
+    res.status(statusCode).send({ status: statusCode, name: error.name, error: error.message ? error.message : error })
     return false
   }
 
