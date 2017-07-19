@@ -22,6 +22,5 @@ describe('isItemNyplOwned', function () {
     fake_nonsense_items.forEach((fake_nonsense_item) => {
       expect(isItemNyplOwned(fake_nonsense_item)).to.equal(false)
     })
-
   })
 })
