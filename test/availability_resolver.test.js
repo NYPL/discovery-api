@@ -42,7 +42,6 @@ describe('Response with updated availability', function () {
     // Test that it's unavailable at first
     expect(indexedAsUnavailable.status[0].id).to.equal('status:na')
     expect(indexedAsUnavailable.status[0].label).to.equal('Not available')
-    expect(indexedAsUnavailable.requestable[0]).to.equal(false)
 
     return availabilityResolver.responseWithUpdatedAvailability()
     .then((modifedResponse) => {
@@ -53,7 +52,6 @@ describe('Response with updated availability', function () {
       // Test AvailabilityResolver munges it into availability
       expect(theItem.status[0].id).to.equal('status:a')
       expect(theItem.status[0].label).to.equal('Available')
-      expect(theItem.requestable[0]).to.equal(true)
     })
   })
 
