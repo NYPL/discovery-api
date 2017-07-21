@@ -1,7 +1,6 @@
-sudo: required
-dist: trusty
 language: node_js
 node_js:
-  - "stable"
-env:
-- NODE_ENV=travis
+- '6.10'
+notifications:
+  slack:
+    secure: VIm6swdXS7POr91NfbVW4gD142MUas7UKcqlS61Fi7IysdHQuVL5OJ9/sTbYt7mw0jE+XMmRuiubtucCqU9vzej3ZSo+ZDVDTXx68RzD4PhyBG0waSckv0zmefH+AQLfjw+PV9OHn8/QzFPD8BqL1bQrLNQqpmQ9We8fZQ6z+igstjtZhovvgz3yCyCVtNYXDHw/XyiajPBATSoTTRXj+h3u88fHJjp1ImBVUMdZqgESNUot6nIuEoX/YCHJ+/46hc99G/Mfe8DSDLFtUldQYKdOskX1sat79mbs/LA6/ooCyWyHEF40DdoFjqByA1Suhf20Xw0ZswSh1XYWK8xUyPaVVtw/AxdVl/yxA7Bha00Glhu/KhktSXX4kC2KkoxuKhDhPC/MyLR60qEF0TN4nK9Zr5s/JxphkrmhDF6Ck33yKPcyBlyG5V1mOHPIL2H6jTYUlnjaLPr2rfHQGN+Xol/2MkaK/71hDuo2JmiqS01EHRnL+jRIAT0vn+UzQsfcpb/d1JhvC5tq3NBLOYfRbLOjuDyz/OB2acEf9U2Zhb5ydws8FvITzThjlX2l3yucNugsbDRC9I5qLwJJS6u0XXoGFviazjrYzS6AgxgzKU6v1B00Fk6t3MeKaBq7jbgktm/4+uI16heni1uOI/heSN5g67NjcGJobjLimsnRqxg=
