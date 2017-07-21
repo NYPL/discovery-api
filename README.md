@@ -1,6 +1,4 @@
-_This is a fork of the old Registry API with revised endpoints. It's currently deployed here:_
-
-[https://api.nypltech.org/api/v0.1/discovery/resources ](https://api.nypltech.org/api/v0.1/discovery/resources)
+Master: [![Build Status](https://travis-ci.org/NYPL-discovery/discovery-api.svg?branch=master)](https://travis-ci.org/NYPL-discovery/discovery-api)
 
 # Documentation
 
