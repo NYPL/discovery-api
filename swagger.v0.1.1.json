@@ -397,7 +397,14 @@
             "method.request.querystring.patronId"
           ],
           "contentHandling": "CONVERT_TO_TEXT"
-        }
+        },
+        "security": [
+          {
+            "api_auth": [
+              "read:patron"
+            ]
+          }
+        ]
       }
     }
   },
