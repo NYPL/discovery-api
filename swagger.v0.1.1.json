@@ -353,11 +353,11 @@
         "description": "Accepts multiple item barcodes, returns a special serialization of those items with an array of deliveryLocation objects.",
         "parameters": [
           {
-            "name": "barcodes",
+            "name": "barcodes[]",
             "in": "query",
             "required": true,
             "type": "string",
-            "description": "Item barcode(s) to match."
+            "description": "Item barcode(s) to match. There can be multiple of them (e.g ?barcodes[]=123&barcodes[]=456)"
           },
           {
             "name": "patronId",
