@@ -180,7 +180,7 @@
         }
       }
     },
-    "/v0.1/discovery/aggregations": {
+    "/v0.1/discovery/resources/aggregations": {
       "get": {
         "tags": [
           "discovery"
@@ -252,7 +252,7 @@
         }
       }
     },
-    "/v0.1/discovery/aggregation/{id}": {
+    "/v0.1/discovery/resources/aggregation/{id}": {
       "get": {
         "summary": "Get a specific resources aggregation",
         "description": "Fetch a specific resources search aggregation. This provides ability to consume the long tail of values for a given aggregation.\n",
