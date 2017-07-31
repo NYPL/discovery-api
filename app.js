@@ -6,12 +6,10 @@ const logger = require('./lib/logger')
 require('dotenv').config()
 require('./lib/preflight_check')
 
-var compression = require('compression')
 var express = require('express')
 var elasticsearch = require('elasticsearch')
 
 var app = express()
-app.use(compression())
 
 app.logger = logger
 app.thesaurus = config.thesaurus
