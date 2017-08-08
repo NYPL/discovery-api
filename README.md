@@ -57,18 +57,18 @@ Which has all the permissions needed for a traditional or Docker-flavored Beanst
 machine that wants to log to CloudWatch.
 
 ```bash
-eb create discovery-api-dev
+eb create discovery-api-[environmentname]
     --instance_type t2.small
     --instance_profile cloudwatchable-beanstalk
-    --cname discovery-api-dev
+    --cname discovery-api-[environmentname]
     --vpc.id vpc-1e293a7b
     --vpc.elbsubnets public-subnet-id-1,public-subnet-id-2
     --vpc.ec2subnets private-subnet-id-1,private-subnet-id-2
     --vpc.elbpublic
-    --tags Project=Discovery
+    --tags Project=Discovery, Foo=Bar
     --keyname dgdvteam
     --scale 2
-    --envvars VAR_NAME_1="xxx" VAR_NAME_2="xxx"
+    --envvars VAR_NAME_1="xxx", VAR_NAME_2="xxx"
 ```
 
 ## Deployment
