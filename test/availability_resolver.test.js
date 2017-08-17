@@ -103,6 +103,22 @@ describe('Response with updated availability', function () {
       })
   })
 
+  it('will set requestable to false for an item not found in ReCAP', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    let indexedButNotAvailableInSCSBURI = 'i22566485'
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+      .then((modifiedResponse) => {
+        // Find the modified item in the response:
+        let theItem = modifiedResponse.hits.hits[0]._source.items.find((item) => item.uri === indexedButNotAvailableInSCSBURI)
+
+        // Our fakeRESTClient said its barcode doesn't exist, so it should appear with `requestable` false
+        expect(theItem.requestable[0]).to.equal(false)
+      })
+  })
+
   it('includes the latest availability status of items', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
     availabilityResolver.restClient = getFakeRestClient()
