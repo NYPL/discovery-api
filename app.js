@@ -14,11 +14,9 @@ var app = express()
 app.logger = logger
 app.thesaurus = config.thesaurus
 
-require('./lib/agents')(app)
 require('./lib/resources')(app)
 
 // routes
-require('./routes/agents')(app)
 require('./routes/resources')(app)
 require('./routes/misc')(app)
 
