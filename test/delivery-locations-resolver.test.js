@@ -61,19 +61,19 @@ var sampleItems = {
 const scholarRooms = [
   {
     id: 'loc:mala',
-    label: 'SASB - Allen Scholar Room'
+    label: 'Schwarzman Building - Allen Scholar Room'
   },
   {
     id: 'loc:maln',
-    label: 'SASB - Noma Scholar Room'
+    label: 'Schwarzman Building - Noma Scholar Room'
   },
   {
     id: 'loc:malw',
-    label: 'SASB - Wertheim Scholar Room'
+    label: 'Schwarzman Building - Wertheim Scholar Room'
   },
   {
     id: 'loc:malc',
-    label: 'SASB - Cullman Center'
+    label: 'Schwarzman Building - Cullman Center'
   }
 ]
 
@@ -165,4 +165,3 @@ describe('Delivery-locations-resolver', function () {
     })
   })
 })
-
