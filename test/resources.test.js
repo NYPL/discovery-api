@@ -161,6 +161,34 @@ describe('Test Resources responses', function () {
     })
     */
 
+    describe('Filter by holdingLocation', function () {
+      ; ['loc:rc2ma', 'loc:mal92'].forEach((holdingLocationId) => {
+        it('returns only bibs with items in holdingLocation ' + holdingLocationId, function (done) {
+          // Fetch all results:
+          request.get(`${searchAllUrl}&filters[holdingLocation]=${holdingLocationId}`, function (err, response, body) {
+            if (err) throw err
+
+            let doc = JSON.parse(body)
+            // Ensure we received results
+            expect(doc.totalResults).to.be.above(1)
+
+            // Ensure each result...
+            doc.itemListElement.forEach((element) => {
+              // .. has some items that ...
+              let itemsWithHoldingLocation = element.result.items.filter((item) => {
+                if (!item.holdingLocation) return false
+                // .. have holding locations that match the filtered location.
+                return item.holdingLocation.filter((loc) => loc['@id'] === holdingLocationId).length > 0
+              })
+              // For the result to match, only one item needs to match:
+              expect(itemsWithHoldingLocation.length).to.be.above(0)
+            })
+            done()
+          })
+        })
+      })
+    })
+
     it('Ensure a chain of added filters reduces resultset correctly', function (done) {
       var dates = [1984, 1985]
 
@@ -185,7 +213,7 @@ describe('Test Resources responses', function () {
           expect(doc.totalResults).to.be.below(prevTotal)
 
           // Ensure first bib dateEndYear overlaps date
-          expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
+          expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0] - 1)
 
           prevTotal = doc.totalResults
 
@@ -200,8 +228,8 @@ describe('Test Resources responses', function () {
             expect(doc.totalResults).to.be.below(prevTotal)
 
             // Ensure first bib dateStartYear-dateEndYear overlaps dates
-            expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0])
-            expect(doc.itemListElement[0].result.dateStartYear).to.be.below(dates[1])
+            expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0] - 1)
+            expect(doc.itemListElement[0].result.dateStartYear).to.be.below(dates[1] + 1)
 
             prevTotal = doc.totalResults
 
