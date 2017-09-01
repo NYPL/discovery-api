@@ -106,12 +106,11 @@ describe('Test Resources responses', function () {
 
         var doc = JSON.parse(body)
 
-        let lastItem = doc.items[doc.items.length - 1]
-        assert(lastItem.electronicLocator)
-        assert(lastItem.electronicLocator.length > 0)
-        assert.equal(lastItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
-        assert.equal(lastItem.electronicLocator[0].url, 'http://www.nypl.org/archives/789')
-        assert.equal(lastItem.electronicLocator[0].prefLabel, 'Finding Aid')
+        let eItem = doc.items.find((item) => item.electronicLocator)
+        assert(eItem.electronicLocator.length > 0)
+        assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
+        assert.equal(eItem.electronicLocator[0].url, 'http://www.nypl.org/archives/789')
+        assert.equal(eItem.electronicLocator[0].prefLabel, 'Finding Aid')
 
         done()
       })
