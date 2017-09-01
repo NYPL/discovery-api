@@ -79,6 +79,45 @@ describe('Test Resources responses', function () {
     })
   })
 
+  describe('GET resource', function () {
+    it('returns supplementaryContent', function (done) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b18932917`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        assert(doc.supplementaryContent)
+        assert(doc.supplementaryContent.length > 0)
+        assert.equal(doc.supplementaryContent[0].prefLabel, 'FindingAid')
+        assert.equal(doc.supplementaryContent[0]['@type'], 'nypl:SupplementaryContent')
+        assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/uploads/collection/pdf_finding_aid/PSF.pdf')
+
+        done()
+      })
+    })
+
+    it('returns item.electronicLocator', function (done) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b16099314`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        let lastItem = doc.items[doc.items.length - 1]
+        assert(lastItem.electronicLocator)
+        assert(lastItem.electronicLocator.length > 0)
+        assert.equal(lastItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
+        assert.equal(lastItem.electronicLocator[0].url, 'http://www.nypl.org/archives/789')
+        assert.equal(lastItem.electronicLocator[0].prefLabel, 'Finding Aid')
+
+        done()
+      })
+    })
+  })
+
   describe('GET resources search', function () {
     var searchAllUrl = `${base_url}/api/v0.1/discovery/resources?q=`
 
