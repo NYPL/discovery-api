@@ -79,6 +79,44 @@ describe('Test Resources responses', function () {
     })
   })
 
+  describe('GET resource', function () {
+    it('returns supplementaryContent', function (done) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b18932917`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        assert(doc.supplementaryContent)
+        assert(doc.supplementaryContent.length > 0)
+        assert.equal(doc.supplementaryContent[0].prefLabel, 'FindingAid')
+        assert.equal(doc.supplementaryContent[0]['@type'], 'nypl:SupplementaryContent')
+        assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/uploads/collection/pdf_finding_aid/PSF.pdf')
+
+        done()
+      })
+    })
+
+    it('returns item.electronicLocator', function (done) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        let eItem = doc.items.find((item) => item.electronicLocator)
+        assert(eItem.electronicLocator.length > 0)
+        assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
+        assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
+        assert.equal(eItem.electronicLocator[0].prefLabel, 'Full text available via HathiTrust--v. 1')
+
+        done()
+      })
+    })
+  })
+
   describe('GET resources search', function () {
     var searchAllUrl = `${base_url}/api/v0.1/discovery/resources?q=`
 
