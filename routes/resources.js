@@ -95,7 +95,7 @@ module.exports = function (app) {
     }
 
     return handler(params, { baseUrl: app.baseUrl })
-      .then((resp) => respond(res, resp, params))
+      .then((responseBody) => respond(res, responseBody, params))
       .catch((error) => handleError(res, error, params))
   })
 }
