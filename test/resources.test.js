@@ -99,7 +99,7 @@ describe('Test Resources responses', function () {
     })
 
     it('returns item.electronicLocator', function (done) {
-      request.get(`${base_url}/api/v0.1/discovery/resources/b16099314`, function (err, response, body) {
+      request.get(`${base_url}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -109,8 +109,8 @@ describe('Test Resources responses', function () {
         let eItem = doc.items.find((item) => item.electronicLocator)
         assert(eItem.electronicLocator.length > 0)
         assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
-        assert.equal(eItem.electronicLocator[0].url, 'http://www.nypl.org/archives/789')
-        assert.equal(eItem.electronicLocator[0].prefLabel, 'Finding Aid')
+        assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
+        assert.equal(eItem.electronicLocator[0].prefLabel, 'Full text available via HathiTrust--v. 1')
 
         done()
       })
