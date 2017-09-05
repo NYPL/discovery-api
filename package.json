@@ -27,7 +27,8 @@
   "scripts": {
     "test": "./node_modules/.bin/standard --env mocha --globals expect && NODE_ENV=test ./node_modules/.bin/mocha test",
     "start": "node app.js",
-    "deploy-qa": "git checkout qa && git pull origin qa && eb deploy discovery-api-dev --profile nypl-sandbox"
+    "deploy-qa": "git checkout qa && git pull origin qa && eb deploy discovery-api-dev --profile nypl-sandbox",
+    "deploy-production": "git checkout production && git pull origin qa && eb deploy discovery-api-production --profile nypl-digital-dev"
   },
   "description": "Discovery API as an AWS Lambda.",
   "license": "MIT",
