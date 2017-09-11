@@ -90,7 +90,7 @@ describe('Test Resources responses', function () {
 
         assert(doc.supplementaryContent)
         assert(doc.supplementaryContent.length > 0)
-        assert.equal(doc.supplementaryContent[0].prefLabel, 'FindingAid')
+        assert.equal(doc.supplementaryContent[0].label, 'FindingAid')
         assert.equal(doc.supplementaryContent[0]['@type'], 'nypl:SupplementaryContent')
         assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/uploads/collection/pdf_finding_aid/PSF.pdf')
 
@@ -110,7 +110,7 @@ describe('Test Resources responses', function () {
         assert(eItem.electronicLocator.length > 0)
         assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
         assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
-        assert.equal(eItem.electronicLocator[0].prefLabel, 'Full text available via HathiTrust--v. 1')
+        assert.equal(eItem.electronicLocator[0].label, 'Full text available via HathiTrust--v. 1')
 
         done()
       })
