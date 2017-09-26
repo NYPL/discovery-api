@@ -123,9 +123,9 @@ Filters can be combined across different properties to form a boolean AND. This 
 
 > /resources?filters[language]=lang:eng&filters[contributorLiteral]=Dostoyevsky, Fyodor, 1821-1881.
 
-Using two filters for the same property combines them as a boolean OR. This will match Dostoyevsky books written in English OR Russian:
+Using two filters for the same property combines them as a boolean OR, but you must add explicit, distinct indexes to the duplicated filter (the ordering of the parameters does not have to match the index order). This is because the AWS API Gateway deserializes the filter parameters to a JSON object, so specifying two filters with the same property key will cause one to be overwritten. It may help, therefore, to think of the `filters` parameters as a serialized JSON object. For example, this will match Dostoyevsky books written in English OR Russian:
 
-> /resources?filters[language]=lang:eng&filters[language]=lang:rus&filters[contributorLiteral]=Dostoyevsky, Fyodor, 1821-1881.
+> /resources?filters[language][0]=lang:eng&filters[language][1]=lang:rus&filters[contributorLiteral]=Dostoyevsky, Fyodor, 1821-1881.
 
 Filter by publisher:
 
