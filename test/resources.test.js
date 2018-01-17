@@ -72,7 +72,7 @@ describe('Test Resources responses', function () {
 
         assert(doc.items)
         assert.equal(doc.items.length, 3)
-        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780 ---').length, 1)
+        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780').length, 1)
 
         done()
       })
