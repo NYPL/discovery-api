@@ -36,15 +36,30 @@ function esClientSearchViaFixtures (properties) {
  * Given a es query hash, this function:
  *  - determines the fixture path and
  *  - writes the given ES response to a local fixture
+ *
+ * By default will overwrite any existing fixture. To skip overwriting existent
+ * fixtures (i.e. to avoid trivial changes), set:
+ *   process.env.UPDATE_FIXTURES = 'if-missing'
  */
 function writeEsResponseToFixture (properties, resp) {
   let path = fixturePath(properties)
   return new Promise((resolve, reject) => {
-    fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
-      if (err) return reject(err)
+    // Check that fixture exists:
+    fs.access(path, (err, fd) => {
+      const exists = !err
+      const overwriteExisting = process.env.UPDATE_FIXTURES === 'true'
 
-      console.log('Writing updated fixture to', path)
-      return resolve()
+      if (!exists || overwriteExisting) {
+        console.log(`Writing ${path} because ${exists ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
+        fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
+          if (err) return reject(err)
+
+          console.log('Writing updated fixture to', path)
+          return resolve()
+        })
+      } else {
+        resolve()
+      }
     })
   })
 }

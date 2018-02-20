@@ -4,8 +4,19 @@ const config = require('config')
 
 var base_url = ('http://localhost:' + config.get('port'))
 
+const fixtures = require('./fixtures')
+
 describe('Aggregations response', function () {
   this.timeout(10000)
+
+  before(function () {
+    fixtures.enableFixtures()
+  })
+
+  after(function () {
+    fixtures.disableFixtures()
+  })
+
   var requestPath = '/api/v0.1/discovery/resources/aggregations?q=hamilton&search_scope=all'
   // This is a bad test.
   // * It's super dependent on our index at the time of writing.

@@ -1,4 +1,4 @@
-var requestableBasedOnStatusAndHoldingLocation = require('../lib/requestability_determination').requestableBasedOnStatusAndHoldingLocation
+const { requestableBasedOnStatusAndHoldingLocation } = require('../lib/requestability_determination')
 
 describe('requestableBasedOnStatusAndHoldingLocation', function () {
   it('will flip a requestable item to not-requestable if its holding location is requestable=false', function () {
