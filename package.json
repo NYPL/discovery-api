@@ -18,11 +18,14 @@
     "winston": "2.3.1"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "should": "^7.0.2",
-    "standard": "^6.0.8",
     "chai": "^3.5.0",
-    "request-promise": "^4.1.1"
+    "md5": "^2.2.1",
+    "mocha": "^2.2.5",
+    "qs": "^6.5.1",
+    "request-promise": "^4.1.1",
+    "should": "^7.0.2",
+    "sinon": "^4.3.0",
+    "standard": "^6.0.8"
   },
   "scripts": {
     "test": "./node_modules/.bin/standard --env mocha --globals expect && NODE_ENV=test ./node_modules/.bin/mocha test",
@@ -35,5 +38,14 @@
   "name": "discovery-api",
   "preferGlobal": false,
   "private": false,
+  "standard": {
+    "globals": [
+      "after",
+      "before",
+      "describe",
+      "expect",
+      "it"
+    ]
+  },
   "version": "0.0.6"
 }

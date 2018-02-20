@@ -1,11 +1,19 @@
 var request = require('request-promise')
 var assert = require('assert')
-const config = require('config')
 
-var base_url = ('http://localhost:' + config.get('port'))
+const fixtures = require('./fixtures')
 
 describe('Aggregations response', function () {
   this.timeout(10000)
+
+  before(function () {
+    fixtures.enableFixtures()
+  })
+
+  after(function () {
+    fixtures.disableFixtures()
+  })
+
   var requestPath = '/api/v0.1/discovery/resources/aggregations?q=hamilton&search_scope=all'
   // This is a bad test.
   // * It's super dependent on our index at the time of writing.
@@ -14,7 +22,7 @@ describe('Aggregations response', function () {
   // That said - it's what I have to fix this regession:
   //   https://github.com/NYPL-discovery/discovery-api/issues/45
   it('should unpack fields', function (done) {
-    request.get(`${base_url}${requestPath}`, function (err, response, body) {
+    request.get(`${global.TEST_BASE_URL}${requestPath}`, function (err, response, body) {
       if (err) throw err
       assert.equal(200, response.statusCode)
       var doc = JSON.parse(body)

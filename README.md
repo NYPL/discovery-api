@@ -71,6 +71,26 @@ eb create discovery-api-[environmentname] \
     --envvars VAR_NAME_1="xxx",VAR_NAME_2="xxx"
 ```
 
+## Testing
+
+The following runs a series of tests against local fixtures:
+
+```
+npm test
+```
+
+Most tests rely on fixtures generated dynamically (using whatever elastic config is present in process.env) via the following:
+
+```
+UPDATE_FIXTURES=all npm test
+```
+
+Rebuilding fixtures tends to introduce trivial git diff noise, so one may use the following to *only* generate fixtures that don't already exist:
+
+```
+UPDATE_FIXTURES=if-missing npm test
+```
+
 ## Deployment
 
 `npm run deploy-[qa|production]`
