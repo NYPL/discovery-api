@@ -1,13 +1,24 @@
-var request = require('request-promise')
-var assert = require('assert')
+const request = require('request-promise')
+const assert = require('assert')
 const config = require('config')
 
+const fixtures = require('./fixtures')
+
 var base_url = ('http://localhost:' + config.get('port'))
+
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
 
   this.timeout(10000)
+
+  before(function () {
+    fixtures.enableFixtures()
+  })
+
+  after(function () {
+    fixtures.disableFixtures()
+  })
 
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
@@ -24,7 +35,7 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources fields', function () {
-    it('Resource data for b10015541 are what we expect', function (done) {
+    it('Resource data for b10022950 are what we expect', function (done) {
       request.get(`${base_url}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
         if (err) throw err
 
@@ -72,7 +83,7 @@ describe('Test Resources responses', function () {
 
         assert(doc.items)
         assert.equal(doc.items.length, 3)
-        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc E 96-780').length, 1)
+        assert.equal(doc.items.filter((i) => i.shelfMark[0] === 'Sc *700-L (Lewis, D. When Harlem was in vogue)').length, 1)
 
         done()
       })
