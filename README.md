@@ -82,7 +82,7 @@ npm test
 Most tests rely on fixtures generated dynamically (using whatever elastic config is present in process.env) via the following:
 
 ```
-UPDATE_FIXTURES=true npm test
+UPDATE_FIXTURES=all npm test
 ```
 
 Rebuilding fixtures tends to introduce trivial git diff noise, so one may use the following to *only* generate fixtures that don't already exist:

@@ -1,11 +1,7 @@
 const request = require('request-promise')
 const assert = require('assert')
-const config = require('config')
 
 const fixtures = require('./fixtures')
-
-var base_url = ('http://localhost:' + config.get('port'))
-
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
@@ -23,7 +19,7 @@ describe('Test Resources responses', function () {
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.id} has correct type ${spec.type}`, function (done) {
-        request.get(`${base_url}/api/v0.1/discovery/resources/${spec.id}`, function (err, response, body) {
+        request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${spec.id}`, function (err, response, body) {
           if (err) throw err
           assert.equal(200, response.statusCode)
           var doc = JSON.parse(body)
@@ -36,7 +32,7 @@ describe('Test Resources responses', function () {
 
   describe('GET resources fields', function () {
     it('Resource data for b10022950 are what we expect', function (done) {
-      request.get(`${base_url}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -69,7 +65,7 @@ describe('Test Resources responses', function () {
 
   describe('GET resources fields', function () {
     it('Resource data for b10022734 are what we expect', function (done) {
-      request.get(`${base_url}/api/v0.1/discovery/resources/b10022734`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10022734`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -90,9 +86,30 @@ describe('Test Resources responses', function () {
     })
   })
 
+  describe('GET resource blanknode note field', function () {
+    it('Resource data for b10001936 contains rewitten note field', function (done) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10001936`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        assert(doc.note)
+        assert.equal(doc.note.length, 5)
+
+        assert(doc.note[2])
+        assert.equal(doc.note[2].type, 'bf:Note')
+        assert.equal(doc.note[2].noteType, 'Study Program Information Note')
+        assert.equal(doc.note[2].prefLabel, 'Also available on microform;')
+
+        done()
+      })
+    })
+  })
   describe('GET resource', function () {
     it('returns supplementaryContent', function (done) {
-      request.get(`${base_url}/api/v0.1/discovery/resources/b18932917`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b18932917`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -110,7 +127,7 @@ describe('Test Resources responses', function () {
     })
 
     it('returns item.electronicLocator', function (done) {
-      request.get(`${base_url}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -129,7 +146,11 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources search', function () {
-    var searchAllUrl = `${base_url}/api/v0.1/discovery/resources?q=`
+    var searchAllUrl = null
+
+    before(() => {
+      searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=`
+    })
 
     it('Resource search all returns status code 200', function (done) {
       request.get(searchAllUrl, function (err, response, body) {

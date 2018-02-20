@@ -3,8 +3,6 @@ const fs = require('fs')
 const qs = require('qs')
 const md5 = require('md5')
 
-const app = require('../app')
-
 /**
  * Given an ES query, builds a local path unique to the query
  */
@@ -47,7 +45,7 @@ function writeEsResponseToFixture (properties, resp) {
     // Check that fixture exists:
     fs.access(path, (err, fd) => {
       const exists = !err
-      const overwriteExisting = process.env.UPDATE_FIXTURES === 'true'
+      const overwriteExisting = process.env.UPDATE_FIXTURES === 'all'
 
       if (!exists || overwriteExisting) {
         console.log(`Writing ${path} because ${exists ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
@@ -68,11 +66,13 @@ function writeEsResponseToFixture (properties, resp) {
  * May be used inside a `before/beforeEach` to redirect all `app.esClient.seach`
  * calls to local fixtures.
  *
- * Optionally enable process.env.UPDATE_FIXTURES=true to attempt to update
+ * Optionally enable process.env.UPDATE_FIXTURES=[all|if-missing] to attempt to update
  * fixtures via whatever ES is configured
  */
 function enableFixtures () {
-  // If tests are run with `UPDATE_FIXTURES=true npm test`, rebuild fixtures:
+  const app = require('../app')
+
+  // If tests are run with `UPDATE_FIXTURES=[all|if-missing] npm test`, rebuild fixtures:
   if (process.env.UPDATE_FIXTURES) {
     // Create a reference to the original search function:
     const originalEsSearch = app.esClient.search.bind(app.esClient)
@@ -94,6 +94,8 @@ function enableFixtures () {
  * Use in `after/afterEach` to restore (de-mock) app.esClient.search
  */
 function disableFixtures () {
+  const app = require('../app')
+
   app.esClient.search.restore()
 }
 
