@@ -99,7 +99,7 @@ describe('Test Resources responses', function () {
         assert.equal(doc.note.length, 5)
 
         assert(doc.note[2])
-        assert.equal(doc.note[2].type, 'bf:Note')
+        assert.equal(doc.note[2]['@type'], 'bf:Note')
         assert.equal(doc.note[2].noteType, 'Study Program Information Note')
         assert.equal(doc.note[2].prefLabel, 'Also available on microform;')
 
