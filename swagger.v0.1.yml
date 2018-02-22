@@ -1,22 +1,147 @@
-# Rough swagger documentation of https://waffle.io/NYPL-discovery/registry-api
 swagger: '2.0'
 info:
+  version: 0.1.1
   title: Discovery API
-  description: Move your app forward with the Discovery API
-  version: "0.1.0"
-# the temporary domain of the service
-host: 45.55.45.240
+  description: NYPL research holdings as linked data
+host: api.nypltech.org
+basePath: /api
 schemes:
-  - http
-basePath: /api/v1
-produces:
-  - application/json
+  - https
+tags:
+  - name: discovery
+    description: Discovery API
 paths:
-  /resources/{id}:
+  /v0.1/discovery/resources:
+    get:
+      tags:
+        - discovery
+      summary: Search resources
+      description: >
+        Match by keyword
+
+
+        > `/resources?q=war peace`
+
+
+        Filters are applied using a `filters` param that expects this syntax on
+        the query string:
+
+
+        > /resources?filters[property1]=value1&filters[property2]=value2
+
+
+        Where `property*` is one of: 
+
+
+        > 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation',
+        'language', 'materialType', 'mediaType', 'carrierType', 'publisher',
+        'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or
+        'dateBefore'.
+
+
+        See [the app README for more
+        examples](https://github.com/NYPL-discovery/discovery-api/blob/master/README.md)
+      parameters:
+        - name: q
+          in: query
+          description: >-
+            Terms to match (and/or structured ES "Query String Query"
+            https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax
+            )
+          required: false
+          type: string
+        - name: page
+          in: query
+          description: Page number to return
+          required: false
+          type: integer
+          minimum: 1
+        - name: per_page
+          in: query
+          description: Number of results to return
+          required: false
+          type: integer
+          default: 50
+          maximum: 100
+          minimum: 1
+        - name: sort
+          in: query
+          description: 'Specify how to order results (relevance, title, creator, date)'
+          required: false
+          type: string
+          enum:
+            - relevance
+            - title
+            - creator
+            - date
+          default: relevance
+        - name: sort_direction
+          in: query
+          description: >-
+            Override the default direction for the current sort (asc, desc).
+            Default depends on the field.
+          required: false
+          type: string
+          enum:
+            - asc
+            - desc
+        - name: search_scope
+          in: query
+          description: >-
+            Specify what (group of) fields to match against (all, title,
+            contributor, subject, series, callnumber)
+          required: false
+          type: string
+          enum:
+            - all
+            - title
+            - contributor
+            - subject
+            - series
+            - callnumber
+          default: all
+        - name: 'filters[*]'
+          in: query
+          description: >-
+            Specify a hash of filters to apply, where key is: 'owner',
+            'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language',
+            'materialType', 'mediaType', 'carrierType', 'publisher',
+            'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or
+            'dateBefore'
+          required: false
+          type: string
+      responses:
+        '200':
+          description: An array of resources
+          schema:
+            $ref: '#/definitions/ResourcesResponse'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ResourceError'
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: >-
+          arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+        cacheKeyParameters:
+          - method.request.querystring.q
+          - method.request.querystring.search_scope
+          - method.request.querystring.page
+          - method.request.querystring.per_page
+          - method.request.querystring.sort
+          - method.request.querystring.sort_direction
+  '/v0.1/discovery/resources/{id}':
     get:
       summary: Fetch a resource by ID
       description: |
-        Fetch a resource. Aliased by action=lookup
+        Fetch a resource. Note alternate response formats:
+
+        `.ntriples, .turtle, .jsonld (default)`
       parameters:
         - name: id
           in: path
@@ -24,201 +149,222 @@ paths:
           required: true
           type: string
       tags:
-        - Resources
+        - discovery
       responses:
-        200:
+        '200':
           description: A single resource
           schema:
             $ref: '#/definitions/Resource'
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'
-  /resources?action={SPECIAL_FORMAT}&__context=special:
+            $ref: '#/definitions/ResourceError'
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: >-
+          arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+        cacheKeyParameters:
+          - method.request.path.id
+  /v0.1/discovery/resources/aggregations:
     get:
-      summary: Fetch a resource by ID in a special format
-      description: |
-        Fetch a resource
-      parameters:
-        - name: SPECIAL_FORMAT
-          in: path 
-          description: Specify format
-          required: true
-          type: string
-          enum: ['overview', 'ntriples', 'jsonld']
-        - name: value
-          in: query
-          description: ID
-          required: true
-          type: string
       tags:
-        - Resources
-      responses:
-        200:
-          description: An array of resources search aggregations
-          schema:
-            description: Very action dependent
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error' 
-  /resources?action=search:
-    get:
-      summary: Search resources
-      description: |
-        Search resources
-      parameters:
-        - name: value
-          in: query
-          description: Terms to match
-          required: true
-          type: string
-      tags:
-        - Resources
-      responses:
-        200:
-          description: An array of resources
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/ResourcesResponse'
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-  /resources?action=aggregations:
-    get:
+        - discovery
       summary: Resource Search Aggregations
-      description: |
-        Fetch resources search aggs
+      description: Fetch resources search aggregations.
       parameters:
-        - name: value
+        - name: q
           in: query
-          description: Search terms
+          description: >-
+            Terms to match (and/or structured ES "Query String Query"
+            https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax
+            )
           required: true
           type: string
-      tags:
-        - Resources
+        - name: search_scope
+          in: query
+          description: Specify what (group of) fields to match against
+          required: false
+          type: string
+          enum:
+            - all
+            - title
+            - contributor
+            - subject
+            - series
+            - callnumber
+          default: all
+        - name: 'filters[*]'
+          in: query
+          description: >-
+            Specify a hash of filters to apply, where key is: 'owner',
+            'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language',
+            'materialType', 'mediaType', 'carrierType', 'publisher',
+            'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or
+            'dateBefore'
+          required: false
+          type: string
       responses:
-        200:
+        '200':
           description: An array of resources search aggregations
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/ResourceAggregationResponse'
+            $ref: '#/definitions/ResourceAggregationsResponse'
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'
-  /agents/{id}:
+            $ref: '#/definitions/ResourceError'
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: >-
+          arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+        cacheKeyParameters:
+          - method.request.querystring.q
+          - method.request.querystring.search_scope
+          - method.request.querystring.filters
+          - method.request.querystring.per_page
+  '/v0.1/discovery/resources/aggregation/{id}':
     get:
-      summary: Fetch an agent by ID
-      description: |
-        Fetch an agent. Aliased by action=lookup
+      summary: Get a specific resources aggregation
+      description: >
+        Fetch a specific resources search aggregation. This provides ability to
+        consume the long tail of values for a given aggregation.
       parameters:
         - name: id
           in: path
-          description: ID
           required: true
           type: string
-      tags:
-        - Agents
-      responses:
-        200:
-          description: A single agent
-          schema:
-            $ref: '#/definitions/Agent'
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-  /agents?action={SPECIAL_FORMAT}&__context=special:
-    get:
-      summary: Fetch an agent by ID in a special format
-      description: |
-        Fetch an agent
-      parameters:
-        - name: SPECIAL_FORMAT
-          in: path 
-          description: Specify format
-          required: true
-          type: string
-          enum: ['overview']
-        - name: value
+          description: 'Identifies field being aggregated, e.g. "language"'
+        - name: q
           in: query
-          description: ID
-          required: true
+          description: >-
+            Terms to match (and/or structured ES "Query String Query"
+            https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax
+            )
+          required: false
           type: string
+        - name: page
+          in: query
+          description: Page number to return
+          required: false
+          type: integer
+          minimum: 1
+          default: 1
+        - name: per_page
+          in: query
+          description: Number of results to return
+          required: false
+          type: integer
+          default: 50
+          maximum: 100
+          minimum: 1
+        - name: search_scope
+          in: query
+          description: Specify what (group of) fields to match against
+          required: false
+          type: string
+          enum:
+            - all
+            - title
+            - contributor
+            - subject
+            - series
+            - callnumber
+          default: all
       tags:
-        - Resources
+        - discovery
       responses:
-        200:
+        '200':
           description: An array of resources search aggregations
           schema:
-            description: Very action dependent
+            $ref: '#/definitions/ResourceAggregationResponse'
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error' 
-  /agents?action=search:
+            $ref: '#/definitions/ResourceError'
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        uri: >-
+          arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations
+        passthroughBehavior: when_no_match
+        httpMethod: POST
+        type: aws_proxy
+        cacheKeyParameters:
+          - method.request.querystring.q
+          - method.request.querystring.search_scope
+          - method.request.querystring.page
+          - method.request.querystring.per_page
+          - method.request.querystring.sort
+          - method.request.querystring.sort_direction
+          - method.request.path.id
+        contentHandling: CONVERT_TO_TEXT
+  /v0.1/request/deliveryLocationsByBarcode:
     get:
-      summary: Search agents
-      description: |
-        Search agents
+      summary: Get items mapped to deliveryLocation(s) by barcode(s)
+      description: >-
+        Accepts multiple item barcodes, returns a special serialization of those
+        items with an array of deliveryLocation objects.
       parameters:
-        - name: value
+        - name: 'barcodes[]'
           in: query
-          description: Terms to match
           required: true
           type: string
-      tags:
-        - Agents
-      responses:
-        200:
-          description: An array of agents
-          schema:
-            type: array
-            items:
-              $ref: '#/definitions/AgentsResponse'
-        default:
-          description: Unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-  /agents?action=aggregations:
-    get:
-      summary: Agent Search Aggregations
-      description: |
-        Fetch agent search aggs
-      parameters:
-        - name: value
+          description: >-
+            Item barcode(s) to match. There can be multiple of them (e.g
+            ?barcodes[]=123&barcodes[]=456)
+        - name: patronId
           in: query
-          description: Search terms
-          required: true
           type: string
+          description: >-
+            Patron ID, whose patron type will govern visibility of certain
+            delivery locations.
       tags:
-        - Agents
+        - request
       responses:
-        200:
-          description: An array of agent search aggregations
+        '200':
+          description: An array of items
           schema:
-            type: array
-            items:
-              $ref: '#/definitions/AgentAggregationResponse'
+            $ref: '#/definitions/Item'
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/Error'
+            $ref: '#/definitions/ResourceError'
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+        passthroughBehavior: when_no_match
+        httpMethod: GET
+        type: http
+        cacheKeyParameters:
+          - method.request.querystring.barcodes
+          - method.request.querystring.patronId
+        contentHandling: CONVERT_TO_TEXT
+      security:
+        - api_auth:
+            - 'read:patron'
 definitions:
   ResourcesResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
-      '@type': 
+      '@type':
         type: string
-        enum: [itemList]
+        enum:
+          - itemList
       itemListElement:
         type: array
         items:
@@ -228,23 +374,41 @@ definitions:
     properties:
       '@type':
         type: string
-        enum: [searchResult]
+        enum:
+          - searchResult
       result:
         $ref: '#/definitions/Resource'
-  ResourceAggregationResponse:
+  ResourceAggregationsResponse:
     type: object
     properties:
-      '@context': 
+      '@context':
         type: string
         format: url
         description: URL for JSONLD doc mapping short-hand property names to IRIs
       '@type':
         type: string
-        enum: [itemListElement]
+        enum:
+          - itemListElement
+      '@id':
+        type: string
+        description: 'ID, e.g. "language"'
       itemListElement:
         type: array
         items:
           $ref: '#/definitions/Aggregation'
+  ResourceAggregationResponse:
+    type: object
+    properties:
+      '@context':
+        type: string
+        format: url
+        description: URL for JSONLD doc mapping short-hand property names to IRIs
+      '@type':
+        type: string
+        enum:
+          - itemListElement
+      item:
+        $ref: '#/definitions/Aggregation'
   Resource:
     type: object
     properties:
@@ -252,21 +416,33 @@ definitions:
         type: array
         items:
           type: string
-        description: RDF type(s), e.g. "nypl:Item", "nypl:Resource"
+        description: 'RDF type(s), e.g. "nypl:Item", "nypl:Resource"'
       '@id':
         type: string
-        description: ID, e.g. "res:105173159"
-      contributor:
+        description: 'ID, e.g. "res:105173159"'
+      carrierType:
         type: array
         items:
           $ref: '#/definitions/EntityStub'
-        description: Contributor stubs
+      creatorLiteral:
+        type: array
+        items:
+          type: string
+        description: Creator literals
+      contributorLiteral:
+        type: array
+        items:
+          type: string
+        description: Contributor literals
       created:
         type: string
-        description: Raw, unparsed date string
+        description: 'Raw, unparsed date string'
       createdYear:
         type: integer
         description: Year of creation
+      dateStartYear:
+        type: integer
+        description: Start of relevant year range
       depiction:
         type: string
         description: URL of an image for the resource
@@ -276,41 +452,79 @@ definitions:
       endYear:
         type: integer
         description: Ending year of coverage
+      extent:
+        type: array
+        items:
+          type: string
+        description: Extent (e.g. page count)
       holdingCount:
         type: integer
         description: Rough number of copies across institutions
-      'id[IDENTIFIERTYPE]':
-        type: string
-        description: "Various identifiers given as 'idAcqnum', 'idBarcode', 'idBnum', 'idCallNum', 'idCatnyp', 'idDcc', 'idExhib', 'idHathi', 'idIsbn', 'idIssn', 'idLcc', 'idLccCoarse', 'idMmmsDb', 'idMss', 'idObjNum', 'idOclc', 'idOwi', 'idRlin', 'idUuid'"
-      language:
+      issuance:
         type: array
-        description: Language(s), if known
+        description: Issuance
         items:
           $ref: '#/definitions/EntityStub'
-      memberOf:
+      items:
         type: array
-        description: Parent resource(s)
+        description: Array of items attached to this bib
+        items:
+          $ref: '#/definitions/Item'
+      ^id:
+        type: string
+        description: >-
+          Various identifiers given as 'idAcqnum', 'idBarcode', 'idBnum',
+          'idCallNum', 'idCatnyp', 'idDcc', 'idExhib', 'idHathi', 'idIsbn',
+          'idIssn', 'idLcc', 'idLccCoarse', 'idMmmsDb', 'idMss', 'idObjNum',
+          'idOclc', 'idOwi', 'idRlin', 'idUuid'
+      language:
+        type: array
+        description: 'Language(s), if known'
+        items:
+          $ref: '#/definitions/EntityStub'
+      materialType:
+        type: array
+        items:
+          $ref: '#/definitions/EntityStub'
+      mediaType:
+        type: array
         items:
           $ref: '#/definitions/EntityStub'
       note:
         type: array
         items:
-          type: string
+          type: object
+          properties:
+            '@type':
+              type: string
+              enum:
+                - 'bf:Note'
+            noteType:
+              type: string
+              description: >-
+                One of roughly 47 categories of notes (e.g. General Note,
+                Dissertation Note, Data Quality Note., etc.)
+            label:
+              type: string
+              description: The actual content of the note
         description: Note fields
-      title:
+      numAvailable:
+        type: integer
+        description: Number of items available
+      placeOfPublication:
         type: array
         items:
           type: string
-        description: Title(s)
       prefLabel:
         type: array
         items:
           type: string
         description: Best title(s)
-      owner:
-        $ref: '#/definitions/EntityStub'
       'roles:ROLE':
-        $ref: '#/definitions/ContribStub'
+        type: array
+        items:
+          type: string
+        description: Contributor literals by ROLE
       startYear:
         type: integer
         description: Beggining year of coverage
@@ -321,74 +535,100 @@ definitions:
       suppressed:
         type: boolean
         description: Indicates whether or not resource should be suppressed from view
-  ContribStub:
-    type: object
-    description: Identifies a contributing Agent by ROLE
-    properties:
-      '@type':
+      title:
+        type: array
+        items:
+          type: string
+        description: Title(s)
+      titleDisplay:
+        type: array
+        items:
+          type: string
+        description: Display title(s)
+      type:
+        type: array
+        items:
+          type: string
+          enum:
+            - 'nypl:Item'
+            - 'nypl:Collection'
+      uri:
         type: string
-        enum: ['nypl:Agent']
-      '@id':
-        type: string
-      prefLabel:
-        type: string
-        description: Friendly label for this contributor
-      note:
-        type: string
-        description: Contributor role (with respect to enclosing resource)
+        description: Internal identifier for resource
   EntityStub:
     type: object
     properties:
       '@type':
         type: string
-        enum: ['nypl:Agent', 'nypl:Term']
       '@id':
         type: string
       prefLabel:
         type: string
         description: Friendly label for this entity
-  AgentsResponse:
+  Item:
     type: object
     properties:
-      '@context': 
+      '@id':
         type: string
-        format: url
-        description: URL for JSONLD doc mapping short-hand property names to IRIs
-      '@type': 
-        type: string
-        enum: [itemList]
-      itemListElement:
+      accessMessage:
         type: array
+        description: OPAC Access Message
         items:
-          $ref: '#/definitions/AgentResult'
-  AgentResult:
-    type: object
-    properties:
-      '@type':
-        type: string
-        enum: [searchResult]
-      result:
-        $ref: '#/definitions/Agent'
-  AgentAggregationResponse:
-    type: object
-    properties:
-      '@context': 
-        type: string
-        format: url
-        description: URL for JSONLD doc mapping short-hand property names to IRIs
-      '@type':
-        type: string
-        enum: [itemListElement]
-      itemListElement:
+          $ref: '#/definitions/EntityStub'
+      deliveryLocation:
         type: array
+        description: Delivery locations
         items:
-          $ref: '#/definitions/Aggregation'
+          $ref: '#/definitions/EntityStub'
+      holdingLocation:
+        type: array
+        description: Delivery locations
+        items:
+          $ref: '#/definitions/EntityStub'
+      idBarcode:
+        type: string
+      identifier:
+        type: array
+        description: 'Array of identifiers (e.g. urn:barcode:33433058873765)'
+        items:
+          type: string
+      owner:
+        type: array
+        description: Owning institution
+        items:
+          $ref: '#/definitions/EntityStub'
+      requestable:
+        type: array
+        description: >-
+          Boolean indicating whether or not a hold request may be placed on this
+          item based on its status, location, and other concerns.
+        items:
+          type: boolean
+      eddRequestable:
+        description: >-
+          Boolean indicating whether or not item is available for Electronic
+          Document Delivery.
+        type: boolean
+      shelfMark:
+        type: array
+        description: Callnumber(s)
+        items:
+          type: string
+      status:
+        type: array
+        description: Availability status
+        items:
+          $ref: '#/definitions/EntityStub'
+      uri:
+        type: string
+        description: Internal identifier for resource
   Aggregation:
     type: object
     properties:
       '@type':
         type: string
-        enum: ['nypl:Aggregation']
+        enum:
+          - 'nypl:Aggregation'
       '@id':
         type: string
         description: Identifies field being aggregated
@@ -398,79 +638,17 @@ definitions:
       values:
         type: array
         items:
-          type: object
-          properties:
-            value:
-              type: string
-              description: term aggregated
-            count:
-              type: integer
-              description: number of records matching term
-  Agent:
+          $ref: '#/definitions/AggregationValue'
+  AggregationValue:
     type: object
     properties:
-      '@type':
+      value:
         type: string
-        enum: ['nypl:Agent']
-      '@id':
-        type: string
-      birthDate:
-        type: string
-        description: raw, unparsed birth date
-      birthYear:
+        description: term aggregated
+      count:
         type: integer
-        description: parsed year of birth
-      birthDecade:
-        type: integer
-        description: parsed decade of birth
-      deathDate:
-        type: string
-        description: raw, unparsed death date
-      deathYear:
-        type: integer
-        description: parsed year of death
-      deathDecade:
-        type: integer
-        description: parsed decade of death
-      topFiveTermsString:
-        type: array
-        items:
-          type: string
-          description: denormalized term strings 
-      topFiveRolesString:
-        type: array
-        items:
-          type: string
-          description: denormalized contrib strings 
-      description:
-        type: string
-        description: Description of agent, if any
-      uriViaf:
-        type: string
-        description: Viaf URI
-      uriWikidata:
-        type: string
-        description: wikidata URI
-      uriLc:
-        type: string
-        description: LC URI
-      uriDbpedia:
-        type: string
-        description: Dbpedia URI
-      depiction:
-        type: string
-        description: filename of image
-      wikipedia:
-        type: string
-        format: url
-        description: URL of wiki page
-      prefLabel:
-        type: string
-        description: Best name
-      useCount:
-        type: integer
-        description: Rough measure of popularity/coverage
-  Error:
+        description: number of records matching term
+  ResourceError:
     type: object
     properties:
       code:
