@@ -599,7 +599,23 @@
         "note": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string",
+                "enum": [
+                  "bf:Note"
+                ]
+              },
+              "noteType": {
+                "type": "string",
+                "description": "One of roughly 47 categories of notes (e.g. General Note, Dissertation Note, Data Quality Note., etc.)"
+              },
+              "label": {
+                "type": "string",
+                "description": "The actual content of the note"
+              }
+            }
           },
           "description": "Note fields"
         },
