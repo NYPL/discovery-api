@@ -90,8 +90,8 @@ module.exports = function (app) {
 
     var handler = app.resources.findByUri
 
-    if (req.params.ext === 'raw') {
-      handler = app.resources.raw
+    if (req.params.ext === 'annotated-marc') {
+      handler = app.resources.annotatedMarc
     }
 
     return handler(params, { baseUrl: app.baseUrl })
