@@ -1,6 +1,8 @@
 [
   {
+    "fieldGroupTag": "a",
     "marcIndicatorRegExp": "^100",
+    "secondaryMarcIndicatorRegExp": "(100|110|111)",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -11,7 +13,9 @@
     "label": "Author"
   },
   {
+    "fieldGroupTag": "a",
     "marcIndicatorRegExp": "^110",
+    "secondaryMarcIndicatorRegExp": "(100|110|111)",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -22,7 +26,9 @@
     "label": "Author"
   },
   {
+    "fieldGroupTag": "a",
     "marcIndicatorRegExp": "^111",
+    "secondaryMarcIndicatorRegExp": "(100|110|111)",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -33,7 +39,9 @@
     "label": "Conference"
   },
   {
+    "fieldGroupTag": "f",
     "marcIndicatorRegExp": "^130",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -44,7 +52,9 @@
     "label": "Uniform Title"
   },
   {
+    "fieldGroupTag": "f",
     "marcIndicatorRegExp": "^240",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -55,7 +65,9 @@
     "label": "Uniform Title"
   },
   {
+    "fieldGroupTag": "t",
     "marcIndicatorRegExp": "^130",
+    "secondaryMarcIndicatorRegExp": "(130|240|245)",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -66,7 +78,9 @@
     "label": "Uniform Title"
   },
   {
+    "fieldGroupTag": "t",
     "marcIndicatorRegExp": "^240",
+    "secondaryMarcIndicatorRegExp": "(130|240|245)",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -77,7 +91,9 @@
     "label": "Uniform Title"
   },
   {
+    "fieldGroupTag": "t",
     "marcIndicatorRegExp": "^245",
+    "secondaryMarcIndicatorRegExp": "(130|240|245)",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -88,7 +104,9 @@
     "label": "Title"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^264 0",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -99,7 +117,9 @@
     "label": "Production"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^264 1",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -110,7 +130,9 @@
     "label": "Publisher"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^264 2",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -121,7 +143,9 @@
     "label": "Distributor"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^264 3",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -132,7 +156,9 @@
     "label": "Manufacturer"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^264 4",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -143,7 +169,9 @@
     "label": "Copyright Date"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26421",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -154,7 +182,9 @@
     "label": "Earlier Publisher"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26422",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -165,7 +195,9 @@
     "label": "Earlier Distributor"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26423",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -176,7 +208,9 @@
     "label": "Earlier Manufacturer"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26424",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -187,7 +221,9 @@
     "label": "Earlier Copyright"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26431",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -198,7 +234,9 @@
     "label": "Latest Publisher"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26432",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -209,7 +247,9 @@
     "label": "Latest Distributor"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26433",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -220,7 +260,9 @@
     "label": "Latest Manufacturer"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^26434",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -231,7 +273,9 @@
     "label": "Latest Copyright"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^2602.",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -241,7 +285,9 @@
     "label": "Earlier Publisher"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^2603.",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -251,7 +297,9 @@
     "label": "Current Publisher"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^260  ",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -261,7 +309,9 @@
     "label": "Imprint"
   },
   {
+    "fieldGroupTag": "p",
     "marcIndicatorRegExp": "^270",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -271,7 +321,9 @@
     "label": "Address"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^250",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -281,7 +333,9 @@
     "label": "Edition"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^254",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -291,7 +345,9 @@
     "label": "Format"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^254",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -302,7 +358,9 @@
     "label": "Musical Presentation"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^255",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -313,7 +371,9 @@
     "label": "Cartographic Data"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^255",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -323,7 +383,9 @@
     "label": "Cartographic Data"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^256",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -333,7 +395,9 @@
     "label": "Computer Data"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^256",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -344,7 +408,9 @@
     "label": "File Characteristics"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^257",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -355,7 +421,9 @@
     "label": "Country of Producing Entity"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^257",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -365,7 +433,9 @@
     "label": "Produced In"
   },
   {
+    "fieldGroupTag": "e",
     "marcIndicatorRegExp": "^258",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -375,7 +445,9 @@
     "label": "Philatelic Issue Data"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^300",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -385,7 +457,9 @@
     "label": "Description"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^306",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -395,7 +469,9 @@
     "label": "Playing Time"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^307",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -405,7 +481,9 @@
     "label": "Hours"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^310",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -415,7 +493,9 @@
     "label": "Current Frequency"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^321",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -425,7 +505,9 @@
     "label": "Former Frequency"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^336",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "a"
@@ -435,7 +517,9 @@
     "label": "Type of Content"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^337",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "a"
@@ -445,7 +529,9 @@
     "label": "Type of Medium"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^338",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "a"
@@ -455,7 +541,9 @@
     "label": "Type of Carrier"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^340",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -465,7 +553,9 @@
     "label": "Physical Medium"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^342",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -475,7 +565,9 @@
     "label": "Geospatial Data"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^343",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -485,7 +577,9 @@
     "label": "Planar Data"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^35[1257]",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -495,7 +589,9 @@
     "label": "Description"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^362",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -505,7 +601,9 @@
     "label": "Publication Date"
   },
   {
+    "fieldGroupTag": "r",
     "marcIndicatorRegExp": "^36[56]",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -515,7 +613,9 @@
     "label": "Description"
   },
   {
+    "fieldGroupTag": "s",
     "marcIndicatorRegExp": "^4..",
+    "secondaryMarcIndicatorRegExp": "(400|410|411|440|490|800|810|811|830|4900.)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -525,7 +625,9 @@
     "label": "Series"
   },
   {
+    "fieldGroupTag": "s",
     "marcIndicatorRegExp": "^8..",
+    "secondaryMarcIndicatorRegExp": "(400|410|411|440|490|800|810|811|830|4900.)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -535,7 +637,9 @@
     "label": "Series"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^506 .",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -546,7 +650,9 @@
     "label": "Access"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5060.",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -557,7 +663,9 @@
     "label": "Access"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5061.",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -568,7 +676,9 @@
     "label": "Restricted Access"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^500",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -579,7 +689,9 @@
     "label": "Note"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^501",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -590,7 +702,9 @@
     "label": "With:"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^502",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -601,7 +715,9 @@
     "label": "Thesis"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^504",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -612,7 +728,9 @@
     "label": "Bibliography"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^505",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -623,7 +741,9 @@
     "label": "Contents"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^507",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -634,7 +754,9 @@
     "label": "Scale"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^508",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -645,7 +767,9 @@
     "label": "Credits"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^510",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -656,7 +780,9 @@
     "label": "Indexed In:"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^511[^1]",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -667,7 +793,9 @@
     "label": "Performer"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5111",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -678,7 +806,9 @@
     "label": "Cast"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^513",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -689,7 +819,9 @@
     "label": "Type Of Report"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^514",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -700,7 +832,9 @@
     "label": "Data Quality"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^515",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -711,7 +845,9 @@
     "label": "Numbering"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^516",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -722,7 +858,9 @@
     "label": "File Type"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^518",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -733,7 +871,9 @@
     "label": "Event"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^545",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -744,7 +884,9 @@
     "label": "Biography"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^520",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -755,7 +897,9 @@
     "label": "Summary"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^521",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -766,7 +910,9 @@
     "label": "Audience"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^522",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -777,7 +923,9 @@
     "label": "Coverage"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^524",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -788,7 +936,9 @@
     "label": "Cite As:"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^525",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -799,7 +949,9 @@
     "label": "Supplement"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^526",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -810,7 +962,9 @@
     "label": "Study Program"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^530",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -821,7 +975,9 @@
     "label": "Additional Formats"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^533",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -832,7 +988,9 @@
     "label": "Reproduction"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^534",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -843,7 +1001,9 @@
     "label": "Original Version"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^535",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -854,7 +1014,9 @@
     "label": "Original Location"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^536",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -865,7 +1027,9 @@
     "label": "Funding"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^538",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -876,7 +1040,9 @@
     "label": "System Details"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^540",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -887,7 +1053,9 @@
     "label": "Terms Of Use"
   },
   {
+    "fieldGroupTag": "m",
     "marcIndicatorRegExp": "^5411.",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "2",
@@ -899,7 +1067,9 @@
     "label": "Source"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^544",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -910,7 +1080,9 @@
     "label": "Location of Other Archival Materials"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^546",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -921,7 +1093,9 @@
     "label": "Language"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^547",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -932,7 +1106,9 @@
     "label": "Former Title"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^550",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -943,7 +1119,9 @@
     "label": "Issued By"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^552",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -954,7 +1132,9 @@
     "label": "Entity"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^555[^0]",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -965,7 +1145,9 @@
     "label": "Indexes"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5550",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -976,7 +1158,9 @@
     "label": "Finding Aids"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^556",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -987,7 +1171,9 @@
     "label": "Documentation"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5611.",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -998,7 +1184,9 @@
     "label": "Provenance"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^562",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1009,7 +1197,9 @@
     "label": "Copy/Version"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^563",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1020,7 +1210,9 @@
     "label": "Binding"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^565",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1031,7 +1223,9 @@
     "label": "Case File"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^567",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1042,7 +1236,9 @@
     "label": "Methodology"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^580",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1053,7 +1249,9 @@
     "label": "Linking Entry"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^581",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1064,7 +1262,9 @@
     "label": "Publications"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5831.",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "a",
@@ -1084,7 +1284,9 @@
     "label": "Processing Action"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^584",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1095,7 +1297,9 @@
     "label": "Frequency Of Use"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^585",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1106,7 +1310,9 @@
     "label": "Exhibitions"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^586",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1117,7 +1323,9 @@
     "label": "Awards"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^5901.",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1128,7 +1336,9 @@
     "label": "Local Note"
   },
   {
+    "fieldGroupTag": "n",
     "marcIndicatorRegExp": "^590  ",
+    "secondaryMarcIndicatorRegExp": "(505)",
     "subfieldSpec": {
       "subfields": [
         "6",
@@ -1139,7 +1349,9 @@
     "label": "Local Note"
   },
   {
+    "fieldGroupTag": "y",
     "marcIndicatorRegExp": "^255",
+    "secondaryMarcIndicatorRegExp": "(991|880..|8800.|880.[ 047]|880.[ 0]|880[12].)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1149,7 +1361,9 @@
     "label": "Cartographic Data"
   },
   {
+    "fieldGroupTag": "y",
     "marcIndicatorRegExp": "^856",
+    "secondaryMarcIndicatorRegExp": "(991|880..|8800.|880.[ 047]|880.[ 0]|880[12].)",
     "subfieldSpec": {
       "subfields": [
         "u"
@@ -1159,7 +1373,9 @@
     "label": "Url"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^6[013][01]..",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1173,7 +1389,9 @@
     "label": "Subject"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^648",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1186,7 +1404,9 @@
     "label": "Chronological Term"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^65[01]..",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1200,7 +1420,9 @@
     "label": "Subject"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^653",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "2",
@@ -1211,7 +1433,9 @@
     "label": "Indexed Term"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^654",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1225,7 +1449,9 @@
     "label": "Topical Term"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^655..",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1239,7 +1465,9 @@
     "label": "Genre/Form"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^656",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1252,7 +1480,9 @@
     "label": "Occupation"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^657",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1265,7 +1495,9 @@
     "label": "Function"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^658",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1277,7 +1509,9 @@
     "label": "Curriculum Objective"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^662",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1290,7 +1524,9 @@
     "label": "Place Name"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^69[0-9]..",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "2",
@@ -1304,7 +1540,9 @@
     "label": "Local Subject"
   },
   {
+    "fieldGroupTag": "d",
     "marcIndicatorRegExp": "^752..",
+    "secondaryMarcIndicatorRegExp": "(662|690|691|696|697|698|699|752|755|600.[ 047]|610.[ 047]|611.[ 047]|630.[ 047]|648.[ 0]|650.[ 047]|651.[ 047]|655.[ 047])",
     "subfieldSpec": {
       "subfields": [
         "2",
@@ -1315,7 +1553,9 @@
     "label": "Place of Publication"
   },
   {
+    "fieldGroupTag": "b",
     "marcIndicatorRegExp": "^7[012][01]..",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1326,7 +1566,9 @@
     "label": "Added Author"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^210",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1336,7 +1578,9 @@
     "label": "Abbreviated Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^222",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1346,7 +1590,9 @@
     "label": "Key Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^242",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1356,7 +1602,9 @@
     "label": "Translated Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^243",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1366,7 +1614,9 @@
     "label": "Collective Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^2461 ",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1376,7 +1626,9 @@
     "label": "Note"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24612",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1386,7 +1638,9 @@
     "label": "Distinct Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24613",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1396,7 +1650,9 @@
     "label": "Other Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24614",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1406,7 +1662,9 @@
     "label": "Cover Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24615",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1416,7 +1674,9 @@
     "label": "Added Title Page Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24616",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1426,7 +1686,9 @@
     "label": "Caption Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24617",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1436,7 +1698,9 @@
     "label": "Running Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24618",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1446,7 +1710,9 @@
     "label": "Spine Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24700",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1456,7 +1722,9 @@
     "label": "Former Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^24710",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1466,7 +1734,9 @@
     "label": "Former Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^730..",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1477,7 +1747,9 @@
     "label": "Added Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^740..",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "0",
@@ -1488,7 +1760,9 @@
     "label": "Added Title"
   },
   {
+    "fieldGroupTag": "u",
     "marcIndicatorRegExp": "^799",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1498,7 +1772,9 @@
     "label": "Donor/Sponsor"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.0",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1513,7 +1789,9 @@
     "label": "Continues"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.1",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1528,7 +1806,9 @@
     "label": "Continues In Part"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.2",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1543,7 +1823,9 @@
     "label": "Supersedes"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.3",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1558,7 +1840,9 @@
     "label": "Supersedes In Part"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.4",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1573,7 +1857,9 @@
     "label": "Formed By"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.5",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1588,7 +1874,9 @@
     "label": "Absorbed"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.6",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1603,7 +1891,9 @@
     "label": "Absorbed In Part"
   },
   {
+    "fieldGroupTag": "x",
     "marcIndicatorRegExp": "^780.7",
+    "secondaryMarcIndicatorRegExp": "(780)",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1618,7 +1908,9 @@
     "label": "Separated From"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.0",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1633,7 +1925,9 @@
     "label": "Continued By"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.1",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1648,7 +1942,9 @@
     "label": "Continued In Part By"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.2",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1663,7 +1959,9 @@
     "label": "Superseded By"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.3",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1678,7 +1976,9 @@
     "label": "Superseded In Part By"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.4",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1693,7 +1993,9 @@
     "label": "Absorbed By"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.5",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1708,7 +2010,9 @@
     "label": "Absorbed In Part By"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.6",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1723,7 +2027,9 @@
     "label": "Split Into"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.7",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1738,7 +2044,9 @@
     "label": "Merged With"
   },
   {
+    "fieldGroupTag": "z",
     "marcIndicatorRegExp": "^785.8",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "u",
@@ -1753,7 +2061,9 @@
     "label": "Changed Back To"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^760",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1763,7 +2073,9 @@
     "label": "Subseries Of:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^762",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1773,7 +2085,9 @@
     "label": "Has Subseries:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^765",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1783,7 +2097,9 @@
     "label": "Translation Of:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^767",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1793,7 +2109,9 @@
     "label": "Translated As:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^770",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1803,7 +2121,9 @@
     "label": "Has Supplement:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^772",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1813,7 +2133,9 @@
     "label": "Supplement To:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^773",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1823,7 +2145,9 @@
     "label": "Found In:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^774",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1833,7 +2157,9 @@
     "label": "Constituent Unit:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^775",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1843,7 +2169,9 @@
     "label": "Other Editions:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^776",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1853,7 +2181,9 @@
     "label": "Other Form:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^777",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1863,7 +2193,9 @@
     "label": "Issued With:"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^786",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1873,7 +2205,9 @@
     "label": "Data Source"
   },
   {
+    "fieldGroupTag": "w",
     "marcIndicatorRegExp": "^787",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1883,7 +2217,9 @@
     "label": "Related To"
   },
   {
+    "fieldGroupTag": "l",
     "marcIndicatorRegExp": "^010",
+    "secondaryMarcIndicatorRegExp": "(024|027|028|035)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1893,7 +2229,9 @@
     "label": "LCCN"
   },
   {
+    "fieldGroupTag": "i",
     "marcIndicatorRegExp": "^020",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1903,7 +2241,9 @@
     "label": "ISBN"
   },
   {
+    "fieldGroupTag": "i",
     "marcIndicatorRegExp": "^022",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1913,7 +2253,9 @@
     "label": "ISSN"
   },
   {
+    "fieldGroupTag": "l",
     "marcIndicatorRegExp": "^024",
+    "secondaryMarcIndicatorRegExp": "(024|027|028|035)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1923,7 +2265,9 @@
     "label": "Other Standard Identifier"
   },
   {
+    "fieldGroupTag": "l",
     "marcIndicatorRegExp": "^027",
+    "secondaryMarcIndicatorRegExp": "(024|027|028|035)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1933,7 +2277,9 @@
     "label": "Report No."
   },
   {
+    "fieldGroupTag": "l",
     "marcIndicatorRegExp": "^028",
+    "secondaryMarcIndicatorRegExp": "(024|027|028|035)",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1943,7 +2289,9 @@
     "label": "Publisher No."
   },
   {
+    "fieldGroupTag": "g",
     "marcIndicatorRegExp": "^074",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1953,7 +2301,9 @@
     "label": "Gpo Item No."
   },
   {
+    "fieldGroupTag": "g",
     "marcIndicatorRegExp": "^086",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "6"
@@ -1963,7 +2313,9 @@
     "label": "Sudoc No."
   },
   {
+    "fieldGroupTag": "c",
     "marcIndicatorRegExp": "^091",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "2"
@@ -1973,7 +2325,9 @@
     "label": "Branch Call Number"
   },
   {
+    "fieldGroupTag": "q",
     "marcIndicatorRegExp": "^852..",
+    "secondaryMarcIndicatorRegExp": ".",
     "subfieldSpec": {
       "subfields": [
         "x"
