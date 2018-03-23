@@ -10,7 +10,7 @@ function fixturePath (properties) {
   // Use qs.stringify to get a query-string representation of the es query
   // Then use md5 on that to get a short, (mostly) unique string suitable as
   // a filename. (Md5 on different plain objects returns same string hash)
-  return `./test/fixtures/${md5(qs.stringify(properties.body))}.json`
+  return `./test/fixtures/query-${md5(qs.stringify(properties.body))}.json`
 }
 
 /**

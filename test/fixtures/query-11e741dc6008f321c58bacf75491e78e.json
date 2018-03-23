@@ -1,0 +1,343 @@
+{
+  "took": 2,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 14.99555,
+    "hits": [
+      {
+        "_index": "resources-2018-03-22",
+        "_type": "resource",
+        "_id": "b10011374",
+        "_score": 14.99555,
+        "_source": {
+          "extent": [
+            "2 v. illus."
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 1 has added t.p.: The Table book ... Every Saturday.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Originally published weekly, from Jan. 1827 to Jan. 1828 (55 nos.-including indexes)",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Library's copy lacks added t.p.",
+              "type": "bf:Note"
+            }
+          ],
+          "publisherLiteral": [
+            "Published for W. Hone, by Hunt and Clarke,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "dateEndString": [
+            "1828"
+          ],
+          "createdYear": [
+            1827
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The table book,"
+          ],
+          "shelfMark": [
+            "JFE 86-498"
+          ],
+          "creatorLiteral": [
+            "Hone, William, 1780-1842."
+          ],
+          "createdString": [
+            "1827"
+          ],
+          "dateStartYear": [
+            1827
+          ],
+          "dateEndYear": [
+            1828
+          ],
+          "publicationStatement": [
+            "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
+          ],
+          "identifier": [
+            "urn:bnum:10011374",
+            "urn:lcc:DA110",
+            "urn:lccCoarse:DA90-125",
+            "urn:lccn:35038534",
+            "urn:oclc:10310322"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "The table book, by William Hone."
+          ],
+          "uri": "b10011374",
+          "lccClassification": [
+            "AC4 .H65"
+          ],
+          "numItems": [
+            5
+          ],
+          "numAvailable": [
+            4
+          ],
+          "placeOfPublication": [
+            "London,"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "33433067332548"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10005488",
+              "shelfMark": [
+                "*AY (Hone, W. Table book) v. 1"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                },
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433067332555"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "ADV REQUEST"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i14747243",
+              "shelfMark": [
+                "*AY (Hone, W. Table book) v. 2"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                },
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "OFFSITE - Request in Advance"
+                }
+              ]
+            },
+            {
+              "identifier": [
+                "urn:barcode:33433057532081"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i10005487",
+              "shelfMark": [
+                "JFE 86-498 v. 1"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                },
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
+                }
+              ]
+            },
+            {
+              "identifier": [
+                "urn:barcode:33433057532339"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "USE IN LIBRARY"
+                }
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i13785802",
+              "shelfMark": [
+                "JFE 86-498 v. 2"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                },
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "SASB M2 - General Research Room 315"
+                }
+              ]
+            },
+            {
+              "electronicLocator": [
+                {
+                  "label": "Full text available via HathiTrust--v. 1",
+                  "url": "http://hdl.handle.net/2027/nyp.33433057532081"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 2",
+                  "url": "http://hdl.handle.net/2027/nyp.33433057532339"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 1",
+                  "url": "http://hdl.handle.net/2027/nyp.33433067332548"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 2",
+                  "url": "http://hdl.handle.net/2027/nyp.33433067332555"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 1",
+                  "url": "http://hdl.handle.net/2027/nyp.33433057532081"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 2",
+                  "url": "http://hdl.handle.net/2027/nyp.33433057532339"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 1",
+                  "url": "http://hdl.handle.net/2027/nyp.33433067332548"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 2",
+                  "url": "http://hdl.handle.net/2027/nyp.33433067332555"
+                }
+              ],
+              "uri": "i10011374-e"
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        }
+      }
+    ]
+  }
+}

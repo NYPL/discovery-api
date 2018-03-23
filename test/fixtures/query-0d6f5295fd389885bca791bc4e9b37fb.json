@@ -1,0 +1,160 @@
+{
+  "took": 254,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 14648475,
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "resources-2018-03-22",
+        "_type": "resource",
+        "_id": "b10000097",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "218 p. ;"
+          ],
+          "identifier": [
+            "urn:bnum:10000097",
+            "urn:lcc:PJ7842.H3245",
+            "urn:lccCoarse:PJ7695.8-7976",
+            "urn:lccn:75960362",
+            "urn:oclc:19480149"
+          ],
+          "publisherLiteral": [
+            "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ,"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "createdYear": [
+            1974
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Anti Laylāy"
+          ],
+          "titleDisplay": [
+            "Anti Laylāy / Ṣāliḥ Kharfī."
+          ],
+          "shelfMark": [
+            "*OFA 82-5142"
+          ],
+          "uri": "b10000097",
+          "creatorLiteral": [
+            "Kharfī, Ṣāliḥ."
+          ],
+          "createdString": [
+            "1974"
+          ],
+          "lccClassification": [
+            "PJ7842.H3245 A83"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "contributorLiteral": [
+            "Kharfī, Ṣāliḥ."
+          ],
+          "dateStartYear": [
+            1974
+          ],
+          "placeOfPublication": [
+            "al-Jazāʼir :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433002000689"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10000039",
+              "shelfMark": [
+                "*OFA 82-5142"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                },
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "22 cm."
+          ]
+        },
+        "sort": [
+          "b10000097"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "took": 2,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 14.99555,
+    "hits": [
+      {
+        "_index": "resources-2018-03-22",
+        "_type": "resource",
+        "_id": "b10022950",
+        "_score": 14.99555,
+        "_source": {
+          "extent": [
+            "224 p. ;"
+          ],
+          "identifier": [
+            "urn:bnum:10022950",
+            "urn:lcc:DS145",
+            "urn:lccCoarse:DS133-151",
+            "urn:oclc:1513312"
+          ],
+          "publisherLiteral": [
+            "[D. Kirshenbaum],"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "createdYear": [
+            1974
+          ],
+          "subjectLiteral": [
+            "Christianity and other religions -- Judaism."
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Religion--love or hate?"
+          ],
+          "titleDisplay": [
+            "Religion--love or hate? / by David Kirshenbaum."
+          ],
+          "shelfMark": [
+            "*PGZ 81-1452"
+          ],
+          "uri": "b10022950",
+          "creatorLiteral": [
+            "Kirshenbaum, D. (David), 1902-"
+          ],
+          "createdString": [
+            "1974"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "contributorLiteral": [
+            "Kirshenbaum, D. (David), 1902-"
+          ],
+          "dateStartYear": [
+            1974
+          ],
+          "placeOfPublication": [
+            "New York :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "identifier": [
+                "urn:barcode:33433103848853"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "USE IN LIBRARY"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i14749981",
+              "shelfMark": [
+                "*PGZ 81-1452"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
+                },
+                {
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:maf92",
+                  "label": "SASB M2 - Dorot Jewish Division - Room 111"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        }
+      }
+    ]
+  }
+}

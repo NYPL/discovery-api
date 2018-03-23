@@ -1,0 +1,193 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 14.995556,
+    "hits": [
+      {
+        "_index": "resources-2018-03-22",
+        "_type": "resource",
+        "_id": "b10001936",
+        "_score": 14.995556,
+        "_source": {
+          "extent": [
+            "400 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "General Note",
+              "label": "Publication date from cover.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography, etc. Note",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Study Program Information Note",
+              "label": "Also available on microform;",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language Note",
+              "label": "In Armenian.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Action Note",
+              "label": "Microfilmed;",
+              "type": "bf:Note"
+            }
+          ],
+          "publisherLiteral": [
+            "Tparan Hovhannu Tēr-Abrahamian,"
+          ],
+          "language": [
+            {
+              "id": "lang:arm",
+              "label": "Armenian"
+            }
+          ],
+          "createdYear": [
+            1891
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan"
+          ],
+          "shelfMark": [
+            "*ONR 84-743"
+          ],
+          "creatorLiteral": [
+            "Shermazanian, Galust."
+          ],
+          "createdString": [
+            "1891"
+          ],
+          "contributorLiteral": [
+            "Shermazanian, Galust."
+          ],
+          "dateStartYear": [
+            1891
+          ],
+          "identifier": [
+            "urn:bnum:10001936"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Armenians -- Iran -- History."
+          ],
+          "titleDisplay": [
+            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan / Ashkhatasirutʻiamb Galust Shermazaniani."
+          ],
+          "uri": "b10001936",
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Ṛostov (Doni Vra) :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433001892276"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10001320",
+              "shelfMark": [
+                "*ONR 84-743"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                },
+                {
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "electronicLocator": [
+                {
+                  "label": "Full text available via HathiTrust",
+                  "url": "http://hdl.handle.net/2027/nyp.33433001892276"
+                },
+                {
+                  "label": "Full text available via HathiTrust",
+                  "url": "http://hdl.handle.net/2027/nyp.33433001892276"
+                }
+              ],
+              "uri": "i10001936-e"
+            }
+          ],
+          "dimensions": [
+            "21 cm."
+          ]
+        }
+      }
+    ]
+  }
+}
