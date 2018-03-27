@@ -1,5 +1,5 @@
 {
-  "took": 2,
+  "took": 3,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 14.99555,
+    "max_score": 1.7917595,
     "hits": [
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-test-index",
         "_type": "resource",
         "_id": "b10011374",
-        "_score": 14.99555,
+        "_score": 1.7917595,
         "_source": {
           "extent": [
             "2 v. illus."
@@ -66,21 +66,36 @@
           "createdString": [
             "1827"
           ],
+          "idLccn": [
+            "35038534"
+          ],
           "dateStartYear": [
             1827
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFE 86-498"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10011374"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "35038534"
+            }
           ],
           "dateEndYear": [
             1828
           ],
+          "updatedAt": 1522096603808,
           "publicationStatement": [
             "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
           ],
           "identifier": [
             "urn:bnum:10011374",
-            "urn:lcc:DA110",
-            "urn:lccCoarse:DA90-125",
-            "urn:lccn:35038534",
-            "urn:oclc:10310322"
+            "urn:lccn:35038534"
           ],
           "materialType": [
             {
@@ -93,6 +108,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1827"
           ],
           "mediaType": [
             {
@@ -131,13 +149,26 @@
                 }
               ],
               "identifier": [
-                "33433067332548"
+                "urn:barcode:33433067332548"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*AY (Hone, W. Table book) v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433067332548"
+                }
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433067332548"
               ],
               "requestable": [
                 true
@@ -147,10 +178,6 @@
                 "*AY (Hone, W. Table book) v. 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:32",
-                  "label": "google project, book"
-                },
                 {
                   "id": "catalogItemType:32",
                   "label": "google project, book"
@@ -179,11 +206,24 @@
               "identifier": [
                 "urn:barcode:33433067332555"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*AY (Hone, W. Table book) v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433067332555"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433067332555"
               ],
               "requestable": [
                 true
@@ -196,22 +236,18 @@
                 {
                   "id": "catalogItemType:32",
                   "label": "google project, book"
-                },
-                {
-                  "id": "catalogItemType:32",
-                  "label": "google project, book"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             },
@@ -219,11 +255,24 @@
               "identifier": [
                 "urn:barcode:33433057532081"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFE 86-498 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057532081"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433057532081"
               ],
               "requestable": [
                 false
@@ -233,10 +282,6 @@
                 "JFE 86-498 v. 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:32",
-                  "label": "google project, book"
-                },
                 {
                   "id": "catalogItemType:32",
                   "label": "google project, book"
@@ -259,11 +304,24 @@
               "identifier": [
                 "urn:barcode:33433057532339"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFE 86-498 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057532339"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
+                  "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433057532339"
               ],
               "requestable": [
                 false
@@ -273,10 +331,6 @@
                 "JFE 86-498 v. 2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:32",
-                  "label": "google project, book"
-                },
                 {
                   "id": "catalogItemType:32",
                   "label": "google project, book"
@@ -291,28 +345,12 @@
               "holdingLocation": [
                 {
                   "id": "loc:mal92",
-                  "label": "SASB M2 - General Research Room 315"
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             },
             {
               "electronicLocator": [
-                {
-                  "label": "Full text available via HathiTrust--v. 1",
-                  "url": "http://hdl.handle.net/2027/nyp.33433057532081"
-                },
-                {
-                  "label": "Full text available via HathiTrust--v. 2",
-                  "url": "http://hdl.handle.net/2027/nyp.33433057532339"
-                },
-                {
-                  "label": "Full text available via HathiTrust--v. 1",
-                  "url": "http://hdl.handle.net/2027/nyp.33433067332548"
-                },
-                {
-                  "label": "Full text available via HathiTrust--v. 2",
-                  "url": "http://hdl.handle.net/2027/nyp.33433067332555"
-                },
                 {
                   "label": "Full text available via HathiTrust--v. 1",
                   "url": "http://hdl.handle.net/2027/nyp.33433057532081"
