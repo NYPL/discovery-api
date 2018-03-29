@@ -3,6 +3,92 @@ const assert = require('assert')
 
 const fixtures = require('./fixtures')
 
+describe('Resources query', function () {
+  let resourcesPrivMethods = {}
+
+  before(function () {
+    require('../lib/resources')({}, resourcesPrivMethods)
+  })
+
+  describe('parseSearchParams', function () {
+    it('parses params, sets defaults', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ })
+      expect(params).to.be.a('object')
+      expect(params.q).to.equal(undefined)
+      expect(params.search_scope).to.equal('all')
+      expect(params.page).to.equal(1)
+      expect(params.per_page).to.equal(50)
+      expect(params.sort).to.equal(undefined)
+      expect(params.filters).to.equal(undefined)
+    })
+  })
+
+  describe('escapeQuery', function () {
+    it('should escape specials', function () {
+      expect(resourcesPrivMethods.escapeQuery('? ^ *')).to.equal('\\\\? \\\\^ \\\\*')
+    })
+
+    it('should escape unrecognized field indicators', function () {
+      expect(resourcesPrivMethods.escapeQuery('fladeedle:gorf')).to.equal('fladeedle\\:gorf')
+    })
+
+    it('should not escape recognized field indicators', function () {
+      expect(resourcesPrivMethods.escapeQuery('title:gorf')).to.equal('title:gorf')
+    })
+
+    it('should escape floating colon', function () {
+      // Make sure colons floating in whitespace are escaped:
+      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')
+    })
+  })
+
+  describe('buildElasticQuery', function () {
+    it('uses "query string query" if subjectLiteral: used', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:potatoes' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('subjectLiteral:potatoes')
+    })
+
+    it('uses "query string query" if subjectLiteral: quoted phrase used', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:"hot potatoes"' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('subjectLiteral:\"hot potatoes\"')
+    })
+
+    it('escapes colon if field not recognized', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'fladeedle:"hot potatoes"' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('fladeedle\\:\"hot potatoes\"')
+    })
+
+    it('uses "query string query" if plain keyword query used', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'potatoes' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('potatoes')
+    })
+  })
+})
+
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
 
