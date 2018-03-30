@@ -36,9 +36,17 @@ describe('Resources query', function () {
       expect(resourcesPrivMethods.escapeQuery('title:gorf')).to.equal('title:gorf')
     })
 
+    it('should escape a single forward slash', function () {
+      expect(resourcesPrivMethods.escapeQuery('/')).to.equal('\\/')
+    })
+
     it('should escape floating colon', function () {
       // Make sure colons floating in whitespace are escaped:
       expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')
+    })
+
+    it('should escape colons in hyphenated phrases', function () {
+      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ / Avtor-sostavitelʹ: B.A. Konikov.')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ \\/ Avtor-sostavitelʹ\\: B.A. Konikov.')
     })
   })
 
