@@ -1,5 +1,5 @@
 {
-  "took": 3,
+  "took": 12,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,16 +8,20 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 14.99555,
+    "max_score": 14.529428,
     "hits": [
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10015541",
-        "_score": 14.99555,
+        "_score": 14.529428,
         "_source": {
           "extent": [
             "v. : ill. ;"
+          ],
+          "note": [
+            "Includes bibliographical references and indexes.",
+            "Vol. 2 has title: A history and genealogy of the families of Howland, Brown, Follett, Van Dyke, Lamb, Spaulding, and Davidson with related lines of Treat, Botsford, Parker, Burwell, Clark, Andrews, Symmonds, Burnaman, Ashbaugh, and Smith from Holland, England, Scotland, and France to Massachusetts, Connecticut, New York, New Jersey, Ohio, Iowa, Indiana, Nebraska, Kansas, and Texas from \"The Mayflower\" pilgrims in 1620 to the 1980s / by Dorothy Davidson Symmonds."
           ],
           "publisherLiteral": [
             "D. Symmonds,"
@@ -60,10 +64,7 @@
           ],
           "identifier": [
             "urn:bnum:10015541",
-            "urn:lcc:CS71.P9615",
-            "urn:lccCoarse:CS42-2209",
-            "urn:lccn:85239758",
-            "urn:oclc:13329036"
+            "urn:lccn:85239758"
           ],
           "materialType": [
             {
@@ -76,6 +77,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1985"
           ],
           "mediaType": [
             {
@@ -96,10 +100,10 @@
             "CS71.P9615 1985"
           ],
           "numItems": [
-            1
+            2
           ],
           "numAvailable": [
-            1
+            2
           ],
           "placeOfPublication": [
             "Bellaire, Tex. (P.O. Box 26, Bellaire 77401) :"
@@ -112,24 +116,21 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1105",
-                  "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                }
+              "identifier": [
+                "urn:barcode:33433060936147"
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
                 false
               ],
-              "uri": "i14747616",
+              "uri": "i35838326",
               "shelfMark": [
-                "APV (Pritchett) 87-2820 Vol. 1-2 ---"
+                "APV (Pritchett) 87-2820 v. 1"
               ],
               "catalogItemType": [
                 {
@@ -149,8 +150,48 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:mag82",
-                  "label": "SASB M1 - Milstein Division Rm 121"
+                  "id": "loc:mag92",
+                  "label": "Schwarzman Building M2 - Milstein Division - Room 121"
+                }
+              ]
+            },
+            {
+              "identifier": [
+                "urn:barcode:33433065651741"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i14747616",
+              "shelfMark": [
+                "APV (Pritchett) 87-2820 v. 2"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                },
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mag92",
+                  "label": "Schwarzman Building M2 - Milstein Division - Room 121"
                 }
               ]
             }

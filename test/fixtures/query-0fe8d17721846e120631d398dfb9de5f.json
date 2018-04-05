@@ -1,5 +1,5 @@
 {
-  "took": 312,
+  "took": 187,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,302 +7,11 @@
     "failed": 0
   },
   "hits": {
-    "total": 14648475,
+    "total": 12748727,
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-2018-03-22",
-        "_type": "resource",
-        "_id": "b1000",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "xiii, 262 p. ;"
-          ],
-          "identifier": [
-            "urn:bnum:1000"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "createdYear": [
-            1978
-          ],
-          "subjectLiteral": [
-            "Motivation (Psychology)",
-            "Reward (Psychology)"
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "The Hidden costs of reward : new perspectives of the psychology of human motivation / edited by Mark R. Lepper, David Greene."
-          ],
-          "titleDisplay": [
-            "The Hidden costs of reward : new perspectives of the psychology of human motivation / edited by Mark R. Lepper, David Greene."
-          ],
-          "uri": "b1000",
-          "createdString": [
-            "1978"
-          ],
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "contributorLiteral": [
-            "Greene, David, 1945-",
-            "Lepper, Mark R."
-          ],
-          "placeOfPublication": [
-            "Hillsdale, N.J. : New York :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "identifier": [
-                "urn:barcode:CU68532903"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
-                }
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i1975",
-              "shelfMark": [
-                "BF319.5.R48 H5"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "24 cm."
-          ]
-        },
-        "sort": [
-          "b1000"
-        ]
-      },
-      {
-        "_index": "resources-2018-03-22",
-        "_type": "resource",
-        "_id": "b1000000",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "2 parts."
-          ],
-          "identifier": [
-            "urn:bnum:1000000"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:not",
-              "label": "Notated music"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "createdYear": [
-            1962
-          ],
-          "subjectLiteral": [
-            "Aleatory music.",
-            "Piano music (Pianos (2)) -- Parts."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Duo for pianists II; 2 pianos, 4 hands."
-          ],
-          "titleDisplay": [
-            "Duo for pianists II; 2 pianos, 4 hands."
-          ],
-          "uri": "b1000000",
-          "creatorLiteral": [
-            "Wolff, Christian, 1934-"
-          ],
-          "createdString": [
-            "1962"
-          ],
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "contributorLiteral": [
-            "Wolff, Christian,"
-          ],
-          "dateStartYear": [
-            1962
-          ],
-          "placeOfPublication": [
-            "New York,"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "identifier": [
-                "urn:barcode:MR51504642"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
-                }
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i1455471",
-              "shelfMark": [
-                "12.2 W833 D92"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "31 cm."
-          ]
-        },
-        "sort": [
-          "b1000000"
-        ]
-      },
-      {
-        "_index": "resources-2018-03-22",
-        "_type": "resource",
-        "_id": "b10000000",
-        "_score": null,
-        "_source": {
-          "numAvailable": [
-            0
-          ],
-          "identifier": [
-            "urn:bnum:10000000"
-          ],
-          "suppressed": [
-            null
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "uri": "b10000000",
-          "items": [],
-          "numItems": [
-            0
-          ]
-        },
-        "sort": [
-          "b10000000"
-        ]
-      },
-      {
-        "_index": "resources-2018-03-22",
-        "_type": "resource",
-        "_id": "b10000001",
-        "_score": null,
-        "_source": {
-          "numAvailable": [
-            0
-          ],
-          "identifier": [
-            "urn:bnum:10000001"
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "suppressed": [
-            "false"
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "uri": "b10000001",
-          "items": [],
-          "numItems": [
-            0
-          ]
-        },
-        "sort": [
-          "b10000001"
-        ]
-      },
-      {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000002",
         "_score": null,
@@ -310,25 +19,12 @@
           "extent": [
             "ix, 368 p., [1] leaf of plates : port. ;"
           ],
-          "identifier": [
-            "urn:bnum:10000002",
-            "urn:isbn:3923721544",
-            "urn:lccn:86124252"
+          "note": [
+            "Contributions in German and Italian.",
+            "Includes bibliographies and index."
           ],
           "publisherLiteral": [
             "Stauffenburg,"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
           ],
           "language": [
             {
@@ -336,18 +32,8 @@
               "label": "German"
             }
           ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
           "createdYear": [
             1985
-          ],
-          "subjectLiteral": [
-            "Dante Alighieri, -- 1265-1321 -- Criticism and interpretation.",
-            "Gmelin, Hermann, -- 1900-1958."
           ],
           "type": [
             "nypl:Item"
@@ -355,24 +41,11 @@
           "title": [
             "Dante Alighieri 1985 : in memoriam Hermann Gmelin"
           ],
-          "titleDisplay": [
-            "Dante Alighieri 1985 : in memoriam Hermann Gmelin / herausgegeben von Richard Baum und Willi Hirdt."
-          ],
           "shelfMark": [
             "JFE 86-3252"
           ],
-          "uri": "b10000002",
           "createdString": [
             "1985"
-          ],
-          "lccClassification": [
-            "PQ4390 .D274 1985"
-          ],
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
           ],
           "contributorLiteral": [
             "Baum, Richard.",
@@ -381,6 +54,49 @@
           ],
           "dateStartYear": [
             1985
+          ],
+          "identifier": [
+            "urn:bnum:10000002",
+            "urn:isbn:3923721544",
+            "urn:lccn:86124252"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Dante Alighieri, -- 1265-1321 -- Criticism and interpretation.",
+            "Gmelin, Hermann, -- 1900-1958."
+          ],
+          "titleDisplay": [
+            "Dante Alighieri 1985 : in memoriam Hermann Gmelin / herausgegeben von Richard Baum und Willi Hirdt."
+          ],
+          "uri": "b10000002",
+          "lccClassification": [
+            "PQ4390 .D274 1985"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
           ],
           "placeOfPublication": [
             "Tübingen :"
@@ -399,7 +115,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
@@ -428,7 +144,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:mal92",
-                  "label": "SASB M2 - General Research Room 315"
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             }
@@ -442,7 +158,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000003",
         "_score": null,
@@ -450,16 +166,43 @@
           "extent": [
             "199 p. : col. ill. maps ;"
           ],
+          "publisherLiteral": [
+            "Constable,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1989
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Scottish islands"
+          ],
+          "shelfMark": [
+            "JFF 89-526"
+          ],
+          "creatorLiteral": [
+            "Waite, Charlie."
+          ],
+          "createdString": [
+            "1989"
+          ],
+          "contributorLiteral": [
+            "Waite, Charlie."
+          ],
+          "dateStartYear": [
+            1989
+          ],
           "identifier": [
             "urn:bnum:10000003",
             "urn:isbn:0094675708 :",
-            "urn:lcc:DA880.H4",
-            "urn:lccCoarse:DA880-890",
-            "urn:lccn:gb 89012970",
-            "urn:oclc:18743811"
-          ],
-          "publisherLiteral": [
-            "Constable,"
+            "urn:lccn:gb 89012970"
           ],
           "materialType": [
             {
@@ -473,11 +216,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:eng",
-              "label": "English"
-            }
+          "dateString": [
+            "1989"
           ],
           "mediaType": [
             {
@@ -485,42 +225,18 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1989
-          ],
           "subjectLiteral": [
             "Hebrides (Scotland) -- Pictorial works."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Scottish islands"
           ],
           "titleDisplay": [
             "Scottish islands / Charlie Waite."
           ],
-          "shelfMark": [
-            "JFF 89-526"
-          ],
           "uri": "b10000003",
-          "creatorLiteral": [
-            "Waite, Charlie."
-          ],
-          "createdString": [
-            "1989"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Waite, Charlie."
-          ],
-          "dateStartYear": [
-            1989
           ],
           "placeOfPublication": [
             "London :"
@@ -539,7 +255,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
@@ -568,7 +284,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:mal92",
-                  "label": "SASB M2 - General Research Room 315"
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             }
@@ -582,13 +298,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000004",
         "_score": null,
         "_source": {
           "extent": [
             "23, 216 p."
+          ],
+          "note": [
+            "First published in 1956.",
+            "In Tamil.",
+            "Includes bibliographical references."
           ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
@@ -628,11 +349,7 @@
           ],
           "identifier": [
             "urn:bnum:10000004",
-            "urn:hathi:001008347",
-            "urn:lcc:PL4758.9.T5",
-            "urn:lccCoarse:PL4601-4797.95",
-            "urn:lccn:74915265",
-            "urn:oclc:20227924"
+            "urn:lccn:74915265"
           ],
           "materialType": [
             {
@@ -645,6 +362,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1965"
           ],
           "mediaType": [
             {
@@ -691,7 +411,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -720,7 +440,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -734,13 +454,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000005",
         "_score": null,
         "_source": {
           "extent": [
             "1 score (43 p.) + 1 part (12 p.) ;"
+          ],
+          "note": [
+            "\"Soch. 22\"--Caption.",
+            "Acc. arr. for piano.",
+            "Pl. no.: 11049."
           ],
           "publisherLiteral": [
             "Muzyka,"
@@ -793,6 +518,9 @@
               "label": "volume"
             }
           ],
+          "dateString": [
+            "1980"
+          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
@@ -810,7 +538,7 @@
             1
           ],
           "numAvailable": [
-            1
+            0
           ],
           "placeOfPublication": [
             "Moskva :"
@@ -838,11 +566,11 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
-                true
+                false
               ],
               "uri": "i10942022",
               "shelfMark": [
@@ -860,14 +588,14 @@
               ],
               "status": [
                 {
-                  "id": "status:a",
-                  "label": "Available"
+                  "id": "status:t",
+                  "label": "In transit"
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -881,13 +609,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000006",
         "_score": null,
         "_source": {
           "extent": [
             "227 p."
+          ],
+          "note": [
+            "In Arabic.",
+            "Includes bibliographical references.",
+            "Translation of The reconstruction of religious thought in Islam."
           ],
           "publisherLiteral": [
             "Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr"
@@ -924,10 +657,7 @@
           ],
           "identifier": [
             "urn:bnum:10000006",
-            "urn:lcc:BP161",
-            "urn:lccCoarse:BP1-253",
-            "urn:lccn:75962707",
-            "urn:oclc:10329581"
+            "urn:lccn:75962707"
           ],
           "materialType": [
             {
@@ -940,6 +670,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1968"
           ],
           "mediaType": [
             {
@@ -986,7 +719,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -1009,13 +742,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1029,13 +762,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000007",
         "_score": null,
         "_source": {
           "extent": [
             "14 p. of music ;"
+          ],
+          "note": [
+            "Duration: ca. 7:35.",
+            "Pl. no.: Z.8917."
           ],
           "publisherLiteral": [
             "Editio Musica,"
@@ -1074,10 +811,7 @@
             "Studies, guitar"
           ],
           "identifier": [
-            "urn:bnum:10000007",
-            "urn:lcc:M127.P374",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:10977096"
+            "urn:bnum:10000007"
           ],
           "materialType": [
             {
@@ -1090,6 +824,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1981"
           ],
           "mediaType": [
             {
@@ -1137,7 +874,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -1160,13 +897,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1180,7 +917,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000008",
         "_score": null,
@@ -1188,16 +925,45 @@
           "extent": [
             "351 p."
           ],
-          "identifier": [
-            "urn:bnum:10000008",
-            "urn:hathi:001006942",
-            "urn:lcc:PL4758.9.A5",
-            "urn:lccCoarse:PL4601-4797.95",
-            "urn:lccn:72913998",
-            "urn:oclc:20142332"
+          "note": [
+            "In Tamil."
           ],
           "publisherLiteral": [
             "Parimaḷam Patippakam"
+          ],
+          "language": [
+            {
+              "id": "lang:tam",
+              "label": "Tamil"
+            }
+          ],
+          "createdYear": [
+            1969
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Aṇṇāviṉ ciṟukataikaḷ."
+          ],
+          "shelfMark": [
+            "*OLB 84-1986"
+          ],
+          "creatorLiteral": [
+            "Annadurai, C. N., 1909-1969."
+          ],
+          "createdString": [
+            "1969"
+          ],
+          "contributorLiteral": [
+            "Annadurai, C. N., 1909-1969."
+          ],
+          "dateStartYear": [
+            1969
+          ],
+          "identifier": [
+            "urn:bnum:10000008",
+            "urn:lccn:72913998"
           ],
           "materialType": [
             {
@@ -1211,11 +977,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:tam",
-              "label": "Tamil"
-            }
+          "dateString": [
+            "1969"
           ],
           "mediaType": [
             {
@@ -1223,28 +986,10 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1969
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Aṇṇāviṉ ciṟukataikaḷ."
-          ],
           "titleDisplay": [
             "Aṇṇāviṉ ciṟukataikaḷ. [Eḻutiyavar] Ci. Eṉ. Aṇṇāturai."
           ],
-          "shelfMark": [
-            "*OLB 84-1986"
-          ],
           "uri": "b10000008",
-          "creatorLiteral": [
-            "Annadurai, C. N., 1909-1969."
-          ],
-          "createdString": [
-            "1969"
-          ],
           "lccClassification": [
             "PL4758.9.A5 A84"
           ],
@@ -1253,12 +998,6 @@
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Annadurai, C. N., 1909-1969."
-          ],
-          "dateStartYear": [
-            1969
           ],
           "placeOfPublication": [
             "Ceṉṉai,"
@@ -1283,7 +1022,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -1312,7 +1051,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1326,13 +1065,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000009",
         "_score": null,
         "_source": {
           "extent": [
             "30 p. of music ;"
+          ],
+          "note": [
+            "For piano.",
+            "Pl. no.: E.P. 13028.",
+            "Publisher's no.: Edition Peters Nr. 5489."
           ],
           "publisherLiteral": [
             "Edition Peters ; C.F. Peters,"
@@ -1371,10 +1115,7 @@
             "Miniaturen, no. 2"
           ],
           "identifier": [
-            "urn:bnum:10000009",
-            "urn:lcc:M25.G595",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:11108344"
+            "urn:bnum:10000009"
           ],
           "materialType": [
             {
@@ -1387,6 +1128,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "mediaType": [
             {
@@ -1433,7 +1177,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -1456,13 +1200,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1476,13 +1220,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000010",
         "_score": null,
         "_source": {
           "extent": [
             "110 p."
+          ],
+          "note": [
+            "In Tamil.",
+            "Includes bibliographical references."
           ],
           "publisherLiteral": [
             "Aṇṇāmalaip Palkalaikkaḻakam,"
@@ -1536,6 +1284,9 @@
               "label": "volume"
             }
           ],
+          "dateString": [
+            "1969"
+          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
@@ -1581,7 +1332,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -1610,7 +1361,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1624,7 +1375,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000011",
         "_score": null,
@@ -1672,10 +1423,7 @@
             1982
           ],
           "identifier": [
-            "urn:bnum:10000011",
-            "urn:lcc:M14.5.L5",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:10534367"
+            "urn:bnum:10000011"
           ],
           "materialType": [
             {
@@ -1688,6 +1436,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1976"
           ],
           "mediaType": [
             {
@@ -1733,7 +1484,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -1756,13 +1507,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1776,7 +1527,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000012",
         "_score": null,
@@ -1784,13 +1535,45 @@
           "extent": [
             "223 p. ;"
           ],
-          "identifier": [
-            "urn:bnum:10000012",
-            "urn:lcc:PJ7698.H8",
-            "urn:oclc:404140427"
+          "note": [
+            "Bibliography: p.221.",
+            "In Arabic."
           ],
           "publisherLiteral": [
             "Dār al-Thaqāfah,"
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "createdYear": [
+            1970
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "al-Ḥuṭayʼah : fī sīratihi wa-nafsīyatihi wa-shiʻrihi"
+          ],
+          "shelfMark": [
+            "*OFS 84-1997"
+          ],
+          "creatorLiteral": [
+            "Ḥāwī, Īlīyā Salīm."
+          ],
+          "createdString": [
+            "1970"
+          ],
+          "contributorLiteral": [
+            "Ḥāwī, Īlīyā Salīm."
+          ],
+          "dateStartYear": [
+            1970
+          ],
+          "identifier": [
+            "urn:bnum:10000012"
           ],
           "materialType": [
             {
@@ -1804,11 +1587,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:ara",
-              "label": "Arabic"
-            }
+          "dateString": [
+            "1970"
           ],
           "mediaType": [
             {
@@ -1816,42 +1596,18 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1970
-          ],
           "subjectLiteral": [
             "Ḥuṭayʼah, Jarwal ibn Aws, -- d. 650?"
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "al-Ḥuṭayʼah : fī sīratihi wa-nafsīyatihi wa-shiʻrihi"
           ],
           "titleDisplay": [
             "al-Ḥuṭayʼah : fī sīratihi wa-nafsīyatihi wa-shiʻrihi / bi-qalam Īlīyā Ḥāwī."
           ],
-          "shelfMark": [
-            "*OFS 84-1997"
-          ],
           "uri": "b10000012",
-          "creatorLiteral": [
-            "Ḥāwī, Īlīyā Salīm."
-          ],
-          "createdString": [
-            "1970"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Ḥāwī, Īlīyā Salīm."
-          ],
-          "dateStartYear": [
-            1970
           ],
           "placeOfPublication": [
             "Bayrūt :"
@@ -1904,7 +1660,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -1919,13 +1675,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000013",
         "_score": null,
         "_source": {
           "extent": [
             "32 p. of music : ill. ;"
+          ],
+          "note": [
+            "Arr. for piano with chord symbols; superlinear German words.",
+            "Popular music."
           ],
           "identifier": [
             "urn:bnum:10000013"
@@ -1944,6 +1704,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "language": [
             {
@@ -2011,7 +1774,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -2034,13 +1797,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2054,7 +1817,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000014",
         "_score": null,
@@ -2062,14 +1825,42 @@
           "extent": [
             "520 p. : ill., ports. ;"
           ],
-          "identifier": [
-            "urn:bnum:10000014",
-            "urn:hathi:001928451",
-            "urn:lcc:BP194.1",
-            "urn:oclc:21889718"
+          "note": [
+            "In Arabic.",
+            "Title on cover: Islamic unity or the Mutual approach among Muslim sects."
           ],
           "publisherLiteral": [
             "Muʼassasat al-Aʻlamī lil-Maṭbūʻāt,"
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "createdYear": [
+            1975
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "al-Waḥdah al-Islāmīyah : aw al-taqrīb bayna al-madhāhib al-sabʻah, wathāʼiq khaṭīrah wa-buḥūth ʻilmīyah li-aʻāẓim ʻulamāʼ al-Muslimīn min al-sunnah wa-al-shīʻah"
+          ],
+          "shelfMark": [
+            "*OGC 84-1996"
+          ],
+          "createdString": [
+            "1975"
+          ],
+          "contributorLiteral": [
+            "Shīrāzī, ʻAbd al-Karīm Bī Āzār."
+          ],
+          "dateStartYear": [
+            1975
+          ],
+          "identifier": [
+            "urn:bnum:10000014"
           ],
           "materialType": [
             {
@@ -2083,11 +1874,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:ara",
-              "label": "Arabic"
-            }
+          "dateString": [
+            "1975"
           ],
           "mediaType": [
             {
@@ -2095,40 +1883,19 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1975
-          ],
           "subjectLiteral": [
             "Islam -- 20th century.",
             "Panislamism."
           ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "al-Waḥdah al-Islāmīyah : aw al-taqrīb bayna al-madhāhib al-sabʻah, wathāʼiq khaṭīrah wa-buḥūth ʻilmīyah li-aʻāẓim ʻulamāʼ al-Muslimīn min al-sunnah wa-al-shīʻah"
-          ],
           "titleDisplay": [
             "al-Waḥdah al-Islāmīyah : aw al-taqrīb bayna al-madhāhib al-sabʻah, wathāʼiq khaṭīrah wa-buḥūth ʻilmīyah li-aʻāẓim ʻulamāʼ al-Muslimīn min al-sunnah wa-al-shīʻah / Jamʻ wa-tartīb ʻAbd al-Karīm Bī Āzār al-Shīrāzī."
           ],
-          "shelfMark": [
-            "*OGC 84-1996"
-          ],
           "uri": "b10000014",
-          "createdString": [
-            "1975"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Shīrāzī, ʻAbd al-Karīm Bī Āzār."
-          ],
-          "dateStartYear": [
-            1975
           ],
           "placeOfPublication": [
             "Bayrūt :"
@@ -2153,7 +1920,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -2176,13 +1943,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2196,117 +1963,16 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
-        "_type": "resource",
-        "_id": "b10000015",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "25 p. of music ;"
-          ],
-          "publisherLiteral": [
-            "Belwin-Mills,"
-          ],
-          "language": [
-            {
-              "id": "lang:zxx",
-              "label": "No linguistic content"
-            }
-          ],
-          "createdYear": [
-            1980
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Suite no. 1 : 1977"
-          ],
-          "shelfMark": [
-            "JNG 83-102"
-          ],
-          "creatorLiteral": [
-            "Hampton, Calvin."
-          ],
-          "createdString": [
-            "1980"
-          ],
-          "contributorLiteral": [
-            "Hampton, Calvin."
-          ],
-          "dateStartYear": [
-            1980
-          ],
-          "uniformTitle": [
-            "Suite, organ, no. 1"
-          ],
-          "identifier": [
-            "urn:bnum:10000015",
-            "urn:hathi:005109389",
-            "urn:lcc:M9",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:21159194"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:not",
-              "label": "Notated music"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Suites (Organ)"
-          ],
-          "titleDisplay": [
-            "Suite no. 1 : 1977 / Calvin Hampton."
-          ],
-          "uri": "b10000015",
-          "numItems": [
-            0
-          ],
-          "numAvailable": [
-            0
-          ],
-          "placeOfPublication": [
-            "Melville, NY :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "titleAlt": [
-            "Suite, no. 1"
-          ],
-          "items": [],
-          "dimensions": [
-            "31 cm."
-          ]
-        },
-        "sort": [
-          "b10000015"
-        ]
-      },
-      {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000016",
         "_score": null,
         "_source": {
           "extent": [
             "111 p."
+          ],
+          "note": [
+            "In Tamil."
           ],
           "publisherLiteral": [
             "Manṅkaḷa Nūlakam,"
@@ -2343,10 +2009,7 @@
           ],
           "identifier": [
             "urn:bnum:10000016",
-            "urn:lcc:PL4758.6.A2",
-            "urn:lccCoarse:PL4601-4797.95",
-            "urn:lccn:74913402",
-            "urn:oclc:317546902"
+            "urn:lccn:74913402"
           ],
           "materialType": [
             {
@@ -2359,6 +2022,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1967"
           ],
           "mediaType": [
             {
@@ -2405,7 +2071,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -2434,7 +2100,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2448,7 +2114,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000017",
         "_score": null,
@@ -2456,14 +2122,46 @@
           "extent": [
             "1 score (17 p.) ;"
           ],
-          "identifier": [
-            "urn:bnum:10000017",
-            "urn:lcc:M1621.E82",
-            "urn:lccCoarse:M1611-1624.8",
-            "urn:oclc:10475689"
+          "note": [
+            "Duration: ca. 3:00.",
+            "For baritone and piano.",
+            "Words printed also as text."
           ],
           "publisherLiteral": [
             "Donemus,"
+          ],
+          "language": [
+            {
+              "id": "lang:fre",
+              "label": "French"
+            }
+          ],
+          "createdYear": [
+            1981
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Lettre du Mexique : pour baryton et piano, 1942"
+          ],
+          "shelfMark": [
+            "JMG 83-395"
+          ],
+          "creatorLiteral": [
+            "Escher, Rudolf."
+          ],
+          "createdString": [
+            "1981"
+          ],
+          "contributorLiteral": [
+            "Corbière, Tristan, 1845-1875."
+          ],
+          "dateStartYear": [
+            1981
+          ],
+          "identifier": [
+            "urn:bnum:10000017"
           ],
           "materialType": [
             {
@@ -2477,11 +2175,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:fre",
-              "label": "French"
-            }
+          "dateString": [
+            "1981"
           ],
           "mediaType": [
             {
@@ -2489,42 +2184,18 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1981
-          ],
           "subjectLiteral": [
-            "Corbière, Tristan, -- 1845-1875 -- Musical settings."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Lettre du Mexique : pour baryton et piano, 1942"
+            "Songs (Medium voice) with piano."
           ],
           "titleDisplay": [
             "Lettre du Mexique : pour baryton et piano, 1942 / Rudolf Escher ; poème de Tristan Corbière."
           ],
-          "shelfMark": [
-            "JMG 83-395"
-          ],
           "uri": "b10000017",
-          "creatorLiteral": [
-            "Escher, Rudolf."
-          ],
-          "createdString": [
-            "1981"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Corbière, Tristan, 1845-1875."
-          ],
-          "dateStartYear": [
-            1981
           ],
           "placeOfPublication": [
             "Amsterdam :"
@@ -2549,7 +2220,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -2572,13 +2243,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2592,13 +2263,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000018",
         "_score": null,
         "_source": {
           "extent": [
             "68 p. ;"
+          ],
+          "note": [
+            "In Arabic.",
+            "Includes bibliographical references."
           ],
           "publisherLiteral": [
             "Dār al-Ṭalīʻah,"
@@ -2635,7 +2310,6 @@
           ],
           "identifier": [
             "urn:bnum:10000018",
-            "urn:lccCoarse:HQ1101-2030.7",
             "urn:lccn:78970449"
           ],
           "materialType": [
@@ -2649,6 +2323,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1975"
           ],
           "mediaType": [
             {
@@ -2723,7 +2400,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -2738,13 +2415,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000019",
         "_score": null,
         "_source": {
           "extent": [
             "15 p. of music ;"
+          ],
+          "note": [
+            "For piano.",
+            "Publisher's no.: M 18.487."
           ],
           "publisherLiteral": [
             "Möseler,"
@@ -2783,10 +2464,7 @@
             "Walzer und ein Epilog"
           ],
           "identifier": [
-            "urn:bnum:10000019",
-            "urn:lcc:M32.B46",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:10527266"
+            "urn:bnum:10000019"
           ],
           "materialType": [
             {
@@ -2799,6 +2477,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -2845,7 +2526,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -2868,13 +2549,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2888,7 +2569,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000020",
         "_score": null,
@@ -2897,11 +2578,7 @@
             "xvi, 172, 320 p."
           ],
           "note": [
-            {
-              "noteType": "Language Note",
-              "label": "In Tamil.",
-              "type": "bf:Note"
-            }
+            "In Tamil."
           ],
           "publisherLiteral": [
             "Aṇṇāmalaip Palkalaik Kaḻakam,"
@@ -2930,16 +2607,15 @@
           "createdString": [
             "1970"
           ],
+          "contributorLiteral": [
+            "Veḷḷaivāraṇaṉ, Ka."
+          ],
           "dateStartYear": [
             1970
           ],
           "identifier": [
             "urn:bnum:10000020",
-            "urn:hathi:006748739",
-            "urn:lcc:PL4754.T5823",
-            "urn:lccCoarse:PL4601-4797.95",
-            "urn:lccn:74914844",
-            "urn:oclc:19710383"
+            "urn:lccn:74914844"
           ],
           "materialType": [
             {
@@ -2952,6 +2628,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1970"
           ],
           "mediaType": [
             {
@@ -2998,7 +2677,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -3027,7 +2706,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3041,7 +2720,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000021",
         "_score": null,
@@ -3049,14 +2728,46 @@
           "extent": [
             "1 score (51 p.) ;"
           ],
-          "identifier": [
-            "urn:bnum:10000021",
-            "urn:lcc:M1045.W436",
-            "urn:lccCoarse:M1000-1075",
-            "urn:oclc:255508845"
+          "note": [
+            "Duration: 8:00.",
+            "For orchestra.",
+            "Pl. no.: NM 384."
           ],
           "publisherLiteral": [
             "Verlag Neue Musik,"
+          ],
+          "language": [
+            {
+              "id": "lang:zxx",
+              "label": "No linguistic content"
+            }
+          ],
+          "createdYear": [
+            1978
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Aurora : sinfonischer Prolog : Partitur"
+          ],
+          "shelfMark": [
+            "JMG 83-113"
+          ],
+          "creatorLiteral": [
+            "Weitzendorf, Heinz."
+          ],
+          "createdString": [
+            "1978"
+          ],
+          "contributorLiteral": [
+            "Weitzendorf, Heinz."
+          ],
+          "dateStartYear": [
+            1978
+          ],
+          "identifier": [
+            "urn:bnum:10000021"
           ],
           "materialType": [
             {
@@ -3070,11 +2781,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:zxx",
-              "label": "No linguistic content"
-            }
+          "dateString": [
+            "1978"
           ],
           "mediaType": [
             {
@@ -3082,42 +2790,18 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1978
-          ],
           "subjectLiteral": [
             "Orchestral music -- Scores."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Aurora : sinfonischer Prolog : Partitur"
           ],
           "titleDisplay": [
             "Aurora : sinfonischer Prolog : Partitur / Heinz Weitzendorf."
           ],
-          "shelfMark": [
-            "JMG 83-113"
-          ],
           "uri": "b10000021",
-          "creatorLiteral": [
-            "Weitzendorf, Heinz."
-          ],
-          "createdString": [
-            "1978"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Weitzendorf, Heinz."
-          ],
-          "dateStartYear": [
-            1978
           ],
           "placeOfPublication": [
             "Berlin :"
@@ -3142,7 +2826,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -3165,13 +2849,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3185,13 +2869,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000022",
         "_score": null,
         "_source": {
           "extent": [
             "19, 493 p."
+          ],
+          "note": [
+            "First published in 1942.",
+            "In Tamil."
           ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
@@ -3232,11 +2920,7 @@
           ],
           "identifier": [
             "urn:bnum:10000022",
-            "urn:hathi:003437356",
-            "urn:lcc:PL4754",
-            "urn:lccCoarse:PL4601-4797.95",
-            "urn:lccn:73913714",
-            "urn:oclc:20869373"
+            "urn:lccn:73913714"
           ],
           "materialType": [
             {
@@ -3249,6 +2933,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1970"
           ],
           "mediaType": [
             {
@@ -3295,7 +2982,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -3324,7 +3011,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3338,7 +3025,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000023",
         "_score": null,
@@ -3347,35 +3034,46 @@
             "1 miniature score (18 p.) ;"
           ],
           "note": [
-            {
-              "noteType": "General Note",
-              "label": "For band or wind ensemble.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "General Note",
-              "label": "Based on the composer's Veni creator spiritus.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "General Note",
-              "label": "Duration: ca. 6:00.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "General Note",
-              "label": "Publisher's no.: KC913.",
-              "type": "bf:Note"
-            }
-          ],
-          "identifier": [
-            "urn:bnum:10000023",
-            "urn:lcc:M1245.Z365",
-            "urn:lccCoarse:M1200-1270",
-            "urn:oclc:236088809"
+            "Based on the composer's Veni creator spiritus.",
+            "Duration: ca. 6:00.",
+            "For band or wind ensemble.",
+            "Publisher's no.: KC913."
           ],
           "publisherLiteral": [
             "Shawnee Press,"
+          ],
+          "language": [
+            {
+              "id": "lang:zxx",
+              "label": "No linguistic content"
+            }
+          ],
+          "createdYear": [
+            1979
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Musica sacra"
+          ],
+          "shelfMark": [
+            "JMF 83-38"
+          ],
+          "creatorLiteral": [
+            "Zaninelli, Luigi."
+          ],
+          "createdString": [
+            "1979"
+          ],
+          "contributorLiteral": [
+            "Zaninelli, Luigi."
+          ],
+          "dateStartYear": [
+            1979
+          ],
+          "identifier": [
+            "urn:bnum:10000023"
           ],
           "materialType": [
             {
@@ -3389,11 +3087,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:zxx",
-              "label": "No linguistic content"
-            }
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -3401,39 +3096,18 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1979
-          ],
           "subjectLiteral": [
             "Band music -- Scores."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Musica sacra"
           ],
           "titleDisplay": [
             "Musica sacra / Luigi Zaninelli."
           ],
-          "shelfMark": [
-            "JMF 83-38"
-          ],
           "uri": "b10000023",
-          "creatorLiteral": [
-            "Zaninelli, Luigi."
-          ],
-          "createdString": [
-            "1979"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "dateStartYear": [
-            1979
           ],
           "placeOfPublication": [
             "Delaware Water Gap, Pa. :"
@@ -3458,7 +3132,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -3481,13 +3155,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3501,13 +3175,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000024",
         "_score": null,
         "_source": {
           "extent": [
             "264 p. ;"
+          ],
+          "note": [
+            "In Arabic.",
+            "Includes bibliographies."
           ],
           "publisherLiteral": [
             "Dār Ibn Khaldūn,"
@@ -3544,10 +3222,7 @@
           ],
           "identifier": [
             "urn:bnum:10000024",
-            "urn:lcc:DS247.B28",
-            "urn:lccCoarse:DS247-248",
-            "urn:lccn:79971032",
-            "urn:oclc:21044585"
+            "urn:lccn:79971032"
           ],
           "materialType": [
             {
@@ -3560,6 +3235,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1976"
           ],
           "mediaType": [
             {
@@ -3651,7 +3329,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000025",
         "_score": null,
@@ -3699,10 +3377,7 @@
             "Sonatinas, piano"
           ],
           "identifier": [
-            "urn:bnum:10000025",
-            "urn:lcc:M23",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:15217154"
+            "urn:bnum:10000025"
           ],
           "materialType": [
             {
@@ -3715,6 +3390,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -3761,7 +3439,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -3784,13 +3462,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3804,13 +3482,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000026",
         "_score": null,
         "_source": {
           "extent": [
             "222 p. ;"
+          ],
+          "note": [
+            "Bibliography: p. 217-220.",
+            "In Arabic."
           ],
           "publisherLiteral": [
             "Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī,"
@@ -3847,7 +3529,6 @@
           ],
           "identifier": [
             "urn:bnum:10000026",
-            "urn:lccCoarse:HQ101-440.7",
             "urn:lccn:76960987"
           ],
           "materialType": [
@@ -3861,6 +3542,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1975"
           ],
           "mediaType": [
             {
@@ -3935,7 +3619,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -3950,7 +3634,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000027",
         "_score": null,
@@ -3998,10 +3682,7 @@
             "Kleine Sonaten, violin"
           ],
           "identifier": [
-            "urn:bnum:10000027",
-            "urn:lcc:M42.K63",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:10608897"
+            "urn:bnum:10000027"
           ],
           "materialType": [
             {
@@ -4014,6 +3695,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -4060,7 +3744,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -4083,13 +3767,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4103,13 +3787,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000028",
         "_score": null,
         "_source": {
           "extent": [
             "9, 3, 3, 324 p., [1] leaf of plates : ill. ;"
+          ],
+          "note": [
+            "\"Prastuta śodha-prabandha Rājasthāna Viśvavidyālaya, Jayapura kī Pī-eca.Ḍī-upāthi ke nimitta viśvavidyālaya anudāna āyoga kī risarca phailośipa ke antargata likhā gayā thā.\"",
+            "Bibliography: p. [321]-324.",
+            "In Hindi."
           ],
           "publisherLiteral": [
             "Rājasthāna Sāhitya Akādamī (Saṅgama),"
@@ -4146,11 +3835,7 @@
           ],
           "identifier": [
             "urn:bnum:10000028",
-            "urn:hathi:001002080",
-            "urn:lcc:PK2708.9S9",
-            "urn:lccCoarse:PK2701-2708.9",
-            "urn:lccn:75903689",
-            "urn:oclc:20705227"
+            "urn:lccn:75903689"
           ],
           "materialType": [
             {
@@ -4163,6 +3848,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1973"
           ],
           "mediaType": [
             {
@@ -4209,7 +3897,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -4232,13 +3920,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4252,13 +3940,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000029",
         "_score": null,
         "_source": {
           "extent": [
             "16 p. of music ;"
+          ],
+          "note": [
+            "Duration: 8:00.",
+            "Publisher's no.: 29589.",
+            "Publisher's no.: Wilhelm Hansen edition no. 4372."
           ],
           "publisherLiteral": [
             "W. Hansen ; Distribution, Magnamusic-Baton,"
@@ -4295,11 +3988,7 @@
           ],
           "identifier": [
             "urn:bnum:10000029",
-            "urn:hathi:003554995",
-            "urn:lcc:M11",
-            "urn:lccCoarse:M6-175.5",
-            "urn:lccn:82771131",
-            "urn:oclc:10280549"
+            "urn:lccn:82771131"
           ],
           "materialType": [
             {
@@ -4312,6 +4001,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "mediaType": [
             {
@@ -4358,7 +4050,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -4381,13 +4073,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4401,13 +4093,19 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000030",
         "_score": null,
         "_source": {
           "extent": [
             "21, 264 p. ;"
+          ],
+          "note": [
+            "\"Āryasamāja-śatābdī-saṃskaraṇam.\"",
+            "Authorship uncertain. Attributed variously to Āpiśali, Pānini and Śākaṭāyana.",
+            "In Sanskrit: introductory matter in Hindi or Sanskrit.",
+            "Includes indexes."
           ],
           "publisherLiteral": [
             "Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; prāptisthānam, Rāmalāla Kapūra Ṭrasṭa,"
@@ -4448,11 +4146,7 @@
           ],
           "identifier": [
             "urn:bnum:10000030",
-            "urn:hathi:000920920",
-            "urn:lcc:PK551",
-            "urn:lccCoarse:PK401-976",
-            "urn:lccn:75902275",
-            "urn:oclc:20300651"
+            "urn:lccn:75902275"
           ],
           "materialType": [
             {
@@ -4465,6 +4159,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1974"
           ],
           "mediaType": [
             {
@@ -4542,7 +4239,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -4557,7 +4254,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000031",
         "_score": null,
@@ -4602,10 +4299,7 @@
             "Miniaturen"
           ],
           "identifier": [
-            "urn:bnum:10000031",
-            "urn:lcc:M25",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:21380317"
+            "urn:bnum:10000031"
           ],
           "materialType": [
             {
@@ -4618,6 +4312,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -4664,7 +4361,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -4687,13 +4384,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4707,7 +4404,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000032",
         "_score": null,
@@ -4715,11 +4412,45 @@
           "extent": [
             "14, 405, 7 p. ;"
           ],
-          "identifier": [
-            "urn:bnum:10000032"
+          "note": [
+            "In Persian.",
+            "Includes bibliographical references and index."
           ],
           "publisherLiteral": [
             "Kitābfurūshī-i Khayyām,"
+          ],
+          "language": [
+            {
+              "id": "lang:per",
+              "label": "Persian"
+            }
+          ],
+          "createdYear": [
+            1972
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Buzurgān-i Jahrum : mushtamil bar sharḥ-i aḥvāl va ā̲sār-i rijāl va sukhanvarān va dānishmandān va khushnivīsān va pizishkān-i Jahrum va Khafr"
+          ],
+          "shelfMark": [
+            "*OMP 84-2007"
+          ],
+          "creatorLiteral": [
+            "Ishrāq, Muḥammad Karīm."
+          ],
+          "createdString": [
+            "1972"
+          ],
+          "contributorLiteral": [
+            "Ishrāq, Muḥammad Karīm."
+          ],
+          "dateStartYear": [
+            1972
+          ],
+          "identifier": [
+            "urn:bnum:10000032"
           ],
           "materialType": [
             {
@@ -4733,11 +4464,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
+          "dateString": [
+            "1972"
           ],
           "mediaType": [
             {
@@ -4745,43 +4473,19 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1972
-          ],
           "subjectLiteral": [
             "Jahrom (Iran : Province) -- Biography.",
             "Khafr (Iran) -- Biography."
           ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Buzurgān-i Jahrum : mushtamil bar sharḥ-i aḥvāl va ā̲sār-i rijāl va sukhanvarān va dānishmandān va khushnivīsān va pizishkān-i Jahrum va Khafr"
-          ],
           "titleDisplay": [
             "Buzurgān-i Jahrum : mushtamil bar sharḥ-i aḥvāl va ā̲sār-i rijāl va sukhanvarān va dānishmandān va khushnivīsān va pizishkān-i Jahrum va Khafr / taʼlīf-i Muḥammad Karīm Ishrāq."
           ],
-          "shelfMark": [
-            "*OMP 84-2007"
-          ],
           "uri": "b10000032",
-          "creatorLiteral": [
-            "Ishrāq, Muḥammad Karīm."
-          ],
-          "createdString": [
-            "1972"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Ishrāq, Muḥammad Karīm."
-          ],
-          "dateStartYear": [
-            1972
           ],
           "placeOfPublication": [
             "Tihrān :"
@@ -4834,7 +4538,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -4849,7 +4553,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000033",
         "_score": null,
@@ -4857,14 +4561,44 @@
           "extent": [
             "1 score (20 p.) ;"
           ],
-          "identifier": [
-            "urn:bnum:10000033",
-            "urn:lcc:M2113.N44",
-            "urn:lccCoarse:M2102-2114.8",
-            "urn:oclc:7495752"
+          "note": [
+            "For voice and organ."
           ],
           "publisherLiteral": [
             "Agápe,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1981
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Psalm settings"
+          ],
+          "shelfMark": [
+            "JMG 83-59"
+          ],
+          "creatorLiteral": [
+            "Nelhybel, Vaclav."
+          ],
+          "createdString": [
+            "1981"
+          ],
+          "contributorLiteral": [
+            "Nelhybel, Vaclav."
+          ],
+          "dateStartYear": [
+            1981
+          ],
+          "identifier": [
+            "urn:bnum:10000033"
           ],
           "materialType": [
             {
@@ -4878,11 +4612,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:eng",
-              "label": "English"
-            }
+          "dateString": [
+            "1981"
           ],
           "mediaType": [
             {
@@ -4890,43 +4621,19 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1981
-          ],
           "subjectLiteral": [
             "Psalms (Music)",
             "Sacred songs (Medium voice) with organ."
           ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Psalm settings"
-          ],
           "titleDisplay": [
             "Psalm settings / Vaclav Nelhybel."
           ],
-          "shelfMark": [
-            "JMG 83-59"
-          ],
           "uri": "b10000033",
-          "creatorLiteral": [
-            "Nelhybel, Vaclav."
-          ],
-          "createdString": [
-            "1981"
-          ],
           "numItems": [
             2
           ],
           "numAvailable": [
             2
-          ],
-          "contributorLiteral": [
-            "Nelhybel, Vaclav."
-          ],
-          "dateStartYear": [
-            1981
           ],
           "placeOfPublication": [
             "Carol Stream, Ill. :"
@@ -4941,49 +4648,6 @@
             {
               "owner": [
                 {
-                  "id": "orgs:1123",
-                  "label": "Music Division"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
-                }
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10942037",
-              "shelfMark": [
-                "JMG 83-59"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:7",
-                  "label": "printed music, non-circ"
-                },
-                {
-                  "id": "catalogItemType:7",
-                  "label": "printed music, non-circ"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:mym32",
-                  "label": "Performing Arts Research Collections - Music"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
                   "id": "orgs:1002",
                   "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
@@ -4994,7 +4658,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -5017,13 +4681,56 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1123",
+                  "label": "Music Division"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i10942037",
+              "shelfMark": [
+                "JMG 83-59"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                },
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mym32",
+                  "label": "Performing Arts Research Collections - Music"
                 }
               ]
             }
@@ -5037,13 +4744,19 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000034",
         "_score": null,
         "_source": {
           "extent": [
             "366 p. ;"
+          ],
+          "note": [
+            "Caption title: Brhatkathāślokasaṁgrahaḥ.",
+            "Colophon: Iti Śrībhaṭṭabudhasvāminā krte ślokasaṁgrahe Brhatkathāyāṁ--",
+            "Includes bibliographical references and index.",
+            "Text in Sanskrit; apparatus in English."
           ],
           "publisherLiteral": [
             "Prithivi Prakashan,"
@@ -5085,7 +4798,6 @@
           ],
           "identifier": [
             "urn:bnum:10000034",
-            "urn:lccCoarse:PK3791-3799",
             "urn:lccn:74903273"
           ],
           "materialType": [
@@ -5099,6 +4811,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1974"
           ],
           "mediaType": [
             {
@@ -5170,7 +4885,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -5185,13 +4900,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000035",
         "_score": null,
         "_source": {
           "extent": [
             "22 p. of music ;"
+          ],
+          "note": [
+            "Duration: ca. 12:00.",
+            "Suite."
           ],
           "publisherLiteral": [
             "Donemus,"
@@ -5230,10 +4949,7 @@
             "Serenade, piano"
           ],
           "identifier": [
-            "urn:bnum:10000035",
-            "urn:lcc:M24.K37",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:11040561"
+            "urn:bnum:10000035"
           ],
           "materialType": [
             {
@@ -5246,6 +4962,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "mediaType": [
             {
@@ -5292,7 +5011,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -5315,13 +5034,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             },
@@ -5335,11 +5054,11 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
-                true
+                false
               ],
               "uri": "i10942039",
               "shelfMark": [
@@ -5358,7 +5077,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
@@ -5378,13 +5097,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000036",
         "_score": null,
         "_source": {
           "extent": [
             "viii, 38 p. ;"
+          ],
+          "note": [
+            "Cover title.",
+            "In Sanskrit; prefatory matter in Sanskrit or Telegu."
           ],
           "publisherLiteral": [
             "s.n.],"
@@ -5421,7 +5144,6 @@
           ],
           "identifier": [
             "urn:bnum:10000036",
-            "urn:lccCoarse:PK3791-3799",
             "urn:lccn:75902755"
           ],
           "materialType": [
@@ -5435,6 +5157,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1972"
           ],
           "mediaType": [
             {
@@ -5481,7 +5206,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -5510,7 +5235,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -5524,13 +5249,16 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000037",
         "_score": null,
         "_source": {
           "extent": [
             "13a p. of music ;"
+          ],
+          "note": [
+            "Duration: ca. 15:00."
           ],
           "publisherLiteral": [
             "Donemus,"
@@ -5569,11 +5297,7 @@
             "Studies, guitar"
           ],
           "identifier": [
-            "urn:bnum:10000037",
-            "urn:hathi:009101026",
-            "urn:lcc:M127.H45",
-            "urn:lccCoarse:M6-175.5",
-            "urn:oclc:11052865"
+            "urn:bnum:10000037"
           ],
           "materialType": [
             {
@@ -5586,6 +5310,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "mediaType": [
             {
@@ -5632,7 +5359,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -5655,13 +5382,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -5675,7 +5402,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000038",
         "_score": null,
@@ -5683,13 +5410,42 @@
           "extent": [
             "4, 160 p. ;"
           ],
-          "identifier": [
-            "urn:bnum:10000038",
-            "urn:lccCoarse:PK3591-4485",
-            "urn:lccn:76900772"
+          "note": [
+            "In Sanskrit, with verse and prose translations in Hindi; prefatory matter in Hindi or Sanskrit."
           ],
           "publisherLiteral": [
             "Himācala Kalā-Saṃskrti-Bhāṣā Akādamī,"
+          ],
+          "language": [
+            {
+              "id": "lang:san",
+              "label": "Sanskrit"
+            }
+          ],
+          "createdYear": [
+            1975
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Rtambharā : Himācala ke ādhunika Saṃskrta kaviyoṃ kī kavitāyoṃ kā saṅkalana"
+          ],
+          "shelfMark": [
+            "*OKP 84-1932"
+          ],
+          "createdString": [
+            "1975"
+          ],
+          "contributorLiteral": [
+            "Prarthi, Lall Chand, 1916-"
+          ],
+          "dateStartYear": [
+            1975
+          ],
+          "identifier": [
+            "urn:bnum:10000038",
+            "urn:lccn:76900772"
           ],
           "materialType": [
             {
@@ -5703,11 +5459,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:san",
-              "label": "Sanskrit"
-            }
+          "dateString": [
+            "1975"
           ],
           "mediaType": [
             {
@@ -5715,28 +5468,13 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1975
-          ],
           "subjectLiteral": [
             "Sanskrit poetry -- India -- Himachal Pradesh."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Rtambharā : Himācala ke ādhunika Saṃskrta kaviyoṃ kī kavitāyoṃ kā saṅkalana"
           ],
           "titleDisplay": [
             "Rtambharā : Himācala ke ādhunika Saṃskrta kaviyoṃ kī kavitāyoṃ kā saṅkalana / mukhya sampādaka Lāla Canda Prārthī ; sampādaka maṇḍala, Manasā Rāma Śarmā 'Arūṇa'...[et al.]."
           ],
-          "shelfMark": [
-            "*OKP 84-1932"
-          ],
           "uri": "b10000038",
-          "createdString": [
-            "1975"
-          ],
           "lccClassification": [
             "PK3800.H52 R7"
           ],
@@ -5745,12 +5483,6 @@
           ],
           "numAvailable": [
             1
-          ],
-          "contributorLiteral": [
-            "Prarthi, Lall Chand, 1916-"
-          ],
-          "dateStartYear": [
-            1975
           ],
           "placeOfPublication": [
             "Śimalā :"
@@ -5775,7 +5507,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -5804,7 +5536,7 @@
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -5818,7 +5550,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000039",
         "_score": null,
@@ -5877,6 +5609,9 @@
               "label": "volume"
             }
           ],
+          "dateString": [
+            "1980"
+          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
@@ -5922,7 +5657,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -5945,13 +5680,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -5965,13 +5700,16 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000040",
         "_score": null,
         "_source": {
           "extent": [
             "146 p."
+          ],
+          "note": [
+            "In Tamil."
           ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
@@ -6011,11 +5749,7 @@
           ],
           "identifier": [
             "urn:bnum:10000040",
-            "urn:hathi:001007315",
-            "urn:lcc:PL4758.9.K223",
-            "urn:lccCoarse:PL4601-4797.95",
-            "urn:lccn:78913375",
-            "urn:oclc:20231816"
+            "urn:lccn:78913375"
           ],
           "materialType": [
             {
@@ -6028,6 +5762,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1970"
           ],
           "mediaType": [
             {
@@ -6074,7 +5811,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -6097,13 +5834,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6117,13 +5854,16 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000041",
         "_score": null,
         "_source": {
           "extent": [
             "1 score (23 p.) ;"
+          ],
+          "note": [
+            "For 5 clarinets."
           ],
           "publisherLiteral": [
             "Primavera,"
@@ -6160,11 +5900,7 @@
           ],
           "identifier": [
             "urn:bnum:10000041",
-            "urn:hathi:009097343",
-            "urn:lcc:M562.U83",
-            "urn:lccCoarse:M177-990",
-            "urn:lccn:81770739",
-            "urn:oclc:36360745"
+            "urn:lccn:81770739"
           ],
           "materialType": [
             {
@@ -6177,6 +5913,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "mediaType": [
             {
@@ -6223,7 +5962,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -6246,13 +5985,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6266,13 +6005,16 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000042",
         "_score": null,
         "_source": {
           "extent": [
             "2, 108 p."
+          ],
+          "note": [
+            "Hindi and Sanskrit: pref. in Hindi."
           ],
           "publisherLiteral": [
             "Devabhāṣā Prakāśana,"
@@ -6315,7 +6057,6 @@
           ],
           "identifier": [
             "urn:bnum:10000042",
-            "urn:lccCoarse:B108-708",
             "urn:lccn:72902870"
           ],
           "materialType": [
@@ -6329,6 +6070,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1971"
           ],
           "mediaType": [
             {
@@ -6379,7 +6123,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -6402,13 +6146,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "OFFSITE - Request in Advance"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6422,13 +6166,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000043",
         "_score": null,
         "_source": {
           "extent": [
             "1 miniature score (28 p.) ;"
+          ],
+          "note": [
+            "Duration: ca. 5:00-6:00.",
+            "For 2 flutes, 2 oboes, 2 clarinets, 2 horns, and 2 bassoons.",
+            "Pl. no.: D.15 579."
           ],
           "publisherLiteral": [
             "Verlag Doblinger,"
@@ -6467,10 +6216,7 @@
             1980
           ],
           "identifier": [
-            "urn:bnum:10000043",
-            "urn:lcc:M957.E76",
-            "urn:lccCoarse:M177-990",
-            "urn:oclc:10859049"
+            "urn:bnum:10000043"
           ],
           "materialType": [
             {
@@ -6483,6 +6229,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1980"
           ],
           "mediaType": [
             {
@@ -6569,13 +6318,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000044",
         "_score": null,
         "_source": {
           "extent": [
             "[99] p. ;"
+          ],
+          "note": [
+            "\"Reproduced from prints from blocks from Lhasa and Śel-dkar Dgaʼ-ldan-legs-bśad-gliṅ.\"",
+            "Cover title: Biographies of Khri-chen Byaṅ-chub-chos-ʼphel and Śel-dkar Bla-ma Saṅs-rgyas-bstan-ʼphel.",
+            "In Tibetan; pref. in English."
           ],
           "publisherLiteral": [
             "Ngawang Sopa,"
@@ -6612,10 +6366,7 @@
           ],
           "identifier": [
             "urn:bnum:10000044",
-            "urn:lcc:BQ942.Y36",
-            "urn:lccCoarse:BQ940-999",
-            "urn:lccn:77901316",
-            "urn:oclc:11300199"
+            "urn:lccn:77901316"
           ],
           "materialType": [
             {
@@ -6628,6 +6379,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1976"
           ],
           "mediaType": [
             {
@@ -6703,7 +6457,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -6718,7 +6472,7 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000045",
         "_score": null,
@@ -6761,7 +6515,6 @@
           ],
           "identifier": [
             "urn:bnum:10000045",
-            "urn:lccCoarse:M6-175.5",
             "urn:lccn:80770813"
           ],
           "materialType": [
@@ -6775,6 +6528,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -6821,7 +6577,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -6844,13 +6600,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6864,13 +6620,18 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000046",
         "_score": null,
         "_source": {
           "extent": [
             "[83] p. ;"
+          ],
+          "note": [
+            "\"Reproduced from tracing and manuscripts from the library of Mkhan-po Rin-chen by Trayang and Jamyang Samten.\"",
+            "Cover title: Kye rdor rnam bśad.",
+            "In Tibetan; pref. in English."
           ],
           "publisherLiteral": [
             "Trayang and Jamyang Samten,"
@@ -6907,7 +6668,6 @@
           ],
           "identifier": [
             "urn:bnum:10000046",
-            "urn:lccCoarse:BQ940-999",
             "urn:lccn:77900893"
           ],
           "materialType": [
@@ -6922,6 +6682,9 @@
               "label": "volume"
             }
           ],
+          "dateString": [
+            "1976"
+          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
@@ -6929,7 +6692,7 @@
             }
           ],
           "subjectLiteral": [
-            "Tripiṭaka. -- Commentaries."
+            "Sa-skya-pa lamas -- China -- Tibet -- Biography."
           ],
           "titleDisplay": [
             "Dpal Kye rdo rjeʼi phyi naṅ bskyed rim ñams len gnad kyi gsal byed sñan brgyud bstan pa rgyas paʼi ñin byed : a detailed exegesis of external and internal aspects of the visualization practice of the Hevajra tantra / by Sde-dge Yab-chen Tshe-dbaṅ-rdo-rje-rig-ʼdzin alias Byams-pa-kun-dgaʼ-bstan-paʼi-rgyal-mtshan. Rgyal ba Rdo rje ʼchan Kun dgaʼ bzaṅ poʼi rnam par thar pa legs bśad chu bo ʼdus paʼi rgya mtsho yon tan yid bźin nor buʼi byuṅ gnas : the life of the founder of the Ṅor-pa tradition, Ṅor-chen Kun-dgaʼ-bzaṅ-po / by Ṅor-chen Saṅs-rgyas-phun-tshogs."
@@ -6995,7 +6758,7 @@
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcma2",
+                  "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
               ]
@@ -7010,13 +6773,17 @@
         ]
       },
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10000047",
         "_score": null,
         "_source": {
           "extent": [
             "1 score (30 p.) ;"
+          ],
+          "note": [
+            "\"This work was written between 14 March and 1 May, 1979\"--verso t.p.",
+            "Duration: 15 min."
           ],
           "publisherLiteral": [
             "Redcliffe Edition,"
@@ -7056,10 +6823,7 @@
           ],
           "identifier": [
             "urn:bnum:10000047",
-            "urn:lcc:M1613.3",
-            "urn:lccCoarse:M1611-1624.8",
-            "urn:lccn:81770634",
-            "urn:oclc:496006696"
+            "urn:lccn:81770634"
           ],
           "materialType": [
             {
@@ -7072,6 +6836,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1979"
           ],
           "mediaType": [
             {
@@ -7121,7 +6888,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "ADV REQUEST"
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -7144,13 +6911,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rcpm2",
-                  "label": "OFFSITE - Request in Advance for use at Performing Arts"
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7161,6 +6928,774 @@
         },
         "sort": [
           "b10000047"
+        ]
+      },
+      {
+        "_index": "resources-2017-08-23",
+        "_type": "resource",
+        "_id": "b10000048",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "[150] p. ;"
+          ],
+          "note": [
+            "\"Reproduced from a MS. preserved at Pha-lo-ldiṅ Monastery in Bhutan.\"",
+            "In Tibetan; pref. in English."
+          ],
+          "publisherLiteral": [
+            "Kunzang Topgey,"
+          ],
+          "language": [
+            {
+              "id": "lang:tib",
+              "label": "Tibetan"
+            }
+          ],
+          "createdYear": [
+            1976
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Bkra śis Tshe riṅ mai sgrub skor sogs : a collection of texts outlining the rites of the Five Long Lived Sisters and other highly esoteric rituals."
+          ],
+          "shelfMark": [
+            "*OZ+ 82-2382"
+          ],
+          "createdString": [
+            "1976"
+          ],
+          "dateStartYear": [
+            1976
+          ],
+          "identifier": [
+            "urn:bnum:10000048",
+            "urn:lccn:76901012"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1976"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Buddhism -- Rituals."
+          ],
+          "titleDisplay": [
+            "Bkra śis Tshe riṅ mai sgrub skor sogs : a collection of texts outlining the rites of the Five Long Lived Sisters and other highly esoteric rituals."
+          ],
+          "uri": "b10000048",
+          "lccClassification": [
+            "BQ7695 .B55"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Thimphu :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433015080439"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10000013",
+              "shelfMark": [
+                "*OZ+ 82-2382"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                },
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "28 x 38 cm."
+          ]
+        },
+        "sort": [
+          "b10000048"
+        ]
+      },
+      {
+        "_index": "resources-2017-08-23",
+        "_type": "resource",
+        "_id": "b10000049",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "1 score (105 p.) ;"
+          ],
+          "note": [
+            "Duration: 25 min."
+          ],
+          "publisherLiteral": [
+            "Redcliffe Edition,"
+          ],
+          "language": [
+            {
+              "id": "lang:zxx",
+              "label": "No linguistic content"
+            }
+          ],
+          "createdYear": [
+            1976
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Symphony, op. 26 : full score"
+          ],
+          "shelfMark": [
+            "JMG 83-80"
+          ],
+          "creatorLiteral": [
+            "Routh, Francis."
+          ],
+          "createdString": [
+            "1976"
+          ],
+          "contributorLiteral": [
+            "Routh, Francis."
+          ],
+          "dateStartYear": [
+            1976
+          ],
+          "uniformTitle": [
+            "Symphony, op. 26"
+          ],
+          "identifier": [
+            "urn:bnum:10000049",
+            "urn:lccn:81770641"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:not",
+              "label": "Notated music"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1976"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Symphonies -- Scores."
+          ],
+          "titleDisplay": [
+            "Symphony, op. 26 : full score / Francis Routh."
+          ],
+          "uri": "b10000049",
+          "lccClassification": [
+            "M1001 .R8615 op.26"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "London (Arlington Park House, London W4 4HD) :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Symphony, op. 26"
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433032842241"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10942045",
+              "shelfMark": [
+                "JMG 83-80"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                },
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "33 cm."
+          ]
+        },
+        "sort": [
+          "b10000049"
+        ]
+      },
+      {
+        "_index": "resources-2017-08-23",
+        "_type": "resource",
+        "_id": "b10000050",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "[188] p. ;"
+          ],
+          "note": [
+            "\"Reproduced from a print from the early 16th century western Tibetan blocks by Urgyan Dorje.\"",
+            "In Tibetan; pref. in English."
+          ],
+          "publisherLiteral": [
+            "Urgyan Dorje,"
+          ],
+          "language": [
+            {
+              "id": "lang:tib",
+              "label": "Tibetan"
+            }
+          ],
+          "createdYear": [
+            1976
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The rnam thar and mgur ʼbum of ʼBaʼ-ra-ba, with his Sgrub pa ñams su blaṅ baʼi lag len dgos ʼdod ʼbyuṅ baʼi gter mdzod."
+          ],
+          "shelfMark": [
+            "*OZ+ 82-2381"
+          ],
+          "creatorLiteral": [
+            "ʼBaʼ-ra-ba Rgyal-mtshan-dpal-bzaṅ, 1310?-1391?"
+          ],
+          "createdString": [
+            "1976"
+          ],
+          "contributorLiteral": [
+            "ʼBaʼ-ra-ba Rgyal-mtshan-dpal-bzaṅ, 1310?-1391?"
+          ],
+          "dateStartYear": [
+            1976
+          ],
+          "identifier": [
+            "urn:bnum:10000050",
+            "urn:lccn:76901747"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1976"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Bkaʼ-brgyud-pa lamas -- China -- Tibet -- Biography.",
+            "Spiritual life -- Buddhism."
+          ],
+          "titleDisplay": [
+            "The rnam thar and mgur ʼbum of ʼBaʼ-ra-ba, with his Sgrub pa ñams su blaṅ baʼi lag len dgos ʼdod ʼbyuṅ baʼi gter mdzod."
+          ],
+          "uri": "b10000050",
+          "lccClassification": [
+            "BQ942.A187 A35 1976"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "New Delhi :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433015080421"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10000014",
+              "shelfMark": [
+                "*OZ+ 82-2381"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                },
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "28 x 37 cm."
+          ]
+        },
+        "sort": [
+          "b10000050"
+        ]
+      },
+      {
+        "_index": "resources-2017-08-23",
+        "_type": "resource",
+        "_id": "b10000051",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "score (64 p.) ;"
+          ],
+          "note": [
+            "For orchestra."
+          ],
+          "publisherLiteral": [
+            "Samfundet til udgivelse af dansk musik,"
+          ],
+          "language": [
+            {
+              "id": "lang:zxx",
+              "label": "No linguistic content"
+            }
+          ],
+          "createdYear": [
+            1977
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "2 symfoni : Den forsvundne : baseret på musikken til filmen \"Den forsvundne fuldmægtig\" op. 69c, 1972"
+          ],
+          "shelfMark": [
+            "JMG 83-75"
+          ],
+          "creatorLiteral": [
+            "Christiansen, Henning."
+          ],
+          "createdString": [
+            "1977"
+          ],
+          "seriesStatement": [
+            "[Publikation] - Samfundet til udgivelse af dansk musik : 3. serie, nr. 264"
+          ],
+          "contributorLiteral": [
+            "Christiansen, Henning."
+          ],
+          "dateStartYear": [
+            1977
+          ],
+          "uniformTitle": [
+            "Symphony, no. 2, op. 69c"
+          ],
+          "identifier": [
+            "urn:bnum:10000051",
+            "urn:lccn:78770955"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:not",
+              "label": "Notated music"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1977"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Symphonies -- Scores."
+          ],
+          "titleDisplay": [
+            "2 symfoni : Den forsvundne : baseret på musikken til filmen \"Den forsvundne fuldmægtig\" op. 69c, 1972 / Henning Christiansen."
+          ],
+          "uri": "b10000051",
+          "lccClassification": [
+            "M1001 .C533 op.69c"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "København :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Symphony, no. 2, op. 69c"
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433032842191"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10942046",
+              "shelfMark": [
+                "JMG 83-75"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                },
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "37 cm."
+          ]
+        },
+        "sort": [
+          "b10000051"
+        ]
+      },
+      {
+        "_index": "resources-2017-08-23",
+        "_type": "resource",
+        "_id": "b10000052",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "[247] p. ;"
+          ],
+          "note": [
+            "Cover title: Gu ruʼi rnam thar ṅo tshar phun tshogs rgya mtsho.",
+            "In Tibetan; pref. in English."
+          ],
+          "publisherLiteral": [
+            "Sherab Gyaltshen Lama,"
+          ],
+          "language": [
+            {
+              "id": "lang:tib",
+              "label": "Tibetan"
+            }
+          ],
+          "createdYear": [
+            1976
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Rig ʼdzin grub paʼi dbaṅ phyug chen po Padma-ʼbyuṅ-gnas kyi rnam par thar pa ṅo mtshar phun sum tshogs paʼi rgya mtsho : a detailed account of the life of Guru Rimpoche Padmasambhava Miraculously Born"
+          ],
+          "shelfMark": [
+            "*OZ+ 82-2383"
+          ],
+          "creatorLiteral": [
+            "Bkra-śis-stobs-rgyal, Byaṅ-bdag."
+          ],
+          "createdString": [
+            "1976"
+          ],
+          "contributorLiteral": [
+            "Bkra-śis-stobs-rgyal, Byaṅ-bdag."
+          ],
+          "dateStartYear": [
+            1976
+          ],
+          "identifier": [
+            "urn:bnum:10000052",
+            "urn:lccn:76900205"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1976"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Lamas -- China -- Tibet -- Biography."
+          ],
+          "titleDisplay": [
+            "Rig ʼdzin grub paʼi dbaṅ phyug chen po Padma-ʼbyuṅ-gnas kyi rnam par thar pa ṅo mtshar phun sum tshogs paʼi rgya mtsho : a detailed account of the life of Guru Rimpoche Padmasambhava Miraculously Born / by Byaṅ-bdag Bkra-śis-stobs-rgyal."
+          ],
+          "uri": "b10000052",
+          "lccClassification": [
+            "BQ7950.P327 B55 1976"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Gangtog :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433015080447"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10000015",
+              "shelfMark": [
+                "*OZ+ 82-2383"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                },
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "27 x 37 cm."
+          ]
+        },
+        "sort": [
+          "b10000052"
         ]
       }
     ]

@@ -1,5 +1,5 @@
 {
-  "took": 254,
+  "took": 214,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,27 +7,60 @@
     "failed": 0
   },
   "hits": {
-    "total": 14648475,
+    "total": 12748727,
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
-        "_id": "b10000097",
+        "_id": "b10000103",
         "_score": null,
         "_source": {
           "extent": [
-            "218 p. ;"
+            "11, 602 p.: port.;"
           ],
-          "identifier": [
-            "urn:bnum:10000097",
-            "urn:lcc:PJ7842.H3245",
-            "urn:lccCoarse:PJ7695.8-7976",
-            "urn:lccn:75960362",
-            "urn:oclc:19480149"
+          "note": [
+            "In Arabic."
           ],
           "publisherLiteral": [
             "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ,"
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "createdYear": [
+            1967
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
+          "shelfMark": [
+            "*OFA 82-5137"
+          ],
+          "creatorLiteral": [
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979."
+          ],
+          "createdString": [
+            "1967"
+          ],
+          "seriesStatement": [
+            "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1"
+          ],
+          "contributorLiteral": [
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979."
+          ],
+          "dateStartYear": [
+            1967
+          ],
+          "identifier": [
+            "urn:bnum:10000103",
+            "urn:lccn:75960366"
           ],
           "materialType": [
             {
@@ -41,11 +74,8 @@
               "label": "volume"
             }
           ],
-          "language": [
-            {
-              "id": "lang:ara",
-              "label": "Arabic"
-            }
+          "dateString": [
+            "1967"
           ],
           "mediaType": [
             {
@@ -53,30 +83,12 @@
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1974
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Anti Laylāy"
-          ],
           "titleDisplay": [
-            "Anti Laylāy / Ṣāliḥ Kharfī."
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
           ],
-          "shelfMark": [
-            "*OFA 82-5142"
-          ],
-          "uri": "b10000097",
-          "creatorLiteral": [
-            "Kharfī, Ṣāliḥ."
-          ],
-          "createdString": [
-            "1974"
-          ],
+          "uri": "b10000103",
           "lccClassification": [
-            "PJ7842.H3245 A83"
+            "PJ7842.H2937 A17 1967"
           ],
           "numItems": [
             1
@@ -84,14 +96,8 @@
           "numAvailable": [
             1
           ],
-          "contributorLiteral": [
-            "Kharfī, Ṣāliḥ."
-          ],
-          "dateStartYear": [
-            1974
-          ],
           "placeOfPublication": [
-            "al-Jazāʼir :"
+            "[al-Jazāʼir]:"
           ],
           "issuance": [
             {
@@ -108,7 +114,7 @@
                 }
               ],
               "identifier": [
-                "urn:barcode:33433002000689"
+                "urn:barcode:33433002000671"
               ],
               "accessMessage": [
                 {
@@ -119,9 +125,9 @@
               "requestable": [
                 true
               ],
-              "uri": "i10000039",
+              "uri": "i10000042",
               "shelfMark": [
-                "*OFA 82-5142"
+                "*OFA 82-5137"
               ],
               "catalogItemType": [
                 {
@@ -148,11 +154,11 @@
             }
           ],
           "dimensions": [
-            "22 cm."
+            "24 cm."
           ]
         },
         "sort": [
-          "b10000097"
+          "b10000103"
         ]
       }
     ]

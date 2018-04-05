@@ -8,16 +8,19 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 14.99555,
+    "max_score": 15.040254,
     "hits": [
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10022734",
-        "_score": 14.99555,
+        "_score": 15.040254,
         "_source": {
           "extent": [
             "xiv, 381 p., [16] leaves of plates : ill. ;"
+          ],
+          "note": [
+            "Includes bibliographical references and index."
           ],
           "publisherLiteral": [
             "Knopf : distributed by Random House,"
@@ -54,12 +57,8 @@
           ],
           "identifier": [
             "urn:bnum:10022734",
-            "urn:hathi:001298568",
             "urn:isbn:0394495721 :",
-            "urn:lcc:NX511.N4",
-            "urn:lccCoarse:NX440-632",
-            "urn:lccn:80002704",
-            "urn:oclc:22838056"
+            "urn:lccn:80002704"
           ],
           "materialType": [
             {
@@ -72,6 +71,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1981"
           ],
           "mediaType": [
             {
@@ -120,15 +122,15 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "USE IN LIBRARY"
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
-                true
+                false
               ],
               "uri": "i10010902",
               "shelfMark": [
-                "IEC 81-1139 ---"
+                "IEC 81-1139"
               ],
               "catalogItemType": [
                 {
@@ -143,13 +145,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:mag82",
-                  "label": "SASB M1 - Milstein Division Rm 121"
+                  "label": "Schwarzman Building - Milstein Division Room 121"
                 }
               ]
             },
@@ -166,7 +168,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:-",
-                  "label": "NO RESTRICTIONS"
+                  "label": "No restrictions"
                 }
               ],
               "requestable": [
@@ -220,16 +222,16 @@
               ],
               "uri": "i10010904",
               "shelfMark": [
-                "Sc E 96-780 ---"
+                "Sc E 96-780"
               ],
               "catalogItemType": [
                 {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [

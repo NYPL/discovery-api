@@ -1,5 +1,5 @@
 {
-  "took": 3,
+  "took": 4,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,46 +8,46 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 14.995556,
+    "max_score": 14.237371,
     "hits": [
       {
-        "_index": "resources-2018-03-22",
+        "_index": "resources-2017-08-23",
         "_type": "resource",
         "_id": "b10001936",
-        "_score": 14.995556,
+        "_score": 14.237371,
         "_source": {
           "extent": [
             "400 p. ;"
           ],
-          "note": [
+          "publisherLiteral": [
+            "Tparan Hovhannu Tēr-Abrahamian,"
+          ],
+          "noteV2": [
             {
-              "noteType": "General Note",
+              "noteType": "Note",
               "label": "Publication date from cover.",
               "type": "bf:Note"
             },
             {
-              "noteType": "Bibliography, etc. Note",
+              "noteType": "Bibliography",
               "label": "Includes bibliographical references.",
               "type": "bf:Note"
             },
             {
-              "noteType": "Study Program Information Note",
+              "noteType": "Additional Formats",
               "label": "Also available on microform;",
               "type": "bf:Note"
             },
             {
-              "noteType": "Language Note",
+              "noteType": "Language",
               "label": "In Armenian.",
               "type": "bf:Note"
             },
             {
-              "noteType": "Action Note",
+              "noteType": "Processing Action",
               "label": "Microfilmed;",
               "type": "bf:Note"
             }
-          ],
-          "publisherLiteral": [
-            "Tparan Hovhannu Tēr-Abrahamian,"
           ],
           "language": [
             {
@@ -73,11 +73,11 @@
           "createdString": [
             "1891"
           ],
-          "contributorLiteral": [
-            "Shermazanian, Galust."
-          ],
           "dateStartYear": [
             1891
+          ],
+          "publicationStatement": [
+            "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
           ],
           "identifier": [
             "urn:bnum:10001936"
@@ -93,6 +93,9 @@
               "id": "carriertypes:nc",
               "label": "volume"
             }
+          ],
+          "dateString": [
+            "1891"
           ],
           "mediaType": [
             {
@@ -171,10 +174,6 @@
             },
             {
               "electronicLocator": [
-                {
-                  "label": "Full text available via HathiTrust",
-                  "url": "http://hdl.handle.net/2027/nyp.33433001892276"
-                },
                 {
                   "label": "Full text available via HathiTrust",
                   "url": "http://hdl.handle.net/2027/nyp.33433001892276"

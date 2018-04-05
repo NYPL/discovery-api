@@ -167,13 +167,15 @@ describe('Test Resources responses', function () {
         // At writing the fixture has both `identifier` and `identifierV2` fields,
         // so it will choose the latter (which are stored as entities)
         // Here we confirm the entities are converted to urn:
-        assert(Array.isArray(doc.identifier))
-        assert(doc.identifier.indexOf('urn:bnum:10011374') >= 0)
-        assert(doc.identifier.indexOf('urn:lccn:35038534') >= 0)
+        expect(doc.identifier).to.be.a('array')
+        expect(doc.identifier).to.include.members(['urn:bnum:10011374', 'urn:lccn:35038534'])
 
         // Also check an item's identifiers:
-        assert(doc.items[0].identifier.indexOf('urn:callnumber:*AY (Hone, W. Table book) v. 1') >= 0)
-        assert(doc.items[0].identifier.indexOf('urn:barcode:33433067332548') >= 0)
+        expect(doc.items).to.be.a('array')
+        expect(doc.items[0]).to.be.a('object')
+        expect(doc.items[0].identifier).to.be.a('array')
+
+        expect(doc.items[0].identifier).to.include.members(['urn:callnumber:*AY (Hone, W. Table book) v. 1', 'urn:barcode:33433067332548'])
 
         done()
       })
@@ -183,13 +185,12 @@ describe('Test Resources responses', function () {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
         if (err) throw err
 
-        assert.equal(200, response.statusCode)
+        expect(response.statusCode).to.equal(200)
 
         var doc = JSON.parse(body)
 
-        assert(Array.isArray(doc.identifier))
-        assert(doc.identifier.indexOf('urn:bnum:10022950') >= 0)
-        assert(doc.identifier.indexOf('urn:oclc:1513312') >= 0)
+        expect(doc.identifier).to.be.a('array')
+        expect(doc.identifier).to.include.members(['urn:bnum:10022950', 'urn:oclc:1513312'])
 
         done()
       })
@@ -224,17 +225,17 @@ describe('Test Resources responses', function () {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10001936`, function (err, response, body) {
         if (err) throw err
 
-        assert.equal(200, response.statusCode)
+        expect(response.statusCode).to.equal(200)
 
         var doc = JSON.parse(body)
 
-        assert(doc.note)
-        assert.equal(doc.note.length, 5)
+        expect(doc.note).to.be.a('array')
+        expect(doc.note).to.have.lengthOf(5)
 
-        assert(doc.note[2])
-        assert.equal(doc.note[2]['@type'], 'bf:Note')
-        assert.equal(doc.note[2].noteType, 'Study Program Information Note')
-        assert.equal(doc.note[2].prefLabel, 'Also available on microform;')
+        expect(doc.note[2]).to.be.a('object')
+        expect(doc.note[2]['@type']).to.equal('bf:Note')
+        expect(doc.note[2].noteType).to.equal('Additional Formats')
+        expect(doc.note[2].prefLabel).to.equal('Also available on microform;')
 
         done()
       })

@@ -42,22 +42,25 @@ function esClientSearchViaFixtures (properties) {
 function writeEsResponseToFixture (properties, resp) {
   let path = fixturePath(properties)
   return new Promise((resolve, reject) => {
-    // Check that fixture exists:
+    fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
+      if (err) return reject(err)
+
+      return resolve()
+    })
+  })
+}
+
+/**
+ * Determine if the fixture for the given query exists on disk, async.
+ *
+ * @returns {Promise} A promise that resolves a boolean: true if fixture exists, false otherwise.
+ */
+function fixtureExists (properties) {
+  let path = fixturePath(properties)
+  return new Promise((resolve, reject) => {
     fs.access(path, (err, fd) => {
       const exists = !err
-      const overwriteExisting = process.env.UPDATE_FIXTURES === 'all'
-
-      if (!exists || overwriteExisting) {
-        console.log(`Writing ${path} because ${exists ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
-        fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
-          if (err) return reject(err)
-
-          console.log('Writing updated fixture to', path)
-          return resolve()
-        })
-      } else {
-        resolve()
-      }
+      return resolve(exists)
     })
   })
 }
@@ -78,11 +81,19 @@ function enableFixtures () {
     const originalEsSearch = app.esClient.search.bind(app.esClient)
 
     sinon.stub(app.esClient, 'search').callsFake(function (properties) {
-      return originalEsSearch(properties)
-        // Now write the response to local fixture:
-        .then((resp) => writeEsResponseToFixture(properties, resp))
-        // And for good measure, let's immediately rely on the local fixture:
-        .then(() => esClientSearchViaFixtures(properties))
+      return fixtureExists(properties).then((exists) => {
+        // If it doesn't exist, or we're updating everything, update it:
+        if (process.env.UPDATE_FIXTURES === 'all' || !exists) {
+          console.log(`Writing ${fixturePath(properties)} because ${process.env.UPDATE_FIXTURES === 'all' ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
+          return originalEsSearch(properties)
+            // Now write the response to local fixture:
+            .then((resp) => writeEsResponseToFixture(properties, resp))
+            // And for good measure, let's immediately rely on the local fixture:
+            .then(() => esClientSearchViaFixtures(properties))
+        } else {
+          return esClientSearchViaFixtures(properties)
+        }
+      })
     })
   } else {
     // Any internal call to app.esClient.search should load a local fixture:

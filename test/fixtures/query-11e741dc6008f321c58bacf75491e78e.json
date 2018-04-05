@@ -1,5 +1,5 @@
 {
-  "took": 3,
+  "took": 28,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,18 +8,21 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 1.7917595,
+    "max_score": 14.363385,
     "hits": [
       {
-        "_index": "resources-test-index",
+        "_index": "resources-2017-08-25",
         "_type": "resource",
         "_id": "b10011374",
-        "_score": 1.7917595,
+        "_score": 14.363385,
         "_source": {
           "extent": [
             "2 v. illus."
           ],
-          "note": [
+          "publisherLiteral": [
+            "Published for W. Hone, by Hunt and Clarke,"
+          ],
+          "noteV2": [
             {
               "noteType": "Note",
               "label": "Vol. 1 has added t.p.: The Table book ... Every Saturday.",
@@ -35,9 +38,6 @@
               "label": "Library's copy lacks added t.p.",
               "type": "bf:Note"
             }
-          ],
-          "publisherLiteral": [
-            "Published for W. Hone, by Hunt and Clarke,"
           ],
           "language": [
             {
@@ -84,18 +84,28 @@
             {
               "type": "bf:Lccn",
               "value": "35038534"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "10310322"
             }
+          ],
+          "idOclc": [
+            "10310322"
           ],
           "dateEndYear": [
             1828
           ],
-          "updatedAt": 1522096603808,
+          "updatedAt": 1522957303743,
           "publicationStatement": [
             "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
           ],
           "identifier": [
             "urn:bnum:10011374",
-            "urn:lccn:35038534"
+            "urn:lccn:35038534",
+            "urn:oclc:10310322",
+            "urn:lcc:DA110",
+            "urn:lccCoarse:DA90-125"
           ],
           "materialType": [
             {
@@ -219,7 +229,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
-                  "label": "Request in advance"
+                  "label": "ADV REQUEST"
                 }
               ],
               "idBarcode": [
@@ -241,13 +251,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
                 {
                   "id": "loc:rc2ma",
-                  "label": "Offsite"
+                  "label": "OFFSITE - Request in Advance"
                 }
               ]
             },
@@ -317,7 +327,7 @@
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
-                  "label": "Use in library"
+                  "label": "USE IN LIBRARY"
                 }
               ],
               "idBarcode": [
@@ -345,12 +355,28 @@
               "holdingLocation": [
                 {
                   "id": "loc:mal92",
-                  "label": "Schwarzman Building M2 - General Research Room 315"
+                  "label": "SASB M2 - General Research Room 315"
                 }
               ]
             },
             {
               "electronicLocator": [
+                {
+                  "label": "Full text available via HathiTrust--v. 1",
+                  "url": "http://hdl.handle.net/2027/nyp.33433057532081"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 2",
+                  "url": "http://hdl.handle.net/2027/nyp.33433057532339"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 1",
+                  "url": "http://hdl.handle.net/2027/nyp.33433067332548"
+                },
+                {
+                  "label": "Full text available via HathiTrust--v. 2",
+                  "url": "http://hdl.handle.net/2027/nyp.33433067332555"
+                },
                 {
                   "label": "Full text available via HathiTrust--v. 1",
                   "url": "http://hdl.handle.net/2027/nyp.33433057532081"
