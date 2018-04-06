@@ -56,11 +56,7 @@ function mapDelayed (items, delay, cb, mappedItems = []) {
  * Like setTimeout, but returns a Promise
  */
 function timeoutPromise (delay) {
-  console.log('waiting ' + delay)
   return new Promise((resolve, reject) => setTimeout(resolve, delay))
-    .then(() => {
-      console.log('done waiting ' + delay)
-    })
 }
 
 function resultsInFirstOnly (r1, r2, count = 20) {
