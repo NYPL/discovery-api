@@ -3,6 +3,100 @@ const assert = require('assert')
 
 const fixtures = require('./fixtures')
 
+describe('Resources query', function () {
+  let resourcesPrivMethods = {}
+
+  before(function () {
+    require('../lib/resources')({}, resourcesPrivMethods)
+  })
+
+  describe('parseSearchParams', function () {
+    it('parses params, sets defaults', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ })
+      expect(params).to.be.a('object')
+      expect(params.q).to.equal(undefined)
+      expect(params.search_scope).to.equal('all')
+      expect(params.page).to.equal(1)
+      expect(params.per_page).to.equal(50)
+      expect(params.sort).to.equal(undefined)
+      expect(params.filters).to.equal(undefined)
+    })
+  })
+
+  describe('escapeQuery', function () {
+    it('should escape specials', function () {
+      expect(resourcesPrivMethods.escapeQuery('? ^ *')).to.equal('\\\\? \\\\^ \\\\*')
+    })
+
+    it('should escape unrecognized field indicators', function () {
+      expect(resourcesPrivMethods.escapeQuery('fladeedle:gorf')).to.equal('fladeedle\\:gorf')
+    })
+
+    it('should not escape recognized field indicators', function () {
+      expect(resourcesPrivMethods.escapeQuery('title:gorf')).to.equal('title:gorf')
+    })
+
+    it('should escape a single forward slash', function () {
+      expect(resourcesPrivMethods.escapeQuery('/')).to.equal('\\/')
+    })
+
+    it('should escape floating colon', function () {
+      // Make sure colons floating in whitespace are escaped:
+      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')
+    })
+
+    it('should escape colons in hyphenated phrases', function () {
+      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ / Avtor-sostavitelʹ: B.A. Konikov.')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ \\/ Avtor-sostavitelʹ\\: B.A. Konikov.')
+    })
+  })
+
+  describe('buildElasticQuery', function () {
+    it('uses "query string query" if subjectLiteral: used', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:potatoes' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('subjectLiteral:potatoes')
+    })
+
+    it('uses "query string query" if subjectLiteral: quoted phrase used', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:"hot potatoes"' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('subjectLiteral:\"hot potatoes\"')
+    })
+
+    it('escapes colon if field not recognized', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'fladeedle:"hot potatoes"' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('fladeedle\\:\"hot potatoes\"')
+    })
+
+    it('uses "query string query" if plain keyword query used', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: 'potatoes' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0]).to.be.a('object')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.query).to.equal('potatoes')
+    })
+  })
+})
+
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
 
@@ -61,6 +155,46 @@ describe('Test Resources responses', function () {
         done()
       })
     })
+
+    it('extracts identifiers in urn style if indexed as entity', function (done) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        // At writing the fixture has both `identifier` and `identifierV2` fields,
+        // so it will choose the latter (which are stored as entities)
+        // Here we confirm the entities are converted to urn:
+        expect(doc.identifier).to.be.a('array')
+        expect(doc.identifier).to.include.members(['urn:bnum:10011374', 'urn:lccn:35038534'])
+
+        // Also check an item's identifiers:
+        expect(doc.items).to.be.a('array')
+        expect(doc.items[0]).to.be.a('object')
+        expect(doc.items[0].identifier).to.be.a('array')
+
+        expect(doc.items[0].identifier).to.include.members(['urn:callnumber:*AY (Hone, W. Table book) v. 1', 'urn:barcode:33433067332548'])
+
+        done()
+      })
+    })
+
+    it('extracts identifiers in urn style if indexed in urn style', function (done) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10022950`, function (err, response, body) {
+        if (err) throw err
+
+        expect(response.statusCode).to.equal(200)
+
+        var doc = JSON.parse(body)
+
+        expect(doc.identifier).to.be.a('array')
+        expect(doc.identifier).to.include.members(['urn:bnum:10022950', 'urn:oclc:1513312'])
+
+        done()
+      })
+    })
   })
 
   describe('GET resources fields', function () {
@@ -91,17 +225,17 @@ describe('Test Resources responses', function () {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10001936`, function (err, response, body) {
         if (err) throw err
 
-        assert.equal(200, response.statusCode)
+        expect(response.statusCode).to.equal(200)
 
         var doc = JSON.parse(body)
 
-        assert(doc.note)
-        assert.equal(doc.note.length, 5)
+        expect(doc.note).to.be.a('array')
+        expect(doc.note).to.have.lengthOf(5)
 
-        assert(doc.note[2])
-        assert.equal(doc.note[2]['@type'], 'bf:Note')
-        assert.equal(doc.note[2].noteType, 'Study Program Information Note')
-        assert.equal(doc.note[2].prefLabel, 'Also available on microform;')
+        expect(doc.note[2]).to.be.a('object')
+        expect(doc.note[2]['@type']).to.equal('bf:Note')
+        expect(doc.note[2].noteType).to.equal('Additional Formats')
+        expect(doc.note[2].prefLabel).to.equal('Also available on microform;')
 
         done()
       })
