@@ -1,5 +1,5 @@
 {
-  "took": 120,
+  "took": 43,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,11 +7,11 @@
     "failed": 0
   },
   "hits": {
-    "total": 283236,
+    "total": 668741,
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000432",
         "_score": null,
@@ -20,8 +20,16 @@
             "94 p. ;"
           ],
           "note": [
-            "In Persian.",
-            "Poems."
+            {
+              "noteType": "Note",
+              "label": "Poems.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Intishārāt-i Amīr Kabīr,"
@@ -53,14 +61,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Yūshīj, Nīmā."
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMO 84-1527"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000432"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1525296775911,
+          "publicationStatement": [
+            "Tihrān : Intishārāt-i Amīr Kabīr, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10000432"
@@ -105,6 +124,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Khānah-ʼi Sarīvaylī."
+          ],
           "items": [
             {
               "owner": [
@@ -116,11 +138,24 @@
               "identifier": [
                 "urn:barcode:33433001898497"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMO 84-1527"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433001898497"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433001898497"
               ],
               "requestable": [
                 true
@@ -133,16 +168,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -162,7 +193,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001333",
         "_score": null,
@@ -171,8 +202,16 @@
             "v. : ill., folded maps ;"
           ],
           "note": [
-            "In Arabic.",
-            "Includes bibliographies."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "al-Jāmiʻah al-Lībīyah, Kullīyat al-Ādāb,"
@@ -204,14 +243,32 @@
           "createdString": [
             "1973"
           ],
-          "contributorLiteral": [
-            "Jawdah, Jawdah Ḥasanayn."
+          "idLccn": [
+            "75960642"
           ],
           "dateStartYear": [
             1973
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFO 82-5116"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001333"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75960642"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296779410,
+          "publicationStatement": [
+            "[Binghāzī] : al-Jāmiʻah al-Lībīyah, Kullīyat al-Ādāb, 1973-"
           ],
           "identifier": [
             "urn:bnum:10001333",
@@ -274,11 +331,24 @@
               "identifier": [
                 "urn:barcode:33433005586189"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFO 82-5116|zal-Juzʼān 1-2. v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433005586189"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433005586189"
               ],
               "requestable": [
                 true
@@ -291,16 +361,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -320,11 +386,24 @@
               "identifier": [
                 "urn:barcode:33433005586197"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFO 82-5116|zal-Juzʼān 1-2. v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433005586197"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433005586197"
               ],
               "requestable": [
                 true
@@ -337,16 +416,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -366,7 +441,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001657",
         "_score": null,
@@ -375,10 +450,21 @@
             "v. : ill., maps ;"
           ],
           "note": [
-            "Bar asās-i natāyij-i sarshumārī-i ʻumūmī-i Ābānʼmāh-i 1345.",
-            "English and Persian.",
-            "Jild-i 2. Ustān-i Āẕarbāyjān-i Gharbī--Jild-i 3-5. Ustān-i Khurāsān--Jild-1 6. Ustān-i Kurdistān--Jild-i 9. Farmāndārī-i Kull-i Luristān--Jild-i 10. Farmāndārīhā-yi Kull-i Banādir va Jazāʼir-i Khalīj-i Fārs va Daryā-yi Ummān--Jild-i 11. Ustān-i Māzandarān--Jild-i 14. Ustān-i Markazī--Jild-i 15. Ustān-i Gilān--Jild-i 17. Farmāndārī-i Kull-i Simnān.",
-            "Title on p. [4] of cover: Village gazetteer."
+            {
+              "noteType": "Note",
+              "label": "Title on p. [4] of cover: Village gazetteer.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Bar asās-i natāyij-i sarshumārī-i ʻumūmī-i Ābānʼmāh-i 1345.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "English and Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Markaz-i Āmār-i Īrān,"
@@ -410,14 +496,32 @@
           "createdString": [
             "1969"
           ],
-          "contributorLiteral": [
-            "Markaz-i Āmār-i Īrān."
+          "idLccn": [
+            "81464564"
           ],
           "dateStartYear": [
             1969
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Map Div. 84-146"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001657"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "81464564"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471316899,
+          "publicationStatement": [
+            "Tihrān : Markaz-i Āmār-i Īrān, 1347- [1969-]"
           ],
           "identifier": [
             "urn:bnum:10001657",
@@ -445,7 +549,8 @@
             }
           ],
           "subjectLiteral": [
-            "Iran -- Gazetteers."
+            "Iran -- Gazetteers.",
+            "Villages -- Iran -- Statistics."
           ],
           "titleDisplay": [
             "Farhang-i ābādīhā-yi kishvar."
@@ -469,6 +574,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Village gazetteer."
+          ],
           "items": [
             {
               "owner": [
@@ -480,11 +588,24 @@
               "identifier": [
                 "urn:barcode:33433057030771"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030771"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030771"
               ],
               "requestable": [
                 true
@@ -494,10 +615,6 @@
                 "Map Div. 84-146 v. 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -526,11 +643,24 @@
               "identifier": [
                 "urn:barcode:33433057030789"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030789"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030789"
               ],
               "requestable": [
                 true
@@ -540,10 +670,6 @@
                 "Map Div. 84-146 v. 2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -572,11 +698,24 @@
               "identifier": [
                 "urn:barcode:33433057030797"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030797"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030797"
               ],
               "requestable": [
                 true
@@ -586,10 +725,6 @@
                 "Map Div. 84-146 v. 3"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -618,11 +753,24 @@
               "identifier": [
                 "urn:barcode:33433057030805"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030805"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030805"
               ],
               "requestable": [
                 true
@@ -632,10 +780,6 @@
                 "Map Div. 84-146 v. 4"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -664,11 +808,24 @@
               "identifier": [
                 "urn:barcode:33433057030813"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030813"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030813"
               ],
               "requestable": [
                 true
@@ -678,10 +835,6 @@
                 "Map Div. 84-146 v. 5"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -710,11 +863,24 @@
               "identifier": [
                 "urn:barcode:33433057030821"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 6"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030821"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030821"
               ],
               "requestable": [
                 true
@@ -724,10 +890,6 @@
                 "Map Div. 84-146 v. 6"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -756,11 +918,24 @@
               "identifier": [
                 "urn:barcode:33433057030839"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 9"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030839"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030839"
               ],
               "requestable": [
                 true
@@ -770,10 +945,6 @@
                 "Map Div. 84-146 v. 9"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -802,11 +973,24 @@
               "identifier": [
                 "urn:barcode:33433057030847"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 10"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030847"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030847"
               ],
               "requestable": [
                 true
@@ -816,10 +1000,6 @@
                 "Map Div. 84-146 v. 10"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -848,11 +1028,24 @@
               "identifier": [
                 "urn:barcode:33433057030854"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 14"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030854"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030854"
               ],
               "requestable": [
                 true
@@ -862,10 +1055,6 @@
                 "Map Div. 84-146 v. 14"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -894,11 +1083,24 @@
               "identifier": [
                 "urn:barcode:33433057030862"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 15"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030862"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030862"
               ],
               "requestable": [
                 true
@@ -908,10 +1110,6 @@
                 "Map Div. 84-146 v. 15"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -940,11 +1138,24 @@
               "identifier": [
                 "urn:barcode:33433057030870"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Map Div. 84-146 v. 17"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057030870"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057030870"
               ],
               "requestable": [
                 true
@@ -954,10 +1165,6 @@
                 "Map Div. 84-146 v. 17"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:25",
-                  "label": "atlas"
-                },
                 {
                   "id": "catalogItemType:25",
                   "label": "atlas"
@@ -986,7 +1193,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001844",
         "_score": null,
@@ -995,8 +1202,16 @@
             "v."
           ],
           "note": [
-            "Added t.p.: The Brahmasūtra Śāṅkarbhāṣya.",
-            "In Sanskrit."
+            {
+              "noteType": "Note",
+              "label": "Added t.p.: The Brahmasūtra Śāṅkarbhāṣya.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Chaukhambā Vidyābhavana"
@@ -1028,6 +1243,9 @@
           "createdString": [
             "1964"
           ],
+          "idLccn": [
+            "sa 65007118"
+          ],
           "seriesStatement": [
             "Vidyābhavara Saṃskrta granthamālā, 124"
           ],
@@ -1038,8 +1256,26 @@
           "dateStartYear": [
             1964
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKN 82-2276"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001844"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 65007118"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471316953,
+          "publicationStatement": [
+            "Vārāṇasī, Chaukhambā Vidyābhavana [1964-"
           ],
           "identifier": [
             "urn:bnum:10001844",
@@ -1092,6 +1328,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Brahmasūtra Śaṅkarbhāṣya."
+          ],
           "items": [
             {
               "owner": [
@@ -1103,11 +1342,24 @@
               "identifier": [
                 "urn:barcode:33433058617816"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKN 82-2276"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058617816"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058617816"
               ],
               "requestable": [
                 true
@@ -1117,10 +1369,6 @@
                 "*OKN 82-2276"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1149,7 +1397,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10002118",
         "_score": null,
@@ -1194,11 +1442,25 @@
           "dateStartYear": [
             1900
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFD 82-4488"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10002118"
+            }
+          ],
           "uniformTitle": [
             "Cheaper by the dozen. Arabic"
           ],
           "dateEndYear": [
             1999
+          ],
+          "updatedAt": 1523471328220,
+          "publicationStatement": [
+            "Dimashq : Wakālat Nāy, 19--."
           ],
           "identifier": [
             "urn:bnum:10002118"
@@ -1257,11 +1519,20 @@
               "identifier": [
                 "urn:barcode:33433001997497"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433001997497"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433001997497"
               ],
               "requestable": [
                 true
@@ -1271,10 +1542,6 @@
                 "*OFD 82-4488"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1303,7 +1570,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10002297",
         "_score": null,
@@ -1312,8 +1579,16 @@
             "199 p. ;"
           ],
           "note": [
-            "In Persian.",
-            "Includes indexes."
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Intishārāt-i Firdawsī,"
@@ -1345,14 +1620,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Dawlatābādī, Àlī Muḥammad."
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMZ 84-1529"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10002297"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471331916,
+          "publicationStatement": [
+            "Tihrān : Intishārāt-i Firdawsī, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10002297"
@@ -1411,11 +1697,24 @@
               "identifier": [
                 "urn:barcode:33433014539872"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMZ 84-1529"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014539872"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014539872"
               ],
               "requestable": [
                 true
@@ -1425,10 +1724,6 @@
                 "*OMZ 84-1529"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1457,7 +1752,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10002303",
         "_score": null,
@@ -1466,7 +1761,11 @@
             "280 p. : facsim. ;"
           ],
           "note": [
-            "In Persian."
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Intishārāt-i Haftah,"
@@ -1498,14 +1797,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Khāmahʼī, Anvar."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMZ 84-1538"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10002303"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471314002,
+          "publicationStatement": [
+            "Tihrān : Intishārāt-i Haftah, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10002303"
@@ -1532,7 +1842,8 @@
             }
           ],
           "subjectLiteral": [
-            "Iran -- Politics and government -- 20th century."
+            "Iran -- Politics and government -- 20th century.",
+            "Political prisoners -- Iran -- Biography."
           ],
           "titleDisplay": [
             "Panjāh nafar... va sih nafar : asrār-i paydāyish, sāzmān va dastgīrī-i gurūh-i sīyāsī-i 53 nafar kih barā-yi avvalīn bār ifshā mīshavad / khāṭirāt-i Anvar Khāmah'ī."
@@ -1564,11 +1875,24 @@
               "identifier": [
                 "urn:barcode:33433014539880"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMZ 84-1538"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014539880"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014539880"
               ],
               "requestable": [
                 true
@@ -1578,10 +1902,6 @@
                 "*OMZ 84-1538"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1610,7 +1930,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003134",
         "_score": null,
@@ -1619,8 +1939,16 @@
             "397 p. : ill., port., facsim. ;"
           ],
           "note": [
-            "In Persian.",
-            "Includes indexes."
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Intishārāt-i Amīr Kabīr,"
@@ -1661,8 +1989,22 @@
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMZ 84-1427"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003134"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471409938,
+          "publicationStatement": [
+            "Tihrān : Intishārāt-i Amīr Kabīr, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10003134"
@@ -1689,7 +2031,8 @@
             }
           ],
           "subjectLiteral": [
-            "Iran -- History -- Qajar dynasty, 1794-1925."
+            "Iran -- History -- Qajar dynasty, 1794-1925.",
+            "Statesmen -- Iran -- Biography."
           ],
           "titleDisplay": [
             "Khāṭirāt-i Mumtaḥin al-Dawlah : zindigīnāmah-ʼi Mīrzā Mahdī Khān Mumtaḥin al-Dawlah Shaqāqī / bi-kūshish-i Ḥusaynqulī Khānshaqāqī."
@@ -1721,11 +2064,24 @@
               "identifier": [
                 "urn:barcode:33433014539856"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMZ 84-1427"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014539856"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014539856"
               ],
               "requestable": [
                 true
@@ -1735,10 +2091,6 @@
                 "*OMZ 84-1427"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1767,7 +2119,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003171",
         "_score": null,
@@ -1776,8 +2128,16 @@
             "412 p. ;"
           ],
           "note": [
-            "In Persian.",
-            "Novel."
+            {
+              "noteType": "Note",
+              "label": "Novel.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Nashr-i Naw,"
@@ -1809,14 +2169,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Baraheni, Reza, 1935-"
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMP 84-2030"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003171"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471413542,
+          "publicationStatement": [
+            "Tihrān : Nashr-i Naw, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10003171"
@@ -1872,11 +2243,24 @@
               "identifier": [
                 "urn:barcode:33433013173038"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMP 84-2030"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013173038"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013173038"
               ],
               "requestable": [
                 true
@@ -1886,10 +2270,6 @@
                 "*OMP 84-2030"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1918,7 +2298,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003179",
         "_score": null,
@@ -1927,8 +2307,16 @@
             "101 p. ;"
           ],
           "note": [
-            "In Persian.",
-            "Novel."
+            {
+              "noteType": "Note",
+              "label": "Novel.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Nashr-i Naw,"
@@ -1960,14 +2348,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Baraheni, Reza, 1935-"
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMP 84-2039"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003179"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471408896,
+          "publicationStatement": [
+            "Tihrān : Nashr-i Naw, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10003179"
@@ -2023,11 +2422,24 @@
               "identifier": [
                 "urn:barcode:33433013173053"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMP 84-2039"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013173053"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013173053"
               ],
               "requestable": [
                 true
@@ -2037,10 +2449,6 @@
                 "*OMP 84-2039"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2069,7 +2477,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003180",
         "_score": null,
@@ -2078,8 +2486,16 @@
             "235 p. ;"
           ],
           "note": [
-            "Cover title.",
-            "In Persian."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Org. of Act. Constitutionalist Iranians,"
@@ -2111,14 +2527,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "ʻAbd al-Raḥmān."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMZ 84-965"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003180"
+            }
+          ],
           "dateEndYear": [
             1989
+          ],
+          "updatedAt": 1523471398223,
+          "publicationStatement": [
+            "Los Angeles : Org. of Act. Constitutionalist Iranians, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10003180"
@@ -2145,7 +2572,8 @@
             }
           ],
           "subjectLiteral": [
-            "Islam and state -- Iran."
+            "Islam and state -- Iran.",
+            "Khomeini, Ruhollah."
           ],
           "titleDisplay": [
             "Qizāvat / ʻAbd al-Raḥmān..."
@@ -2177,11 +2605,24 @@
               "identifier": [
                 "urn:barcode:33433014539666"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMZ 84-965"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014539666"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014539666"
               ],
               "requestable": [
                 true
@@ -2191,10 +2632,6 @@
                 "*OMZ 84-965"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2223,7 +2660,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003410",
         "_score": null,
@@ -2232,9 +2669,21 @@
             "v. facsims."
           ],
           "note": [
-            "Added t.p.: Imam Ṭaḥāwī's Disagreement of jurists (Ikhtilāf al-fuqahāʼ)",
-            "Bibliography: v. 1, p. [313]-314.",
-            "Introd. in Arabic and English ; text in Arabic."
+            {
+              "noteType": "Note",
+              "label": "Added t.p.: Imam Ṭaḥāwī's Disagreement of jurists (Ikhtilāf al-fuqahāʼ)",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Introd. in Arabic and English ; text in Arabic.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: v. 1, p. [313]-314.",
+              "type": "bf:Note"
+            }
           ],
           "language": [
             {
@@ -2263,6 +2712,9 @@
           "createdString": [
             "1971"
           ],
+          "idLccn": [
+            "72930954"
+          ],
           "seriesStatement": [
             "Maṭbūʻāt Maʻhad al-Abḥāth al-Islāmīyāh. Publication no. 23"
           ],
@@ -2272,8 +2724,29 @@
           "dateStartYear": [
             1971
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGM 84-702"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003410"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "72930954"
+            }
+          ],
+          "uniformTitle": [
+            "Publication (Islamic Research Institute (Pakistan)) ; \\no.23."
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296783443,
+          "publicationStatement": [
+            "Islām Ābād [1971-"
           ],
           "identifier": [
             "urn:bnum:10003410",
@@ -2333,11 +2806,24 @@
               "identifier": [
                 "urn:barcode:33433001944960"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGM 84-702"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433001944960"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433001944960"
               ],
               "requestable": [
                 true
@@ -2350,16 +2836,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2379,7 +2861,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003414",
         "_score": null,
@@ -2388,11 +2870,26 @@
             "v. ;"
           ],
           "note": [
-            "1. Māheśvarakhaṇḍātmakaḥ.--2. Vaiṣṇavakhaṇḍātmakaḥ.--3. Brahmakhandātmakaḥ.--4. Kāśīkhaṇḍātmakaḥ.--5. Avantīkhaṇḍātmakah. 2 pts.",
-            "Added t.p. in English or Hindi.",
-            "Cover title: Skandamahāpurāṇam.",
-            "In Sanskrit; introductory matter in Hindi or Sanskrit.",
-            "Vol. 1:2. Saṃskaraṇam; v. 2-: 1. Saṃskaraṇam."
+            {
+              "noteType": "Note",
+              "label": "Cover title: Skandamahāpurāṇam.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Added t.p. in English or Hindi.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Vol. 1:2. Saṃskaraṇam; v. 2-: 1. Saṃskaraṇam.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit; introductory matter in Hindi or Sanskrit.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Manasukharāya Mora,"
@@ -2421,17 +2918,38 @@
           "createdString": [
             "1960"
           ],
+          "idLccn": [
+            "73902099"
+          ],
           "seriesStatement": [
             "Gurumaṇḍalagranthamālāyāḥ ; puṣpam 20"
           ],
           "dateStartYear": [
             1960
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKOK 84-641"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003414"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73902099"
+            }
+          ],
           "uniformTitle": [
             "Puranas Skanda Purāṇa."
           ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296783080,
+          "publicationStatement": [
+            "Kalakattā : Manasukharāya Mora, 1960-"
           ],
           "identifier": [
             "urn:bnum:10003414",
@@ -2481,7 +2999,7 @@
             }
           ],
           "titleAlt": [
-            "Puranas Skanda Purāṇa."
+            "Skanda-Purāṇam."
           ],
           "items": [
             {
@@ -2494,11 +3012,24 @@
               "identifier": [
                 "urn:barcode:33433013221373"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 84-641 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013221373"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013221373"
               ],
               "requestable": [
                 true
@@ -2511,16 +3042,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2540,11 +3067,24 @@
               "identifier": [
                 "urn:barcode:33433013221381"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 84-641 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013221381"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013221381"
               ],
               "requestable": [
                 true
@@ -2557,16 +3097,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2586,11 +3122,24 @@
               "identifier": [
                 "urn:barcode:33433013221399"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 84-641 v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013221399"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013221399"
               ],
               "requestable": [
                 true
@@ -2603,16 +3152,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2632,11 +3177,24 @@
               "identifier": [
                 "urn:barcode:33433013221407"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 84-641 v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013221407"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013221407"
               ],
               "requestable": [
                 true
@@ -2649,16 +3207,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2678,11 +3232,24 @@
               "identifier": [
                 "urn:barcode:33433013221415"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 84-641 v. 5 pt 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013221415"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013221415"
               ],
               "requestable": [
                 true
@@ -2695,16 +3262,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2724,11 +3287,24 @@
               "identifier": [
                 "urn:barcode:33433013221423"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 84-641 v. 5 pt 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013221423"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013221423"
               ],
               "requestable": [
                 true
@@ -2741,16 +3317,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2770,7 +3342,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003502",
         "_score": null,
@@ -2779,8 +3351,16 @@
             "v. : port. ;"
           ],
           "note": [
-            "Originally published in 1856, under title: Dziesmiņas latviešu valodai pārtulkotas; original t.p. included.",
-            "Partly translations from German poetry (with German texts included)."
+            {
+              "noteType": "Note",
+              "label": "Partly translations from German poetry (with German texts included).",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Originally published in 1856, under title: Dziesmiņas latviešu valodai pārtulkotas; original t.p. included.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Liesma,"
@@ -2815,14 +3395,25 @@
           "seriesStatement": [
             "Literārā mantojuma mazā bibliotēka"
           ],
-          "contributorLiteral": [
-            "Alunāns, Juris, 1832-1864."
-          ],
           "dateStartYear": [
             1981
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*QYN 82-2046"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003502"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296783443,
+          "publicationStatement": [
+            "Riga : Liesma, 1981-"
           ],
           "identifier": [
             "urn:bnum:10003502"
@@ -2878,11 +3469,24 @@
               "identifier": [
                 "urn:barcode:33433013501782"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*QYN 82-2046|zDala 1."
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013501782"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013501782"
               ],
               "requestable": [
                 true
@@ -2895,16 +3499,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2924,7 +3524,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003671",
         "_score": null,
@@ -2933,8 +3533,16 @@
             "v."
           ],
           "note": [
-            "In Arabic.",
-            "Includes bibliographical references."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Maktabat al-Anjlū al-Miṣrīyah,"
@@ -2966,14 +3574,32 @@
           "createdString": [
             "1973"
           ],
-          "contributorLiteral": [
-            "Mājid, ʻAbd al-Munʻim."
+          "idLccn": [
+            "73960873"
           ],
           "dateStartYear": [
             1973
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFP 82-1931"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003671"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73960873"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296783371,
+          "publicationStatement": [
+            "al-Qāhirah, Maktabat al-Anjlū al-Miṣrīyah, 1973-"
           ],
           "identifier": [
             "urn:bnum:10003671",
@@ -3025,6 +3651,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Institutions et cérémonial des Fatimides en Égypte."
+          ],
           "items": [
             {
               "owner": [
@@ -3036,11 +3665,24 @@
               "identifier": [
                 "urn:barcode:33433001937121"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFP 82-1931"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433001937121"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433001937121"
               ],
               "requestable": [
                 true
@@ -3053,16 +3695,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3082,7 +3720,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10003719",
         "_score": null,
@@ -3091,8 +3729,16 @@
             "v."
           ],
           "note": [
-            "In Telugu.",
-            "Vols. 2 & 4: pariṣkarta Puripanda."
+            {
+              "noteType": "Note",
+              "label": "Vols. 2 & 4: pariṣkarta Puripanda.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Telugu.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Āndhrapradēś Sāhitya Akāḍami"
@@ -3124,6 +3770,9 @@
           "createdString": [
             "1969"
           ],
+          "idLccn": [
+            "71912553"
+          ],
           "contributorLiteral": [
             "Appalaswamy, Puripanda, 1904-",
             "Āndhra Pradēśa Sāhitya Akāḍami."
@@ -3131,8 +3780,26 @@
           "dateStartYear": [
             1969
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLC 83-35"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003719"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "71912553"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296783443,
+          "publicationStatement": [
+            "Haidrābādu, Āndhrapradēś Sāhitya Akāḍami [1969-"
           ],
           "identifier": [
             "urn:bnum:10003719",
@@ -3195,11 +3862,24 @@
               "identifier": [
                 "urn:barcode:33433011197435"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLC 83-35|zLibrary has: Vols. 1-5. v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433011197435"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433011197435"
               ],
               "requestable": [
                 true
@@ -3212,16 +3892,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3241,11 +3917,24 @@
               "identifier": [
                 "urn:barcode:33433011197443"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLC 83-35|zLibrary has: Vols. 1-5. v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433011197443"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433011197443"
               ],
               "requestable": [
                 true
@@ -3258,16 +3947,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3287,11 +3972,24 @@
               "identifier": [
                 "urn:barcode:33433011197450"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLC 83-35|zLibrary has: Vols. 1-5. v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433011197450"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433011197450"
               ],
               "requestable": [
                 true
@@ -3304,16 +4002,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3333,11 +4027,24 @@
               "identifier": [
                 "urn:barcode:33433011197468"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLC 83-35|zLibrary has: Vols. 1-5. v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433011197468"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433011197468"
               ],
               "requestable": [
                 true
@@ -3350,16 +4057,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3379,11 +4082,24 @@
               "identifier": [
                 "urn:barcode:33433011197476"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLC 83-35|zLibrary has: Vols. 1-5. v. 5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433011197476"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433011197476"
               ],
               "requestable": [
                 true
@@ -3396,16 +4112,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3425,7 +4137,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10004373",
         "_score": null,
@@ -3434,9 +4146,21 @@
             "v. ;"
           ],
           "note": [
-            "In Kannada.",
-            "Includes bibliographical references.",
-            "Vols. 3- have imprint: Mysore : Sahyādri Prakāśana."
+            {
+              "noteType": "Note",
+              "label": "Vols. 3- have imprint: Mysore : Sahyādri Prakāśana.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Karnāṭaka Sahakārī Prakāśana Mandira"
@@ -3468,14 +4192,32 @@
           "createdString": [
             "1971"
           ],
-          "contributorLiteral": [
-            "Javare Gowda, Deve Gowda, 1918-"
+          "idLccn": [
+            "72902119"
           ],
           "dateStartYear": [
             1971
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 83-3417"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10004373"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "72902119"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296784408,
+          "publicationStatement": [
+            "Beṅgaḷūru] Karnāṭaka Sahakārī Prakāśana Mandira [1971]-"
           ],
           "identifier": [
             "urn:bnum:10004373",
@@ -3503,7 +4245,7 @@
             }
           ],
           "subjectLiteral": [
-            "Kuvempu, -- 1904-1994."
+            "Kuvempu, 1904-1994."
           ],
           "titleDisplay": [
             "Kuvempu sāhitya: Kelavu adhyayanagaḷu. [Lēkhaka] Dējagau."
@@ -3538,11 +4280,24 @@
               "identifier": [
                 "urn:barcode:33433057523718"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 83-341 v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057523718"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433057523718"
               ],
               "requestable": [
                 true
@@ -3552,10 +4307,6 @@
                 "*OLA 83-341 v. 3"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -3584,11 +4335,24 @@
               "identifier": [
                 "urn:barcode:33433001707623"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 83-3417|zLibrary has: Vol. 1, 3."
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433001707623"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433001707623"
               ],
               "requestable": [
                 true
@@ -3601,16 +4365,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3630,7 +4390,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10004816",
         "_score": null,
@@ -3668,14 +4428,35 @@
           "createdString": [
             "1983"
           ],
+          "idLccn": [
+            "84227211"
+          ],
           "contributorLiteral": [
             "Moreira, Angelo Pires."
           ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFK 84-291"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10004816"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "84227211"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296786150,
+          "publicationStatement": [
+            "Porto Alegre, RGSul [i.e. Rio Grande do Sul], Brasil : Martins Livreiro-Editor, 1983-"
           ],
           "identifier": [
             "urn:bnum:10004816",
@@ -3735,11 +4516,24 @@
               "identifier": [
                 "urn:barcode:33433003418559"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFK 84-291 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433003418559"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433003418559"
               ],
               "requestable": [
                 true
@@ -3752,16 +4546,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3781,7 +4571,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10004947",
         "_score": null,
@@ -3790,10 +4580,26 @@
             "v. : ill. ;"
           ],
           "note": [
-            "Allworth no. 170.",
-            "Colophon title in Russian: Geografi︠i︡a.",
-            "In Azerbaijani.",
-            "Microfilm."
+            {
+              "noteType": "Note",
+              "label": "Colophon title in Russian: Geografi︠i︡a.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Indexed In",
+              "label": "Allworth no. 170.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Microfilm.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Azerbaijani.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Azärnäshr,"
@@ -3825,14 +4631,25 @@
           "createdString": [
             "1926"
           ],
-          "contributorLiteral": [
-            "Räshad, Gafyr."
-          ],
           "dateStartYear": [
             1926
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ZO-221 no. 8"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10004947"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471498995,
+          "publicationStatement": [
+            "Baqï : Azärnäshr, 1926-"
           ],
           "identifier": [
             "urn:bnum:10004947"
@@ -3881,6 +4698,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Geografi︠i︡a."
+          ],
           "items": [
             {
               "owner": [
@@ -3892,11 +4712,24 @@
               "identifier": [
                 "urn:barcode:33433105673499"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*ZO-221 11 Azerbaijani monographs"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105673499"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433105673499"
               ],
               "requestable": [
                 true
@@ -3906,10 +4739,6 @@
                 "*ZO-221 11 Azerbaijani monographs"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:6",
-                  "label": "microfilm service copy"
-                },
                 {
                   "id": "catalogItemType:6",
                   "label": "microfilm service copy"
@@ -3938,7 +4767,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005211",
         "_score": null,
@@ -3947,10 +4776,26 @@
             "v. ;"
           ],
           "note": [
-            "Allworth no. 586.",
-            "Colophon title in Russian: Khaos.",
-            "In Azerbaijani.",
-            "Microfilm."
+            {
+              "noteType": "Note",
+              "label": "Colophon title in Russian: Khaos.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Indexed In",
+              "label": "Allworth no. 586.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Microfilm.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Azerbaijani.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Azärnäshr,"
@@ -3982,14 +4827,25 @@
           "createdString": [
             "1929"
           ],
-          "contributorLiteral": [
-            "Shirvanzade, 1858-1935."
-          ],
           "dateStartYear": [
             1929
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ZO-220 no. 9"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005211"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471597392,
+          "publicationStatement": [
+            "Bagï : Azärnäshr, 1929"
           ],
           "identifier": [
             "urn:bnum:10005211"
@@ -4037,6 +4893,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Khaos."
+          ],
           "items": [
             {
               "owner": [
@@ -4048,11 +4907,24 @@
               "identifier": [
                 "urn:barcode:33433105674059"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*ZO-220 collection of 10 titles (monographs)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105674059"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433105674059"
               ],
               "requestable": [
                 true
@@ -4062,10 +4934,6 @@
                 "*ZO-220 collection of 10 titles (monographs)"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:6",
-                  "label": "microfilm service copy"
-                },
                 {
                   "id": "catalogItemType:6",
                   "label": "microfilm service copy"
@@ -4094,7 +4962,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005860",
         "_score": null,
@@ -4103,9 +4971,16 @@
             "v. ;"
           ],
           "note": [
-            "Cover title.",
-            "In Swahili.",
-            "Kitabu cha 1-9."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "In Swahili.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "s.n.,"
@@ -4137,14 +5012,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Zanzibar."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Ser.-N .Z288"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005860"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471648859,
+          "publicationStatement": [
+            "[Zanzibar : s.n., 1980-    ]"
           ],
           "identifier": [
             "urn:bnum:10005860"
@@ -4203,11 +5089,24 @@
               "identifier": [
                 "urn:barcode:33433030859007"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-N .Z288 Kituba cha 1-9"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433030859007"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433030859007"
               ],
               "requestable": [
                 false
@@ -4217,10 +5116,6 @@
                 "Sc Ser.-N .Z288 Kituba cha 1-9"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:3",
-                  "label": "serial"
-                },
                 {
                   "id": "catalogItemType:3",
                   "label": "serial"
@@ -4249,7 +5144,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005862",
         "_score": null,
@@ -4258,9 +5153,16 @@
             "v. ;"
           ],
           "note": [
-            "Editor: Gerald A. McWorter.",
-            "Includes bibliographies.",
-            "no. 1. Race/class.--no. 2. Studies on Black children and their families.--no. 3. Philosophical perspectives in Black studies.--no. 4. Black liberation movement.--no. 5. Social science and the Black experience."
+            {
+              "noteType": "Note",
+              "label": "Editor: Gerald A. McWorter.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Afro-American Studies and Research Program, University of Illinois,"
@@ -4298,8 +5200,22 @@
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Ser.-M .N3674: 6th. 1982."
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005862"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471552016,
+          "publicationStatement": [
+            "Urbana, Ill. : Afro-American Studies and Research Program, University of Illinois, [1983?-]"
           ],
           "identifier": [
             "urn:bnum:10005862"
@@ -4359,11 +5275,24 @@
               "identifier": [
                 "urn:barcode:33433072219797"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-M .N3674: 6th. 1982 no. 1-2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433072219797"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433072219797"
               ],
               "requestable": [
                 false
@@ -4373,10 +5302,6 @@
                 "Sc Ser.-M .N3674: 6th. 1982 no. 1-2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -4405,11 +5330,24 @@
               "identifier": [
                 "urn:barcode:33433072219805"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-M .N3674: 6th. 1982 no. 3-5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433072219805"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433072219805"
               ],
               "requestable": [
                 false
@@ -4419,10 +5357,6 @@
                 "Sc Ser.-M .N3674: 6th. 1982 no. 3-5"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:3",
-                  "label": "serial"
-                },
                 {
                   "id": "catalogItemType:3",
                   "label": "serial"
@@ -4451,7 +5385,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005870",
         "_score": null,
@@ -4460,8 +5394,16 @@
             "71 p. : ill. ;"
           ],
           "note": [
-            "\"D'après le livre et le montage audiovisual 'L'Evolution de l'amour' por D. Sonet, légèrement adapté avec l'aimable autorisation de l'auteur.\"",
-            "Cover title."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"D'après le livre et le montage audiovisual 'L'Evolution de l'amour' por D. Sonet, légèrement adapté avec l'aimable autorisation de l'auteur.\"",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Action familiale d'Haïti,"
@@ -4496,8 +5438,22 @@
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc D 84-595"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005870"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471648684,
+          "publicationStatement": [
+            "Port-au-Prince : Action familiale d'Haïti, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10005870"
@@ -4524,7 +5480,8 @@
             }
           ],
           "subjectLiteral": [
-            "Sex instruction -- Haiti."
+            "Sex instruction -- Haiti.",
+            "Sonet, D."
           ],
           "titleDisplay": [
             "A quel age peut-on aimer? : pour une éducation à l'amour responsable / Action familiale d'Haïti."
@@ -4556,11 +5513,24 @@
               "identifier": [
                 "urn:barcode:33433036649329"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc D 84-595"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433036649329"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433036649329"
               ],
               "requestable": [
                 false
@@ -4570,10 +5540,6 @@
                 "Sc D 84-595"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4602,7 +5568,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005898",
         "_score": null,
@@ -4641,7 +5607,8 @@
             "1984"
           ],
           "seriesStatement": [
-            "Collection Coucoville"
+            "Collection Coucoville",
+            "Siwolin; \\t.2"
           ],
           "contributorLiteral": [
             "Institut de linguistique appliquée de Port-au-Prince."
@@ -4649,8 +5616,22 @@
           "dateStartYear": [
             1984
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Ser.-M .M468"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005898"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471552016,
+          "publicationStatement": [
+            "Port-au-Prince : I.L.A. de Port-au-Prince, 1984-"
           ],
           "identifier": [
             "urn:bnum:10005898"
@@ -4709,11 +5690,24 @@
               "identifier": [
                 "urn:barcode:33433017863220"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-M .M468 t. 2, ptie 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433017863220"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433017863220"
               ],
               "requestable": [
                 false
@@ -4723,10 +5717,6 @@
                 "Sc Ser.-M .M468 t. 2, ptie 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:3",
-                  "label": "serial"
-                },
                 {
                   "id": "catalogItemType:3",
                   "label": "serial"
@@ -4755,7 +5745,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005902",
         "_score": null,
@@ -4764,7 +5754,11 @@
             "76 p. ;"
           ],
           "note": [
-            "Cover title."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "s.n.,"
@@ -4796,8 +5790,22 @@
           "dateStartYear": [
             1900
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc D 84-602"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005902"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471648859,
+          "publicationStatement": [
+            "[S.l. : s.n., 19--]"
           ],
           "identifier": [
             "urn:bnum:10005902"
@@ -4857,11 +5865,24 @@
               "identifier": [
                 "urn:barcode:33433058825831"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc D 84-602"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058825831"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058825831"
               ],
               "requestable": [
                 false
@@ -4871,10 +5892,6 @@
                 "Sc D 84-602"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -4903,7 +5920,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005905",
         "_score": null,
@@ -4912,7 +5929,11 @@
             "52 p. : port. ;"
           ],
           "note": [
-            "Cover title."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "s.n.,"
@@ -4944,14 +5965,25 @@
           "createdString": [
             "1900"
           ],
-          "contributorLiteral": [
-            "Passavant, Camille."
-          ],
           "dateStartYear": [
             1900
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc C 85-2"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005905"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471635919,
+          "publicationStatement": [
+            "[Fort-de-France? Martinique : s.n., 19--] 52"
           ],
           "identifier": [
             "urn:bnum:10005905"
@@ -5007,11 +6039,24 @@
               "identifier": [
                 "urn:barcode:33433036604563"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc C 85-2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433036604563"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433036604563"
               ],
               "requestable": [
                 false
@@ -5021,10 +6066,6 @@
                 "Sc C 85-2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -5053,7 +6094,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10005907",
         "_score": null,
@@ -5062,8 +6103,11 @@
             "v. : ill. ;"
           ],
           "note": [
-            "Discography: p. 115-122.",
-            "v. 1. Musica de nuestro siglo -- v. 2. Impacto social y trascendencia."
+            {
+              "noteType": "Bibliography",
+              "label": "Discography: p. 115-122.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Producciones Don Pedro,"
@@ -5095,14 +6139,25 @@
           "createdString": [
             "1978"
           ],
-          "contributorLiteral": [
-            "Vélez, Ana."
-          ],
           "dateStartYear": [
             1978
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Ser.-L .V354"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005907"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471633676,
+          "publicationStatement": [
+            "San Juan, P.R. : Producciones Don Pedro, 1978-"
           ],
           "identifier": [
             "urn:bnum:10005907"
@@ -5161,11 +6216,24 @@
               "identifier": [
                 "urn:barcode:33433030890481"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-L .V354 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433030890481"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433030890481"
               ],
               "requestable": [
                 false
@@ -5175,10 +6243,6 @@
                 "Sc Ser.-L .V354 v. 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -5207,11 +6271,24 @@
               "identifier": [
                 "urn:barcode:33433017895651"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-L .V354 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433017895651"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433017895651"
               ],
               "requestable": [
                 false
@@ -5221,10 +6298,6 @@
                 "Sc Ser.-L .V354 v. 2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -5253,16 +6326,13 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006011",
         "_score": null,
         "_source": {
           "extent": [
             "v. : ill. ;"
-          ],
-          "note": [
-            "Communication and culture handbook/by Haig Der-Houssikian.--"
           ],
           "publisherLiteral": [
             "Experiment in International Living,"
@@ -5291,14 +6361,31 @@
           "createdString": [
             "1980"
           ],
+          "seriesStatement": [
+            "Peace Corps language handbook series"
+          ],
           "contributorLiteral": [
             "Der-Houssikian, Haig."
           ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Ser.-M .T425"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006011"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471666434,
+          "publicationStatement": [
+            "Brattleboro, vt. : Experiment in International Living, 1980-"
           ],
           "identifier": [
             "urn:bnum:10006011"
@@ -5357,11 +6444,24 @@
               "identifier": [
                 "urn:barcode:33433076233265"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-M .T425"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076233265"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433076233265"
               ],
               "requestable": [
                 false
@@ -5371,10 +6471,6 @@
                 "Sc Ser.-M .T425"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:3",
-                  "label": "serial"
-                },
                 {
                   "id": "catalogItemType:3",
                   "label": "serial"
@@ -5403,16 +6499,13 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006012",
         "_score": null,
         "_source": {
           "extent": [
             "v. : ill. ;"
-          ],
-          "note": [
-            "Special skills handbook/compiled by Philip A.S. Sedlak; assisted by Essogoye Jassor.--"
           ],
           "publisherLiteral": [
             "Experiment in International Living,"
@@ -5441,6 +6534,9 @@
           "createdString": [
             "1980"
           ],
+          "seriesStatement": [
+            "Peace Corps language handbook series"
+          ],
           "contributorLiteral": [
             "Experiment in International Living.",
             "Jassor, Essogoye.",
@@ -5449,8 +6545,22 @@
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc F 84-135"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006012"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471652321,
+          "publicationStatement": [
+            "Brattleboro, Vt. : Experiment in International Living, 1980-"
           ],
           "identifier": [
             "urn:bnum:10006012"
@@ -5509,11 +6619,24 @@
               "identifier": [
                 "urn:barcode:33433036872368"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc F 84-135"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433036872368"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433036872368"
               ],
               "requestable": [
                 false
@@ -5523,10 +6646,6 @@
                 "Sc F 84-135"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5555,7 +6674,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006018",
         "_score": null,
@@ -5564,8 +6683,11 @@
             "v. : ports. ;"
           ],
           "note": [
-            "\"Corrections to volume I\": v. 2, p. 69.",
-            "1929-1958/Ethel K. Greene.--1959-1969/Sarah B. Sims."
+            {
+              "noteType": "Note",
+              "label": "\"Corrections to volume I\": v. 2, p. 69.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "The Sorority,"
@@ -5601,8 +6723,22 @@
           "dateStartYear": [
             1959
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Ser.-M .H592"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006018"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471666434,
+          "publicationStatement": [
+            "Washington : The Sorority, 1959-"
           ],
           "identifier": [
             "urn:bnum:10006018"
@@ -5661,11 +6797,24 @@
               "identifier": [
                 "urn:barcode:33433061038323"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Ser.-M .H592 v. 1, 2 (1928-19, 1959-69)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433061038323"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433061038323"
               ],
               "requestable": [
                 false
@@ -5675,10 +6824,6 @@
                 "Sc Ser.-M .H592 v. 1, 2 (1928-19, 1959-69)"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:3",
-                  "label": "serial"
-                },
                 {
                   "id": "catalogItemType:3",
                   "label": "serial"
@@ -5707,7 +6852,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006159",
         "_score": null,
@@ -5716,9 +6861,21 @@
             "v. ;"
           ],
           "note": [
-            "Cover title.",
-            "Includes bibliographical references.",
-            "Microfilm."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Microfilm.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "American Foundation for Negro Affairs,"
@@ -5750,14 +6907,25 @@
           "createdString": [
             "1970"
           ],
-          "contributorLiteral": [
-            "American Foundation for Negro Affairs. Commission on Judiciary and Law. Subcommittee on National Goals."
-          ],
           "dateStartYear": [
             1970
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Micro R-4202 no. 16"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006159"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471679093,
+          "publicationStatement": [
+            "Philadelphia, Pa. : American Foundation for Negro Affairs, 1970-"
           ],
           "identifier": [
             "urn:bnum:10006159"
@@ -5818,11 +6986,24 @@
               "identifier": [
                 "urn:barcode:33433059035760"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Micro R-4202"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433059035760"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433059035760"
               ],
               "requestable": [
                 false
@@ -5832,10 +7013,6 @@
                 "Sc Micro R-4202"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:6",
-                  "label": "microfilm service copy"
-                },
                 {
                   "id": "catalogItemType:6",
                   "label": "microfilm service copy"
@@ -5864,7 +7041,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006344",
         "_score": null,
@@ -5873,7 +7050,11 @@
             "11 p. ;"
           ],
           "note": [
-            "Microfiche."
+            {
+              "noteType": "Reproduction",
+              "label": "Microfiche.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "s.n.,"
@@ -5905,14 +7086,25 @@
           "createdString": [
             "1900"
           ],
-          "contributorLiteral": [
-            "Franks, W. Stanley."
-          ],
           "dateStartYear": [
             1900
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Micro F-10459"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006344"
+            }
+          ],
           "dateEndYear": [
             1999
+          ],
+          "updatedAt": 1523471696236,
+          "publicationStatement": [
+            "[S.l. : s.n., 19--]"
           ],
           "identifier": [
             "urn:bnum:10006344"
@@ -5972,11 +7164,24 @@
               "identifier": [
                 "urn:barcode:33433058831748"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc Micro F-10459"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058831748"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058831748"
               ],
               "requestable": [
                 false
@@ -5986,10 +7191,6 @@
                 "Sc Micro F-10459"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:26",
-                  "label": "microfiche"
-                },
                 {
                   "id": "catalogItemType:26",
                   "label": "microfiche"
@@ -6018,7 +7219,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006540",
         "_score": null,
@@ -6027,9 +7228,16 @@
             "v. ;"
           ],
           "note": [
-            "Includes bibliographies and indexes.",
-            "T.1. Der Zusammenbruch -- T.2. Kriegsverbrecherprozesse u.a.",
-            "Vol. 2 issued without edition statement has imprint date 1972."
+            {
+              "noteType": "Note",
+              "label": "Vol. 2 issued without edition statement has imprint date 1972.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies and indexes.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Selbstverlag,"
@@ -6062,16 +7270,28 @@
             "1970"
           ],
           "seriesStatement": [
-            "Auf der Suche nach der Wahrheit / Heinz Roth ; Bd. 4-5"
-          ],
-          "contributorLiteral": [
-            "Roth, Heinz."
+            "Auf der Suche nach der Wahrheit / Heinz Roth ; Bd. 4-5",
+            "Roth, Heinz. Auf der Suche nach der Wahrheit ; \\Bd. 4-5."
           ],
           "dateStartYear": [
             1970
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFK 84-184"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006540"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296787986,
+          "publicationStatement": [
+            "Odenhausen/Lumda : Selbstverlag, [197-?-"
           ],
           "identifier": [
             "urn:bnum:10006540"
@@ -6098,6 +7318,7 @@
             }
           ],
           "subjectLiteral": [
+            "Germany -- History -- Allied occupation, 1945-",
             "World War, 1939-1945 -- Germany."
           ],
           "titleDisplay": [
@@ -6119,6 +7340,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Was geschah nach neunzehnhundertfünfundvierzig."
+          ],
           "items": [
             {
               "owner": [
@@ -6130,11 +7354,24 @@
               "identifier": [
                 "urn:barcode:33433003841073"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFK 84-184 v. 1-2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433003841073"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433003841073"
               ],
               "requestable": [
                 true
@@ -6147,16 +7384,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6176,7 +7409,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006622",
         "_score": null,
@@ -6185,8 +7418,11 @@
             "v. ;"
           ],
           "note": [
-            "Includes bibliographical references.",
-            "v. 1. Origenes y colonización hasta 1850."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Biblioteca de Escritores Caldenses,"
@@ -6218,14 +7454,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Ríos Tobón, Ricardo de los."
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "HDK 84-1693"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006622"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471603438,
+          "publicationStatement": [
+            "Manizales, Colombia : Biblioteca de Escritores Caldenses, 1933-"
           ],
           "identifier": [
             "urn:bnum:10006622"
@@ -6284,11 +7531,24 @@
               "identifier": [
                 "urn:barcode:33433097665214"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "HDK 84-1693 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433097665214"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433097665214"
               ],
               "requestable": [
                 false
@@ -6298,10 +7558,6 @@
                 "HDK 84-1693 v. 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -6330,16 +7586,13 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006687",
         "_score": null,
         "_source": {
           "extent": [
             "v. : ill., ports, ;"
-          ],
-          "note": [
-            "1. Mannfelliviun mikli -- 2. Búskaparsaga i Skriđuhreppi forna."
           ],
           "publisherLiteral": [
             "Bókaútgáfan Skjaldborg,"
@@ -6371,14 +7624,25 @@
           "createdString": [
             "1982"
           ],
-          "contributorLiteral": [
-            "Eiður Guðmundsson, 1888-1984."
-          ],
           "dateStartYear": [
             1982
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFL 84-217"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006687"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296786982,
+          "publicationStatement": [
+            "Akureyri : Bókaútgáfan Skjaldborg, 1982-"
           ],
           "identifier": [
             "urn:bnum:10006687"
@@ -6438,11 +7702,24 @@
               "identifier": [
                 "urn:barcode:33433004069559"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFL 84-217 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433004069559"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433004069559"
               ],
               "requestable": [
                 true
@@ -6455,16 +7732,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6484,11 +7757,24 @@
               "identifier": [
                 "urn:barcode:33433004069567"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFL 84-217 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433004069567"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433004069567"
               ],
               "requestable": [
                 true
@@ -6501,16 +7787,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6530,7 +7812,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006688",
         "_score": null,
@@ -6539,7 +7821,11 @@
             "v. ;"
           ],
           "note": [
-            "Includes bibliographical references."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Mál og Menning,"
@@ -6571,14 +7857,25 @@
           "createdString": [
             "1981"
           ],
-          "contributorLiteral": [
-            "Sverrir Kristjánsson, 1908-"
-          ],
           "dateStartYear": [
             1981
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFL 84-216"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006688"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1525296786982,
+          "publicationStatement": [
+            "Reykjavík : Mál og Menning, 1981-"
           ],
           "identifier": [
             "urn:bnum:10006688"
@@ -6639,11 +7936,24 @@
               "identifier": [
                 "urn:barcode:33433004069534"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFL 84-216 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433004069534"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433004069534"
               ],
               "requestable": [
                 true
@@ -6656,16 +7966,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6685,11 +7991,24 @@
               "identifier": [
                 "urn:barcode:33433004069542"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFL 84-216 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433004069542"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433004069542"
               ],
               "requestable": [
                 true
@@ -6702,16 +8021,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6731,7 +8046,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006705",
         "_score": null,
@@ -6740,9 +8055,16 @@
             "v. : ill. (some col.);"
           ],
           "note": [
-            "Includes bibliographical references.",
-            "Includes indexes.",
-            "t. 1. Anatoliko Aigaio. Sporades. Heptanēsa -- t. 2. Kyklades -- t. 3. Dōdekanēsa-Krētē -- t. 4. Peloponnēsos I -- t. 5 Peloponnesos II, Sterea Hellada -- t. 6. Thessalia-Ēpeiros -- t. 7. Makedonia I."
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Ekdot. Oikos \"Melissa,\""
@@ -6771,14 +8093,35 @@
           "createdString": [
             "1982"
           ],
+          "idLccn": [
+            "83177376"
+          ],
           "contributorLiteral": [
             "Philippidēs, Dēmētrēs."
           ],
           "dateStartYear": [
             1982
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "3-MQW+ 84-2551"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006705"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "83177376"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471603438,
+          "publicationStatement": [
+            "Athēna : Ekdot. Oikos \"Melissa,\" c1982-"
           ],
           "identifier": [
             "urn:bnum:10006705",
@@ -6836,11 +8179,24 @@
               "identifier": [
                 "urn:barcode:33433105160612"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160612"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160612"
               ],
               "requestable": [
                 false
@@ -6850,10 +8206,6 @@
                 "3-MQW+ 84-2551 v. 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -6876,11 +8228,24 @@
               "identifier": [
                 "urn:barcode:33433105160620"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160620"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160620"
               ],
               "requestable": [
                 false
@@ -6890,10 +8255,6 @@
                 "3-MQW+ 84-2551 v. 2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -6916,11 +8277,24 @@
               "identifier": [
                 "urn:barcode:33433105160638"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160638"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160638"
               ],
               "requestable": [
                 false
@@ -6930,10 +8304,6 @@
                 "3-MQW+ 84-2551 v. 3"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -6956,11 +8326,24 @@
               "identifier": [
                 "urn:barcode:33433105160646"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160646"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160646"
               ],
               "requestable": [
                 false
@@ -6970,10 +8353,6 @@
                 "3-MQW+ 84-2551 v. 4"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -6996,11 +8375,24 @@
               "identifier": [
                 "urn:barcode:33433105160653"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160653"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160653"
               ],
               "requestable": [
                 false
@@ -7010,10 +8402,6 @@
                 "3-MQW+ 84-2551 v. 5"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -7036,11 +8424,24 @@
               "identifier": [
                 "urn:barcode:33433105160661"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 6"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160661"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160661"
               ],
               "requestable": [
                 false
@@ -7050,10 +8451,6 @@
                 "3-MQW+ 84-2551 v. 6"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -7076,11 +8473,24 @@
               "identifier": [
                 "urn:barcode:33433105160679"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "3-MQW+ 84-2551 v. 7"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433105160679"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433105160679"
               ],
               "requestable": [
                 false
@@ -7090,10 +8500,6 @@
                 "3-MQW+ 84-2551 v. 7"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -7122,7 +8528,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006715",
         "_score": null,
@@ -7131,7 +8537,11 @@
             "v. : ill. (some ed.);"
           ],
           "note": [
-            "Title on spine: 2222."
+            {
+              "noteType": "Note",
+              "label": "Title on spine: 2222.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "The author,"
@@ -7163,14 +8573,25 @@
           "createdString": [
             "1970"
           ],
-          "contributorLiteral": [
-            "Humes, John P."
-          ],
           "dateStartYear": [
             1970
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "ICM (Austria) 85-584"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006715"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471718283,
+          "publicationStatement": [
+            "[S.l. : The author, 197-]"
           ],
           "identifier": [
             "urn:bnum:10006715"
@@ -7219,6 +8640,10 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "2222.",
+            "Quadruple two."
+          ],
           "items": [
             {
               "owner": [
@@ -7230,11 +8655,24 @@
               "identifier": [
                 "urn:barcode:33433090390752"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "ICM (Austria) 85-584 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433090390752"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433090390752"
               ],
               "requestable": [
                 false
@@ -7244,10 +8682,6 @@
                 "ICM (Austria) 85-584 v. 2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7276,7 +8710,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006745",
         "_score": null,
@@ -7314,14 +8748,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Andreou, Maria."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFC 84-1640"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006745"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471718157,
+          "publicationStatement": [
+            "London (184 Sussex Way, London N19 4HZ) : M. Andreou, [198- ]"
           ],
           "identifier": [
             "urn:bnum:10006745"
@@ -7377,11 +8822,24 @@
               "identifier": [
                 "urn:barcode:33433042849020"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFC 84-1640"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433042849020"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433042849020"
               ],
               "requestable": [
                 true
@@ -7391,10 +8849,6 @@
                 "JFC 84-1640"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7423,7 +8877,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10006884",
         "_score": null,
@@ -7432,7 +8886,11 @@
             "8 p. ;"
           ],
           "note": [
-            "Microfiche."
+            {
+              "noteType": "Reproduction",
+              "label": "Microfiche.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Sons of Liberty,"
@@ -7464,14 +8922,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Leese, Arnold, 1878-1956."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*XMH-2276"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006884"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471718283,
+          "publicationStatement": [
+            "Hollywood : Sons of Liberty, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10006884"
@@ -7528,6 +8997,12 @@
                   "label": "Dorot Jewish Division"
                 }
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*XMH-2276"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
@@ -7542,10 +9017,6 @@
                 "*XMH-2276"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:26",
-                  "label": "microfiche"
-                },
                 {
                   "id": "catalogItemType:26",
                   "label": "microfiche"
@@ -7574,7 +9045,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007123",
         "_score": null,
@@ -7583,8 +9054,16 @@
             "110 p. : facsim. ;"
           ],
           "note": [
-            "In Persian.",
-            "Includes bibliographical references."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Damāvand,"
@@ -7616,14 +9095,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Ādamīyat, Farīdūn, 1920-"
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMZ 84-2908"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007123"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471638160,
+          "publicationStatement": [
+            "Tihrān : Damāvand, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10007123"
@@ -7682,11 +9172,24 @@
               "identifier": [
                 "urn:barcode:33433014540086"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMZ 84-2908"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014540086"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014540086"
               ],
               "requestable": [
                 true
@@ -7696,10 +9199,6 @@
                 "*OMZ 84-2908"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7728,7 +9227,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007146",
         "_score": null,
@@ -7737,8 +9236,16 @@
             "71 p. ;"
           ],
           "note": [
-            "In Persian.",
-            "Includes bibliographical references."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Daftar-i Nashr-i Farhang-i Islāmī,"
@@ -7770,14 +9277,32 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Saʻīdī, Sīrūs."
+          "idLccn": [
+            "y  04930568"
           ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGE 84-4544"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007146"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "y  04930568"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471638160,
+          "publicationStatement": [
+            "[Tihrān] : Daftar-i Nashr-i Farhang-i Islāmī, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10007146",
@@ -7805,7 +9330,7 @@
             }
           ],
           "subjectLiteral": [
-            "Muḥammad, -- Prophet, -- -632 -- Campaigns."
+            "Muḥammad, Prophet, -632 -- Campaigns."
           ],
           "titleDisplay": [
             "Payāmbar va munāfiqīn / Sīrūs Saʻīdī."
@@ -7837,11 +9362,20 @@
               "identifier": [
                 "urn:barcode:33433058000484"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058000484"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058000484"
               ],
               "requestable": [
                 false
@@ -7851,10 +9385,6 @@
                 "*OGE 84-4544"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7883,7 +9413,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007164",
         "_score": null,
@@ -7892,8 +9422,16 @@
             "231 p. ;"
           ],
           "note": [
-            "Bibliography: p. 228-231.",
-            "Persian and Kurdish."
+            {
+              "noteType": "Note",
+              "label": "Persian and Kurdish.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 228-231.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Muʼassisah-ʼi Muṭāliʻāt va Taḥqīqāt-i Farhangī, 1362 [1983 or 1984]"
@@ -7925,14 +9463,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Kalbāsī, Īrān."
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ONF 84-3986"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007164"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1525296787986,
+          "publicationStatement": [
+            "Tihrān : Muʼassisah-ʼi Muṭāliʻāt va Taḥqīqāt-i Farhangī, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10007164"
@@ -7959,7 +9508,7 @@
             }
           ],
           "subjectLiteral": [
-            "Kurdish language -- Dialects -- Iran -- Mahābād."
+            "Kurdish language -- Dialects -- Mahābād."
           ],
           "titleDisplay": [
             "Gūyish-i Kurdī-i Mahābād / taʼlīf-i Īrān Kalbāsī."
@@ -7991,11 +9540,20 @@
               "identifier": [
                 "urn:barcode:33433014567063"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014567063"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014567063"
               ],
               "requestable": [
                 true
@@ -8008,16 +9566,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8037,7 +9591,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007183",
         "_score": null,
@@ -8046,9 +9600,21 @@
             "186 p. ;"
           ],
           "note": [
-            "Bibliography: p.[186]",
-            "In Persian.",
-            "Includes indexes."
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p.[186]",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Shirkat-i Sahāmī-i Chāpkhānah-ʼi Vizārat-i Irshād-i Islāmī,"
@@ -8080,14 +9646,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Jaʻfarī, Muḥammad Taqī."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGC 84-3952"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007183"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471638101,
+          "publicationStatement": [
+            "Tihrān : Shirkat-i Sahāmī-i Chāpkhānah-ʼi Vizārat-i Irshād-i Islāmī, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10007183"
@@ -8146,11 +9723,20 @@
               "identifier": [
                 "urn:barcode:33433022694230"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433022694230"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433022694230"
               ],
               "requestable": [
                 true
@@ -8160,10 +9746,6 @@
                 "*OGC 84-3952"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -8192,7 +9774,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007240",
         "_score": null,
@@ -8201,9 +9783,21 @@
             "v. ;"
           ],
           "note": [
-            "Imprint on cover: Tañcāvūr Mahārājā Carapōjiyiṉ Caracuvati Makāl Nūl Nilaiyam.",
-            "In Tamil.",
-            "Includes indexes."
+            {
+              "noteType": "Note",
+              "label": "Imprint on cover: Tañcāvūr Mahārājā Carapōjiyiṉ Caracuvati Makāl Nūl Nilaiyam.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Tañcai Caracuvati Makāl Nūl Nilaiya Nirvākak Kuḻu,"
@@ -8232,6 +9826,9 @@
           "createdString": [
             "1975"
           ],
+          "idLccn": [
+            "77902870"
+          ],
           "seriesStatement": [
             "Tañcai Caracuvati Makāl veḷiyīṭu; 156"
           ],
@@ -8241,8 +9838,26 @@
           "dateStartYear": [
             1975
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLB 84-3259"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007240"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "77902870"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1523471638101,
+          "publicationStatement": [
+            "[Tañcāvūr] : Tañcai Caracuvati Makāl Nūl Nilaiya Nirvākak Kuḻu, 1975."
           ],
           "identifier": [
             "urn:bnum:10007240",
@@ -8305,11 +9920,20 @@
               "identifier": [
                 "urn:barcode:33433061354662"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433061354662"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433061354662"
               ],
               "requestable": [
                 true
@@ -8319,10 +9943,6 @@
                 "*OLB 84-3259"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -8351,11 +9971,24 @@
               "identifier": [
                 "urn:barcode:33433061303693"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLB 84-3259"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433061303693"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433061303693"
               ],
               "requestable": [
                 true
@@ -8365,10 +9998,6 @@
                 "*OLB 84-3259"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -8397,7 +10026,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007273",
         "_score": null,
@@ -8406,9 +10035,21 @@
             "304 p. ;"
           ],
           "note": [
-            "Bibliography: p. 300-302.",
-            "Cover title.",
-            "In Persian."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 300-302.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "s.n."
@@ -8440,14 +10081,25 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Naqbāʼī, Ḥisām."
-          ],
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGI 84-3796"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007273"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471774115,
+          "publicationStatement": [
+            "[S.l. : s.n. 198-?]"
           ],
           "identifier": [
             "urn:bnum:10007273"
@@ -8506,11 +10158,24 @@
               "identifier": [
                 "urn:barcode:33433058031687"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGI 84-3796"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058031687"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058031687"
               ],
               "requestable": [
                 true
@@ -8520,10 +10185,6 @@
                 "*OGI 84-3796"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -8552,7 +10213,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007317",
         "_score": null,
@@ -8561,8 +10222,16 @@
             "412 p. ;"
           ],
           "note": [
-            "A novel.",
-            "In Persian."
+            {
+              "noteType": "Note",
+              "label": "A novel.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Nashr-i Naw,"
@@ -8594,14 +10263,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Baraheni, Reza, 1935-"
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OMP 84-4835"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007317"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1525296788100,
+          "publicationStatement": [
+            "Tihrān : Nashr-i Naw, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10007317"
@@ -8657,11 +10337,24 @@
               "identifier": [
                 "urn:barcode:33433013173988"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMP 84-4835"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013173988"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013173988"
               ],
               "requestable": [
                 true
@@ -8674,16 +10367,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8703,7 +10392,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007415",
         "_score": null,
@@ -8712,7 +10401,11 @@
             "191 p. : ports., facsim. ;"
           ],
           "note": [
-            "In Persian."
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Bunyād-i Mawqūfāt-i Duktur Maḥmūd Afshār,"
@@ -8747,14 +10440,25 @@
           "seriesStatement": [
             "Majmūʻah-ʼi Intishārāt-i Adabī ra tārīkhī, Mawqūfāt-i Duktur Maḥmūd Afshār Yazdī; shumārah-ʼi 14"
           ],
-          "contributorLiteral": [
-            "Māyil Hiravī, Najīb."
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ONI 84-3497"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007415"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1525296788100,
+          "publicationStatement": [
+            "Tihrān : Bunyād-i Mawqūfāt-i Duktur Maḥmūd Afshār, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10007415"
@@ -8814,11 +10518,24 @@
               "identifier": [
                 "urn:barcode:33433013015031"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*ONI 84-3497"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013015031"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433013015031"
               ],
               "requestable": [
                 true
@@ -8831,16 +10548,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8860,7 +10573,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007435",
         "_score": null,
@@ -8869,8 +10582,16 @@
             "252 p. ;"
           ],
           "note": [
-            "In Arabic.",
-            "Poems in the Kuwaiti dialect."
+            {
+              "noteType": "Note",
+              "label": "Poems in the Kuwaiti dialect.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Manshūrāt Dhāt al-salāsil,"
@@ -8902,17 +10623,28 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Hazzāʻ, Ḥaydar."
-          ],
           "dateStartYear": [
             1980
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFA 84-4337"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007435"
+            }
           ],
           "uniformTitle": [
             "Works"
           ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1523471643917,
+          "publicationStatement": [
+            "al-Kuwayt : Manshūrāt Dhāt al-salāsil, [198-?]"
           ],
           "identifier": [
             "urn:bnum:10007435"
@@ -8971,11 +10703,20 @@
               "identifier": [
                 "urn:barcode:33433002003204"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433002003204"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433002003204"
               ],
               "requestable": [
                 true
@@ -8985,10 +10726,6 @@
                 "*OFA 84-4337"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -9017,7 +10754,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10007439",
         "_score": null,
@@ -9026,8 +10763,16 @@
             "550 p., [4] leaves of plates : ill. ;"
           ],
           "note": [
-            "Bibliography: p. [551]",
-            "In Persian."
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. [551]",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Intishārāt-i Amīr Kabīr,"
@@ -9059,14 +10804,25 @@
           "createdString": [
             "1983"
           ],
-          "contributorLiteral": [
-            "Islāmī Nudūshan, Muḥammad ʻAlī."
-          ],
           "dateStartYear": [
             1983
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ONAE 84-4189"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10007439"
+            }
+          ],
           "dateEndYear": [
             1984
+          ],
+          "updatedAt": 1525296789208,
+          "publicationStatement": [
+            "Tihrān : Intishārāt-i Amīr Kabīr, 1362 [1983 or 1984]"
           ],
           "identifier": [
             "urn:bnum:10007439"
@@ -9125,11 +10881,20 @@
               "identifier": [
                 "urn:barcode:33433014565869"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014565869"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014565869"
               ],
               "requestable": [
                 true
@@ -9142,16 +10907,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [

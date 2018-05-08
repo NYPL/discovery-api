@@ -1,5 +1,5 @@
 {
-  "took": 4,
+  "took": 190,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,80 +7,82 @@
     "failed": 0
   },
   "hits": {
-    "total": 1,
-    "max_score": 14.237371,
+    "total": 13730729,
+    "max_score": null,
     "hits": [
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10001936",
-        "_score": 14.237371,
+        "_id": "b10000103",
+        "_score": null,
         "_source": {
           "extent": [
-            "400 p. ;"
+            "11, 602 p.: port.;"
           ],
-          "publisherLiteral": [
-            "Tparan Hovhannu Tēr-Abrahamian,"
-          ],
-          "noteV2": [
-            {
-              "noteType": "Note",
-              "label": "Publication date from cover.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Additional Formats",
-              "label": "Also available on microform;",
-              "type": "bf:Note"
-            },
+          "note": [
             {
               "noteType": "Language",
-              "label": "In Armenian.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Processing Action",
-              "label": "Microfilmed;",
+              "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "publisherLiteral": [
+            "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ,"
           ],
           "language": [
             {
-              "id": "lang:arm",
-              "label": "Armenian"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
-            1891
+            1967
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan"
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
           ],
           "shelfMark": [
-            "*ONR 84-743"
+            "*OFA 82-5137"
           ],
           "creatorLiteral": [
-            "Shermazanian, Galust."
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979."
           ],
           "createdString": [
-            "1891"
+            "1967"
+          ],
+          "idLccn": [
+            "75960366"
+          ],
+          "seriesStatement": [
+            "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1"
           ],
           "dateStartYear": [
-            1891
+            1967
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFA 82-5137"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000103"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75960366"
+            }
+          ],
+          "updatedAt": 1525296776042,
           "publicationStatement": [
-            "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
+            "[al-Jazāʼir]: al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1967."
           ],
           "identifier": [
-            "urn:bnum:10001936"
+            "urn:bnum:10000103",
+            "urn:lccn:75960366"
           ],
           "materialType": [
             {
@@ -95,7 +97,7 @@
             }
           ],
           "dateString": [
-            "1891"
+            "1967"
           ],
           "mediaType": [
             {
@@ -103,21 +105,21 @@
               "label": "unmediated"
             }
           ],
-          "subjectLiteral": [
-            "Armenians -- Iran -- History."
-          ],
           "titleDisplay": [
-            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan / Ashkhatasirutʻiamb Galust Shermazaniani."
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
           ],
-          "uri": "b10001936",
+          "uri": "b10000103",
+          "lccClassification": [
+            "PJ7842.H2937 A17 1967"
+          ],
           "numItems": [
-            2
+            1
           ],
           "numAvailable": [
             1
           ],
           "placeOfPublication": [
-            "Ṛostov (Doni Vra) :"
+            "[al-Jazāʼir]:"
           ],
           "issuance": [
             {
@@ -134,7 +136,13 @@
                 }
               ],
               "identifier": [
-                "urn:barcode:33433001892276"
+                "urn:barcode:33433002000671"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433002000671"
+                }
               ],
               "accessMessage": [
                 {
@@ -142,27 +150,26 @@
                   "label": "Request in advance"
                 }
               ],
+              "idBarcode": [
+                "33433002000671"
+              ],
               "requestable": [
                 true
               ],
-              "uri": "i10001320",
+              "uri": "i10000042",
               "shelfMark": [
-                "*ONR 84-743"
+                "*OFA 82-5137"
               ],
               "catalogItemType": [
                 {
-                  "id": "catalogItemType:32",
-                  "label": "google project, book"
-                },
-                {
-                  "id": "catalogItemType:32",
-                  "label": "google project, book"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -171,21 +178,15 @@
                   "label": "Offsite"
                 }
               ]
-            },
-            {
-              "electronicLocator": [
-                {
-                  "label": "Full text available via HathiTrust",
-                  "url": "http://hdl.handle.net/2027/nyp.33433001892276"
-                }
-              ],
-              "uri": "i10001936-e"
             }
           ],
           "dimensions": [
-            "21 cm."
+            "24 cm."
           ]
-        }
+        },
+        "sort": [
+          "b10000103"
+        ]
       }
     ]
   }

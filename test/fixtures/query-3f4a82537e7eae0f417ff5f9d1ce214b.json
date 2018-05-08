@@ -1,5 +1,5 @@
 {
-  "took": 2,
+  "took": 3,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,19 +8,23 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 15.040254,
+    "max_score": 15.124104,
     "hits": [
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10022734",
-        "_score": 15.040254,
+        "_score": 15.124104,
         "_source": {
           "extent": [
             "xiv, 381 p., [16] leaves of plates : ill. ;"
           ],
           "note": [
-            "Includes bibliographical references and index."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Knopf : distributed by Random House,"
@@ -49,16 +53,41 @@
           "createdString": [
             "1981"
           ],
-          "contributorLiteral": [
-            "Lewis, David L., 1936-"
+          "idLccn": [
+            "80002704"
           ],
           "dateStartYear": [
             1981
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "IEC 81-1139"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10022734"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0394495721 :"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "80002704"
+            }
+          ],
+          "updatedAt": 1525296806266,
+          "publicationStatement": [
+            "New York : Knopf : distributed by Random House, 1981."
           ],
           "identifier": [
             "urn:bnum:10022734",
             "urn:isbn:0394495721 :",
             "urn:lccn:80002704"
+          ],
+          "idIsbn": [
+            "0394495721 :"
           ],
           "materialType": [
             {
@@ -82,7 +111,8 @@
             }
           ],
           "subjectLiteral": [
-            "Arts, Modern -- 20th century -- New York (State) -- New York.",
+            "African American arts -- New York.",
+            "Arts, Modern -- 20th century -- New York.",
             "Harlem (New York, N.Y.)",
             "Harlem Renaissance."
           ],
@@ -119,11 +149,24 @@
               "identifier": [
                 "urn:barcode:33433035187214"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "IEC 81-1139"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433035187214"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433035187214"
               ],
               "requestable": [
                 false
@@ -136,16 +179,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -165,11 +204,24 @@
               "identifier": [
                 "urn:barcode:33433015873411"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433015873411"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:-",
                   "label": "No restrictions"
                 }
+              ],
+              "idBarcode": [
+                "33433015873411"
               ],
               "requestable": [
                 false
@@ -179,10 +231,6 @@
                 "Sc *700-L (Lewis, D. When Harlem was in vogue)"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -211,11 +259,24 @@
               "identifier": [
                 "urn:barcode:33433034124614"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc E 96-780"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433034124614"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433034124614"
               ],
               "requestable": [
                 false
@@ -228,16 +289,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [

@@ -1,5 +1,5 @@
 {
-  "took": 90,
+  "took": 126,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,11 +7,11 @@
     "failed": 0
   },
   "hits": {
-    "total": 1115622,
+    "total": 1155865,
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000002",
         "_score": null,
@@ -20,8 +20,16 @@
             "ix, 368 p., [1] leaf of plates : port. ;"
           ],
           "note": [
-            "Contributions in German and Italian.",
-            "Includes bibliographies and index."
+            {
+              "noteType": "Note",
+              "label": "Contributions in German and Italian.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies and index.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Stauffenburg,"
@@ -47,6 +55,12 @@
           "createdString": [
             "1985"
           ],
+          "idLccn": [
+            "86124252"
+          ],
+          "seriesStatement": [
+            "Romanica et comparatistica ; Bd. 4"
+          ],
           "contributorLiteral": [
             "Baum, Richard.",
             "Gmelin, Hermann, 1900-1958.",
@@ -55,10 +69,35 @@
           "dateStartYear": [
             1985
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFE 86-3252"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000002"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3923721544"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "86124252"
+            }
+          ],
+          "updatedAt": 1524680630893,
+          "publicationStatement": [
+            "Tübingen : Stauffenburg, c1985."
+          ],
           "identifier": [
             "urn:bnum:10000002",
             "urn:isbn:3923721544",
             "urn:lccn:86124252"
+          ],
+          "idIsbn": [
+            "3923721544"
           ],
           "materialType": [
             {
@@ -82,8 +121,8 @@
             }
           ],
           "subjectLiteral": [
-            "Dante Alighieri, -- 1265-1321 -- Criticism and interpretation.",
-            "Gmelin, Hermann, -- 1900-1958."
+            "Dante Alighieri, 1265-1321 -- Criticism and interpretation.",
+            "Gmelin, Hermann, 1900-1958."
           ],
           "titleDisplay": [
             "Dante Alighieri 1985 : in memoriam Hermann Gmelin / herausgegeben von Richard Baum und Willi Hirdt."
@@ -107,16 +146,32 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Dante Alighieri neunzehnhundertfünfundachtzig."
+          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433046113795"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFE 86-3252"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433046113795"
+                }
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433046113795"
               ],
               "requestable": [
                 false
@@ -126,10 +181,6 @@
                 "JFE 86-3252"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -158,7 +209,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000003",
         "_score": null,
@@ -193,16 +244,41 @@
           "createdString": [
             "1989"
           ],
-          "contributorLiteral": [
-            "Waite, Charlie."
+          "idLccn": [
+            "gb 89012970"
           ],
           "dateStartYear": [
             1989
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFF 89-526"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000003"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0094675708 :"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "gb 89012970"
+            }
+          ],
+          "updatedAt": 1524680631625,
+          "publicationStatement": [
+            "London : Constable, 1989."
           ],
           "identifier": [
             "urn:bnum:10000003",
             "urn:isbn:0094675708 :",
             "urn:lccn:gb 89012970"
+          ],
+          "idIsbn": [
+            "0094675708 :"
           ],
           "materialType": [
             {
@@ -252,11 +328,24 @@
               "identifier": [
                 "urn:barcode:33433050409147"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFF 89-526"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433050409147"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433050409147"
               ],
               "requestable": [
                 false
@@ -266,10 +355,6 @@
                 "JFF 89-526"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -298,7 +383,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000126",
         "_score": null,
@@ -307,13 +392,55 @@
             "72 p. : ill., ports. ;"
           ],
           "note": [
-            "In Hindi."
-          ],
-          "identifier": [
-            "urn:bnum:10000126"
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Śrī Ramaṇāśrama,"
+          ],
+          "language": [
+            {
+              "id": "lang:hin",
+              "label": "Hindi"
+            }
+          ],
+          "createdYear": [
+            1974
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Śrī Ramaṇa Maharshi : eka saṃkshipta jīvanī : sacitra."
+          ],
+          "shelfMark": [
+            "*OLY 82-4666"
+          ],
+          "createdString": [
+            "1974"
+          ],
+          "dateStartYear": [
+            1974
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 82-4666"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000126"
+            }
+          ],
+          "updatedAt": 1524680630648,
+          "publicationStatement": [
+            "Tirūvaṇṇāmalai : Śrī Ramaṇāśrama, 1974."
+          ],
+          "identifier": [
+            "urn:bnum:10000126"
           ],
           "materialType": [
             {
@@ -330,48 +457,24 @@
           "dateString": [
             "1974"
           ],
-          "language": [
-            {
-              "id": "lang:hin",
-              "label": "Hindi"
-            }
-          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
               "label": "unmediated"
             }
           ],
-          "createdYear": [
-            1974
-          ],
           "subjectLiteral": [
-            "Ramana, -- Maharshi -- Biography."
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Śrī Ramaṇa Maharshi : eka saṃkshipta jīvanī : sacitra."
+            "Ramana, Maharshi -- Biography."
           ],
           "titleDisplay": [
             "Śrī Ramaṇa Maharshi : eka saṃkshipta jīvanī : sacitra."
           ],
-          "shelfMark": [
-            "*OLY 82-4666"
-          ],
           "uri": "b10000126",
-          "createdString": [
-            "1974"
-          ],
           "numItems": [
             1
           ],
           "numAvailable": [
             1
-          ],
-          "dateStartYear": [
-            1974
           ],
           "placeOfPublication": [
             "Tirūvaṇṇāmalai :"
@@ -387,11 +490,24 @@
               "identifier": [
                 "urn:barcode:33433060417551"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 82-4666"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417551"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417551"
               ],
               "requestable": [
                 false
@@ -401,10 +517,6 @@
                 "*OLY 82-4666"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -433,7 +545,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000156",
         "_score": null,
@@ -442,9 +554,21 @@
             "10, 9 p. ;"
           ],
           "note": [
-            "Additions and corrections in MS.",
-            "Cover title.",
-            "In Sanskrit; introductory matter in Sanskrit or English."
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Additions and corrections in MS.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit; introductory matter in Sanskrit or English.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Go. Venkaṭarāmaśāstri],"
@@ -473,14 +597,35 @@
           "createdString": [
             "1972"
           ],
+          "idLccn": [
+            "75902648"
+          ],
           "contributorLiteral": [
             "Lakshmikantaiah, Garikapati, 1900-"
           ],
           "dateStartYear": [
             1972
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-4674"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000156"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75902648"
+            }
+          ],
           "uniformTitle": [
             "Aṣṭakapañcaka"
+          ],
+          "updatedAt": 1524680631588,
+          "publicationStatement": [
+            "[S.l. : Go. Venkaṭarāmaśāstri], 1972."
           ],
           "identifier": [
             "urn:bnum:10000156",
@@ -534,7 +679,8 @@
             }
           ],
           "titleAlt": [
-            "Aṣṭakapañcaka"
+            "Aṣṭakapañcaka",
+            "Jaladhijānandalaharī."
           ],
           "items": [
             {
@@ -547,11 +693,24 @@
               "identifier": [
                 "urn:barcode:33433060370396"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-4674"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060370396"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060370396"
               ],
               "requestable": [
                 false
@@ -561,10 +720,6 @@
                 "*OLY 83-4674"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -593,7 +748,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000165",
         "_score": null,
@@ -602,8 +757,16 @@
             "47, 112 p. ;"
           ],
           "note": [
-            "In Tamil.",
-            "Includes indexes."
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Nārāyaṇacāmi Nāyaṭu,"
@@ -629,14 +792,35 @@
           "createdString": [
             "1975"
           ],
+          "idLccn": [
+            "76901471"
+          ],
           "contributorLiteral": [
             "Narayanaswami Naidu, Tiruchirrambalam Krishnaswamy, 1906-"
           ],
           "dateStartYear": [
             1975
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-4895"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000165"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "76901471"
+            }
+          ],
           "uniformTitle": [
             "Nālāyirat tivviyap pirapantam. Selections."
+          ],
+          "updatedAt": 1524680630893,
+          "publicationStatement": [
+            "Kaṭalūr : Nārāyaṇacāmi Nāyaṭu, 1975."
           ],
           "identifier": [
             "urn:bnum:10000165",
@@ -688,9 +872,6 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Nālāyirat tivviyap pirapantam."
-          ],
           "items": [
             {
               "owner": [
@@ -702,11 +883,24 @@
               "identifier": [
                 "urn:barcode:33433060419649"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-4895"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060419649"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060419649"
               ],
               "requestable": [
                 false
@@ -716,10 +910,6 @@
                 "*OLY 83-4895"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -748,7 +938,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000177",
         "_score": null,
@@ -757,8 +947,16 @@
             "4, 4, 354 p. col. illus."
           ],
           "note": [
-            "Bibliography: p. [349]-354.",
-            "In Hindi."
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. [349]-354.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Rāmasnehī Sāhitya Śodha Saṃsthāna"
@@ -787,14 +985,32 @@
           "createdString": [
             "1973"
           ],
+          "idLccn": [
+            "74901467"
+          ],
           "seriesStatement": [
             "Rāmasnehī sāhitya śodha saṃsthāna, pushpa 1"
           ],
-          "contributorLiteral": [
-            "Pāṇḍeya, Śivāśaṅkara, 1935-"
-          ],
           "dateStartYear": [
             1973
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-85"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000177"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74901467"
+            }
+          ],
+          "updatedAt": 1524680629722,
+          "publicationStatement": [
+            "Dillī, Rāmasnehī Sāhitya Śodha Saṃsthāna [1973]"
           ],
           "identifier": [
             "urn:bnum:10000177",
@@ -857,11 +1073,24 @@
               "identifier": [
                 "urn:barcode:33433060419680"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-85"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060419680"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060419680"
               ],
               "requestable": [
                 false
@@ -871,10 +1100,6 @@
                 "*OLY 84-85"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -903,7 +1128,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000195",
         "_score": null,
@@ -912,7 +1137,11 @@
             "116 p."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Periyār Cuyamariyātaip Piracāra Niṟuvaṉa Veḷiyīṭu"
@@ -941,11 +1170,29 @@
           "createdString": [
             "1972"
           ],
-          "contributorLiteral": [
-            "Rāmacāmi, Ī. Ve., Tantai Periyār, 1878-1973."
+          "idLccn": [
+            "73903633"
           ],
           "dateStartYear": [
             1972
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-2592"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000195"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73903633"
+            }
+          ],
+          "updatedAt": 1524680630717,
+          "publicationStatement": [
+            "Tirucci, Periyār Cuyamariyātaip Piracāra Niṟuvaṉa Veḷiyīṭu [1972]"
           ],
           "identifier": [
             "urn:bnum:10000195",
@@ -1008,11 +1255,24 @@
               "identifier": [
                 "urn:barcode:33433060418526"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-2592"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060418526"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060418526"
               ],
               "requestable": [
                 false
@@ -1022,10 +1282,6 @@
                 "*OLY 83-2592"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1054,7 +1310,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000203",
         "_score": null,
@@ -1063,7 +1319,11 @@
             "201 p. ;"
           ],
           "note": [
-            "In Hindi."
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Śivalāla Agravāla eṇḍa Kampanī,"
@@ -1098,6 +1358,20 @@
           "dateStartYear": [
             1978
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 82-3981"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000203"
+            }
+          ],
+          "updatedAt": 1524680629722,
+          "publicationStatement": [
+            "Āgarā : Śivalāla Agravāla eṇḍa Kampanī, 1978."
+          ],
           "identifier": [
             "urn:bnum:10000203"
           ],
@@ -1123,7 +1397,7 @@
             }
           ],
           "subjectLiteral": [
-            "Ramana, -- Maharshi."
+            "Ramana, Maharshi."
           ],
           "titleDisplay": [
             "Ramaṇa Maharshi : evaṃ ātma-jñāna kā mārga. [́Hindi edition of Ramana Maharshi and the Path of Self-Knowledge by Arthur Osbourne] / lekhaka Ārthara Āsaborna ; bhūmikā lekhaka Ḍā. Sarvapallī Rādhākṛshṇana ; anuvādaka Vedarāja Vedālankāra."
@@ -1155,11 +1429,24 @@
               "identifier": [
                 "urn:barcode:33433060417486"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 82-3981"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417486"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417486"
               ],
               "requestable": [
                 false
@@ -1169,10 +1456,6 @@
                 "*OLY 82-3981"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1201,7 +1484,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000229",
         "_score": null,
@@ -1210,9 +1493,21 @@
             "97, 5 p. : ill. ;"
           ],
           "note": [
-            "Advertising matter included in paging.",
-            "Running title: Silver jubilee souvenir '72",
-            "Tamil or English."
+            {
+              "noteType": "Note",
+              "label": "Running title: Silver jubilee souvenir '72",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Tamil or English.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Advertising matter included in paging.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "[Thirumazhisaiars' Association,"
@@ -1238,11 +1533,32 @@
           "createdString": [
             "1972"
           ],
+          "idLccn": [
+            "73902510"
+          ],
           "contributorLiteral": [
             "Thirumazhisaiars' Association."
           ],
           "dateStartYear": [
             1972
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1084"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000229"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73902510"
+            }
+          ],
+          "updatedAt": 1524680629678,
+          "publicationStatement": [
+            "Madras : [Thirumazhisaiars' Association, 1972]"
           ],
           "identifier": [
             "urn:bnum:10000229",
@@ -1297,11 +1613,24 @@
               "identifier": [
                 "urn:barcode:33433060419979"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1084"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060419979"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060419979"
               ],
               "requestable": [
                 false
@@ -1311,10 +1640,6 @@
                 "*OLY 84-1084"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1343,7 +1668,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000292",
         "_score": null,
@@ -1352,7 +1677,11 @@
             "56 p. ;"
           ],
           "note": [
-            "In Sanskrit and English on opposite pages."
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit and English on opposite pages.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Sri Ramanasramam,"
@@ -1381,11 +1710,22 @@
           "createdString": [
             "1980"
           ],
-          "contributorLiteral": [
-            "Sarma, K. Lakshmana."
-          ],
           "dateStartYear": [
             1980
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 82-3739"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000292"
+            }
+          ],
+          "updatedAt": 1524680631875,
+          "publicationStatement": [
+            "Tiruvannamalai : Sri Ramanasramam, 1980."
           ],
           "identifier": [
             "urn:bnum:10000292"
@@ -1412,7 +1752,7 @@
             }
           ],
           "subjectLiteral": [
-            "Ramana, -- Maharshi."
+            "Ramana, Maharshi."
           ],
           "titleDisplay": [
             "Revelation : Śrīramaṇahṛdayam. A Sanskrit Version of the Ulladu Narpadu of Bhagavan Sri Ramana with an English translation / by K. Lakshmana Sarma, \"WHO.\""
@@ -1444,11 +1784,24 @@
               "identifier": [
                 "urn:barcode:33433060417452"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 82-3739"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417452"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417452"
               ],
               "requestable": [
                 false
@@ -1458,10 +1811,6 @@
                 "*OLY 82-3739"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1490,7 +1839,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000338",
         "_score": null,
@@ -1499,7 +1848,11 @@
             "8, 323 p. illus."
           ],
           "note": [
-            "In Sanskrit."
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Khemarāja Śrīkṛshṇadāsa,"
@@ -1525,8 +1878,29 @@
           "createdString": [
             "1963"
           ],
+          "idLccn": [
+            "sa 68013360"
+          ],
           "dateStartYear": [
             1963
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 82-3968"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000338"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 68013360"
+            }
+          ],
+          "updatedAt": 1524680636655,
+          "publicationStatement": [
+            "Bambaī, Khemarāja Śrīkṛshṇadāsa, 1963."
           ],
           "identifier": [
             "urn:bnum:10000338",
@@ -1589,11 +1963,24 @@
               "identifier": [
                 "urn:barcode:33433060417478"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 82-3968"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417478"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417478"
               ],
               "requestable": [
                 false
@@ -1603,10 +1990,6 @@
                 "*OLY 82-3968"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1635,7 +2018,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000344",
         "_score": null,
@@ -1644,9 +2027,21 @@
             "194 p."
           ],
           "note": [
-            "Includes bibliographical references.",
-            "Persian or Arabic",
-            "Translation of: Ṭibb al-Imām al-Ṣādiq."
+            {
+              "noteType": "Note",
+              "label": "Persian or Arabic",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Translation of: Ṭibb al-Imām al-Ṣādiq.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Bungāh-i Maṭbūʻātī-i ʻAṭāʼī,"
@@ -1678,14 +2073,35 @@
           "createdString": [
             "1961"
           ],
+          "idLccn": [
+            "72274632"
+          ],
           "contributorLiteral": [
             "Tihrānī, Nāṣir al-Dīn Ṣādiq."
           ],
           "dateStartYear": [
             1961
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGI 82-3991"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000344"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "72274632"
+            }
+          ],
           "dateEndYear": [
             1962
+          ],
+          "updatedAt": 1524680631625,
+          "publicationStatement": [
+            "Tihrān, Bungāh-i Maṭbūʻātī-i ʻAṭāʼī, 1339 [1961 or 1962]"
           ],
           "identifier": [
             "urn:bnum:10000344",
@@ -1714,6 +2130,7 @@
           ],
           "subjectLiteral": [
             "Hygiene.",
+            "Jaʻfar al-Ṣādiq, 702?-765 or 6.",
             "Medicine, Medieval."
           ],
           "titleDisplay": [
@@ -1749,11 +2166,20 @@
               "identifier": [
                 "urn:barcode:33433058031224"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058031224"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058031224"
               ],
               "requestable": [
                 false
@@ -1763,10 +2189,6 @@
                 "*OGI 82-3991"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1795,7 +2217,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000345",
         "_score": null,
@@ -1804,8 +2226,16 @@
             "5, 247 p."
           ],
           "note": [
-            "Persian or Arabic.",
-            "ʻAlī al-Riḍāʼs Risālah dhahabīyah: p.191-220."
+            {
+              "noteType": "Note",
+              "label": "Persian or Arabic.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "ʻAlī al-Riḍāʼs Risālah dhahabīyah: p.191-220.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Muḥammad Rizā Lavāsānī,"
@@ -1834,11 +2264,32 @@
           "createdString": [
             "1961"
           ],
+          "idLccn": [
+            "74214957"
+          ],
           "contributorLiteral": [
             "ʻAlī al-Riḍā ibn Mūsá, d. 818 or 19."
           ],
           "dateStartYear": [
             1961
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGI 82-3989"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000345"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74214957"
+            }
+          ],
+          "updatedAt": 1524680632169,
+          "publicationStatement": [
+            "Tihrān, Muḥammad Rizā Lavāsānī, 1340 [1961]"
           ],
           "identifier": [
             "urn:bnum:10000345",
@@ -1867,7 +2318,8 @@
           ],
           "subjectLiteral": [
             "Hygiene.",
-            "Medicine, Medieval."
+            "Medicine, Medieval.",
+            "ʻAlī al-Riḍā ibn Mūsá, d. 818 or 19."
           ],
           "titleDisplay": [
             "Ṭibb va bihdāsht az naẓar-i Imām ʻAlī ibn Mūsā al-Rizā, nivishtah-ʼi Naṣīr al-Dīn Mīr Ṣādiqī Tihrānī."
@@ -1902,11 +2354,20 @@
               "identifier": [
                 "urn:barcode:33433058030721"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058030721"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058030721"
               ],
               "requestable": [
                 false
@@ -1916,10 +2377,6 @@
                 "*OGI 82-3989"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -1948,7 +2405,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000348",
         "_score": null,
@@ -1957,8 +2414,16 @@
             "[28], 573 p. ;"
           ],
           "note": [
-            "Bibliography: p. [7-10] (1st group)",
-            "In Persian."
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. [7-10] (1st group)",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Persian.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Mīrzā Ḥabīb Allāh,"
@@ -1990,14 +2455,25 @@
           "createdString": [
             "1879"
           ],
-          "contributorLiteral": [
-            "Muʻtamid al-Sulṭān, Muḥammad Taqī khān Ḥakīm, mutakhalliṣ bih Ḥakīm."
-          ],
           "dateStartYear": [
             1879
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ONA+ 82-2677"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000348"
+            }
+          ],
           "dateEndYear": [
             1880
+          ],
+          "updatedAt": 1524680632562,
+          "publicationStatement": [
+            "Ṭihrān : Mīrzā Ḥabīb Allāh, 1305 [1879 or 1880]"
           ],
           "identifier": [
             "urn:bnum:10000348"
@@ -2045,16 +2521,28 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Ganj-i dānish."
+          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433059840763"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433059840763"
+                }
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433059840763"
               ],
               "requestable": [
                 false
@@ -2064,10 +2552,6 @@
                 "*ONA+ 82-2677"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -2096,7 +2580,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000379",
         "_score": null,
@@ -2105,8 +2589,16 @@
             "2 v. in 1. ;"
           ],
           "note": [
-            "Includes bibliographical references.",
-            "Persian or Arabic."
+            {
+              "noteType": "Note",
+              "label": "Persian or Arabic.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Intishārāt-i Markazī,"
@@ -2135,11 +2627,22 @@
           "createdString": [
             "1949"
           ],
-          "contributorLiteral": [
-            "Qummī, ʻAbbās ibn Muḥammad Riḍā, d. 1941."
-          ],
           "dateStartYear": [
             1949
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGI 83-4798"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000379"
+            }
+          ],
+          "updatedAt": 1524680635544,
+          "publicationStatement": [
+            "[Tihrān?] : Intishārāt-i Markazī, 1327 [1949]"
           ],
           "identifier": [
             "urn:bnum:10000379"
@@ -2192,11 +2695,20 @@
               "identifier": [
                 "urn:barcode:33433058030051"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058030051"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058030051"
               ],
               "requestable": [
                 false
@@ -2206,10 +2718,6 @@
                 "*OGI 83-4798"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2238,7 +2746,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000392",
         "_score": null,
@@ -2247,7 +2755,11 @@
             "228 p."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Cāstā Patippakam"
@@ -2276,11 +2788,29 @@
           "createdString": [
             "1970"
           ],
-          "contributorLiteral": [
-            "Gopalakrishnan, Sattanathapuram Subramania, 1916-"
+          "idLccn": [
+            "74913252"
           ],
           "dateStartYear": [
             1970
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1823"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000392"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74913252"
+            }
+          ],
+          "updatedAt": 1524680636655,
+          "publicationStatement": [
+            "Tiruccentūr, Cāstā Patippakam [1970]"
           ],
           "identifier": [
             "urn:bnum:10000392",
@@ -2309,7 +2839,7 @@
           ],
           "subjectLiteral": [
             "Fasts and feasts -- Hinduism.",
-            "Hindu temples -- India -- Tamil Nadu."
+            "Hindu temples -- Tamil Nadu."
           ],
           "titleDisplay": [
             "Aimperu viḻākkaḷ. Tokuppāciriyar Centil Tuṟavi."
@@ -2344,11 +2874,24 @@
               "identifier": [
                 "urn:barcode:33433060420118"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1823"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060420118"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060420118"
               ],
               "requestable": [
                 false
@@ -2358,10 +2901,6 @@
                 "*OLY 84-1823"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2390,7 +2929,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000397",
         "_score": null,
@@ -2399,8 +2938,16 @@
             "87 p."
           ],
           "note": [
-            "In Tamil.",
-            "Revision of a speech delivered at the 41st annual day celebration of the Saivasiddhanta Sabha, Tuticorin, 1924."
+            {
+              "noteType": "Note",
+              "label": "Revision of a speech delivered at the 41st annual day celebration of the Saivasiddhanta Sabha, Tuticorin, 1924.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Araci Puk Ṭippō,"
@@ -2429,11 +2976,32 @@
           "createdString": [
             "1970"
           ],
+          "idLccn": [
+            "73913694"
+          ],
           "contributorLiteral": [
             "Saivasiddhanta Sabha."
           ],
           "dateStartYear": [
             1970
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1838"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000397"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73913694"
+            }
+          ],
+          "updatedAt": 1524680636602,
+          "publicationStatement": [
+            "Ceṉṉai, Araci Puk Ṭippō, 1970."
           ],
           "identifier": [
             "urn:bnum:10000397",
@@ -2497,11 +3065,24 @@
               "identifier": [
                 "urn:barcode:33433060420126"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1838"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060420126"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060420126"
               ],
               "requestable": [
                 false
@@ -2511,10 +3092,6 @@
                 "*OLY 84-1838"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2543,7 +3120,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000406",
         "_score": null,
@@ -2552,7 +3129,11 @@
             "220 p. port."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Acciṭṭōr Kāntitācaṉ Accakam,"
@@ -2581,11 +3162,32 @@
           "createdString": [
             "1969"
           ],
+          "idLccn": [
+            "74914694"
+          ],
           "contributorLiteral": [
             "Paḻaṉiccāmip Pulavar, K."
           ],
           "dateStartYear": [
             1969
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1725"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000406"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74914694"
+            }
+          ],
+          "updatedAt": 1524680635482,
+          "publicationStatement": [
+            "[Kōvai, Acciṭṭōr Kāntitācaṉ Accakam, 1969]"
           ],
           "identifier": [
             "urn:bnum:10000406",
@@ -2648,11 +3250,24 @@
               "identifier": [
                 "urn:barcode:33433060420076"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1725"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060420076"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060420076"
               ],
               "requestable": [
                 false
@@ -2662,10 +3277,6 @@
                 "*OLY 84-1725"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2694,7 +3305,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000413",
         "_score": null,
@@ -2703,7 +3314,11 @@
             "100 p. ;"
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Cūppar Pavar Papḷikēṣaṉs,"
@@ -2732,11 +3347,29 @@
           "createdString": [
             "1970"
           ],
-          "contributorLiteral": [
-            "Śrī Tēvi Karumāri Tāsar."
+          "idLccn": [
+            "75914516"
           ],
           "dateStartYear": [
             1970
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1817"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000413"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75914516"
+            }
+          ],
+          "updatedAt": 1524680635544,
+          "publicationStatement": [
+            "Ceṉṉai : Cūppar Pavar Papḷikēṣaṉs, [1970]"
           ],
           "identifier": [
             "urn:bnum:10000413",
@@ -2790,11 +3423,24 @@
               "identifier": [
                 "urn:barcode:33433060420100"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1817"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060420100"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060420100"
               ],
               "requestable": [
                 false
@@ -2804,10 +3450,6 @@
                 "*OLY 84-1817"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2836,7 +3478,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000421",
         "_score": null,
@@ -2845,7 +3487,11 @@
             "4, 80 p."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Araci Puk Ṭippō,"
@@ -2874,11 +3520,29 @@
           "createdString": [
             "1969"
           ],
-          "contributorLiteral": [
-            "Kaliyāṇacuntaraṉār, Tiru. Vi., 1883-1953."
+          "idLccn": [
+            "74913567"
           ],
           "dateStartYear": [
             1969
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1736"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000421"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74913567"
+            }
+          ],
+          "updatedAt": 1524680632562,
+          "publicationStatement": [
+            "Ceṉṉai, Araci Puk Ṭippō, 1969."
           ],
           "identifier": [
             "urn:bnum:10000421",
@@ -2907,6 +3571,7 @@
           ],
           "subjectLiteral": [
             "Hindu philosophy.",
+            "Nammāḻvār.",
             "Vaishnavism."
           ],
           "titleDisplay": [
@@ -2942,11 +3607,24 @@
               "identifier": [
                 "urn:barcode:33433060420092"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1736"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060420092"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060420092"
               ],
               "requestable": [
                 false
@@ -2956,10 +3634,6 @@
                 "*OLY 84-1736"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -2988,7 +3662,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000424",
         "_score": null,
@@ -2997,8 +3671,16 @@
             "7, 79 p. ;"
           ],
           "note": [
-            "First published in 1931 as an appendix to v.4 of Mīmāṃsādarśana.",
-            "In Sanskrit."
+            {
+              "noteType": "Note",
+              "label": "First published in 1931 as an appendix to v.4 of Mīmāṃsādarśana.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Ānandāśramasaṃsthā,"
@@ -3027,6 +3709,9 @@
           "createdString": [
             "1973"
           ],
+          "idLccn": [
+            "76903136"
+          ],
           "seriesStatement": [
             "Ānandāśramasaṃskrtagranthāvaliḥ; granthāṇkaḥ 137"
           ],
@@ -3036,8 +3721,26 @@
           "dateStartYear": [
             1973
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKM 97-3015"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000424"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "76903136"
+            }
+          ],
           "uniformTitle": [
             "Aṅgatvanirukti"
+          ],
+          "updatedAt": 1524680632508,
+          "publicationStatement": [
+            "Puṇyākhyapattane : Ānandāśramasaṃsthā, 1973."
           ],
           "identifier": [
             "urn:bnum:10000424",
@@ -3065,6 +3768,7 @@
             }
           ],
           "subjectLiteral": [
+            "Jaimini.",
             "Mimamsa."
           ],
           "titleDisplay": [
@@ -3097,11 +3801,20 @@
               "identifier": [
                 "urn:barcode:33433058597968"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058597968"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058597968"
               ],
               "requestable": [
                 false
@@ -3111,10 +3824,6 @@
                 "*OKM 97-3015"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -3143,7 +3852,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000461",
         "_score": null,
@@ -3152,7 +3861,11 @@
             "2v."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Caracuvatimāl] Nūlnilaiyak kaurava kāriyatarici S. Kōpālaiyaravarkaḷ,"
@@ -3181,6 +3894,9 @@
           "createdString": [
             "1961"
           ],
+          "idLccn": [
+            "sa 65009124"
+          ],
           "seriesStatement": [
             "Tañcai Caracuvati Māl. Veḷiyīṭu eṇ 91, 100"
           ],
@@ -3191,11 +3907,29 @@
           "dateStartYear": [
             1961
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKOK 81-2812"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000461"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 65009124"
+            }
+          ],
           "uniformTitle": [
             "Puranas. Kūrmapurāṇa. Tamil"
           ],
           "dateEndYear": [
             1963
+          ],
+          "updatedAt": 1524680635482,
+          "publicationStatement": [
+            "[Tañcai, Caracuvatimāl] Nūlnilaiyak kaurava kāriyatarici S. Kōpālaiyaravarkaḷ, 1961-1963."
           ],
           "identifier": [
             "urn:bnum:10000461",
@@ -3245,6 +3979,7 @@
             }
           ],
           "titleAlt": [
+            "Kūrma Purāṇa.",
             "Puranas. Kūrmapurāṇa."
           ],
           "items": [
@@ -3258,11 +3993,20 @@
               "identifier": [
                 "urn:barcode:33433058648969"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058648969"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058648969"
               ],
               "requestable": [
                 false
@@ -3272,10 +4016,6 @@
                 "*OKOK 81-2812"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -3304,11 +4044,20 @@
               "identifier": [
                 "urn:barcode:33433058648977"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058648977"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058648977"
               ],
               "requestable": [
                 false
@@ -3318,10 +4067,6 @@
                 "*OKOK 81-2812"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -3350,7 +4095,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000468",
         "_score": null,
@@ -3359,9 +4104,21 @@
             "16, 312 p. port."
           ],
           "note": [
-            "\"Banārasa Hindū Yūnivarsiṭī dvārā Pī-eca. Ḍī. kī upādhi ke lie svīkrta śodha-prabandha.\"",
-            "Bibliography: p. [282]-294.",
-            "In Hindi."
+            {
+              "noteType": "Note",
+              "label": "\"Banārasa Hindū Yūnivarsiṭī dvārā Pī-eca. Ḍī. kī upādhi ke lie svīkrta śodha-prabandha.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. [282]-294.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Sohanalāla Jainadharma Pracāraka Samiti; prāpti-sthāna: Pārśvanātha Vidyāśrama Śodha Saṃsthāna, Vārāṇasī"
@@ -3390,14 +4147,32 @@
           "createdString": [
             "1972"
           ],
+          "idLccn": [
+            "73900921"
+          ],
           "seriesStatement": [
             "Pārśvanātha Vidyāśrama granthamālā, 17"
           ],
-          "contributorLiteral": [
-            "Sinha, Bashistha Narayan, 1935-"
-          ],
           "dateStartYear": [
             1972
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLX 83-155"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000468"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73900921"
+            }
+          ],
+          "updatedAt": 1524680632508,
+          "publicationStatement": [
+            "Amrtasara, Sohanalāla Jainadharma Pracāraka Samiti; prāpti-sthāna: Pārśvanātha Vidyāśrama Śodha Saṃsthāna, Vārāṇasī [1972]"
           ],
           "identifier": [
             "urn:bnum:10000468",
@@ -3460,11 +4235,24 @@
               "identifier": [
                 "urn:barcode:33433060359332"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLX 83-155"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060359332"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060359332"
               ],
               "requestable": [
                 false
@@ -3474,10 +4262,6 @@
                 "*OLX 83-155"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -3506,7 +4290,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000627",
         "_score": null,
@@ -3515,9 +4299,21 @@
             "363, 53 p."
           ],
           "note": [
-            "Added t.p.: The travels of Ibn Jubayr. Edited from a ms. in the University Library of Leyden by William Wright.",
-            "Includes bibliographical references and index.",
-            "Original ed. issued as v. 5 of \"E.J.W. Gibb memorial\" series."
+            {
+              "noteType": "Note",
+              "label": "Added t.p.: The travels of Ibn Jubayr. Edited from a ms. in the University Library of Leyden by William Wright.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Original ed. issued as v. 5 of \"E.J.W. Gibb memorial\" series.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "AMS Press,"
@@ -3549,6 +4345,9 @@
           "createdString": [
             "1973"
           ],
+          "idLccn": [
+            "77173005"
+          ],
           "contributorLiteral": [
             "Goeje, M. J. de (Michael Jan), 1836-1909.",
             "Wright, William, 1830-1889."
@@ -3556,8 +4355,29 @@
           "dateStartYear": [
             1973
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000627"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "77173005"
+            }
+          ],
+          "uniformTitle": [
+            "\"E.J.W. Gibb memorial\" series ; v.5."
+          ],
           "dateEndYear": [
             1907
+          ],
+          "updatedAt": 1525296777495,
+          "publicationStatement": [
+            "[New York, AMS Press, 1973] 1907."
           ],
           "identifier": [
             "urn:bnum:10000627",
@@ -3609,16 +4429,32 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Travels of Ibn Jubayr."
+          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433096515220"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433096515220"
+                }
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433096515220"
               ],
               "requestable": [
                 false
@@ -3631,16 +4467,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3660,11 +4492,24 @@
               "identifier": [
                 "urn:barcode:33433115326104"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433115326104"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:u",
                   "label": "Supervised use"
                 }
+              ],
+              "idBarcode": [
+                "33433115326104"
               ],
               "requestable": [
                 true
@@ -3674,10 +4519,6 @@
                 "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:66",
-                  "label": "book, poor condition, non-MaRLI"
-                },
                 {
                   "id": "catalogItemType:66",
                   "label": "book, poor condition, non-MaRLI"
@@ -3706,11 +4547,24 @@
               "identifier": [
                 "urn:barcode:33433014525079"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFV 87-659"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433014525079"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433014525079"
               ],
               "requestable": [
                 true
@@ -3723,16 +4577,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3752,7 +4602,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000628",
         "_score": null,
@@ -3761,10 +4611,26 @@
             "22, 484 p. ;"
           ],
           "note": [
-            "\"Rājasthāna Viśvavidyālaya kī Pī.eca. Ḍī. kī upādhi ke lie svīkrta śodha prabandha.\"",
-            "Added t.p.: Historical dramas in Sanskrit literature.",
-            "In Hindi.",
-            "Includes bibliography and index."
+            {
+              "noteType": "Note",
+              "label": "Added t.p.: Historical dramas in Sanskrit literature.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"Rājasthāna Viśvavidyālaya kī Pī.eca. Ḍī. kī upādhi ke lie svīkrta śodha prabandha.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliography and index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Devanāgara Prakāśana,"
@@ -3793,11 +4659,29 @@
           "createdString": [
             "1974"
           ],
-          "contributorLiteral": [
-            "Sharma, Shyama."
+          "idLccn": [
+            "75900847"
           ],
           "dateStartYear": [
             1974
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKB 83.388"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000628"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75900847"
+            }
+          ],
+          "updatedAt": 1524680637687,
+          "publicationStatement": [
+            "Jayapura : Devanāgara Prakāśana, [1974]"
           ],
           "identifier": [
             "urn:bnum:10000628",
@@ -3854,11 +4738,20 @@
               "identifier": [
                 "urn:barcode:33433058548284"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058548284"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058548284"
               ],
               "requestable": [
                 false
@@ -3868,10 +4761,6 @@
                 "*OKB 83.388"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -3900,7 +4789,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000630",
         "_score": null,
@@ -3909,8 +4798,16 @@
             "2, 230 p. ;"
           ],
           "note": [
-            "In Hindi.",
-            "Includes bibliographical references and index."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Hindī Vibhāga, Kalakattā Viśvavidyālaya ke lie Hindī Pustaka Ejensī,"
@@ -3939,14 +4836,32 @@
           "createdString": [
             "1974"
           ],
+          "idLccn": [
+            "75900873"
+          ],
           "seriesStatement": [
             "Śrīghanaśyāmadāsa Biṛalā Hindī vyākhyānamālā; 1972"
           ],
-          "contributorLiteral": [
-            "Siṃha, Bhagavatī Prasāda."
-          ],
           "dateStartYear": [
             1974
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-185"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000630"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75900873"
+            }
+          ],
+          "updatedAt": 1524680641623,
+          "publicationStatement": [
+            "Kalakattā : Hindī Vibhāga, Kalakattā Viśvavidyālaya ke lie Hindī Pustaka Ejensī, 1974."
           ],
           "identifier": [
             "urn:bnum:10000630",
@@ -4005,11 +4920,24 @@
               "identifier": [
                 "urn:barcode:33433060417874"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-185"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417874"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417874"
               ],
               "requestable": [
                 false
@@ -4019,10 +4947,6 @@
                 "*OLY 83-185"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4051,7 +4975,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000647",
         "_score": null,
@@ -4060,9 +4984,21 @@
             "360 p. ;"
           ],
           "note": [
-            "\"Bhagavān Mahāvīra kī pacīsavīṃ nirvāṇa śatābdī ke upalaksha meṃ.\"",
-            "In Hindi.",
-            "Includes bibliographical references and index."
+            {
+              "noteType": "Note",
+              "label": "\"Bhagavān Mahāvīra kī pacīsavīṃ nirvāṇa śatābdī ke upalaksha meṃ.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Jaina Viśva Bhāratī Prakāśana,"
@@ -4091,11 +5027,29 @@
           "createdString": [
             "1974"
           ],
-          "contributorLiteral": [
-            "Nathamal, Muni, 1920-"
+          "idLccn": [
+            "75900818"
           ],
           "dateStartYear": [
             1974
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLX 83-353"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000647"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75900818"
+            }
+          ],
+          "updatedAt": 1524680641595,
+          "publicationStatement": [
+            "Lāḍnūṃ : Jaina Viśva Bhāratī Prakāśana, 1974."
           ],
           "identifier": [
             "urn:bnum:10000647",
@@ -4158,11 +5112,24 @@
               "identifier": [
                 "urn:barcode:33433060359365"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLX 83-353"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060359365"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060359365"
               ],
               "requestable": [
                 false
@@ -4172,10 +5139,6 @@
                 "*OLX 83-353"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4204,7 +5167,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000654",
         "_score": null,
@@ -4213,7 +5176,11 @@
             "200 p."
           ],
           "note": [
-            "English and Sanskrit; introd. in English."
+            {
+              "noteType": "Language",
+              "label": "English and Sanskrit; introd. in English.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Tapovanam Pub. House"
@@ -4239,14 +5206,35 @@
           "createdString": [
             "1965"
           ],
+          "idLccn": [
+            "sa 68001969"
+          ],
           "contributorLiteral": [
             "Vimalananda, Swami. and tr."
           ],
           "dateStartYear": [
             1965
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-374"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000654"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 68001969"
+            }
+          ],
           "uniformTitle": [
             "Viṣṇusahasranāma."
+          ],
+          "updatedAt": 1524680637687,
+          "publicationStatement": [
+            "Tirupparaitturai; Tapovanam Pub. House [1965]"
           ],
           "identifier": [
             "urn:bnum:10000654",
@@ -4299,7 +5287,8 @@
             }
           ],
           "titleAlt": [
-            "Viṣṇusahasranāma."
+            "Vishnu sahasranama stotram.",
+            "Viṣṇusahasranāmastotram."
           ],
           "items": [
             {
@@ -4312,11 +5301,24 @@
               "identifier": [
                 "urn:barcode:33433060417890"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-374"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417890"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417890"
               ],
               "requestable": [
                 false
@@ -4326,10 +5328,6 @@
                 "*OLY 83-374"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4358,7 +5356,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000737",
         "_score": null,
@@ -4367,10 +5365,26 @@
             "44, 56, 36 p."
           ],
           "note": [
-            "\"Sātāraṇa vaippacittirumūla malariṉ anupantam.\"",
-            "Each work has also separate t.p.",
-            "In Tamil.",
-            "Running title: Māmuṉivaṉ tivya sūkti sārārtta mālikai."
+            {
+              "noteType": "Note",
+              "label": "Running title: Māmuṉivaṉ tivya sūkti sārārtta mālikai.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Each work has also separate t.p.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"Sātāraṇa vaippacittirumūla malariṉ anupantam.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "kiṭaikkumiṭam Krantamālā Āpīs]"
@@ -4399,6 +5413,9 @@
           "createdString": [
             "1970"
           ],
+          "idLccn": [
+            "73906525"
+          ],
           "contributorLiteral": [
             "Annangaracharya, Prativadi Bhayankara, Swami, 1891-",
             "Maṇavāḷa Māmuṉi, 1370-1444."
@@ -4406,8 +5423,26 @@
           "dateStartYear": [
             1970
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-2976"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000737"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73906525"
+            }
+          ],
           "uniformTitle": [
             "Upatēcarattiṉamālai"
+          ],
+          "updatedAt": 1524680637743,
+          "publicationStatement": [
+            "[Kāñcīpuram, kiṭaikkumiṭam Krantamālā Āpīs] 1970."
           ],
           "identifier": [
             "urn:bnum:10000737",
@@ -4467,11 +5502,24 @@
               "identifier": [
                 "urn:barcode:33433060418666"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-2976"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060418666"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060418666"
               ],
               "requestable": [
                 false
@@ -4481,10 +5529,6 @@
                 "*OLY 83-2976"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4513,7 +5557,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000739",
         "_score": null,
@@ -4522,8 +5566,16 @@
             "968 p. col. illus."
           ],
           "note": [
-            "Hindi and Sanskrit; introductory matter in Hindi.",
-            "On cover: Upaniṣad-bhāṣya, sānuvāda, khaṇḍa 3."
+            {
+              "noteType": "Note",
+              "label": "On cover: Upaniṣad-bhāṣya, sānuvāda, khaṇḍa 3.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "Hindi and Sanskrit; introductory matter in Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Gītā Presa"
@@ -4552,17 +5604,38 @@
           "createdString": [
             "1966"
           ],
+          "idLccn": [
+            "sa 68015169"
+          ],
           "contributorLiteral": [
             "Saṅkarācārya."
           ],
           "dateStartYear": [
             1966
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKLB 83-2978"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000739"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 68015169"
+            }
+          ],
           "uniformTitle": [
             "Upanishads. Chāndogyopaniṣad."
           ],
           "dateEndYear": [
             1967
+          ],
+          "updatedAt": 1524680642501,
+          "publicationStatement": [
+            "Gorakhapura, Gītā Presa [1966 or 7]"
           ],
           "identifier": [
             "urn:bnum:10000739",
@@ -4611,9 +5684,6 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Upanishads. Chāndogyopaniṣad."
-          ],
           "items": [
             {
               "owner": [
@@ -4625,11 +5695,20 @@
               "identifier": [
                 "urn:barcode:33433058574710"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058574710"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058574710"
               ],
               "requestable": [
                 false
@@ -4639,10 +5718,6 @@
                 "*OKLB 83-2978"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4671,7 +5746,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000795",
         "_score": null,
@@ -4680,8 +5755,16 @@
             "XV, 453 p."
           ],
           "note": [
-            "\"Vālmīki Rāmāyṇam\" (p. 389-453) comprises selected verses from the Valmīki Rāmāyaṇa.",
-            "Sanskrit or Tamil."
+            {
+              "noteType": "Note",
+              "label": "Sanskrit or Tamil.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"Vālmīki Rāmāyṇam\" (p. 389-453) comprises selected verses from the Valmīki Rāmāyaṇa.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Es. Sukumār; kiṭaikkumiṭam Pāri Nilaiyam, Ceṉṉai,"
@@ -4710,11 +5793,29 @@
           "createdString": [
             "1971"
           ],
-          "contributorLiteral": [
-            "Srinivasan, K. S. (Karur Soundara), 1920-"
+          "idLccn": [
+            "72904732"
           ],
           "dateStartYear": [
             1971
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 82-1781"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000795"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "72904732"
+            }
+          ],
+          "updatedAt": 1524680637743,
+          "publicationStatement": [
+            "[Putu Tilli, Es. Sukumār; kiṭaikkumiṭam Pāri Nilaiyam, Ceṉṉai, 1971]"
           ],
           "identifier": [
             "urn:bnum:10000795",
@@ -4742,7 +5843,7 @@
             }
           ],
           "subjectLiteral": [
-            "Kampar, -- active 9th century.",
+            "Kampar, active 9th century.",
             "Vālmīki."
           ],
           "titleDisplay": [
@@ -4778,11 +5879,24 @@
               "identifier": [
                 "urn:barcode:33433060417288"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 82-1781"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417288"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417288"
               ],
               "requestable": [
                 false
@@ -4792,10 +5906,6 @@
                 "*OLY 82-1781"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4824,7 +5934,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000818",
         "_score": null,
@@ -4833,8 +5943,16 @@
             "190 p."
           ],
           "note": [
-            "Bibliography: p. 190.",
-            "In Arabic."
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 190.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "al-Azhar, Majmaʻal-Buḥūth al-Islāmīyah,"
@@ -4863,14 +5981,32 @@
           "createdString": [
             "1969"
           ],
+          "idLccn": [
+            "76960922"
+          ],
           "seriesStatement": [
             "Silsilat al-buḥūth al-Islāmīyah, al-kitāb 1"
           ],
-          "contributorLiteral": [
-            "Maḥmūd, ʻAbd al-Ḥalīm."
-          ],
           "dateStartYear": [
             1969
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGE 82-2828"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000818"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "76960922"
+            }
+          ],
+          "updatedAt": 1524680642501,
+          "publicationStatement": [
+            "[al-Qāhirah] al-Azhar, Majmaʻal-Buḥūth al-Islāmīyah, 1969."
           ],
           "identifier": [
             "urn:bnum:10000818",
@@ -4898,7 +6034,7 @@
             }
           ],
           "subjectLiteral": [
-            "Muḥammad, -- Prophet, -- -632."
+            "Muḥammad, Prophet, -632."
           ],
           "titleDisplay": [
             "al-Rasūl, ṣallá Allāh ʻalayhi wa-sallam, lamḁhāt min ̥hayātih .... wa-nafaḥāt min  hadyih [taʻlīf] ʻAbd al-Ḥalīm Maḥmūd."
@@ -4933,11 +6069,20 @@
               "identifier": [
                 "urn:barcode:33433057993358"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057993358"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433057993358"
               ],
               "requestable": [
                 false
@@ -4947,10 +6092,6 @@
                 "*OGE 82-2828"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -4979,7 +6120,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000912",
         "_score": null,
@@ -4988,7 +6129,11 @@
             "245 p."
           ],
           "note": [
-            "In Hindi."
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Granthama"
@@ -5017,11 +6162,29 @@
           "createdString": [
             "1972"
           ],
-          "contributorLiteral": [
-            "Sharma, Munshi Ram, 1901-"
+          "idLccn": [
+            "72901165"
           ],
           "dateStartYear": [
             1972
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-31"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000912"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "72901165"
+            }
+          ],
+          "updatedAt": 1524680647595,
+          "publicationStatement": [
+            "Kānapura, Granthama [1972]"
           ],
           "identifier": [
             "urn:bnum:10000912",
@@ -5049,7 +6212,7 @@
             }
           ],
           "subjectLiteral": [
-            "Tulasīdāsa, -- 1532-1623."
+            "Tulasīdāsa, 1532-1623."
           ],
           "titleDisplay": [
             "Tulasī kā mānasa. [Lekhaka] Munśīrāma Śarmā."
@@ -5078,11 +6241,24 @@
               "identifier": [
                 "urn:barcode:33433060417726"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-31"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417726"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417726"
               ],
               "requestable": [
                 false
@@ -5092,10 +6268,6 @@
                 "*OLY 83-31"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5124,7 +6296,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001029",
         "_score": null,
@@ -5133,7 +6305,11 @@
             "xivi, 400, 52 p., [14] leaves of plates : ill. ;"
           ],
           "note": [
-            "In Tamil, foreword in English."
+            {
+              "noteType": "Language",
+              "label": "In Tamil, foreword in English.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Srī Satkuru Cēsātri Svāmikaḷ Matyasta Pracārasapā,"
@@ -5162,11 +6338,29 @@
           "createdString": [
             "1975"
           ],
-          "contributorLiteral": [
-            "Nārāyaṇa Cāstirikal, Kuḻumaṇi."
+          "idLccn": [
+            "76902259"
           ],
           "dateStartYear": [
             1975
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-4924"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001029"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "76902259"
+            }
+          ],
+          "updatedAt": 1523471274960,
+          "publicationStatement": [
+            "Kōyamputtūr : Srī Satkuru Cēsātri Svāmikaḷ Matyasta Pracārasapā, 1975."
           ],
           "identifier": [
             "urn:bnum:10001029",
@@ -5194,6 +6388,7 @@
             }
           ],
           "subjectLiteral": [
+            "Cēsatri, Swami, 1870-1929.",
             "Hindus -- Biography."
           ],
           "titleDisplay": [
@@ -5229,11 +6424,24 @@
               "identifier": [
                 "urn:barcode:33433060419664"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-4924"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060419664"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060419664"
               ],
               "requestable": [
                 false
@@ -5243,10 +6451,6 @@
                 "*OLY 83-4924"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5275,7 +6479,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001042",
         "_score": null,
@@ -5284,9 +6488,21 @@
             "30, 122 p."
           ],
           "note": [
-            "Added t.p.: Tarkabhasha & Anekantavadanirasa of Mokshakaragupta and Jitaripad.",
-            "Hindi and Sanskrit; introductory matter in Hindi.",
-            "Running title: Bauddha-tarkabhāṣā."
+            {
+              "noteType": "Note",
+              "label": "Added t.p.: Tarkabhasha & Anekantavadanirasa of Mokshakaragupta and Jitaripad.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Running title: Bauddha-tarkabhāṣā.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "Hindi and Sanskrit; introductory matter in Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Prācya Prakāśana"
@@ -5315,12 +6531,33 @@
           "createdString": [
             "1969"
           ],
+          "idLccn": [
+            "71901168"
+          ],
           "contributorLiteral": [
             "Giri, Ragunath. and tr.",
             "Jitāri, active 940-980."
           ],
           "dateStartYear": [
             1969
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLWF 83-4679"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001042"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "71901168"
+            }
+          ],
+          "updatedAt": 1523471271458,
+          "publicationStatement": [
+            "Vārāṇasī, Prācya Prakāśana [1969]"
           ],
           "identifier": [
             "urn:bnum:10001042",
@@ -5372,6 +6609,11 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Anekantavadanirasa.",
+            "Bauddha-tarkabhāṣā.",
+            "Tarkabhasha."
+          ],
           "items": [
             {
               "owner": [
@@ -5383,11 +6625,20 @@
               "identifier": [
                 "urn:barcode:33433059862981"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433059862981"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433059862981"
               ],
               "requestable": [
                 false
@@ -5397,10 +6648,6 @@
                 "*OLWF 83-4679"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5429,7 +6676,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001083",
         "_score": null,
@@ -5438,8 +6685,16 @@
             "9, 142 p. ;"
           ],
           "note": [
-            "Includes index.",
-            "Text in Sanskrit; prefatory matter in Hindi."
+            {
+              "noteType": "Note",
+              "label": "Includes index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "Text in Sanskrit; prefatory matter in Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Bhāratīya Prācyatatva-Prakāśana Samiti ; prāptisthāna, Śā. Ramaṇala Vajecanda,"
@@ -5471,14 +6726,32 @@
           "createdString": [
             "1974"
           ],
-          "contributorLiteral": [
-            "Yaśovijaya, 1624-1688."
+          "idLccn": [
+            "76902374"
           ],
           "dateStartYear": [
             1974
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLX 84-289"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001083"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "76902374"
+            }
+          ],
           "dateEndYear": [
             1975
+          ],
+          "updatedAt": 1523471281939,
+          "publicationStatement": [
+            "Pindabāṛā : Bhāratīya Prācyatatva-Prakāśana Samiti ; Ȧhamadābāda : prāptisthāna, Śā. Ramaṇala Vajecanda, Vikrama Saṃ 2031 [1974 or 1975]"
           ],
           "identifier": [
             "urn:bnum:10001083",
@@ -5541,11 +6814,24 @@
               "identifier": [
                 "urn:barcode:33433060359589"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLX 84-289"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060359589"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060359589"
               ],
               "requestable": [
                 false
@@ -5555,10 +6841,6 @@
                 "*OLX 84-289"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5587,7 +6869,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001094",
         "_score": null,
@@ -5627,6 +6909,20 @@
           ],
           "dateStartYear": [
             1964
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OCF 81-3103"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001094"
+            }
+          ],
+          "updatedAt": 1523471271135,
+          "publicationStatement": [
+            "[S.l.] : Maktabat al-Maḥabbah, 1964"
           ],
           "identifier": [
             "urn:bnum:10001094"
@@ -5686,11 +6982,20 @@
               "identifier": [
                 "urn:barcode:33433017339361"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433017339361"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433017339361"
               ],
               "requestable": [
                 false
@@ -5700,10 +7005,6 @@
                 "*OCF 81-3103"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5732,11 +7033,20 @@
               "identifier": [
                 "urn:barcode:33433017339353"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433017339353"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433017339353"
               ],
               "requestable": [
                 false
@@ -5746,10 +7056,6 @@
                 "*OCF 81-3103"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5778,7 +7084,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001112",
         "_score": null,
@@ -5787,7 +7093,11 @@
             "80 p. ;"
           ],
           "note": [
-            "In Arabic."
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Mukhtār Abū al-ʻAzāʼim,"
@@ -5816,11 +7126,29 @@
           "createdString": [
             "1973"
           ],
-          "contributorLiteral": [
-            "Abū al-ʻAzāʼim, Muḥammad Māḍī."
+          "idLccn": [
+            "74960195"
           ],
           "dateStartYear": [
             1973
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGE 82-1575"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001112"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74960195"
+            }
+          ],
+          "updatedAt": 1523471281901,
+          "publicationStatement": [
+            "[al. Qāhirah] : Mukhtār Abū al-ʻAzāʼim, [1973]"
           ],
           "identifier": [
             "urn:bnum:10001112",
@@ -5848,7 +7176,7 @@
             }
           ],
           "subjectLiteral": [
-            "Muḥammad, -- Prophet, -- -632 -- Prayers and devotions."
+            "Muḥammad, Prophet, -632 -- Prayers and devotions."
           ],
           "titleDisplay": [
             "al-Bashāʼir fī mawlid al-Mukhtār ... / lil-sayyid Muḥammad Māḍī Abū al-ʻAzāʼim."
@@ -5877,11 +7205,20 @@
               "identifier": [
                 "urn:barcode:33433057993127"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057993127"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433057993127"
               ],
               "requestable": [
                 false
@@ -5891,10 +7228,6 @@
                 "*OGE 82-1575"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -5923,7 +7256,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001164",
         "_score": null,
@@ -5932,7 +7265,11 @@
             "36, 608, 40 p. port."
           ],
           "note": [
-            "Added t.p.: The philosophy of oriental music, by Michael Allawerdi."
+            {
+              "noteType": "Note",
+              "label": "Added t.p.: The philosophy of oriental music, by Michael Allawerdi.",
+              "type": "bf:Note"
+            }
           ],
           "language": [
             {
@@ -5958,11 +7295,29 @@
           "createdString": [
             "1950"
           ],
-          "contributorLiteral": [
-            "Allawerdi, Michael."
+          "idLccn": [
+            "ne 66001433 /MN"
           ],
           "dateStartYear": [
             1950
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JME 82-175"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001164"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "ne 66001433 /MN"
+            }
+          ],
+          "updatedAt": 1523471271458,
+          "publicationStatement": [
+            "Dimashq [1950]"
           ],
           "identifier": [
             "urn:bnum:10001164",
@@ -6014,6 +7369,9 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Philosophy of oriental music."
+          ],
           "items": [
             {
               "owner": [
@@ -6025,11 +7383,24 @@
               "identifier": [
                 "urn:barcode:33433098691227"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OG (Allawerdi. Falsafat al-mūsīqá al-Sharqīyah)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433098691227"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433098691227"
               ],
               "requestable": [
                 false
@@ -6039,10 +7410,6 @@
                 "*OG (Allawerdi. Falsafat al-mūsīqá al-Sharqīyah)"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -6071,11 +7438,20 @@
               "identifier": [
                 "urn:barcode:33433032678454"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032678454"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433032678454"
               ],
               "requestable": [
                 true
@@ -6085,10 +7461,6 @@
                 "JME 82-175"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                },
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
@@ -6117,7 +7489,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001190",
         "_score": null,
@@ -6126,8 +7498,16 @@
             "320p. ;"
           ],
           "note": [
-            "Bibliography: p. 313-320.",
-            "Colophon title."
+            {
+              "noteType": "Note",
+              "label": "Colophon title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 313-320.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Wen jin chu ban she,"
@@ -6156,11 +7536,29 @@
           "createdString": [
             "1975"
           ],
-          "contributorLiteral": [
-            "Ye, Long."
+          "idLccn": [
+            "76838266"
           ],
           "dateStartYear": [
             1975
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OVK 82-796"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001190"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "76838266"
+            }
+          ],
+          "updatedAt": 1525296779410,
+          "publicationStatement": [
+            "[Taipei] : Wen jin chu ban she, Min'guo 64 [1975]"
           ],
           "identifier": [
             "urn:bnum:10001190",
@@ -6217,11 +7615,24 @@
               "identifier": [
                 "urn:barcode:33433011952243"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OVK 82-796"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433011952243"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433011952243"
               ],
               "requestable": [
                 false
@@ -6234,16 +7645,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6263,7 +7670,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001233",
         "_score": null,
@@ -6272,8 +7679,16 @@
             "xviii, 269 p. ;"
           ],
           "note": [
-            "Classical Hindu text.",
-            "In Malayalam."
+            {
+              "noteType": "Note",
+              "label": "In Malayalam.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Classical Hindu text.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Kēraḷa Sāhitya Akkādami ; vitaraṇaṃ, Nāṣanal Bukk Sṯāḷ,"
@@ -6299,14 +7714,35 @@
           "createdString": [
             "1976"
           ],
+          "idLccn": [
+            "78900499"
+          ],
           "contributorLiteral": [
             "Krṣṇapiḷḷa, Es. En."
           ],
           "dateStartYear": [
             1976
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-598"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001233"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "78900499"
+            }
+          ],
           "uniformTitle": [
             "Puranas. Bhāgavatapurāṇa. Malayalam."
+          ],
+          "updatedAt": 1523471288916,
+          "publicationStatement": [
+            "[Trśūr] : Kēraḷa Sāhitya Akkādami ; Kōṭṭayaṃ : vitaraṇaṃ, Nāṣanal Bukk Sṯāḷ, 1976."
           ],
           "identifier": [
             "urn:bnum:10001233",
@@ -6355,9 +7791,6 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Puranas. Bhāgavatapurāṇa."
-          ],
           "items": [
             {
               "owner": [
@@ -6369,11 +7802,24 @@
               "identifier": [
                 "urn:barcode:33433060419870"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-598"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060419870"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060419870"
               ],
               "requestable": [
                 false
@@ -6383,10 +7829,6 @@
                 "*OLY 84-598"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -6415,7 +7857,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001239",
         "_score": null,
@@ -6424,7 +7866,11 @@
             "679 p. : ports. ;"
           ],
           "note": [
-            "In Hindi."
+            {
+              "noteType": "Language",
+              "label": "In Hindi.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Śivalāla Agravāla eṇḍa Kampanī,"
@@ -6459,6 +7905,20 @@
           "dateStartYear": [
             1979
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 82-3982"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001239"
+            }
+          ],
+          "updatedAt": 1523471277271,
+          "publicationStatement": [
+            "Āgarā : Śivalāla Agravāla eṇḍa Kampanī, 1979."
+          ],
           "identifier": [
             "urn:bnum:10001239"
           ],
@@ -6484,7 +7944,7 @@
             }
           ],
           "subjectLiteral": [
-            "Ramana, -- Maharshi."
+            "Ramana, Maharshi."
           ],
           "titleDisplay": [
             "Śrī Ramaṇa Maharshi se bātacīta / saṅgrahakartā Śrī Sunagala Esa. Veṅkaṭarāmaiyā ; bhūmikā-lekhaka Dā. Ṭī. Ema. Pī. Mahādevana ; prastāvanā lekhaka Mejara E. Ḍablyū. Caiḍavika ; anuvādaka Srī Dineśacandra Śarmā."
@@ -6516,11 +7976,24 @@
               "identifier": [
                 "urn:barcode:33433060417494"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 82-3982"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417494"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417494"
               ],
               "requestable": [
                 false
@@ -6530,10 +8003,6 @@
                 "*OLY 82-3982"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -6562,7 +8031,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001240",
         "_score": null,
@@ -6571,9 +8040,21 @@
             "[8], 8, lxv, 888 p."
           ],
           "note": [
-            "Caption title: Śrī Rāmādvayācāryakrtā Vedāntakaumudī.",
-            "Introductory matter in English, Hindi, or Sanskrit; extant portion of the autocommentary, Bhāvadīpkā, in Sanskrit.",
-            "Title on spine: The Vedānta-kaumudī, with Bhāva-dīpika of Rāmādvayācārya, a critical edition."
+            {
+              "noteType": "Note",
+              "label": "Introductory matter in English, Hindi, or Sanskrit; extant portion of the autocommentary, Bhāvadīpkā, in Sanskrit.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Title on spine: The Vedānta-kaumudī, with Bhāva-dīpika of Rāmādvayācārya, a critical edition.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Caption title: Śrī Rāmādvayācāryakrtā Vedāntakaumudī.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Kāśī Hindū Viśvavidyālaya Śodhaprakáśana,"
@@ -6602,6 +8083,9 @@
           "createdString": [
             "1973"
           ],
+          "idLccn": [
+            "74903417"
+          ],
           "seriesStatement": [
             "Kāśī Hindū Viśvavidyālaya Saṃskrtagranthamālā, puṣpa 9",
             "Śodhaprakāśanayojanā"
@@ -6613,8 +8097,26 @@
           "dateStartYear": [
             1973
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKN 84-1977"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001240"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "74903417"
+            }
+          ],
           "uniformTitle": [
             "Vedāntakaumudī. Hindi & Sanskrit."
+          ],
+          "updatedAt": 1523471277101,
+          "publicationStatement": [
+            "Vārāṇasī] Kāśī Hindū Viśvavidyālaya Śodhaprakáśana, 1973."
           ],
           "identifier": [
             "urn:bnum:10001240",
@@ -6642,7 +8144,8 @@
             }
           ],
           "subjectLiteral": [
-            "Advaita."
+            "Advaita.",
+            "Bādarāyaṇa."
           ],
           "titleDisplay": [
             "Vedāntakaumudī; Bhāvadīpikāsaṃvalitā. [Sampādaka, anuvādaka, tathā ṭippaṇīkāra] Rādheśyāma Caturvedī."
@@ -6674,11 +8177,20 @@
               "identifier": [
                 "urn:barcode:33433058618418"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618418"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058618418"
               ],
               "requestable": [
                 false
@@ -6688,10 +8200,6 @@
                 "*OKN 84-1977"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -6720,7 +8228,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001310",
         "_score": null,
@@ -6729,7 +8237,11 @@
             "44 p."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Tamiḻaṉ Nilaiyam"
@@ -6758,11 +8270,29 @@
           "createdString": [
             "1971"
           ],
-          "contributorLiteral": [
-            "Kiruṣṇaṉ, P."
+          "idLccn": [
+            "73903976"
           ],
           "dateStartYear": [
             1971
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-1642"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001310"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73903976"
+            }
+          ],
+          "updatedAt": 1523471277271,
+          "publicationStatement": [
+            "Karūr, Tirucci Māvaṭṭam, Tamiḻaṉ Nilaiyam [1971]"
           ],
           "identifier": [
             "urn:bnum:10001310",
@@ -6791,7 +8321,8 @@
           ],
           "subjectLiteral": [
             "Hinduism -- Controversial literature.",
-            "Tamil (Indic people) -- Religion."
+            "Tamil (Indic people) -- Religion.",
+            "Tiruvaḷḷuvar."
           ],
           "titleDisplay": [
             "Nāṉ Intu alla, eṉatu matam Tiruvaḷḷuvam. [Eḻutiyavar]Pe. Kiruṣṇaṉ."
@@ -6820,11 +8351,24 @@
               "identifier": [
                 "urn:barcode:33433060418260"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-1642"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060418260"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060418260"
               ],
               "requestable": [
                 false
@@ -6834,10 +8378,6 @@
                 "*OLY 83-1642"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -6866,7 +8406,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001316",
         "_score": null,
@@ -6875,7 +8415,11 @@
             "xxvi. 90 p."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Amuta Nilaiyam"
@@ -6904,6 +8448,9 @@
           "createdString": [
             "1968"
           ],
+          "idLccn": [
+            "77904332"
+          ],
           "seriesStatement": [
             "Amutam, 171"
           ],
@@ -6912,6 +8459,24 @@
           ],
           "dateStartYear": [
             1968
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-1631"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001316"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "77904332"
+            }
+          ],
+          "updatedAt": 1523471284034,
+          "publicationStatement": [
+            "Ceṉṉai, Amuta Nilaiyam [1968]"
           ],
           "identifier": [
             "urn:bnum:10001316",
@@ -6974,11 +8539,24 @@
               "identifier": [
                 "urn:barcode:33433060418252"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-1631"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060418252"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060418252"
               ],
               "requestable": [
                 false
@@ -6988,10 +8566,6 @@
                 "*OLY 83-1631"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7020,7 +8594,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001351",
         "_score": null,
@@ -7029,7 +8603,11 @@
             "92 p. ;"
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Vācuki Patippakam] ; viṟpaṉai urimai, Pāri Nilaiyam,"
@@ -7055,6 +8633,9 @@
           "createdString": [
             "1969"
           ],
+          "idLccn": [
+            "77910693"
+          ],
           "seriesStatement": [
             "Vācuki patippaka veḷiyīṭu 3"
           ],
@@ -7063,6 +8644,24 @@
           ],
           "dateStartYear": [
             1969
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 84-1362"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001351"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "77910693"
+            }
+          ],
+          "updatedAt": 1523471288916,
+          "publicationStatement": [
+            "[Aṇṇāmalainakar : Vācuki Patippakam] ; Ceṉṉai : viṟpaṉai urimai, Pāri Nilaiyam, [1969]"
           ],
           "identifier": [
             "urn:bnum:10001351",
@@ -7122,11 +8721,24 @@
               "identifier": [
                 "urn:barcode:33433060419987"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 84-1362"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060419987"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060419987"
               ],
               "requestable": [
                 false
@@ -7136,10 +8748,6 @@
                 "*OLY 84-1362"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7168,7 +8776,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001374",
         "_score": null,
@@ -7177,8 +8785,16 @@
             "18, 316 p."
           ],
           "note": [
-            "In Sanskrit.",
-            "Includes bibliographical references."
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "[Director, Research Institute, Varanaseya Sanskrit Vishvavidyalaya]"
@@ -7207,6 +8823,9 @@
           "createdString": [
             "1963"
           ],
+          "idLccn": [
+            "sa 68001970"
+          ],
           "seriesStatement": [
             "Varanaseya Sanskrit Vishwavidyalaya. Research Institute. Gopīnāthakavirāja- granthamālā, 1"
           ],
@@ -7216,6 +8835,24 @@
           ],
           "dateStartYear": [
             1963
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-204"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001374"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 68001970"
+            }
+          ],
+          "updatedAt": 1523471287818,
+          "publicationStatement": [
+            "Vārāṇasyām, [Director, Research Institute, Varanaseya Sanskrit Vishvavidyalaya] 1885 tame Śakābde [1963]"
           ],
           "identifier": [
             "urn:bnum:10001374",
@@ -7272,11 +8909,24 @@
               "identifier": [
                 "urn:barcode:33433060417882"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-204"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060417882"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060417882"
               ],
               "requestable": [
                 false
@@ -7286,10 +8936,6 @@
                 "*OLY 83-204"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7318,7 +8964,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001378",
         "_score": null,
@@ -7327,7 +8973,11 @@
             "7, 367 p."
           ],
           "note": [
-            "In Tamil."
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "Vācu Piracuram"
@@ -7353,14 +9003,35 @@
           "createdString": [
             "1969"
           ],
+          "idLccn": [
+            "77904612"
+          ],
           "contributorLiteral": [
             "Ramanathan, S., 1931-"
           ],
           "dateStartYear": [
             1969
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-1666"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001378"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "77904612"
+            }
+          ],
           "uniformTitle": [
             "Puranas. Liṅgapurāṇa. Tamil."
+          ],
+          "updatedAt": 1523471278084,
+          "publicationStatement": [
+            "Ceṉṉai, Vācu Piracuram [1969]"
           ],
           "identifier": [
             "urn:bnum:10001378",
@@ -7388,7 +9059,7 @@
             }
           ],
           "subjectLiteral": [
-            "Siva -- (Hindu deity)"
+            "Siva (Hindu deity)"
           ],
           "titleDisplay": [
             "Śrī Liṅka purāṇam. [Moḻipeyarppāciriyar] Kārttikēyaṉ."
@@ -7412,9 +9083,6 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Puranas. Liṅgapurāṇa."
-          ],
           "items": [
             {
               "owner": [
@@ -7426,11 +9094,24 @@
               "identifier": [
                 "urn:barcode:33433060418278"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-1666"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060418278"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060418278"
               ],
               "requestable": [
                 false
@@ -7440,10 +9121,6 @@
                 "*OLY 83-1666"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7472,7 +9149,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001379",
         "_score": null,
@@ -7481,8 +9158,16 @@
             "12, 197 p."
           ],
           "note": [
-            "In Sanskrit.",
-            "Includes the commentary Ālokaprakāśa, by C.K. Raman Nambia and others."
+            {
+              "noteType": "Note",
+              "label": "Includes the commentary Ālokaprakāśa, by C.K. Raman Nambia and others.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit.",
+              "type": "bf:Note"
+            }
           ],
           "publisherLiteral": [
             "[Director, Research Institute, Varanaseya Sanskrit Vishvavidyalaya; Prāptisthānam: Prakāśanavibhāgaḥ, Vārāṇaseyasaṃskṛta viśvavidyālayaḥ]"
@@ -7511,6 +9196,9 @@
           "createdString": [
             "1965"
           ],
+          "idLccn": [
+            "sa 68010892"
+          ],
           "seriesStatement": [
             "Saravati Bhavana granthamala, 93"
           ],
@@ -7519,6 +9207,24 @@
           ],
           "dateStartYear": [
             1965
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKM 83-1701"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001379"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 68010892"
+            }
+          ],
+          "updatedAt": 1523471286134,
+          "publicationStatement": [
+            "Vārāṇasyām [Director, Research Institute, Varanaseya Sanskrit Vishvavidyalaya; Prāptisthānam: Prakāśanavibhāgaḥ, Vārāṇaseyasaṃskṛta viśvavidyālayaḥ] 1887 tame śakābde [1965]"
           ],
           "identifier": [
             "urn:bnum:10001379",
@@ -7575,11 +9281,20 @@
               "identifier": [
                 "urn:barcode:33433058602826"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058602826"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433058602826"
               ],
               "requestable": [
                 false
@@ -7589,10 +9304,6 @@
                 "*OKM 83-1701"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -7621,7 +9332,7 @@
         ]
       },
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001388",
         "_score": null,
@@ -7630,9 +9341,21 @@
             "36 p."
           ],
           "note": [
-            "In Tamil.",
-            "Originally broadcast over All India Radio, Madras.",
-            "Without the music."
+            {
+              "noteType": "Note",
+              "label": "Originally broadcast over All India Radio, Madras.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Without the music.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Tamil.",
+              "type": "bf:Note"
+            }
           ],
           "language": [
             {
@@ -7658,11 +9381,32 @@
           "createdString": [
             "1968"
           ],
+          "idLccn": [
+            "70903904"
+          ],
           "contributorLiteral": [
             "All India Radio."
           ],
           "dateStartYear": [
             1968
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLY 83-1674"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001388"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "70903904"
+            }
+          ],
+          "updatedAt": 1523471286134,
+          "publicationStatement": [
+            "[Ceṉṉai, 1968]"
           ],
           "identifier": [
             "urn:bnum:10001388",
@@ -7726,11 +9470,24 @@
               "identifier": [
                 "urn:barcode:33433060418286"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLY 83-1674"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433060418286"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433060418286"
               ],
               "requestable": [
                 false
@@ -7740,10 +9497,6 @@
                 "*OLY 83-1674"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
