@@ -136,9 +136,9 @@ describe('Test Resources responses', function () {
         assert(doc.title)
         assert.equal(doc.title[0], 'Religion--love or hate?')
 
-        assert(doc.contributorLiteral)
-        assert.equal(doc.contributorLiteral.length, 1)
-        assert.equal(doc.contributorLiteral[0], 'Kirshenbaum, D. (David), 1902-')
+        assert(doc.creatorLiteral)
+        assert.equal(doc.creatorLiteral.length, 1)
+        assert.equal(doc.creatorLiteral[0], 'Kirshenbaum, D. (David), 1902-')
 
         assert(doc.materialType)
         assert.equal(doc.materialType[0]['@id'], 'resourcetypes:txt')
@@ -190,7 +190,7 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         expect(doc.identifier).to.be.a('array')
-        expect(doc.identifier).to.include.members(['urn:bnum:10022950', 'urn:oclc:1513312'])
+        expect(doc.identifier).to.include.members(['urn:bnum:10022950', 'urn:callnumber:*PGZ 81-1452'])
 
         done()
       })

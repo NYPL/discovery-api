@@ -1,5 +1,5 @@
 {
-  "took": 18,
+  "took": 13,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,23 +8,18 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 13.998154,
+    "max_score": 14.71329,
     "hits": [
       {
-        "_index": "resources-2017-08-23",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b18932917",
-        "_score": 13.998154,
+        "_score": 14.71329,
         "_source": {
           "extent": [
             "52 linear ft., 127 boxes"
           ],
-          "description": [
-            "Significant correspondents include diplomats, educators, reformers, and foundation officials, such as Ralph J. Bunche; W. E. B. Dubois, particularly regarding the Encyclopedia of the Negro project and opposition to the Fund in the 1930s and 1940s; NAACP director Walter White, who also disagreed with certain Fund activities; educators James E. K. Aggrey, Will Alexander, Aaron Brown, Nannie Burroughs, James H. Dillard,  Clark Foreman, Charles S. Johnson, Guy B. Johnson, Thomas Elsa Jones, Charles L. Loram, Robert R. Moton, Harold Odum, Emmett Scott, Booker T. Washington, Carter G. Woodson, especially his controversy with Thomas Jesse Jones in the 1920s, Thomas J. Woofter, and cultural figures and organizations including ethnomusicologist Laura C. Boulton and the Harmon Foundation. Other significant correspondents include foundation officials Jackson Davis, Emory Ross, Wallace Buttrick, Abraham Flexner, Isaac Newton Phelps Stokes, Oswald Garrison Villard, L. Hollingsworth Wood, George Foster Peabody, and William J. Schiefflein; and journalists Lester Walton and Claude A. Barnett;",
-            "The Phelps-Stokes Fund Records contain administrative records including trustee and committee minutes, correspondence, memoranda, financial records, legal documents, speeches, reports, occasional papers, and printed material, such as pamphlets, brochures, clippings, articles, press releases and programs. Records concern the early work of the Fund in researching and supporting education for Africans and African Americans and improvement in housing conditions, through study commissions, reports, and project grants, as well as its engagement in contemporary debates concerning the philosophy and policies of Booker T. Washington and W. E. B. Du Bois. To a lesser extent, the Fund provided early support for surveys of American Indian schools and administration, such as the 1928 Lewis Meriam study and the 1939 Navajo Indian study. Later endeavors included administering grants for conferences on race relations, exchange and training programs, cooperative programs with other foundations, government aid programs, and a number of cultural projects.",
-            "The bulk of the collection contains the office files of the four principal leaders of the Fund, Anson Phelps Stokes (1924-1946), Thomas Jesse Jones (1917-1946), Channing Tobias (1946-1953), and Frederick D. Patterson (1953-1969). Of particular interest is material concerning the Fund's relationships with organizations such as Agricultural Missions; Booker T. Washington Agricultural and Industrial Institute of Liberia, founded by the Fund in 1929; British and Foreign Bible Society; Capahosic (VA) Conferences, where black and white leaders gathered for off-the-record conferences; Carnegie Corporation; Committee on Negro Americans in the Defense Industry; Cooperative College Development Program to assist historically black colleges in coordinating development programs and improving management resources; General Education Board; Harmon Foundation; Highlander Folk School; International Missionary Council; Jeanes and Slater Funds; National Association for the Advancement of Colored People, including its disagreements with Fund policies; Rosenwald Fund; South African Institute of Race Relations; Southern Regional Council; YMCA National Council, including South African Work of the Foreign Committee, as well as historically black schools and colleges, especially Bethune-Cookman, Calhoun, Fisk, Hampton, Manassas, Penn School, Talladega, and Tuskegee."
-          ],
-          "noteV2": [
+          "note": [
             {
               "noteType": "Source",
               "label": "Phelps-Stokes Fund",
@@ -40,6 +35,11 @@
               "label": "Finding aid available.",
               "type": "bf:Note"
             }
+          ],
+          "description": [
+            "Significant correspondents include diplomats, educators, reformers, and foundation officials, such as Ralph J. Bunche; W. E. B. Dubois, particularly regarding the Encyclopedia of the Negro project and opposition to the Fund in the 1930s and 1940s; NAACP director Walter White, who also disagreed with certain Fund activities; educators James E. K. Aggrey, Will Alexander, Aaron Brown, Nannie Burroughs, James H. Dillard,  Clark Foreman, Charles S. Johnson, Guy B. Johnson, Thomas Elsa Jones, Charles L. Loram, Robert R. Moton, Harold Odum, Emmett Scott, Booker T. Washington, Carter G. Woodson, especially his controversy with Thomas Jesse Jones in the 1920s, Thomas J. Woofter, and cultural figures and organizations including ethnomusicologist Laura C. Boulton and the Harmon Foundation. Other significant correspondents include foundation officials Jackson Davis, Emory Ross, Wallace Buttrick, Abraham Flexner, Isaac Newton Phelps Stokes, Oswald Garrison Villard, L. Hollingsworth Wood, George Foster Peabody, and William J. Schiefflein; and journalists Lester Walton and Claude A. Barnett;",
+            "The Phelps-Stokes Fund Records contain administrative records including trustee and committee minutes, correspondence, memoranda, financial records, legal documents, speeches, reports, occasional papers, and printed material, such as pamphlets, brochures, clippings, articles, press releases and programs. Records concern the early work of the Fund in researching and supporting education for Africans and African Americans and improvement in housing conditions, through study commissions, reports, and project grants, as well as its engagement in contemporary debates concerning the philosophy and policies of Booker T. Washington and W. E. B. Du Bois. To a lesser extent, the Fund provided early support for surveys of American Indian schools and administration, such as the 1928 Lewis Meriam study and the 1939 Navajo Indian study. Later endeavors included administering grants for conferences on race relations, exchange and training programs, cooperative programs with other foundations, government aid programs, and a number of cultural projects.",
+            "The bulk of the collection contains the office files of the four principal leaders of the Fund, Anson Phelps Stokes (1924-1946), Thomas Jesse Jones (1917-1946), Channing Tobias (1946-1953), and Frederick D. Patterson (1953-1969). Of particular interest is material concerning the Fund's relationships with organizations such as Agricultural Missions; Booker T. Washington Agricultural and Industrial Institute of Liberia, founded by the Fund in 1929; British and Foreign Bible Society; Capahosic (VA) Conferences, where black and white leaders gathered for off-the-record conferences; Carnegie Corporation; Committee on Negro Americans in the Defense Industry; Cooperative College Development Program to assist historically black colleges in coordinating development programs and improving management resources; General Education Board; Harmon Foundation; Highlander Folk School; International Missionary Council; Jeanes and Slater Funds; National Association for the Advancement of Colored People, including its disagreements with Fund policies; Rosenwald Fund; South African Institute of Race Relations; Southern Regional Council; YMCA National Council, including South African Work of the Foreign Committee, as well as historically black schools and colleges, especially Bethune-Cookman, Calhoun, Fisk, Hampton, Manassas, Penn School, Talladega, and Tuskegee."
           ],
           "language": [
             {
@@ -81,9 +81,20 @@
           "dateStartYear": [
             1893
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc MG 162"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "18932917"
+            }
+          ],
           "dateEndYear": [
             1970
           ],
+          "updatedAt": 1525078526499,
           "identifier": [
             "urn:bnum:18932917"
           ],
@@ -201,11 +212,24 @@
               "identifier": [
                 "urn:barcode:33433076133762"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133762"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133762"
               ],
               "requestable": [
                 false
@@ -215,10 +239,6 @@
                 "Sc MG 162 Box 1"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -241,11 +261,24 @@
               "identifier": [
                 "urn:barcode:33433076133770"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133770"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133770"
               ],
               "requestable": [
                 false
@@ -255,10 +288,6 @@
                 "Sc MG 162 Box 2"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -281,11 +310,24 @@
               "identifier": [
                 "urn:barcode:33433076133788"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133788"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133788"
               ],
               "requestable": [
                 false
@@ -295,10 +337,6 @@
                 "Sc MG 162 Box 3"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -321,11 +359,24 @@
               "identifier": [
                 "urn:barcode:33433076133796"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133796"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133796"
               ],
               "requestable": [
                 false
@@ -335,10 +386,6 @@
                 "Sc MG 162 Box 4"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -361,11 +408,24 @@
               "identifier": [
                 "urn:barcode:33433076133804"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133804"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133804"
               ],
               "requestable": [
                 false
@@ -375,10 +435,6 @@
                 "Sc MG 162 Box 5"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -401,11 +457,24 @@
               "identifier": [
                 "urn:barcode:33433076133812"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 6"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133812"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133812"
               ],
               "requestable": [
                 false
@@ -415,10 +484,6 @@
                 "Sc MG 162 Box 6"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -441,11 +506,24 @@
               "identifier": [
                 "urn:barcode:33433076133820"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 7"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133820"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133820"
               ],
               "requestable": [
                 false
@@ -455,10 +533,6 @@
                 "Sc MG 162 Box 7"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -481,11 +555,24 @@
               "identifier": [
                 "urn:barcode:33433076133838"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 8"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133838"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133838"
               ],
               "requestable": [
                 false
@@ -495,10 +582,6 @@
                 "Sc MG 162 Box 8"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -521,11 +604,24 @@
               "identifier": [
                 "urn:barcode:33433076133846"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 9"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133846"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133846"
               ],
               "requestable": [
                 false
@@ -535,10 +631,6 @@
                 "Sc MG 162 Box 9"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -561,11 +653,24 @@
               "identifier": [
                 "urn:barcode:33433076133853"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 10"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133853"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133853"
               ],
               "requestable": [
                 false
@@ -575,10 +680,6 @@
                 "Sc MG 162 Box 10"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -601,11 +702,24 @@
               "identifier": [
                 "urn:barcode:33433076133861"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 11"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133861"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133861"
               ],
               "requestable": [
                 false
@@ -615,10 +729,6 @@
                 "Sc MG 162 Box 11"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -641,11 +751,24 @@
               "identifier": [
                 "urn:barcode:33433076133879"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 12"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133879"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133879"
               ],
               "requestable": [
                 false
@@ -655,10 +778,6 @@
                 "Sc MG 162 Box 12"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -681,11 +800,24 @@
               "identifier": [
                 "urn:barcode:33433076133887"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 13"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133887"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133887"
               ],
               "requestable": [
                 false
@@ -695,10 +827,6 @@
                 "Sc MG 162 Box 13"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -727,11 +855,24 @@
               "identifier": [
                 "urn:barcode:33433076133895"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 14"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133895"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133895"
               ],
               "requestable": [
                 false
@@ -741,10 +882,6 @@
                 "Sc MG 162 Box 14"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -767,11 +904,24 @@
               "identifier": [
                 "urn:barcode:33433076133903"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 15"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133903"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133903"
               ],
               "requestable": [
                 false
@@ -781,10 +931,6 @@
                 "Sc MG 162 Box 15"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -807,11 +953,24 @@
               "identifier": [
                 "urn:barcode:33433076133911"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 16"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133911"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133911"
               ],
               "requestable": [
                 false
@@ -821,10 +980,6 @@
                 "Sc MG 162 Box 16"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -847,11 +1002,24 @@
               "identifier": [
                 "urn:barcode:33433076133929"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 17"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133929"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133929"
               ],
               "requestable": [
                 false
@@ -861,10 +1029,6 @@
                 "Sc MG 162 Box 17"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -887,11 +1051,24 @@
               "identifier": [
                 "urn:barcode:33433076133937"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 18"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133937"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133937"
               ],
               "requestable": [
                 false
@@ -901,10 +1078,6 @@
                 "Sc MG 162 Box 18"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -927,11 +1100,24 @@
               "identifier": [
                 "urn:barcode:33433076133945"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 19"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133945"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133945"
               ],
               "requestable": [
                 false
@@ -941,10 +1127,6 @@
                 "Sc MG 162 Box 19"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -967,11 +1149,24 @@
               "identifier": [
                 "urn:barcode:33433076133952"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 20"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133952"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133952"
               ],
               "requestable": [
                 false
@@ -981,10 +1176,6 @@
                 "Sc MG 162 Box 20"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1007,11 +1198,24 @@
               "identifier": [
                 "urn:barcode:33433076133960"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 21"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133960"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133960"
               ],
               "requestable": [
                 false
@@ -1021,10 +1225,6 @@
                 "Sc MG 162 Box 21"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1047,11 +1247,24 @@
               "identifier": [
                 "urn:barcode:33433076133978"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 22"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133978"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133978"
               ],
               "requestable": [
                 false
@@ -1061,10 +1274,6 @@
                 "Sc MG 162 Box 22"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1087,11 +1296,24 @@
               "identifier": [
                 "urn:barcode:33433076133986"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 23"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133986"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133986"
               ],
               "requestable": [
                 false
@@ -1101,10 +1323,6 @@
                 "Sc MG 162 Box 23"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1127,11 +1345,24 @@
               "identifier": [
                 "urn:barcode:33433076133994"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 24"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076133994"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076133994"
               ],
               "requestable": [
                 false
@@ -1141,10 +1372,6 @@
                 "Sc MG 162 Box 24"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1167,11 +1394,24 @@
               "identifier": [
                 "urn:barcode:33433076134000"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 25"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134000"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134000"
               ],
               "requestable": [
                 false
@@ -1181,10 +1421,6 @@
                 "Sc MG 162 Box 25"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1207,11 +1443,24 @@
               "identifier": [
                 "urn:barcode:33433076134018"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 26"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134018"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134018"
               ],
               "requestable": [
                 false
@@ -1221,10 +1470,6 @@
                 "Sc MG 162 Box 26"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1253,11 +1498,24 @@
               "identifier": [
                 "urn:barcode:33433076134026"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 27"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134026"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134026"
               ],
               "requestable": [
                 false
@@ -1267,10 +1525,6 @@
                 "Sc MG 162 Box 27"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1293,11 +1547,24 @@
               "identifier": [
                 "urn:barcode:33433076134034"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 28"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134034"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134034"
               ],
               "requestable": [
                 false
@@ -1307,10 +1574,6 @@
                 "Sc MG 162 Box 28"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1333,11 +1596,24 @@
               "identifier": [
                 "urn:barcode:33433076134042"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 29"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134042"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134042"
               ],
               "requestable": [
                 false
@@ -1347,10 +1623,6 @@
                 "Sc MG 162 Box 29"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1373,11 +1645,24 @@
               "identifier": [
                 "urn:barcode:33433076134059"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 30"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134059"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134059"
               ],
               "requestable": [
                 false
@@ -1387,10 +1672,6 @@
                 "Sc MG 162 Box 30"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1413,11 +1694,24 @@
               "identifier": [
                 "urn:barcode:33433076134067"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 31"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134067"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134067"
               ],
               "requestable": [
                 false
@@ -1427,10 +1721,6 @@
                 "Sc MG 162 Box 31"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1453,11 +1743,24 @@
               "identifier": [
                 "urn:barcode:33433076134075"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 32"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134075"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134075"
               ],
               "requestable": [
                 false
@@ -1467,10 +1770,6 @@
                 "Sc MG 162 Box 32"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1493,11 +1792,24 @@
               "identifier": [
                 "urn:barcode:33433076134083"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 33"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134083"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134083"
               ],
               "requestable": [
                 false
@@ -1507,10 +1819,6 @@
                 "Sc MG 162 Box 33"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1533,11 +1841,24 @@
               "identifier": [
                 "urn:barcode:33433076134091"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 34"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134091"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134091"
               ],
               "requestable": [
                 false
@@ -1547,10 +1868,6 @@
                 "Sc MG 162 Box 34"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1573,11 +1890,24 @@
               "identifier": [
                 "urn:barcode:33433076134109"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 35"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134109"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134109"
               ],
               "requestable": [
                 false
@@ -1587,10 +1917,6 @@
                 "Sc MG 162 Box 35"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1613,11 +1939,24 @@
               "identifier": [
                 "urn:barcode:33433076134117"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 36"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134117"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134117"
               ],
               "requestable": [
                 false
@@ -1627,10 +1966,6 @@
                 "Sc MG 162 Box 36"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1653,11 +1988,24 @@
               "identifier": [
                 "urn:barcode:33433076134125"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 37"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134125"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134125"
               ],
               "requestable": [
                 false
@@ -1667,10 +2015,6 @@
                 "Sc MG 162 Box 37"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1699,11 +2043,24 @@
               "identifier": [
                 "urn:barcode:33433076134133"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 38"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134133"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134133"
               ],
               "requestable": [
                 false
@@ -1713,10 +2070,6 @@
                 "Sc MG 162 Box 38"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1739,11 +2092,24 @@
               "identifier": [
                 "urn:barcode:33433076134141"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 39"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134141"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134141"
               ],
               "requestable": [
                 false
@@ -1753,10 +2119,6 @@
                 "Sc MG 162 Box 39"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1779,11 +2141,24 @@
               "identifier": [
                 "urn:barcode:33433076134158"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 40"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134158"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134158"
               ],
               "requestable": [
                 false
@@ -1793,10 +2168,6 @@
                 "Sc MG 162 Box 40"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1819,11 +2190,24 @@
               "identifier": [
                 "urn:barcode:33433076134166"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 41"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134166"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134166"
               ],
               "requestable": [
                 false
@@ -1833,10 +2217,6 @@
                 "Sc MG 162 Box 41"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1859,11 +2239,24 @@
               "identifier": [
                 "urn:barcode:33433076134174"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 42"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134174"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134174"
               ],
               "requestable": [
                 false
@@ -1873,10 +2266,6 @@
                 "Sc MG 162 Box 42"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1899,11 +2288,24 @@
               "identifier": [
                 "urn:barcode:33433076134182"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 43"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134182"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134182"
               ],
               "requestable": [
                 false
@@ -1913,10 +2315,6 @@
                 "Sc MG 162 Box 43"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1939,11 +2337,24 @@
               "identifier": [
                 "urn:barcode:33433076134190"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 44"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134190"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134190"
               ],
               "requestable": [
                 false
@@ -1953,10 +2364,6 @@
                 "Sc MG 162 Box 44"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -1979,11 +2386,24 @@
               "identifier": [
                 "urn:barcode:33433076134208"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 45"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134208"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134208"
               ],
               "requestable": [
                 false
@@ -1993,10 +2413,6 @@
                 "Sc MG 162 Box 45"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2025,11 +2441,24 @@
               "identifier": [
                 "urn:barcode:33433076134216"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 46"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134216"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134216"
               ],
               "requestable": [
                 false
@@ -2039,10 +2468,6 @@
                 "Sc MG 162 Box 46"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2065,11 +2490,24 @@
               "identifier": [
                 "urn:barcode:33433076134224"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 47"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134224"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134224"
               ],
               "requestable": [
                 false
@@ -2079,10 +2517,6 @@
                 "Sc MG 162 Box 47"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2105,11 +2539,24 @@
               "identifier": [
                 "urn:barcode:33433076134232"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 48"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134232"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134232"
               ],
               "requestable": [
                 false
@@ -2119,10 +2566,6 @@
                 "Sc MG 162 Box 48"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2145,11 +2588,24 @@
               "identifier": [
                 "urn:barcode:33433076134240"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 49"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134240"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134240"
               ],
               "requestable": [
                 false
@@ -2159,10 +2615,6 @@
                 "Sc MG 162 Box 49"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2185,11 +2637,24 @@
               "identifier": [
                 "urn:barcode:33433076134257"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 50"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134257"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134257"
               ],
               "requestable": [
                 false
@@ -2199,10 +2664,6 @@
                 "Sc MG 162 Box 50"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2225,11 +2686,24 @@
               "identifier": [
                 "urn:barcode:33433076134265"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 51"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134265"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134265"
               ],
               "requestable": [
                 false
@@ -2239,10 +2713,6 @@
                 "Sc MG 162 Box 51"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2265,11 +2735,24 @@
               "identifier": [
                 "urn:barcode:33433076134273"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 52"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134273"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134273"
               ],
               "requestable": [
                 false
@@ -2279,10 +2762,6 @@
                 "Sc MG 162 Box 52"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2305,11 +2784,24 @@
               "identifier": [
                 "urn:barcode:33433076134281"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 53"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134281"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134281"
               ],
               "requestable": [
                 false
@@ -2319,10 +2811,6 @@
                 "Sc MG 162 Box 53"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2345,11 +2833,24 @@
               "identifier": [
                 "urn:barcode:33433076134299"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 54"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134299"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134299"
               ],
               "requestable": [
                 false
@@ -2359,10 +2860,6 @@
                 "Sc MG 162 Box 54"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2385,11 +2882,24 @@
               "identifier": [
                 "urn:barcode:33433076134307"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 55"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134307"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134307"
               ],
               "requestable": [
                 false
@@ -2399,10 +2909,6 @@
                 "Sc MG 162 Box 55"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2425,11 +2931,24 @@
               "identifier": [
                 "urn:barcode:33433076134315"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 56"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134315"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134315"
               ],
               "requestable": [
                 false
@@ -2439,10 +2958,6 @@
                 "Sc MG 162 Box 56"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2465,11 +2980,24 @@
               "identifier": [
                 "urn:barcode:33433076134323"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 57"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134323"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134323"
               ],
               "requestable": [
                 false
@@ -2479,10 +3007,6 @@
                 "Sc MG 162 Box 57"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2505,11 +3029,24 @@
               "identifier": [
                 "urn:barcode:33433076134331"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 58"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134331"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134331"
               ],
               "requestable": [
                 false
@@ -2519,10 +3056,6 @@
                 "Sc MG 162 Box 58"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2545,11 +3078,24 @@
               "identifier": [
                 "urn:barcode:33433076134349"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 59"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134349"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134349"
               ],
               "requestable": [
                 false
@@ -2559,10 +3105,6 @@
                 "Sc MG 162 Box 59"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2591,11 +3133,24 @@
               "identifier": [
                 "urn:barcode:33433076134356"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 60"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134356"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134356"
               ],
               "requestable": [
                 false
@@ -2605,10 +3160,6 @@
                 "Sc MG 162 Box 60"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2631,11 +3182,24 @@
               "identifier": [
                 "urn:barcode:33433076134364"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 61"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134364"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134364"
               ],
               "requestable": [
                 false
@@ -2645,10 +3209,6 @@
                 "Sc MG 162 Box 61"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2671,11 +3231,24 @@
               "identifier": [
                 "urn:barcode:33433076134372"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 62"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134372"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134372"
               ],
               "requestable": [
                 false
@@ -2685,10 +3258,6 @@
                 "Sc MG 162 Box 62"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2711,11 +3280,24 @@
               "identifier": [
                 "urn:barcode:33433076134380"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 63"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134380"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134380"
               ],
               "requestable": [
                 false
@@ -2725,10 +3307,6 @@
                 "Sc MG 162 Box 63"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2751,11 +3329,24 @@
               "identifier": [
                 "urn:barcode:33433076134398"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 64"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134398"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134398"
               ],
               "requestable": [
                 false
@@ -2765,10 +3356,6 @@
                 "Sc MG 162 Box 64"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2791,11 +3378,24 @@
               "identifier": [
                 "urn:barcode:33433076134406"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 65"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134406"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134406"
               ],
               "requestable": [
                 false
@@ -2805,10 +3405,6 @@
                 "Sc MG 162 Box 65"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2831,11 +3427,24 @@
               "identifier": [
                 "urn:barcode:33433076134414"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 66"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134414"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134414"
               ],
               "requestable": [
                 false
@@ -2845,10 +3454,6 @@
                 "Sc MG 162 Box 66"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2871,11 +3476,24 @@
               "identifier": [
                 "urn:barcode:33433076134422"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 67"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134422"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134422"
               ],
               "requestable": [
                 false
@@ -2885,10 +3503,6 @@
                 "Sc MG 162 Box 67"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2911,11 +3525,24 @@
               "identifier": [
                 "urn:barcode:33433076134430"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 68"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134430"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134430"
               ],
               "requestable": [
                 false
@@ -2925,10 +3552,6 @@
                 "Sc MG 162 Box 68"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2951,11 +3574,24 @@
               "identifier": [
                 "urn:barcode:33433076134448"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 69"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134448"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134448"
               ],
               "requestable": [
                 false
@@ -2965,10 +3601,6 @@
                 "Sc MG 162 Box 69"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -2991,11 +3623,24 @@
               "identifier": [
                 "urn:barcode:33433076134455"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 70"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134455"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134455"
               ],
               "requestable": [
                 false
@@ -3005,10 +3650,6 @@
                 "Sc MG 162 Box 70"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3031,11 +3672,24 @@
               "identifier": [
                 "urn:barcode:33433076134463"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 71"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134463"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134463"
               ],
               "requestable": [
                 false
@@ -3045,10 +3699,6 @@
                 "Sc MG 162 Box 71"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3071,11 +3721,24 @@
               "identifier": [
                 "urn:barcode:33433076134471"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 72"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134471"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134471"
               ],
               "requestable": [
                 false
@@ -3085,10 +3748,6 @@
                 "Sc MG 162 Box 72"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3111,11 +3770,24 @@
               "identifier": [
                 "urn:barcode:33433076134489"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 73"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134489"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134489"
               ],
               "requestable": [
                 false
@@ -3125,10 +3797,6 @@
                 "Sc MG 162 Box 73"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3151,11 +3819,24 @@
               "identifier": [
                 "urn:barcode:33433076134497"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 74"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134497"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134497"
               ],
               "requestable": [
                 false
@@ -3165,10 +3846,6 @@
                 "Sc MG 162 Box 74"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3191,11 +3868,24 @@
               "identifier": [
                 "urn:barcode:33433076134505"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 75"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134505"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134505"
               ],
               "requestable": [
                 false
@@ -3205,10 +3895,6 @@
                 "Sc MG 162 Box 75"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3231,11 +3917,24 @@
               "identifier": [
                 "urn:barcode:33433076134513"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 76"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134513"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134513"
               ],
               "requestable": [
                 false
@@ -3245,10 +3944,6 @@
                 "Sc MG 162 Box 76"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3271,11 +3966,24 @@
               "identifier": [
                 "urn:barcode:33433076134521"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 77"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134521"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134521"
               ],
               "requestable": [
                 false
@@ -3285,10 +3993,6 @@
                 "Sc MG 162 Box 77"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3311,11 +4015,24 @@
               "identifier": [
                 "urn:barcode:33433076134539"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 78"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134539"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134539"
               ],
               "requestable": [
                 false
@@ -3325,10 +4042,6 @@
                 "Sc MG 162 Box 78"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3351,11 +4064,24 @@
               "identifier": [
                 "urn:barcode:33433076134547"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 79"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134547"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134547"
               ],
               "requestable": [
                 false
@@ -3365,10 +4091,6 @@
                 "Sc MG 162 Box 79"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3391,11 +4113,24 @@
               "identifier": [
                 "urn:barcode:33433076134554"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 80"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134554"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134554"
               ],
               "requestable": [
                 false
@@ -3405,10 +4140,6 @@
                 "Sc MG 162 Box 80"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3431,11 +4162,24 @@
               "identifier": [
                 "urn:barcode:33433076134562"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 81"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134562"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134562"
               ],
               "requestable": [
                 false
@@ -3445,10 +4189,6 @@
                 "Sc MG 162 Box 81"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3471,11 +4211,24 @@
               "identifier": [
                 "urn:barcode:33433076134570"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 82"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134570"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134570"
               ],
               "requestable": [
                 false
@@ -3485,10 +4238,6 @@
                 "Sc MG 162 Box 82"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3511,11 +4260,24 @@
               "identifier": [
                 "urn:barcode:33433076134588"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 83"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134588"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134588"
               ],
               "requestable": [
                 false
@@ -3525,10 +4287,6 @@
                 "Sc MG 162 Box 83"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3551,11 +4309,24 @@
               "identifier": [
                 "urn:barcode:33433076134596"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 84"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134596"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134596"
               ],
               "requestable": [
                 false
@@ -3565,10 +4336,6 @@
                 "Sc MG 162 Box 84"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3591,11 +4358,24 @@
               "identifier": [
                 "urn:barcode:33433076134604"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 85"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134604"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134604"
               ],
               "requestable": [
                 false
@@ -3605,10 +4385,6 @@
                 "Sc MG 162 Box 85"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3631,11 +4407,24 @@
               "identifier": [
                 "urn:barcode:33433076134612"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 86"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134612"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134612"
               ],
               "requestable": [
                 false
@@ -3645,10 +4434,6 @@
                 "Sc MG 162 Box 86"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3671,11 +4456,24 @@
               "identifier": [
                 "urn:barcode:33433076134620"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 87"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134620"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134620"
               ],
               "requestable": [
                 false
@@ -3685,10 +4483,6 @@
                 "Sc MG 162 Box 87"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3711,11 +4505,24 @@
               "identifier": [
                 "urn:barcode:33433076134638"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 88"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134638"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134638"
               ],
               "requestable": [
                 false
@@ -3725,10 +4532,6 @@
                 "Sc MG 162 Box 88"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3751,11 +4554,24 @@
               "identifier": [
                 "urn:barcode:33433076134646"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 89"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134646"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134646"
               ],
               "requestable": [
                 false
@@ -3765,10 +4581,6 @@
                 "Sc MG 162 Box 89"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3791,11 +4603,24 @@
               "identifier": [
                 "urn:barcode:33433076134653"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 90"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134653"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134653"
               ],
               "requestable": [
                 false
@@ -3805,10 +4630,6 @@
                 "Sc MG 162 Box 90"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3831,11 +4652,24 @@
               "identifier": [
                 "urn:barcode:33433076134661"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 91"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134661"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134661"
               ],
               "requestable": [
                 false
@@ -3845,10 +4679,6 @@
                 "Sc MG 162 Box 91"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3871,11 +4701,24 @@
               "identifier": [
                 "urn:barcode:33433076134679"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 92"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134679"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134679"
               ],
               "requestable": [
                 false
@@ -3885,10 +4728,6 @@
                 "Sc MG 162 Box 92"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3911,11 +4750,24 @@
               "identifier": [
                 "urn:barcode:33433076134687"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 93"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134687"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134687"
               ],
               "requestable": [
                 false
@@ -3925,10 +4777,6 @@
                 "Sc MG 162 Box 93"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3951,11 +4799,24 @@
               "identifier": [
                 "urn:barcode:33433076134695"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 94"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134695"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134695"
               ],
               "requestable": [
                 false
@@ -3965,10 +4826,6 @@
                 "Sc MG 162 Box 94"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -3991,11 +4848,24 @@
               "identifier": [
                 "urn:barcode:33433076134703"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 95"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134703"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134703"
               ],
               "requestable": [
                 false
@@ -4005,10 +4875,6 @@
                 "Sc MG 162 Box 95"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4031,11 +4897,24 @@
               "identifier": [
                 "urn:barcode:33433076134711"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 96"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134711"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134711"
               ],
               "requestable": [
                 false
@@ -4045,10 +4924,6 @@
                 "Sc MG 162 Box 96"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4071,11 +4946,24 @@
               "identifier": [
                 "urn:barcode:33433076134729"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 97"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134729"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134729"
               ],
               "requestable": [
                 false
@@ -4085,10 +4973,6 @@
                 "Sc MG 162 Box 97"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4111,11 +4995,24 @@
               "identifier": [
                 "urn:barcode:33433076134737"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 98"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134737"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134737"
               ],
               "requestable": [
                 false
@@ -4125,10 +5022,6 @@
                 "Sc MG 162 Box 98"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4151,11 +5044,24 @@
               "identifier": [
                 "urn:barcode:33433076134745"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 99"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134745"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134745"
               ],
               "requestable": [
                 false
@@ -4165,10 +5071,6 @@
                 "Sc MG 162 Box 99"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4191,11 +5093,24 @@
               "identifier": [
                 "urn:barcode:33433076134752"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 100"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134752"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134752"
               ],
               "requestable": [
                 false
@@ -4205,10 +5120,6 @@
                 "Sc MG 162 Box 100"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4231,11 +5142,24 @@
               "identifier": [
                 "urn:barcode:33433076134760"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 101"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134760"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134760"
               ],
               "requestable": [
                 false
@@ -4245,10 +5169,6 @@
                 "Sc MG 162 Box 101"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4271,11 +5191,24 @@
               "identifier": [
                 "urn:barcode:33433076134778"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 102"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134778"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134778"
               ],
               "requestable": [
                 false
@@ -4285,10 +5218,6 @@
                 "Sc MG 162 Box 102"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4311,11 +5240,24 @@
               "identifier": [
                 "urn:barcode:33433076134786"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 103"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134786"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134786"
               ],
               "requestable": [
                 false
@@ -4325,10 +5267,6 @@
                 "Sc MG 162 Box 103"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4351,11 +5289,24 @@
               "identifier": [
                 "urn:barcode:33433076134794"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 104"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134794"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134794"
               ],
               "requestable": [
                 false
@@ -4365,10 +5316,6 @@
                 "Sc MG 162 Box 104"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4391,11 +5338,24 @@
               "identifier": [
                 "urn:barcode:33433076134802"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 105"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134802"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134802"
               ],
               "requestable": [
                 false
@@ -4405,10 +5365,6 @@
                 "Sc MG 162 Box 105"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4431,11 +5387,24 @@
               "identifier": [
                 "urn:barcode:33433076134810"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 106"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134810"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134810"
               ],
               "requestable": [
                 false
@@ -4445,10 +5414,6 @@
                 "Sc MG 162 Box 106"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4471,11 +5436,24 @@
               "identifier": [
                 "urn:barcode:33433076134828"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 107"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134828"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134828"
               ],
               "requestable": [
                 false
@@ -4485,10 +5463,6 @@
                 "Sc MG 162 Box 107"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4511,11 +5485,24 @@
               "identifier": [
                 "urn:barcode:33433076134836"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 108"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134836"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134836"
               ],
               "requestable": [
                 false
@@ -4525,10 +5512,6 @@
                 "Sc MG 162 Box 108"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4551,11 +5534,24 @@
               "identifier": [
                 "urn:barcode:33433076134844"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 109"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134844"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134844"
               ],
               "requestable": [
                 false
@@ -4565,10 +5561,6 @@
                 "Sc MG 162 Box 109"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4591,11 +5583,24 @@
               "identifier": [
                 "urn:barcode:33433076134851"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 110"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134851"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134851"
               ],
               "requestable": [
                 false
@@ -4605,10 +5610,6 @@
                 "Sc MG 162 Box 110"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4631,11 +5632,24 @@
               "identifier": [
                 "urn:barcode:33433076134869"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 111"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134869"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134869"
               ],
               "requestable": [
                 false
@@ -4645,10 +5659,6 @@
                 "Sc MG 162 Box 111"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4671,11 +5681,24 @@
               "identifier": [
                 "urn:barcode:33433076134877"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 112"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134877"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134877"
               ],
               "requestable": [
                 false
@@ -4685,10 +5708,6 @@
                 "Sc MG 162 Box 112"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4711,11 +5730,24 @@
               "identifier": [
                 "urn:barcode:33433076134885"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 113"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134885"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134885"
               ],
               "requestable": [
                 false
@@ -4725,10 +5757,6 @@
                 "Sc MG 162 Box 113"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4751,11 +5779,24 @@
               "identifier": [
                 "urn:barcode:33433076134893"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 114"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134893"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134893"
               ],
               "requestable": [
                 false
@@ -4765,10 +5806,6 @@
                 "Sc MG 162 Box 114"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4791,11 +5828,24 @@
               "identifier": [
                 "urn:barcode:33433076134901"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 115"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134901"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134901"
               ],
               "requestable": [
                 false
@@ -4805,10 +5855,6 @@
                 "Sc MG 162 Box 115"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4831,11 +5877,24 @@
               "identifier": [
                 "urn:barcode:33433076134919"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 116"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134919"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134919"
               ],
               "requestable": [
                 false
@@ -4845,10 +5904,6 @@
                 "Sc MG 162 Box 116"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4871,11 +5926,24 @@
               "identifier": [
                 "urn:barcode:33433076134927"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 117"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134927"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134927"
               ],
               "requestable": [
                 false
@@ -4885,10 +5953,6 @@
                 "Sc MG 162 Box 117"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4911,11 +5975,24 @@
               "identifier": [
                 "urn:barcode:33433076134935"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 118"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134935"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134935"
               ],
               "requestable": [
                 false
@@ -4925,10 +6002,6 @@
                 "Sc MG 162 Box 118"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4951,11 +6024,24 @@
               "identifier": [
                 "urn:barcode:33433076134943"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 119"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134943"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134943"
               ],
               "requestable": [
                 false
@@ -4965,10 +6051,6 @@
                 "Sc MG 162 Box 119"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -4997,11 +6079,24 @@
               "identifier": [
                 "urn:barcode:33433076134950"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 120"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134950"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134950"
               ],
               "requestable": [
                 false
@@ -5011,10 +6106,6 @@
                 "Sc MG 162 Box 120"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5043,11 +6134,24 @@
               "identifier": [
                 "urn:barcode:33433076134968"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 121"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134968"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134968"
               ],
               "requestable": [
                 false
@@ -5057,10 +6161,6 @@
                 "Sc MG 162 Box 121"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5083,11 +6183,24 @@
               "identifier": [
                 "urn:barcode:33433076134976"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 122"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134976"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134976"
               ],
               "requestable": [
                 false
@@ -5097,10 +6210,6 @@
                 "Sc MG 162 Box 122"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5129,11 +6238,24 @@
               "identifier": [
                 "urn:barcode:33433076134984"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 123"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134984"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134984"
               ],
               "requestable": [
                 false
@@ -5143,10 +6265,6 @@
                 "Sc MG 162 Box 123"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5175,11 +6293,24 @@
               "identifier": [
                 "urn:barcode:33433076134992"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 124"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076134992"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076134992"
               ],
               "requestable": [
                 false
@@ -5189,10 +6320,6 @@
                 "Sc MG 162 Box 124"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5221,11 +6348,24 @@
               "identifier": [
                 "urn:barcode:33433076135007"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 125"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076135007"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076135007"
               ],
               "requestable": [
                 false
@@ -5235,10 +6375,6 @@
                 "Sc MG 162 Box 125"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5267,11 +6403,24 @@
               "identifier": [
                 "urn:barcode:33433076151517"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 126"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076151517"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076151517"
               ],
               "requestable": [
                 false
@@ -5281,10 +6430,6 @@
                 "Sc MG 162 Box 126"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5313,11 +6458,24 @@
               "identifier": [
                 "urn:barcode:33433076151525"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 127"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433076151525"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433076151525"
               ],
               "requestable": [
                 false
@@ -5327,10 +6485,6 @@
                 "Sc MG 162 Box 127"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
@@ -5359,11 +6513,24 @@
               "identifier": [
                 "urn:barcode:33433111930941"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc MG 162 Box 127"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433111930941"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "idBarcode": [
+                "33433111930941"
               ],
               "requestable": [
                 false
@@ -5373,10 +6540,6 @@
                 "Sc MG 162 Box 127"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:21",
-                  "label": "archival material"
-                },
                 {
                   "id": "catalogItemType:21",
                   "label": "archival material"
