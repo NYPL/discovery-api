@@ -79,7 +79,7 @@ The following runs a series of tests against local fixtures:
 npm test
 ```
 
-Most tests rely on fixtures generated dynamically (using whatever elastic config is present in process.env) via the following:
+Most tests rely on fixtures generated dynamically (using whatever elastic config is present in process.env or ./.env) via the following:
 
 ```
 UPDATE_FIXTURES=all npm test

@@ -1,0 +1,193 @@
+{
+  "took": 190,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 13730729,
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10000103",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "11, 602 p.: port.;"
+          ],
+          "note": [
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
+          ],
+          "publisherLiteral": [
+            "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ,"
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "createdYear": [
+            1967
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
+          "shelfMark": [
+            "*OFA 82-5137"
+          ],
+          "creatorLiteral": [
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979."
+          ],
+          "createdString": [
+            "1967"
+          ],
+          "idLccn": [
+            "75960366"
+          ],
+          "seriesStatement": [
+            "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1"
+          ],
+          "dateStartYear": [
+            1967
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFA 82-5137"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000103"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75960366"
+            }
+          ],
+          "updatedAt": 1525296776042,
+          "publicationStatement": [
+            "[al-Jazāʼir]: al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1967."
+          ],
+          "identifier": [
+            "urn:bnum:10000103",
+            "urn:lccn:75960366"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1967"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
+          "uri": "b10000103",
+          "lccClassification": [
+            "PJ7842.H2937 A17 1967"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "[al-Jazāʼir]:"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433002000671"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433002000671"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433002000671"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10000042",
+              "shelfMark": [
+                "*OFA 82-5137"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "sort": [
+          "b10000103"
+        ]
+      }
+    ]
+  }
+}
