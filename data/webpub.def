@@ -1,3 +1,4 @@
+
 # -----------------------------------------------------
 # Converted by cvpubdef from pubdef
 # -----------------------------------------------------
@@ -17,6 +18,7 @@
 #updated 2015 01 14 by AGB to correct Holdings PUBLIC NOTE display
 #updated 2015 10 01 by HM to remove Help icon from Item Status header
 #updated 2017 07 24 by HM to suppress $0 identifier control subfield
+#updated 2018 03 20 by HM to add 588 Source of Description note 
 #
 #
 # converted by cvpubdef from HOLDINGS_POS: atpR
@@ -168,6 +170,9 @@ b|n|583 .||||b|
 b|n|584|-67|Frequency Of Use||b|
 b|n|585|-67|Exhibitions||b|
 b|n|586|-67|Awards||b|
+b|n|588 .|-67|Note||b|
+b|n|5880.|-67|Source of description||b|
+b|n|5881.|-67|Latest issue consulted||b|
 #b|n|59[0-9]|-67|Local Note||b|
 b|n|5901.|-67|Local Note||b|
 b|n|590  |-67|Local Note||b|
@@ -321,4 +326,3 @@ i|%|||Status|18|b|
 i|!|||Message|18|b|
 #
 #end converted webpub.def
-
