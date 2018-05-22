@@ -32,58 +32,6 @@ describe('Annotated Marc Rules', function () {
     })
   })
 
-  describe('bib record index rules parsing', function () {
-    it('should parse simple bib index marc rule', function () {
-      const rules = AnnotatedMarcSerializer.bibIndexRules('037 > SERIES(s)            400        KEEP x             ISBN/ISSN(i)')
-      expect(rules).to.be.a('array')
-
-      const rule = rules.pop()
-      expect(rule).to.be.a('object')
-      expect(rule.indexName).to.equal('SERIES')
-      expect(rule.fieldGroupTag).to.equal('s')
-      expect(rule.marcIndicatorRegExp).to.be.a('RegExp')
-      expect(rule.marcIndicatorRegExp.source).to.equal('400')
-      expect(rule.subfieldSpec).to.be.a('object')
-      expect(rule.subfieldSpec.subfields).to.have.lengthOf(1)
-      expect(rule.subfieldSpec.subfields).to.have.members(['x'])
-      expect(rule.subfieldSpec.directive).to.equal('include')
-    })
-
-    it('should parse 880 bib index marc rule', function () {
-      const rules = AnnotatedMarcSerializer.bibIndexRules('196 > MISC(y)              880....690 REM  23468         Subject(d)')
-      expect(rules).to.be.a('array')
-
-      const rule = rules.pop()
-      expect(rule).to.be.a('object')
-      expect(rule.indexName).to.equal('MISC')
-      expect(rule.fieldGroupTag).to.equal('y')
-      expect(rule.marcIndicatorRegExp).to.be.a('RegExp')
-      expect(rule.marcIndicatorRegExp.source).to.equal('880..')
-      expect(rule.subfieldSpec).to.be.a('object')
-      expect(rule.subfieldSpec.subfields).to.have.lengthOf(5)
-      expect(rule.subfieldSpec.subfields).to.have.members(['2', '3', '4', '6', '8'])
-      expect(rule.subfieldSpec.directive).to.equal('exclude')
-      expect(rule.targetMarcTag).to.equal('690')
-    })
-
-    it('should parse 880 bib index marc rule with indicator regex', function () {
-      const rules = AnnotatedMarcSerializer.bibIndexRules('189 > MISC(y)              880.[ 047]..611 REM  23468         Subject(d)')
-      expect(rules).to.be.a('array')
-
-      const rule = rules.pop()
-      expect(rule).to.be.a('object')
-      expect(rule.indexName).to.equal('MISC')
-      expect(rule.fieldGroupTag).to.equal('y')
-      expect(rule.marcIndicatorRegExp).to.be.a('RegExp')
-      expect(rule.marcIndicatorRegExp.source).to.equal('880.[ 047]')
-      expect(rule.subfieldSpec).to.be.a('object')
-      expect(rule.subfieldSpec.subfields).to.have.lengthOf(5)
-      expect(rule.subfieldSpec.subfields).to.have.members(['2', '3', '4', '6', '8'])
-      expect(rule.subfieldSpec.directive).to.equal('exclude')
-      expect(rule.targetMarcTag).to.equal('611')
-    })
-  })
-
   describe('building annotated marc rules', function () {
     it('should apply bib index rule to marc rule', function () {
       // Test rule *without bib index rule applied:
@@ -92,34 +40,15 @@ describe('Annotated Marc Rules', function () {
       expect(rule.label).to.equal('Series')
       expect(rule.marcIndicatorRegExp).to.be.a('RegExp')
       expect(rule.marcIndicatorRegExp.source).to.equal('^8..')
-      expect(rule.secondaryMarcIndicatorRegExp).to.be.a('RegExp')
-      expect(rule.secondaryMarcIndicatorRegExp.source).to.equal('.')
-
-      // Set up a sampling of bib-index-rules:
-      const bibIndexRules = [
-        '035 > SERIES(s)            400        KEEP abcd          Author(a)',
-        '036 > SERIES(s)            400        KEEP ptv           Title(t)',
-        '126 > SERIES(s)            800        KEEP abcdq         Author(a)',
-        '127 > SERIES(s)            800        KEEP fgklmnoprstv  Title(t)',
-        '130 > SERIES(s)            811        KEEP acdegnq       Author(a)',
-        '163 > SERIES(s)            NON-MARC   N/A                Title(t)'
-      ].join('\n')
-
-      // Now parse same rule, but layer over it the index restriction:
-      rule = AnnotatedMarcSerializer.buildAnnotatedMarcRules('b|s|8..|-6|Series||b|', bibIndexRules).pop()
-      // It now has a set of "secondary" tag patterns that must be met to use label:
-      expect(rule.secondaryMarcIndicatorRegExp).to.be.a('RegExp')
-      expect(rule.secondaryMarcIndicatorRegExp.source).to.equal('(400|800|811)')
-      expect(rule.label).to.equal('Series')
     })
   })
 
   describe('bib parsing', function () {
     it('identifies varfields', function () {
       const sampleBib = { varFields: [
-        { marcTag: 362, ind1: '', ind2: 1 },
-        { marcTag: 361, ind1: 2, ind2: 4 },
-        { marcTag: 360, ind1: '', ind2: '' }
+        { fieldTag: 'a', marcTag: 362, ind1: '', ind2: 1 },
+        { fieldTag: 'a', marcTag: 361, ind1: 2, ind2: 4 },
+        { fieldTag: 'a', marcTag: 360, ind1: '', ind2: '' }
       ] }
       // Match 362, any indicators:
       const rule1 = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules('b|a|362|-06|Publication Date||b|').pop()
