@@ -231,6 +231,68 @@ describe('Annotated Marc Rules', function () {
       expect(serialization.bib.fields[0].values[0]).to.be.a('object')
       expect(serialization.bib.fields[0].values[0].content).to.equal('Razvedchik [microform] : zhurnal voennyĭ i literaturnyĭ.')
     })
+
+    it('should serialize parallel title', function () {
+      const sampleBib = {
+        id: 'testid',
+        nyplSource: 'testSource',
+        varFields: [
+          {
+            fieldTag: 't',
+            marcTag: '245',
+            ind1: '0',
+            ind2: '0',
+            content: null,
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Razvedchik'
+              },
+              {
+                tag: '6',
+                content: '880-01'
+              }
+            ]
+          },
+          {
+            fieldTag: 'y',
+            marcTag: '880',
+            ind1: '0',
+            ind2: '0',
+            content: null,
+            subfields: [
+              {
+                tag: 'a',
+                content: 'parallel value'
+              },
+              {
+                tag: '6',
+                content: '245-01/(2/r'
+              }
+            ]
+          }
+        ]
+      }
+      const serialization = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialization.bib).to.be.a('object')
+      expect(serialization.bib.id).to.be.a('string')
+      expect(serialization.bib.nyplSource).to.be.a('string')
+      expect(serialization.bib.fields).to.be.a('array')
+      expect(serialization.bib.fields).to.have.lengthOf(2)
+
+      expect(serialization.bib.fields[0]).to.be.a('object')
+      expect(serialization.bib.fields[0].label).to.equal('Parallel Title')
+      expect(serialization.bib.fields[0].values).to.be.a('array')
+      expect(serialization.bib.fields[0].values).to.have.lengthOf(1)
+      expect(serialization.bib.fields[0].values[0].content).to.equal('parallel value')
+
+      expect(serialization.bib.fields[1]).to.be.a('object')
+      expect(serialization.bib.fields[1].label).to.equal('Title')
+      expect(serialization.bib.fields[1].values).to.be.a('array')
+      expect(serialization.bib.fields[1].values).to.have.lengthOf(1)
+      expect(serialization.bib.fields[1].values[0]).to.be.a('object')
+      expect(serialization.bib.fields[1].values[0].content).to.equal('Razvedchik')
+    })
   })
 
   describe('source masking', function () {
