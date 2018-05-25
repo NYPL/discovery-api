@@ -8,7 +8,7 @@ describe('Annotated Marc Rules', function () {
       expect(rules.length).to.equal(1)
 
       expect(rules[0]).to.be.a('object')
-      expect(rules[0].fieldGroupTag).to.equal('a')
+      expect(rules[0].fieldTag).to.equal('a')
       expect(rules[0].marcIndicatorRegExp).to.be.an.instanceOf(RegExp)
       expect(rules[0].marcIndicatorRegExp.toString()).to.equal('/^100/')
     })
@@ -356,6 +356,120 @@ describe('Annotated Marc Rules', function () {
       expect(maskedSource.subfields[1]).to.be.a('object')
       expect(maskedSource.subfields[1].tag).to.equal('h')
       expect(maskedSource.subfields[1].content).to.equal('[microform] :')
+    })
+  })
+
+  describe('catch-alls', function () {
+    it('should match varfields based on fieldTag', function () {
+      const rules = [
+        'b|a|245|a|Field name||b|',
+        'b|a||a|Catch-all name||b|'
+      ].join('\n')
+
+      const sampleBib = {
+        varFields: [
+          {
+            fieldTag: 'a',
+            marcTag: '245',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 245'
+              }
+            ]
+          },
+          {
+            fieldTag: 'a',
+            marcTag: '246',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 246'
+              }
+            ]
+          }
+
+        ]
+      }
+
+      AnnotatedMarcSerializer.mappingRules = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules(rules)
+      expect(AnnotatedMarcSerializer.mappingRules[0]).to.be.a('object')
+      expect(AnnotatedMarcSerializer.mappingRules[0].marcIndicatorRegExp).to.be.a('RegExp')
+      expect(AnnotatedMarcSerializer.mappingRules[0].marcIndicatorRegExp.source).to.equal('^245')
+      expect(AnnotatedMarcSerializer.mappingRules[1]).to.be.a('object')
+      expect(AnnotatedMarcSerializer.mappingRules[1].marcIndicatorRegExp).to.be.a('RegExp')
+      expect(AnnotatedMarcSerializer.mappingRules[1].marcIndicatorRegExp.source).to.equal('^')
+
+      const doc = AnnotatedMarcSerializer.serialize(sampleBib)
+
+      expect(doc).to.be.a('object')
+      expect(doc.bib).to.be.a('object')
+      expect(doc.bib.fields).to.be.a('array')
+      expect(doc.bib.fields).to.have.lengthOf(2)
+
+      const fieldNameMatch = doc.bib.fields.filter((f) => f.label === 'Field name').pop()
+      expect(fieldNameMatch).to.be.a('object')
+      expect(fieldNameMatch.values).to.be.a('array')
+      expect(fieldNameMatch.values).to.have.lengthOf(1)
+      expect(fieldNameMatch.values[0]).to.be.a('object')
+      expect(fieldNameMatch.values[0].content).to.equal('Varfield 245')
+
+      const catchAllMatch = doc.bib.fields.filter((f) => f.label === 'Catch-all name').pop()
+      expect(catchAllMatch).to.be.a('object')
+      expect(catchAllMatch.values).to.be.a('array')
+      expect(catchAllMatch.values).to.have.lengthOf(1)
+      expect(catchAllMatch.values[0]).to.be.a('object')
+      expect(catchAllMatch.values[0].content).to.equal('Varfield 246')
+    })
+  })
+
+  describe('exclusionary rules', function () {
+    it('should exclude varfields if rule has blank label', function () {
+      const rules = [
+        'b|a|245|a|Keep this one||b|',
+        'b|a|246|a|||b|'
+      ].join('\n')
+
+      const sampleBib = {
+        varFields: [
+          {
+            fieldTag: 'a',
+            marcTag: '245',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 245'
+              }
+            ]
+          },
+          {
+            fieldTag: 'a',
+            marcTag: '246',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 246'
+              }
+            ]
+          }
+
+        ]
+      }
+
+      AnnotatedMarcSerializer.mappingRules = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules(rules)
+      const doc = AnnotatedMarcSerializer.serialize(sampleBib)
+
+      expect(doc).to.be.a('object')
+      expect(doc.bib).to.be.a('object')
+      expect(doc.bib.fields).to.be.a('array')
+      expect(doc.bib.fields).to.have.lengthOf(1)
+
+      const fieldNameMatch = doc.bib.fields.filter((f) => f.label === 'Keep this one').pop()
+      expect(fieldNameMatch).to.be.a('object')
+      expect(fieldNameMatch.values).to.be.a('array')
+      expect(fieldNameMatch.values).to.have.lengthOf(1)
+      expect(fieldNameMatch.values[0]).to.be.a('object')
+      expect(fieldNameMatch.values[0].content).to.equal('Varfield 245')
     })
   })
 })
