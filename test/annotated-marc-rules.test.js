@@ -1,5 +1,13 @@
 const AnnotatedMarcSerializer = require('../lib/annotated-marc-serializer')
 
+const realMappingRules = AnnotatedMarcSerializer.mappingRules
+function overRideMappingRules (rules) {
+  AnnotatedMarcSerializer.setRules(AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules(rules))
+}
+function restoreMappingRules () {
+  AnnotatedMarcSerializer.setRules(realMappingRules)
+}
+
 describe('Annotated Marc Rules', function () {
   describe('marc tag parsing', function () {
     it('should extract simple marc tag', function () {
@@ -8,7 +16,7 @@ describe('Annotated Marc Rules', function () {
       expect(rules.length).to.equal(1)
 
       expect(rules[0]).to.be.a('object')
-      expect(rules[0].fieldGroupTag).to.equal('a')
+      expect(rules[0].fieldTag).to.equal('a')
       expect(rules[0].marcIndicatorRegExp).to.be.an.instanceOf(RegExp)
       expect(rules[0].marcIndicatorRegExp.toString()).to.equal('/^100/')
     })
@@ -359,10 +367,144 @@ describe('Annotated Marc Rules', function () {
     })
   })
 
+  describe('catch-alls', function () {
+    before(function () {
+      overRideMappingRules([
+        'b|a|245|a|Field name||b|',
+        'b|a||a|Catch-all name||b|'
+      ].join('\n'))
+    })
+    after(restoreMappingRules)
+    it('should match varfields based on fieldTag', function () {
+      const sampleBib = {
+        varFields: [
+          {
+            fieldTag: 'a',
+            marcTag: '245',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 245'
+              }
+            ]
+          },
+          {
+            fieldTag: 'a',
+            marcTag: '246',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 246'
+              }
+            ]
+          }
+
+        ]
+      }
+      expect(AnnotatedMarcSerializer.mappingRules[0]).to.be.a('object')
+      expect(AnnotatedMarcSerializer.mappingRules[0].marcIndicatorRegExp).to.be.a('RegExp')
+      expect(AnnotatedMarcSerializer.mappingRules[0].marcIndicatorRegExp.source).to.equal('^245')
+      expect(AnnotatedMarcSerializer.mappingRules[1]).to.be.a('object')
+      expect(AnnotatedMarcSerializer.mappingRules[1].marcIndicatorRegExp).to.be.a('RegExp')
+      expect(AnnotatedMarcSerializer.mappingRules[1].marcIndicatorRegExp.source).to.equal('^')
+
+      const doc = AnnotatedMarcSerializer.serialize(sampleBib)
+
+      expect(doc).to.be.a('object')
+      expect(doc.bib).to.be.a('object')
+      expect(doc.bib.fields).to.be.a('array')
+      expect(doc.bib.fields).to.have.lengthOf(2)
+
+      const fieldNameMatch = doc.bib.fields.filter((f) => f.label === 'Field name').pop()
+      expect(fieldNameMatch).to.be.a('object')
+      expect(fieldNameMatch.values).to.be.a('array')
+      expect(fieldNameMatch.values).to.have.lengthOf(1)
+      expect(fieldNameMatch.values[0]).to.be.a('object')
+      expect(fieldNameMatch.values[0].content).to.equal('Varfield 245')
+
+      const catchAllMatch = doc.bib.fields.filter((f) => f.label === 'Catch-all name').pop()
+      expect(catchAllMatch).to.be.a('object')
+      expect(catchAllMatch.values).to.be.a('array')
+      expect(catchAllMatch.values).to.have.lengthOf(1)
+      expect(catchAllMatch.values[0]).to.be.a('object')
+      expect(catchAllMatch.values[0].content).to.equal('Varfield 246')
+    })
+  })
+
+  describe('exclusionary rules', function () {
+    before(function () {
+      overRideMappingRules([
+        'b|a|245|a|Keep this one||b|',
+        'b|a|246|a|||b|'
+      ].join('\n'))
+    })
+    after(function () {
+      restoreMappingRules()
+    })
+    it('should exclude varfields if rule has blank label', function () {
+      const sampleBib = {
+        varFields: [
+          {
+            fieldTag: 'a',
+            marcTag: '245',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 245'
+              }
+            ]
+          },
+          {
+            fieldTag: 'a',
+            marcTag: '246',
+            subfields: [
+              {
+                tag: 'a',
+                content: 'Varfield 246'
+              }
+            ]
+          }
+
+        ]
+      }
+
+      const doc = AnnotatedMarcSerializer.serialize(sampleBib)
+
+      expect(doc).to.be.a('object')
+      expect(doc.bib).to.be.a('object')
+      expect(doc.bib.fields).to.be.a('array')
+      expect(doc.bib.fields).to.have.lengthOf(1)
+
+      const fieldNameMatch = doc.bib.fields.filter((f) => f.label === 'Keep this one').pop()
+      expect(fieldNameMatch).to.be.a('object')
+      expect(fieldNameMatch.values).to.be.a('array')
+      expect(fieldNameMatch.values).to.have.lengthOf(1)
+      expect(fieldNameMatch.values[0]).to.be.a('object')
+      expect(fieldNameMatch.values[0].content).to.equal('Varfield 245')
+    })
+  })
+
   describe('correct ordering of field tags', function () {
     it('should generate field tags in order', function () {
       expect(AnnotatedMarcSerializer.orderedFieldTags).to.be.a('Array')
-      expect(AnnotatedMarcSerializer.orderedFieldTags).to.have.ordered.members(['a', 'f', 't', 'p', 'H', 'T', 'e', 'r', 's', 'n', 'm', 'n', 'y', 'd', 'b', 'u', 'h', 'x', 'z', 'w', 'l', 'i', 'l', 'g', 'c', 'q'])
+      expect(AnnotatedMarcSerializer.orderedFieldTags).to.have.ordered.members(['a', 'f', 't', 'p', 'H', 'T', 'e', 'r', 's', 'n', 'm', 'y', 'd', 'b', 'u', 'h', 'x', 'z', 'w', 'l', 'i', 'g', 'c', 'q'])
     })
+
+    it('should place field tags in correct order when given a bib', function () {
+      const sampleBib = { varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
+        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
+        { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      console.log(serialized.bib.fields)
+      expect(serialized.bib.fields).to.have.lengthOf(3)
+      expect(serialized.bib.fields[0].label).to.equal('Author')
+      expect(serialized.bib.fields[1].label).to.equal('Uniform Title')
+      expect(serialized.bib.fields[2].label).to.equal('Imprint')
+    })
+
+    it('should place MARC tags in correct order within a field tag when given a bib', function () {})
   })
 })
