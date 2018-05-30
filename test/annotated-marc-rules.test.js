@@ -46,9 +46,9 @@ describe('Annotated Marc Rules', function () {
   describe('bib parsing', function () {
     it('identifies varfields', function () {
       const sampleBib = { varFields: [
-        { fieldTag: 'a', marcTag: 362, ind1: '', ind2: 1 },
-        { fieldTag: 'a', marcTag: 361, ind1: 2, ind2: 4 },
-        { fieldTag: 'a', marcTag: 360, ind1: '', ind2: '' }
+          { fieldTag: 'a', marcTag: 362, ind1: '', ind2: 1 },
+          { fieldTag: 'a', marcTag: 361, ind1: 2, ind2: 4 },
+          { fieldTag: 'a', marcTag: 360, ind1: '', ind2: '' }
       ] }
       // Match 362, any indicators:
       const rule1 = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules('b|a|362|-06|Publication Date||b|').pop()
@@ -356,6 +356,13 @@ describe('Annotated Marc Rules', function () {
       expect(maskedSource.subfields[1]).to.be.a('object')
       expect(maskedSource.subfields[1].tag).to.equal('h')
       expect(maskedSource.subfields[1].content).to.equal('[microform] :')
+    })
+  })
+
+  describe('correct ordering of field tags', function () {
+    it('should generate field tags in order', function () {
+      expect(AnnotatedMarcSerializer.orderedFieldTags).to.be.a('Array')
+      expect(AnnotatedMarcSerializer.orderedFieldTags).to.have.ordered.members(['a', 'f', 't', 'p', 'H', 'T', 'e', 'r', 's', 'n', 'm', 'n', 'y', 'd', 'b', 'u', 'h', 'x', 'z', 'w', 'l', 'i', 'l', 'g', 'c', 'q'])
     })
   })
 })
