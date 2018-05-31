@@ -160,7 +160,7 @@ describe('Delivery-locations-resolver', function () {
 
       // Confirm the known scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
-        expect(items[0].deliveryLocation).to.include(scholarRoom)
+        expect(items[0].deliveryLocation.map((location) => location.id)).to.include(scholarRoom.id)
       })
     })
   })
