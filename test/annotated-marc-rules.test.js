@@ -484,7 +484,7 @@ describe('Annotated Marc Rules', function () {
     })
   })
 
-  describe('correct ordering of field tags', function () {
+  describe.only('correct ordering of field tags', function () {
     it('should generate field tags in order', function () {
       expect(AnnotatedMarcSerializer.orderedFieldTags).to.be.a('Array')
       expect(AnnotatedMarcSerializer.orderedFieldTags).to.have.ordered.members(['a', 'f', 't', 'p', 'H', 'T', 'e', 'r', 's', 'n', 'm', 'y', 'd', 'b', 'u', 'h', 'x', 'z', 'w', 'l', 'i', 'g', 'c', 'q'])
@@ -504,6 +504,32 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[2].label).to.equal('Imprint')
     })
 
-    it('should place MARC tags in correct order within a field tag when given a bib', function () {})
+    it('should place MARC tags in correct order within a field tag when given a bib', function () {
+      const sampleBib = { varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
+        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
+        { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] },
+        { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'a' }] },
+        { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'pretty' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(3)
+      expect(serialized.bib.fields[1].label).to.equal('Uniform Title')
+      expect(serialized.bib.fields[1].values.map((value) => value.content)).to.have.ordered.members(['anyone', 'a', 'pretty'])
+    })
+
+    it('should place parallel fields next to the fields they parallel', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
+        { fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'town' }] },
+        { fieldTag: 'y', marcTag: '880', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'with' }, { tag: '6', content: '880-01' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(3)
+      expect(serialized.bib.fields[0].label).to.equal('Author')
+      expect(serialized.bib.fields[1].label).to.equal('Alternate Script for Author')
+    })
   })
 })
