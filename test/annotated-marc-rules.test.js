@@ -484,7 +484,7 @@ describe('Annotated Marc Rules', function () {
     })
   })
 
-  describe.only('correct ordering of field tags', function () {
+  describe('correct ordering of field tags', function () {
     it('should generate field tags in order', function () {
       expect(AnnotatedMarcSerializer.orderedFieldTags).to.be.a('Array')
       expect(AnnotatedMarcSerializer.orderedFieldTags).to.have.ordered.members(['a', 'f', 't', 'p', 'H', 'T', 'e', 'r', 's', 'n', 'm', 'y', 'd', 'b', 'u', 'h', 'x', 'z', 'w', 'l', 'i', 'g', 'c', 'q'])
