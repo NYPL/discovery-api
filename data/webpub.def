@@ -18,7 +18,7 @@
 #updated 2015 01 14 by AGB to correct Holdings PUBLIC NOTE display
 #updated 2015 10 01 by HM to remove Help icon from Item Status header
 #updated 2017 07 24 by HM to suppress $0 identifier control subfield
-#updated 2018 03 20 by HM to add 588 Source of Description note 
+#updated 2018 03 20 by HM to add 588 Source of Description note
 #
 #
 # converted by cvpubdef from HOLDINGS_POS: atpR
@@ -215,16 +215,17 @@ b|u|24616|-6|Caption Title||b|
 b|u|24617|-6|Running Title||b|
 b|u|24618|-6|Spine Title||b|
 b|u|2462.|-6|||b|
+# b|u|2463[01 ]|-6|Added Title||b|
 b|u|24700|-6|Former Title||b|
 b|u|24701|-6|||b|
 b|u|24710|-6|Former Title||b|
 b|u|24711|-6|||b|
 
-# modified 3/14/16 
+# modified 3/14/16
 # b|u|7[34]0..|-06|Added Title||b|
 b|u|730..|-06|Added Title||b|
 b|u|740..|-06|Added Title||b|
-# b|u||-06|Added Title||b|
+b|u||-06|Added Title||b|
 
 # New label for old-style Donor note
 b|u|799|-6|Donor/Sponsor||b|

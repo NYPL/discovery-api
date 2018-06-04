@@ -532,4 +532,19 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[1].label).to.equal('Alternate Script for Author')
     })
   })
+
+  describe('Added Title 246 Fields', function () {
+    it('should have added title field for MARC tags 24630/1/blank', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'u', marcTag: '246', ind1: '3', ind2: '0', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
+        { fieldTag: 'u', marcTag: '246', ind1: '3', ind2: ' ', subfields: [{ tag: 'a', content: 'town' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(1)
+      expect(serialized.bib.fields[0].label).to.equal('Added Title')
+      expect(serialized.bib.fields[0].values).to.be.an('array')
+      expect(serialized.bib.fields[0].values).to.have.lengthOf(2)
+    })
+  })
 })
