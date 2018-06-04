@@ -532,4 +532,35 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[1].label).to.equal('Alternate Script for Author')
     })
   })
+
+  describe('Added Title 246 Fields', function () {
+    it('should have added title field for MARC tags 24630/1/blank', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'u', marcTag: '246', ind1: '3', ind2: '0', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
+        { fieldTag: 'u', marcTag: '246', ind1: '3', ind2: ' ', subfields: [{ tag: 'a', content: 'town' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(1)
+      expect(serialized.bib.fields[0].label).to.equal('Added Title')
+      expect(serialized.bib.fields[0].values).to.be.an('array')
+      expect(serialized.bib.fields[0].values).to.have.lengthOf(2)
+    })
+  })
+  describe('Relator Mappings', function () {
+    it('should replace designated codes in designated fields', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'Cramer, Richard' }, { tag: '4', content: 'aut -- 700 1b' }] },
+        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'up' }, { tag: '4', content: 'cos so' }] }
+      ] }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(2)
+      expect(serialized.bib.fields[0].label).to.equal('Author')
+      expect(serialized.bib.fields[0].values[0].content).to.equal('up Contestant so')
+      expect(serialized.bib.fields[1].label).to.equal('Added Author')
+      expect(serialized.bib.fields[1].values[0].content).to.equal('Cramer, Richard Author -- 700 1b')
+    })
+  })
 })

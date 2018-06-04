@@ -2136,6 +2136,19 @@
   },
   {
     "fieldTag": "u",
+    "marcIndicatorRegExp": "^",
+    "subfieldSpec": {
+      "subfields": [
+        "0",
+        "6"
+      ],
+      "directive": "exclude"
+    },
+    "label": "Added Title",
+    "directive": "include"
+  },
+  {
+    "fieldTag": "u",
     "marcIndicatorRegExp": "^799",
     "subfieldSpec": {
       "subfields": [
