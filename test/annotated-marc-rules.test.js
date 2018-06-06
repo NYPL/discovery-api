@@ -564,7 +564,7 @@ describe('Annotated Marc Rules', function () {
     })
   })
 
-  describe('Url labels', function () {
+  describe('"Connect to:" labels', function () {
     it('should extract label from $z, $y, or $3', function () {
       const sampleBib = { varFields: [
         { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#0' }, { tag: 'z', content: 'Label 1' } ] },
@@ -576,7 +576,7 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib).to.be.a('object')
       expect(serialized.bib.fields).to.be.a('array')
       expect(serialized.bib.fields[0]).to.be.a('object')
-      expect(serialized.bib.fields[0].label).to.equal('Url')
+      expect(serialized.bib.fields[0].label).to.equal('Connect to:')
       expect(serialized.bib.fields[0].values).to.be.a('array')
       expect(serialized.bib.fields[0].values[0]).to.be.a('object')
       expect(serialized.bib.fields[0].values[0].label).to.equal('Label 1')
@@ -593,10 +593,10 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib).to.be.a('object')
       expect(serialized.bib.fields).to.be.a('array')
       expect(serialized.bib.fields[0]).to.be.a('object')
-      expect(serialized.bib.fields[0].label).to.equal('Url')
+      expect(serialized.bib.fields[0].label).to.equal('Connect to:')
       expect(serialized.bib.fields[0].values).to.be.a('array')
       expect(serialized.bib.fields[0].values[0]).to.be.a('object')
-      expect(serialized.bib.fields[0].values[0].label).to.equal('Connect to')
+      expect(serialized.bib.fields[0].values[0].label).to.equal('http://example.com#0')
     })
   })
 })
