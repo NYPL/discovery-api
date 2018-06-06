@@ -1,5 +1,13 @@
 const AnnotatedMarcSerializer = require('../lib/annotated-marc-serializer')
 
+const realMappingRules = AnnotatedMarcSerializer.mappingRules
+function overRideMappingRules (rules) {
+  AnnotatedMarcSerializer.setRules(AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules(rules))
+}
+function restoreMappingRules () {
+  AnnotatedMarcSerializer.setRules(realMappingRules)
+}
+
 describe('Annotated Marc Rules', function () {
   describe('marc tag parsing', function () {
     it('should extract simple marc tag', function () {
@@ -46,9 +54,9 @@ describe('Annotated Marc Rules', function () {
   describe('bib parsing', function () {
     it('identifies varfields', function () {
       const sampleBib = { varFields: [
-        { fieldTag: 'a', marcTag: 362, ind1: '', ind2: 1 },
-        { fieldTag: 'a', marcTag: 361, ind1: 2, ind2: 4 },
-        { fieldTag: 'a', marcTag: 360, ind1: '', ind2: '' }
+          { fieldTag: 'a', marcTag: 362, ind1: '', ind2: 1 },
+          { fieldTag: 'a', marcTag: 361, ind1: 2, ind2: 4 },
+          { fieldTag: 'a', marcTag: 360, ind1: '', ind2: '' }
       ] }
       // Match 362, any indicators:
       const rule1 = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules('b|a|362|-06|Publication Date||b|').pop()
@@ -280,18 +288,18 @@ describe('Annotated Marc Rules', function () {
       expect(serialization.bib.fields).to.be.a('array')
       expect(serialization.bib.fields).to.have.lengthOf(2)
 
-      expect(serialization.bib.fields[0]).to.be.a('object')
-      expect(serialization.bib.fields[0].label).to.equal('Parallel Title')
-      expect(serialization.bib.fields[0].values).to.be.a('array')
-      expect(serialization.bib.fields[0].values).to.have.lengthOf(1)
-      expect(serialization.bib.fields[0].values[0].content).to.equal('parallel value')
-
       expect(serialization.bib.fields[1]).to.be.a('object')
-      expect(serialization.bib.fields[1].label).to.equal('Title')
+      expect(serialization.bib.fields[1].label).to.equal('Alternate Script for Title')
       expect(serialization.bib.fields[1].values).to.be.a('array')
       expect(serialization.bib.fields[1].values).to.have.lengthOf(1)
-      expect(serialization.bib.fields[1].values[0]).to.be.a('object')
-      expect(serialization.bib.fields[1].values[0].content).to.equal('Razvedchik')
+      expect(serialization.bib.fields[1].values[0].content).to.equal('parallel value')
+
+      expect(serialization.bib.fields[0]).to.be.a('object')
+      expect(serialization.bib.fields[0].label).to.equal('Title')
+      expect(serialization.bib.fields[0].values).to.be.a('array')
+      expect(serialization.bib.fields[0].values).to.have.lengthOf(1)
+      expect(serialization.bib.fields[0].values[0]).to.be.a('object')
+      expect(serialization.bib.fields[0].values[0].content).to.equal('Razvedchik')
     })
   })
 
@@ -360,12 +368,14 @@ describe('Annotated Marc Rules', function () {
   })
 
   describe('catch-alls', function () {
-    it('should match varfields based on fieldTag', function () {
-      const rules = [
+    before(function () {
+      overRideMappingRules([
         'b|a|245|a|Field name||b|',
         'b|a||a|Catch-all name||b|'
-      ].join('\n')
-
+      ].join('\n'))
+    })
+    after(restoreMappingRules)
+    it('should match varfields based on fieldTag', function () {
       const sampleBib = {
         varFields: [
           {
@@ -391,8 +401,6 @@ describe('Annotated Marc Rules', function () {
 
         ]
       }
-
-      AnnotatedMarcSerializer.mappingRules = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules(rules)
       expect(AnnotatedMarcSerializer.mappingRules[0]).to.be.a('object')
       expect(AnnotatedMarcSerializer.mappingRules[0].marcIndicatorRegExp).to.be.a('RegExp')
       expect(AnnotatedMarcSerializer.mappingRules[0].marcIndicatorRegExp.source).to.equal('^245')
@@ -424,12 +432,16 @@ describe('Annotated Marc Rules', function () {
   })
 
   describe('exclusionary rules', function () {
-    it('should exclude varfields if rule has blank label', function () {
-      const rules = [
+    before(function () {
+      overRideMappingRules([
         'b|a|245|a|Keep this one||b|',
         'b|a|246|a|||b|'
-      ].join('\n')
-
+      ].join('\n'))
+    })
+    after(function () {
+      restoreMappingRules()
+    })
+    it('should exclude varfields if rule has blank label', function () {
       const sampleBib = {
         varFields: [
           {
@@ -456,7 +468,6 @@ describe('Annotated Marc Rules', function () {
         ]
       }
 
-      AnnotatedMarcSerializer.mappingRules = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules(rules)
       const doc = AnnotatedMarcSerializer.serialize(sampleBib)
 
       expect(doc).to.be.a('object')
@@ -470,6 +481,86 @@ describe('Annotated Marc Rules', function () {
       expect(fieldNameMatch.values).to.have.lengthOf(1)
       expect(fieldNameMatch.values[0]).to.be.a('object')
       expect(fieldNameMatch.values[0].content).to.equal('Varfield 245')
+    })
+  })
+
+  describe('correct ordering of field tags', function () {
+    it('should generate field tags in order', function () {
+      expect(AnnotatedMarcSerializer.orderedFieldTags).to.be.a('Array')
+      expect(AnnotatedMarcSerializer.orderedFieldTags).to.have.ordered.members(['a', 'f', 't', 'p', 'H', 'T', 'e', 'r', 's', 'n', 'm', 'y', 'd', 'b', 'u', 'h', 'x', 'z', 'w', 'l', 'i', 'g', 'c', 'q'])
+    })
+
+    it('should place field tags in correct order when given a bib', function () {
+      const sampleBib = { varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
+        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
+        { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(3)
+      expect(serialized.bib.fields[0].label).to.equal('Author')
+      expect(serialized.bib.fields[1].label).to.equal('Uniform Title')
+      expect(serialized.bib.fields[2].label).to.equal('Imprint')
+    })
+
+    it('should place MARC tags in correct order within a field tag when given a bib', function () {
+      const sampleBib = { varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
+        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
+        { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] },
+        { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'a' }] },
+        { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'pretty' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(3)
+      expect(serialized.bib.fields[1].label).to.equal('Uniform Title')
+      expect(serialized.bib.fields[1].values.map((value) => value.content)).to.have.ordered.members(['anyone', 'a', 'pretty'])
+    })
+
+    it('should place parallel fields next to the fields they parallel', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
+        { fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'town' }] },
+        { fieldTag: 'y', marcTag: '880', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'with' }, { tag: '6', content: '880-01' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(3)
+      expect(serialized.bib.fields[0].label).to.equal('Author')
+      expect(serialized.bib.fields[1].label).to.equal('Alternate Script for Author')
+    })
+  })
+
+  describe('Added Title 246 Fields', function () {
+    it('should have added title field for MARC tags 24630/1/blank', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'u', marcTag: '246', ind1: '3', ind2: '0', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
+        { fieldTag: 'u', marcTag: '246', ind1: '3', ind2: ' ', subfields: [{ tag: 'a', content: 'town' }] }
+      ] }
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(1)
+      expect(serialized.bib.fields[0].label).to.equal('Added Title')
+      expect(serialized.bib.fields[0].values).to.be.an('array')
+      expect(serialized.bib.fields[0].values).to.have.lengthOf(2)
+    })
+  })
+  describe('Relator Mappings', function () {
+    it('should replace designated codes in designated fields', function () {
+      const sampleBib = { varFields: [{ fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'Cramer, Richard' }, { tag: '4', content: 'aut -- 700 1b' }] },
+        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'up' }, { tag: '4', content: 'cos so' }] }
+      ] }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(2)
+      expect(serialized.bib.fields[0].label).to.equal('Author')
+      expect(serialized.bib.fields[0].values[0].content).to.equal('up Contestant so')
+      expect(serialized.bib.fields[1].label).to.equal('Added Author')
+      expect(serialized.bib.fields[1].values[0].content).to.equal('Cramer, Richard Author -- 700 1b')
     })
   })
 })
