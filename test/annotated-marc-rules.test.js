@@ -563,4 +563,40 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[1].values[0].content).to.equal('Cramer, Richard Author -- 700 1b')
     })
   })
+
+  describe('"Connect to:" labels', function () {
+    it('should extract label from $z, $y, or $3', function () {
+      const sampleBib = { varFields: [
+        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#0' }, { tag: 'z', content: 'Label 1' } ] },
+        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#1' }, { tag: 'y', content: 'Label 2' }, { tag: '3', content: 'This additional lable is ignored because we found $y first' } ] },
+        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'a', content: 'Ignore tag' }, { tag: 'u', content: 'http://example.com#2' }, { tag: '3', content: 'Label 3' } ] }
+      ] }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.a('object')
+      expect(serialized.bib.fields).to.be.a('array')
+      expect(serialized.bib.fields[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].label).to.equal('Connect to:')
+      expect(serialized.bib.fields[0].values).to.be.a('array')
+      expect(serialized.bib.fields[0].values[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].values[0].label).to.equal('Label 1')
+      expect(serialized.bib.fields[0].values[1].label).to.equal('Label 2')
+      expect(serialized.bib.fields[0].values[2].label).to.equal('Label 3')
+    })
+
+    it('should use default label when none specified', function () {
+      const sampleBib = { varFields: [
+        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#0' } ] }
+      ] }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.a('object')
+      expect(serialized.bib.fields).to.be.a('array')
+      expect(serialized.bib.fields[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].label).to.equal('Connect to:')
+      expect(serialized.bib.fields[0].values).to.be.a('array')
+      expect(serialized.bib.fields[0].values[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].values[0].label).to.equal('http://example.com#0')
+    })
+  })
 })
