@@ -547,6 +547,7 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[0].values).to.have.lengthOf(2)
     })
   })
+
   describe('Relator Mappings', function () {
     it('should replace designated codes in designated fields', function () {
       const sampleBib = { varFields: [{ fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'Cramer, Richard' }, { tag: '4', content: 'aut -- 700 1b' }] },
@@ -561,6 +562,27 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[0].values[0].content).to.equal('up Contestant so')
       expect(serialized.bib.fields[1].label).to.equal('Added Author')
       expect(serialized.bib.fields[1].values[0].content).to.equal('Cramer, Richard Author -- 700 1b')
+    })
+
+    it('should replace multiple consecutive $4 subfields with mapped relator labels, joined by a period', function () {
+      const sampleBib = {
+        varFields: [
+          {
+            fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [
+              { tag: 'a', content: 'Cramer, Richard' },
+              { tag: '4', content: 'aut' },
+              { tag: '4', content: 'prt' }
+            ]
+          }
+        ]
+      }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.an('object')
+      expect(serialized.bib.fields).to.be.an('array')
+      expect(serialized.bib.fields).to.have.lengthOf(1)
+      expect(serialized.bib.fields[0].label).to.equal('Added Author')
+      expect(serialized.bib.fields[0].values[0].content).to.equal('Cramer, Richard Author. Printer')
     })
   })
 
