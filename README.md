@@ -93,7 +93,7 @@ UPDATE_FIXTURES=if-missing npm test
 
 ## Deployment
 
-`npm run deploy-[qa|production]`
+`npm run deploy-[development|qa|production]`
 
 ## Searching
 
