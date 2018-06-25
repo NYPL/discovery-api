@@ -203,3 +203,4 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 .. Or by any item @id:
 
 > /resources/b15704876-i25375512
+
