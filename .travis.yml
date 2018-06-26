@@ -8,6 +8,30 @@ before_deploy: echo 'All unit tests passed; Successfull built distribution asset
 deploy:
 - provider: elasticbeanstalk
   skip_cleanup: true
+  access_key_id: "$AWS_ACCESS_KEY_ID_PRODUCTION"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY_PRODUCTION"
+  region: us-east-1
+  app: discovery-api
+  env: discovery-api-production
+  bucket_name: elasticbeanstalk-us-east-1-946183545209
+  bucket_path: discovery-api-production
+  on:
+    repo: NYPL-discovery/discovery-api
+    branch: production
+- provider: elasticbeanstalk
+  skip_cleanup: true
+  access_key_id: "$AWS_ACCESS_KEY_ID_PRODUCTION"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY_PRODUCTION"
+  region: us-east-1
+  app: discovery-api
+  env: discovery-api-qa
+  bucket_name: elasticbeanstalk-us-east-1-946183545209
+  bucket_path: discovery-api-qa
+  on:
+    repo: NYPL-discovery/discovery-api
+    branch: qa
+- provider: elasticbeanstalk
+  skip_cleanup: true
   access_key_id: "$AWS_ACCESS_KEY_ID_DEVELOPMENT"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_DEVELOPMENT"
   region: us-east-1
@@ -19,9 +43,9 @@ deploy:
     repo: NYPL-discovery/discovery-api
     branch: development
 after_deploy: echo 'Successfully executed deploy trigger for Discovery API'
-env:
-  global:
-    secure: s/Wksi6nrU6vaBGKVEbmh2Qbaa9adVnQDx5QhcuyxWk61gh27g6KQ+JEkUlaWxChsWLBZM221Kw9xkB0uP6tMHksg6hOxPyO9JwcS3g15hs5b7qph+3Kt7FKpwlXR8T6o880AjdAFuyIr8tLavll4UD6I8cHaZp9BsjxPT6tkn9NQFITQ/3pURtD/wfLHCkeE+QuTHLhBqhHMscTjuuiqmNAimCzE95tteEfgRMh06+TPHfZsItd2OvhjB2MvJtzulPGjIENhl2UFj595Tu5PbfMBBKSRumfSv2MIFGJhKRM1r8e/jviuZfMpbmaCMxxSqj3EFIdFLPA0hEeOvmZ8Scf3VF0M4x6I4lt1AbxVlHWEWimBVqyFsZC8hOSTbfSq9Su1Y9KMYhFPiKjaAdPasg8pcEm5qOEKBzBl84jhiKkj0eSWg1T+nuF8XRaLd6vtV5bVqVaDmO9NCbfx+Or8nordX/++dNfRn85VjlX6wPV5uUR3efvG9QxZSCenv8ai5ohEdT/wKWk7BTJa+MMWUUFKdxTc5WU7vDhH22HYkXKJxV6nVEXm/NGbBgNrzpurb26jTpJmRk9wVL8rz+HvQ3xTPexQlQkexDUeV9ue7EZSkgXqMDbMx3yItuSgTLGwTOBrwlPGh/H6DzGfJOxB3C2Y0LLG67hUaNqQsRRZL8=
 notifications:
   slack:
     secure: g6eiX6ALpd0VvGsSCDyCGpwtkvTT3qDcNTwXFK7yj85y4ZaRPUHqV22RXUn+7hyvPDbaXM1o61Q5EwBCC3XGlzirqGoM0l22TDQq3ZchtJGTSFrALcWGHaj6YHCQOyHu4TbFsaYGzMNG0o2DVjC2A1L/psoLVj5S0mQXtRmsWNiBAfff4kqOBYk76459rCkAGoUkV5Wwz6D0XPdLxVFmOqtfFdt427jjZcQp9tj5as9B33ERm4kdIKX2/CXdJE3F7+YjKeyrUhrqggLRJiTBKc53reoy8X26QjExfQ95ewPkdHx+CAnXKhW1TLym4+EpRTSrQIFt2dhKvT+0VU4X3XIKlxTn2KA/UX/1Qln6s8SMRqzeaNqB6t8rckzqQ3NN5HSgHmcERnmwFaRM4mPfxwTf5RR0bnoZd4iq7x3hiznztLJp3S5i1hUQCm8IJ83sTEU9LHsVdaaBjTOk7FAtATGX3IGA86BKVvdpULgQFaucAx5jRXIGyRFqcuzka3B4UYSyfatU3i+KRVDIuo+PkbcsjLL7EGT3fPZVeXgXnxdLQT7s9mKtEMhCDGOzH4gApJJn62Z+x0m3hoUgR8Y5sw9o9yoiwD2ldlQtYQ/1iMP/mku3gyF8nsCe9AR3nMmUJGyCufEBOTR8A6THscINRU/4pVxWfdFDAUjz1qoADKM=
+env:
+  global:
+    secure: FpJaRm1r5NcURJ2fKHBUIwHt1WuIBDG+4ZwxIAb776IgdA+Ig2Ibklrw1y6drUOfOU3JFlvQhWxQrWbQs9wsfZ0RDmOMfA7s1/Y24XK89Fq9prTOIn08f07ohN3bx7egCzdW/C/hbeiXXnUxkkvCL162BP0uwWZDxiN2KekuKY0XC6cDxbZcCnwUuch47tHir5IFZiot1mSveK1uHfkHbg0JJDf/jKpaOhRwfvM93tgvNodwOXASA7qaFRX6JWzkO4r1KUj66p65Q6n7mJeUddgNzBbt8xN3dtgXGQpPTroJMcMsWKw+DqTRdhvjRwNx5HsTp5bbaFDN9+CfP/sO6mloB0FyGgm3vaNt5OAoWb4OC1uJrAjAIqdvwyL9rN+7k3EaUmGWpzyxH3UTYInUlwURySBCFQ8fn+UzqS6pBYJoEHX9E07sAYNL3CzsvhOsCYh0a7PMc4jDGXzYTiC93GqHy5ilU2kn3u/K285UAYkuv9h/au4O59F9uss/7L/8T7b6KcBDg9XFgJ8/J0mcRXeQOAOjk3ZBaw93nDtQRSkSDWUoA9x3mTqPdahxPc7Lb/RqMmbkvUz86jGLSMkky3OJMtP7ASBn5dUaIuF5LT5o6ZJP3w69LJAOmbYE30QsT+LTq5PUv4ShtUqaaWYv9J1mwSbW6ate5r7Z1/0tZgQ=
