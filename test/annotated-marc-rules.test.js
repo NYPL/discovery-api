@@ -621,4 +621,24 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[0].values[0].label).to.equal('http://example.com#0')
     })
   })
+
+  describe('Subject delimiters', function () {
+    it('should use -- delimiters', function () {
+      const sampleBib = { varFields: [
+        { fieldTag: 'd', marcTag: '600', subfields: [ { tag: 'a', content: 'Artist, Starving,' }, { tag: 'd', content: '1900-1999' }, { tag: 'v', content: 'Autobiography.' } ] },
+        { fieldTag: 'd', marcTag: '611', subfields: [ { tag: 'a', content: 'Stonecutters\' Annual Picnic' }, { tag: 'n', content: '(12th :' }, { tag: 'd', content: '1995 :' }, { tag: 'c', content: 'Springfield)' }, { tag: 'x', content: 'History' }, { tag: 'v', content: 'Drama.' } ] },
+        { fieldTag: 'd', marcTag: '651', subfields: [ { tag: 'a', content: 'New York (N.Y.)' }, { tag: 'y', content: '21st century' }, { tag: 'x', content: 'Diaries.' } ] }
+      ] }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.a('object')
+      expect(serialized.bib.fields).to.be.a('array')
+      expect(serialized.bib.fields[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].label).to.equal('Subject')
+      expect(serialized.bib.fields[0].values).to.be.a('array')
+      expect(serialized.bib.fields[0].values[0].content).to.equal('Artist, Starving, 1900-1999 -- Autobiography.')
+      expect(serialized.bib.fields[0].values[1].content).to.equal('Stonecutters\' Annual Picnic (12th : 1995 : Springfield) -- History -- Drama.')
+      expect(serialized.bib.fields[0].values[2].content).to.equal('New York (N.Y.) -- 21st century -- Diaries.')
+    })
+  })
 })
