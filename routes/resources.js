@@ -85,6 +85,16 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
+  app.get(`/api/v${VER}/request/patronEligibility/:id`, function (req, res){
+    var params = { id: req.params.id }
+
+    var handler = app.resources.checkPatronEligibility
+
+    return handler(params, { baseUrl: app.baseUrl })
+      .then((responseBody) => respond(res, responseBody, params))
+      .catch((error) => handleError(res, error, params))
+  })
+
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
     var params = { uri: req.params.uri }
 
