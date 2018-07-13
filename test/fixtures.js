@@ -138,7 +138,7 @@ function enableDataApiFixtures (pathToFixtureMap) {
       return Promise.resolve(JSON.parse(content))
     }
 
-    return Promise.reject()
+    throw new Error('No fixture for ' + requestPath)
   })
 }
 
