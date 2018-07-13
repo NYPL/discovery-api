@@ -85,7 +85,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/request/patronEligibility/:id`, function (req, res){
+  app.get(`/api/v${VER}/request/patronEligibility/:id`, function (req, res) {
     var params = { id: req.params.id }
 
     var handler = app.resources.checkPatronEligibility
