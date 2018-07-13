@@ -103,11 +103,11 @@ describe('Test Resources responses', function () {
   this.timeout(10000)
 
   before(function () {
-    fixtures.enableFixtures()
+    fixtures.enableEsFixtures()
   })
 
   after(function () {
-    fixtures.disableFixtures()
+    fixtures.disableEsFixtures()
   })
 
   describe('GET sample resources', function () {
