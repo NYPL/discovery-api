@@ -103,7 +103,6 @@ function enableFixtures () {
   const wrapper = require('@nypl/sierra-wrapper')
 
   sinon.stub(wrapper, 'apiGet').callsFake((path, cb) => {
-    console.log('stubbing get')
     const goodResponse = {
       'data': {
         'total': 1,
@@ -150,7 +149,6 @@ function enableFixtures () {
     return new Promise((resolve, reject) => { resolve(cb(body, false)) })
   })
   sinon.stub(wrapper, 'promiseAuth').callsFake((cb) => {
-    console.log('stubbing promiseAuth')
     return cb(null, null)
   })
 }
