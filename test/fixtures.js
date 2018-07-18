@@ -99,6 +99,58 @@ function enableFixtures () {
     // Any internal call to app.esClient.search should load a local fixture:
     sinon.stub(app.esClient, 'search').callsFake(esClientSearchViaFixtures)
   }
+
+  const wrapper = require('@nypl/sierra-wrapper')
+
+  sinon.stub(wrapper, 'apiGet').callsFake((path, cb) => {
+    const goodResponse = {
+      'data': {
+        'total': 1,
+        'entries': [
+          {
+            'id': 5459252,
+            'expirationDate': '2022-04-01',
+            'birthDate': '1996-11-22',
+            'patronType': 10,
+            'patronCodes': {
+              'pcode1': '-',
+              'pcode2': 'p',
+              'pcode3': 2,
+              'pcode4': 0
+            },
+            'homeLibraryCode': 'lb',
+            'message': {
+              'code': '-',
+              'accountMessages': [
+                'digitallionprojectteam@nypl.org'
+              ]
+            },
+            'blockInfo': {
+              'code': 'c'
+            },
+            'moneyOwed': 115.92
+          }
+        ]
+      },
+      'url': 'https://nypl-sierra-test.iii.com/iii/sierra-api/v3/patrons/5459252'
+    }
+
+    return new Promise((resolve, reject) => {
+      resolve(cb(null, goodResponse))
+    })
+  })
+  sinon.stub(wrapper, 'apiPost').callsFake((path, data, cb) => {
+    let body
+    if (path.includes('1001006')) {
+      body = { description: 'XCirc error : Bib record cannot be loaded' }
+    } else {
+      body = { description: 'blahblahblah' }
+    }
+    return new Promise((resolve, reject) => { resolve(cb(body, false)) })
+  })
+  sinon.stub(wrapper, 'promiseAuth').callsFake((cb) => {
+    return cb(null, null)
+  })
 }
 
 /**
@@ -108,6 +160,11 @@ function disableFixtures () {
   const app = require('../app')
 
   app.esClient.search.restore()
+
+  const wrapper = require('@nypl/sierra-wrapper')
+  wrapper.apiGet.restore()
+  wrapper.apiPost.restore()
+  wrapper.promiseAuth.restore()
 }
 
 module.exports = { enableFixtures, disableFixtures }

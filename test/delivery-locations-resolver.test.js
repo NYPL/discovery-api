@@ -157,7 +157,6 @@ describe('Delivery-locations-resolver', function () {
   it('will reveal "Scholar" deliveryLocation for scholars', function () {
     return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research', 'Scholar']).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
-
       // Confirm the known scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
         expect(items[0].deliveryLocation.map((location) => location.id)).to.include(scholarRoom.id)
