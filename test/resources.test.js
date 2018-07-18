@@ -482,7 +482,6 @@ describe('Test Resources responses', function () {
   it('PatronEligibility responds with \'eligible to place holds\' for an eligible patron', function (done) {
     request.get(`${global.TEST_BASE_URL}/api/v0.1/request/patronEligibility/1001006`, function (err, response, body) {
       if (err) console.log(err)
-      console.log('console logging response: ', response.body)
       expect(response.body).to.equal('\"eligible to place holds\"') // should look into this, also need to worry about actually making api calls
       done()
     })
@@ -491,7 +490,6 @@ describe('Test Resources responses', function () {
   it('PatronEligibility responds with a string representation of an errors object for an ineligible patron', function (done) {
     request.get(`${global.TEST_BASE_URL}/api/v0.1/request/patronEligibility/5459252`, function (err, response, body) {
       if (err) console.log(err)
-      console.log('console logging response: ', response.body)
       expect(response.body).to.equal('"{\\"expired\\":false,\\"blocked\\":true,\\"moneyOwed\\":true}"') // should look into this, also need to worry about actually making api calls
       done()
     })
