@@ -114,6 +114,120 @@ function disableEsFixtures () {
   app.esClient.search.restore()
 }
 
+/** **************************************************************************
+ *  SCSB fixtures:
+ ** **************************************************************************/
+
+/**
+ * Given an scsb items-by-barcode query, builds a local path unique to the query
+ */
+function scsbByBarcodesFixturePath (barcodes) {
+  // Use qs.stringify to get a query-string representation of the es query
+  // Then use md5 on that to get a short, (mostly) unique string suitable as
+  // a filename. (Md5 on different plain objects returns same string hash)
+  return `./test/fixtures/scsb-by-barcode-${md5(qs.stringify(barcodes))}.json`
+}
+
+/**
+ * Determine if the fixture for the given query exists on disk, async.
+ *
+ * @returns {Promise} A promise that resolves a boolean: true if fixture exists, false otherwise.
+ */
+function scsbByBarcodesFixtureExists (barcodes) {
+  let path = scsbByBarcodesFixturePath(barcodes)
+  return new Promise((resolve, reject) => {
+    fs.access(path, (err, fd) => {
+      const exists = !err
+      return resolve(exists)
+    })
+  })
+}
+
+/**
+ * Emulates SCSBClient.getItemAvailabilityForBarcodes via local fixtures
+ */
+function scsbByBarcodesViaFixtures (barcodes) {
+  let path = scsbByBarcodesFixturePath(barcodes)
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, 'utf8', (err, content) => {
+      if (err) {
+        console.error(`Missing fixture (${path}) for `, JSON.stringify(barcodes, null, 2))
+        return reject(err)
+      }
+
+      return resolve(JSON.parse(content))
+    })
+  })
+}
+
+/**
+ * Given a es query hash, this function:
+ *  - determines the fixture path and
+ *  - writes the given ES response to a local fixture
+ *
+ * By default will overwrite any existing fixture. To skip overwriting existent
+ * fixtures (i.e. to avoid trivial changes), set:
+ *   process.env.UPDATE_FIXTURES = 'if-missing'
+ */
+function writeScsbByBarcodesResponseToFixture (properties, resp) {
+  let path = scsbByBarcodesFixturePath(properties)
+  return new Promise((resolve, reject) => {
+    fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
+      if (err) return reject(err)
+
+      return resolve()
+    })
+  })
+}
+
+/**
+ * May be used inside a `before/beforeEach` to redirect all
+ * `SCSBRestClient.getItemsAvailabilityForBarcodes` calls to local fixtures.
+ *
+ * Optionally enable process.env.UPDATE_FIXTURES=[all|if-missing] to attempt to update
+ * fixtures via whatever ES is configured
+ */
+function enableScsbFixtures () {
+  const SCSBRestClient = require('@nypl/scsb-rest-client')
+
+  // If tests are run with `UPDATE_FIXTURES=[all|if-missing] npm test`, rebuild fixtures:
+  if (process.env.UPDATE_FIXTURES) {
+    // Create a reference to the original search function:
+    const restClient = new SCSBRestClient({url: process.env.SCSB_URL, apiKey: process.env.SCSB_API_KEY})
+    const original = restClient.getItemsAvailabilityForBarcodes.bind(restClient)
+
+    sinon.stub(SCSBRestClient.prototype, 'getItemsAvailabilityForBarcodes').callsFake(function (barcodes) {
+      return scsbByBarcodesFixtureExists(barcodes).then((exists) => {
+        // If it doesn't exist, or we're updating everything, update it:
+        if (process.env.UPDATE_FIXTURES === 'all' || !exists) {
+          console.log(`Writing ${scsbByBarcodesFixturePath(barcodes)} because ${process.env.UPDATE_FIXTURES === 'all' ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
+          return original(barcodes)
+            // Now write the response to local fixture:
+            .then((resp) => writeScsbByBarcodesResponseToFixture(barcodes, resp))
+            // And for good measure, let's immediately rely on the local fixture:
+            .then(() => scsbByBarcodesViaFixtures(barcodes))
+        } else {
+          return scsbByBarcodesViaFixtures(barcodes)
+        }
+      })
+    })
+  } else {
+    // Any internal call to SCSBRestClient.getItemsAvailabilityForBarcodes
+    // should load a local fixture:
+    sinon.stub(SCSBRestClient.prototype, 'getItemsAvailabilityForBarcodes')
+      .callsFake(scsbByBarcodesViaFixtures)
+  }
+}
+
+/**
+ * Use in `after/afterEach` to restore (de-mock) app.esClient.search
+ */
+function disableScsbFixtures () {
+  const SCSBRestClient = require('@nypl/scsb-rest-client')
+
+  SCSBRestClient.prototype.getItemsAvailabilityForBarcodes.restore()
+}
+
 let dataApiClient = null
 
 /**
@@ -149,4 +263,4 @@ function disableDataApiFixtures () {
   dataApiClient._doAuthenticatedRequest.restore()
 }
 
-module.exports = { enableEsFixtures, disableEsFixtures, enableDataApiFixtures, disableDataApiFixtures }
+module.exports = { enableEsFixtures, disableEsFixtures, enableDataApiFixtures, disableDataApiFixtures, enableScsbFixtures, disableScsbFixtures }

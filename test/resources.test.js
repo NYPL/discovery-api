@@ -104,10 +104,12 @@ describe('Test Resources responses', function () {
 
   before(function () {
     fixtures.enableEsFixtures()
+    fixtures.enableScsbFixtures()
   })
 
   after(function () {
     fixtures.disableEsFixtures()
+    fixtures.disableScsbFixtures()
   })
 
   describe('GET sample resources', function () {
