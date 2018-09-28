@@ -15,10 +15,9 @@ paths:
     get:
       tags:
         - discovery
-      summary: Search resources
+      summary: Search resources (bibs and items)
       description: >
         Match by keyword
-
 
         > `/resources?q=war peace`
 
@@ -27,7 +26,7 @@ paths:
         the query string:
 
 
-        > /resources?filters[property1]=value1&filters[property2]=value2
+        > `/resources?filters[property1]=value1&filters[property2]=value2`
 
 
         Where `property*` is one of: 
@@ -55,6 +54,7 @@ paths:
           description: Page number to return
           required: false
           type: integer
+          default: 1
           minimum: 1
         - name: per_page
           in: query
@@ -79,7 +79,8 @@ paths:
           in: query
           description: >-
             Override the default direction for the current sort (asc, desc).
-            Default depends on the field.
+            Default depends on the field. (title defaults to asc, date defaults
+            to desc, creator defaults to asc, relevance is fixed desc)
           required: false
           type: string
           enum:
@@ -89,7 +90,9 @@ paths:
           in: query
           description: >-
             Specify what (group of) fields to match against (all, title,
-            contributor, subject, series, callnumber)
+            contributor, subject, series, callnumber, standard_number). See
+            https://github.com/NYPL-discovery/discovery-api/blob/master/lib/resources.js
+            to review specific fields matched in each scope and how they're boosted.
           required: false
           type: string
           enum:
@@ -99,6 +102,7 @@ paths:
             - subject
             - series
             - callnumber
+            - standard_number
           default: all
         - name: 'filters[*]'
           in: query

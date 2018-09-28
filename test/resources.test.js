@@ -478,4 +478,59 @@ describe('Test Resources responses', function () {
     })
     */
   })
+
+  describe('search_scope=standard_number', function () {
+    var searchAllUrl = null
+
+    before(() => {
+      searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?search_scope=standard_number&q=`
+    })
+
+    it('empty search returns status code 200', function (done) {
+      request.get(searchAllUrl, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        done()
+      })
+    })
+
+    ; [
+      'b12082323',
+      '"Q-TAG (852 8b q tag.  Staff call in bib.)"', // Should match `identifierV2[@type=bf:ShelfMark].value`
+      '12082323', // Should match `identifierV2[@type=nypl:Bnumber].value`
+      'Danacode', // Should match `identifierV2[@type=bf:Lccn].value`
+      '0123456789', // Should match `identifierV2[@type=bf:Isbn].value`
+      '"ISSN -- 022"', // Should match `identifierV2[@type=bf:Issn].value`
+      '"LCCN -- 010"', // Should match `identifierV2[@type=bf:Lccn].value`
+      '"ISBN -- 020 $z"',
+      // Following should match untyped identifiers in `identifier`
+      '"GPO Item number. -- 074"',
+      '"Sudoc no.  -- 086"',
+      '"Standard number (old RLIN, etc.) -- 035"',
+      '"Publisher no. -- 028 02  "',
+      '"Report number. -- 027"',
+      '"ISBN -- 020"',
+      '44455533322211'
+    ].forEach((num) => {
+      it(`should match b12082323 by "Standard Numbers": "${num}"`, function (done) {
+        request.get(searchAllUrl + num, function (err, response, body) {
+          if (err) throw err
+
+          assert.equal(200, response.statusCode)
+
+          const results = JSON.parse(body)
+          expect(results.totalResults).to.equal(1)
+          expect(results.itemListElement).to.be.a('array')
+          expect(results.itemListElement[0]).to.be.a('object')
+          expect(results.itemListElement[0].result).to.be.a('object')
+          expect(results.itemListElement[0].result['@type']).to.include('nypl:Item')
+          expect(results.itemListElement[0].result['@id']).to.equal('res:b12082323')
+
+          done()
+        })
+      })
+    })
+  })
 })
