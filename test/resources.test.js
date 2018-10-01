@@ -156,7 +156,7 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it('extracts identifiers in urn style if indexed as entity', function (done) {
+    it('extracts identifiers in ENTITY style if indexed as entity', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
         if (err) throw err
 
@@ -168,14 +168,39 @@ describe('Test Resources responses', function () {
         // so it will choose the latter (which are stored as entities)
         // Here we confirm the entities are converted to urn:
         expect(doc.identifier).to.be.a('array')
-        expect(doc.identifier).to.include.members(['urn:bnum:10011374', 'urn:lccn:35038534'])
+
+        // Check bnum:
+        const bnum = doc.identifier
+          .filter((ent) => ent['@type'] === 'nypl:Bnumber')
+          .pop()
+        expect(bnum).to.be.a('object')
+        expect(bnum['@value']).to.equal('10011374')
+
+        // Check lccn:
+        const lccn = doc.identifier
+          .filter((ent) => ent['@type'] === 'bf:Lccn')
+          .pop()
+        expect(lccn).to.be.a('object')
+        expect(lccn['@value']).to.equal('35038534')
 
         // Also check an item's identifiers:
         expect(doc.items).to.be.a('array')
         expect(doc.items[0]).to.be.a('object')
         expect(doc.items[0].identifier).to.be.a('array')
 
-        expect(doc.items[0].identifier).to.include.members(['urn:callnumber:*AY (Hone, W. Table book) v. 1', 'urn:barcode:33433067332548'])
+        // Check item callnum:
+        const callnum = doc.items[0].identifier
+          .filter((ent) => ent['@type'] === 'bf:ShelfMark')
+          .pop()
+        expect(callnum).to.be.a('object')
+        expect(callnum['@value']).to.equal('*AY (Hone, W. Table book) v. 1')
+
+        // Check item barcode:
+        const barcode = doc.items[0].identifier
+          .filter((ent) => ent['@type'] === 'bf:Barcode')
+          .pop()
+        expect(barcode).to.be.a('object')
+        expect(barcode['@value']).to.equal('33433067332548')
 
         done()
       })
@@ -190,7 +215,20 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         expect(doc.identifier).to.be.a('array')
-        expect(doc.identifier).to.include.members(['urn:bnum:10022950', 'urn:callnumber:*PGZ 81-1452'])
+
+        // Check bnum:
+        const bnum = doc.identifier
+          .filter((ent) => ent['@type'] === 'nypl:Bnumber')
+          .pop()
+        expect(bnum).to.be.a('object')
+        expect(bnum['@value']).to.equal('10022950')
+
+        // Check item callnum:
+        const callnum = doc.items[0].identifier
+          .filter((ent) => ent['@type'] === 'bf:ShelfMark')
+          .pop()
+        expect(callnum).to.be.a('object')
+        expect(callnum['@value']).to.equal('*PGZ 81-1452')
 
         done()
       })
