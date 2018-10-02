@@ -156,7 +156,7 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it('extracts identifiers in urn style if indexed as entity', function (done) {
+    it('extracts identifiers in ENTITY style if indexed as entity', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
         if (err) throw err
 
@@ -168,14 +168,39 @@ describe('Test Resources responses', function () {
         // so it will choose the latter (which are stored as entities)
         // Here we confirm the entities are converted to urn:
         expect(doc.identifier).to.be.a('array')
-        expect(doc.identifier).to.include.members(['urn:bnum:10011374', 'urn:lccn:35038534'])
+
+        // Check bnum:
+        const bnum = doc.identifier
+          .filter((ent) => ent['@type'] === 'nypl:Bnumber')
+          .pop()
+        expect(bnum).to.be.a('object')
+        expect(bnum['@value']).to.equal('10011374')
+
+        // Check lccn:
+        const lccn = doc.identifier
+          .filter((ent) => ent['@type'] === 'bf:Lccn')
+          .pop()
+        expect(lccn).to.be.a('object')
+        expect(lccn['@value']).to.equal('35038534')
 
         // Also check an item's identifiers:
         expect(doc.items).to.be.a('array')
         expect(doc.items[0]).to.be.a('object')
         expect(doc.items[0].identifier).to.be.a('array')
 
-        expect(doc.items[0].identifier).to.include.members(['urn:callnumber:*AY (Hone, W. Table book) v. 1', 'urn:barcode:33433067332548'])
+        // Check item callnum:
+        const callnum = doc.items[0].identifier
+          .filter((ent) => ent['@type'] === 'bf:ShelfMark')
+          .pop()
+        expect(callnum).to.be.a('object')
+        expect(callnum['@value']).to.equal('*AY (Hone, W. Table book) v. 1')
+
+        // Check item barcode:
+        const barcode = doc.items[0].identifier
+          .filter((ent) => ent['@type'] === 'bf:Barcode')
+          .pop()
+        expect(barcode).to.be.a('object')
+        expect(barcode['@value']).to.equal('33433067332548')
 
         done()
       })
@@ -190,7 +215,20 @@ describe('Test Resources responses', function () {
         var doc = JSON.parse(body)
 
         expect(doc.identifier).to.be.a('array')
-        expect(doc.identifier).to.include.members(['urn:bnum:10022950', 'urn:callnumber:*PGZ 81-1452'])
+
+        // Check bnum:
+        const bnum = doc.identifier
+          .filter((ent) => ent['@type'] === 'nypl:Bnumber')
+          .pop()
+        expect(bnum).to.be.a('object')
+        expect(bnum['@value']).to.equal('10022950')
+
+        // Check item callnum:
+        const callnum = doc.items[0].identifier
+          .filter((ent) => ent['@type'] === 'bf:ShelfMark')
+          .pop()
+        expect(callnum).to.be.a('object')
+        expect(callnum['@value']).to.equal('*PGZ 81-1452')
 
         done()
       })
@@ -477,5 +515,60 @@ describe('Test Resources responses', function () {
       })
     })
     */
+  })
+
+  describe('search_scope=standard_number', function () {
+    var searchAllUrl = null
+
+    before(() => {
+      searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?search_scope=standard_number&q=`
+    })
+
+    it('empty search returns status code 200', function (done) {
+      request.get(searchAllUrl, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        done()
+      })
+    })
+
+    ; [
+      'b12082323',
+      '"Q-TAG (852 8b q tag.  Staff call in bib.)"', // Should match `identifierV2[@type=bf:ShelfMark].value`
+      '12082323', // Should match `identifierV2[@type=nypl:Bnumber].value`
+      'Danacode', // Should match `identifierV2[@type=bf:Lccn].value`
+      '0123456789', // Should match `identifierV2[@type=bf:Isbn].value`
+      '"ISSN -- 022"', // Should match `identifierV2[@type=bf:Issn].value`
+      '"LCCN -- 010"', // Should match `identifierV2[@type=bf:Lccn].value`
+      '"ISBN -- 020 $z"',
+      // Following should match untyped identifiers in `identifier`
+      '"GPO Item number. -- 074"',
+      '"Sudoc no.  -- 086"',
+      '"Standard number (old RLIN, etc.) -- 035"',
+      '"Publisher no. -- 028 02  "',
+      '"Report number. -- 027"',
+      '"ISBN -- 020"',
+      '44455533322211'
+    ].forEach((num) => {
+      it(`should match b12082323 by "Standard Numbers": "${num}"`, function (done) {
+        request.get(searchAllUrl + num, function (err, response, body) {
+          if (err) throw err
+
+          assert.equal(200, response.statusCode)
+
+          const results = JSON.parse(body)
+          expect(results.totalResults).to.equal(1)
+          expect(results.itemListElement).to.be.a('array')
+          expect(results.itemListElement[0]).to.be.a('object')
+          expect(results.itemListElement[0].result).to.be.a('object')
+          expect(results.itemListElement[0].result['@type']).to.include('nypl:Item')
+          expect(results.itemListElement[0].result['@id']).to.equal('res:b12082323')
+
+          done()
+        })
+      })
+    })
   })
 })

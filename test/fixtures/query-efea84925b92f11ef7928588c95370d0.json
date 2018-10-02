@@ -1,5 +1,5 @@
 {
-  "took": 15,
+  "took": 196,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -1305,7 +1305,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523472049598,
+          "updatedAt": 1532060621254,
           "publicationStatement": [
             "Maisūru : Prasārāṅga, Maisūru Viśvavidyānilaya, 1974-"
           ],
@@ -1403,7 +1403,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2328,7 +2328,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297028167,
+          "updatedAt": 1534160990363,
           "publicationStatement": [
             "Maisūru, Maisūru Viśvevidyānilaya."
           ],
@@ -2365,10 +2365,10 @@
           ],
           "uri": "b10315622",
           "numItems": [
-            35
+            36
           ],
           "numAvailable": [
-            35
+            36
           ],
           "placeOfPublication": [
             "Maisūru,"
@@ -4240,7 +4240,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4295,7 +4295,62 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433121642221"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 76-1248 v. 91 no. 351 (2014)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433121642221"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433121642221"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i36286477",
+              "shelfMark": [
+                "*OLA 76-1248 v. 91 no. 351 (2014)"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:3",
+                  "label": "serial"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7743,7 +7798,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297472410,
+          "updatedAt": 1532061353993,
           "publicationStatement": [
             "Bangalore, Guru Guha Gana Nilaya [1963-"
           ],
@@ -7844,7 +7899,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7954,7 +8009,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -9393,6 +9448,23 @@
           "extent": [
             "v."
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Without music.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Includes biographical sketches of the composers.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
           "publisherLiteral": [
             "Mejisṭik Pres"
           ],
@@ -9420,14 +9492,35 @@
           "createdString": [
             "1962"
           ],
+          "idLccn": [
+            "sa 64006360 /M"
+          ],
           "contributorLiteral": [
             "Mañjunāthayya, K.."
           ],
           "dateStartYear": [
             1962
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JMK 82-18"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10848968"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "sa 64006360 /M"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1532061482775,
+          "publicationStatement": [
+            "Uḍupi, Mejisṭik Pres [1962-"
           ],
           "identifier": [
             "urn:bnum:10848968",
@@ -9455,7 +9548,7 @@
             }
           ],
           "subjectLiteral": [
-            "Composers -- India -- Karnataka -- Biography.",
+            "Composers -- Karnataka -- Biography.",
             "Songs, Kannada -- Texts."
           ],
           "titleDisplay": [
@@ -9491,11 +9584,24 @@
               "identifier": [
                 "urn:barcode:33433071260776"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMK 82-18 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433071260776"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433071260776"
               ],
               "requestable": [
                 true
@@ -9508,16 +9614,12 @@
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
-                },
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -9537,11 +9639,24 @@
               "identifier": [
                 "urn:barcode:33433071260552"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMK 82-18 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433071260552"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433071260552"
               ],
               "requestable": [
                 true
@@ -9554,16 +9669,12 @@
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
-                },
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -9994,6 +10105,23 @@
           "extent": [
             "v. ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Songs without music.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Vol. 2 published in 1974.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
           "publisherLiteral": [
             "Śrīpurandaradāsara Nānnūraneya Varṣada Utsava Maṇḍala,"
           ],
@@ -10029,8 +10157,22 @@
           "dateStartYear": [
             1974
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JMK 84-11"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10893183"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1532061457679,
+          "publicationStatement": [
+            "Dhāravāḍa : Śrīpurandaradāsara Nānnūraneya Varṣada Utsava Maṇḍala, 1974-"
           ],
           "identifier": [
             "urn:bnum:10893183"
@@ -10057,7 +10199,8 @@
             }
           ],
           "subjectLiteral": [
-            "Purandaradāsa, -- 1484-1564 -- Criticism and interpretation."
+            "Carnatic music.",
+            "Purandaradāsa, 1484-1564 -- Criticism and interpretation."
           ],
           "titleDisplay": [
             "̄Srī Purandaradāsara sāhitya / sampādakaru Śrī Beṭagēri Krṣṇaśarma ; Śrī Beṅgēri Huccarāyaru."
@@ -10078,6 +10221,9 @@
               "label": "monograph/item"
             }
           ],
+          "tableOfContents": [
+            "2. Ārtabhāva."
+          ],
           "items": [
             {
               "owner": [
@@ -10089,11 +10235,24 @@
               "identifier": [
                 "urn:barcode:33433068805302"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMK 84-11 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433068805302"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433068805302"
               ],
               "requestable": [
                 true
@@ -10106,16 +10265,12 @@
                 {
                   "id": "catalogItemType:2",
                   "label": "book non-circ"
-                },
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [

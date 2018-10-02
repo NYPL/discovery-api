@@ -64,10 +64,6 @@ const scholarRooms = [
     label: 'Schwarzman Building - Allen Scholar Room'
   },
   {
-    id: 'loc:maln',
-    label: 'Schwarzman Building - Noma Scholar Room'
-  },
-  {
     id: 'loc:malw',
     label: 'Schwarzman Building - Wertheim Scholar Room'
   },
