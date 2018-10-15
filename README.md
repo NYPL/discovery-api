@@ -12,9 +12,8 @@ This app uses [nvm](https://github.com/creationix/nvm).
 1.  `cd` into the newly cloned directory
 1.  `nvm use`
 1.  `npm install`
-1.  `cp ./config/local.json.example ./config/local.json` and get values from a coworker.
-1.  `cp ./.env.example ./.env` and get values from a coworker.
-
+1.  Decrypt the appropriate config/[environment].env file and copy to .env. development is encrypted
+using nypl-sandbox and the others using nypl-digital-dev
 `npm start` to start the app!
 
 ## About Environment Variables
@@ -79,7 +78,7 @@ The following runs a series of tests against local fixtures:
 npm test
 ```
 
-Most tests rely on fixtures generated dynamically (using whatever elastic config is present in process.env or ./.env) via the following:
+Almost all HTTP dependencies are rerouted to fixtures (nypl-core mapping files are a known exception). All fixtures can be updated dynamically (using whatever elastic, scsb, & platform api config is present in `process.env` or `./.env`) via the following:
 
 ```
 UPDATE_FIXTURES=all npm test
@@ -90,6 +89,8 @@ Rebuilding fixtures tends to introduce trivial git diff noise, so one may use th
 ```
 UPDATE_FIXTURES=if-missing npm test
 ```
+
+The above command can be used to fill in missing fixtures as new tests are written.
 
 ## Deployment
 
