@@ -7,11 +7,11 @@ describe('Aggregations response', function () {
   this.timeout(10000)
 
   before(function () {
-    fixtures.enableFixtures()
+    fixtures.enableEsFixtures()
   })
 
   after(function () {
-    fixtures.disableFixtures()
+    fixtures.disableEsFixtures()
   })
 
   var requestPath = '/api/v0.1/discovery/resources/aggregations?q=hamilton&search_scope=all'
