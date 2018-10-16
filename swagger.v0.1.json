@@ -22,8 +22,8 @@
         "tags": [
           "discovery"
         ],
-        "summary": "Search resources",
-        "description": "Match by keyword\n\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> /resources?filters[property1]=value1&filters[property2]=value2\n\nWhere `property*` is one of: \n\n> 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL-discovery/discovery-api/blob/master/README.md)\n",
+        "summary": "Search resources (bibs and items)",
+        "description": "Match by keyword\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> `/resources?filters[property1]=value1&filters[property2]=value2`\n\nWhere `property*` is one of: \n\n> 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL-discovery/discovery-api/blob/master/README.md)\n",
         "parameters": [
           {
             "name": "q",
@@ -38,6 +38,7 @@
             "description": "Page number to return",
             "required": false,
             "type": "integer",
+            "default": 1,
             "minimum": 1
           },
           {
@@ -67,7 +68,7 @@
           {
             "name": "sort_direction",
             "in": "query",
-            "description": "Override the default direction for the current sort (asc, desc). Default depends on the field.",
+            "description": "Override the default direction for the current sort (asc, desc). Default depends on the field. (title defaults to asc, date defaults to desc, creator defaults to asc, relevance is fixed desc)",
             "required": false,
             "type": "string",
             "enum": [
@@ -78,7 +79,7 @@
           {
             "name": "search_scope",
             "in": "query",
-            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber)",
+            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber, standard_number). See https://github.com/NYPL-discovery/discovery-api/blob/master/lib/resources.js to review specific fields matched in each scope and how they're boosted.",
             "required": false,
             "type": "string",
             "enum": [
@@ -87,7 +88,8 @@
               "contributor",
               "subject",
               "series",
-              "callnumber"
+              "callnumber",
+              "standard_number"
             ],
             "default": "all"
           },
