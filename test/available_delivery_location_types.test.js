@@ -1,25 +1,18 @@
-const sinon = require('sinon')
-const fs = require('fs')
+const fixtures = require('./fixtures')
 
-// These are hard-wired to what I know about patron types 10 & 78
 describe('AvailableDeliveryLocationTypes', function () {
   let AvailableDeliveryLocationTypes = require('../lib/available_delivery_location_types.js')
 
   before(function () {
-    sinon.stub(AvailableDeliveryLocationTypes.client, 'get').callsFake(function (path) {
-      switch (path) {
-        case 'patrons/branch-patron-id':
-          return Promise.resolve(JSON.parse(fs.readFileSync('./test/fixtures/patron-research.json', 'utf8')))
-        case 'patrons/scholar-patron-id':
-          return Promise.resolve(JSON.parse(fs.readFileSync('./test/fixtures/patron-scholar.json', 'utf8')))
-        default:
-          return Promise.reject()
-      }
+    // Reroute these (and only these) api paths to local fixtures:
+    fixtures.enableDataApiFixtures({
+      'patrons/branch-patron-id': 'patron-research.json',
+      'patrons/scholar-patron-id': 'patron-scholar.json'
     })
   })
 
   after(function () {
-    AvailableDeliveryLocationTypes.client.get.restore()
+    fixtures.disableDataApiFixtures()
   })
 
   it('maps patron type 10 to [\'Research\']', function () {

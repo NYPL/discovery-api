@@ -1,4 +1,5 @@
 const AnnotatedMarcSerializer = require('../lib/annotated-marc-serializer')
+const fixtures = require('./fixtures')
 
 const realMappingRules = AnnotatedMarcSerializer.mappingRules
 function overRideMappingRules (rules) {
@@ -639,6 +640,50 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[0].values[0].content).to.equal('Artist, Starving, 1900-1999 -- Autobiography.')
       expect(serialized.bib.fields[0].values[1].content).to.equal('Stonecutters\' Annual Picnic (12th : 1995 : Springfield) -- History -- Drama.')
       expect(serialized.bib.fields[0].values[2].content).to.equal('New York (N.Y.) -- 21st century -- Diaries.')
+    })
+  })
+
+  describe('Annotated marc endpoint', function () {
+    let app = {}
+
+    before(function () {
+      // Get a minimal instance of app (just controller code):
+      require('../lib/resources')(app)
+      app.logger = require('../lib/logger')
+
+      // Reroute this (and only this) api path to local fixture:
+      fixtures.enableDataApiFixtures({
+        'bibs/sierra-nypl/11055155': 'bib-11055155.json'
+      })
+    })
+
+    after(function () {
+      fixtures.disableDataApiFixtures()
+    })
+
+    it('transforms fetched marc-in-json document into "annotated-marc" format', function () {
+      return app.resources.annotatedMarc({ uri: 'b11055155' })
+        .then((resp) => {
+          expect(resp.bib.id).to.equal('11055155')
+          expect(resp.bib.nyplSource).to.equal('sierra-nypl')
+          expect(resp.bib.fields).to.be.an('array')
+
+          const lccn = resp.bib.fields
+            .filter((field) => field.label === 'LCCN')
+            .pop()
+          expect(lccn).to.be.a('object')
+          expect(lccn.values).to.be.a('array')
+          expect(lccn.values[0]).to.be.a('object')
+          expect(lccn.values[0].content).to.equal('   28025172')
+
+          const title = resp.bib.fields
+            .filter((field) => field.label === 'Title')
+            .pop()
+          expect(title).to.be.a('object')
+          expect(title.values).to.be.a('array')
+          expect(title.values[0]).to.be.a('object')
+          expect(title.values[0].content).to.equal('Topographical bibliography of ancient Egyptian hieroglyphic texts, reliefs, and paintings / by Bertha Porter and Rosalind L.B. Moss.')
+        })
     })
   })
 })
