@@ -686,4 +686,21 @@ describe('Annotated Marc Rules', function () {
         })
     })
   })
+
+  describe('Creator/Contributor Characteristics', function () {
+    it('should extract Creator/Contributor Characteristics from 386', function () {
+      const sampleBib = { varFields: [
+        { fieldTag: 'r', marcTag: '386', subfields: [ { tag: 'a', content: 'Creator/Contributor Characteristics content' }, { tag: '6', content: 'ignore' } ] }
+      ] }
+
+      const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
+      expect(serialized.bib).to.be.a('object')
+      expect(serialized.bib.fields).to.be.a('array')
+      expect(serialized.bib.fields[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].label).to.equal('Creator/Contributor Characteristics')
+      expect(serialized.bib.fields[0].values).to.be.a('array')
+      expect(serialized.bib.fields[0].values[0]).to.be.a('object')
+      expect(serialized.bib.fields[0].values[0].content).to.equal('Creator/Contributor Characteristics content')
+    })
+  })
 })
