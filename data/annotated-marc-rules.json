@@ -696,6 +696,19 @@
   },
   {
     "fieldTag": "r",
+    "marcIndicatorRegExp": "^386",
+    "subfieldSpec": {
+      "subfields": [
+        "2",
+        "6"
+      ],
+      "directive": "exclude"
+    },
+    "label": "Creator/Contributor Characteristics",
+    "directive": "include"
+  },
+  {
+    "fieldTag": "r",
     "marcIndicatorRegExp": "^",
     "subfieldSpec": {
       "subfields": [
