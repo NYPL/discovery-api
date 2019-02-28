@@ -161,8 +161,7 @@ describe('Delivery-locations-resolver', function () {
     })
   })
 
-  // It will assign "Research" as the default value to "deliveryLocationTypes" if the patron's PType is not recognizable
-  it('will reveal "Research" deliveryLocation for users with unfamiliar PTypes', function () {
+  it('will reveal "Research" deliveryLocation for users with no PType found', function () {
     return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl], []).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
     })
