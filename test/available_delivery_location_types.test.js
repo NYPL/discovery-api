@@ -7,7 +7,8 @@ describe('AvailableDeliveryLocationTypes', function () {
     // Reroute these (and only these) api paths to local fixtures:
     fixtures.enableDataApiFixtures({
       'patrons/branch-patron-id': 'patron-research.json',
-      'patrons/scholar-patron-id': 'patron-scholar.json'
+      'patrons/scholar-patron-id': 'patron-scholar.json',
+      'patrons/unrecognizable-ptype-patron-id': 'patron-unrecognizable-type.json'
     })
   })
 
@@ -24,6 +25,12 @@ describe('AvailableDeliveryLocationTypes', function () {
   it('maps patron type 78 to [\'Scholar\', \'Research\']', function () {
     return AvailableDeliveryLocationTypes.getByPatronId('scholar-patron-id').then((deliveryLocationTypes) => {
       expect(deliveryLocationTypes).to.eql(['Scholar', 'Research'])
+    })
+  })
+
+  it('maps an unrecognizable patron type to [\'Research\']', function () {
+    return AvailableDeliveryLocationTypes.getByPatronId('unrecognizable-ptype-patron-id').then((deliveryLocationTypes) => {
+      expect(deliveryLocationTypes).to.eql(['Research'])
     })
   })
 })
