@@ -36,7 +36,7 @@ will often be in parity.
 
 ### Release Tags
 
-We're still discussing how and when we want to create release tags.
+Release tags are created based on production branch after a new version has been deployed to the Production tier.
 We're dedicated to:
 
 * Making sure release tag version mirrors the app version in `package.json`.
