@@ -12,8 +12,7 @@ This app uses [nvm](https://github.com/creationix/nvm).
 1.  `cd` into the newly cloned directory
 1.  `nvm use`
 1.  `npm install`
-1.  Decrypt the appropriate config/[environment].env file and copy to .env. development is encrypted
-using nypl-sandbox and the others using nypl-digital-dev
+1.  Decrypt the appropriate config/[environment].env file and copy to .env. The values are encrypted using nypl-digital-dev
 `npm start` to start the app!
 
 ## About Environment Variables
@@ -204,3 +203,4 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 .. Or by any item @id:
 
 > /resources/b15704876-i25375512
+

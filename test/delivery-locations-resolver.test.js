@@ -160,4 +160,10 @@ describe('Delivery-locations-resolver', function () {
       })
     })
   })
+
+  it('will reveal "Research" deliveryLocation for users with no PType found', function () {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl], []).then((items) => {
+      expect(items[0].deliveryLocation).to.not.be.empty
+    })
+  })
 })
