@@ -95,6 +95,10 @@ The above command can be used to fill in missing fixtures as new tests are writt
 
 `npm run deploy-[development|qa|production]`
 
+Deployments (AWS account `nypl-digital-dev`):
+ * Production: Elastic Beanstalk > discovery-api-prodcution
+ * QA: Elastic Beanstalk > discovery-api-qa
+
 ## Searching
 
 Match by keyword:
