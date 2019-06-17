@@ -94,7 +94,9 @@ describe('Resources query', function () {
       expect(body.bool.should[0].query_string).to.be.a('object')
       expect(body.bool.should[0].query_string.query).to.equal('potatoes')
     })
+  })
 
+  describe('buildElasticBody', function () {
     it('uses subjectLiteral_exploded when given a subjectLiteral filter', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
       const body = resourcesPrivMethods.buildElasticBody(params)
