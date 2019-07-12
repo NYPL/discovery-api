@@ -95,6 +95,20 @@ describe('Resources query', function () {
       expect(body.bool.should[0].query_string.query).to.equal('potatoes')
     })
   })
+
+  describe('buildElasticBody', function () {
+    it('uses subjectLiteral_exploded when given a subjectLiteral filter', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
+      const body = resourcesPrivMethods.buildElasticBody(params)
+      expect(body).to.be.a('object')
+      expect(body.query).to.be.a('object')
+      expect(body.query.bool).to.be.a('object')
+      expect(body.query.bool.filter).to.be.a('array')
+      expect(body.query.bool.filter[0]).to.be.a('object')
+      expect(body.query.bool.filter[0].term).to.be.a('object')
+      expect(body.query.bool.filter[0].term.subjectLiteral_exploded).to.equal('United States -- History')
+    })
+  })
 })
 
 describe('Test Resources responses', function () {
