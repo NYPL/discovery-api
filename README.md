@@ -16,6 +16,8 @@ This app uses [nvm](https://github.com/creationix/nvm).
 using nypl-sandbox and the others using nypl-digital-dev
 `npm start` to start the app!
 
+Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
+
 ## About Environment Variables
 
 See `.env.example` for a description the variables. **If you're adding new variables please add them to .env.example and `./lib/preflight_check.js`**
