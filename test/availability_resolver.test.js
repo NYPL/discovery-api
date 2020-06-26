@@ -17,6 +17,12 @@ function getFakeRestClient () {
       'itemBarcode': '1000546836',
       'itemAvailabilityStatus': 'Available',
       'errorMessage': null
+    },
+    // An item in rc2ma", which ES has as Available:
+    {
+      'itemBarcode': '10005468369',
+      'itemAvailabilityStatus': 'Not Available',
+      'errorMessage': null
     }
   ]
 
@@ -59,7 +65,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
     availabilityResolver.restClient = getFakeRestClient()
 
-    let indexedAsAvailableURI = 'i10283665'
+    let indexedAsAvailableURI = 'i102836649'
     let indexedAsAvailable = elasticSearchResponse.fakeElasticSearchResponse().hits.hits[0]._source.items.find((item) => {
       return item.uri === indexedAsAvailableURI
     })
@@ -79,6 +85,7 @@ describe('Response with updated availability', function () {
         expect(theItem.status[0].label).to.equal('Not available')
       })
   })
+
   it('will return the original ElasticSearchResponse\'s status for the item if the SCSB can\'t find an item with the barcode', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
     availabilityResolver.restClient = getFakeRestClient()
@@ -130,17 +137,41 @@ describe('Response with updated availability', function () {
         .then((response) => {
           var items = response.hits.hits[0]._source.items
 
+          // A ReCAP item with Discovery status 'Avaiable', but SCSB
+          // status 'Not Available' should be made 'Not Available'
           var unavailableItem = items.find((item) => {
-            return item.uri === 'i10283665'
+            return item.uri === 'i102836649'
           })
           expect(unavailableItem.status[0].id).to.equal('status:na')
           expect(unavailableItem.status[0].label).to.equal('Not available')
 
+          // A ReCAP item with Discovery status 'Not Avaiable', but SCSB
+          // status 'Available' should be made available:
           var availableItem = items.find((item) => {
             return item.uri === 'i10283664'
           })
           expect(availableItem.status[0].id).to.equal('status:a')
           expect(availableItem.status[0].label).to.equal('Available')
+        })
+  })
+
+  it('includes the latest requestable status of items', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          // A ReCAP item with Discovery status 'Not Available', but SCSB
+          // status 'AVailable' should be made requestable:
+          var availableItem = items.find((item) => {
+            return item.uri === 'i10283664'
+          })
+          expect(availableItem.requestable[0]).to.equal(true)
         })
   })
 })

@@ -116,7 +116,7 @@ exports.fakeElasticSearchResponse = () => {
                   }
                 ],
                 'status_packed': [
-                  'status:a||Available'
+                  'status:na||Not Available'
                 ],
                 'owner': [
                   {
@@ -163,6 +163,66 @@ exports.fakeElasticSearchResponse = () => {
                 ],
                 'shelfMark': [
                   '*OFC 90-2649'
+                ],
+                'suppressed': [
+                  false
+                ]
+              },
+              {
+                'holdingLocation': [
+                  {
+                    'label': 'OFFSITE - Request in Advance',
+                    'id': 'loc:rc2ma'
+                  }
+                ],
+                'status_packed': [
+                  'status:a||Available'
+                ],
+                'owner': [
+                  {
+                    'id': 'orgs:1000',
+                    'label': 'Stephen A. Schwarzman Building'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'id': 'loc:mala',
+                    'label': 'SASB - Allen Scholar Room'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:mala||SASB - Allen Scholar Room'
+                ],
+                'uri': 'i102836649',
+                'accessMessage_packed': [
+                  'accessMessage:2||ADV REQUEST'
+                ],
+                'accessMessage': [
+                  {
+                    'id': 'accessMessage:2',
+                    'label': 'ADV REQUEST'
+                  }
+                ],
+                'status': [
+                  {
+                    'id': 'status:a',
+                    'label': 'Available'
+                  }
+                ],
+                'owner_packed': [
+                  'orgs:1000||Stephen A. Schwarzman Building'
+                ],
+                'requestable': [
+                  false
+                ],
+                'identifier': [
+                  'urn:barcode:10005468369'
+                ],
+                'holdingLocation_packed': [
+                  'loc:rc2ma||OFFSITE - Request in Advance'
+                ],
+                'shelfMark': [
+                  '*OFC 90-2649 2'
                 ],
                 'suppressed': [
                   false
