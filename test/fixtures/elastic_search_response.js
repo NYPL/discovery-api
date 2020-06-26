@@ -68,6 +68,12 @@ exports.fakeElasticSearchResponse = () => {
                     'id': 'accessMessage:1'
                   }
                 ],
+                'catalogItemType': [
+                  {
+                    'id': 'catalogItemType:2',
+                    'label': 'book non-circ'
+                  }
+                ],
                 'deliveryLocation_packed': [
                   'loc:sc||Schomburg Center'
                 ],
@@ -106,6 +112,72 @@ exports.fakeElasticSearchResponse = () => {
                 ],
                 'status_packed': [
                   'status:a||Available'
+                ]
+              },
+              {
+                'holdingLocation_packed': [
+                  'loc:scff2||Schomburg Center - Research & Reference'
+                ],
+                'suppressed': [
+                  false
+                ],
+                'shelfMark': [
+                  'Sc D 90-863'
+                ],
+                'accessMessage_packed': [
+                  'accessMessage:1||USE IN LIBRARY'
+                ],
+                'uri': 'i10283665777',
+                'accessMessage': [
+                  {
+                    'label': 'USE IN LIBRARY',
+                    'id': 'accessMessage:1'
+                  }
+                ],
+                'catalogItemType': [
+                  {
+                    'id': 'catalogItemType:2',
+                    'label': 'book non-circ'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:sc||Schomburg Center'
+                ],
+                'owner': [
+                  {
+                    'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division',
+                    'id': 'orgs:1114'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'label': 'Schomburg Center',
+                    'id': 'loc:sc'
+                  }
+                ],
+                'identifier': [
+                  'urn:barcode:32101071572406777'
+                ],
+                'requestable': [
+                  true
+                ],
+                'owner_packed': [
+                  'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                ],
+                'status': [
+                  {
+                    'label': 'Not Available',
+                    'id': 'status:na'
+                  }
+                ],
+                'holdingLocation': [
+                  {
+                    'label': 'Schomburg Center - Research & Reference',
+                    'id': 'loc:scff2'
+                  }
+                ],
+                'status_packed': [
+                  'status:na||Not Available'
                 ]
               },
               {

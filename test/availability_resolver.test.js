@@ -155,7 +155,7 @@ describe('Response with updated availability', function () {
         })
   })
 
-  it('includes the latest requestable status of items', function () {
+  it('marks SCSB Available items (that are indexed as Not Available) as requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
     availabilityResolver.restClient = getFakeRestClient()
 
@@ -167,11 +167,61 @@ describe('Response with updated availability', function () {
           var items = response.hits.hits[0]._source.items
 
           // A ReCAP item with Discovery status 'Not Available', but SCSB
-          // status 'AVailable' should be made requestable:
+          // status 'Available' should be made requestable:
           var availableItem = items.find((item) => {
             return item.uri === 'i10283664'
           })
           expect(availableItem.requestable[0]).to.equal(true)
+        })
+  })
+
+  it('marks SCSB Not-Available items as not requestable', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          // A ReCAP item with SCSB status 'Not Available' should be made not
+          // requestable:
+          var notAvailableItem = items.find((item) => item.uri === 'i102836649')
+          expect(notAvailableItem.requestable[0]).to.equal(false)
+        })
+  })
+
+  it('marks on-site (loc:scff2) Available items as requestable', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          var availableItem = items.find((item) => item.uri === 'i10283665')
+          expect(availableItem.requestable[0]).to.equal(true)
+        })
+  })
+
+  it('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          var notAvailableItem = items.find((item) => item.uri === 'i10283665777')
+          expect(notAvailableItem.requestable[0]).to.equal(false)
         })
   })
 })
