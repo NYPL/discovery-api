@@ -14,7 +14,7 @@ describe('Feature', function () {
     expect(Feature.enabled('foo')).to.equal(false)
     process.env.FEATURES = -1
     expect(Feature.enabled('foo')).to.equal(false)
-    process.env.FEATURES = Math.pi
+    process.env.FEATURES = Math.PI
     expect(Feature.enabled('foo')).to.equal(false)
   })
 
