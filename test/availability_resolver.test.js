@@ -197,6 +197,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
     availabilityResolver.restClient = getFakeRestClient()
 
+    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
         .then((modifedResponse) => {
           return modifedResponse
@@ -213,6 +214,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
     availabilityResolver.restClient = getFakeRestClient()
 
+    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
         .then((modifedResponse) => {
           return modifedResponse
@@ -222,6 +224,23 @@ describe('Response with updated availability', function () {
 
           var notAvailableItem = items.find((item) => item.uri === 'i10283665777')
           expect(notAvailableItem.requestable[0]).to.equal(false)
+        })
+  })
+
+  it('marks on-site (loc:scff2) Available items as not requestable if "on-site-edd" feature flag missing', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponse())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    process.env.FEATURES = ''
+    return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          var availableItem = items.find((item) => item.uri === 'i10283665')
+          expect(availableItem.requestable[0]).to.equal(false)
         })
   })
 })
