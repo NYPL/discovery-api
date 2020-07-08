@@ -176,7 +176,7 @@ describe('Delivery-locations-resolver', function () {
     })
   })
 
-  describe('__eddRequestableByOnSiteCriteria', function () {
+  describe('eddRequestableByOnSiteCriteria', function () {
     let item
 
     beforeEach(function () {
@@ -206,48 +206,48 @@ describe('Delivery-locations-resolver', function () {
     })
 
     it('will return false for ReCAP materials', function () {
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(sampleItems.offsiteNypl)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(sampleItems.offsiteNypl)).to.equal(false)
     })
 
     it('will return true for on-site item meeting all criteria', function () {
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(true)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
 
     it('will return false for on-site item failing location check', function () {
       item.holdingLocation[0].id = 'loc:rc'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
     it('will return false for on-site item failing status check', function () {
       item.status[0].id = 'status:co'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
     it('will return false for on-site item failing catalogItemType check', function () {
       item.catalogItemType[0].id = 'catalogItemType:56'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
     it('will return false for on-site item failing accessMessage check', function () {
       item.accessMessage[0].id = 'accessMessage:2'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
     it('will return true for on-site Schomburg if it\'s not microfilm', function () {
       item.holdingLocation[0].id = 'loc:scff2'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(true)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
 
     it('will return true for on-site microfilm if it\'s not in Schomburg', function () {
       item.catalogItemType[0].id = 'catalogItemType:6'
       item.holdingLocation[0].id = 'loc:mabm2'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(true)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
 
     it('will return false for on-site microfilm if it\'s in Schomburg', function () {
       item.catalogItemType[0].id = 'catalogItemType:6'
       item.holdingLocation[0].id = 'loc:scff2'
-      expect(DeliveryLocationsResolver.__eddRequestableByOnSiteCriteria(item)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
 })

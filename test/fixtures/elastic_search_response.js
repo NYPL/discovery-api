@@ -68,6 +68,12 @@ exports.fakeElasticSearchResponse = () => {
                     'id': 'accessMessage:1'
                   }
                 ],
+                'catalogItemType': [
+                  {
+                    'id': 'catalogItemType:2',
+                    'label': 'book non-circ'
+                  }
+                ],
                 'deliveryLocation_packed': [
                   'loc:sc||Schomburg Center'
                 ],
@@ -109,6 +115,72 @@ exports.fakeElasticSearchResponse = () => {
                 ]
               },
               {
+                'holdingLocation_packed': [
+                  'loc:scff2||Schomburg Center - Research & Reference'
+                ],
+                'suppressed': [
+                  false
+                ],
+                'shelfMark': [
+                  'Sc D 90-863'
+                ],
+                'accessMessage_packed': [
+                  'accessMessage:1||USE IN LIBRARY'
+                ],
+                'uri': 'i10283665777',
+                'accessMessage': [
+                  {
+                    'label': 'USE IN LIBRARY',
+                    'id': 'accessMessage:1'
+                  }
+                ],
+                'catalogItemType': [
+                  {
+                    'id': 'catalogItemType:2',
+                    'label': 'book non-circ'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:sc||Schomburg Center'
+                ],
+                'owner': [
+                  {
+                    'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division',
+                    'id': 'orgs:1114'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'label': 'Schomburg Center',
+                    'id': 'loc:sc'
+                  }
+                ],
+                'identifier': [
+                  'urn:barcode:32101071572406777'
+                ],
+                'requestable': [
+                  true
+                ],
+                'owner_packed': [
+                  'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                ],
+                'status': [
+                  {
+                    'label': 'Not Available',
+                    'id': 'status:na'
+                  }
+                ],
+                'holdingLocation': [
+                  {
+                    'label': 'Schomburg Center - Research & Reference',
+                    'id': 'loc:scff2'
+                  }
+                ],
+                'status_packed': [
+                  'status:na||Not Available'
+                ]
+              },
+              {
                 'holdingLocation': [
                   {
                     'label': 'OFFSITE - Request in Advance',
@@ -116,7 +188,7 @@ exports.fakeElasticSearchResponse = () => {
                   }
                 ],
                 'status_packed': [
-                  'status:a||Available'
+                  'status:na||Not Available'
                 ],
                 'owner': [
                   {
@@ -163,6 +235,66 @@ exports.fakeElasticSearchResponse = () => {
                 ],
                 'shelfMark': [
                   '*OFC 90-2649'
+                ],
+                'suppressed': [
+                  false
+                ]
+              },
+              {
+                'holdingLocation': [
+                  {
+                    'label': 'OFFSITE - Request in Advance',
+                    'id': 'loc:rc2ma'
+                  }
+                ],
+                'status_packed': [
+                  'status:a||Available'
+                ],
+                'owner': [
+                  {
+                    'id': 'orgs:1000',
+                    'label': 'Stephen A. Schwarzman Building'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'id': 'loc:mala',
+                    'label': 'SASB - Allen Scholar Room'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:mala||SASB - Allen Scholar Room'
+                ],
+                'uri': 'i102836649',
+                'accessMessage_packed': [
+                  'accessMessage:2||ADV REQUEST'
+                ],
+                'accessMessage': [
+                  {
+                    'id': 'accessMessage:2',
+                    'label': 'ADV REQUEST'
+                  }
+                ],
+                'status': [
+                  {
+                    'id': 'status:a',
+                    'label': 'Available'
+                  }
+                ],
+                'owner_packed': [
+                  'orgs:1000||Stephen A. Schwarzman Building'
+                ],
+                'requestable': [
+                  false
+                ],
+                'identifier': [
+                  'urn:barcode:10005468369'
+                ],
+                'holdingLocation_packed': [
+                  'loc:rc2ma||OFFSITE - Request in Advance'
+                ],
+                'shelfMark': [
+                  '*OFC 90-2649 2'
                 ],
                 'suppressed': [
                   false
