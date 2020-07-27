@@ -8,5 +8,10 @@ global.TEST_BASE_URL = 'http://localhost:' + process.env.PORT
 // By virtue of including app.js, we start listening on above port:
 require('../app.js')
 
+// Nullify SCSB creds just in case they've been brought in by app.js by a
+// local .env:
+process.env.SCSB_URL = 'https://example.com'
+process.env.SCSB_API_KEY = 'fake-scsb-api-key'
+
 require('../lib/globals')
 global.expect = require('chai').expect
