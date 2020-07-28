@@ -1,4 +1,4 @@
-exports.fakeElasticSearchResponse = () => {
+exports.fakeElasticSearchResponseNyplItem = () => {
   return {
     '_shards': {
       'failed': 0,
@@ -68,6 +68,12 @@ exports.fakeElasticSearchResponse = () => {
                     'id': 'accessMessage:1'
                   }
                 ],
+                'catalogItemType': [
+                  {
+                    'id': 'catalogItemType:2',
+                    'label': 'book non-circ'
+                  }
+                ],
                 'deliveryLocation_packed': [
                   'loc:sc||Schomburg Center'
                 ],
@@ -109,6 +115,72 @@ exports.fakeElasticSearchResponse = () => {
                 ]
               },
               {
+                'holdingLocation_packed': [
+                  'loc:scff2||Schomburg Center - Research & Reference'
+                ],
+                'suppressed': [
+                  false
+                ],
+                'shelfMark': [
+                  'Sc D 90-863'
+                ],
+                'accessMessage_packed': [
+                  'accessMessage:1||USE IN LIBRARY'
+                ],
+                'uri': 'i10283665777',
+                'accessMessage': [
+                  {
+                    'label': 'USE IN LIBRARY',
+                    'id': 'accessMessage:1'
+                  }
+                ],
+                'catalogItemType': [
+                  {
+                    'id': 'catalogItemType:2',
+                    'label': 'book non-circ'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:sc||Schomburg Center'
+                ],
+                'owner': [
+                  {
+                    'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division',
+                    'id': 'orgs:1114'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'label': 'Schomburg Center',
+                    'id': 'loc:sc'
+                  }
+                ],
+                'identifier': [
+                  'urn:barcode:32101071572406777'
+                ],
+                'requestable': [
+                  true
+                ],
+                'owner_packed': [
+                  'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                ],
+                'status': [
+                  {
+                    'label': 'Not Available',
+                    'id': 'status:na'
+                  }
+                ],
+                'holdingLocation': [
+                  {
+                    'label': 'Schomburg Center - Research & Reference',
+                    'id': 'loc:scff2'
+                  }
+                ],
+                'status_packed': [
+                  'status:na||Not Available'
+                ]
+              },
+              {
                 'holdingLocation': [
                   {
                     'label': 'OFFSITE - Request in Advance',
@@ -116,7 +188,7 @@ exports.fakeElasticSearchResponse = () => {
                   }
                 ],
                 'status_packed': [
-                  'status:a||Available'
+                  'status:na||Not Available'
                 ],
                 'owner': [
                   {
@@ -163,6 +235,66 @@ exports.fakeElasticSearchResponse = () => {
                 ],
                 'shelfMark': [
                   '*OFC 90-2649'
+                ],
+                'suppressed': [
+                  false
+                ]
+              },
+              {
+                'holdingLocation': [
+                  {
+                    'label': 'OFFSITE - Request in Advance',
+                    'id': 'loc:rc2ma'
+                  }
+                ],
+                'status_packed': [
+                  'status:a||Available'
+                ],
+                'owner': [
+                  {
+                    'id': 'orgs:1000',
+                    'label': 'Stephen A. Schwarzman Building'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'id': 'loc:mala',
+                    'label': 'SASB - Allen Scholar Room'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:mala||SASB - Allen Scholar Room'
+                ],
+                'uri': 'i102836649',
+                'accessMessage_packed': [
+                  'accessMessage:2||ADV REQUEST'
+                ],
+                'accessMessage': [
+                  {
+                    'id': 'accessMessage:2',
+                    'label': 'ADV REQUEST'
+                  }
+                ],
+                'status': [
+                  {
+                    'id': 'status:a',
+                    'label': 'Available'
+                  }
+                ],
+                'owner_packed': [
+                  'orgs:1000||Stephen A. Schwarzman Building'
+                ],
+                'requestable': [
+                  false
+                ],
+                'identifier': [
+                  'urn:barcode:10005468369'
+                ],
+                'holdingLocation_packed': [
+                  'loc:rc2ma||OFFSITE - Request in Advance'
+                ],
+                'shelfMark': [
+                  '*OFC 90-2649 2'
                 ],
                 'suppressed': [
                   false
@@ -297,5 +429,266 @@ exports.fakeElasticSearchResponse = () => {
       ]
     },
     'timed_out': false
+  }
+}
+
+exports.fakeElasticSearchResponseCulItem = () => {
+  return {
+    '_shards': {
+      'failed': 0,
+      'successful': 1,
+      'total': 1
+    },
+    'took': 1,
+    'hits': {
+      'total': 1,
+      'max_score': 1.3862944,
+      'hits': [
+        {
+          '_type': 'resource',
+          '_id': 'cb1000077',
+          '_source': {
+            'extent': [
+              'iii, 332 leaves, bound.'
+            ],
+            'note': [
+              {
+                'noteType': 'Thesis',
+                'label': 'Thesis (Ph. D.)--Columbia University, 1989.',
+                'type': 'bf:Note'
+              },
+              {
+                'noteType': 'Bibliography',
+                'label': 'Includes bibliographical references (leaves 314-332).',
+                'type': 'bf:Note'
+              }
+            ],
+            'language': [
+              {
+                'label': 'English',
+                'id': 'lang:eng'
+              }
+            ],
+            'createdYear': [
+              1989
+            ],
+            'title': [
+              'Urbanism as a way of writing : Chicago urban sociology and Chicago urban literature, 1915-1945 / Carla Sofia Cappetti.'
+            ],
+            'type': [
+              'nypl:Item'
+            ],
+            'createdString': [
+              '1989'
+            ],
+            'creatorLiteral': [
+              'Cappetti, Carla Sofia.'
+            ],
+            'materialType_packed': [
+              'resourcetypes:txt||Text'
+            ],
+            'language_packed': [
+              'lang:eng||English'
+            ],
+            'dateStartYear': [
+              1989
+            ],
+            'identifierV2': [
+              {
+                'type': 'nypl:Bnumber',
+                'value': '1000077'
+              }
+            ],
+            'carrierType_packed': [
+              'carriertypes:nc||volume'
+            ],
+            'creator_sort': [
+              'cappetti, carla sofia.'
+            ],
+            'issuance_packed': [
+              'urn:biblevel:m||monograph/item'
+            ],
+            'updatedAt': 1523471203726,
+            'publicationStatement': [
+              '1989.'
+            ],
+            'mediaType_packed': [
+              'mediatypes:n||unmediated'
+            ],
+            'identifier': [
+              'urn:bnum:1000077'
+            ],
+            'materialType': [
+              {
+                'label': 'Text',
+                'id': 'resourcetypes:txt'
+              }
+            ],
+            'carrierType': [
+              {
+                'label': 'volume',
+                'id': 'carriertypes:nc'
+              }
+            ],
+            'dateString': [
+              '1989'
+            ],
+            'title_sort': [
+              'urbanism as a way of writing : chicago urban sociology and chicago urban literat'
+            ],
+            'mediaType': [
+              {
+                'label': 'unmediated',
+                'id': 'mediatypes:n'
+              }
+            ],
+            'titleDisplay': [
+              'Urbanism as a way of writing : Chicago urban sociology and Chicago urban literature, 1915-1945 / Carla Sofia Cappetti.'
+            ],
+            'uri': 'cb1000077',
+            'numItems': [
+              1
+            ],
+            'numAvailable': [
+              1
+            ],
+            'uris': [
+              'cb1000077',
+              'cb1000077-ci1455504'
+            ],
+            'issuance': [
+              {
+                'label': 'monograph/item',
+                'id': 'urn:biblevel:m'
+              }
+            ],
+            'items': [
+              {
+                'owner': [
+                  {
+                    'label': 'Columbia University Libraries',
+                    'id': 'orgs:0002'
+                  }
+                ],
+                'accessMessage_packed': [
+                  'accessMessage:1||Use in library'
+                ],
+                'identifier': [
+                  'urn:barcode:1000020117'
+                ],
+                'catalogItemType_packed': [
+                  'catalogItemType:1||non-circ'
+                ],
+                'accessMessage': [
+                  {
+                    'label': 'Use in library',
+                    'id': 'accessMessage:1'
+                  }
+                ],
+                'status_packed': [
+                  'status:a||Available '
+                ],
+                'shelfMark': [
+                  'LD1237.5D 1989 .C166'
+                ],
+                'uri': 'ci1455504',
+                'identifierV2': [
+                  {
+                    'type': 'bf:ShelfMark',
+                    'value': 'LD1237.5D 1989 .C166'
+                  },
+                  {
+                    'type': 'bf:Barcode',
+                    'value': '1000020117'
+                  }
+                ],
+                'idBarcode': [
+                  '1000020117'
+                ],
+                'owner_packed': [
+                  'orgs:0002||Columbia University Libraries'
+                ],
+                'requestable': [
+                  true
+                ],
+                'catalogItemType': [
+                  {
+                    'label': 'non-circ',
+                    'id': 'catalogItemType:1'
+                  }
+                ],
+                'status': [
+                  {
+                    'label': 'Available ',
+                    'id': 'status:a'
+                  }
+                ]
+              },
+              {
+                'owner': [
+                  {
+                    'label': 'Columbia University Libraries',
+                    'id': 'orgs:0002'
+                  }
+                ],
+                'accessMessage_packed': [
+                  'accessMessage:1||Use in library'
+                ],
+                'identifier': [
+                  'urn:barcode:10000201179999'
+                ],
+                'catalogItemType_packed': [
+                  'catalogItemType:1||non-circ'
+                ],
+                'accessMessage': [
+                  {
+                    'label': 'Use in library',
+                    'id': 'accessMessage:1'
+                  }
+                ],
+                'status_packed': [
+                  'status:a||Available '
+                ],
+                'shelfMark': [
+                  'LD1237.5D 1989 .C166 9999'
+                ],
+                'uri': 'ci14555049999',
+                'identifierV2': [
+                  {
+                    'type': 'bf:ShelfMark',
+                    'value': 'LD1237.5D 1989 .C166 9999'
+                  },
+                  {
+                    'type': 'bf:Barcode',
+                    'value': '10000201179999'
+                  }
+                ],
+                'idBarcode': [
+                  '10000201179999'
+                ],
+                'owner_packed': [
+                  'orgs:0002||Columbia University Libraries'
+                ],
+                'requestable': [
+                  true
+                ],
+                'catalogItemType': [
+                  {
+                    'label': 'non-circ',
+                    'id': 'catalogItemType:1'
+                  }
+                ],
+                'status': [
+                  {
+                    'label': 'Available ',
+                    'id': 'status:a'
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }

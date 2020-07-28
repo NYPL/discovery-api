@@ -48,7 +48,7 @@ module.exports = function (app) {
   app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
     var params = gatherParams(req, standardParams)
 
-    return app.resources.search(params, { baseUrl: app.baseUrl })
+    return app.resources.search(params, { baseUrl: app.baseUrl }, req)
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })
@@ -94,7 +94,7 @@ module.exports = function (app) {
       handler = app.resources.annotatedMarc
     }
 
-    return handler(params, { baseUrl: app.baseUrl })
+    return handler(params, { baseUrl: app.baseUrl }, req)
       .then((responseBody) => respond(res, responseBody, params))
       .catch((error) => handleError(res, error, params))
   })
