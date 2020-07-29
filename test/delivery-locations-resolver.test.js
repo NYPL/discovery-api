@@ -238,10 +238,10 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
 
-    it('will return true for on-site microfilm if it\'s not in Schomburg', function () {
+    it('will return false for microfilm', function () {
       item.catalogItemType[0].id = 'catalogItemType:6'
       item.holdingLocation[0].id = 'loc:mabm2'
-      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
     it('will return false for on-site microfilm if it\'s in Schomburg', function () {
