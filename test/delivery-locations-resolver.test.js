@@ -13,6 +13,15 @@ var sampleItems = {
         'id': 'loc:scff2',
         'label': 'Schomburg Center - Research & Reference'
       }
+    ],
+    'accessMessage': [
+      { 'label': 'Use in library', 'id': 'accessMessage:1' }
+    ],
+    'catalogItemType': [
+      { 'label': 'book, limited circ, MaRLI', 'id': 'catalogItemType:55' }
+    ],
+    'status': [
+      { 'label': 'Available ', 'id': 'status:a' }
     ]
   },
   offsiteNypl: {
@@ -97,9 +106,9 @@ describe('Delivery-locations-resolver', function () {
     })
   })
 
-  it('will set eddRequestable to false for a specific onsite NYPL item', function () {
+  it('will set eddRequestable to true for a specific onsite NYPL item', function () {
     return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl]).then((items) => {
-      expect(items[0].eddRequestable).to.equal(false)
+      expect(items[0].eddRequestable).to.equal(true)
     })
   })
 
@@ -164,6 +173,81 @@ describe('Delivery-locations-resolver', function () {
   it('will reveal "Research" deliveryLocation for users with no PType found', function () {
     return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl], []).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
+    })
+  })
+
+  describe('eddRequestableByOnSiteCriteria', function () {
+    let item
+
+    beforeEach(function () {
+      item = {
+        'identifier': [
+          'urn:bnum:b11995345',
+          'urn:bnum:b11995322',
+          'urn:barcode:33433036864449'
+        ],
+        'uri': 'i12227153',
+        'holdingLocation': [
+          {
+            'id': 'loc:scff2',
+            'label': 'Schomburg Center - Research & Reference'
+          }
+        ],
+        'accessMessage': [
+          { 'label': 'Use in library', 'id': 'accessMessage:1' }
+        ],
+        'catalogItemType': [
+          { 'label': 'book, limited circ, MaRLI', 'id': 'catalogItemType:55' }
+        ],
+        'status': [
+          { 'label': 'Available ', 'id': 'status:a' }
+        ]
+      }
+    })
+
+    it('will return false for ReCAP materials', function () {
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(sampleItems.offsiteNypl)).to.equal(false)
+    })
+
+    it('will return true for on-site item meeting all criteria', function () {
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
+    })
+
+    it('will return false for on-site item failing location check', function () {
+      item.holdingLocation[0].id = 'loc:rc'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
+    })
+
+    it('will return false for on-site item failing status check', function () {
+      item.status[0].id = 'status:co'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
+    })
+
+    it('will return false for on-site item failing catalogItemType check', function () {
+      item.catalogItemType[0].id = 'catalogItemType:56'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
+    })
+
+    it('will return false for on-site item failing accessMessage check', function () {
+      item.accessMessage[0].id = 'accessMessage:2'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
+    })
+
+    it('will return true for on-site Schomburg if it\'s not microfilm', function () {
+      item.holdingLocation[0].id = 'loc:scff2'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
+    })
+
+    it('will return false for microfilm', function () {
+      item.catalogItemType[0].id = 'catalogItemType:6'
+      item.holdingLocation[0].id = 'loc:mabm2'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
+    })
+
+    it('will return false for on-site microfilm if it\'s in Schomburg', function () {
+      item.catalogItemType[0].id = 'catalogItemType:6'
+      item.holdingLocation[0].id = 'loc:scff2'
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
 })
