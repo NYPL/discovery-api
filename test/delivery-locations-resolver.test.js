@@ -64,7 +64,6 @@ var sampleItems = {
       'urn:barcode:made-up-barcode-that-recap-says-belongs-to-ND'
     ]
   }
-
 }
 
 const scholarRooms = [
@@ -244,9 +243,9 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
-    it('will return false for on-site microfilm if it\'s in Schomburg', function () {
-      item.catalogItemType[0].id = 'catalogItemType:6'
-      item.holdingLocation[0].id = 'loc:scff2'
+    it('will return false for on-site item that lacks a barcode', function () {
+      // Remove barcode identifier:
+      item.identifier = item.identifier.filter((value) => !/^urn:barcode:/.test(value))
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
