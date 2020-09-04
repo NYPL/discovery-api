@@ -2,7 +2,7 @@ Master: [![Build Status](https://travis-ci.org/NYPL-discovery/discovery-api.svg?
 
 # Documentation
 
-Check the [v0.1.1 swagger](https://github.com/NYPL-discovery/discovery-api/blob/master/swagger.v0.1.1.json) for the machine readable api contract.
+Check the [v0.1.1 swagger](https://github.com/NYPL-discovery/discovery-api/blob/master/swagger.v0.1.json) for the machine readable api contract.
 
 ## Installing & Running Locally
 
