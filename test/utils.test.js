@@ -86,4 +86,55 @@ describe('Util', () => {
       expect(outgoing.filters.badNumeric).to.equal(3)
     })
   })
+
+  it('should strip a terminal period from a single subjectLiteral', () => {
+    const incoming = {
+      filters: {
+        subjectLiteral: 'Cats.'
+      }
+    }
+
+    const spec = {
+      filters: {
+        type: 'hash',
+        fields: {
+          subjectLiteral: {
+            type: 'string',
+            field: 'subjectLiteral_exploded'
+          }
+        }
+      }
+    }
+
+    const outgoing = parseParams(incoming, spec)
+    console.log('outgoing: ', outgoing)
+    expect(outgoing.filters.subjectLiteral).to.equal('Cats')
+  })
+
+  it('should string a terminal period from each subjectLiteral in an array', () => {
+    const incoming = {
+      filters: {
+        subjectLiteral: ['Cats.', 'Dogs.']
+      }
+    }
+
+    const spec = {
+      filters: {
+        type: 'hash',
+        fields: {
+          subjectLiteral: {
+            type: 'string',
+            field: 'subjectLiteral_exploded',
+            repeatable: true
+          }
+        }
+      }
+    }
+
+    const outgoing = parseParams(incoming, spec)
+    console.log('outgoing: ', outgoing)
+    expect(outgoing.filters.subjectLiteral.length).to.equal(2)
+    expect(outgoing.filters.subjectLiteral[0]).to.equal('Cats')
+    expect(outgoing.filters.subjectLiteral[1]).to.equal('Dogs')
+  })
 })
