@@ -99,9 +99,9 @@ function takeThisPartyPartiallyOffline () {
 describe('Delivery-locations-resolver', function () {
   before(takeThisPartyPartiallyOffline)
 
-  it('will ammend the deliveryLocation property for an onsite NYPL item', function () {
+  it('will assign empty array to deliveryLocation property for an onsite NYPL item', function () {
     return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+      expect(items[0].deliveryLocation).to.be.empty
     })
   })
 
@@ -166,12 +166,6 @@ describe('Delivery-locations-resolver', function () {
       scholarRooms.forEach((scholarRoom) => {
         expect(items[0].deliveryLocation.map((location) => location.id)).to.include(scholarRoom.id)
       })
-    })
-  })
-
-  it('will reveal "Research" deliveryLocation for users with no PType found', function () {
-    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl], []).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
     })
   })
 
