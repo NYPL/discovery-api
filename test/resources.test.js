@@ -25,7 +25,11 @@ describe('Resources query', function () {
 
   describe('escapeQuery', function () {
     it('should escape specials', function () {
-      expect(resourcesPrivMethods.escapeQuery('? ^ *')).to.equal('\\\\? \\\\^ \\\\*')
+      expect(resourcesPrivMethods.escapeQuery('? ^ * + (')).to.equal('\\? \\^ \\* \\+ \\(')
+    })
+
+    it('should remove angle brackets completely', function () {
+      expect(resourcesPrivMethods.escapeQuery('<hello>')).to.equal('hello')
     })
 
     it('should escape unrecognized field indicators', function () {
@@ -46,7 +50,7 @@ describe('Resources query', function () {
     })
 
     it('should escape colons in hyphenated phrases', function () {
-      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ / Avtor-sostavitelʹ: B.A. Konikov.')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ \\/ Avtor-sostavitelʹ\\: B.A. Konikov.')
+      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ / Avtor-sostavitelʹ: B.A. Konikov.')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ \\/ Avtor\\-sostavitelʹ\\: B.A. Konikov.')
     })
   })
 
