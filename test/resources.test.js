@@ -28,10 +28,6 @@ describe('Resources query', function () {
       expect(resourcesPrivMethods.escapeQuery('? ^ * + (')).to.equal('\\? \\^ \\* \\+ \\(')
     })
 
-    it('should remove angle brackets completely', function () {
-      expect(resourcesPrivMethods.escapeQuery('<hello>')).to.equal('hello')
-    })
-
     it('should escape unrecognized field indicators', function () {
       expect(resourcesPrivMethods.escapeQuery('fladeedle:gorf')).to.equal('fladeedle\\:gorf')
     })
