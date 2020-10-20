@@ -107,7 +107,6 @@ describe('Util', () => {
     }
 
     const outgoing = parseParams(incoming, spec)
-    console.log('outgoing: ', outgoing)
     expect(outgoing.filters.subjectLiteral).to.equal('Cats')
   })
 
@@ -132,7 +131,6 @@ describe('Util', () => {
     }
 
     const outgoing = parseParams(incoming, spec)
-    console.log('outgoing: ', outgoing)
     expect(outgoing.filters.subjectLiteral.length).to.equal(2)
     expect(outgoing.filters.subjectLiteral[0]).to.equal('Cats')
     expect(outgoing.filters.subjectLiteral[1]).to.equal('Dogs')
