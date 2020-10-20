@@ -595,7 +595,6 @@ describe('Test Resources responses', function () {
 
           assert.equal(200, response.statusCode)
 
-          if (num === '"ISBN -- 020"') console.log(body)
           const results = JSON.parse(body)
           // This test bib has been copied. There are now 15 with roughly same data
           expect(results.totalResults).to.be.at.least(14)
