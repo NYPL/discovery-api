@@ -8,7 +8,6 @@ global.TEST_BASE_URL = 'http://localhost:' + process.env.PORT
 // By virtue of including app.js, we start listening on above port:
 require('../app.js')
 
-
 // Nullify SCSB creds just in case they've been brought in by app.js by a
 // local .env (but only if we're not updating fixtures, for which we'll need
 // that auth..):
