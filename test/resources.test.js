@@ -341,6 +341,7 @@ describe('Test Resources responses', function () {
     })
 
     it('Resource search all returns status code 200', function (done) {
+      console.log('searchAllUrl: ', searchAllUrl)
       request.get(searchAllUrl, function (err, response, body) {
         if (err) throw err
 
