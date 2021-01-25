@@ -13,7 +13,7 @@ module.exports = function (app) {
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope']
+  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from']
 
   const respond = (res, _resp, params) => {
     var contentType = 'application/ld+json'
@@ -86,7 +86,10 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
+    var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from'])
     var params = { uri: req.params.uri }
+    if (gatheredParams.items_size) params.items_size = gatheredParams.items_size
+    if (gatheredParams.items_from) params.items_from = gatheredParams.items_from
 
     var handler = app.resources.findByUri
 
