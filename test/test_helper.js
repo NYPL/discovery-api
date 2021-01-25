@@ -1,3 +1,5 @@
+// Set some env variables:
+process.env.SEARCH_ITEMS_SIZE = 100
 // This can be any port, but let's choose something reasonably high to
 // avoid conflict:
 process.env.PORT = 5678
