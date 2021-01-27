@@ -179,6 +179,7 @@ describe('Test Resources responses', function () {
         assert.equal(200, response.statusCode)
 
         var doc = JSON.parse(body)
+        console.log('doc: ', JSON.stringify(doc, null, 2))
 
         // At writing the fixture has both `identifier` and `identifierV2` fields,
         // so it will choose the latter (which are stored as entities)

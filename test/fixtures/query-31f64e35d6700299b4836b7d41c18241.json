@@ -1,0 +1,307 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 16.029161,
+    "hits": [
+      {
+        "_index": "resources-2020-05-08",
+        "_type": "resource",
+        "_id": "b10015541",
+        "_score": 16.029161,
+        "_source": {
+          "extent": [
+            "v. : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 2 has title: A history and genealogy of the families of Howland, Brown, Follett, Van Dyke, Lamb, Spaulding, and Davidson with related lines of Treat, Botsford, Parker, Burwell, Clark, Andrews, Symmonds, Burnaman, Ashbaugh, and Smith from Holland, England, Scotland, and France to Massachusetts, Connecticut, New York, New Jersey, Ohio, Iowa, Indiana, Nebraska, Kansas, and Texas from \"The Mayflower\" pilgrims in 1620 to the 1980s / by Dorothy Davidson Symmonds.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and indexes.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Jacobs family",
+            "Pritchard family",
+            "Rimmer family"
+          ],
+          "publisherLiteral": [
+            "D. Symmonds,"
+          ],
+          "language": [
+            {
+              "label": "English",
+              "id": "lang:eng"
+            }
+          ],
+          "createdYear": [
+            1985
+          ],
+          "dateEndString": [
+            "9999"
+          ],
+          "title": [
+            "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s"
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [
+            "APV (Pritchett) 87-2820"
+          ],
+          "creatorLiteral": [
+            "Symmonds, Dorothy."
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "85239758"
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "APV (Pritchett) 87-2820"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10015541"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "85239758"
+            }
+          ],
+          "dateEndYear": [
+            9999
+          ],
+          "updatedAt": 1523472340834,
+          "publicationStatement": [
+            "Bellaire, Tex. (P.O. Box 26, Bellaire 77401) : D. Symmonds, c1985-<c1989   >"
+          ],
+          "identifier": [
+            "urn:bnum:10015541",
+            "urn:lccn:85239758"
+          ],
+          "materialType": [
+            {
+              "label": "Text",
+              "id": "resourcetypes:txt"
+            }
+          ],
+          "carrierType": [
+            {
+              "label": "volume",
+              "id": "carriertypes:nc"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "label": "unmediated",
+              "id": "mediatypes:n"
+            }
+          ],
+          "subjectLiteral": [
+            "Jacobs family.",
+            "Pritchard family.",
+            "Rimmer family."
+          ],
+          "titleDisplay": [
+            "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s / by Dorothy Symmonds."
+          ],
+          "uri": "b10015541",
+          "lccClassification": [
+            "CS71.P9615 1985"
+          ],
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            2
+          ],
+          "placeOfPublication": [
+            "Bellaire, Tex. (P.O. Box 26, Bellaire 77401) :"
+          ],
+          "issuance": [
+            {
+              "label": "monograph/item",
+              "id": "urn:biblevel:m"
+            }
+          ],
+          "dimensions": [
+            "28 cm."
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 2,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "idBarcode": [
+                      "33433065651741"
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "status_packed": [
+                      "status:a||Available "
+                    ],
+                    "uri": "i14747616",
+                    "catalogItemType": [
+                      {
+                        "label": "book, limited circ, MaRLI",
+                        "id": "catalogItemType:55"
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "label": "Schwarzman Building M2 - Milstein Division - Room 121",
+                        "id": "loc:mag92"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "label": "Available ",
+                        "id": "status:a"
+                      }
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "APV (Pritchett) 87-2820 v. 2"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433065651741"
+                      }
+                    ],
+                    "shelfMark": [
+                      "APV (Pritchett) 87-2820 v. 2"
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division - Room 121"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433065651741"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "label": "Use in library",
+                        "id": "accessMessage:1"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "idBarcode": [
+                      "33433060936147"
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "status_packed": [
+                      "status:a||Available "
+                    ],
+                    "uri": "i35838326",
+                    "catalogItemType": [
+                      {
+                        "label": "book, limited circ, MaRLI",
+                        "id": "catalogItemType:55"
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "label": "Schwarzman Building M2 - Milstein Division - Room 121",
+                        "id": "loc:mag92"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "label": "Available ",
+                        "id": "status:a"
+                      }
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "APV (Pritchett) 87-2820 v. 1"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433060936147"
+                      }
+                    ],
+                    "shelfMark": [
+                      "APV (Pritchett) 87-2820 v. 1"
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division - Room 121"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433060936147"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "label": "Use in library",
+                        "id": "accessMessage:1"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
