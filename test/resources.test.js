@@ -201,22 +201,26 @@ describe('Test Resources responses', function () {
 
         // Also check an item's identifiers:
         expect(doc.items).to.be.a('array')
-        expect(doc.items[0]).to.be.a('object')
-        expect(doc.items[0].identifier).to.be.a('array')
+
+        // Select an item of interest
+        const itemOfInterest = doc.items.filter((item) => item.uri === 'i10005487')[0]
+
+        expect(itemOfInterest).to.be.a('object')
+        expect(itemOfInterest.identifier).to.be.a('array')
 
         // Check item callnum:
-        const callnum = doc.items[0].identifier
+        const callnum = itemOfInterest.identifier
           .filter((ent) => ent['@type'] === 'bf:ShelfMark')
           .pop()
         expect(callnum).to.be.a('object')
-        expect(callnum['@value']).to.equal('*AY (Hone, W. Table book) v. 1')
+        expect(callnum['@value']).to.equal('JFE 86-498 v. 1')
 
         // Check item barcode:
-        const barcode = doc.items[0].identifier
+        const barcode = itemOfInterest.identifier
           .filter((ent) => ent['@type'] === 'bf:Barcode')
           .pop()
         expect(barcode).to.be.a('object')
-        expect(barcode['@value']).to.equal('33433067332548')
+        expect(barcode['@value']).to.equal('33433057532081')
 
         done()
       })

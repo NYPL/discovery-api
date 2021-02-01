@@ -1,0 +1,260 @@
+{
+  "took": 6,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 16.126999,
+    "hits": [
+      {
+        "_index": "resources-2020-05-08",
+        "_type": "resource",
+        "_id": "b10001936",
+        "_score": 16.126999,
+        "_source": {
+          "extent": [
+            "400 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Publication date from cover.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Additional Formats",
+              "label": "Also available on microform;",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Armenian.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Processing Action",
+              "label": "Microfilmed;",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Armenians",
+            "Armenians -- Iran",
+            "Armenians -- Iran -- History"
+          ],
+          "publisherLiteral": [
+            "Tparan Hovhannu Tēr-Abrahamian,"
+          ],
+          "language": [
+            {
+              "label": "Armenian",
+              "id": "lang:arm"
+            }
+          ],
+          "createdYear": [
+            1891
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan"
+          ],
+          "shelfMark": [
+            "*ONR 84-743"
+          ],
+          "creatorLiteral": [
+            "Shermazanian, Galust."
+          ],
+          "createdString": [
+            "1891"
+          ],
+          "dateStartYear": [
+            1891
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ONR 84-743"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001936"
+            }
+          ],
+          "updatedAt": 1525296780864,
+          "publicationStatement": [
+            "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
+          ],
+          "identifier": [
+            "urn:bnum:10001936"
+          ],
+          "materialType": [
+            {
+              "label": "Text",
+              "id": "resourcetypes:txt"
+            }
+          ],
+          "carrierType": [
+            {
+              "label": "volume",
+              "id": "carriertypes:nc"
+            }
+          ],
+          "dateString": [
+            "1891"
+          ],
+          "mediaType": [
+            {
+              "label": "unmediated",
+              "id": "mediatypes:n"
+            }
+          ],
+          "subjectLiteral": [
+            "Armenians -- Iran -- History."
+          ],
+          "titleDisplay": [
+            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan / Ashkhatasirutʻiamb Galust Shermazaniani."
+          ],
+          "uri": "b10001936",
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Ṛostov (Doni Vra) :"
+          ],
+          "issuance": [
+            {
+              "label": "monograph/item",
+              "id": "urn:biblevel:m"
+            }
+          ],
+          "dimensions": [
+            "21 cm."
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 2,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10001936-e",
+                    "electronicLocator": [
+                      {
+                        "label": "Full text available via HathiTrust",
+                        "url": "http://hdl.handle.net/2027/nyp.33433001892276"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "idBarcode": [
+                      "33433001892276"
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "uri": "i10001320",
+                    "catalogItemType": [
+                      {
+                        "label": "google project, book",
+                        "id": "catalogItemType:32"
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "label": "Offsite",
+                        "id": "loc:rc2ma"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "label": "Available",
+                        "id": "status:a"
+                      }
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*ONR 84-743"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433001892276"
+                      }
+                    ],
+                    "shelfMark": [
+                      "*ONR 84-743"
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433001892276"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "accessMessage": [
+                      {
+                        "label": "Request in advance",
+                        "id": "accessMessage:2"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "label": "Stephen A. Schwarzman Building",
+                        "id": "orgs:1000"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
