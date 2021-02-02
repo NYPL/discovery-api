@@ -99,6 +99,12 @@ Rebuilding fixtures tends to introduce trivial git diff noise, so one may use th
 UPDATE_FIXTURES=if-missing npm test
 ```
 
+Remove fixtures that are no longer used in any test with this flag:
+
+```
+REMOVE_UNUSED_FIXTURES=true npm test
+```
+
 The above command can be used to fill in missing fixtures as new tests are written.
 
 ## Deployment
