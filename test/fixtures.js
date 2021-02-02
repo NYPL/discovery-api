@@ -279,11 +279,10 @@ after(function () {
   const unused = existingPaths.filter((path) => !used.includes(path))
   if (unused.length > 0) {
     // If there are unused fixtures..
-    // If REMOVE_UNUSED_FIXTURES=true is used, delete them:
+    // If REMOVE_UNUSED_FIXTURES=true is set, delete them:
     if (process.env.REMOVE_UNUSED_FIXTURES === 'true') {
       console.log(`The following fixtures were not used and will be removed:\n${unused.map((path) => `\n  ${path}`)}`)
       unused.forEach((p) => {
-        // console.log('unlink ', `./test/fixtures/${p}`)
         fs.unlinkSync(`./test/fixtures/${p}`)
       })
     // Otherwise, just report on them:
