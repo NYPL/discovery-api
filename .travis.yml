@@ -1,6 +1,4 @@
 language: node_js
-node_js:
-- '6.17'
 install: npm install
 script: npm test
 before_deploy: echo 'All unit tests passed; Successfull built distribution assets;
@@ -16,7 +14,7 @@ deploy:
   bucket_name: elasticbeanstalk-us-east-1-946183545209
   bucket_path: discovery-api-production
   on:
-    repo: NYPL-discovery/discovery-api
+    repo: NYPL/discovery-api
     branch: production
 - provider: elasticbeanstalk
   skip_cleanup: true
@@ -28,7 +26,7 @@ deploy:
   bucket_name: elasticbeanstalk-us-east-1-946183545209
   bucket_path: discovery-api-qa
   on:
-    repo: NYPL-discovery/discovery-api
+    repo: NYPL/discovery-api
     branch: qa
 - provider: elasticbeanstalk
   skip_cleanup: true
@@ -40,7 +38,7 @@ deploy:
   bucket_name: elasticbeanstalk-us-east-1-224280085904
   bucket_path: discovery-api-dev
   on:
-    repo: NYPL-discovery/discovery-api
+    repo: NYPL/discovery-api
     branch: development
 after_deploy: echo 'Successfully executed deploy trigger for Discovery API'
 notifications:
@@ -48,4 +46,4 @@ notifications:
     secure: g6eiX6ALpd0VvGsSCDyCGpwtkvTT3qDcNTwXFK7yj85y4ZaRPUHqV22RXUn+7hyvPDbaXM1o61Q5EwBCC3XGlzirqGoM0l22TDQq3ZchtJGTSFrALcWGHaj6YHCQOyHu4TbFsaYGzMNG0o2DVjC2A1L/psoLVj5S0mQXtRmsWNiBAfff4kqOBYk76459rCkAGoUkV5Wwz6D0XPdLxVFmOqtfFdt427jjZcQp9tj5as9B33ERm4kdIKX2/CXdJE3F7+YjKeyrUhrqggLRJiTBKc53reoy8X26QjExfQ95ewPkdHx+CAnXKhW1TLym4+EpRTSrQIFt2dhKvT+0VU4X3XIKlxTn2KA/UX/1Qln6s8SMRqzeaNqB6t8rckzqQ3NN5HSgHmcERnmwFaRM4mPfxwTf5RR0bnoZd4iq7x3hiznztLJp3S5i1hUQCm8IJ83sTEU9LHsVdaaBjTOk7FAtATGX3IGA86BKVvdpULgQFaucAx5jRXIGyRFqcuzka3B4UYSyfatU3i+KRVDIuo+PkbcsjLL7EGT3fPZVeXgXnxdLQT7s9mKtEMhCDGOzH4gApJJn62Z+x0m3hoUgR8Y5sw9o9yoiwD2ldlQtYQ/1iMP/mku3gyF8nsCe9AR3nMmUJGyCufEBOTR8A6THscINRU/4pVxWfdFDAUjz1qoADKM=
 env:
   global:
-    secure: FpJaRm1r5NcURJ2fKHBUIwHt1WuIBDG+4ZwxIAb776IgdA+Ig2Ibklrw1y6drUOfOU3JFlvQhWxQrWbQs9wsfZ0RDmOMfA7s1/Y24XK89Fq9prTOIn08f07ohN3bx7egCzdW/C/hbeiXXnUxkkvCL162BP0uwWZDxiN2KekuKY0XC6cDxbZcCnwUuch47tHir5IFZiot1mSveK1uHfkHbg0JJDf/jKpaOhRwfvM93tgvNodwOXASA7qaFRX6JWzkO4r1KUj66p65Q6n7mJeUddgNzBbt8xN3dtgXGQpPTroJMcMsWKw+DqTRdhvjRwNx5HsTp5bbaFDN9+CfP/sO6mloB0FyGgm3vaNt5OAoWb4OC1uJrAjAIqdvwyL9rN+7k3EaUmGWpzyxH3UTYInUlwURySBCFQ8fn+UzqS6pBYJoEHX9E07sAYNL3CzsvhOsCYh0a7PMc4jDGXzYTiC93GqHy5ilU2kn3u/K285UAYkuv9h/au4O59F9uss/7L/8T7b6KcBDg9XFgJ8/J0mcRXeQOAOjk3ZBaw93nDtQRSkSDWUoA9x3mTqPdahxPc7Lb/RqMmbkvUz86jGLSMkky3OJMtP7ASBn5dUaIuF5LT5o6ZJP3w69LJAOmbYE30QsT+LTq5PUv4ShtUqaaWYv9J1mwSbW6ate5r7Z1/0tZgQ=
+    secure: tg3Snnk8PJdV4qMkP4QY9Fg030NyGjsYywVHfSEgO+azNsgv/yMKMUZEbtvWiGYSSN5gP58cIenDqbEPn7Kv/7iVkisb8nqA/Gw+w+MSYitgbUUuL4hubyEBdtJiEi2ifpcyMUF5lHSc8qixnX0mzGzVdF9h91UV7oWM9vPaPHPErlLPuaPO58WfZ6F6UqjIN1a4pigzPf9fvrSm/ziS3NHuJUoH8Mjo1J60tJ+hjlo5s2l1N9RjObKo9wAaMXcFv9gHMMoO98rflIPITlYdpziCsjiJ+vp8Yq0Tx5es99LLxqMd5D53w9GRx11Bfa3uTlp/Y4B2xQPZ0D9MNVttG+rvtY5/cyPWT4DvyM1MXfzF0bag8aLlYfctNYL03gUsfC/G/uEb0i8oz8SSqu79NOAV2yU/ZNoupivtlDaYBmeARshOA6MaFdD2Bh2MAq59R+5jDu4A0lyq3HBxmum8Qi5uBsNHQXLKaJlyk1/Ay89LTuDtS1DrrsfGfckAdIDKZ0Qo08yXOEspHVbba0jTaX4CL6vn7L30avZxnze53DI8239+0uqpjK6KyuQOblND0xYywqpH57Ev5VPXeQ0lWzbPx8/W+C3fdLZLNU0a1HVaCL12qoQkp0rtdPj4CjIObjBw9Sx+W/ND9u1+rQZqcaL5MkUVJctvHbxFjP7nf4A=
