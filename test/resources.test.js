@@ -310,16 +310,16 @@ describe('Test Resources responses', function () {
 
         assert(doc.supplementaryContent)
         assert(doc.supplementaryContent.length > 0)
-        assert.equal(doc.supplementaryContent[0].label, 'FindingAid')
+        assert.equal(doc.supplementaryContent[0].label, 'Finding aid')
         assert.equal(doc.supplementaryContent[0]['@type'], 'nypl:SupplementaryContent')
-        assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/uploads/collection/pdf_finding_aid/PSF.pdf')
+        assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/scm/20936')
 
         done()
       })
     })
 
     it('returns item.electronicLocator', function (done) {
-      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -555,15 +555,13 @@ describe('Test Resources responses', function () {
     })
 
     ; [
-      'b12082323',
-      '12082323', // Should match `identifierV2[@type=nypl:Bnumber].value`
+      'b22144813',
       'Danacode', // Should match `identifierV2[@type=bf:Lccn].value`
-      '0123456789', // Should match `identifierV2[@type=bf:Isbn].value`
       '"ISBN -- 020"',
       '44455533322211'
     ].forEach((num) => {
-      it(`should match b12082323 by "Standard Numbers": "${num}"`, function (done) {
-        request.get(searchAllUrl + 'b12082323', function (err, response, body) {
+      it(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
+        request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err
 
           assert.equal(200, response.statusCode)
@@ -574,7 +572,7 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement[0]).to.be.a('object')
           expect(results.itemListElement[0].result).to.be.a('object')
           expect(results.itemListElement[0].result['@type']).to.include('nypl:Item')
-          expect(results.itemListElement[0].result['@id']).to.equal('res:b12082323')
+          expect(results.itemListElement[0].result['@id']).to.equal('res:b22144813')
 
           done()
         })
@@ -582,6 +580,7 @@ describe('Test Resources responses', function () {
     })
 
     ; [
+      'b22193421',
       '"Q-TAG (852 8b q tag.  Staff call in bib.)"', // Should match `identifierV2[@type=bf:ShelfMark].value`
       '"ISSN -- 022"', // Should match `identifierV2[@type=bf:Issn].value`
       '"LCCN -- 010"', // Should match `identifierV2[@type=bf:Lccn].value`
@@ -600,8 +599,7 @@ describe('Test Resources responses', function () {
           assert.equal(200, response.statusCode)
 
           const results = JSON.parse(body)
-          // This test bib has been copied. There are now 15 with roughly same data
-          expect(results.totalResults).to.be.at.least(14)
+          expect(results.totalResults).to.be.at.least(1)
           expect(results.itemListElement).to.be.a('array')
           expect(results.itemListElement[0]).to.be.a('object')
           expect(results.itemListElement[0].result).to.be.a('object')

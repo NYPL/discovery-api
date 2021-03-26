@@ -1,5 +1,5 @@
 {
-  "took": 290,
+  "took": 495,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 1603570,
+    "total": 2283025,
     "max_score": null,
     "hits": [
       {
@@ -35,6 +35,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Tiruvaḷḷuvar"
           ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
@@ -86,7 +89,7 @@
               "value": "74915265"
             }
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1595823889267,
           "publicationStatement": [
             "Tirunelvēli, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1965."
           ],
@@ -231,6 +234,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Islam",
+            "Islam -- 20th century"
+          ],
           "publisherLiteral": [
             "Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr"
           ],
@@ -281,7 +288,7 @@
               "value": "75962707"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1595820297187,
           "publicationStatement": [
             "al-Qāhirah, Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr [1968]"
           ],
@@ -381,7 +388,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -600,6 +607,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Cēkkiḻār, active 12th century"
+          ],
           "publisherLiteral": [
             "Aṇṇāmalaip Palkalaikkaḻakam,"
           ],
@@ -790,6 +800,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Ḥuṭayʼah, Jarwal ibn Aws, d. 650?"
+          ],
           "publisherLiteral": [
             "Dār al-Thaqāfah,"
           ],
@@ -830,7 +843,7 @@
               "value": "10000012"
             }
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1578411846354,
           "publicationStatement": [
             "Bayrūt : Dār al-Thaqāfah, 1970."
           ],
@@ -892,6 +905,10 @@
                 "urn:barcode:33433014514719"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFS 84-1997"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433014514719"
@@ -961,6 +978,11 @@
               "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Islam",
+            "Islam -- 20th century",
+            "Panislamism"
           ],
           "publisherLiteral": [
             "Muʼassasat al-Aʻlamī lil-Maṭbūʻāt,"
@@ -1136,6 +1158,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kuṟuntokai"
           ],
           "publisherLiteral": [
             "Manṅkaḷa Nūlakam,"
@@ -1324,6 +1349,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Women",
+            "Women -- Lebanon"
+          ],
           "publisherLiteral": [
             "Dār al-Ṭalīʻah,"
           ],
@@ -1371,7 +1400,7 @@
               "value": "78970449"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578411984817,
           "publicationStatement": [
             "Bayrūt : Dār al-Ṭalīʻah, 1975."
           ],
@@ -1505,6 +1534,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Tolkāppiyar"
           ],
           "publisherLiteral": [
             "Aṇṇāmalaip Palkalaik Kaḻakam,"
@@ -1699,6 +1731,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Tamil language",
+            "Tamil language -- Grammar"
+          ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
           ],
@@ -1753,7 +1789,7 @@
               "value": "73913714"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1540833300762,
           "publicationStatement": [
             "Ceṉṉai, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1970."
           ],
@@ -1796,7 +1832,7 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Ceṉṉai,"
@@ -1841,7 +1877,7 @@
                 "33433061301564"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i13783787",
               "shelfMark": [
@@ -1855,8 +1891,8 @@
               ],
               "status": [
                 {
-                  "id": "status:t",
-                  "label": "In transit"
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1895,6 +1931,13 @@
               "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Bahrain",
+            "Bahrain -- Economic conditions",
+            "Bahrain -- History",
+            "Bahrain -- History -- 20th century",
+            "Bahrain -- Social conditions"
           ],
           "publisherLiteral": [
             "Dār Ibn Khaldūn,"
@@ -1943,7 +1986,7 @@
               "value": "79971032"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578433338597,
           "publicationStatement": [
             "[Bayrūt] : Dār Ibn Khaldūn, 1976."
           ],
@@ -2085,6 +2128,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Women",
+            "Women -- Syria"
+          ],
           "publisherLiteral": [
             "Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī,"
           ],
@@ -2132,7 +2179,7 @@
               "value": "76960987"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1578433234482,
           "publicationStatement": [
             "Dimashq : Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī, 1975."
           ],
@@ -2276,6 +2323,9 @@
               "label": "In Hindi.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Sūryamalla Miśraṇa, 1815-1868"
           ],
           "publisherLiteral": [
             "Rājasthāna Sāhitya Akādamī (Saṅgama),"
@@ -2474,6 +2524,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Sanskrit language",
+            "Sanskrit language -- Suffixes and prefixes"
+          ],
           "publisherLiteral": [
             "Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; prāptisthānam, Rāmalāla Kapūra Ṭrasṭa,"
           ],
@@ -2528,7 +2582,7 @@
           "uniformTitle": [
             "Uṇādisūtra."
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1578432536487,
           "publicationStatement": [
             "Karanāla : Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; Bahālagaḍha, Harayāṇa : prāptisthānam, Rāmalāla Kapūra Ṭrasṭa, 1974."
           ],
@@ -2668,6 +2722,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Jahrom (Iran : Province)",
+            "Jahrom (Iran : Province) -- Biography",
+            "Khafr (Iran)",
+            "Khafr (Iran) -- Biography"
+          ],
           "publisherLiteral": [
             "Kitābfurūshī-i Khayyām,"
           ],
@@ -2708,7 +2768,7 @@
               "value": "10000032"
             }
           ],
-          "updatedAt": 1536782413067,
+          "updatedAt": 1578432679896,
           "publicationStatement": [
             "Tihrān : Kitābfurūshī-i Khayyām, 1351 [1972]"
           ],
@@ -2910,7 +2970,7 @@
               "value": "74903273"
             }
           ],
-          "updatedAt": 1536782413978,
+          "updatedAt": 1578433613401,
           "publicationStatement": [
             "Varanasi : Prithivi Prakashan, 1974."
           ],
@@ -3046,6 +3106,10 @@
               "label": "In Sanskrit; prefatory matter in Sanskrit or Telegu.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Nārāyaṇatīrtha, 17th cent",
+            "Nārāyaṇatīrtha, 17th cent -- In literature"
           ],
           "publisherLiteral": [
             "s.n.],"
@@ -3224,6 +3288,10 @@
               "label": "In Sanskrit, with verse and prose translations in Hindi; prefatory matter in Hindi or Sanskrit.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Sanskrit poetry",
+            "Sanskrit poetry -- Himachal Pradesh"
           ],
           "publisherLiteral": [
             "Himācala Kalā-Saṃskrti-Bhāṣā Akādamī,"
@@ -3406,6 +3474,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kaliyāṇacuntaraṉār, Tiru. Vi., 1883-1953"
           ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
@@ -3591,6 +3662,10 @@
               "label": "Hindi and Sanskrit: pref. in Hindi.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Advaita",
+            "Vedanta"
           ],
           "publisherLiteral": [
             "Devabhāṣā Prakāśana,"
@@ -3790,6 +3865,13 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Byaṅ-chub-chos-ʼphel, Khri-chen LXIX, 1756-1838",
+            "Lamas",
+            "Lamas -- Tibet",
+            "Lamas -- Tibet -- Biography",
+            "Saṅs-rgyas-bstan-ʼphel, Śel-dkar Bla-ma, 1817-1884"
+          ],
           "publisherLiteral": [
             "Ngawang Sopa,"
           ],
@@ -3987,6 +4069,14 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Ngor-chen Kun-dgaʼ-bzang-po, 1382-1456",
+            "Sa-skya-pa lamas",
+            "Sa-skya-pa lamas -- Tibet",
+            "Sa-skya-pa lamas -- Tibet -- Biography",
+            "Tripiṭaka.",
+            "Tripiṭaka. -- Commentaries"
+          ],
           "publisherLiteral": [
             "Trayang and Jamyang Samten,"
           ],
@@ -4018,7 +4108,7 @@
             "77900893"
           ],
           "contributorLiteral": [
-            "Saṅs-rgyas-phun-tshogs, Ṅor-chen, active 17th century."
+            "Sangs-rgyas-phun-tshogs, Ngor-chen, 1649-1705."
           ],
           "dateStartYear": [
             1976
@@ -4035,15 +4125,25 @@
             {
               "type": "bf:Lccn",
               "value": "77900893"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100022"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200045"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1553357018575,
           "publicationStatement": [
             "New Delhi : Trayang and Jamyang Samten, 1976."
           ],
           "identifier": [
             "urn:bnum:10000046",
-            "urn:lccn:77900893"
+            "urn:lccn:77900893",
+            "urn:undefined:NNSZ00100022",
+            "urn:undefined:(WaOLN)nyp0200045"
           ],
           "materialType": [
             {
@@ -4183,6 +4283,10 @@
               "label": "In Tibetan; pref. in English.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Buddhism",
+            "Buddhism -- Rituals"
           ],
           "publisherLiteral": [
             "Kunzang Topgey,"
@@ -4367,6 +4471,14 @@
               "label": "In Tibetan; pref. in English.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Bkaʼ-brgyud-pa lamas",
+            "Bkaʼ-brgyud-pa lamas -- Tibet",
+            "Bkaʼ-brgyud-pa lamas -- Tibet -- Biography",
+            "Spiritual life",
+            "Spiritual life -- Buddhism",
+            "ʼBaʼ-ra-ba Rgyal-mtshan-dpal-bzaṅ, 1310?-1391?"
           ],
           "publisherLiteral": [
             "Urgyan Dorje,"
@@ -4560,6 +4672,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Lamas",
+            "Lamas -- Tibet",
+            "Lamas -- Tibet -- Biography",
+            "Padma Sambhava, approximately 717-approximately 762"
+          ],
           "publisherLiteral": [
             "Sherab Gyaltshen Lama,"
           ],
@@ -4607,7 +4725,7 @@
               "value": "76900205"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1613956533973,
           "publicationStatement": [
             "Gangtog : Sherab Gyaltshen Lama, 1976."
           ],
@@ -4651,7 +4769,7 @@
             1
           ],
           "numAvailable": [
-            1
+            0
           ],
           "placeOfPublication": [
             "Gangtog :"
@@ -4673,6 +4791,9 @@
               "identifier": [
                 "urn:barcode:33433015080447"
               ],
+              "physicalLocation": [
+                "*OZ+ 82-2383"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4693,7 +4814,7 @@
                 "33433015080447"
               ],
               "requestable": [
-                true
+                false
               ],
               "uri": "i10000015",
               "shelfMark": [
@@ -4707,8 +4828,8 @@
               ],
               "status": [
                 {
-                  "id": "status:a",
-                  "label": "Available"
+                  "id": "status:co",
+                  "label": "Loaned"
                 }
               ],
               "holdingLocation": [
@@ -4747,6 +4868,9 @@
               "label": "In Tibetan; pref. in English.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "ʼBri-gung-pa (Sect)"
           ],
           "publisherLiteral": [
             "Tsondu Senghe,"
@@ -4940,6 +5064,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "ʼBrug-pa (Sect)",
+            "ʼBrug-pa (Sect) -- Prayer books and devotions",
+            "ʼBrug-pa (Sect) -- Prayer books and devotions -- Tibetan"
+          ],
           "publisherLiteral": [
             "Kargyud Sungrab Nyamso Khang,"
           ],
@@ -5131,6 +5260,10 @@
               "label": "\"Reproduced photographically from a rare manuscript from the collection of Brag-thog Monastery in Ladakh by Pema Choden.\"",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Rnying-ma-pa (Sect)",
+            "Rnying-ma-pa (Sect) -- Rituals"
           ],
           "publisherLiteral": [
             "S.W. Tashigangpa,"
@@ -5330,6 +5463,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Blo-bzang-chos-kyi-rgyal-mtshan, Panchen Lama I, 1570-1662"
+          ],
           "language": [
             {
               "id": "lang:tib",
@@ -5524,6 +5660,10 @@
               "label": "In Tibetan; pref. in English.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Buddhism",
+            "Buddhism -- Rituals"
           ],
           "publisherLiteral": [
             "[Can be obtained from Tibet House, New Delhi]"
@@ -5773,7 +5913,7 @@
               "value": "76240902"
             }
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1578433494505,
           "publicationStatement": [
             "Baghdād, Maṭbaʻat al-Maʻārif [1969]"
           ],
@@ -5836,6 +5976,10 @@
                 "urn:barcode:33433002000481"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-2370"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433002000481"
@@ -6080,6 +6224,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Urdu language",
+            "Urdu language -- Rhyme"
+          ],
           "language": [
             {
               "id": "lang:urd",
@@ -6124,7 +6272,7 @@
               "value": "72932110"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1578433897068,
           "publicationStatement": [
             "[Karācī, 1970]"
           ],
@@ -6263,6 +6411,10 @@
               "label": "Vol. 2 published by Ke. Bṟadērsȧ, Kōḻikkōṭȧ.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Malayalam literature",
+            "Malayalam literature -- History and criticism"
           ],
           "publisherLiteral": [
             "Vidyārtthimitṟaṃ Bukkuḍippō"
@@ -6446,6 +6598,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Primers, Persian"
+          ],
           "publisherLiteral": [
             "Intishārāt-i Āgāh,"
           ],
@@ -6486,7 +6641,7 @@
               "value": "10000072"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1578433873784,
           "publicationStatement": [
             "Tihrān : Intishārāt-i Āgāh, 2536 [1977]"
           ],
@@ -6684,7 +6839,7 @@
           "dateEndYear": [
             1975
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1616585667442,
           "publicationStatement": [
             "Miṣr, Dār al-Maʻārif, 1971-1974 i.e. 1975."
           ],
@@ -6747,60 +6902,13 @@
                 }
               ],
               "identifier": [
-                "urn:barcode:33433002000465"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433002000465"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433002000465"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10000028",
-              "shelfMark": [
-                "*OFA 82-2183"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
                 "urn:barcode:33433002000432"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-2183 v. 1"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433002000432"
@@ -6820,7 +6928,7 @@
               ],
               "uri": "i10000025",
               "shelfMark": [
-                "*OFA 82-2183"
+                "*OFA 82-2183 v. 1"
               ],
               "catalogItemType": [
                 {
@@ -6853,6 +6961,10 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-2183 v. 2"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433002000440"
                 }
@@ -6871,7 +6983,7 @@
               ],
               "uri": "i10000026",
               "shelfMark": [
-                "*OFA 82-2183"
+                "*OFA 82-2183 v. 2"
               ],
               "catalogItemType": [
                 {
@@ -6904,6 +7016,10 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-2183 v. 3"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433002000457"
                 }
@@ -6922,7 +7038,62 @@
               ],
               "uri": "i10000027",
               "shelfMark": [
-                "*OFA 82-2183"
+                "*OFA 82-2183 v. 3"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433002000465"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-2183 v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433002000465"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433002000465"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10000028",
+              "shelfMark": [
+                "*OFA 82-2183 v. 4"
               ],
               "catalogItemType": [
                 {
@@ -6967,6 +7138,13 @@
               "label": "In Urdu.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Finance, Public",
+            "Finance, Public -- Pakistan",
+            "Mujibur Rahman, Sheikh, 1922-1975",
+            "Pakistan",
+            "Pakistan -- Politics and government"
           ],
           "publisherLiteral": [
             "Maktab-i Urdū Ḍaʼjist"
@@ -7015,7 +7193,7 @@
               "value": "78932499"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1578434619014,
           "publicationStatement": [
             "Lāhaur, Maktab-i Urdū Ḍaʼjist [1969]"
           ],
@@ -7204,7 +7382,7 @@
               "value": "sa 67003708"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578434823747,
           "publicationStatement": [
             "Dillī] Rājakamala Prakāśana [1966]"
           ],
@@ -7267,6 +7445,10 @@
                 "urn:barcode:33433011745118"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKTN 82-2402"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433011745118"
@@ -7337,6 +7519,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Primers, Urdu"
+          ],
           "publisherLiteral": [
             "Maktab-i Mīrī Laʼibrīrī"
           ],
@@ -7384,7 +7569,7 @@
               "value": "76932355"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1578435530737,
           "publicationStatement": [
             "Lāhaur, Maktab-i Mīrī Laʼibrīrī [1969]"
           ],
@@ -7533,6 +7718,10 @@
               "label": "Hindi and Sanskrit; introd. in Hindi.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Sanskrit poetry",
+            "Sanskrit poetry -- History and criticism"
           ],
           "publisherLiteral": [
             "Hindī-Anusandhāna-Parishad, Dillī Viśvavidyālaya ke nimitta Vāsudeva Prakāśana dvārā prakāśita"
@@ -7781,15 +7970,25 @@
             {
               "type": "bf:Lccn",
               "value": "sa 68005298"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100042"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200084"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578435401542,
           "publicationStatement": [
             "Jālandhara, Hindī Bhavana, 1964."
           ],
           "identifier": [
             "urn:bnum:10000085",
-            "urn:lccn:sa 68005298"
+            "urn:lccn:sa 68005298",
+            "urn:undefined:NNSZ00100042",
+            "urn:undefined:(WaOLN)nyp0200084"
           ],
           "materialType": [
             {
@@ -7915,6 +8114,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Hindi drama"
+          ],
           "publisherLiteral": [
             "Iṇḍiyāna Presa (Pablikeśansa)"
           ],
@@ -7962,7 +8164,7 @@
               "value": "sa 67003777"
             }
           ],
-          "updatedAt": 1536782413978,
+          "updatedAt": 1578435198255,
           "publicationStatement": [
             "Ilāhābāda, Iṇḍiyāna Presa (Pablikeśansa) [1965]"
           ],
@@ -8028,6 +8230,10 @@
                 "urn:barcode:33433011745134"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKTN 82-2423"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433011745134"
@@ -8145,7 +8351,7 @@
               "value": "79903322"
             }
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1578434828026,
           "publicationStatement": [
             "Kalikātā, Beṅgala Pābaliśārsa [1967]"
           ],
@@ -8292,6 +8498,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Anthropometry",
+            "Anthropometry -- Iran"
+          ],
           "publisherLiteral": [
             "Intishārāt-i Ibn Sīnā,"
           ],
@@ -8335,7 +8545,7 @@
           "uniformTitle": [
             "Contributions to the anthropology of Iran. Persian"
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1578435654292,
           "publicationStatement": [
             "Tihrān : Intishārāt-i Ibn Sīnā, 1343 [1965]"
           ],
@@ -8400,6 +8610,10 @@
                 "urn:barcode:33433013106327"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OMK 82-2419"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433013106327"
@@ -8470,6 +8684,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Tamil Siddhas",
+            "Tiruvaḷḷuvar"
+          ],
           "publisherLiteral": [
             "Civāṉantā Cittaneṟip Payiṟcik Kaḻkamm; inn̄ūl kiṭaikkum iṭam: S. Caṅkaraṉār, Ceṉṉai,"
           ],
@@ -8517,7 +8735,7 @@
               "value": "74902781"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578435050065,
           "publicationStatement": [
             "Pacumpoṉ, Irāmanātapuram Māvaṭṭam, Civāṉantā Cittaneṟip Payiṟcik Kaḻkamm; inn̄ūl kiṭaikkum iṭam: S. Caṅkaraṉār, Ceṉṉai, 1974."
           ],
@@ -8671,6 +8889,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Yemen (Republic)",
+            "Yemen (Republic) -- History",
+            "Yemen (Republic) -- History -- Bibliography"
+          ],
           "publisherLiteral": [
             "al-Maʻhad al-ʻIlmī al-Faransī lil-Āthār al-Sharqīyah,"
           ],
@@ -8724,7 +8947,7 @@
           "uniformTitle": [
             "Textes et traductions d'auteurs orientaux ; t. 7."
           ],
-          "updatedAt": 1536782412148,
+          "updatedAt": 1578435295697,
           "publicationStatement": [
             "al-Qāhirah : al-Maʻhad al-ʻIlmī al-Faransī lil-Āthār al-Sharqīyah, 1974."
           ],
@@ -8911,7 +9134,7 @@
               "value": "75960362"
             }
           ],
-          "updatedAt": 1536782413067,
+          "updatedAt": 1578436505509,
           "publicationStatement": [
             "al-Jazāʼir : al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1974."
           ],
@@ -8974,6 +9197,10 @@
                 "urn:barcode:33433002000689"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-5142"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433002000689"
@@ -9049,6 +9276,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Arabic poetry",
+            "Arabic poetry -- 750-1258",
+            "Arabic poetry -- 750-1258 -- History and criticism",
+            "Ibn Rashīq al-Qayrawānī, al-Ḥasan, d. 1064?"
+          ],
           "publisherLiteral": [
             "Wakālat al-Maṭbūʻāt,"
           ],
@@ -9096,7 +9329,7 @@
               "value": "75960190"
             }
           ],
-          "updatedAt": 1536782412148,
+          "updatedAt": 1578435378711,
           "publicationStatement": [
             "al-Kuwayt : Wakālat al-Maṭbūʻāt, 1973."
           ],
@@ -9163,6 +9396,10 @@
                 "urn:barcode:33433014514545"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFS 82-5141"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433014514545"
@@ -9238,6 +9475,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Arameans",
+            "Arameans -- Egypt"
+          ],
           "publisherLiteral": [
             "s.n.,"
           ],
@@ -9285,7 +9526,7 @@
               "value": "75960565"
             }
           ],
-          "updatedAt": 1536782412148,
+          "updatedAt": 1578435472996,
           "publicationStatement": [
             "[al-Qāhirah : s.n., al-muqaddimah 1975]"
           ],
@@ -9470,7 +9711,7 @@
               "value": "75960366"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1578435472996,
           "publicationStatement": [
             "[al-Jazāʼir]: al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1967."
           ],
@@ -9533,6 +9774,10 @@
                 "urn:barcode:33433002000671"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFA 82-5137"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433002000671"

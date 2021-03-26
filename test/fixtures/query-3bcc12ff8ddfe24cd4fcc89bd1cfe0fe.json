@@ -1,5 +1,5 @@
 {
-  "took": 255,
+  "took": 286,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,82 +7,87 @@
     "failed": 0
   },
   "hits": {
-    "total": 13863087,
+    "total": 14734785,
     "max_score": null,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10000103",
+        "_id": "b10000104",
         "_score": null,
         "_source": {
           "extent": [
-            "11, 602 p.: port.;"
+            "xiv, 211 p."
           ],
           "note": [
             {
+              "noteType": "Note",
+              "label": "\"Ceṉṉai, mayilai Vivēkānantar Kallūri Śrī Rājāji Caivacittānta aṟakkaṭṭaḷaiyiṉ cārpil nikaḻttiyavai.\"",
+              "type": "bf:Note"
+            },
+            {
               "noteType": "Language",
-              "label": "In Arabic.",
+              "label": "In Tamil.",
               "type": "bf:Note"
             }
           ],
-          "publisherLiteral": [
-            "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ,"
+          "subjectLiteral_exploded": [
+            "Śaivism"
           ],
           "language": [
             {
-              "id": "lang:ara",
-              "label": "Arabic"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
-            1967
+            1972
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+            "Caivacittāntac coṟpoḻivukaḷ."
           ],
           "shelfMark": [
-            "*OFA 82-5137"
+            "*OLB 82-5150"
           ],
           "creatorLiteral": [
-            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979."
+            "Somasundaram Chettiar, Kayappakkah, 1897-"
           ],
           "createdString": [
-            "1967"
+            "1972"
           ],
           "idLccn": [
-            "75960366"
+            "73902751"
           ],
-          "seriesStatement": [
-            "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1"
+          "contributorLiteral": [
+            "Jagannatacharya, C."
           ],
           "dateStartYear": [
-            1967
+            1972
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "*OFA 82-5137"
+              "value": "*OLB 82-5150"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "10000103"
+              "value": "10000104"
             },
             {
               "type": "bf:Lccn",
-              "value": "75960366"
+              "value": "73902751"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1578437016186,
           "publicationStatement": [
-            "[al-Jazāʼir]: al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1967."
+            "[Ceṉṉai] 1972."
           ],
           "identifier": [
-            "urn:bnum:10000103",
-            "urn:lccn:75960366"
+            "urn:bnum:10000104",
+            "urn:lccn:73902751"
           ],
           "materialType": [
             {
@@ -97,7 +102,7 @@
             }
           ],
           "dateString": [
-            "1967"
+            "1972"
           ],
           "mediaType": [
             {
@@ -105,12 +110,15 @@
               "label": "unmediated"
             }
           ],
-          "titleDisplay": [
-            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          "subjectLiteral": [
+            "Śaivism."
           ],
-          "uri": "b10000103",
+          "titleDisplay": [
+            "Caivacittāntac coṟpoḻivukaḷ. Āciriyar Kayappākkam Cōmacuntaram Ceṭṭiyār. Tokuttavar C. Jakannātācāryar."
+          ],
+          "uri": "b10000104",
           "lccClassification": [
-            "PJ7842.H2937 A17 1967"
+            "BL1245.S5 S64"
           ],
           "numItems": [
             1
@@ -119,7 +127,7 @@
             1
           ],
           "placeOfPublication": [
-            "[al-Jazāʼir]:"
+            "[Ceṉṉai]"
           ],
           "issuance": [
             {
@@ -136,12 +144,16 @@
                 }
               ],
               "identifier": [
-                "urn:barcode:33433002000671"
+                "urn:barcode:33433001838949"
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLB 82-5150"
+                },
+                {
                   "type": "bf:Barcode",
-                  "value": "33433002000671"
+                  "value": "33433001838949"
                 }
               ],
               "accessMessage": [
@@ -151,14 +163,14 @@
                 }
               ],
               "idBarcode": [
-                "33433002000671"
+                "33433001838949"
               ],
               "requestable": [
                 true
               ],
-              "uri": "i10000042",
+              "uri": "i10000043",
               "shelfMark": [
-                "*OFA 82-5137"
+                "*OLB 82-5150"
               ],
               "catalogItemType": [
                 {
@@ -181,11 +193,11 @@
             }
           ],
           "dimensions": [
-            "24 cm."
+            "19 cm."
           ]
         },
         "sort": [
-          "b10000103"
+          "b10000104"
         ]
       }
     ]

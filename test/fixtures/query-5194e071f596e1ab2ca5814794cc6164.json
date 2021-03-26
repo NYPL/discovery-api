@@ -1,5 +1,5 @@
 {
-  "took": 330,
+  "took": 369,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,14 +7,14 @@
     "failed": 0
   },
   "hits": {
-    "total": 13190114,
-    "max_score": 16.02981,
+    "total": 13259923,
+    "max_score": 16.193409,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10022950",
-        "_score": 16.02981,
+        "_score": 16.193409,
         "_source": {
           "extent": [
             "224 p. ;"
@@ -28,8 +28,8 @@
           ],
           "language": [
             {
-              "label": "English",
-              "id": "lang:eng"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "createdYear": [
@@ -72,14 +72,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -87,8 +87,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -109,8 +109,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -133,36 +133,27 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433103848853"
+                    ],
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
                     ],
-                    "idBarcode": [
-                      "33433103848853"
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
                     ],
                     "status_packed": [
                       "status:a||Available "
                     ],
                     "uri": "i14749981",
-                    "catalogItemType": [
-                      {
-                        "label": "book non-circ",
-                        "id": "catalogItemType:2"
-                      }
-                    ],
-                    "holdingLocation": [
-                      {
-                        "label": "Schwarzman Building M2 - Dorot Jewish Division - Room 111",
-                        "id": "loc:maf92"
-                      }
-                    ],
-                    "status": [
-                      {
-                        "label": "Available ",
-                        "id": "status:a"
-                      }
+                    "shelfMark": [
+                      "*PGZ 81-1452"
                     ],
                     "identifierV2": [
                       {
@@ -174,22 +165,31 @@
                         "value": "33433103848853"
                       }
                     ],
-                    "shelfMark": [
-                      "*PGZ 81-1452"
-                    ],
                     "holdingLocation_packed": [
                       "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division - Room 111"
                     ],
-                    "identifier": [
-                      "urn:barcode:33433103848853"
+                    "idBarcode": [
+                      "33433103848853"
                     ],
                     "requestable": [
                       false
                     ],
-                    "accessMessage": [
+                    "catalogItemType": [
                       {
-                        "label": "Use in library",
-                        "id": "accessMessage:1"
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available "
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:maf92",
+                        "label": "Schwarzman Building M2 - Dorot Jewish Division - Room 111"
                       }
                     ]
                   },
