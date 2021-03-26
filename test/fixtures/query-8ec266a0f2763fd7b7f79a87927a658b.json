@@ -1,5 +1,5 @@
 {
-  "took": 344,
+  "took": 471,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,14 +7,14 @@
     "failed": 0
   },
   "hits": {
-    "total": 13190114,
-    "max_score": 15.527014,
+    "total": 13259923,
+    "max_score": 15.42129,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b18932917",
-        "_score": 15.527014,
+        "_score": 15.42129,
         "_source": {
           "extent": [
             "52 linear ft., 127 boxes"
@@ -176,14 +176,19 @@
             {
               "type": "nypl:Bnumber",
               "value": "18932917"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)715462601"
             }
           ],
           "dateEndYear": [
             1970
           ],
-          "updatedAt": 1603511000698,
+          "updatedAt": 1616239872089,
           "identifier": [
-            "urn:bnum:18932917"
+            "urn:bnum:18932917",
+            "urn:undefined:(OCoLC)715462601"
           ],
           "materialType": [
             {
@@ -280,7 +285,7 @@
             128
           ],
           "numAvailable": [
-            110
+            125
           ],
           "issuance": [
             {
@@ -290,8 +295,8 @@
           ],
           "supplementaryContent": [
             {
-              "label": "FindingAid",
-              "url": "http://archives.nypl.org/uploads/collection/pdf_finding_aid/PSF.pdf"
+              "label": "Finding aid",
+              "url": "http://archives.nypl.org/scm/20936"
             }
           ]
         },
@@ -304,28 +309,19 @@
                 {
                   "_nested": {
                     "field": "items",
-                    "offset": 127
+                    "offset": 0
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i30941088",
+                    "uri": "i26387850",
                     "status": [
                       {
                         "id": "status:a",
-                        "label": "Available "
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available "
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1116",
-                        "label": "Schomburg Center for Research in Black Culture, Manuscripts, Archives and Rare Books Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1116||Schomburg Center for Research in Black Culture, Manuscripts, Archives and Rare Books Division"
+                      "status:a||Available"
                     ],
                     "catalogItemType": [
                       {
@@ -338,31 +334,31 @@
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:rccd2",
+                        "id": "loc:rccd8",
                         "label": "Offsite"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:rccd2||Offsite"
+                      "loc:rccd8||Offsite"
                     ],
                     "shelfMark": [
-                      "Sc MG 162 Box 127"
+                      "Sc MG 162 Box 1"
                     ],
                     "identifierV2": [
                       {
-                        "value": "Sc MG 162 Box 127",
+                        "value": "Sc MG 162 Box 1",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433076151525"
+                        "value": "33433076133762"
                       }
                     ],
                     "identifier": [
-                      "urn:barcode:33433076151525"
+                      "urn:barcode:33433076133762"
                     ],
                     "idBarcode": [
-                      "33433076151525"
+                      "33433076133762"
                     ],
                     "requestable": [
                       false
@@ -375,100 +371,21 @@
                     ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
-                    ]
+                    ],
+                    "shelfMark_sort": "aSc MG 162 box 000001"
                   },
                   "sort": [
-                    null
+                    "aSc MG 162 box 000001"
                   ]
                 },
                 {
                   "_nested": {
                     "field": "items",
-                    "offset": 126
+                    "offset": 1
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i34346389",
-                    "status": [
-                      {
-                        "id": "status:co",
-                        "label": "Loaned"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:co||Loaned"
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1116",
-                        "label": "Schomburg Center for Research in Black Culture, Manuscripts, Archives and Rare Books Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1116||Schomburg Center for Research in Black Culture, Manuscripts, Archives and Rare Books Division"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:21",
-                        "label": "archival material"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:21||archival material"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:scdd2",
-                        "label": "Schomburg Center - Manuscripts & Archives"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:scdd2||Schomburg Center - Manuscripts & Archives"
-                    ],
-                    "shelfMark": [
-                      "Sc MG 162 Box 127"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "Sc MG 162 Box 127",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433111930941"
-                      }
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433111930941"
-                    ],
-                    "idBarcode": [
-                      "33433111930941"
-                    ],
-                    "requestable": [
-                      false
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ]
-                  },
-                  "sort": [
-                    null
-                  ]
-                },
-                {
-                  "_nested": {
-                    "field": "items",
-                    "offset": 125
-                  },
-                  "_score": null,
-                  "_source": {
-                    "uri": "i30941087",
+                    "uri": "i30940962",
                     "status": [
                       {
                         "id": "status:a",
@@ -478,15 +395,6 @@
                     "status_packed": [
                       "status:a||Available "
                     ],
-                    "owner": [
-                      {
-                        "id": "orgs:1116",
-                        "label": "Schomburg Center for Research in Black Culture, Manuscripts, Archives and Rare Books Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1116||Schomburg Center for Research in Black Culture, Manuscripts, Archives and Rare Books Division"
-                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:21",
@@ -498,31 +406,31 @@
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:rccd2",
+                        "id": "loc:rccd8",
                         "label": "Offsite"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:rccd2||Offsite"
+                      "loc:rccd8||Offsite"
                     ],
                     "shelfMark": [
-                      "Sc MG 162 Box 126"
+                      "Sc MG 162 Box 2"
                     ],
                     "identifierV2": [
                       {
-                        "value": "Sc MG 162 Box 126",
+                        "value": "Sc MG 162 Box 2",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433076151517"
+                        "value": "33433076133770"
                       }
                     ],
                     "identifier": [
-                      "urn:barcode:33433076151517"
+                      "urn:barcode:33433076133770"
                     ],
                     "idBarcode": [
-                      "33433076151517"
+                      "33433076133770"
                     ],
                     "requestable": [
                       false
@@ -535,10 +443,83 @@
                     ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
-                    ]
+                    ],
+                    "shelfMark_sort": "aSc MG 162 box 000002"
                   },
                   "sort": [
-                    null
+                    "aSc MG 162 box 000002"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i30940964",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available "
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available "
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:21",
+                        "label": "archival material"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:21||archival material"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rccd8",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rccd8||Offsite"
+                    ],
+                    "shelfMark": [
+                      "Sc MG 162 Box 3"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "Sc MG 162 Box 3",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433076133788"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433076133788"
+                    ],
+                    "idBarcode": [
+                      "33433076133788"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "aSc MG 162 box 000003"
+                  },
+                  "sort": [
+                    "aSc MG 162 box 000003"
                   ]
                 }
               ]
