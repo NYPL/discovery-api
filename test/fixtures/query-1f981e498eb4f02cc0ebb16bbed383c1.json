@@ -1,5 +1,5 @@
 {
-  "took": 356,
+  "took": 365,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,14 +7,14 @@
     "failed": 0
   },
   "hits": {
-    "total": 13190114,
-    "max_score": 16.029812,
+    "total": 13259581,
+    "max_score": 15.68059,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10022734",
-        "_score": 16.029812,
+        "_score": 15.68059,
         "_source": {
           "extent": [
             "xiv, 381 p., [16] leaves of plates : ill. ;"
@@ -40,18 +40,18 @@
           ],
           "language": [
             {
-              "label": "English",
-              "id": "lang:eng"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "createdYear": [
             1981
           ],
-          "title": [
-            "When Harlem was in vogue"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "When Harlem was in vogue"
           ],
           "shelfMark": [
             "IEC 81-1139"
@@ -90,7 +90,7 @@
               "value": "(WaOLN)nyp0022812"
             }
           ],
-          "updatedAt": 1583534283651,
+          "updatedAt": 1616627103721,
           "publicationStatement": [
             "New York : Knopf : distributed by Random House, 1981."
           ],
@@ -105,14 +105,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -120,8 +120,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -134,11 +134,11 @@
             "When Harlem was in vogue / David Levering Lewis."
           ],
           "uri": "b10022734",
-          "numItems": [
-            3
-          ],
           "lccClassification": [
             "NX511.N4 L48 1981"
+          ],
+          "numItems": [
+            3
           ],
           "numAvailable": [
             2
@@ -148,8 +148,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "dimensions": [
@@ -169,77 +169,78 @@
                   },
                   "_score": null,
                   "_source": {
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "idBarcode": [
-                      "33433034124614"
+                    "uri": "i10010904",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
                     ],
-                    "uri": "i10010904",
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
                     "catalogItemType": [
                       {
-                        "label": "book, limited circ, MaRLI",
-                        "id": "catalogItemType:55"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "holdingLocation": [
                       {
-                        "label": "Schomburg Center - Research & Reference",
-                        "id": "loc:scff2"
+                        "id": "loc:scff2",
+                        "label": "Schomburg Center - Research & Reference"
                       }
                     ],
-                    "status": [
-                      {
-                        "label": "Available",
-                        "id": "status:a"
-                      }
+                    "holdingLocation_packed": [
+                      "loc:scff2||Schomburg Center - Research & Reference"
+                    ],
+                    "shelfMark": [
+                      "Sc E 96-780"
                     ],
                     "identifierV2": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "Sc E 96-780"
+                        "value": "Sc E 96-780",
+                        "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
                         "value": "33433034124614"
                       }
                     ],
-                    "shelfMark": [
-                      "Sc E 96-780"
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:scff2||Schomburg Center - Research & Reference"
-                    ],
                     "identifier": [
                       "urn:barcode:33433034124614"
+                    ],
+                    "idBarcode": [
+                      "33433034124614"
                     ],
                     "requestable": [
                       false
                     ],
-                    "owner_packed": [
-                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
-                    ],
                     "accessMessage": [
                       {
-                        "label": "Use in library",
-                        "id": "accessMessage:1"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
-                    "owner": [
-                      {
-                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division",
-                        "id": "orgs:1114"
-                      }
-                    ]
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aSc E 96-000780"
                   },
                   "sort": [
-                    null
+                    "aSc E 96-000780"
                   ]
                 },
                 {
@@ -249,77 +250,78 @@
                   },
                   "_score": null,
                   "_source": {
-                    "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
-                    ],
-                    "idBarcode": [
-                      "33433015873411"
+                    "uri": "i10010903",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:-||No restrictions"
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
                     ],
-                    "uri": "i10010903",
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
                     "catalogItemType": [
                       {
-                        "label": "book non-circ",
-                        "id": "catalogItemType:2"
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
                       }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
                     ],
                     "holdingLocation": [
                       {
-                        "label": "Schomburg Center - Research & Reference - Open Shelf",
-                        "id": "loc:scff1"
+                        "id": "loc:scff1",
+                        "label": "Schomburg Center - Research & Reference - Open Shelf"
                       }
                     ],
-                    "status": [
-                      {
-                        "label": "Available",
-                        "id": "status:a"
-                      }
+                    "holdingLocation_packed": [
+                      "loc:scff1||Schomburg Center - Research & Reference - Open Shelf"
+                    ],
+                    "shelfMark": [
+                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
                     ],
                     "identifierV2": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+                        "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)",
+                        "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
                         "value": "33433015873411"
                       }
                     ],
-                    "shelfMark": [
-                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:scff1||Schomburg Center - Research & Reference - Open Shelf"
-                    ],
                     "identifier": [
                       "urn:barcode:33433015873411"
+                    ],
+                    "idBarcode": [
+                      "33433015873411"
                     ],
                     "requestable": [
                       false
                     ],
-                    "owner_packed": [
-                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
-                    ],
                     "accessMessage": [
                       {
-                        "label": "No restrictions",
-                        "id": "accessMessage:-"
+                        "id": "accessMessage:-",
+                        "label": "No restrictions"
                       }
                     ],
-                    "owner": [
-                      {
-                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division",
-                        "id": "orgs:1114"
-                      }
-                    ]
+                    "accessMessage_packed": [
+                      "accessMessage:-||No restrictions"
+                    ],
+                    "shelfMark_sort": "aSc *700-L (Lewis, D. When Harlem was in vogue)"
                   },
                   "sort": [
-                    null
+                    "aSc *700-L (Lewis, D. When Harlem was in vogue)"
                   ]
                 },
                 {
@@ -329,77 +331,78 @@
                   },
                   "_score": null,
                   "_source": {
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "idBarcode": [
-                      "33433035187214"
+                    "uri": "i10010902",
+                    "status": [
+                      {
+                        "id": "status:t",
+                        "label": "In transit"
+                      }
                     ],
                     "status_packed": [
                       "status:t||In transit"
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "owner": [
+                      {
+                        "id": "orgs:1105",
+                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      }
                     ],
-                    "uri": "i10010902",
+                    "owner_packed": [
+                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                    ],
                     "catalogItemType": [
                       {
-                        "label": "book, limited circ, MaRLI",
-                        "id": "catalogItemType:55"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "holdingLocation": [
                       {
-                        "label": "Schwarzman Building - Milstein Division Room 121",
-                        "id": "loc:mag82"
+                        "id": "loc:mag82",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
                       }
                     ],
-                    "status": [
-                      {
-                        "label": "In transit",
-                        "id": "status:t"
-                      }
+                    "holdingLocation_packed": [
+                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                    ],
+                    "shelfMark": [
+                      "IEC 81-1139"
                     ],
                     "identifierV2": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "IEC 81-1139"
+                        "value": "IEC 81-1139",
+                        "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
                         "value": "33433035187214"
                       }
                     ],
-                    "shelfMark": [
-                      "IEC 81-1139"
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
-                    ],
                     "identifier": [
                       "urn:barcode:33433035187214"
+                    ],
+                    "idBarcode": [
+                      "33433035187214"
                     ],
                     "requestable": [
                       false
                     ],
-                    "owner_packed": [
-                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                    ],
                     "accessMessage": [
                       {
-                        "label": "Use in library",
-                        "id": "accessMessage:1"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
-                    "owner": [
-                      {
-                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy",
-                        "id": "orgs:1105"
-                      }
-                    ]
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aIEC 81-001139"
                   },
                   "sort": [
-                    null
+                    "aIEC 81-001139"
                   ]
                 }
               ]

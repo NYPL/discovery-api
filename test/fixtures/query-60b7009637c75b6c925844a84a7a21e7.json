@@ -1,5 +1,5 @@
 {
-  "took": 322,
+  "took": 407,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,14 +7,14 @@
     "failed": 0
   },
   "hits": {
-    "total": 13190114,
-    "max_score": 16.02981,
+    "total": 13259581,
+    "max_score": 15.345953,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011374",
-        "_score": 16.02981,
+        "_score": 15.345953,
         "_source": {
           "extent": [
             "2 v. illus."
@@ -41,8 +41,8 @@
           ],
           "language": [
             {
-              "label": "English",
-              "id": "lang:eng"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "dateEndString": [
@@ -97,7 +97,7 @@
           "dateEndYear": [
             1828
           ],
-          "updatedAt": 1559446884847,
+          "updatedAt": 1616538241403,
           "publicationStatement": [
             "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
           ],
@@ -109,14 +109,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -124,19 +124,19 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
             "The table book, by William Hone."
           ],
           "uri": "b10011374",
-          "numItems": [
-            5
-          ],
           "lccClassification": [
             "AC4 .H65"
+          ],
+          "numItems": [
+            5
           ],
           "numAvailable": [
             4
@@ -146,8 +146,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "dimensions": [
@@ -170,25 +170,26 @@
                     "uri": "i10011374-e",
                     "electronicLocator": [
                       {
-                        "label": "Full text available via HathiTrust--v. 1",
-                        "url": "http://hdl.handle.net/2027/nyp.33433057532081"
+                        "url": "http://hdl.handle.net/2027/nyp.33433057532081",
+                        "label": "Full text available via HathiTrust--v. 1"
                       },
                       {
-                        "label": "Full text available via HathiTrust--v. 2",
-                        "url": "http://hdl.handle.net/2027/nyp.33433057532339"
+                        "url": "http://hdl.handle.net/2027/nyp.33433057532339",
+                        "label": "Full text available via HathiTrust--v. 2"
                       },
                       {
-                        "label": "Full text available via HathiTrust--v. 1",
-                        "url": "http://hdl.handle.net/2027/nyp.33433067332548"
+                        "url": "http://hdl.handle.net/2027/nyp.33433067332548",
+                        "label": "Full text available via HathiTrust--v. 1"
                       },
                       {
-                        "label": "Full text available via HathiTrust--v. 2",
-                        "url": "http://hdl.handle.net/2027/nyp.33433067332555"
+                        "url": "http://hdl.handle.net/2027/nyp.33433067332555",
+                        "label": "Full text available via HathiTrust--v. 2"
                       }
-                    ]
+                    ],
+                    "shelfMark_sort": "bi10011374-e"
                   },
                   "sort": [
-                    null
+                    "bi10011374-e"
                   ]
                 },
                 {
@@ -198,68 +199,69 @@
                   },
                   "_score": null,
                   "_source": {
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
-                    ],
-                    "idBarcode": [
-                      "33433057532339"
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "uri": "i13785802",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available "
+                      }
                     ],
                     "status_packed": [
                       "status:a||Available "
                     ],
-                    "uri": "i13785802",
                     "catalogItemType": [
                       {
-                        "label": "google project, book",
-                        "id": "catalogItemType:32"
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
                       }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
                     ],
                     "holdingLocation": [
                       {
-                        "label": "Schwarzman Building M2 - General Research Room 315",
-                        "id": "loc:mal92"
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
                       }
                     ],
-                    "status": [
-                      {
-                        "label": "Available ",
-                        "id": "status:a"
-                      }
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "JFE 86-498 v. 2"
                     ],
                     "identifierV2": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "JFE 86-498 v. 2"
+                        "value": "JFE 86-498 v. 2",
+                        "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
                         "value": "33433057532339"
                       }
                     ],
-                    "shelfMark": [
-                      "JFE 86-498 v. 2"
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
-                    ],
                     "identifier": [
                       "urn:barcode:33433057532339"
+                    ],
+                    "idBarcode": [
+                      "33433057532339"
                     ],
                     "requestable": [
                       false
                     ],
                     "accessMessage": [
                       {
-                        "label": "Use in library",
-                        "id": "accessMessage:1"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
-                    ]
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aJFE 86-498 v. 000002"
                   },
                   "sort": [
-                    null
+                    "aJFE 86-498 v. 000002"
                   ]
                 },
                 {
@@ -269,68 +271,69 @@
                   },
                   "_score": null,
                   "_source": {
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
-                    ],
-                    "idBarcode": [
-                      "33433057532081"
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "uri": "i10005487",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
-                    "uri": "i10005487",
                     "catalogItemType": [
                       {
-                        "label": "google project, book",
-                        "id": "catalogItemType:32"
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
                       }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
                     ],
                     "holdingLocation": [
                       {
-                        "label": "Schwarzman Building M2 - General Research Room 315",
-                        "id": "loc:mal92"
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
                       }
                     ],
-                    "status": [
-                      {
-                        "label": "Available",
-                        "id": "status:a"
-                      }
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "JFE 86-498 v. 1"
                     ],
                     "identifierV2": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "JFE 86-498 v. 1"
+                        "value": "JFE 86-498 v. 1",
+                        "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
                         "value": "33433057532081"
                       }
                     ],
-                    "shelfMark": [
-                      "JFE 86-498 v. 1"
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
-                    ],
                     "identifier": [
                       "urn:barcode:33433057532081"
+                    ],
+                    "idBarcode": [
+                      "33433057532081"
                     ],
                     "requestable": [
                       false
                     ],
                     "accessMessage": [
                       {
-                        "label": "Use in library",
-                        "id": "accessMessage:1"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
-                    ]
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aJFE 86-498 v. 000001"
                   },
                   "sort": [
-                    null
+                    "aJFE 86-498 v. 000001"
                   ]
                 }
               ]

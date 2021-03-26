@@ -1,5 +1,5 @@
 {
-  "took": 372,
+  "took": 393,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,14 +7,14 @@
     "failed": 0
   },
   "hits": {
-    "total": 13190114,
-    "max_score": 16.127594,
+    "total": 13259581,
+    "max_score": 16.28049,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001936",
-        "_score": 16.127594,
+        "_score": 16.28049,
         "_source": {
           "extent": [
             "400 p. ;"
@@ -56,8 +56,8 @@
           ],
           "language": [
             {
-              "label": "Armenian",
-              "id": "lang:arm"
+              "id": "lang:arm",
+              "label": "Armenian"
             }
           ],
           "createdYear": [
@@ -100,14 +100,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -115,8 +115,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -137,8 +137,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "dimensions": [
@@ -158,13 +158,13 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10001936-e",
                     "electronicLocator": [
                       {
                         "label": "Full text available via HathiTrust",
                         "url": "http://hdl.handle.net/2027/nyp.33433001892276"
                       }
-                    ]
+                    ],
+                    "uri": "i10001936-e"
                   },
                   "sort": [
                     null
@@ -177,36 +177,33 @@
                   },
                   "_score": null,
                   "_source": {
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
-                    ],
-                    "idBarcode": [
-                      "33433001892276"
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
                     ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433001892276"
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
                     "uri": "i10001320",
-                    "catalogItemType": [
-                      {
-                        "label": "google project, book",
-                        "id": "catalogItemType:32"
-                      }
-                    ],
-                    "holdingLocation": [
-                      {
-                        "label": "Offsite",
-                        "id": "loc:rc2ma"
-                      }
-                    ],
-                    "status": [
-                      {
-                        "label": "Available",
-                        "id": "status:a"
-                      }
+                    "shelfMark": [
+                      "*ONR 84-743"
                     ],
                     "identifierV2": [
                       {
@@ -218,31 +215,34 @@
                         "value": "33433001892276"
                       }
                     ],
-                    "shelfMark": [
-                      "*ONR 84-743"
-                    ],
                     "holdingLocation_packed": [
                       "loc:rc2ma||Offsite"
                     ],
-                    "identifier": [
-                      "urn:barcode:33433001892276"
-                    ],
-                    "requestable": [
-                      true
+                    "idBarcode": [
+                      "33433001892276"
                     ],
                     "owner_packed": [
                       "orgs:1000||Stephen A. Schwarzman Building"
                     ],
-                    "accessMessage": [
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
                       {
-                        "label": "Request in advance",
-                        "id": "accessMessage:2"
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
                       }
                     ],
-                    "owner": [
+                    "status": [
                       {
-                        "label": "Stephen A. Schwarzman Building",
-                        "id": "orgs:1000"
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
                       }
                     ]
                   },
