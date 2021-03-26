@@ -1,5 +1,5 @@
 {
-  "took": 365,
+  "took": 379,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,14 +7,14 @@
     "failed": 0
   },
   "hits": {
-    "total": 13259581,
-    "max_score": 15.68059,
+    "total": 13259923,
+    "max_score": 15.682586,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10022734",
-        "_score": 15.68059,
+        "_score": 15.682586,
         "_source": {
           "extent": [
             "xiv, 381 p., [16] leaves of plates : ill. ;"
@@ -165,28 +165,28 @@
                 {
                   "_nested": {
                     "field": "items",
-                    "offset": 2
+                    "offset": 0
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10010904",
+                    "uri": "i10010902",
                     "status": [
                       {
-                        "id": "status:a",
-                        "label": "Available"
+                        "id": "status:t",
+                        "label": "In transit"
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available"
+                      "status:t||In transit"
                     ],
                     "owner": [
                       {
-                        "id": "orgs:1114",
-                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                        "id": "orgs:1105",
+                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
                       }
                     ],
                     "owner_packed": [
-                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
                     ],
                     "catalogItemType": [
                       {
@@ -199,31 +199,31 @@
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:scff2",
-                        "label": "Schomburg Center - Research & Reference"
+                        "id": "loc:mag82",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:scff2||Schomburg Center - Research & Reference"
+                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
                     ],
                     "shelfMark": [
-                      "Sc E 96-780"
+                      "IEC 81-1139"
                     ],
                     "identifierV2": [
                       {
-                        "value": "Sc E 96-780",
+                        "value": "IEC 81-1139",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433034124614"
+                        "value": "33433035187214"
                       }
                     ],
                     "identifier": [
-                      "urn:barcode:33433034124614"
+                      "urn:barcode:33433035187214"
                     ],
                     "idBarcode": [
-                      "33433034124614"
+                      "33433035187214"
                     ],
                     "requestable": [
                       false
@@ -237,10 +237,10 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
-                    "shelfMark_sort": "aSc E 96-000780"
+                    "shelfMark_sort": "aIEC 81-001139"
                   },
                   "sort": [
-                    "aSc E 96-000780"
+                    "aIEC 81-001139"
                   ]
                 },
                 {
@@ -327,28 +327,28 @@
                 {
                   "_nested": {
                     "field": "items",
-                    "offset": 0
+                    "offset": 2
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10010902",
+                    "uri": "i10010904",
                     "status": [
                       {
-                        "id": "status:t",
-                        "label": "In transit"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:t||In transit"
+                      "status:a||Available"
                     ],
                     "owner": [
                       {
-                        "id": "orgs:1105",
-                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
                       }
                     ],
                     "owner_packed": [
-                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
                     ],
                     "catalogItemType": [
                       {
@@ -361,31 +361,31 @@
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:mag82",
-                        "label": "Schwarzman Building - Milstein Division Room 121"
+                        "id": "loc:scff2",
+                        "label": "Schomburg Center - Research & Reference"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                      "loc:scff2||Schomburg Center - Research & Reference"
                     ],
                     "shelfMark": [
-                      "IEC 81-1139"
+                      "Sc E 96-780"
                     ],
                     "identifierV2": [
                       {
-                        "value": "IEC 81-1139",
+                        "value": "Sc E 96-780",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433035187214"
+                        "value": "33433034124614"
                       }
                     ],
                     "identifier": [
-                      "urn:barcode:33433035187214"
+                      "urn:barcode:33433034124614"
                     ],
                     "idBarcode": [
-                      "33433035187214"
+                      "33433034124614"
                     ],
                     "requestable": [
                       false
@@ -399,10 +399,10 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
-                    "shelfMark_sort": "aIEC 81-001139"
+                    "shelfMark_sort": "aSc E 96-000780"
                   },
                   "sort": [
-                    "aIEC 81-001139"
+                    "aSc E 96-000780"
                   ]
                 }
               ]
