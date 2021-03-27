@@ -1,5 +1,5 @@
 {
-  "took": 307,
+  "took": 422,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 13863084,
+    "total": 14734785,
     "max_score": null,
     "hits": [
       {
@@ -30,6 +30,11 @@
               "label": "Includes bibliographies and index.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Dante Alighieri, 1265-1321",
+            "Dante Alighieri, 1265-1321 -- Criticism and interpretation",
+            "Gmelin, Hermann, 1900-1958"
           ],
           "publisherLiteral": [
             "Stauffenburg,"
@@ -216,6 +221,10 @@
         "_source": {
           "extent": [
             "199 p. : col. ill. maps ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Hebrides (Scotland)",
+            "Hebrides (Scotland) -- Pictorial works"
           ],
           "publisherLiteral": [
             "Constable,"
@@ -408,6 +417,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Tiruvaḷḷuvar"
+          ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
           ],
@@ -458,7 +470,7 @@
               "value": "74915265"
             }
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1595823889267,
           "publicationStatement": [
             "Tirunelvēli, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1965."
           ],
@@ -603,6 +615,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Concertos (Violin)",
+            "Concertos (Violin) -- Solo with piano"
+          ],
           "publisherLiteral": [
             "Muzyka,"
           ],
@@ -641,17 +657,32 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000005"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "11049. Muzyka"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100551"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200004"
             }
           ],
           "uniformTitle": [
-            "Concertos, violin, orchestra, no. 2, op. 22, D minor; arr."
+            "Concertos, violin, orchestra, no. 2, op. 22, D minor; arranged"
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1596480610085,
           "publicationStatement": [
             "Moskva : Muzyka, 1980."
           ],
           "identifier": [
-            "urn:bnum:10000005"
+            "urn:bnum:10000005",
+            "urn:undefined:11049. Muzyka",
+            "urn:undefined:NNSZ00100551",
+            "urn:undefined:(WaOLN)nyp0200004"
           ],
           "materialType": [
             {
@@ -685,7 +716,7 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Moskva :"
@@ -712,6 +743,10 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-336"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433032711909"
                 }
@@ -726,7 +761,7 @@
                 "33433032711909"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10942022",
               "shelfMark": [
@@ -740,8 +775,8 @@
               ],
               "status": [
                 {
-                  "id": "status:t",
-                  "label": "In transit"
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -785,6 +820,10 @@
               "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Islam",
+            "Islam -- 20th century"
           ],
           "publisherLiteral": [
             "Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr"
@@ -836,7 +875,7 @@
               "value": "75962707"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1595820297187,
           "publicationStatement": [
             "al-Qāhirah, Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr [1968]"
           ],
@@ -936,7 +975,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -976,6 +1015,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Guitar",
+            "Guitar -- Studies and exercises",
+            "Guitar music"
+          ],
           "publisherLiteral": [
             "Editio Musica,"
           ],
@@ -1014,17 +1058,32 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000007"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Z.8917. Editio Musica"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100552"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200006"
             }
           ],
           "uniformTitle": [
             "Studies, guitar"
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1569627322562,
           "publicationStatement": [
             "Budapest : Editio Musica, c1981."
           ],
           "identifier": [
-            "urn:bnum:10000007"
+            "urn:bnum:10000007",
+            "urn:undefined:Z.8917. Editio Musica",
+            "urn:undefined:NNSZ00100552",
+            "urn:undefined:(WaOLN)nyp0200006"
           ],
           "materialType": [
             {
@@ -1339,6 +1398,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Piano music"
+          ],
           "publisherLiteral": [
             "Edition Peters ; C.F. Peters,"
           ],
@@ -1517,6 +1579,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Cēkkiḻār, active 12th century"
+          ],
           "publisherLiteral": [
             "Aṇṇāmalaip Palkalaikkaḻakam,"
           ],
@@ -1694,6 +1759,11 @@
         "_source": {
           "extent": [
             "46 p. of music ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Easter music (Organ)",
+            "Passion music",
+            "Suites (Organ)"
           ],
           "publisherLiteral": [
             "Boeijenga,"
@@ -1882,6 +1952,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Ḥuṭayʼah, Jarwal ibn Aws, d. 650?"
+          ],
           "publisherLiteral": [
             "Dār al-Thaqāfah,"
           ],
@@ -1922,7 +1995,7 @@
               "value": "10000012"
             }
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1578411846354,
           "publicationStatement": [
             "Bayrūt : Dār al-Thaqāfah, 1970."
           ],
@@ -1984,6 +2057,10 @@
                 "urn:barcode:33433014514719"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OFS 84-1997"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433014514719"
@@ -2054,6 +2131,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Popular music",
+            "Popular music -- Germany (East)"
+          ],
           "publisherLiteral": [
             "Harth Musik Verlag,"
           ],
@@ -2089,14 +2170,24 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000013"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100555"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200012"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1565852438647,
           "publicationStatement": [
             "Leipzig : Harth Musik Verlag, c1980."
           ],
           "identifier": [
-            "urn:bnum:10000013"
+            "urn:bnum:10000013",
+            "urn:undefined:NNSZ00100555",
+            "urn:undefined:(WaOLN)nyp0200012"
           ],
           "materialType": [
             {
@@ -2186,7 +2277,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2225,6 +2316,11 @@
               "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Islam",
+            "Islam -- 20th century",
+            "Panislamism"
           ],
           "publisherLiteral": [
             "Muʼassasat al-Aʻlamī lil-Maṭbūʻāt,"
@@ -2400,6 +2496,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kuṟuntokai"
           ],
           "publisherLiteral": [
             "Manṅkaḷa Nūlakam,"
@@ -2593,6 +2692,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Corbière, Tristan, 1845-1875",
+            "Corbière, Tristan, 1845-1875 -- Musical settings",
+            "Songs (Medium voice) with piano"
+          ],
           "publisherLiteral": [
             "Donemus,"
           ],
@@ -2634,14 +2738,24 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000017"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100557"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200016"
             }
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1596645720537,
           "publicationStatement": [
             "Amsterdam : Donemus, c1981."
           ],
           "identifier": [
-            "urn:bnum:10000017"
+            "urn:bnum:10000017",
+            "urn:undefined:NNSZ00100557",
+            "urn:undefined:(WaOLN)nyp0200016"
           ],
           "materialType": [
             {
@@ -2700,6 +2814,10 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-395"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433032735007"
                 }
@@ -2729,7 +2847,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2768,6 +2886,10 @@
               "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Women",
+            "Women -- Lebanon"
           ],
           "publisherLiteral": [
             "Dār al-Ṭalīʻah,"
@@ -2816,7 +2938,7 @@
               "value": "78970449"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578411984817,
           "publicationStatement": [
             "Bayrūt : Dār al-Ṭalīʻah, 1975."
           ],
@@ -2955,6 +3077,9 @@
               "label": "Publisher's no.: M 18.487.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Waltzes (Piano)"
           ],
           "publisherLiteral": [
             "Möseler,"
@@ -3129,6 +3254,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Tolkāppiyar"
           ],
           "publisherLiteral": [
             "Aṇṇāmalaip Palkalaik Kaḻakam,"
@@ -3328,6 +3456,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Orchestral music",
+            "Orchestral music -- Scores"
+          ],
           "publisherLiteral": [
             "Verlag Neue Musik,"
           ],
@@ -3500,6 +3632,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Tamil language",
+            "Tamil language -- Grammar"
+          ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
           ],
@@ -3554,7 +3690,7 @@
               "value": "73913714"
             }
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1540833300762,
           "publicationStatement": [
             "Ceṉṉai, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1970."
           ],
@@ -3597,7 +3733,7 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Ceṉṉai,"
@@ -3642,7 +3778,7 @@
                 "33433061301564"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i13783787",
               "shelfMark": [
@@ -3656,8 +3792,8 @@
               ],
               "status": [
                 {
-                  "id": "status:t",
-                  "label": "In transit"
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3706,6 +3842,10 @@
               "label": "Publisher's no.: KC913.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Band music",
+            "Band music -- Scores"
           ],
           "publisherLiteral": [
             "Shawnee Press,"
@@ -3879,6 +4019,13 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Bahrain",
+            "Bahrain -- Economic conditions",
+            "Bahrain -- History",
+            "Bahrain -- History -- 20th century",
+            "Bahrain -- Social conditions"
+          ],
           "publisherLiteral": [
             "Dār Ibn Khaldūn,"
           ],
@@ -3926,7 +4073,7 @@
               "value": "79971032"
             }
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1578433338597,
           "publicationStatement": [
             "[Bayrūt] : Dār Ibn Khaldūn, 1976."
           ],
@@ -4055,6 +4202,9 @@
         "_source": {
           "extent": [
             "15 p. of music ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Sonatas (Piano)"
           ],
           "publisherLiteral": [
             "Möseler,"
@@ -4237,6 +4387,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Women",
+            "Women -- Syria"
+          ],
           "publisherLiteral": [
             "Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī,"
           ],
@@ -4284,7 +4438,7 @@
               "value": "76960987"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1578433234482,
           "publicationStatement": [
             "Dimashq : Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī, 1975."
           ],
@@ -4411,6 +4565,9 @@
         "_source": {
           "extent": [
             "15 p. of music ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Sonatas (Violin)"
           ],
           "publisherLiteral": [
             "Möseler Verlag,"
@@ -4597,6 +4754,9 @@
               "label": "In Hindi.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Sūryamalla Miśraṇa, 1815-1868"
           ],
           "publisherLiteral": [
             "Rājasthāna Sāhitya Akādamī (Saṅgama),"
@@ -4789,6 +4949,9 @@
               "label": "Publisher's no.: 29589.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Organ music"
           ],
           "publisherLiteral": [
             "W. Hansen ; Distribution, Magnamusic-Baton,"
@@ -4983,6 +5146,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Sanskrit language",
+            "Sanskrit language -- Suffixes and prefixes"
+          ],
           "publisherLiteral": [
             "Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; prāptisthānam, Rāmalāla Kapūra Ṭrasṭa,"
           ],
@@ -5037,7 +5204,7 @@
           "uniformTitle": [
             "Uṇādisūtra."
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1578432536487,
           "publicationStatement": [
             "Karanāla : Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; Bahālagaḍha, Harayāṇa : prāptisthānam, Rāmalāla Kapūra Ṭrasṭa, 1974."
           ],
@@ -5164,6 +5331,9 @@
         "_source": {
           "extent": [
             "21 p. of music ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Piano music"
           ],
           "publisherLiteral": [
             "W. Müller,"
@@ -5344,6 +5514,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Jahrom (Iran : Province)",
+            "Jahrom (Iran : Province) -- Biography",
+            "Khafr (Iran)",
+            "Khafr (Iran) -- Biography"
+          ],
           "publisherLiteral": [
             "Kitābfurūshī-i Khayyām,"
           ],
@@ -5384,7 +5560,7 @@
               "value": "10000032"
             }
           ],
-          "updatedAt": 1536782413067,
+          "updatedAt": 1578432679896,
           "publicationStatement": [
             "Tihrān : Kitābfurūshī-i Khayyām, 1351 [1972]"
           ],
@@ -5515,6 +5691,10 @@
               "label": "For voice and organ.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Psalms (Music)",
+            "Sacred songs (Medium voice) with organ"
           ],
           "publisherLiteral": [
             "Agápe,"
@@ -5796,7 +5976,7 @@
               "value": "74903273"
             }
           ],
-          "updatedAt": 1536782413978,
+          "updatedAt": 1578433613401,
           "publicationStatement": [
             "Varanasi : Prithivi Prakashan, 1974."
           ],
@@ -5932,6 +6112,9 @@
               "label": "Duration: ca. 12:00.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Suites (Piano)"
           ],
           "publisherLiteral": [
             "Donemus,"
@@ -6153,6 +6336,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Nārāyaṇatīrtha, 17th cent",
+            "Nārāyaṇatīrtha, 17th cent -- In literature"
+          ],
           "publisherLiteral": [
             "s.n.],"
           ],
@@ -6331,6 +6518,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Suites (Guitar)"
+          ],
           "publisherLiteral": [
             "Donemus,"
           ],
@@ -6503,6 +6693,10 @@
               "label": "In Sanskrit, with verse and prose translations in Hindi; prefatory matter in Hindi or Sanskrit.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Sanskrit poetry",
+            "Sanskrit poetry -- Himachal Pradesh"
           ],
           "publisherLiteral": [
             "Himācala Kalā-Saṃskrti-Bhāṣā Akādamī,"
@@ -6679,6 +6873,9 @@
           "extent": [
             "49 p. of music ;"
           ],
+          "subjectLiteral_exploded": [
+            "Sonatas (Piano)"
+          ],
           "publisherLiteral": [
             "C.F. Peters,"
           ],
@@ -6854,6 +7051,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kaliyāṇacuntaraṉār, Tiru. Vi., 1883-1953"
           ],
           "publisherLiteral": [
             "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
@@ -7040,6 +7240,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Woodwind quintets (Clarinets (5))",
+            "Woodwind quintets (Clarinets (5)) -- Scores"
+          ],
           "publisherLiteral": [
             "Primavera,"
           ],
@@ -7220,6 +7424,10 @@
               "label": "Hindi and Sanskrit: pref. in Hindi.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Advaita",
+            "Vedanta"
           ],
           "publisherLiteral": [
             "Devabhāṣā Prakāśana,"
@@ -7419,6 +7627,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Wind ensembles",
+            "Wind ensembles -- Scores"
+          ],
           "publisherLiteral": [
             "Verlag Doblinger,"
           ],
@@ -7462,7 +7674,7 @@
               "value": "10000043"
             }
           ],
-          "updatedAt": 1536782413978,
+          "updatedAt": 1578432825145,
           "publicationStatement": [
             "Wien : Verlag Doblinger, c1980."
           ],
@@ -7524,6 +7736,10 @@
                 "urn:barcode:33433004744128"
               ],
               "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMC 83-9"
+                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433004744128"
@@ -7598,6 +7814,13 @@
               "label": "In Tibetan; pref. in English.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Byaṅ-chub-chos-ʼphel, Khri-chen LXIX, 1756-1838",
+            "Lamas",
+            "Lamas -- Tibet",
+            "Lamas -- Tibet -- Biography",
+            "Saṅs-rgyas-bstan-ʼphel, Śel-dkar Bla-ma, 1817-1884"
           ],
           "publisherLiteral": [
             "Ngawang Sopa,"
@@ -7778,6 +8001,9 @@
         "_source": {
           "extent": [
             "12 p. ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Violin music"
           ],
           "publisherLiteral": [
             "Sole selling agents, Or-Tav,"
@@ -7967,6 +8193,14 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Ngor-chen Kun-dgaʼ-bzang-po, 1382-1456",
+            "Sa-skya-pa lamas",
+            "Sa-skya-pa lamas -- Tibet",
+            "Sa-skya-pa lamas -- Tibet -- Biography",
+            "Tripiṭaka.",
+            "Tripiṭaka. -- Commentaries"
+          ],
           "publisherLiteral": [
             "Trayang and Jamyang Samten,"
           ],
@@ -7998,7 +8232,7 @@
             "77900893"
           ],
           "contributorLiteral": [
-            "Saṅs-rgyas-phun-tshogs, Ṅor-chen, active 17th century."
+            "Sangs-rgyas-phun-tshogs, Ngor-chen, 1649-1705."
           ],
           "dateStartYear": [
             1976
@@ -8015,15 +8249,25 @@
             {
               "type": "bf:Lccn",
               "value": "77900893"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100022"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200045"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1553357018575,
           "publicationStatement": [
             "New Delhi : Trayang and Jamyang Samten, 1976."
           ],
           "identifier": [
             "urn:bnum:10000046",
-            "urn:lccn:77900893"
+            "urn:lccn:77900893",
+            "urn:undefined:NNSZ00100022",
+            "urn:undefined:(WaOLN)nyp0200045"
           ],
           "materialType": [
             {
@@ -8163,6 +8407,10 @@
               "label": "Duration: 15 min.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Vocalises (High voice) with instrumental ensemble",
+            "Vocalises (High voice) with instrumental ensemble -- Scores"
           ],
           "publisherLiteral": [
             "Redcliffe Edition,"
@@ -8353,6 +8601,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Buddhism",
+            "Buddhism -- Rituals"
+          ],
           "publisherLiteral": [
             "Kunzang Topgey,"
           ],
@@ -8531,6 +8783,10 @@
               "label": "Duration: 25 min.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Symphonies",
+            "Symphonies -- Scores"
           ],
           "publisherLiteral": [
             "Redcliffe Edition,"
@@ -8721,6 +8977,14 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Bkaʼ-brgyud-pa lamas",
+            "Bkaʼ-brgyud-pa lamas -- Tibet",
+            "Bkaʼ-brgyud-pa lamas -- Tibet -- Biography",
+            "Spiritual life",
+            "Spiritual life -- Buddhism",
+            "ʼBaʼ-ra-ba Rgyal-mtshan-dpal-bzaṅ, 1310?-1391?"
+          ],
           "publisherLiteral": [
             "Urgyan Dorje,"
           ],
@@ -8908,6 +9172,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Symphonies",
+            "Symphonies -- Scores"
+          ],
           "publisherLiteral": [
             "Samfundet til udgivelse af dansk musik,"
           ],
@@ -8962,7 +9230,7 @@
             "Samfundet til udgivelse af dansk musik (Series) ; 3. ser., nr. 264.",
             "Symphony, no. 2, op. 69c"
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1563894256633,
           "publicationStatement": [
             "København : Samfundet til udgivelse af dansk musik, 1977."
           ],
@@ -9102,6 +9370,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Lamas",
+            "Lamas -- Tibet",
+            "Lamas -- Tibet -- Biography",
+            "Padma Sambhava, approximately 717-approximately 762"
+          ],
           "publisherLiteral": [
             "Sherab Gyaltshen Lama,"
           ],
@@ -9149,7 +9423,7 @@
               "value": "76900205"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1613956533973,
           "publicationStatement": [
             "Gangtog : Sherab Gyaltshen Lama, 1976."
           ],
@@ -9193,7 +9467,7 @@
             1
           ],
           "numAvailable": [
-            1
+            0
           ],
           "placeOfPublication": [
             "Gangtog :"
@@ -9215,6 +9489,9 @@
               "identifier": [
                 "urn:barcode:33433015080447"
               ],
+              "physicalLocation": [
+                "*OZ+ 82-2383"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -9235,7 +9512,7 @@
                 "33433015080447"
               ],
               "requestable": [
-                true
+                false
               ],
               "uri": "i10000015",
               "shelfMark": [
@@ -9249,8 +9526,8 @@
               ],
               "status": [
                 {
-                  "id": "status:a",
-                  "label": "Available"
+                  "id": "status:co",
+                  "label": "Loaned"
                 }
               ],
               "holdingLocation": [

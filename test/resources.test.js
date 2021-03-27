@@ -319,7 +319,7 @@ describe('Test Resources responses', function () {
     })
 
     it('returns item.electronicLocator', function (done) {
-      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
