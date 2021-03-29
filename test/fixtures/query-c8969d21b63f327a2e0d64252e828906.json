@@ -1,5 +1,5 @@
 {
-  "took": 6,
+  "took": 911,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 13.751772,
+    "max_score": 15.680659,
     "hits": [
       {
-        "_index": "resources-2018-04-05",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b12082323",
-        "_score": 13.751772,
+        "_id": "b22144813",
+        "_score": 15.680659,
         "_source": {
           "extent": [
             "1234, [1] p., x leaves : ill. ;",
@@ -284,6 +284,66 @@
           "serialPublicationDates": [
             "Publication Date  (unformated) -- 362 1b"
           ],
+          "subjectLiteral_exploded": [
+            "Artist, Starving, 1900-1999",
+            "Artist, Starving, 1900-1999 -- Autobiography.",
+            "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v",
+            "Conference subject entry.",
+            "Conference subject entry. --  611 20",
+            "Corporate body subject.",
+            "Corporate body subject. --  610 20",
+            "Indexed term",
+            "Indexed term -- 653",
+            "Life is a common square.",
+            "Life is a common square. -- Criticism.",
+            "Life is a common square. -- Criticism. -- 630 00 $l, $x",
+            "New York (N.Y.)",
+            "New York (N.Y.) -- 21st century",
+            "New York (N.Y.) -- 21st century -- Diaries.",
+            "New York (N.Y.) -- 21st century -- Diaries. -- 651 b0 $y, $x",
+            "Secret Society of Catalogers",
+            "Secret Society of Catalogers -- Periodicals.",
+            "Secret Society of Catalogers -- Periodicals. -- 610 20 $v",
+            "Starving artist",
+            "Starving artist -- 600 00",
+            "Stonecutters' Annual Picnic 1995 : Springfield)",
+            "Stonecutters' Annual Picnic 1995 : Springfield) -- 611 20 $n, $d, $c",
+            "Textile industry testing datetesting",
+            "Textile industry testing datetesting -- 650 b0 $z, $x",
+            "Textile industry testing datetesting -- 650 b0 $z, $x -- India",
+            "Textile industry testing datetesting -- 650 b0 $z, $x -- India -- History",
+            "Undiscovered country.",
+            "Undiscovered country. -- 651 b0",
+            "Uniform title",
+            "testing 4 testing a testing b testing c testing d testing e",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y -- testing z",
+            "testing 4 testing a testing b testing c testing d testing e testing g",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "testing 4 testing a testing c testing d testing e testing g",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "testing 4 testing a testing d testing e testing g",
+            "testing 4 testing a testing d testing e testing g -- testing v",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "testing 4 testing a testing e testing g",
+            "testing 4 testing a testing e testing g -- testing v",
+            "testing 4 testing a testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "testing x as first subfield",
+            "testing x as first subfield -- testing v as second subfield.",
+            "testing x as first subfield -- testing v as second subfield. -- 610 10 $x$v only"
+          ],
           "publisherLiteral": [
             "CopyCat pub. co. -- 260 bb,",
             "Specious Publ. [prev.pub.-- 260.2b],"
@@ -359,10 +419,6 @@
               "value": "Q-TAG (852 8b q tag.  Staff call in bib.)"
             },
             {
-              "type": "nypl:Bnumber",
-              "value": "12082323"
-            },
-            {
               "type": "bf:Isbn",
               "value": "0123456789"
             },
@@ -401,6 +457,31 @@
             {
               "type": "bf:Lccn",
               "value": "EAN"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Report number. -- 027"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Publisher no. -- 028 02  "
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Standard number (old RLIN, etc.) -- 035"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Sudoc no.  -- 086"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "GPO Item number. -- 074"
+            },
+            {
+              "type": "bf:Isbn",
+              "identifierStatus": "canceled/invalid",
+              "value": "ISBN -- 020 $z"
             }
           ],
           "uniformTitle": [
@@ -414,7 +495,7 @@
           "dateEndYear": [
             2011
           ],
-          "updatedAt": 1537993028949,
+          "updatedAt": 1616634174896,
           "publicationStatement": [
             "Copyright Date -- 264 b4 (RDA)",
             "Distributor -- 264 b2 (RDA)",
@@ -433,7 +514,7 @@
             "[s.l.] : Specious Publ. [prev.pub.-- 260.2b], 2001. "
           ],
           "identifier": [
-            "urn:bnum:12082323",
+            "b22144813#1.0051",
             "urn:isbn:0123456789",
             "urn:isbn:9780123456786 (qualifier)",
             "urn:isbn:ISBN -- 020",
@@ -444,12 +525,12 @@
             "urn:lccn:Danacode",
             "urn:lccn:UPC",
             "urn:lccn:EAN",
-            "Report number. -- 027",
-            "Publisher no. -- 028 02  ",
-            "Standard number (old RLIN, etc.) -- 035",
-            "Sudoc no.  -- 086",
-            "GPO Item number. -- 074",
-            "ISBN -- 020 $z"
+            "urn:undefined:Report number. -- 027",
+            "urn:undefined:Publisher no. -- 028 02  ",
+            "urn:undefined:Standard number (old RLIN, etc.) -- 035",
+            "urn:undefined:Sudoc no.  -- 086",
+            "urn:undefined:GPO Item number. -- 074",
+            "urn:isbn:ISBN -- 020 $z"
           ],
           "idIsbn": [
             "0123456789",
@@ -469,8 +550,8 @@
           ],
           "carrierType": [
             {
-              "id": "carriertypes:vd",
-              "label": "videodisc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -478,8 +559,8 @@
           ],
           "mediaType": [
             {
-              "id": "mediatypes:v",
-              "label": "video"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -505,9 +586,9 @@
           "titleDisplay": [
             "Life is a strange circle (updated 20180627) --245 10 $a, Test record --$k current April 19, 2013 --$f, Testing period --$g [Virtual-- 245 $h] (245-- $n) Titles, includes RDA specific fields -- 245 $p : Maintenance test record-- 245 $b,  Version--$s / CMA division -- 245 $c."
           ],
-          "uri": "b12082323",
+          "uri": "b22144813",
           "numItems": [
-            4
+            3
           ],
           "numAvailable": [
             1
@@ -580,146 +661,221 @@
             "3. Incomplete table of contents -- Third instance entered out of order. 505 1b",
             "Title subfield $t and author subfield $r and miscellaneous subfield $g in enahnced contents field 505 10."
           ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1103",
-                  "label": "Dorot Jewish Division"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:44455533322211"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "44455533322211"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "44455533322211"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i36007311",
-              "shelfMark": [
-                "Q-TAG (852 8b q tag.  Staff call in bib.)"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:3",
-                  "label": "serial"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rcmf2",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "uri": "i30384917",
-              "shelfMark": [
-                "Q-TAG (852 8b q tag.  Staff call in bib.)"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:101",
-                  "label": "Book, circ"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1101",
-                  "label": "General Research Division"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433089517993"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "TESTING C-TAG (item non-MARC)"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433089517993"
-                }
-              ],
-              "idBarcode": [
-                "33433089517993"
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i25575805",
-              "shelfMark": [
-                "TESTING C-TAG (item non-MARC)"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:2",
-                  "label": "book non-circ"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:m",
-                  "label": "Missing"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:mal82",
-                  "label": "SASB M1 - General Research - Room 315"
-                }
-              ]
-            },
-            {
-              "electronicLocator": [
-                {
-                  "label": "856 40",
-                  "url": "http://blogs.nypl.org/rcramer/"
-                },
-                {
-                  "label": null,
-                  "url": "http://www.ThereIsNoLabelSubfieldInThis856-40-fulltext.com/"
-                },
-                {
-                  "label": null,
-                  "url": "http://www.ThereIsNoLabelSubfieldInThis856-41-fulltext.com/"
-                },
-                {
-                  "label": "Yizkor Book  (NYPL resource) 856 41",
-                  "url": "http://yizkor.nypl.org/index.php?id=2936"
-                }
-              ],
-              "uri": "i12082323-e"
-            }
-          ],
           "dimensions": [
             "26 cm +",
             "26 cm. +",
             "More 3rd instance -- 300 (3rd instance)"
           ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 3,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i37857772",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1103",
+                        "label": "Dorot Jewish Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1103||Dorot Jewish Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rcmf2",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rcmf2||Offsite"
+                    ],
+                    "shelfMark": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "44455533322211"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                    ],
+                    "enumerationChronology": [
+                      "nothing"
+                    ],
+                    "identifier": [
+                      "urn:barcode:44455533322211"
+                    ],
+                    "idBarcode": [
+                      "44455533322211"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER nothing"
+                  },
+                  "sort": [
+                    "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER nothing"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i37857771",
+                    "status": [
+                      {
+                        "id": "status:k",
+                        "label": "Check with staff"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:k||Check with staff"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1101",
+                        "label": "General Research Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1101||General Research Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mall1",
+                        "label": "Schwarzman Building - Main Reading Room 315 - Reference"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mall1||Schwarzman Building - Main Reading Room 315 - Reference"
+                    ],
+                    "shelfMark": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "3333333333"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:barcode:3333333333"
+                    ],
+                    "idBarcode": [
+                      "3333333333"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER v.000001"
+                  },
+                  "sort": [
+                    "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER v.000001"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i22144813-e",
+                    "electronicLocator": [
+                      {
+                        "url": "http://blogs.nypl.org/rcramer/",
+                        "label": "856 40"
+                      },
+                      {
+                        "url": "http://www.ThereIsNoLabelSubfieldInThis856-40-fulltext.com/",
+                        "label": null
+                      },
+                      {
+                        "url": "http://www.ThereIsNoLabelSubfieldInThis856-41-fulltext.com/",
+                        "label": null
+                      },
+                      {
+                        "url": "http://yizkor.nypl.org/index.php?id=2936",
+                        "label": "Yizkor Book  (NYPL resource) 856 41"
+                      }
+                    ],
+                    "shelfMark_sort": "bi22144813-e"
+                  },
+                  "sort": [
+                    "bi22144813-e"
+                  ]
+                }
+              ]
+            }
+          }
         }
       }
     ]

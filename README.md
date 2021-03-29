@@ -21,7 +21,15 @@ Note that when developing locally, you may need to [add your IP to the access co
 
 See `.env.example` for a description the variables. **If you're adding new variables please add them to .env.example and `./lib/preflight_check.js`**
 
+Note that config variables are maintained in `./config/*.env` as a formality and to assist onboarding; Changes made to those files will not effect deployed config. Config changes must be applied to the deployed Beanstalk app manually. Note that sensitive values are encrypted in `./config/*.env` whereas they are not in the deployed Beanstalk.
+
+### Changes to SCSB/UAT endpoints
+
+When HTC changes the SCSB endpoint, apply changes to the relevant environment file in `config/` (encrypting the value if sensitive) and also manually apply the change to the running Beanstalk app (without encrypting the value).
+
 ## Git & Deployment Workflow
+
+This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#prs-target-main-merge-to-deployment-branches) git workflow.
 
 [`master`](https://github.com/NYPL-discovery/discovery-api/tree/master) has the lastest-and-greatest commits, [`production`](https://github.com/NYPL-discovery/discovery-api/tree/production) should represent what's in
 our production environment. Because we deploy often, `master` and `production`
@@ -89,6 +97,12 @@ Rebuilding fixtures tends to introduce trivial git diff noise, so one may use th
 
 ```
 UPDATE_FIXTURES=if-missing npm test
+```
+
+Remove fixtures that are no longer used in any test with this flag:
+
+```
+REMOVE_UNUSED_FIXTURES=true npm test
 ```
 
 The above command can be used to fill in missing fixtures as new tests are written.

@@ -22,6 +22,8 @@ function esFixturePath (properties) {
  */
 function esClientSearchViaFixtures (properties) {
   let path = esFixturePath(properties)
+  usedFixturePaths[path] = true
+
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8', (err, content) => {
       if (err) {
@@ -143,11 +145,15 @@ function scsbByBarcodesFixtureExists (barcodes) {
   })
 }
 
+const usedFixturePaths = {}
+
 /**
  * Emulates SCSBClient.getItemAvailabilityForBarcodes via local fixtures
  */
 function scsbByBarcodesViaFixtures (barcodes) {
   let path = scsbByBarcodesFixturePath(barcodes)
+  usedFixturePaths[path] = true
+
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8', (err, content) => {
       if (err) {
@@ -200,6 +206,7 @@ function enableScsbFixtures () {
       return scsbByBarcodesFixtureExists(barcodes).then((exists) => {
         // If it doesn't exist, or we're updating everything, update it:
         if (process.env.UPDATE_FIXTURES === 'all' || !exists) {
+          console.log(`Fetching scsb response for barcodes: ${barcodes}`)
           console.log(`Writing ${scsbByBarcodesFixturePath(barcodes)} because ${process.env.UPDATE_FIXTURES === 'all' ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
           return original(barcodes)
             // Now write the response to local fixture:
@@ -262,5 +269,27 @@ function enableDataApiFixtures (pathToFixtureMap) {
 function disableDataApiFixtures () {
   dataApiClient._doAuthenticatedRequest.restore()
 }
+
+after(function () {
+  const used = Object.keys(usedFixturePaths).map((path) => path.split('/').pop())
+
+  const existingPaths = fs.readdirSync('./test/fixtures/').filter((path) => {
+    return /^(scsb-by-barcode-|query-)/.test(path)
+  })
+  const unused = existingPaths.filter((path) => !used.includes(path))
+  if (unused.length > 0) {
+    // If there are unused fixtures..
+    // If REMOVE_UNUSED_FIXTURES=true is set, delete them:
+    if (process.env.REMOVE_UNUSED_FIXTURES === 'true') {
+      console.log(`The following fixtures were not used and will be removed:\n${unused.map((path) => `\n  ${path}`)}`)
+      unused.forEach((p) => {
+        fs.unlinkSync(`./test/fixtures/${p}`)
+      })
+    // Otherwise, just report on them:
+    } else {
+      console.log(`The following fixtures were not used:\n${unused.map((path) => `\n  ${path}`)}`)
+    }
+  }
+})
 
 module.exports = { enableEsFixtures, disableEsFixtures, enableDataApiFixtures, disableDataApiFixtures, enableScsbFixtures, disableScsbFixtures }

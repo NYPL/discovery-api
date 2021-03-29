@@ -1,5 +1,5 @@
 {
-  "took": 196,
+  "took": 142,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -35,6 +35,9 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kuvempu, 1904-1994"
           ],
           "publisherLiteral": [
             "Karnāṭaka Sahakārī Prakāśana Mandira"
@@ -89,7 +92,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525296784408,
+          "updatedAt": 1582834610153,
           "publicationStatement": [
             "Beṅgaḷūru] Karnāṭaka Sahakārī Prakāśana Mandira [1971]-"
           ],
@@ -212,7 +215,7 @@
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
-                  "value": "*OLA 83-3417|zLibrary has: Vol. 1, 3."
+                  "value": "*OLA 83-3417 Library has: Vol. 1, 3."
                 },
                 {
                   "type": "bf:Barcode",
@@ -233,7 +236,7 @@
               ],
               "uri": "i10003188",
               "shelfMark": [
-                "*OLA 83-3417|zLibrary has: Vol. 1, 3."
+                "*OLA 83-3417 Library has: Vol. 1, 3."
               ],
               "catalogItemType": [
                 {
@@ -288,6 +291,10 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Folk literature, Kannada",
+            "Folk literature, Kannada -- History and criticism"
           ],
           "publisherLiteral": [
             "Kannaḍa Adhyayana Pīṭha, Karnāṭaka Viśvavidyālaya,"
@@ -345,7 +352,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525296789283,
+          "updatedAt": 1616693595001,
           "publicationStatement": [
             "Dhāravāḍa : Kannaḍa Adhyayana Pīṭha, Karnāṭaka Viśvavidyālaya, 1974-"
           ],
@@ -408,63 +415,12 @@
                 }
               ],
               "identifier": [
-                "urn:barcode:33433013119130"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433013119130"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433013119130"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10004641",
-              "shelfMark": [
-                "*OLA 83-2636"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
                 "urn:barcode:33433005544238"
               ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
-                  "value": "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 1"
+                  "value": "*OLA 83-2636 v. 1"
                 },
                 {
                   "type": "bf:Barcode",
@@ -485,7 +441,7 @@
               ],
               "uri": "i10004639",
               "shelfMark": [
-                "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 1"
+                "*OLA 83-2636 v. 1"
               ],
               "catalogItemType": [
                 {
@@ -519,7 +475,7 @@
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
-                  "value": "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 2"
+                  "value": "*OLA 83-2636 v. 2"
                 },
                 {
                   "type": "bf:Barcode",
@@ -540,7 +496,62 @@
               ],
               "uri": "i10004640",
               "shelfMark": [
-                "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 2"
+                "*OLA 83-2636 v. 2"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013119130"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 83-2636 v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013119130"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013119130"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10004641",
+              "shelfMark": [
+                "*OLA 83-2636 v. 4"
               ],
               "catalogItemType": [
                 {
@@ -590,6 +601,13 @@
               "label": "In Kannada and Sanskrit (Kannada script), includes quotations in English.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Carnatic music",
+            "Carnatic music -- History and criticism",
+            "Music",
+            "Music -- India",
+            "Music -- India -- History and criticism"
           ],
           "publisherLiteral": [
             "Prasārāṅga, Maisuru Viśvavidyanilaya,"
@@ -643,7 +661,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523472010235,
+          "updatedAt": 1576762456105,
           "publicationStatement": [
             "Maisūru : Prasārāṅga, Maisuru Viśvavidyanilaya, 1968-"
           ],
@@ -702,8 +720,8 @@
             {
               "owner": [
                 {
-                  "id": "orgs:1123",
-                  "label": "Music Division"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -721,15 +739,15 @@
               ],
               "accessMessage": [
                 {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
                 "33433068848849"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i14747261",
               "shelfMark": [
@@ -744,13 +762,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:mym32",
-                  "label": "Performing Arts Research Collections - Music"
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -783,6 +801,10 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "India",
+            "India -- Description and travel"
           ],
           "publisherLiteral": [
             "Prasārāṅga, Maisūru Viśvavidyānilaya,"
@@ -1040,6 +1062,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Dvaita (Vedanta)",
+            "Vishnu (Hindu deity)",
+            "Vishnu (Hindu deity) -- Poetry"
+          ],
           "publisherLiteral": [
             "H. Gorabāḷa,"
           ],
@@ -1088,6 +1115,14 @@
             {
               "type": "nypl:Bnumber",
               "value": "10011472"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ01213452"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0211444"
             }
           ],
           "uniformTitle": [
@@ -1096,12 +1131,14 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523472099214,
+          "updatedAt": 1568729416592,
           "publicationStatement": [
             "Lingasūgūru : H. Gorabāḷa, 1959?-"
           ],
           "identifier": [
-            "urn:bnum:10011472"
+            "urn:bnum:10011472",
+            "urn:undefined:NNSZ01213452",
+            "urn:undefined:(WaOLN)nyp0211444"
           ],
           "materialType": [
             {
@@ -1197,7 +1234,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1246,6 +1283,11 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Carnatic music",
+            "Carnatic music -- History and criticism",
+            "Songs, Telugu"
           ],
           "publisherLiteral": [
             "Prasārāṅga, Maisūru Viśvavidyānilaya,"
@@ -1305,7 +1347,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1532060621254,
+          "updatedAt": 1563918667329,
           "publicationStatement": [
             "Maisūru : Prasārāṅga, Maisūru Viśvavidyānilaya, 1974-"
           ],
@@ -1448,6 +1490,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Sanskrit language",
+            "Sanskrit language -- Dictionaries",
+            "Sanskrit language -- Dictionaries -- Kannada"
+          ],
           "publisherLiteral": [
             "Gōpālācārya,"
           ],
@@ -1494,7 +1541,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523472228681,
+          "updatedAt": 1616645328892,
           "publicationStatement": [
             "Beṅgaḷūru : Gōpālācārya, 1978?-"
           ],
@@ -1549,6 +1596,9 @@
             "Sanskrit-Kannada dictionary.",
             "Saṃskrta-Kannaḍa śabdakōśa."
           ],
+          "tableOfContents": [
+            "4. Namaskāra-Bahuvīrya -- 5. Bahuvrīhi - Vēdānta -- 6. Vedāntin- Hveya."
+          ],
           "items": [
             {
               "owner": [
@@ -1591,7 +1641,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1642,7 +1692,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1693,7 +1743,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1737,6 +1787,10 @@
               "label": "In Kannada; includes quotations in Sanskrit (Kannada script).",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Dvaita (Vedanta)",
+            "Vādirāja, active 16th century"
           ],
           "publisherLiteral": [
             "Gurukrpā Granthamālā : pustaka doreyuva sthaḷa, Gōvindarāv, Beṅgaḷūru,"
@@ -1784,7 +1838,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523472228739,
+          "updatedAt": 1595823877234,
           "publicationStatement": [
             "Maisūru : Gurukrpā Granthamālā : pustaka doreyuva sthaḷa, Gōvindarāv, Beṅgaḷūru, 1966-"
           ],
@@ -1848,6 +1902,10 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKN 87-2441 Library has: Vol. 5. v. 5"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433058620984"
                 }
@@ -1866,7 +1924,7 @@
               ],
               "uri": "i13786568",
               "shelfMark": [
-                "*OKN 87-2441"
+                "*OKN 87-2441 Library has: Vol. 5. v. 5"
               ],
               "catalogItemType": [
                 {
@@ -1877,7 +1935,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1911,6 +1969,9 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Yakṣagāna plays"
           ],
           "publisherLiteral": [
             "Ār. Viṭṭappa Śeṇai eṇḍ Sans,"
@@ -2285,6 +2346,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Kannada literature",
+            "Kannada literature -- Periodicals",
+            "Karnataka (India)",
+            "Karnataka (India) -- Periodicals"
+          ],
           "publisherLiteral": [
             "Maisūru Viśvevidyānilaya."
           ],
@@ -2328,7 +2395,175 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1534160990363,
+          "holdings": [
+            {
+              "holdingStatement": [
+                "46(1964/65)-56(1974/75),60(1978/79), 62(1980/81)-63(1981/82), 65(1983/84)-68(1986/87),70(1988)-71(1989/90), 74(1992/93)-80(1999), 84(2003)-85(2004/2007)-"
+              ],
+              "checkInBoxes": [
+                {
+                  "coverage": "No. 74 (1992)",
+                  "copies": null,
+                  "position": "1",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "No. 75 (1993)",
+                  "copies": null,
+                  "position": "2",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "No. 76-77 (1996)",
+                  "copies": null,
+                  "position": "3",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "No. 78-79 (1998)",
+                  "copies": null,
+                  "position": "4",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "No. 80 (1999)",
+                  "copies": null,
+                  "position": "5",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": null,
+                  "copies": null,
+                  "position": "6",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "Vol. 82 No. 323/326 (2001)",
+                  "copies": null,
+                  "position": "7",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 84 No. 331/334 (2003)",
+                  "copies": null,
+                  "position": "8",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 85 No. 335-338 (2004)",
+                  "copies": null,
+                  "position": "9",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 88 No. 343-346 (2010)",
+                  "copies": null,
+                  "position": "10",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 89 No. 347-350 (2013)",
+                  "copies": null,
+                  "position": "11",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 91 No. 351 (2014)",
+                  "copies": null,
+                  "position": "12",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": null,
+                  "copies": null,
+                  "position": "13",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": null,
+                  "copies": null,
+                  "position": "14",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*OLA 76-1248"
+                  ],
+                  "status": "Expected"
+                }
+              ],
+              "identifier": [
+                {
+                  "type": "bf:shelfMark",
+                  "value": "*OLA 76-1248"
+                }
+              ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "location": [
+                {
+                  "code": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ],
+              "uri": "h1066378",
+              "shelfMark": [
+                "*OLA 76-1248"
+              ]
+            }
+          ],
+          "updatedAt": 1616428619759,
           "publicationStatement": [
             "Maisūru, Maisūru Viśvevidyānilaya."
           ],
@@ -2445,6 +2680,19 @@
               "identifier": [
                 "urn:barcode:33433014575934"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074570",
+              "shelfMark": [
+                "*OLA 76-1248 v. 46, no. 1-3"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2455,21 +2703,14 @@
                   "value": "33433014575934"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 46, no. 1-3"
               ],
               "idBarcode": [
                 "33433014575934"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074570",
-              "shelfMark": [
-                "*OLA 76-1248 v. 46, no. 1-3"
               ],
               "catalogItemType": [
                 {
@@ -2500,6 +2741,19 @@
               "identifier": [
                 "urn:barcode:33433014575942"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074571",
+              "shelfMark": [
+                "*OLA 76-1248 v. 46, no. 4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2510,21 +2764,14 @@
                   "value": "33433014575942"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 46, no. 4"
               ],
               "idBarcode": [
                 "33433014575942"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074571",
-              "shelfMark": [
-                "*OLA 76-1248 v. 46, no. 4"
               ],
               "catalogItemType": [
                 {
@@ -2555,6 +2802,19 @@
               "identifier": [
                 "urn:barcode:33433014575959"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074572",
+              "shelfMark": [
+                "*OLA 76-1248 v. 47, no. 1-4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2565,21 +2825,14 @@
                   "value": "33433014575959"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 47, no. 1-4"
               ],
               "idBarcode": [
                 "33433014575959"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074572",
-              "shelfMark": [
-                "*OLA 76-1248 v. 47, no. 1-4"
               ],
               "catalogItemType": [
                 {
@@ -2610,6 +2863,19 @@
               "identifier": [
                 "urn:barcode:33433014575975"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074574",
+              "shelfMark": [
+                "*OLA 76-1248 v. 48 no. 3-4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2620,21 +2886,14 @@
                   "value": "33433014575975"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 48 no. 3-4"
               ],
               "idBarcode": [
                 "33433014575975"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074574",
-              "shelfMark": [
-                "*OLA 76-1248 v. 48 no. 3-4"
               ],
               "catalogItemType": [
                 {
@@ -2665,6 +2924,19 @@
               "identifier": [
                 "urn:barcode:33433014575967"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074573",
+              "shelfMark": [
+                "*OLA 76-1248 v. 48, no. 1-2"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2675,21 +2947,14 @@
                   "value": "33433014575967"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 48, no. 1-2"
               ],
               "idBarcode": [
                 "33433014575967"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074573",
-              "shelfMark": [
-                "*OLA 76-1248 v. 48, no. 1-2"
               ],
               "catalogItemType": [
                 {
@@ -2720,6 +2985,19 @@
               "identifier": [
                 "urn:barcode:33433014575983"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074575",
+              "shelfMark": [
+                "*OLA 76-1248 v. 49"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2730,21 +3008,14 @@
                   "value": "33433014575983"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 49"
               ],
               "idBarcode": [
                 "33433014575983"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074575",
-              "shelfMark": [
-                "*OLA 76-1248 v. 49"
               ],
               "catalogItemType": [
                 {
@@ -2775,6 +3046,19 @@
               "identifier": [
                 "urn:barcode:33433014575991"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074576",
+              "shelfMark": [
+                "*OLA 76-1248 v. 50, no. 1-2"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2785,21 +3069,14 @@
                   "value": "33433014575991"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 50, no. 1-2"
               ],
               "idBarcode": [
                 "33433014575991"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074576",
-              "shelfMark": [
-                "*OLA 76-1248 v. 50, no. 1-2"
               ],
               "catalogItemType": [
                 {
@@ -2830,6 +3107,19 @@
               "identifier": [
                 "urn:barcode:33433014576007"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074577",
+              "shelfMark": [
+                "*OLA 76-1248 v. 50, no. 3-4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2840,21 +3130,14 @@
                   "value": "33433014576007"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 50, no. 3-4"
               ],
               "idBarcode": [
                 "33433014576007"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074577",
-              "shelfMark": [
-                "*OLA 76-1248 v. 50, no. 3-4"
               ],
               "catalogItemType": [
                 {
@@ -2885,6 +3168,19 @@
               "identifier": [
                 "urn:barcode:33433014576015"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074578",
+              "shelfMark": [
+                "*OLA 76-1248 v. 51, no. 3-4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2895,21 +3191,14 @@
                   "value": "33433014576015"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 51, no. 3-4"
               ],
               "idBarcode": [
                 "33433014576015"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074578",
-              "shelfMark": [
-                "*OLA 76-1248 v. 51, no. 3-4"
               ],
               "catalogItemType": [
                 {
@@ -2940,6 +3229,19 @@
               "identifier": [
                 "urn:barcode:33433014576023"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074579",
+              "shelfMark": [
+                "*OLA 76-1248 v. 52, no. 3-4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2950,21 +3252,14 @@
                   "value": "33433014576023"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 52, no. 3-4"
               ],
               "idBarcode": [
                 "33433014576023"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074579",
-              "shelfMark": [
-                "*OLA 76-1248 v. 52, no. 3-4"
               ],
               "catalogItemType": [
                 {
@@ -2995,6 +3290,19 @@
               "identifier": [
                 "urn:barcode:33433014576031"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074580",
+              "shelfMark": [
+                "*OLA 76-1248 v. 53"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3005,21 +3313,14 @@
                   "value": "33433014576031"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 53"
               ],
               "idBarcode": [
                 "33433014576031"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074580",
-              "shelfMark": [
-                "*OLA 76-1248 v. 53"
               ],
               "catalogItemType": [
                 {
@@ -3050,6 +3351,19 @@
               "identifier": [
                 "urn:barcode:33433014576049"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074581",
+              "shelfMark": [
+                "*OLA 76-1248 v. 54"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3060,21 +3374,14 @@
                   "value": "33433014576049"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 54"
               ],
               "idBarcode": [
                 "33433014576049"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074581",
-              "shelfMark": [
-                "*OLA 76-1248 v. 54"
               ],
               "catalogItemType": [
                 {
@@ -3105,6 +3412,19 @@
               "identifier": [
                 "urn:barcode:33433014576411"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074582",
+              "shelfMark": [
+                "*OLA 76-1248 v. 55"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3115,21 +3435,14 @@
                   "value": "33433014576411"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 55"
               ],
               "idBarcode": [
                 "33433014576411"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074582",
-              "shelfMark": [
-                "*OLA 76-1248 v. 55"
               ],
               "catalogItemType": [
                 {
@@ -3160,6 +3473,19 @@
               "identifier": [
                 "urn:barcode:33433014576429"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074583",
+              "shelfMark": [
+                "*OLA 76-1248 v. 56, no. 1-4"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3170,21 +3496,14 @@
                   "value": "33433014576429"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 56, no. 1-4"
               ],
               "idBarcode": [
                 "33433014576429"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074583",
-              "shelfMark": [
-                "*OLA 76-1248 v. 56, no. 1-4"
               ],
               "catalogItemType": [
                 {
@@ -3215,6 +3534,19 @@
               "identifier": [
                 "urn:barcode:33433014576437"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074584",
+              "shelfMark": [
+                "*OLA 76-1248 v. 60"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3225,21 +3557,14 @@
                   "value": "33433014576437"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 60"
               ],
               "idBarcode": [
                 "33433014576437"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074584",
-              "shelfMark": [
-                "*OLA 76-1248 v. 60"
               ],
               "catalogItemType": [
                 {
@@ -3270,6 +3595,19 @@
               "identifier": [
                 "urn:barcode:33433014576445"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074585",
+              "shelfMark": [
+                "*OLA 76-1248 v. 62"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3280,21 +3618,14 @@
                   "value": "33433014576445"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 62"
               ],
               "idBarcode": [
                 "33433014576445"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074585",
-              "shelfMark": [
-                "*OLA 76-1248 v. 62"
               ],
               "catalogItemType": [
                 {
@@ -3325,6 +3656,19 @@
               "identifier": [
                 "urn:barcode:33433014576452"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074586",
+              "shelfMark": [
+                "*OLA 76-1248 v. 63"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3335,21 +3679,14 @@
                   "value": "33433014576452"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 63"
               ],
               "idBarcode": [
                 "33433014576452"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074586",
-              "shelfMark": [
-                "*OLA 76-1248 v. 63"
               ],
               "catalogItemType": [
                 {
@@ -3380,6 +3717,19 @@
               "identifier": [
                 "urn:barcode:33433014576494"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074590",
+              "shelfMark": [
+                "*OLA 76-1248 v. 65"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3390,21 +3740,14 @@
                   "value": "33433014576494"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 65"
               ],
               "idBarcode": [
                 "33433014576494"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074590",
-              "shelfMark": [
-                "*OLA 76-1248 v. 65"
               ],
               "catalogItemType": [
                 {
@@ -3435,6 +3778,19 @@
               "identifier": [
                 "urn:barcode:33433014576486"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074589",
+              "shelfMark": [
+                "*OLA 76-1248 v. 66"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3445,21 +3801,14 @@
                   "value": "33433014576486"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 66"
               ],
               "idBarcode": [
                 "33433014576486"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074589",
-              "shelfMark": [
-                "*OLA 76-1248 v. 66"
               ],
               "catalogItemType": [
                 {
@@ -3490,6 +3839,19 @@
               "identifier": [
                 "urn:barcode:33433014576460"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074587",
+              "shelfMark": [
+                "*OLA 76-1248 v. 67"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3500,21 +3862,14 @@
                   "value": "33433014576460"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 67"
               ],
               "idBarcode": [
                 "33433014576460"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074587",
-              "shelfMark": [
-                "*OLA 76-1248 v. 67"
               ],
               "catalogItemType": [
                 {
@@ -3545,6 +3900,19 @@
               "identifier": [
                 "urn:barcode:33433014576478"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074588",
+              "shelfMark": [
+                "*OLA 76-1248 v. 68"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3555,21 +3923,14 @@
                   "value": "33433014576478"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 68"
               ],
               "idBarcode": [
                 "33433014576478"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074588",
-              "shelfMark": [
-                "*OLA 76-1248 v. 68"
               ],
               "catalogItemType": [
                 {
@@ -3600,6 +3961,19 @@
               "identifier": [
                 "urn:barcode:33433014576528"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074593",
+              "shelfMark": [
+                "*OLA 76-1248 v. 70"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3610,21 +3984,14 @@
                   "value": "33433014576528"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 70"
               ],
               "idBarcode": [
                 "33433014576528"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074593",
-              "shelfMark": [
-                "*OLA 76-1248 v. 70"
               ],
               "catalogItemType": [
                 {
@@ -3655,6 +4022,19 @@
               "identifier": [
                 "urn:barcode:33433014576502"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074591",
+              "shelfMark": [
+                "*OLA 76-1248 v. 71"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3665,21 +4045,14 @@
                   "value": "33433014576502"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 71"
               ],
               "idBarcode": [
                 "33433014576502"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074591",
-              "shelfMark": [
-                "*OLA 76-1248 v. 71"
               ],
               "catalogItemType": [
                 {
@@ -3710,6 +4083,19 @@
               "identifier": [
                 "urn:barcode:33433014576510"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074592",
+              "shelfMark": [
+                "*OLA 76-1248 v. 72"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3720,21 +4106,14 @@
                   "value": "33433014576510"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 72"
               ],
               "idBarcode": [
                 "33433014576510"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074592",
-              "shelfMark": [
-                "*OLA 76-1248 v. 72"
               ],
               "catalogItemType": [
                 {
@@ -3765,6 +4144,19 @@
               "identifier": [
                 "urn:barcode:33433111366286"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i31158194",
+              "shelfMark": [
+                "*OLA 76-1248 v. 73 (1992)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3775,21 +4167,14 @@
                   "value": "33433111366286"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 73 (1992)"
               ],
               "idBarcode": [
                 "33433111366286"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i31158194",
-              "shelfMark": [
-                "*OLA 76-1248 v. 73 (1992)"
               ],
               "catalogItemType": [
                 {
@@ -3800,7 +4185,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3820,6 +4205,19 @@
               "identifier": [
                 "urn:barcode:33433014575900"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074594",
+              "shelfMark": [
+                "*OLA 76-1248 v. 74"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3830,21 +4228,14 @@
                   "value": "33433014575900"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 74"
               ],
               "idBarcode": [
                 "33433014575900"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074594",
-              "shelfMark": [
-                "*OLA 76-1248 v. 74"
               ],
               "catalogItemType": [
                 {
@@ -3875,6 +4266,19 @@
               "identifier": [
                 "urn:barcode:33433014575918"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074595",
+              "shelfMark": [
+                "*OLA 76-1248 v. 75"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3885,21 +4289,14 @@
                   "value": "33433014575918"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 75"
               ],
               "idBarcode": [
                 "33433014575918"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074595",
-              "shelfMark": [
-                "*OLA 76-1248 v. 75"
               ],
               "catalogItemType": [
                 {
@@ -3930,6 +4327,19 @@
               "identifier": [
                 "urn:barcode:33433015942182"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i12950094",
+              "shelfMark": [
+                "*OLA 76-1248 v. 76-77 (1996)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3940,21 +4350,14 @@
                   "value": "33433015942182"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 76-77 (1996)"
               ],
               "idBarcode": [
                 "33433015942182"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i12950094",
-              "shelfMark": [
-                "*OLA 76-1248 v. 76-77 (1996)"
               ],
               "catalogItemType": [
                 {
@@ -3965,7 +4368,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3985,6 +4388,19 @@
               "identifier": [
                 "urn:barcode:33433013574946"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i10074597",
+              "shelfMark": [
+                "*OLA 76-1248 v. 78-79 (1998)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3995,21 +4411,14 @@
                   "value": "33433013574946"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 78-79 (1998)"
               ],
               "idBarcode": [
                 "33433013574946"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10074597",
-              "shelfMark": [
-                "*OLA 76-1248 v. 78-79 (1998)"
               ],
               "catalogItemType": [
                 {
@@ -4040,6 +4449,19 @@
               "identifier": [
                 "urn:barcode:33433074631197"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i17458423",
+              "shelfMark": [
+                "*OLA 76-1248 v. 82, no. 323/326 (2001)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4050,21 +4472,14 @@
                   "value": "33433074631197"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 82, no. 323/326 (2001)"
               ],
               "idBarcode": [
                 "33433074631197"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i17458423",
-              "shelfMark": [
-                "*OLA 76-1248 v. 82, no. 323/326 (2001)"
               ],
               "catalogItemType": [
                 {
@@ -4075,7 +4490,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4095,6 +4510,19 @@
               "identifier": [
                 "urn:barcode:33433085541104"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i23191779",
+              "shelfMark": [
+                "*OLA 76-1248 v. 84, no. 331/334 (2003)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4105,21 +4533,14 @@
                   "value": "33433085541104"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 84, no. 331/334 (2003)"
               ],
               "idBarcode": [
                 "33433085541104"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i23191779",
-              "shelfMark": [
-                "*OLA 76-1248 v. 84, no. 331/334 (2003)"
               ],
               "catalogItemType": [
                 {
@@ -4130,7 +4551,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4150,6 +4571,19 @@
               "identifier": [
                 "urn:barcode:33433085539777"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i23191778",
+              "shelfMark": [
+                "*OLA 76-1248 v. 85, no. 335/338 (2004/ 2007)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4160,21 +4594,14 @@
                   "value": "33433085539777"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 85, no. 335/338 (2004/ 2007)"
               ],
               "idBarcode": [
                 "33433085539777"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i23191778",
-              "shelfMark": [
-                "*OLA 76-1248 v. 85, no. 335/338 (2004/ 2007)"
               ],
               "catalogItemType": [
                 {
@@ -4185,7 +4612,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4205,6 +4632,19 @@
               "identifier": [
                 "urn:barcode:33433117980106"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i33721281",
+              "shelfMark": [
+                "*OLA 76-1248 v. 88 no. 343-346 (2010)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4215,21 +4655,14 @@
                   "value": "33433117980106"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 88 no. 343-346 (2010)"
               ],
               "idBarcode": [
                 "33433117980106"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i33721281",
-              "shelfMark": [
-                "*OLA 76-1248 v. 88 no. 343-346 (2010)"
               ],
               "catalogItemType": [
                 {
@@ -4260,6 +4693,19 @@
               "identifier": [
                 "urn:barcode:33433117979967"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i33724983",
+              "shelfMark": [
+                "*OLA 76-1248 v. 89 no. 347-350 (2013)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4270,21 +4716,14 @@
                   "value": "33433117979967"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 89 no. 347-350 (2013)"
               ],
               "idBarcode": [
                 "33433117979967"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i33724983",
-              "shelfMark": [
-                "*OLA 76-1248 v. 89 no. 347-350 (2013)"
               ],
               "catalogItemType": [
                 {
@@ -4315,6 +4754,19 @@
               "identifier": [
                 "urn:barcode:33433121642221"
               ],
+              "physicalLocation": [
+                "*OLA 76-1248"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "uri": "i36286477",
+              "shelfMark": [
+                "*OLA 76-1248 v. 91 no. 351 (2014)"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4325,21 +4777,14 @@
                   "value": "33433121642221"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 91 no. 351 (2014)"
               ],
               "idBarcode": [
                 "33433121642221"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i36286477",
-              "shelfMark": [
-                "*OLA 76-1248 v. 91 no. 351 (2014)"
               ],
               "catalogItemType": [
                 {
@@ -4389,6 +4834,9 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Encyclopedias and dictionaries, Kannada"
           ],
           "publisherLiteral": [
             "Kannaḍa Adhyayana Saṃsthe, Maisūru Viśvavidāyanilaya,"
@@ -4444,7 +4892,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523550535042,
+          "updatedAt": 1616473990219,
           "publicationStatement": [
             "Maisūru : Kannaḍa Adhyayana Saṃsthe, Maisūru Viśvavidāyanilaya, 1971-2004."
           ],
@@ -5180,6 +5628,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Kannada imprints"
+          ],
           "publisherLiteral": [
             "Prasarāṅga, Maisūru Viśvavidyānilaya,"
           ],
@@ -5233,7 +5684,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297104134,
+          "updatedAt": 1616493001802,
           "publicationStatement": [
             "Maisūru] Prasarāṅga, Maisūru Viśvavidyānilaya, 1971-<2003>"
           ],
@@ -5286,6 +5737,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "tableOfContents": [
+            "1. Śuddha vijñānagaḷu -- 2. Bhāṣe-vyākaraṇa-dharma-tattva-lalitkalegaḷu-upayukta kalegaḷu-nighantugaḷu-vyakaraṇagaḷu -- 3. Sāhitya-vimarśe-kāvya-hosagannaḍa kāvya -- 4. Gadya saṇṇakathe-nāṭaka-prabandha -- 5. Kādambari-aitihāsika-pattēdāri -- 6. Bāla sāhitya -- 7. Anuvāda sāhitya -- 8. Jīvana caritre-patra sāhitya-pravāsa sāhitya-jānapada sāhitya -- 9. Samājaśāstra-vāṇijyaśāstra-sikṣaṇaśāstra-bhūgōla mattu itihāsa"
           ],
           "items": [
             {
@@ -5801,6 +6255,10 @@
           "extent": [
             "- v."
           ],
+          "subjectLiteral_exploded": [
+            "Kannada language",
+            "Kannada language -- Dictionaries"
+          ],
           "publisherLiteral": [
             "Kannaḍa Sāhitya Pariṣattu,"
           ],
@@ -5991,6 +6449,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Kannada literature",
+            "Kannada literature -- History and criticism"
+          ],
           "publisherLiteral": [
             "Prakaṭaṇa Mattu Pracārō Panyāsa Vibhāga, Beṅgaḷūru Viśvavidyālaya,"
           ],
@@ -6044,7 +6506,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297159110,
+          "updatedAt": 1616531833686,
           "publicationStatement": [
             "Beṅgaḷūru, Prakaṭaṇa Mattu Pracārō Panyāsa Vibhāga, Beṅgaḷūru Viśvavidyālaya, 1974-"
           ],
@@ -6456,6 +6918,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Kannada literature",
+            "Kannada literature -- History and criticism"
+          ],
           "publisherLiteral": [
             "Kannaḍa Adhyayana Saṃsthe, Maisūru Viśvavidyānilaya: Mārāṭagāraru, Prasārāṅga,"
           ],
@@ -6510,7 +6976,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297157321,
+          "updatedAt": 1616520617176,
           "publicationStatement": [
             "Maisūru: Kannaḍa Adhyayana Saṃsthe, Maisūru Viśvavidyānilaya: Mārāṭagāraru, Prasārāṅga, 1974-"
           ],
@@ -6922,6 +7388,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Kuvempu, 1904-1994",
+            "Kuvempu, 1904-1994 -- Correspondence"
+          ],
           "publisherLiteral": [
             "Bayalunēmi Prakāśana,"
           ],
@@ -7103,6 +7573,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Carnatic (India)",
+            "Carnatic (India) -- Biography"
+          ],
           "publisherLiteral": [
             "Kāvyālaya"
           ],
@@ -7159,7 +7633,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297385967,
+          "updatedAt": 1616590961322,
           "publicationStatement": [
             "Maisūru, Kāvyālaya [1969-"
           ],
@@ -7459,6 +7933,12 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Authors, Kannada",
+            "Authors, Kannada -- 20th century",
+            "Authors, Kannada -- 20th century -- Biography",
+            "Karanth, Kota Shivarama, 1902-"
+          ],
           "language": [
             {
               "id": "lang:kan",
@@ -7502,7 +7982,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297429271,
+          "updatedAt": 1616611560182,
           "identifier": [
             "urn:bnum:10734117"
           ],
@@ -7738,6 +8218,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Music, Kannada",
+            "Songs, Tamil"
+          ],
           "publisherLiteral": [
             "Guru Guha Gana Nilaya"
           ],
@@ -7798,7 +8282,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1532061353993,
+          "updatedAt": 1616640153490,
           "publicationStatement": [
             "Bangalore, Guru Guha Gana Nilaya [1963-"
           ],
@@ -8049,6 +8533,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Songs, Kannada",
+            "Songs, Kannada -- Texts"
+          ],
           "publisherLiteral": [
             "[s.n.]"
           ],
@@ -8232,6 +8720,13 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Authors, Kannada",
+            "Authors, Kannada -- 20th century",
+            "Authors, Kannada -- 20th century -- Biography",
+            "Kaṭṭīmani, Basavarāja, 1919-1989",
+            "Kaṭṭīmani, Basavarāja, 1919-1989 -- Biography"
           ],
           "publisherLiteral": [
             "Sāhityaśrī : mārāṭagāraruSam̲aja Pustuk̲alaya,"
@@ -8421,6 +8916,10 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Folk songs, Kannada",
+            "Folk songs, Kannada -- Texts"
           ],
           "publisherLiteral": [
             "Gurumūrti Prākāśana,"
@@ -8841,6 +9340,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Inscriptions, Kannada"
+          ],
           "publisherLiteral": [
             "Kannaḍa Adhyayanapīṭha, Karnāṭaska Viśvavidyālaya,"
           ],
@@ -9080,6 +9582,10 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kannada language",
+            "Kannada language -- Style"
           ],
           "publisherLiteral": [
             "Kāvyālaya Prakāśakaru,"
@@ -9465,6 +9971,13 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Composers",
+            "Composers -- Karnataka",
+            "Composers -- Karnataka -- Biography",
+            "Songs, Kannada",
+            "Songs, Kannada -- Texts"
+          ],
           "publisherLiteral": [
             "Mejisṭik Pres"
           ],
@@ -9702,6 +10215,10 @@
           "extent": [
             "v."
           ],
+          "subjectLiteral_exploded": [
+            "India",
+            "India -- History"
+          ],
           "publisherLiteral": [
             "Prasārāṇga, Maisūru Viśvavidyānilaya,"
           ],
@@ -9859,6 +10376,27 @@
           "extent": [
             "v. : ill. ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"State level school reader in Kannada for non-Kannada speaking students.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Added t. p. in English: Kannada nudi /editor, M. S.Thirumalai.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada and Hindi ;introductory and explanatory matter in English.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Kannada language",
+            "Kannada language -- Textbooks for foreign speakers"
+          ],
           "publisherLiteral": [
             "Senṭral Insṭiṭyūte āph Iṇḍiyan Lāngvējas,"
           ],
@@ -9889,6 +10427,9 @@
           "createdString": [
             "1980"
           ],
+          "idLccn": [
+            "83901906"
+          ],
           "seriesStatement": [
             "CIIL second language textbooks series ; 6,7"
           ],
@@ -9898,8 +10439,26 @@
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 84-2050"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10893177"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "83901906"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1616682600356,
+          "publicationStatement": [
+            "Maisūru : Senṭral Insṭiṭyūte āph Iṇḍiyan Lāngvējas, 1980-"
           ],
           "identifier": [
             "urn:bnum:10893177",
@@ -9959,11 +10518,24 @@
               "identifier": [
                 "urn:barcode:33433012997635"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 84-2050|zLibrary has: Vols. 1-3. v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012997635"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012997635"
               ],
               "requestable": [
                 true
@@ -9976,16 +10548,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -10005,11 +10573,24 @@
               "identifier": [
                 "urn:barcode:33433012997627"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 84-2050|zLibrary has: Vols. 1-3. v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012997627"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012997627"
               ],
               "requestable": [
                 true
@@ -10022,16 +10603,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -10051,11 +10628,24 @@
               "identifier": [
                 "urn:barcode:33433012997643"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 84-2050|zLibrary has: Vols. 1-3. v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012997643"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012997643"
               ],
               "requestable": [
                 true
@@ -10068,16 +10658,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -10121,6 +10707,11 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Carnatic music",
+            "Purandaradāsa, 1484-1564",
+            "Purandaradāsa, 1484-1564 -- Criticism and interpretation"
           ],
           "publisherLiteral": [
             "Śrīpurandaradāsara Nānnūraneya Varṣada Utsava Maṇḍala,"
@@ -10298,6 +10889,13 @@
           "extent": [
             "v. ;"
           ],
+          "subjectLiteral_exploded": [
+            "Actors",
+            "Actors -- India",
+            "Actors -- India -- Karnataka",
+            "Actors -- India -- Karnataka -- Biography",
+            "Yakṣagāna"
+          ],
           "publisherLiteral": [
             "Mayura Prakashana : adhikrta mārātagāraru, Pragatiśīla Sāhitya Saṅgha,"
           ],
@@ -10452,6 +11050,10 @@
         "_source": {
           "extent": [
             "v. : ill., map ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Kannada literature",
+            "Kannada literature -- History and criticism"
           ],
           "publisherLiteral": [
             "Samāja Pustakālaya,"
@@ -10624,6 +11226,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Folk songs, Kannada",
+            "Folk songs, Kannada -- Texts"
+          ],
           "publisherLiteral": [
             "Karnāṭaka Viśvavidyālaya"
           ],
@@ -10680,7 +11286,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297578510,
+          "updatedAt": 1616670280311,
           "publicationStatement": [
             "Dhāravāḍa, Karnāṭaka Viśvavidyālaya [1971-"
           ],
@@ -10733,6 +11339,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "tableOfContents": [
+            "6. Ḍoḷḷina hāḍu. -- 7. Gaṇgigauri saṃvāda-Bedeṇḍegabba. -- 8 K̲olupada."
           ],
           "items": [
             {
@@ -11069,6 +11678,10 @@
           "extent": [
             "v. ;"
           ],
+          "subjectLiteral_exploded": [
+            "Kannada language",
+            "Kannada language -- Grammar"
+          ],
           "publisherLiteral": [
             "Kannada Saṃśōdhana Saṃsthe, Karnāṭaka Viśvavidyāla,"
           ],
@@ -11237,6 +11850,10 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Kannada literature",
+            "Kannada literature -- Congresses"
           ],
           "publisherLiteral": [
             "Kannaḍa Sāhitya Pariṣattu,"
@@ -11430,6 +12047,9 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Geḷeyara Gumpu (Karnataka, India)"
+          ],
           "publisherLiteral": [
             "Rājahaṃsa Prakāśana,"
           ],
@@ -11483,7 +12103,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297602905,
+          "updatedAt": 1616655006729,
           "publicationStatement": [
             "Dhāravāḍa : Rājahaṃsa Prakāśana, [1978]-"
           ],
@@ -11536,6 +12156,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "tableOfContents": [
+            "1. Śānti-Nikētana.--2. Jayakarnāṭka.--3. Sādhana Mudraṇālaya mattu Jīvana māsapatrike."
           ],
           "items": [
             {
@@ -11721,6 +12344,10 @@
           "extent": [
             "v."
           ],
+          "subjectLiteral_exploded": [
+            "Kālidāsa.",
+            "Kālidāsa. -- Poetry"
+          ],
           "publisherLiteral": [
             "Rāsa Prakāśana"
           ],
@@ -11878,6 +12505,18 @@
           "extent": [
             "v. ;"
           ],
+          "note": [
+            {
+              "noteType": "Language",
+              "label": "In Sanskrit (Kannada script); introductory matter in English and Kannada; commentary in Kannada.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Dvaita (Vedanta)",
+            "Dvaita (Vedanta) -- Early works to 1800",
+            "Madhva, active 13th century"
+          ],
           "publisherLiteral": [
             "Śrī Sarvajñācārya Sēvā Saṅgha,"
           ],
@@ -11911,14 +12550,32 @@
           "createdString": [
             "1978"
           ],
-          "contributorLiteral": [
-            "Vādirāja, active 16th century."
+          "idLccn": [
+            "83901597 /SA"
           ],
           "dateStartYear": [
             1978
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OKN 85-1560"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10956213"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "83901597 /SA"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1616484795692,
+          "publicationStatement": [
+            "Dāvaṇagere : Śrī Sarvajñācārya Sēvā Saṅgha, 1978-"
           ],
           "identifier": [
             "urn:bnum:10956213",
@@ -11946,7 +12603,8 @@
             }
           ],
           "subjectLiteral": [
-            "Dvaita (Vedanta) -- Early works to 1800."
+            "Dvaita (Vedanta) -- Early works to 1800.",
+            "Madhva, active 13th century."
           ],
           "titleDisplay": [
             "Yuktimallikā : mūlasahita Kannaḍa arthānuvāda / anuvādakaru Bi. Bhīmarāv."
@@ -11981,11 +12639,20 @@
               "identifier": [
                 "urn:barcode:33433058618830"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618830"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618830"
               ],
               "requestable": [
                 true
@@ -11995,10 +12662,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12027,11 +12690,20 @@
               "identifier": [
                 "urn:barcode:33433058618764"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618764"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618764"
               ],
               "requestable": [
                 true
@@ -12041,10 +12713,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12073,11 +12741,20 @@
               "identifier": [
                 "urn:barcode:33433058618822"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618822"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618822"
               ],
               "requestable": [
                 true
@@ -12087,10 +12764,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12119,11 +12792,20 @@
               "identifier": [
                 "urn:barcode:33433058618772"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618772"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618772"
               ],
               "requestable": [
                 true
@@ -12133,10 +12815,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12165,11 +12843,20 @@
               "identifier": [
                 "urn:barcode:33433058618806"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618806"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618806"
               ],
               "requestable": [
                 true
@@ -12179,10 +12866,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12211,11 +12894,20 @@
               "identifier": [
                 "urn:barcode:33433058618749"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618749"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618749"
               ],
               "requestable": [
                 true
@@ -12225,10 +12917,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12257,11 +12945,20 @@
               "identifier": [
                 "urn:barcode:33433058618780"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618780"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618780"
               ],
               "requestable": [
                 true
@@ -12271,10 +12968,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12303,11 +12996,20 @@
               "identifier": [
                 "urn:barcode:33433058618731"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618731"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618731"
               ],
               "requestable": [
                 true
@@ -12317,10 +13019,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12349,11 +13047,20 @@
               "identifier": [
                 "urn:barcode:33433058618814"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618814"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618814"
               ],
               "requestable": [
                 true
@@ -12363,10 +13070,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12395,11 +13098,20 @@
               "identifier": [
                 "urn:barcode:33433058618798"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618798"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433058618798"
               ],
               "requestable": [
                 true
@@ -12409,10 +13121,6 @@
                 "*OKN 85-1560"
               ],
               "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -12448,6 +13156,12 @@
         "_source": {
           "extent": [
             "v. ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Folk songs, Kannada",
+            "Folk songs, Kannada -- India",
+            "Folk songs, Kannada -- India -- Dhāwār (District)",
+            "Folk songs, Kannada -- India -- Dhāwār (District) -- Texts"
           ],
           "publisherLiteral": [
             "Bhārati Prakāśana ayāṇḍa Buk Ḍipō,"
@@ -12597,6 +13311,28 @@
           "extent": [
             "v. : ill. ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 2-   Pradhāna sampādakaru Es. Eṃ. Vrṣabhēndrasvāmi.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Basava, active 1160",
+            "Basava, active 1160 -- Criticism and interpretation",
+            "Lingayats"
+          ],
           "publisherLiteral": [
             "Kannaḍa Adhyayanapīṭha, Karnāṭaka Viśvavidyālaya,"
           ],
@@ -12624,6 +13360,9 @@
           "createdString": [
             "1980"
           ],
+          "idLccn": [
+            "82903291 /SA"
+          ],
           "contributorLiteral": [
             "Kalaburgi, Eṃ. Eṃ., 1938-",
             "Sunkapur, M. S."
@@ -12631,8 +13370,26 @@
           "dateStartYear": [
             1980
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 85-1658"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10960726"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "82903291 /SA"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1616565670399,
+          "publicationStatement": [
+            "Dhāravāḍa : Kannaḍa Adhyayanapīṭha, Karnāṭaka Viśvavidyālaya, 1980-"
           ],
           "identifier": [
             "urn:bnum:10960726",
@@ -12660,6 +13417,7 @@
             }
           ],
           "subjectLiteral": [
+            "Basava, active 1160 -- Criticism and interpretation.",
             "Lingayats."
           ],
           "titleDisplay": [
@@ -12684,6 +13442,9 @@
               "label": "monograph/item"
             }
           ],
+          "tableOfContents": [
+            "1-2. Basavamārga.--3. Śivaśaraṇara kāyaka siddhānta.--4. Basavēśvara-Gāndhīji."
+          ],
           "items": [
             {
               "owner": [
@@ -12695,11 +13456,24 @@
               "identifier": [
                 "urn:barcode:33433012999292"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 85-1658|zLibrary has: Vol. 1-4. v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999292"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999292"
               ],
               "requestable": [
                 true
@@ -12712,16 +13486,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -12741,11 +13511,24 @@
               "identifier": [
                 "urn:barcode:33433012999284"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 85-1658|zLibrary has: Vol. 1-4. v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999284"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999284"
               ],
               "requestable": [
                 true
@@ -12758,16 +13541,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -12787,11 +13566,24 @@
               "identifier": [
                 "urn:barcode:33433012999318"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 85-1658|zLibrary has: Vol. 1-4. v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999318"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999318"
               ],
               "requestable": [
                 true
@@ -12804,16 +13596,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -12833,11 +13621,24 @@
               "identifier": [
                 "urn:barcode:33433012999300"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 85-1658|zLibrary has: Vol. 1-4. v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999300"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999300"
               ],
               "requestable": [
                 true
@@ -12850,16 +13651,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -12903,6 +13700,9 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Hinduism"
           ],
           "publisherLiteral": [
             "Prasārāṅga, Beṅgaḷūru Viśvavidyālaya,"
@@ -13147,6 +13947,11 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Lingayat poetry, Kannada",
+            "Lingayat poetry, Kannada -- History and criticism",
+            "Śūnyasampādane"
+          ],
           "publisherLiteral": [
             "Ṡrī śaila Jagadguru Niḍumāmiḍi Nivāsa,"
           ],
@@ -13338,6 +14143,13 @@
               "label": "In Kannada.",
               "type": "bf:Note"
             }
+          ],
+          "subjectLiteral_exploded": [
+            "Authors, Kannada",
+            "Authors, Kannada -- 20th century",
+            "Authors, Kannada -- 20th century -- Biography",
+            "Kuvempu, 1904-1994",
+            "Kuvempu, 1904-1994 -- Biography"
           ],
           "publisherLiteral": [
             "Sahyādri Prakāśana"
@@ -13571,6 +14383,9 @@
           "extent": [
             "v. ;"
           ],
+          "subjectLiteral_exploded": [
+            "Proverbs, Kannada"
+          ],
           "publisherLiteral": [
             "Kannaḍa Sāhitya Pariṣattu,"
           ],
@@ -13778,6 +14593,10 @@
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "Vishnu (Hindu deity)",
+            "Vishnu (Hindu deity) -- Poetry"
+          ],
           "publisherLiteral": [
             "Śāradā Mandira,"
           ],
@@ -13832,6 +14651,10 @@
             {
               "type": "bf:Lccn",
               "value": "77902350"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp1022678"
             }
           ],
           "uniformTitle": [
@@ -13840,13 +14663,14 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1525297654107,
+          "updatedAt": 1568689702256,
           "publicationStatement": [
             "Maisūru : Śāradā Mandira, 1975-"
           ],
           "identifier": [
             "urn:bnum:11015378",
-            "urn:lccn:77902350"
+            "urn:lccn:77902350",
+            "urn:undefined:(WaOLN)nyp1022678"
           ],
           "materialType": [
             {
@@ -13893,6 +14717,9 @@
           ],
           "titleAlt": [
             "Kannaḍa Bhāgavata"
+          ],
+          "tableOfContents": [
+            "2. Trtīya caturtha skandagaḷu."
           ],
           "items": [
             {
@@ -14119,6 +14946,11 @@
           "extent": [
             "v."
           ],
+          "subjectLiteral_exploded": [
+            "Sanskrit literature",
+            "Sanskrit literature -- Jaina authors",
+            "Sanskrit literature -- Jaina authors -- History and criticism"
+          ],
           "publisherLiteral": [
             "Ādarśa Jaina Granthamāle; prtigaḷu doreyuva sthaḷa: Samāja Pustakālaya, Dhāravāḍa]"
           ],
@@ -14276,6 +15108,28 @@
           "extent": [
             "v. : ill. ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 2 published in 1971.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Vols. 4 & 5 in one.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Education",
+            "Education -- Karnataka",
+            "Kannada language"
+          ],
           "publisherLiteral": [
             "Suruci Prakāśana,"
           ],
@@ -14306,14 +15160,32 @@
           "createdString": [
             "1970"
           ],
-          "contributorLiteral": [
-            "Javare Gowda, Deve Gowda, 1918-"
+          "idLccn": [
+            "73918859"
           ],
           "dateStartYear": [
             1970
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 86-779"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "11015414"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73918859"
+            }
+          ],
           "dateEndYear": [
             9999
+          ],
+          "updatedAt": 1616591929189,
+          "publicationStatement": [
+            "Maisūru : Suruci Prakāśana, 1970?-"
           ],
           "identifier": [
             "urn:bnum:11015414",
@@ -14341,7 +15213,7 @@
             }
           ],
           "subjectLiteral": [
-            "Education -- India -- Karnataka.",
+            "Education -- Karnataka.",
             "Kannada language."
           ],
           "titleDisplay": [
@@ -14374,11 +15246,24 @@
               "identifier": [
                 "urn:barcode:33433012999938"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999938"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999938"
               ],
               "requestable": [
                 true
@@ -14391,16 +15276,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -14420,11 +15301,24 @@
               "identifier": [
                 "urn:barcode:33433012999946"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 3"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999946"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999946"
               ],
               "requestable": [
                 true
@@ -14437,62 +15331,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433012999961"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212381",
-              "shelfMark": [
-                "*OLA 86-779|zLibrary has: Vols. 2-6. v. 6"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -14512,11 +15356,24 @@
               "identifier": [
                 "urn:barcode:33433012999953"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 4-5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999953"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012999953"
               ],
               "requestable": [
                 true
@@ -14529,7 +15386,58 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433012999961"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 6"
                 },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012999961"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433012999961"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10212381",
+              "shelfMark": [
+                "*OLA 86-779|zLibrary has: Vols. 2-6. v. 6"
+              ],
+              "catalogItemType": [
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
@@ -14538,7 +15446,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [

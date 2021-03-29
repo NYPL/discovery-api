@@ -201,22 +201,26 @@ describe('Test Resources responses', function () {
 
         // Also check an item's identifiers:
         expect(doc.items).to.be.a('array')
-        expect(doc.items[0]).to.be.a('object')
-        expect(doc.items[0].identifier).to.be.a('array')
+
+        // Select an item of interest
+        const itemOfInterest = doc.items.filter((item) => item.uri === 'i10005487')[0]
+
+        expect(itemOfInterest).to.be.a('object')
+        expect(itemOfInterest.identifier).to.be.a('array')
 
         // Check item callnum:
-        const callnum = doc.items[0].identifier
+        const callnum = itemOfInterest.identifier
           .filter((ent) => ent['@type'] === 'bf:ShelfMark')
           .pop()
         expect(callnum).to.be.a('object')
-        expect(callnum['@value']).to.equal('*AY (Hone, W. Table book) v. 1')
+        expect(callnum['@value']).to.equal('JFE 86-498 v. 1')
 
         // Check item barcode:
-        const barcode = doc.items[0].identifier
+        const barcode = itemOfInterest.identifier
           .filter((ent) => ent['@type'] === 'bf:Barcode')
           .pop()
         expect(barcode).to.be.a('object')
-        expect(barcode['@value']).to.equal('33433067332548')
+        expect(barcode['@value']).to.equal('33433057532081')
 
         done()
       })
@@ -306,16 +310,16 @@ describe('Test Resources responses', function () {
 
         assert(doc.supplementaryContent)
         assert(doc.supplementaryContent.length > 0)
-        assert.equal(doc.supplementaryContent[0].label, 'FindingAid')
+        assert.equal(doc.supplementaryContent[0].label, 'Finding aid')
         assert.equal(doc.supplementaryContent[0]['@type'], 'nypl:SupplementaryContent')
-        assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/uploads/collection/pdf_finding_aid/PSF.pdf')
+        assert.equal(doc.supplementaryContent[0].url, 'http://archives.nypl.org/scm/20936')
 
         done()
       })
     })
 
     it('returns item.electronicLocator', function (done) {
-      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
@@ -551,15 +555,13 @@ describe('Test Resources responses', function () {
     })
 
     ; [
-      'b12082323',
-      '12082323', // Should match `identifierV2[@type=nypl:Bnumber].value`
+      'b22144813',
       'Danacode', // Should match `identifierV2[@type=bf:Lccn].value`
-      '0123456789', // Should match `identifierV2[@type=bf:Isbn].value`
       '"ISBN -- 020"',
       '44455533322211'
     ].forEach((num) => {
-      it(`should match b12082323 by "Standard Numbers": "${num}"`, function (done) {
-        request.get(searchAllUrl + 'b12082323', function (err, response, body) {
+      it(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
+        request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err
 
           assert.equal(200, response.statusCode)
@@ -570,7 +572,7 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement[0]).to.be.a('object')
           expect(results.itemListElement[0].result).to.be.a('object')
           expect(results.itemListElement[0].result['@type']).to.include('nypl:Item')
-          expect(results.itemListElement[0].result['@id']).to.equal('res:b12082323')
+          expect(results.itemListElement[0].result['@id']).to.equal('res:b22144813')
 
           done()
         })
@@ -578,6 +580,7 @@ describe('Test Resources responses', function () {
     })
 
     ; [
+      'b22193421',
       '"Q-TAG (852 8b q tag.  Staff call in bib.)"', // Should match `identifierV2[@type=bf:ShelfMark].value`
       '"ISSN -- 022"', // Should match `identifierV2[@type=bf:Issn].value`
       '"LCCN -- 010"', // Should match `identifierV2[@type=bf:Lccn].value`
@@ -596,8 +599,7 @@ describe('Test Resources responses', function () {
           assert.equal(200, response.statusCode)
 
           const results = JSON.parse(body)
-          // This test bib has been copied. There are now 15 with roughly same data
-          expect(results.totalResults).to.be.at.least(14)
+          expect(results.totalResults).to.be.at.least(1)
           expect(results.itemListElement).to.be.a('array')
           expect(results.itemListElement[0]).to.be.a('object')
           expect(results.itemListElement[0].result).to.be.a('object')
