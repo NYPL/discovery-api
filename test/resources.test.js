@@ -474,8 +474,16 @@ describe('Test Resources responses', function () {
           // Ensure count decreased:
           expect(doc.totalResults).to.be.below(prevTotal)
 
-          // Ensure first bib dateEndYear overlaps date
-          expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0] - 1)
+          // Ensure bib dates overlap afterDate for each result
+          doc.itemListElement.forEach((item) => {
+            const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
+              .filter((d) => typeof d === 'number')
+              // Ensure dates are ascending (some cataloging reverses them):
+              .sort()
+            // The bib's end date (or start date if it doesn't have an end date)
+            // should be >= the start of the queried date range:
+            expect(itemDates[itemDates.length - 1]).to.be.above(dates[0] - 1)
+          })
 
           prevTotal = doc.totalResults
 
@@ -489,9 +497,18 @@ describe('Test Resources responses', function () {
             // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
-            // Ensure first bib dateStartYear-dateEndYear overlaps dates
-            expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0] - 1)
-            expect(doc.itemListElement[0].result.dateStartYear).to.be.below(dates[1] + 1)
+            // Ensure bib dates overlap date range
+            doc.itemListElement.forEach((item) => {
+              const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
+                .filter((d) => typeof d === 'number')
+                // Ensure dates are ascending (some cataloging reverses them):
+                .sort()
+              // The bib's end date (or start date if it doesn't have an end date)
+              // should be >= the start of the queried date range:
+              expect(itemDates[itemDates.length - 1]).to.be.above(dates[0] - 1)
+              // The bib's start date should be <= the end of the queried date range:
+              expect(itemDates[0]).to.be.below(dates[1] + 1)
+            })
 
             prevTotal = doc.totalResults
 
