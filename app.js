@@ -1,9 +1,11 @@
 const config = require('config')
 const swaggerDocs = require('./swagger.v0.1.json')
 const pjson = require('./package.json')
-const logger = require('./lib/logger')
 
 require('dotenv').config()
+// Load logger after running above to ensure we respect LOG_LEVEL if set
+const logger = require('./lib/logger')
+
 require('./lib/preflight_check')
 
 var express = require('express')
