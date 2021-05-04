@@ -1,5 +1,5 @@
 {
-  "took": 509,
+  "took": 542,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,11 +7,11 @@
     "failed": 0
   },
   "hits": {
-    "total": 12675201,
+    "total": 11035785,
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000002",
         "_score": null,
@@ -41,18 +41,18 @@
           ],
           "language": [
             {
-              "label": "German",
-              "id": "lang:ger"
+              "id": "lang:ger",
+              "label": "German"
             }
           ],
           "createdYear": [
             1985
           ],
-          "title": [
-            "Dante Alighieri 1985 : in memoriam Hermann Gmelin"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Dante Alighieri 1985 : in memoriam Hermann Gmelin"
           ],
           "shelfMark": [
             "JFE 86-3252"
@@ -106,14 +106,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -121,8 +121,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -147,8 +147,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -171,8 +171,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Use in library",
-                  "id": "accessMessage:1"
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
                 }
               ],
               "idBarcode": [
@@ -187,20 +187,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Schwarzman Building M2 - General Research Room 315",
-                  "id": "loc:mal92"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             }
@@ -214,7 +214,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000003",
         "_score": null,
@@ -231,8 +231,8 @@
           ],
           "language": [
             {
-              "label": "English",
-              "id": "lang:eng"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "createdYear": [
@@ -291,14 +291,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -306,8 +306,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -328,8 +328,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
@@ -349,8 +349,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Use in library",
-                  "id": "accessMessage:1"
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
                 }
               ],
               "idBarcode": [
@@ -365,20 +365,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Schwarzman Building M2 - General Research Room 315",
-                  "id": "loc:mal92"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             }
@@ -392,7 +392,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000004",
         "_score": null,
@@ -425,18 +425,18 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
             1965
           ],
-          "title": [
-            "Mutaṟkuṟaḷ uvamai."
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Mutaṟkuṟaḷ uvamai."
           ],
           "shelfMark": [
             "*OLB 84-1934"
@@ -470,7 +470,7 @@
               "value": "74915265"
             }
           ],
-          "updatedAt": 1580925419861,
+          "updatedAt": 1595823889267,
           "publicationStatement": [
             "Tirunelvēli, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1965."
           ],
@@ -480,14 +480,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -495,8 +495,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -506,11 +506,11 @@
             "Mutaṟkuṟaḷ uvamai. Āciriyar Ku. Kōtaṇṭapāṇi Piḷḷai."
           ],
           "uri": "b10000004",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4758.9.T5 K6 1965"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -520,16 +520,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -547,8 +547,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -563,20 +563,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -590,7 +590,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000005",
         "_score": null,
@@ -657,17 +657,32 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000005"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "11049. Muzyka"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100551"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200004"
             }
           ],
           "uniformTitle": [
-            "Concertos, violin, orchestra, no. 2, op. 22, D minor; arr."
+            "Concertos, violin, orchestra, no. 2, op. 22, D minor; arranged"
           ],
-          "updatedAt": 1603210643509,
+          "updatedAt": 1596480610085,
           "publicationStatement": [
             "Moskva : Muzyka, 1980."
           ],
           "identifier": [
-            "urn:bnum:10000005"
+            "urn:bnum:10000005",
+            "urn:undefined:11049. Muzyka",
+            "urn:undefined:NNSZ00100551",
+            "urn:undefined:(WaOLN)nyp0200004"
           ],
           "materialType": [
             {
@@ -726,9 +741,6 @@
               "identifier": [
                 "urn:barcode:33433032711909"
               ],
-              "physicalLocation": [
-                "JMF 83-336"
-              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -784,7 +796,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000006",
         "_score": null,
@@ -818,18 +830,18 @@
           ],
           "language": [
             {
-              "label": "Arabic",
-              "id": "lang:ara"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
             1968
           ],
-          "title": [
-            "Tajdīd al-tafkīr al-dīnī fī al-Islām,"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Tajdīd al-tafkīr al-dīnī fī al-Islām,"
           ],
           "shelfMark": [
             "*OGC 84-1984"
@@ -863,7 +875,7 @@
               "value": "75962707"
             }
           ],
-          "updatedAt": 1563902881529,
+          "updatedAt": 1595820297187,
           "publicationStatement": [
             "al-Qāhirah, Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr [1968]"
           ],
@@ -873,14 +885,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -888,8 +900,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -913,16 +925,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -930,14 +942,18 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGC 84-1984"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433022691665"
                 }
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -952,20 +968,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -979,7 +995,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000007",
         "_score": null,
@@ -1042,17 +1058,32 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000007"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Z.8917. Editio Musica"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100552"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200006"
             }
           ],
           "uniformTitle": [
             "Studies, guitar"
           ],
-          "updatedAt": 1596046510311,
+          "updatedAt": 1569627322562,
           "publicationStatement": [
             "Budapest : Editio Musica, c1981."
           ],
           "identifier": [
-            "urn:bnum:10000007"
+            "urn:bnum:10000007",
+            "urn:undefined:Z.8917. Editio Musica",
+            "urn:undefined:NNSZ00100552",
+            "urn:undefined:(WaOLN)nyp0200006"
           ],
           "materialType": [
             {
@@ -1114,10 +1145,6 @@
               ],
               "identifierV2": [
                 {
-                  "type": "bf:ShelfMark",
-                  "value": "JMG 83-276"
-                },
-                {
                   "type": "bf:Barcode",
                   "value": "33433032883591"
                 }
@@ -1167,7 +1194,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000008",
         "_score": null,
@@ -1187,8 +1214,8 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
@@ -1239,14 +1266,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1254,19 +1281,19 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
             "Aṇṇāviṉ ciṟukataikaḷ. [Eḻutiyavar] Ci. Eṉ. Aṇṇāturai."
           ],
           "uri": "b10000008",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4758.9.A5 A84"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -1276,16 +1303,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -1303,8 +1330,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1319,20 +1346,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1346,7 +1373,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000009",
         "_score": null,
@@ -1379,8 +1406,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -1426,14 +1453,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1441,8 +1468,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -1463,8 +1490,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -1474,8 +1501,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -1489,8 +1516,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1505,20 +1532,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1532,7 +1559,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000010",
         "_score": null,
@@ -1560,8 +1587,8 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
@@ -1615,14 +1642,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1630,8 +1657,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -1641,11 +1668,11 @@
             "Cēkkiḻār; Corṇammāḷ niṉaivuc coṟpoḻivukaḷ. [Āṟṟiyavar] Mā. Irācamāṇikkaṉār."
           ],
           "uri": "b10000010",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4758.9.C385 Z8"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -1655,16 +1682,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -1682,8 +1709,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1698,20 +1725,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1725,7 +1752,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000011",
         "_score": null,
@@ -1779,22 +1806,17 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000011"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0200010"
             }
           ],
           "dateEndYear": [
             1982
           ],
-          "updatedAt": 1604368847197,
+          "updatedAt": 1536782413006,
           "publicationStatement": [
             "Sneek [Netherlands] : Boeijenga, [between 1976 and 1982]."
           ],
           "identifier": [
-            "urn:bnum:10000011",
-            "urn:undefined:(WaOLN)nyp0200010"
+            "urn:bnum:10000011"
           ],
           "materialType": [
             {
@@ -1846,11 +1868,14 @@
           ],
           "items": [
             {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
               "identifier": [
                 "urn:barcode:33433032883625"
-              ],
-              "physicalLocation": [
-                "JMG 83-279"
               ],
               "identifierV2": [
                 {
@@ -1872,7 +1897,7 @@
                 "33433032883625"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10942025",
               "shelfMark": [
@@ -1887,7 +1912,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1901,7 +1932,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000012",
         "_score": null,
@@ -1929,18 +1960,18 @@
           ],
           "language": [
             {
-              "label": "Arabic",
-              "id": "lang:ara"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
             1970
           ],
-          "title": [
-            "al-Ḥuṭayʼah : fī sīratihi wa-nafsīyatihi wa-shiʻrihi"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "al-Ḥuṭayʼah : fī sīratihi wa-nafsīyatihi wa-shiʻrihi"
           ],
           "shelfMark": [
             "*OFS 84-1997"
@@ -1973,14 +2004,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1988,8 +2019,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2010,16 +2041,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2037,8 +2068,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2053,20 +2084,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2080,7 +2111,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000013",
         "_score": null,
@@ -2109,18 +2140,18 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
             1980
           ],
-          "title": [
-            "Disko Treff 1 : Klavier."
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Disko Treff 1 : Klavier."
           ],
           "shelfMark": [
             "JMF 83-366"
@@ -2160,14 +2191,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2175,8 +2206,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2197,8 +2228,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -2208,8 +2239,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -2223,8 +2254,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2239,20 +2270,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2266,7 +2297,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000014",
         "_score": null,
@@ -2296,8 +2327,8 @@
           ],
           "language": [
             {
-              "label": "Arabic",
-              "id": "lang:ara"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
@@ -2340,14 +2371,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2355,8 +2386,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2378,8 +2409,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -2389,8 +2420,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2408,8 +2439,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2424,20 +2455,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2451,7 +2482,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000016",
         "_score": null,
@@ -2474,8 +2505,8 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
@@ -2526,14 +2557,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2541,8 +2572,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2552,11 +2583,11 @@
             "Nalla Kuṟuntokaiyil nāṉilam. [Eḻutiyavar] Cu. Cellappaṉ."
           ],
           "uri": "b10000016",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4758.9.K794 Z6 1967"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -2566,16 +2597,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2593,8 +2624,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2609,20 +2640,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2636,7 +2667,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000017",
         "_score": null,
@@ -2671,18 +2702,18 @@
           ],
           "language": [
             {
-              "label": "French",
-              "id": "lang:fre"
+              "id": "lang:fre",
+              "label": "French"
             }
           ],
           "createdYear": [
             1981
           ],
-          "title": [
-            "Lettre du Mexique : pour baryton et piano, 1942"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Lettre du Mexique : pour baryton et piano, 1942"
           ],
           "shelfMark": [
             "JMG 83-395"
@@ -2717,7 +2748,7 @@
               "value": "(WaOLN)nyp0200016"
             }
           ],
-          "updatedAt": 1584025041197,
+          "updatedAt": 1596645720537,
           "publicationStatement": [
             "Amsterdam : Donemus, c1981."
           ],
@@ -2728,14 +2759,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2743,8 +2774,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2759,23 +2790,23 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Amsterdam :"
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -2783,21 +2814,25 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-395"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433032735007"
                 }
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
                 "33433032735007"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10942027",
               "shelfMark": [
@@ -2805,20 +2840,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "In transit",
-                  "id": "status:t"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2832,7 +2867,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000018",
         "_score": null,
@@ -2861,18 +2896,18 @@
           ],
           "language": [
             {
-              "label": "Arabic",
-              "id": "lang:ara"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
             1975
           ],
-          "title": [
-            "al-Marʼah al-Lubnānīyah : wāqiʻuhā wa-qaḍāyāhā"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "al-Marʼah al-Lubnānīyah : wāqiʻuhā wa-qaḍāyāhā"
           ],
           "shelfMark": [
             "*OFX 84-1995"
@@ -2913,14 +2948,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2928,8 +2963,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2939,11 +2974,11 @@
             "al-Marʼah al-Lubnānīyah : wāqiʻuhā wa-qaḍāyāhā / Najlāʼ Naṣīr Bashshūr."
           ],
           "uri": "b10000018",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "HQ1728 .B37"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -2953,16 +2988,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2980,8 +3015,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2996,20 +3031,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3023,7 +3058,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000019",
         "_score": null,
@@ -3051,8 +3086,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -3098,14 +3133,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3113,8 +3148,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -3135,8 +3170,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -3147,8 +3182,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -3162,8 +3197,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3178,20 +3213,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3205,7 +3240,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000020",
         "_score": null,
@@ -3228,18 +3263,18 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
             1970
           ],
-          "title": [
-            "Tolkāppiyam."
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Tolkāppiyam."
           ],
           "shelfMark": [
             "*OLB 84-1936"
@@ -3280,14 +3315,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3295,8 +3330,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -3320,8 +3355,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -3334,8 +3369,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -3353,8 +3388,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3369,20 +3404,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3396,7 +3431,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000021",
         "_score": null,
@@ -3430,8 +3465,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -3474,14 +3509,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3489,8 +3524,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -3511,16 +3546,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -3534,8 +3569,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3550,20 +3585,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3577,7 +3612,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000022",
         "_score": null,
@@ -3606,18 +3641,18 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
             1970
           ],
-          "title": [
-            "Poṉpaṟṟi kāvalar puttamittiraṉār iyaṟṟiya Vīracōḻiyam; Peruntēvaṉār iyaṟṟiya uraiyuṭaṉ."
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Poṉpaṟṟi kāvalar puttamittiraṉār iyaṟṟiya Vīracōḻiyam; Peruntēvaṉār iyaṟṟiya uraiyuṭaṉ."
           ],
           "shelfMark": [
             "*OLB 84-1935"
@@ -3665,14 +3700,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3680,8 +3715,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -3705,8 +3740,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -3716,8 +3751,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -3735,8 +3770,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3751,20 +3786,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3778,7 +3813,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000023",
         "_score": null,
@@ -3817,8 +3852,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -3861,14 +3896,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3876,8 +3911,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -3898,16 +3933,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -3921,8 +3956,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3937,20 +3972,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3964,7 +3999,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000024",
         "_score": null,
@@ -3996,18 +4031,18 @@
           ],
           "language": [
             {
-              "label": "Arabic",
-              "id": "lang:ara"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
             1976
           ],
-          "title": [
-            "al-Baḥrayn : mushkilāt al-taghyīr al-siyāsī wa-al-ijtimāʻī"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "al-Baḥrayn : mushkilāt al-taghyīr al-siyāsī wa-al-ijtimāʻī"
           ],
           "shelfMark": [
             "*OFK 84-1944"
@@ -4048,14 +4083,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -4063,8 +4098,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -4076,11 +4111,11 @@
             "al-Baḥrayn : mushkilāt al-taghyīr al-siyāsī wa-al-ijtimāʻī / Muḥammad al-Rumayḥī."
           ],
           "uri": "b10000024",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "DS247.B28 R85"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -4090,16 +4125,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -4117,8 +4152,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -4133,20 +4168,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4160,7 +4195,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000025",
         "_score": null,
@@ -4212,27 +4247,17 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000025"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "NNSZ00100561"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0200024"
             }
           ],
           "uniformTitle": [
             "Sonatinas, piano"
           ],
-          "updatedAt": 1615561533020,
+          "updatedAt": 1536782413910,
           "publicationStatement": [
             "Wolfenbüttel : Möseler, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000025",
-            "urn:undefined:NNSZ00100561",
-            "urn:undefined:(WaOLN)nyp0200024"
+            "urn:bnum:10000025"
           ],
           "materialType": [
             {
@@ -4282,17 +4307,16 @@
           ],
           "items": [
             {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
               "identifier": [
                 "urn:barcode:33433032709697"
               ],
-              "physicalLocation": [
-                "JMF 83-107"
-              ],
               "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "JMF 83-107"
-                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433032709697"
@@ -4308,7 +4332,7 @@
                 "33433032709697"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10942031",
               "shelfMark": [
@@ -4323,12 +4347,12 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
                 }
               ],
               "holdingLocation": [
                 {
-                  "id": "loc:rcpm8",
+                  "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
               ]
@@ -4343,7 +4367,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000026",
         "_score": null,
@@ -4372,18 +4396,18 @@
           ],
           "language": [
             {
-              "label": "Arabic",
-              "id": "lang:ara"
+              "id": "lang:ara",
+              "label": "Arabic"
             }
           ],
           "createdYear": [
             1975
           ],
-          "title": [
-            "Mushārakat al-marʼah fī al-ḥayāh al-ʻāmmah fī Sūrīyah mundhu al-istiqlāl 1945 wa-ḥattá 1975"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Mushārakat al-marʼah fī al-ḥayāh al-ʻāmmah fī Sūrīyah mundhu al-istiqlāl 1945 wa-ḥattá 1975"
           ],
           "shelfMark": [
             "*OFX 84-1953"
@@ -4424,14 +4448,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -4439,8 +4463,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -4450,11 +4474,11 @@
             "Mushārakat al-marʼah fī al-ḥayāh al-ʻāmmah fī Sūrīyah mundhu al-istiqlāl 1945 wa-ḥattá 1975 / Nabīlah al-Razzāz."
           ],
           "uri": "b10000026",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "HQ402 .R39"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -4464,16 +4488,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -4491,8 +4515,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -4507,20 +4531,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4534,7 +4558,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000027",
         "_score": null,
@@ -4586,27 +4610,17 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000027"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "NNSZ00100562"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0200026"
             }
           ],
           "uniformTitle": [
             "Kleine Sonaten, violin"
           ],
-          "updatedAt": 1604368847197,
+          "updatedAt": 1536782413067,
           "publicationStatement": [
             "Wolfenbüttel : Möseler Verlag, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000027",
-            "urn:undefined:NNSZ00100562",
-            "urn:undefined:(WaOLN)nyp0200026"
+            "urn:bnum:10000027"
           ],
           "materialType": [
             {
@@ -4656,17 +4670,16 @@
           ],
           "items": [
             {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
               "identifier": [
                 "urn:barcode:33433032709572"
               ],
-              "physicalLocation": [
-                "JMF 83-95"
-              ],
               "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "JMF 83-95"
-                },
                 {
                   "type": "bf:Barcode",
                   "value": "33433032709572"
@@ -4682,7 +4695,7 @@
                 "33433032709572"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10942032",
               "shelfMark": [
@@ -4697,7 +4710,13 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available"
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4711,7 +4730,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000028",
         "_score": null,
@@ -4744,8 +4763,8 @@
           ],
           "language": [
             {
-              "label": "Hindi",
-              "id": "lang:hin"
+              "id": "lang:hin",
+              "label": "Hindi"
             }
           ],
           "createdYear": [
@@ -4796,14 +4815,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -4811,8 +4830,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -4822,11 +4841,11 @@
             "Vaṃśabhāskara : eka adhyayana / lekhaka Ālamaśāha Khāna."
           ],
           "uri": "b10000028",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PK2708.9.S9 V334"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -4836,16 +4855,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -4863,8 +4882,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -4879,20 +4898,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -4906,7 +4925,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000029",
         "_score": null,
@@ -4939,8 +4958,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -4991,14 +5010,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -5006,8 +5025,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -5017,11 +5036,11 @@
             "Cruor : for organ solo, 1977 / B. Lorentzen."
           ],
           "uri": "b10000029",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "M11 .L"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -5031,16 +5050,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -5054,8 +5073,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -5070,20 +5089,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -5097,7 +5116,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000030",
         "_score": null,
@@ -5185,7 +5204,7 @@
           "uniformTitle": [
             "Uṇādisūtra."
           ],
-          "updatedAt": 1599201207254,
+          "updatedAt": 1578432536487,
           "publicationStatement": [
             "Karanāla : Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; Bahālagaḍha, Harayāṇa : prāptisthānam, Rāmalāla Kapūra Ṭrasṭa, 1974."
           ],
@@ -5228,7 +5247,7 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Karanāla : Bahālagaḍha, Harayāṇa :"
@@ -5270,7 +5289,7 @@
                 "33433012968222"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10000007",
               "shelfMark": [
@@ -5284,8 +5303,8 @@
               ],
               "status": [
                 {
-                  "id": "status:co",
-                  "label": "Loaned"
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5305,7 +5324,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000031",
         "_score": null,
@@ -5321,8 +5340,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -5368,14 +5387,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -5383,8 +5402,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -5405,8 +5424,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -5417,8 +5436,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -5432,8 +5451,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -5448,20 +5467,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -5475,7 +5494,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000032",
         "_score": null,
@@ -5541,7 +5560,7 @@
               "value": "10000032"
             }
           ],
-          "updatedAt": 1596871156066,
+          "updatedAt": 1578432679896,
           "publicationStatement": [
             "Tihrān : Kitābfurūshī-i Khayyām, 1351 [1972]"
           ],
@@ -5658,7 +5677,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000033",
         "_score": null,
@@ -5682,8 +5701,8 @@
           ],
           "language": [
             {
-              "label": "English",
-              "id": "lang:eng"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "createdYear": [
@@ -5726,14 +5745,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -5741,8 +5760,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -5764,8 +5783,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "tableOfContents": [
@@ -5775,8 +5794,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -5790,8 +5809,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -5806,34 +5825,34 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Music Division",
-                  "id": "orgs:1123"
+                  "id": "orgs:1123",
+                  "label": "Music Division"
                 }
               ],
               "accessMessage": [
                 {
-                  "label": "Use in library",
-                  "id": "accessMessage:1"
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
@@ -5845,20 +5864,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Performing Arts Research Collections - Music",
-                  "id": "loc:mym32"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mym32",
+                  "label": "Performing Arts Research Collections - Music"
                 }
               ]
             }
@@ -5872,7 +5891,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000034",
         "_score": null,
@@ -5907,8 +5926,8 @@
           ],
           "language": [
             {
-              "label": "Sanskrit",
-              "id": "lang:san"
+              "id": "lang:san",
+              "label": "Sanskrit"
             }
           ],
           "createdYear": [
@@ -5967,14 +5986,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -5982,19 +6001,19 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
             "Brhatkathāślokasaṁgraha : a study / by V.S. Agrawala ; with Sanskrit text, edited by P.K. Agrawala."
           ],
           "uri": "b10000034",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PK3794.B84 B7 1974"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -6004,16 +6023,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -6031,8 +6050,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -6047,20 +6066,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6074,7 +6093,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000035",
         "_score": null,
@@ -6102,8 +6121,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -6149,14 +6168,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -6164,8 +6183,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -6186,8 +6205,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -6200,8 +6219,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -6215,8 +6234,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -6231,34 +6250,34 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Music Division",
-                  "id": "orgs:1123"
+                  "id": "orgs:1123",
+                  "label": "Music Division"
                 }
               ],
               "accessMessage": [
                 {
-                  "label": "Use in library",
-                  "id": "accessMessage:1"
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
                 }
               ],
               "requestable": [
@@ -6270,20 +6289,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Performing Arts Research Collections - Music",
-                  "id": "loc:mym32"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mym32",
+                  "label": "Performing Arts Research Collections - Music"
                 }
               ]
             }
@@ -6297,7 +6316,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000036",
         "_score": null,
@@ -6326,8 +6345,8 @@
           ],
           "language": [
             {
-              "label": "Sanskrit",
-              "id": "lang:san"
+              "id": "lang:san",
+              "label": "Sanskrit"
             }
           ],
           "createdYear": [
@@ -6378,14 +6397,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -6393,8 +6412,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -6404,11 +6423,11 @@
             "Srīnārāyaṇatīrthayatīndracaritram[sic] / praṇetā Garikapāṭi Lakṣmīkāntaḥ."
           ],
           "uri": "b10000036",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PK3799.L28 S68"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -6418,16 +6437,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -6441,8 +6460,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -6457,20 +6476,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6484,7 +6503,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000037",
         "_score": null,
@@ -6507,8 +6526,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -6554,14 +6573,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -6569,8 +6588,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -6591,8 +6610,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -6602,8 +6621,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -6617,8 +6636,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -6633,20 +6652,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6660,7 +6679,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000038",
         "_score": null,
@@ -6684,8 +6703,8 @@
           ],
           "language": [
             {
-              "label": "Sanskrit",
-              "id": "lang:san"
+              "id": "lang:san",
+              "label": "Sanskrit"
             }
           ],
           "createdYear": [
@@ -6736,14 +6755,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -6751,8 +6770,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -6762,11 +6781,11 @@
             "Rtambharā : Himācala ke ādhunika Saṃskrta kaviyoṃ kī kavitāyoṃ kā saṅkalana / mukhya sampādaka Lāla Canda Prārthī ; sampādaka maṇḍala, Manasā Rāma Śarmā 'Arūṇa'...[et al.]."
           ],
           "uri": "b10000038",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PK3800.H52 R7"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -6776,16 +6795,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -6803,8 +6822,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -6819,20 +6838,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -6846,7 +6865,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000039",
         "_score": null,
@@ -6862,8 +6881,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -6912,14 +6931,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -6927,8 +6946,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -6949,8 +6968,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -6960,8 +6979,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -6975,8 +6994,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -6991,20 +7010,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7018,7 +7037,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000040",
         "_score": null,
@@ -7041,8 +7060,8 @@
           ],
           "language": [
             {
-              "label": "Tamil",
-              "id": "lang:tam"
+              "id": "lang:tam",
+              "label": "Tamil"
             }
           ],
           "createdYear": [
@@ -7096,14 +7115,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -7111,8 +7130,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -7122,11 +7141,11 @@
             "Tiru. Vi. Kaliyāṇacuntaraṉār. Āciriyar Pulavar Aracu."
           ],
           "uri": "b10000040",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4758.9.K223 Z83"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -7136,16 +7155,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -7163,8 +7182,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -7179,20 +7198,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7206,7 +7225,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000041",
         "_score": null,
@@ -7230,8 +7249,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -7282,14 +7301,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -7297,8 +7316,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -7308,11 +7327,11 @@
             "Encounter / Julia Usher."
           ],
           "uri": "b10000041",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "M557.2.U8 E5"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -7322,8 +7341,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "tableOfContents": [
@@ -7333,8 +7352,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -7348,8 +7367,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -7364,20 +7383,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7391,7 +7410,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000042",
         "_score": null,
@@ -7415,21 +7434,21 @@
           ],
           "language": [
             {
-              "label": "Sanskrit",
-              "id": "lang:san"
+              "id": "lang:san",
+              "label": "Sanskrit"
             }
-          ],
-          "createdYear": [
-            1971
           ],
           "dateEndString": [
             "1972"
           ],
-          "title": [
-            "Sanatsujātīyadarśanam; Mahābhārata-Udyoga parva ke antargata brahmavidyā kā sandarbha. Śabdārtha evaṃ subodha Hindī-bhāṣya se samanvita."
+          "createdYear": [
+            1971
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Sanatsujātīyadarśanam; Mahābhārata-Udyoga parva ke antargata brahmavidyā kā sandarbha. Śabdārtha evaṃ subodha Hindī-bhāṣya se samanvita."
           ],
           "shelfMark": [
             "*OKN 84-1926"
@@ -7476,14 +7495,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -7491,8 +7510,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -7517,16 +7536,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -7540,8 +7559,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -7556,20 +7575,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7583,7 +7602,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000043",
         "_score": null,
@@ -7655,7 +7674,7 @@
               "value": "10000043"
             }
           ],
-          "updatedAt": 1616776709389,
+          "updatedAt": 1578432825145,
           "publicationStatement": [
             "Wien : Verlag Doblinger, c1980."
           ],
@@ -7694,7 +7713,7 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Wien :"
@@ -7716,9 +7735,6 @@
               "identifier": [
                 "urn:barcode:33433004744128"
               ],
-              "physicalLocation": [
-                "JMC 83-9"
-              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -7739,7 +7755,7 @@
                 "33433004744128"
               ],
               "requestable": [
-                false
+                true
               ],
               "uri": "i10000010",
               "shelfMark": [
@@ -7753,8 +7769,8 @@
               ],
               "status": [
                 {
-                  "id": "status:co",
-                  "label": "Loaned"
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7774,7 +7790,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000044",
         "_score": null,
@@ -7811,18 +7827,18 @@
           ],
           "language": [
             {
-              "label": "Tibetan",
-              "id": "lang:tib"
+              "id": "lang:tib",
+              "label": "Tibetan"
             }
           ],
           "createdYear": [
             1976
           ],
-          "title": [
-            "ʼJam-mgon Rgyal-ba gñis-paʼi Rgyal-tshab Dpal-ldan Bla-ma Dam-pa Khyab-bdag Khri-chen Byaṅ-chub-chos-ʼphel dpal-bzaṅ-poʼi rnam par thar pa Dgaʼ ldan bstan paʼi mdzes rgyab [sic] : the biography of the 69th Khri-chen of Dgaʼ-ʼldan Byaṅ-chub-chos-ʼphel"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "ʼJam-mgon Rgyal-ba gñis-paʼi Rgyal-tshab Dpal-ldan Bla-ma Dam-pa Khyab-bdag Khri-chen Byaṅ-chub-chos-ʼphel dpal-bzaṅ-poʼi rnam par thar pa Dgaʼ ldan bstan paʼi mdzes rgyab [sic] : the biography of the 69th Khri-chen of Dgaʼ-ʼldan Byaṅ-chub-chos-ʼphel"
           ],
           "shelfMark": [
             "*OZ+ 82-2361"
@@ -7866,14 +7882,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -7881,8 +7897,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -7908,16 +7924,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -7935,8 +7951,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -7951,20 +7967,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7978,7 +7994,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000045",
         "_score": null,
@@ -7994,8 +8010,8 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
@@ -8046,14 +8062,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -8061,8 +8077,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -8072,11 +8088,11 @@
             "Thoughts & feelings : for violin solo / Joachim Stutschewsky."
           ],
           "uri": "b10000045",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "M42 .S"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -8086,16 +8102,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -8109,8 +8125,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -8125,20 +8141,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -8152,7 +8168,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000046",
         "_score": null,
@@ -8190,18 +8206,18 @@
           ],
           "language": [
             {
-              "label": "Tibetan",
-              "id": "lang:tib"
+              "id": "lang:tib",
+              "label": "Tibetan"
             }
           ],
           "createdYear": [
             1976
           ],
-          "title": [
-            "Dpal Kye rdo rjeʼi phyi naṅ bskyed rim ñams len gnad kyi gsal byed sñan brgyud bstan pa rgyas paʼi ñin byed : a detailed exegesis of external and internal aspects of the visualization practice of the Hevajra tantra"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Dpal Kye rdo rjeʼi phyi naṅ bskyed rim ñams len gnad kyi gsal byed sñan brgyud bstan pa rgyas paʼi ñin byed : a detailed exegesis of external and internal aspects of the visualization practice of the Hevajra tantra"
           ],
           "shelfMark": [
             "*OZ+ 82-2362"
@@ -8255,14 +8271,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -8270,8 +8286,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -8297,8 +8313,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -8310,8 +8326,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -8329,8 +8345,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -8345,20 +8361,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -8372,7 +8388,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000047",
         "_score": null,
@@ -8401,18 +8417,18 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
             1979
           ],
-          "title": [
-            "Vocalise, op. 38, for soprano, clarinet, piano, violin, violoncello"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Vocalise, op. 38, for soprano, clarinet, piano, violin, violoncello"
           ],
           "shelfMark": [
             "JMG 83-79"
@@ -8456,14 +8472,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -8471,8 +8487,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -8496,8 +8512,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -8507,8 +8523,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -8522,8 +8538,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -8538,20 +8554,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -8565,7 +8581,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000048",
         "_score": null,
@@ -8594,8 +8610,8 @@
           ],
           "language": [
             {
-              "label": "Tibetan",
-              "id": "lang:tib"
+              "id": "lang:tib",
+              "label": "Tibetan"
             }
           ],
           "createdYear": [
@@ -8643,14 +8659,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -8658,8 +8674,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -8669,11 +8685,11 @@
             "Bkra śis Tshe riṅ mai sgrub skor sogs : a collection of texts outlining the rites of the Five Long Lived Sisters and other highly esoteric rituals."
           ],
           "uri": "b10000048",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "BQ7695 .B55"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -8683,16 +8699,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -8710,8 +8726,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -8726,20 +8742,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -8753,7 +8769,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000049",
         "_score": null,
@@ -8777,18 +8793,18 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
             1976
           ],
-          "title": [
-            "Symphony, op. 26 : full score"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Symphony, op. 26 : full score"
           ],
           "shelfMark": [
             "JMG 83-80"
@@ -8832,14 +8848,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -8847,8 +8863,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -8872,8 +8888,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -8883,8 +8899,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -8898,8 +8914,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -8914,20 +8930,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -8941,7 +8957,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000050",
         "_score": null,
@@ -9016,7 +9032,7 @@
               "value": "76901747"
             }
           ],
-          "updatedAt": 1616782999442,
+          "updatedAt": 1536782413246,
           "publicationStatement": [
             "New Delhi : Urgyan Dorje, 1976."
           ],
@@ -9086,9 +9102,6 @@
               "identifier": [
                 "urn:barcode:33433015080421"
               ],
-              "physicalLocation": [
-                "*OZ+ 82-2381"
-              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -9144,7 +9157,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000051",
         "_score": null,
@@ -9168,18 +9181,18 @@
           ],
           "language": [
             {
-              "label": "No linguistic content",
-              "id": "lang:zxx"
+              "id": "lang:zxx",
+              "label": "No linguistic content"
             }
           ],
           "createdYear": [
             1977
           ],
-          "title": [
-            "2 symfoni : Den forsvundne : baseret på musikken til filmen \"Den forsvundne fuldmægtig\" op. 69c, 1972"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "2 symfoni : Den forsvundne : baseret på musikken til filmen \"Den forsvundne fuldmægtig\" op. 69c, 1972"
           ],
           "shelfMark": [
             "JMG 83-75"
@@ -9227,14 +9240,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -9242,8 +9255,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -9267,8 +9280,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -9279,8 +9292,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -9294,8 +9307,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -9310,20 +9323,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -9337,7 +9350,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10000052",
         "_score": null,
@@ -9368,8 +9381,8 @@
           ],
           "language": [
             {
-              "label": "Tibetan",
-              "id": "lang:tib"
+              "id": "lang:tib",
+              "label": "Tibetan"
             }
           ],
           "createdYear": [
@@ -9410,7 +9423,7 @@
               "value": "76900205"
             }
           ],
-          "updatedAt": 1536782412087,
+          "updatedAt": 1613956533973,
           "publicationStatement": [
             "Gangtog : Sherab Gyaltshen Lama, 1976."
           ],
@@ -9420,14 +9433,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -9435,8 +9448,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -9447,34 +9460,37 @@
             "Rig ʼdzin grub paʼi dbaṅ phyug chen po Padma-ʼbyuṅ-gnas kyi rnam par thar pa ṅo mtshar phun sum tshogs paʼi rgya mtsho : a detailed account of the life of Guru Rimpoche Padmasambhava Miraculously Born / by Byaṅ-bdag Bkra-śis-stobs-rgyal."
           ],
           "uri": "b10000052",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "BQ7950.P327 B55 1976"
           ],
-          "numAvailable": [
+          "numItems": [
             1
+          ],
+          "numAvailable": [
+            0
           ],
           "placeOfPublication": [
             "Gangtog :"
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
                 "urn:barcode:33433015080447"
+              ],
+              "physicalLocation": [
+                "*OZ+ 82-2383"
               ],
               "identifierV2": [
                 {
@@ -9488,15 +9504,15 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
                 "33433015080447"
               ],
               "requestable": [
-                true
+                false
               ],
               "uri": "i10000015",
               "shelfMark": [
@@ -9504,20 +9520,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:co",
+                  "label": "Loaned"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }

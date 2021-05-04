@@ -1,5 +1,5 @@
 {
-  "took": 134,
+  "took": 181,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,11 +7,11 @@
     "failed": 0
   },
   "hits": {
-    "total": 299,
+    "total": 298,
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10004373",
         "_score": null,
@@ -44,21 +44,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1971
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Kuvempu sāhitya: Kelavu adhyayanagaḷu."
+          "createdYear": [
+            1971
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Kuvempu sāhitya: Kelavu adhyayanagaḷu."
           ],
           "shelfMark": [
             "*OLA 83-3417"
@@ -102,14 +102,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -117,8 +117,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -142,16 +142,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -169,8 +169,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -185,28 +185,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -224,8 +224,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -240,20 +240,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -267,7 +267,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10008327",
         "_score": null,
@@ -352,7 +352,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616150360082,
+          "updatedAt": 1616693595001,
           "publicationStatement": [
             "Dhāravāḍa : Kannaḍa Adhyayana Pīṭha, Karnāṭaka Viśvavidyālaya, 1974-"
           ],
@@ -415,63 +415,12 @@
                 }
               ],
               "identifier": [
-                "urn:barcode:33433013119130"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433013119130"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433013119130"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10004641",
-              "shelfMark": [
-                "*OLA 83-2636"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
                 "urn:barcode:33433005544238"
               ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
-                  "value": "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 1"
+                  "value": "*OLA 83-2636 v. 1"
                 },
                 {
                   "type": "bf:Barcode",
@@ -492,7 +441,7 @@
               ],
               "uri": "i10004639",
               "shelfMark": [
-                "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 1"
+                "*OLA 83-2636 v. 1"
               ],
               "catalogItemType": [
                 {
@@ -526,7 +475,7 @@
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
-                  "value": "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 2"
+                  "value": "*OLA 83-2636 v. 2"
                 },
                 {
                   "type": "bf:Barcode",
@@ -547,7 +496,62 @@
               ],
               "uri": "i10004640",
               "shelfMark": [
-                "*OLA 83-2636|zLibrary has: Vol. 1-2, 4. v. 2"
+                "*OLA 83-2636 v. 2"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013119130"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 83-2636 v. 4"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013119130"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013119130"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10004641",
+              "shelfMark": [
+                "*OLA 83-2636 v. 4"
               ],
               "catalogItemType": [
                 {
@@ -578,7 +582,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011457",
         "_score": null,
@@ -610,21 +614,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1968
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Śrī Śārṅgadēva viracita Saṅgītaratnākara : Nihśaṅkahrdaya vemba Kannaḍa vyākhyāna samēta"
+          "createdYear": [
+            1968
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Śrī Śārṅgadēva viracita Saṅgītaratnākara : Nihśaṅkahrdaya vemba Kannaḍa vyākhyāna samēta"
           ],
           "shelfMark": [
             "JMM 86-1"
@@ -666,14 +670,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -681,8 +685,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -704,8 +708,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -716,8 +720,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -735,8 +739,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -751,20 +755,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book non-circ",
-                  "id": "catalogItemType:2"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -778,7 +782,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011462",
         "_score": null,
@@ -807,21 +811,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1964
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Pravāsi kaṇḍa Iṇḍiyā."
+          "createdYear": [
+            1964
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Pravāsi kaṇḍa Iṇḍiyā."
           ],
           "shelfMark": [
             "*OLA 86-308"
@@ -868,14 +872,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -883,8 +887,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -908,16 +912,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -935,8 +939,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -951,28 +955,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -990,8 +994,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1006,20 +1010,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1033,7 +1037,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011472",
         "_score": null,
@@ -1068,21 +1072,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1959
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Śrī Harikathāmrtasāra ṭīkā Pañcaratna prakāśikā"
+          "createdYear": [
+            1959
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Śrī Harikathāmrtasāra ṭīkā Pañcaratna prakāśikā"
           ],
           "shelfMark": [
             "*OLA 86-1120"
@@ -1138,14 +1142,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1153,8 +1157,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -1176,8 +1180,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -1188,8 +1192,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -1207,8 +1211,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1223,20 +1227,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1250,7 +1254,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011759",
         "_score": null,
@@ -1290,21 +1294,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1974
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Kīrtana darpaṇa : prāyōgika saṅgītaśāstra"
+          "createdYear": [
+            1974
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Kīrtana darpaṇa : prāyōgika saṅgītaśāstra"
           ],
           "shelfMark": [
             "JML 86-5"
@@ -1353,14 +1357,14 @@
           ],
           "materialType": [
             {
-              "label": "Notated music",
-              "id": "resourcetypes:not"
+              "id": "resourcetypes:not",
+              "label": "Notated music"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1368,8 +1372,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -1391,16 +1395,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -1418,8 +1422,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1434,20 +1438,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "printed music, non-circ",
-                  "id": "catalogItemType:7"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1461,7 +1465,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011947",
         "_score": null,
@@ -1492,8 +1496,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "createdYear": [
@@ -1544,14 +1548,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1559,8 +1563,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -1582,16 +1586,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -1609,8 +1613,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1625,28 +1629,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -1664,8 +1668,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1680,20 +1684,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1707,7 +1711,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10012152",
         "_score": null,
@@ -1745,8 +1749,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "createdYear": [
@@ -1768,7 +1772,7 @@
             "85910191"
           ],
           "contributorLiteral": [
-            "Śrīnivāsarāju, Ci."
+            "Śrīnivāsarāju, Ci., 1942-2007."
           ],
           "dateStartYear": [
             1985
@@ -1785,26 +1789,36 @@
             {
               "type": "bf:Lccn",
               "value": "85910191"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ01314127"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0212117"
             }
           ],
-          "updatedAt": 1525296793767,
+          "updatedAt": 1612359896903,
           "publicationStatement": [
             "Beṅgaḷūru : Bi. Eṃ. Śrī. Smāraka Pratiṣṭhāna, 1985."
           ],
           "identifier": [
             "urn:bnum:10012152",
-            "urn:lccn:85910191"
+            "urn:lccn:85910191",
+            "urn:undefined:NNSZ01314127",
+            "urn:undefined:(WaOLN)nyp0212117"
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -1812,8 +1826,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -1834,16 +1848,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -1861,8 +1875,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -1877,20 +1891,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -1904,7 +1918,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10015200",
         "_score": null,
@@ -1933,18 +1947,18 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "createdYear": [
             1985
           ],
-          "title": [
-            "Sāhasabhīmavijayaṃ (Gadāyuddhaṃ)"
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Sāhasabhīmavijayaṃ (Gadāyuddhaṃ)"
           ],
           "shelfMark": [
             "*OLA 87-2376"
@@ -1994,14 +2008,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2009,8 +2023,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2031,8 +2045,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -2043,8 +2057,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2058,8 +2072,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2074,20 +2088,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2101,7 +2115,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10015230",
         "_score": null,
@@ -2177,7 +2191,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616118697107,
+          "updatedAt": 1616645328892,
           "publicationStatement": [
             "Beṅgaḷūru : Gōpālācārya, 1978?-"
           ],
@@ -2399,7 +2413,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10015231",
         "_score": null,
@@ -2433,21 +2447,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1966
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Śrī Vādirāja rjutva prakāśikā"
+          "createdYear": [
+            1966
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Śrī Vādirāja rjutva prakāśikā"
           ],
           "shelfMark": [
             "*OKN 87-2441"
@@ -2474,7 +2488,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1564967257499,
+          "updatedAt": 1595823877234,
           "publicationStatement": [
             "Maisūru : Gurukrpā Granthamālā : pustaka doreyuva sthaḷa, Gōvindarāv, Beṅgaḷūru, 1966-"
           ],
@@ -2483,14 +2497,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2498,8 +2512,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2521,16 +2535,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2538,14 +2552,18 @@
               ],
               "identifierV2": [
                 {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKN 87-2441 Library has: Vol. 5. v. 5"
+                },
+                {
                   "type": "bf:Barcode",
                   "value": "33433058620984"
                 }
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2556,24 +2574,24 @@
               ],
               "uri": "i13786568",
               "shelfMark": [
-                "*OKN 87-2441"
+                "*OKN 87-2441 Library has: Vol. 5. v. 5"
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2587,7 +2605,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10016133",
         "_score": null,
@@ -2610,8 +2628,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "dateEndString": [
@@ -2668,14 +2686,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2683,8 +2701,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2705,16 +2723,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2728,8 +2746,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2744,20 +2762,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2771,7 +2789,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10016294",
         "_score": null,
@@ -2800,21 +2818,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1985
           ],
           "dateEndString": [
             "1884"
           ],
-          "title": [
-            "Nāga Varmā's Karnātaka bhāshā-bhūshana : the oldest grammar extant of the language Karṇāṭaka bhāṣābhūṣana"
+          "createdYear": [
+            1985
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Nāga Varmā's Karnātaka bhāshā-bhūshana : the oldest grammar extant of the language Karṇāṭaka bhāṣābhūṣana"
           ],
           "shelfMark": [
             "*OLA 87-1958"
@@ -2864,14 +2882,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -2879,8 +2897,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -2901,8 +2919,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -2912,8 +2930,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -2927,8 +2945,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -2943,20 +2961,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -2970,7 +2988,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10016426",
         "_score": null,
@@ -2995,8 +3013,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "dateEndString": [
@@ -3052,14 +3070,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3067,8 +3085,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
@@ -3086,16 +3104,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -3109,8 +3127,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3125,20 +3143,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3152,7 +3170,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10016756",
         "_score": null,
@@ -3187,8 +3205,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "dateEndString": [
@@ -3242,14 +3260,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -3257,8 +3275,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -3279,8 +3297,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -3290,8 +3308,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -3309,8 +3327,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -3325,20 +3343,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -3352,7 +3370,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10315622",
         "_score": null,
@@ -3594,7 +3612,7 @@
               ]
             }
           ],
-          "updatedAt": 1615928150016,
+          "updatedAt": 1616428619759,
           "publicationStatement": [
             "Maisūru, Maisūru Viśvevidyānilaya."
           ],
@@ -5846,7 +5864,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10379755",
         "_score": null,
@@ -5923,7 +5941,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1615965494620,
+          "updatedAt": 1616473990219,
           "publicationStatement": [
             "Maisūru : Kannaḍa Adhyayana Saṃsthe, Maisūru Viśvavidāyanilaya, 1971-2004."
           ],
@@ -6639,7 +6657,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10387344",
         "_score": null,
@@ -6715,7 +6733,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1615982922325,
+          "updatedAt": 1616493001802,
           "publicationStatement": [
             "Maisūru] Prasarāṅga, Maisūru Viśvavidyānilaya, 1971-<2003>"
           ],
@@ -7278,7 +7296,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10430533",
         "_score": null,
@@ -7295,15 +7313,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1964
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1964
           ],
           "type": [
             "nypl:Item"
@@ -7353,14 +7371,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -7368,8 +7386,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -7390,16 +7408,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -7417,8 +7435,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -7433,20 +7451,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -7460,7 +7478,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10448884",
         "_score": null,
@@ -7537,7 +7555,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616019926599,
+          "updatedAt": 1616531833686,
           "publicationStatement": [
             "Beṅgaḷūru, Prakaṭaṇa Mattu Pracārō Panyāsa Vibhāga, Beṅgaḷūru Viśvavidyālaya, 1974-"
           ],
@@ -7929,7 +7947,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10448885",
         "_score": null,
@@ -8007,7 +8025,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616008937267,
+          "updatedAt": 1616520617176,
           "publicationStatement": [
             "Maisūru: Kannaḍa Adhyayana Saṃsthe, Maisūru Viśvavidyānilaya: Mārāṭagāraru, Prasārāṅga, 1974-"
           ],
@@ -8399,7 +8417,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10621864",
         "_score": null,
@@ -8428,8 +8446,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "dateEndString": [
@@ -8486,14 +8504,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -8501,8 +8519,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -8523,16 +8541,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -8546,8 +8564,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -8562,20 +8580,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -8589,7 +8607,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10691564",
         "_score": null,
@@ -8664,7 +8682,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616078280337,
+          "updatedAt": 1616590961322,
           "publicationStatement": [
             "Maisūru, Kāvyālaya [1969-"
           ],
@@ -8949,7 +8967,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10734117",
         "_score": null,
@@ -9013,7 +9031,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616088880602,
+          "updatedAt": 1616611560182,
           "identifier": [
             "urn:bnum:10734117"
           ],
@@ -9234,7 +9252,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10756472",
         "_score": null,
@@ -9313,7 +9331,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616117321606,
+          "updatedAt": 1616640153490,
           "publicationStatement": [
             "Bangalore, Guru Guha Gana Nilaya [1963-"
           ],
@@ -9544,7 +9562,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10836580",
         "_score": null,
@@ -9573,21 +9591,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1964
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Yakṣagāna chandassu."
+          "createdYear": [
+            1964
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Yakṣagāna chandassu."
           ],
           "shelfMark": [
             "*OLA 82-1982"
@@ -9631,14 +9649,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -9646,8 +9664,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -9671,16 +9689,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -9694,8 +9712,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -9710,20 +9728,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -9737,7 +9755,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10840234",
         "_score": null,
@@ -9764,21 +9782,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1976
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Basavarāja Kaṭṭīmani avara ātmakathe."
+          "createdYear": [
+            1976
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Basavarāja Kaṭṭīmani avara ātmakathe."
           ],
           "shelfMark": [
             "*OLA 82-4677"
@@ -9822,14 +9840,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -9837,8 +9855,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -9863,16 +9881,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -9890,8 +9908,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -9906,20 +9924,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -9933,7 +9951,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10840658",
         "_score": null,
@@ -9957,21 +9975,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1975
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Kannaḍa janapada sāhitya bhaṇḍāra"
+          "createdYear": [
+            1975
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Kannaḍa janapada sāhitya bhaṇḍāra"
           ],
           "shelfMark": [
             "*OLA 82-5593"
@@ -10016,14 +10034,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -10031,8 +10049,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -10056,16 +10074,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10079,8 +10097,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10095,20 +10113,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -10122,7 +10140,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10841472",
         "_score": null,
@@ -10147,8 +10165,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "dateEndString": [
@@ -10192,22 +10210,22 @@
           "publicationStatement": [
             "Beṅgaḷūru : Bi. Es. Śāstri, 1967̲"
           ],
-          "genreForm": [
-            "Kannada drama."
-          ],
           "identifier": [
             "urn:bnum:10841472"
           ],
+          "genreForm": [
+            "Kannada drama."
+          ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -10215,8 +10233,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
@@ -10234,16 +10252,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10257,8 +10275,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10273,28 +10291,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10308,8 +10326,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10324,20 +10342,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -10351,7 +10369,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10841507",
         "_score": null,
@@ -10379,21 +10397,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1974
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Śāsana vy̲asaṅga"
+          "createdYear": [
+            1974
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Śāsana vy̲asaṅga"
           ],
           "shelfMark": [
             "*OLA 82-3004"
@@ -10437,14 +10455,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -10452,8 +10470,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -10477,16 +10495,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10500,8 +10518,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10516,28 +10534,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10551,8 +10569,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10567,20 +10585,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -10594,7 +10612,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10843261",
         "_score": null,
@@ -10623,21 +10641,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1971
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Śaili."
+          "createdYear": [
+            1971
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Śaili."
           ],
           "shelfMark": [
             "*OLA 82-5545"
@@ -10684,14 +10702,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -10699,8 +10717,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -10724,16 +10742,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10747,8 +10765,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10763,20 +10781,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -10790,7 +10808,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10843271",
         "_score": null,
@@ -10810,21 +10828,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1974
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Śrīkaṇṭhēśagauḍara krtigaḷu."
+          "createdYear": [
+            1974
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Śrīkaṇṭhēśagauḍara krtigaḷu."
           ],
           "shelfMark": [
             "*OLA 83-2833"
@@ -10871,14 +10889,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -10886,8 +10904,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
@@ -10908,8 +10926,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "titleAlt": [
@@ -10919,8 +10937,8 @@
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -10934,8 +10952,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -10950,20 +10968,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -10977,7 +10995,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10848968",
         "_score": null,
@@ -11014,21 +11032,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1962
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Dāsara kīrtanegaḷu."
+          "createdYear": [
+            1962
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Dāsara kīrtanegaḷu."
           ],
           "shelfMark": [
             "JMK 82-18"
@@ -11072,14 +11090,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -11087,8 +11105,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -11113,16 +11131,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -11140,8 +11158,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -11156,28 +11174,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book non-circ",
-                  "id": "catalogItemType:2"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -11195,8 +11213,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -11211,20 +11229,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book non-circ",
-                  "id": "catalogItemType:2"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -11238,7 +11256,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10864908",
         "_score": null,
@@ -11255,15 +11273,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1966
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1966
           ],
           "type": [
             "nypl:Item"
@@ -11298,14 +11316,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -11313,8 +11331,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -11324,11 +11342,11 @@
             "Bhāratada caritre. [Lēkhaka] Ke. Narasayya."
           ],
           "uri": "b10864908",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "DS436 .N37"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -11338,16 +11356,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -11355,8 +11373,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -11368,24 +11386,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -11399,7 +11417,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10893177",
         "_score": null,
@@ -11487,7 +11505,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616149823388,
+          "updatedAt": 1616682600356,
           "publicationStatement": [
             "Maisūru : Senṭral Insṭiṭyūte āph Iṇḍiyan Lāngvējas, 1980-"
           ],
@@ -11714,7 +11732,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10893183",
         "_score": null,
@@ -11749,8 +11767,8 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
           ],
           "dateEndString": [
@@ -11801,14 +11819,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -11816,8 +11834,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -11839,8 +11857,8 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "tableOfContents": [
@@ -11850,8 +11868,8 @@
             {
               "owner": [
                 {
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-                  "id": "orgs:1002"
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
                 }
               ],
               "identifier": [
@@ -11869,8 +11887,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -11885,20 +11903,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book non-circ",
-                  "id": "catalogItemType:2"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rcpm2"
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -11912,7 +11930,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10894417",
         "_score": null,
@@ -11932,15 +11950,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1974
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1974
           ],
           "type": [
             "nypl:Item"
@@ -11972,14 +11990,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -11987,8 +12005,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -11999,11 +12017,11 @@
             "Yakṣagāna kalāvidaru / A. Gaṇapayya Alse."
           ],
           "uri": "b10894417",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PN2881.5 .A4"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -12013,16 +12031,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -12030,8 +12048,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -12043,24 +12061,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -12074,7 +12092,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10894424",
         "_score": null,
@@ -12091,15 +12109,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1974
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1974
           ],
           "type": [
             "nypl:Item"
@@ -12131,14 +12149,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -12146,8 +12164,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -12157,11 +12175,11 @@
             "Sāhitya saṃśōdhane mattu samālōcane / lēkhakaru Sadānanda N̄yaka."
           ],
           "uri": "b10894424",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4650.5 .N26 1974"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -12171,16 +12189,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -12188,8 +12206,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -12201,24 +12219,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -12232,7 +12250,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10902372",
         "_score": null,
@@ -12317,7 +12335,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616149691519,
+          "updatedAt": 1616670280311,
           "publicationStatement": [
             "Dhāravāḍa, Karnāṭaka Viśvavidyālaya [1971-"
           ],
@@ -12550,7 +12568,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10920342",
         "_score": null,
@@ -12563,15 +12581,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1972
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1972
           ],
           "type": [
             "nypl:Item"
@@ -12603,14 +12621,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -12618,19 +12636,19 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "titleDisplay": [
             "Ciracētana. Sampādaka Śā. Maṃ. Krṣṇarāya."
           ],
           "uri": "b10920342",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4659.K68 C5"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -12640,16 +12658,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -12657,8 +12675,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -12670,24 +12688,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -12701,7 +12719,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10920356",
         "_score": null,
@@ -12718,15 +12736,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1974
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1974
           ],
           "type": [
             "nypl:Item"
@@ -12761,14 +12779,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -12776,8 +12794,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -12787,11 +12805,11 @@
             "Kannaḍa vyākaraṇada kelavu samasyegaḷu / upanyāsakaru sēḍiy̲apu lrṣṇabhaṭṭa."
           ],
           "uri": "b10920356",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4644 .K7"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -12801,16 +12819,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -12818,8 +12836,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -12831,24 +12849,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -12862,7 +12880,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10920641",
         "_score": null,
@@ -12891,21 +12909,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1970
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Kannaḍa sāhitya sammēḷanagaḷa adhyakṣara bhāṣaṇagaḷu."
+          "createdYear": [
+            1970
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Kannaḍa sāhitya sammēḷanagaḷa adhyakṣara bhāṣaṇagaḷu."
           ],
           "shelfMark": [
             "*OLA 84-4113"
@@ -12953,14 +12971,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -12968,8 +12986,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -12993,16 +13011,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -13020,8 +13038,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -13036,20 +13054,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -13063,7 +13081,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10926039",
         "_score": null,
@@ -13134,7 +13152,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616118132952,
+          "updatedAt": 1616655006729,
           "publicationStatement": [
             "Dhāravāḍa : Rājahaṃsa Prakāśana, [1978]-"
           ],
@@ -13367,7 +13385,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10946973",
         "_score": null,
@@ -13384,15 +13402,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1971
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1971
           ],
           "type": [
             "nypl:Item"
@@ -13427,14 +13445,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -13442,8 +13460,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -13453,11 +13471,11 @@
             "Śākuntalā. [Lēkhaka] Samētanahaḷḷi Rāmarāya."
           ],
           "uri": "b10946973",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PK4659.R316 S2"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -13467,16 +13485,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -13484,8 +13502,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -13497,24 +13515,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -13528,7 +13546,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10956213",
         "_score": null,
@@ -13604,7 +13622,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1615975989005,
+          "updatedAt": 1616484795692,
           "publicationStatement": [
             "Dāvaṇagere : Śrī Sarvajñācārya Sēvā Saṅgha, 1978-"
           ],
@@ -14180,7 +14198,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10960071",
         "_score": null,
@@ -14199,15 +14217,15 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1970
           ],
           "dateEndString": [
             "9999"
+          ],
+          "createdYear": [
+            1970
           ],
           "type": [
             "nypl:Item"
@@ -14233,14 +14251,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -14248,8 +14266,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -14259,11 +14277,11 @@
             "Gī gī padagaḷu."
           ],
           "uri": "b10960071",
-          "numItems": [
-            1
-          ],
           "lccClassification": [
             "PL4658.5.D482 G5 1970z"
+          ],
+          "numItems": [
+            1
           ],
           "numAvailable": [
             1
@@ -14273,16 +14291,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -14290,8 +14308,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "requestable": [
@@ -14303,24 +14321,24 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 },
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -14334,7 +14352,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10960726",
         "_score": null,
@@ -14418,7 +14436,7 @@
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1616048684069,
+          "updatedAt": 1616565670399,
           "publicationStatement": [
             "Dhāravāḍa : Kannaḍa Adhyayanapīṭha, Karnāṭaka Viśvavidyālaya, 1980-"
           ],
@@ -14707,7 +14725,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10960742",
         "_score": null,
@@ -14740,21 +14758,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1976
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Pravāha patitara karma ʻHindūʼ emba dharma"
+          "createdYear": [
+            1976
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Pravāha patitara karma ʻHindūʼ emba dharma"
           ],
           "shelfMark": [
             "*OLY 85-1572"
@@ -14798,14 +14816,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -14813,8 +14831,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -14838,16 +14856,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -14865,8 +14883,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Use in library",
-                  "id": "accessMessage:1"
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
                 }
               ],
               "idBarcode": [
@@ -14881,28 +14899,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Schwarzman Building M2 - General Research Room 315",
-                  "id": "loc:mal92"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -14920,8 +14938,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Use in library",
-                  "id": "accessMessage:1"
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
                 }
               ],
               "idBarcode": [
@@ -14936,20 +14954,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Schwarzman Building M2 - General Research Room 315",
-                  "id": "loc:mal92"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available ",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
                 }
               ]
             }
@@ -14963,7 +14981,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10977467",
         "_score": null,
@@ -14991,21 +15009,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1977
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Sampādaneya sompu : samagra vivēcane"
+          "createdYear": [
+            1977
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Sampādaneya sompu : samagra vivēcane"
           ],
           "shelfMark": [
             "*OLA 84-4577"
@@ -15049,14 +15067,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -15064,8 +15082,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -15090,16 +15108,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -15117,8 +15135,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -15133,20 +15151,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }
@@ -15160,7 +15178,7 @@
         ]
       },
       {
-        "_index": "resources-2020-05-08",
+        "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10996867",
         "_score": null,
@@ -15187,21 +15205,21 @@
           ],
           "language": [
             {
-              "label": "Kannada",
-              "id": "lang:kan"
+              "id": "lang:kan",
+              "label": "Kannada"
             }
-          ],
-          "createdYear": [
-            1980
           ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Nenapina dōṇiyalli"
+          "createdYear": [
+            1980
           ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Nenapina dōṇiyalli"
           ],
           "shelfMark": [
             "*OLA 86-3268"
@@ -15248,14 +15266,14 @@
           ],
           "materialType": [
             {
-              "label": "Text",
-              "id": "resourcetypes:txt"
+              "id": "resourcetypes:txt",
+              "label": "Text"
             }
           ],
           "carrierType": [
             {
-              "label": "volume",
-              "id": "carriertypes:nc"
+              "id": "carriertypes:nc",
+              "label": "volume"
             }
           ],
           "dateString": [
@@ -15263,8 +15281,8 @@
           ],
           "mediaType": [
             {
-              "label": "unmediated",
-              "id": "mediatypes:n"
+              "id": "mediatypes:n",
+              "label": "unmediated"
             }
           ],
           "subjectLiteral": [
@@ -15289,16 +15307,16 @@
           ],
           "issuance": [
             {
-              "label": "monograph/item",
-              "id": "urn:biblevel:m"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
           "items": [
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -15312,8 +15330,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -15328,28 +15346,28 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             },
             {
               "owner": [
                 {
-                  "label": "Stephen A. Schwarzman Building",
-                  "id": "orgs:1000"
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
                 }
               ],
               "identifier": [
@@ -15363,8 +15381,8 @@
               ],
               "accessMessage": [
                 {
-                  "label": "Request in advance",
-                  "id": "accessMessage:2"
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
                 }
               ],
               "idBarcode": [
@@ -15379,20 +15397,20 @@
               ],
               "catalogItemType": [
                 {
-                  "label": "book, limited circ, MaRLI",
-                  "id": "catalogItemType:55"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "label": "Offsite",
-                  "id": "loc:rc2ma"
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
-                  "label": "Available",
-                  "id": "status:a"
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
                 }
               ]
             }

@@ -440,8 +440,9 @@ describe('Test Resources responses', function () {
                 const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
                   .filter((d) => typeof d === 'number')
                   // Ensure dates are ascending (some cataloging reverses them):
-                  .sort()
+                  .sort((a, b) => a - b)
                 // The bib's start date should be <= dateBefore
+                if (itemDates[0] > dateBefore) console.log('before ' + dateBefore + ' failed for ', itemDates)
                 expect(itemDates[0]).to.be.at.most(dateBefore)
               })
 
@@ -470,7 +471,7 @@ describe('Test Resources responses', function () {
                 const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
                   .filter((d) => typeof d === 'number')
                   // Ensure dates are ascending (some cataloging reverses them):
-                  .sort()
+                  .sort((a, b) => a - b)
                 // The bib's end date (or start date if it doesn't have an end date)
                 // should be >= dateAfter
                 expect(itemDates[itemDates.length - 1]).to.be.at.least(dateAfter)
@@ -511,7 +512,7 @@ describe('Test Resources responses', function () {
             const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
               .filter((d) => typeof d === 'number')
               // Ensure dates are ascending (some cataloging reverses them):
-              .sort()
+              .sort((a, b) => a - b)
             // The bib's end date (or start date if it doesn't have an end date)
             // should be >= the start of the queried date range:
             expect(itemDates[itemDates.length - 1]).to.be.at.least(dates[0])
@@ -534,7 +535,7 @@ describe('Test Resources responses', function () {
               const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
                 .filter((d) => typeof d === 'number')
                 // Ensure dates are ascending (some cataloging reverses them):
-                .sort()
+                .sort((a, b) => a - b)
               // The bib's end date (or start date if it doesn't have an end date)
               // should be >= the start of the queried date range:
               expect(itemDates[itemDates.length - 1]).to.be.at.least(dates[0])
