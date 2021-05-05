@@ -1,5 +1,5 @@
 {
-  "took": 72,
+  "took": 271,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,9 +7,212 @@
     "failed": 0
   },
   "hits": {
-    "total": 920445,
+    "total": 797132,
     "max_score": null,
     "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10000002",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "ix, 368 p., [1] leaf of plates : port. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Contributions in German and Italian.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies and index.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Dante Alighieri, 1265-1321",
+            "Dante Alighieri, 1265-1321 -- Criticism and interpretation",
+            "Gmelin, Hermann, 1900-1958"
+          ],
+          "publisherLiteral": [
+            "Stauffenburg,"
+          ],
+          "language": [
+            {
+              "id": "lang:ger",
+              "label": "German"
+            }
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Dante Alighieri 1985 : in memoriam Hermann Gmelin"
+          ],
+          "shelfMark": [
+            "JFE 86-3252"
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "86124252"
+          ],
+          "seriesStatement": [
+            "Romanica et comparatistica ; Bd. 4"
+          ],
+          "contributorLiteral": [
+            "Baum, Richard.",
+            "Gmelin, Hermann, 1900-1958.",
+            "Hirdt, Willi."
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFE 86-3252"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000002"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3923721544"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "86124252"
+            }
+          ],
+          "updatedAt": 1536782413067,
+          "publicationStatement": [
+            "Tübingen : Stauffenburg, c1985."
+          ],
+          "identifier": [
+            "urn:bnum:10000002",
+            "urn:isbn:3923721544",
+            "urn:lccn:86124252"
+          ],
+          "idIsbn": [
+            "3923721544"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Dante Alighieri, 1265-1321 -- Criticism and interpretation.",
+            "Gmelin, Hermann, 1900-1958."
+          ],
+          "titleDisplay": [
+            "Dante Alighieri 1985 : in memoriam Hermann Gmelin / herausgegeben von Richard Baum und Willi Hirdt."
+          ],
+          "uri": "b10000002",
+          "lccClassification": [
+            "PQ4390 .D274 1985"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Tübingen :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Dante Alighieri neunzehnhundertfünfundachtzig."
+          ],
+          "items": [
+            {
+              "identifier": [
+                "urn:barcode:33433046113795"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFE 86-3252"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433046113795"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433046113795"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i12858031",
+              "shelfMark": [
+                "JFE 86-3252"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "23 cm."
+          ]
+        },
+        "sort": [
+          "b10000002"
+        ]
+      },
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
@@ -4202,6 +4405,211 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10003958",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "39, 18, 83, 3 p."
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Original Version",
+              "label": "Reprint of the 1910 ? ed.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Logic",
+            "Logic -- Early works to 1800"
+          ],
+          "publisherLiteral": [
+            "Maktabat Āyat Allāh al-ʻUẓmá al-Najafī al-Marʻashī,"
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "dateEndString": [
+            "1910"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "al-Qaṣīdah al-muzdawijah fī al-manṭiq wa-manṭiq al-mashriqīyīn,"
+          ],
+          "shelfMark": [
+            "*OGL 83-2455"
+          ],
+          "creatorLiteral": [
+            "Avicenna, 980-1037."
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "idLccn": [
+            "73960850"
+          ],
+          "contributorLiteral": [
+            "Avicenna, 980-1037."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OGL 83-2455"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10003958"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "73960850"
+            }
+          ],
+          "dateEndYear": [
+            1910
+          ],
+          "updatedAt": 1523471426754,
+          "publicationStatement": [
+            "Qum : Maktabat Āyat Allāh al-ʻUẓmá al-Najafī al-Marʻashī, 1405 [1984 or 1985]"
+          ],
+          "identifier": [
+            "urn:bnum:10003958",
+            "urn:lccn:73960850"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Logic -- Early works to 1800."
+          ],
+          "titleDisplay": [
+            "al-Qaṣīdah al-muzdawijah fī al-manṭiq wa-manṭiq al-mashriqīyīn, taṣnīf Abī ʻAlī ibn Sīnā."
+          ],
+          "uri": "b10003958",
+          "lccClassification": [
+            "B751 .M4 1973"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Qum :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433058069919"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGL 83-2455"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058069919"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433058069919"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i12858216",
+              "shelfMark": [
+                "*OGL 83-2455"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "sort": [
+          "b10003958"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10004373",
         "_score": null,
         "_source": {
@@ -4453,6 +4861,173 @@
         },
         "sort": [
           "b10004373"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10004788",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "277 p. ;"
+          ],
+          "publisherLiteral": [
+            "Plon,"
+          ],
+          "language": [
+            {
+              "id": "lang:fre",
+              "label": "French"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Le château du soleil couchant : roman"
+          ],
+          "shelfMark": [
+            "JFE 84-3450"
+          ],
+          "creatorLiteral": [
+            "Grey, Marina."
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "seriesStatement": [
+            "Grey, Marina. Saga de l'exil ; \\[3]",
+            "La saga de l'exil / Marina Grey ; [3]"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFE 84-3450"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10004788"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "2259011187 :"
+            }
+          ],
+          "updatedAt": 1523471550255,
+          "publicationStatement": [
+            "Paris : Plon, 1984."
+          ],
+          "identifier": [
+            "urn:bnum:10004788",
+            "urn:isbn:2259011187 :"
+          ],
+          "idIsbn": [
+            "2259011187 :"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "Le château du soleil couchant : roman / Marina Grey."
+          ],
+          "uri": "b10004788",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Paris :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "identifier": [
+                "urn:barcode:33433046113944"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFE 84-3450"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433046113944"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433046113944"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i12858280",
+              "shelfMark": [
+                "JFE 84-3450"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "23 cm."
+          ]
+        },
+        "sort": [
+          "b10004788"
         ]
       },
       {
@@ -5682,6 +6257,271 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10005876",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "xxvii, 751 p. : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "At head of title: Unesco International Scientific Committee for the Drafting of a General History of Africa.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Includes index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 692-733.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Africa",
+            "Africa -- History",
+            "Africa -- History -- To 1884"
+          ],
+          "publisherLiteral": [
+            "Heinemann ; University of California Press,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Africa from the twelfth to the sixteenth century"
+          ],
+          "shelfMark": [
+            "Sc E 84-288"
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "idLccn": [
+            "84256508 //r86"
+          ],
+          "seriesStatement": [
+            "General history of Africa ; 4"
+          ],
+          "contributorLiteral": [
+            "Niane, Djibril Tamsir.",
+            "Unesco. International Scientific Committee for the Drafting of a General History of Africa."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc E 84-288"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005876"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0435948105"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0520039157 (University of California Press)"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "84256508 //r86"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0205866"
+            }
+          ],
+          "updatedAt": 1560605732900,
+          "publicationStatement": [
+            "London : Heinemann ; Berkeley, Calif. : University of California Press, 1984."
+          ],
+          "identifier": [
+            "urn:bnum:10005876",
+            "urn:isbn:0435948105",
+            "urn:isbn:0520039157 (University of California Press)",
+            "urn:lccn:84256508 //r86",
+            "urn:undefined:(WaOLN)nyp0205866"
+          ],
+          "idIsbn": [
+            "0435948105",
+            "0520039157 (University of California Press)"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Africa -- History -- To 1884."
+          ],
+          "titleDisplay": [
+            "Africa from the twelfth to the sixteenth century / editor, D.T. Niane."
+          ],
+          "uri": "b10005876",
+          "lccClassification": [
+            "DT20 .G45 1981 vol. 4 DT25"
+          ],
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "London : Berkeley, Calif. :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1101",
+                  "label": "General Research Division"
+                }
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*R-BK 90-2407"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:-",
+                  "label": "No restrictions"
+                }
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i10003889",
+              "shelfMark": [
+                "*R-BK 90-2407"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:m",
+                  "label": "Missing"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mall1",
+                  "label": "Schwarzman Building - Main Reading Room 315 - Reference"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1114",
+                  "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433021813997"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc E 84-288"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433021813997"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433021813997"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i10003888",
+              "shelfMark": [
+                "Sc E 84-288"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:scff2",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "sort": [
+          "b10005876"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10005898",
         "_score": null,
         "_source": {
@@ -6472,6 +7312,257 @@
         },
         "sort": [
           "b10005907"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10005910",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "xvi, 99 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 99.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Universities and colleges",
+            "Universities and colleges -- Africa",
+            "Universities and colleges",
+            "Universities and colleges -- Zambia"
+          ],
+          "publisherLiteral": [
+            "Published on behalf of the Institute for African Studies, University of Zambia, by National Educational Co. of Zambia,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The African university : issues and perspectives : speeches"
+          ],
+          "shelfMark": [
+            "Sc D 84-502"
+          ],
+          "creatorLiteral": [
+            "Goma, L. K. H."
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "idLccn": [
+            "84980558"
+          ],
+          "seriesStatement": [
+            "Zambian papers ; no. 14"
+          ],
+          "contributorLiteral": [
+            "Tembo, L. P.",
+            "University of Zambia. Institute for African Studies."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc D 84-502"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10005910"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "84980558"
+            }
+          ],
+          "updatedAt": 1525296788168,
+          "publicationStatement": [
+            "Lusaka, Zambia : Published on behalf of the Institute for African Studies, University of Zambia, by National Educational Co. of Zambia, 1984."
+          ],
+          "identifier": [
+            "urn:bnum:10005910",
+            "urn:lccn:84980558"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Universities and colleges -- Africa.",
+            "Universities and colleges -- Zambia."
+          ],
+          "titleDisplay": [
+            "The African university : issues and perspectives : speeches / by L.H.K. [i.e. L.K.H.] Goma ; selected and edited by L.P. Tembo."
+          ],
+          "uri": "b10005910",
+          "lccClassification": [
+            "DT963.A3 Z3 no. 14 LA1503"
+          ],
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            2
+          ],
+          "placeOfPublication": [
+            "Lusaka, Zambia :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433003630815"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFK 86-224 v. 14"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433003630815"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433003630815"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10003897",
+              "shelfMark": [
+                "JFK 86-224 v. 14"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1114",
+                  "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433021791029"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc D 84-502"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433021791029"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433021791029"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i10003896",
+              "shelfMark": [
+                "Sc D 84-502"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:scff2",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "22 cm."
+          ]
+        },
+        "sort": [
+          "b10005910"
         ]
       },
       {
@@ -7314,6 +8405,377 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10006034",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "79 p. : ill., maps ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Africa",
+            "Africa -- Portuguese",
+            "Cão, Diogo, active 15th century",
+            "Dias, Bartolomeu",
+            "Gama, Vasco da, 1469-1524",
+            "Portuguese",
+            "Portuguese -- India",
+            "Portuguese -- India -- History"
+          ],
+          "publisherLiteral": [
+            "Basler Afrika Bibliographien,"
+          ],
+          "language": [
+            {
+              "id": "lang:ger",
+              "label": "German"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Die Portugiesenkreuze in Africa und Indien : eine umfassende Darstellung aller von den portugiesischen Entdeckern Diogo Cão, Bartolomeo Dias und Vasco da Gama errichteten Steinkreuze (Padrões), deren Geschichte und deren Nachbildungen"
+          ],
+          "shelfMark": [
+            "Sc D 84-477"
+          ],
+          "creatorLiteral": [
+            "Kalthammer, Wilhelm."
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "seriesStatement": [
+            "Beiträge zur Afrikakunde, 0171-1660; 5"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc D 84-477"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006034"
+            }
+          ],
+          "updatedAt": 1523471666114,
+          "publicationStatement": [
+            "Basel : Basler Afrika Bibliographien, 1978."
+          ],
+          "identifier": [
+            "urn:bnum:10006034"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Africa -- Portuguese.",
+            "Cão, Diogo, active 15th century.",
+            "Dias, Bartolomeu.",
+            "Gama, Vasco da, 1469-1524.",
+            "Portuguese -- India -- History."
+          ],
+          "titleDisplay": [
+            "Die Portugiesenkreuze in Africa und Indien : eine umfassende Darstellung aller von den portugiesischen Entdeckern Diogo Cão, Bartolomeo Dias und Vasco da Gama errichteten Steinkreuze (Padrões), deren Geschichte und deren Nachbildungen / Wilhelm Kalthammer."
+          ],
+          "uri": "b10006034",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Basel :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1114",
+                  "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433036649683"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc D 84-477"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433036649683"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433036649683"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i11900606",
+              "shelfMark": [
+                "Sc D 84-477"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:scff2",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "21 cm."
+          ]
+        },
+        "sort": [
+          "b10006034"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10006043",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "205 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographies.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Africa, Sub-Saharan",
+            "Africa, Sub-Saharan -- Relations",
+            "Africa, Sub-Saharan -- Relations -- Arab countries",
+            "Arab countries",
+            "Arab countries -- Relations",
+            "Arab countries -- Relations -- Africa, Sub-Saharan"
+          ],
+          "publisherLiteral": [
+            "Unesco,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Historical and socio-cultural relations between Black Africa and the Arab world from 1935 to the present : report and papers of the symposium organized by Unesco in Paris from 25 to 27 July 1979."
+          ],
+          "shelfMark": [
+            "Sc E 84-236"
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "seriesStatement": [
+            "General history of Africa: studies and documents; 7"
+          ],
+          "contributorLiteral": [
+            "Unesco."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc E 84-236"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006043"
+            }
+          ],
+          "updatedAt": 1523471666114,
+          "publicationStatement": [
+            "Paris : Unesco, 1984."
+          ],
+          "identifier": [
+            "urn:bnum:10006043"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Africa, Sub-Saharan -- Relations -- Arab countries.",
+            "Arab countries -- Relations -- Africa, Sub-Saharan."
+          ],
+          "titleDisplay": [
+            "Historical and socio-cultural relations between Black Africa and the Arab world from 1935 to the present : report and papers of the symposium organized by Unesco in Paris from 25 to 27 July 1979."
+          ],
+          "uri": "b10006043",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Paris :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1114",
+                  "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433036807315"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "Sc E 84-236"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433036807315"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433036807315"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i11900614",
+              "shelfMark": [
+                "Sc E 84-236"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:scff2",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "sort": [
+          "b10006043"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10006159",
         "_score": null,
         "_source": {
@@ -8074,6 +9536,223 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10006645",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "a, 257 p. : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Translation of: Algoritmy upravlen︠i︡a rabotami-manipul︠i︡atorami.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"JPRS 59717.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 245-252.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Photocopy.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Manipulators (Mechanism)",
+            "Robots, Industrial"
+          ],
+          "publisherLiteral": [
+            "Joint Publications Research Service,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "dateEndString": [
+            "1973"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Robot-manipulator control algorithms"
+          ],
+          "shelfMark": [
+            "JSF 83-552"
+          ],
+          "creatorLiteral": [
+            "Ignatʹev, M. B. (Mikhail Borisovich)"
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "contributorLiteral": [
+            "Kulakov, F. M. (Feliks Mikhaĭlovich)",
+            "Pokrovskiĭ, A. M."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JSF 83-552"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006645"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0206634"
+            }
+          ],
+          "uniformTitle": [
+            "Algoritmy upravleni︠i︠a rabotami-manipul︠i︠atorami. English"
+          ],
+          "dateEndYear": [
+            1973
+          ],
+          "updatedAt": 1599789791761,
+          "publicationStatement": [
+            "Arlington, Va. : Joint Publications Research Service, 1973."
+          ],
+          "identifier": [
+            "urn:bnum:10006645",
+            "urn:undefined:(WaOLN)nyp0206634"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Manipulators (Mechanism)",
+            "Robots, Industrial."
+          ],
+          "titleDisplay": [
+            "Robot-manipulator control algorithms / by M.B. Ignatʹyev, F.M. Kulakov, A.M. Pokrovskiy."
+          ],
+          "uri": "b10006645",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Arlington, Va. :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Algoritmy upravleni︠i︠a rabotami-manipul︠i︠atorami."
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433037693748"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JSF 83-552"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433037693748"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433037693748"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i12540383",
+              "shelfMark": [
+                "JSF 83-552"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "27 cm."
+          ]
+        },
+        "sort": [
+          "b10006645"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10006687",
         "_score": null,
         "_source": {
@@ -8541,6 +10220,179 @@
         },
         "sort": [
           "b10006688"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10006699",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "483 p. : ill., ports ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 476-483.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Dominican literature",
+            "Dominican literature -- Manuals, handbooks, etc",
+            "Latin American literature",
+            "Latin American literature -- Study and teaching",
+            "Latin American literature -- Study and teaching -- Handbooks, manuals, etc"
+          ],
+          "publisherLiteral": [
+            "s.n.],"
+          ],
+          "language": [
+            {
+              "id": "lang:spa",
+              "label": "Spanish"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Manual de literatura dominicana y americana : para el 4to teórico del bachillerato tradicional de la educación media"
+          ],
+          "shelfMark": [
+            "JFF 84-820"
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "contributorLiteral": [
+            "Gómez de Michel, Fiume."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFF 84-820"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006699"
+            }
+          ],
+          "updatedAt": 1523471621339,
+          "publicationStatement": [
+            "[Santo Domingo, R. D. : s.n.], 1984"
+          ],
+          "identifier": [
+            "urn:bnum:10006699"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Dominican literature -- Manuals, handbooks, etc.",
+            "Latin American literature -- Study and teaching -- Handbooks, manuals, etc."
+          ],
+          "titleDisplay": [
+            "Manual de literatura dominicana y americana : para el 4to teórico del bachillerato tradicional de la educación media / [compilación] Fiumé Gómez de Michel."
+          ],
+          "uri": "b10006699",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "[Santo Domingo, R. D. :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "identifier": [
+                "urn:barcode:33433050352214"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JFF 84-820"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433050352214"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433050352214"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i13784848",
+              "shelfMark": [
+                "JFF 84-820"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "27 cm."
+          ]
+        },
+        "sort": [
+          "b10006699"
         ]
       },
       {
@@ -9221,6 +11073,176 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10006720",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "[24] p. : port. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Issued in portfolio.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Delius, Frederick, 1862-1934"
+          ],
+          "publisherLiteral": [
+            "The Trust,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Delius, 1862-1934"
+          ],
+          "shelfMark": [
+            "JMF 84-424"
+          ],
+          "creatorLiteral": [
+            "Delius Trust."
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JMF 84-424"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10006720"
+            }
+          ],
+          "updatedAt": 1523471603438,
+          "publicationStatement": [
+            "London : The Trust, [1984]"
+          ],
+          "identifier": [
+            "urn:bnum:10006720"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Delius, Frederick, 1862-1934."
+          ],
+          "titleDisplay": [
+            "Delius, 1862-1934 / compiled by the Delius Trust to mark the 50th anniversary of his death."
+          ],
+          "uri": "b10006720",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "London :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433032723599"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032723599"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433032723599"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10942253",
+              "shelfMark": [
+                "JMF 84-424"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:2",
+                  "label": "book non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "30 cm."
+          ]
+        },
+        "sort": [
+          "b10006720"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10006745",
         "_score": null,
         "_source": {
@@ -9383,1936 +11405,6 @@
         },
         "sort": [
           "b10006745"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10006884",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "8 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Reproduction",
-              "label": "Microfiche.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Jews",
-            "Jews -- Nobility",
-            "Nobility",
-            "Nobility -- England"
-          ],
-          "publisherLiteral": [
-            "Sons of Liberty,"
-          ],
-          "language": [
-            {
-              "id": "lang:eng",
-              "label": "English"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1980
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Our Jewish aristocracy [microform] : a revelation"
-          ],
-          "shelfMark": [
-            "*XMH-2276"
-          ],
-          "creatorLiteral": [
-            "Leese, Arnold, 1878-1956."
-          ],
-          "createdString": [
-            "1980"
-          ],
-          "dateStartYear": [
-            1980
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*XMH-2276"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10006884"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1523471718283,
-          "publicationStatement": [
-            "Hollywood : Sons of Liberty, [198-?]"
-          ],
-          "identifier": [
-            "urn:bnum:10006884"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:he",
-              "label": "microfiche"
-            }
-          ],
-          "dateString": [
-            "1980"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:h",
-              "label": "microform"
-            }
-          ],
-          "subjectLiteral": [
-            "Jews -- Nobility.",
-            "Nobility -- England."
-          ],
-          "titleDisplay": [
-            "Our Jewish aristocracy [microform] : a revelation / by Arnold Leese."
-          ],
-          "uri": "b10006884",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Hollywood :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1103",
-                  "label": "Dorot Jewish Division"
-                }
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*XMH-2276"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i14746720",
-              "shelfMark": [
-                "*XMH-2276"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:26",
-                  "label": "microfiche"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:maf82",
-                  "label": "Schwarzman Building - Dorot Jewish Division Room 111"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "22 cm."
-          ]
-        },
-        "sort": [
-          "b10006884"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007123",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "110 p. : facsim. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Persian.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Iran",
-            "Iran -- History",
-            "Iran -- History -- Qajar dynasty, 1794-1925"
-          ],
-          "publisherLiteral": [
-            "Damāvand,"
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1983
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Maqālāt-i tārīkhī"
-          ],
-          "shelfMark": [
-            "*OMZ 84-2908"
-          ],
-          "creatorLiteral": [
-            "Ādamīyat, Farīdūn, 1920-2008."
-          ],
-          "createdString": [
-            "1983"
-          ],
-          "dateStartYear": [
-            1983
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OMZ 84-2908"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007123"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "NNSZ00508361"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0207109"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1549397490814,
-          "publicationStatement": [
-            "Tihrān : Damāvand, 1362 [1983 or 1984]"
-          ],
-          "identifier": [
-            "urn:bnum:10007123",
-            "urn:undefined:NNSZ00508361",
-            "urn:undefined:(WaOLN)nyp0207109"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1983"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Iran -- History -- Qajar dynasty, 1794-1925."
-          ],
-          "titleDisplay": [
-            "Maqālāt-i tārīkhī / Farīdūn Ādamīyat."
-          ],
-          "uri": "b10007123",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Tihrān :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433014540086"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OMZ 84-2908"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433014540086"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433014540086"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10942262",
-              "shelfMark": [
-                "*OMZ 84-2908"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "22cm."
-          ]
-        },
-        "sort": [
-          "b10007123"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007146",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "71 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Persian.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Muḥammad, Prophet, -632",
-            "Muḥammad, Prophet, -632 -- Campaigns"
-          ],
-          "publisherLiteral": [
-            "Daftar-i Nashr-i Farhang-i Islāmī,"
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1980
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Payāmbar va munāfiqīn"
-          ],
-          "shelfMark": [
-            "*OGE 84-4544"
-          ],
-          "creatorLiteral": [
-            "Saʻīdī, Sīrūs."
-          ],
-          "createdString": [
-            "1980"
-          ],
-          "idLccn": [
-            "y  04930568"
-          ],
-          "dateStartYear": [
-            1980
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OGE 84-4544"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007146"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "y  04930568"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1523471638160,
-          "publicationStatement": [
-            "[Tihrān] : Daftar-i Nashr-i Farhang-i Islāmī, [198-?]"
-          ],
-          "identifier": [
-            "urn:bnum:10007146",
-            "urn:lccn:y  04930568"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1980"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Muḥammad, Prophet, -632 -- Campaigns."
-          ],
-          "titleDisplay": [
-            "Payāmbar va munāfiqīn / Sīrūs Saʻīdī."
-          ],
-          "uri": "b10007146",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "[Tihrān] :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433058000484"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058000484"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
-              "idBarcode": [
-                "33433058000484"
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i12858413",
-              "shelfMark": [
-                "*OGE 84-4544"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:mal92",
-                  "label": "Schwarzman Building M2 - General Research Room 315"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "19cm."
-          ]
-        },
-        "sort": [
-          "b10007146"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007164",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "231 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Persian and Kurdish.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Bibliography",
-              "label": "Bibliography: p. 228-231.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Kurdish language",
-            "Kurdish language -- Dialects",
-            "Kurdish language -- Dialects -- Mahābād"
-          ],
-          "publisherLiteral": [
-            "Muʼassisah-ʼi Muṭāliʻāt va Taḥqīqāt-i Farhangī, 1362 [1983 or 1984]"
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1983
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Gūyish-i Kurdī-i Mahābād"
-          ],
-          "shelfMark": [
-            "*ONF 84-3986"
-          ],
-          "creatorLiteral": [
-            "Kalbāsī, Īrān."
-          ],
-          "createdString": [
-            "1983"
-          ],
-          "dateStartYear": [
-            1983
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*ONF 84-3986"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007164"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1583786361510,
-          "publicationStatement": [
-            "Tihrān : Muʼassisah-ʼi Muṭāliʻāt va Taḥqīqāt-i Farhangī, 1362 [1983 or 1984]"
-          ],
-          "identifier": [
-            "urn:bnum:10007164"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1983"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Kurdish language -- Dialects -- Mahābād."
-          ],
-          "titleDisplay": [
-            "Gūyish-i Kurdī-i Mahābād / taʼlīf-i Īrān Kalbāsī."
-          ],
-          "uri": "b10007164",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Tihrān :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433014567063"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*ONF 84-3986"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433014567063"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433014567063"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10004175",
-              "shelfMark": [
-                "*ONF 84-3986"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "25 cm."
-          ]
-        },
-        "sort": [
-          "b10007164"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007183",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "186 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Includes indexes.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Bibliography",
-              "label": "Bibliography: p.[186]",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Persian.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Islam and art"
-          ],
-          "publisherLiteral": [
-            "Shirkat-i Sahāmī-i Chāpkhānah-ʼi Vizārat-i Irshād-i Islāmī,"
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1980
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Zībāʼī va hunar az dīdgāh-i Islām"
-          ],
-          "shelfMark": [
-            "*OGC 84-3952"
-          ],
-          "creatorLiteral": [
-            "Jaʻfarī, Muḥammad Taqī."
-          ],
-          "createdString": [
-            "1980"
-          ],
-          "dateStartYear": [
-            1980
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OGC 84-3952"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007183"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1523471638101,
-          "publicationStatement": [
-            "Tihrān : Shirkat-i Sahāmī-i Chāpkhānah-ʼi Vizārat-i Irshād-i Islāmī, [198-?]"
-          ],
-          "identifier": [
-            "urn:bnum:10007183"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1980"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Islam and art."
-          ],
-          "titleDisplay": [
-            "Zībāʼī va hunar az dīdgāh-i Islām / Muḥammad Taqī Jaʻfarī."
-          ],
-          "uri": "b10007183",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Tihrān :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433022694230"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433022694230"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433022694230"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i12540407",
-              "shelfMark": [
-                "*OGC 84-3952"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "24cm."
-          ]
-        },
-        "sort": [
-          "b10007183"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007240",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "v. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Imprint on cover: Tañcāvūr Mahārājā Carapōjiyiṉ Caracuvati Makāl Nūl Nilaiyam.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "Includes indexes.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Tamil.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Tamil language",
-            "Tamil language -- Glossaries, vocabularies, etc"
-          ],
-          "publisherLiteral": [
-            "Tañcai Caracuvati Makāl Nūl Nilaiya Nirvākak Kuḻu,"
-          ],
-          "language": [
-            {
-              "id": "lang:tam",
-              "label": "Tamil"
-            }
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "createdYear": [
-            1975
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Āciriya nikaṇṭu : cēntaṉ tivākaram, piṅkala nikaṇṭu, cūṭāmaṇi, kayātaram ākiya nikaṇṭukaḷiṉ oppumaip pakutikaḷuṭaṉ"
-          ],
-          "shelfMark": [
-            "*OLB 84-3259"
-          ],
-          "createdString": [
-            "1975"
-          ],
-          "idLccn": [
-            "77902870"
-          ],
-          "seriesStatement": [
-            "Tañcai Caracuvati Makāl veḷiyīṭu; 156"
-          ],
-          "contributorLiteral": [
-            "Chokkalingam."
-          ],
-          "dateStartYear": [
-            1975
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OLB 84-3259"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007240"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "77902870"
-            }
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "updatedAt": 1523471638101,
-          "publicationStatement": [
-            "[Tañcāvūr] : Tañcai Caracuvati Makāl Nūl Nilaiya Nirvākak Kuḻu, 1975."
-          ],
-          "identifier": [
-            "urn:bnum:10007240",
-            "urn:lccn:77902870"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1975"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Tamil language -- Glossaries, vocabularies, etc."
-          ],
-          "titleDisplay": [
-            "Āciriya nikaṇṭu : cēntaṉ tivākaram, piṅkala nikaṇṭu, cūṭāmaṇi, kayātaram ākiya nikaṇṭukaḷiṉ oppumaip pakutikaḷuṭaṉ / patippāciriyar Vī. Cokkaliṅkam."
-          ],
-          "uri": "b10007240",
-          "lccClassification": [
-            "PL4757 .A5"
-          ],
-          "numItems": [
-            2
-          ],
-          "numAvailable": [
-            2
-          ],
-          "placeOfPublication": [
-            "[Tañcāvūr] :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433061354662"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433061354662"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433061354662"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i13785014",
-              "shelfMark": [
-                "*OLB 84-3259"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433061303693"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OLB 84-3259"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433061303693"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433061303693"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i13785013",
-              "shelfMark": [
-                "*OLB 84-3259"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "23 cm."
-          ]
-        },
-        "sort": [
-          "b10007240"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007273",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "304 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Cover title.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Bibliography",
-              "label": "Bibliography: p. 300-302.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Persian.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Bahai Faith"
-          ],
-          "publisherLiteral": [
-            "s.n."
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1980
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Bishārāt-i kutub-i āsmānī : va ishārāt-i dīgarān dar bārah-ʼi ẓuhūr-i amr-i ilāhī"
-          ],
-          "shelfMark": [
-            "*OGI 84-3796"
-          ],
-          "creatorLiteral": [
-            "Naqbāʼī, Ḥisām."
-          ],
-          "createdString": [
-            "1980"
-          ],
-          "dateStartYear": [
-            1980
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OGI 84-3796"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007273"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1523471774115,
-          "publicationStatement": [
-            "[S.l. : s.n. 198-?]"
-          ],
-          "identifier": [
-            "urn:bnum:10007273"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1980"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Bahai Faith."
-          ],
-          "titleDisplay": [
-            "Bishārāt-i kutub-i āsmānī : va ishārāt-i dīgarān dar bārah-ʼi ẓuhūr-i amr-i ilāhī / az Ḥisām Naqbāʼī."
-          ],
-          "uri": "b10007273",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "[S.l. :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433058031687"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OGI 84-3796"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058031687"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433058031687"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i12858418",
-              "shelfMark": [
-                "*OGI 84-3796"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "21 cm."
-          ]
-        },
-        "sort": [
-          "b10007273"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007317",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "412 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "A novel.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Persian.",
-              "type": "bf:Note"
-            }
-          ],
-          "publisherLiteral": [
-            "Nashr-i Naw,"
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1983
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Āvāz-i kushtigān"
-          ],
-          "shelfMark": [
-            "*OMP 84-4835"
-          ],
-          "creatorLiteral": [
-            "Baraheni, Reza, 1935-"
-          ],
-          "createdString": [
-            "1983"
-          ],
-          "dateStartYear": [
-            1983
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OMP 84-4835"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007317"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1583780182532,
-          "publicationStatement": [
-            "Tihrān : Nashr-i Naw, 1362 [1983 or 1984]"
-          ],
-          "identifier": [
-            "urn:bnum:10007317"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1983"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "titleDisplay": [
-            "Āvāz-i kushtigān / Riẓā Barāhinī."
-          ],
-          "uri": "b10007317",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Tihrān :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433013173988"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OMP 84-4835"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433013173988"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433013173988"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10004241",
-              "shelfMark": [
-                "*OMP 84-4835"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "22 cm."
-          ]
-        },
-        "sort": [
-          "b10007317"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007415",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "191 p. : ports., facsim. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Language",
-              "label": "In Persian.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Afghanistan",
-            "Afghanistan -- History",
-            "Afghanistan -- Languages"
-          ],
-          "publisherLiteral": [
-            "Bunyād-i Mawqūfāt-i Duktur Maḥmūd Afshār,"
-          ],
-          "language": [
-            {
-              "id": "lang:per",
-              "label": "Persian"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1983
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Tārīkh va zabān dar Afghānistān : ʻilal-i tashattut-i farhangī va ijtimāʻī"
-          ],
-          "shelfMark": [
-            "*ONI 84-3497"
-          ],
-          "creatorLiteral": [
-            "Māyil Hiravī, Najīb."
-          ],
-          "createdString": [
-            "1983"
-          ],
-          "seriesStatement": [
-            "Majmūʻah-ʼi Intishārāt-i Adabī ra tārīkhī, Mawqūfāt-i Duktur Maḥmūd Afshār Yazdī; shumārah-ʼi 14"
-          ],
-          "dateStartYear": [
-            1983
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*ONI 84-3497"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007415"
-            }
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1583785942416,
-          "publicationStatement": [
-            "Tihrān : Bunyād-i Mawqūfāt-i Duktur Maḥmūd Afshār, 1362 [1983 or 1984]"
-          ],
-          "identifier": [
-            "urn:bnum:10007415"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1983"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Afghanistan -- History.",
-            "Afghanistan -- Languages."
-          ],
-          "titleDisplay": [
-            "Tārīkh va zabān dar Afghānistān : ʻilal-i tashattut-i farhangī va ijtimāʻī / nigārish-i Najīb Māyil Hiravī."
-          ],
-          "uri": "b10007415",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Tihrān :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433013015031"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*ONI 84-3497"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433013015031"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433013015031"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10004288",
-              "shelfMark": [
-                "*ONI 84-3497"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "24cm."
-          ]
-        },
-        "sort": [
-          "b10007415"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10007435",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "252 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Poems in the Kuwaiti dialect.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Arabic.",
-              "type": "bf:Note"
-            }
-          ],
-          "publisherLiteral": [
-            "Manshūrāt Dhāt al-salāsil,"
-          ],
-          "language": [
-            {
-              "id": "lang:ara",
-              "label": "Arabic"
-            }
-          ],
-          "dateEndString": [
-            "1984"
-          ],
-          "createdYear": [
-            1980
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "al-Aʻmāl al-kāmilah lil-shāʻir Ḥaydar al-Hazzāʻ : Dīwān ʻarūs al-ḍayāʻ, Dīwān lā tajraḥīnī, Dīwān Shadhá al-Khuzāmī"
-          ],
-          "shelfMark": [
-            "*OFA 84-4337"
-          ],
-          "creatorLiteral": [
-            "Hazzāʻ, Ḥaydar."
-          ],
-          "createdString": [
-            "1980"
-          ],
-          "dateStartYear": [
-            1980
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OFA 84-4337"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10007435"
-            }
-          ],
-          "uniformTitle": [
-            "Works"
-          ],
-          "dateEndYear": [
-            1984
-          ],
-          "updatedAt": 1583787301205,
-          "publicationStatement": [
-            "al-Kuwayt : Manshūrāt Dhāt al-salāsil, [198-?]"
-          ],
-          "identifier": [
-            "urn:bnum:10007435"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1980"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "titleDisplay": [
-            "al-Aʻmāl al-kāmilah lil-shāʻir Ḥaydar al-Hazzāʻ : Dīwān ʻarūs al-ḍayāʻ, Dīwān lā tajraḥīnī, Dīwān Shadhá al-Khuzāmī / [Ḥaydar al-Hazzāʻ], al-tadqīq wa-al-murājaʻah Muṭlaq Marzūq al-Dakhnār. Yaʻqūb Sālim al-Maṭrūd ; al-ʻarḍ al-shāmil ʻAbd Allāh ʻAbd al-ʻAzīz al-Dawsarī, Fahad Khālid al-Turkī."
-          ],
-          "uri": "b10007435",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "al-Kuwayt :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "titleAlt": [
-            "Works"
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433002003204"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OFA 84-4337"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433002003204"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433002003204"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10004304",
-              "shelfMark": [
-                "*OFA 84-4337"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "24 cm."
-          ]
-        },
-        "sort": [
-          "b10007435"
         ]
       }
     ]

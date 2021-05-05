@@ -394,35 +394,6 @@ describe('Test Resources responses', function () {
       })
     })
 
-    /*
-     *  Deprecating this for now
-     *
-    it('Resource search filter on agents', function (done) {
-      // Filter on these agents:
-      var agents = ['agents:10955903', 'agents:10334529']
-
-      // First just filter on the first agent
-      request.get(`${searchAllUrl}&filters[contributor]=${agents[0]}]`, function (err, response, body) {
-        if (err) throw err
-        var doc = JSON.parse(body)
-        // At writing, this returns 14 items
-        assert(doc.totalResults < 100)
-
-        var prevTotal = doc.totalResults
-
-        // Now filter on both agents (matching either)
-        var agentsFilter = agents.map((a) => `filters[contributor][]=${a}`).join('&')
-        request.get(`${searchAllUrl}&${agentsFilter}`, function (err, response, body) {
-          if (err) throw err
-          var doc = JSON.parse(body)
-          assert(doc.totalResults > prevTotal)
-
-          done()
-        })
-      })
-    })
-    */
-
     describe('Filter by holdingLocation', function () {
       ; ['loc:rc2ma', 'loc:mal92'].forEach((holdingLocationId) => {
         it('returns only bibs with items in holdingLocation ' + holdingLocationId, function (done) {
@@ -451,6 +422,68 @@ describe('Test Resources responses', function () {
       })
     })
 
+    it('Ensure filters[dateBefore] produces only those items whose dates precede/overlap given date', function () {
+      const datesBefore = [1800, 1900, 2000]
+
+      return Promise.all(
+        datesBefore.map((dateBefore) => {
+          const nextUrl = `${searchAllUrl}&filters[dateBefore]=${dateBefore}`
+
+          return new Promise((resolve, reject) => {
+            request.get(nextUrl, function (err, response, body) {
+              if (err) throw err
+
+              const doc = JSON.parse(body)
+
+              // Ensure bib dates fall below dateBefore for each result
+              doc.itemListElement.forEach((item) => {
+                const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
+                  .filter((d) => typeof d === 'number')
+                  // Ensure dates are ascending (some cataloging reverses them):
+                  .sort((a, b) => a - b)
+                // The bib's start date should be <= dateBefore
+                if (itemDates[0] > dateBefore) console.log('before ' + dateBefore + ' failed for ', itemDates)
+                expect(itemDates[0]).to.be.at.most(dateBefore)
+              })
+
+              return resolve()
+            })
+          })
+        })
+      )
+    })
+
+    it('Ensure filters[dateAfter] produces only those items whose dates follow/overlap given date', function () {
+      const datesAfter = [1800, 1900, 2000]
+
+      return Promise.all(
+        datesAfter.map((dateAfter) => {
+          const nextUrl = `${searchAllUrl}&filters[dateAfter]=${dateAfter}`
+
+          return new Promise((resolve, reject) => {
+            request.get(nextUrl, function (err, response, body) {
+              if (err) throw err
+
+              const doc = JSON.parse(body)
+
+              // Ensure bib dates follow dateAfter for each result
+              doc.itemListElement.forEach((item) => {
+                const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
+                  .filter((d) => typeof d === 'number')
+                  // Ensure dates are ascending (some cataloging reverses them):
+                  .sort((a, b) => a - b)
+                // The bib's end date (or start date if it doesn't have an end date)
+                // should be >= dateAfter
+                expect(itemDates[itemDates.length - 1]).to.be.at.least(dateAfter)
+              })
+
+              return resolve()
+            })
+          })
+        })
+      )
+    })
+
     it('Ensure a chain of added filters reduces resultset correctly', function (done) {
       var dates = [1984, 1985]
 
@@ -474,8 +507,16 @@ describe('Test Resources responses', function () {
           // Ensure count decreased:
           expect(doc.totalResults).to.be.below(prevTotal)
 
-          // Ensure first bib dateEndYear overlaps date
-          expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0] - 1)
+          // Ensure bib dates overlap dateAfter for each result
+          doc.itemListElement.forEach((item) => {
+            const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
+              .filter((d) => typeof d === 'number')
+              // Ensure dates are ascending (some cataloging reverses them):
+              .sort((a, b) => a - b)
+            // The bib's end date (or start date if it doesn't have an end date)
+            // should be >= the start of the queried date range:
+            expect(itemDates[itemDates.length - 1]).to.be.at.least(dates[0])
+          })
 
           prevTotal = doc.totalResults
 
@@ -489,9 +530,18 @@ describe('Test Resources responses', function () {
             // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
-            // Ensure first bib dateStartYear-dateEndYear overlaps dates
-            expect(doc.itemListElement[0].result.dateEndYear).to.be.above(dates[0] - 1)
-            expect(doc.itemListElement[0].result.dateStartYear).to.be.below(dates[1] + 1)
+            // Ensure bib dates overlap date range
+            doc.itemListElement.forEach((item) => {
+              const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
+                .filter((d) => typeof d === 'number')
+                // Ensure dates are ascending (some cataloging reverses them):
+                .sort((a, b) => a - b)
+              // The bib's end date (or start date if it doesn't have an end date)
+              // should be >= the start of the queried date range:
+              expect(itemDates[itemDates.length - 1]).to.be.at.least(dates[0])
+              // The bib's start date should be <= the end of the queried date range:
+              expect(itemDates[0]).to.be.at.most(dates[1])
+            })
 
             prevTotal = doc.totalResults
 

@@ -1,5 +1,5 @@
 {
-  "took": 142,
+  "took": 181,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 120,
+    "total": 298,
     "max_score": null,
     "hits": [
       {
@@ -1467,6 +1467,656 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10011947",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "2 v. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Includes indexes.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Encyclopedias and dictionaries, Kannada",
+            "Folklore",
+            "Folklore -- Karnataka",
+            "Folklore -- Karnataka -- Dictionaries"
+          ],
+          "publisherLiteral": [
+            "Kannada Sāhitya Pariṣattu,"
+          ],
+          "language": [
+            {
+              "id": "lang:kan",
+              "label": "Kannada"
+            }
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Kannaḍa jānapada viśvakōśa"
+          ],
+          "shelfMark": [
+            "*OLA 86-2952"
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "85904648"
+          ],
+          "contributorLiteral": [
+            "Kambar, Chandrasekhara, 1938-"
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 86-2952"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10011947"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "85904648"
+            }
+          ],
+          "updatedAt": 1525296792242,
+          "publicationStatement": [
+            "Beṅgaḷūru : Kannada Sāhitya Pariṣattu, 1985."
+          ],
+          "identifier": [
+            "urn:bnum:10011947",
+            "urn:lccn:85904648"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Encyclopedias and dictionaries, Kannada.",
+            "Folklore -- Karnataka -- Dictionaries."
+          ],
+          "titleDisplay": [
+            "Kannaḍa jānapada viśvakōśa / sampadakaru, Candraśēkhara Kambāra."
+          ],
+          "uri": "b10011947",
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            2
+          ],
+          "placeOfPublication": [
+            "Beṅgaḷūru :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013001767"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-2952 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013001767"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013001767"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10005915",
+              "shelfMark": [
+                "*OLA 86-2952 v. 1"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013001759"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-2952 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013001759"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013001759"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10005916",
+              "shelfMark": [
+                "*OLA 86-2952 v. 2"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "25 cm."
+          ]
+        },
+        "sort": [
+          "b10011947"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10012152",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "xviii, 128, [16] p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Texts of English poems translated by B. M. Srikantayya, 1884-1946, with titles also in Kannada and citations for Kannada translations: p. [57]-128, [16].",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Added title in English on verso of t.p.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Śrīkaṇṭhayya, Bi. Eṃ., 1884-1946"
+          ],
+          "publisherLiteral": [
+            "Bi. Eṃ. Śrī. Smāraka Pratiṣṭhāna,"
+          ],
+          "language": [
+            {
+              "id": "lang:kan",
+              "label": "Kannada"
+            }
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Śrīgandha : Bi. Eṃ. Śrī. janmaśatamānōtsava saṃsmaraṇa sañcike"
+          ],
+          "shelfMark": [
+            "*OLA 86-3118"
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "85910191"
+          ],
+          "contributorLiteral": [
+            "Śrīnivāsarāju, Ci., 1942-2007."
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 86-3118"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10012152"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "85910191"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ01314127"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0212117"
+            }
+          ],
+          "updatedAt": 1612359896903,
+          "publicationStatement": [
+            "Beṅgaḷūru : Bi. Eṃ. Śrī. Smāraka Pratiṣṭhāna, 1985."
+          ],
+          "identifier": [
+            "urn:bnum:10012152",
+            "urn:lccn:85910191",
+            "urn:undefined:NNSZ01314127",
+            "urn:undefined:(WaOLN)nyp0212117"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Śrīkaṇṭhayya, Bi. Eṃ., 1884-1946."
+          ],
+          "titleDisplay": [
+            "Śrīgandha : Bi. Eṃ. Śrī. janmaśatamānōtsava saṃsmaraṇa sañcike / sampādakaru Ci. Śrīnivāsarāju ... [et al.]."
+          ],
+          "uri": "b10012152",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Beṅgaḷūru :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013002005"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 86-3118"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013002005"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013002005"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10006103",
+              "shelfMark": [
+                "*OLA 86-3118"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "25 cm."
+          ]
+        },
+        "sort": [
+          "b10012152"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10015200",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "xxi, 220, 14 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "A poem, with prose version.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Bhīma (Hindu mythology)",
+            "Bhīma (Hindu mythology) -- Poetry"
+          ],
+          "publisherLiteral": [
+            "Kannaḍa Sāhitya Pariṣattu,"
+          ],
+          "language": [
+            {
+              "id": "lang:kan",
+              "label": "Kannada"
+            }
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Sāhasabhīmavijayaṃ (Gadāyuddhaṃ)"
+          ],
+          "shelfMark": [
+            "*OLA 87-2376"
+          ],
+          "creatorLiteral": [
+            "Ranna, active 993."
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "86903378"
+          ],
+          "seriesStatement": [
+            "Vajramahōtsava varṣa pañcavārṣika yōjaneya pustakamāle"
+          ],
+          "contributorLiteral": [
+            "Kulakarṇi, Ār. Vi."
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 87-2376"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10015200"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "86903378"
+            }
+          ],
+          "uniformTitle": [
+            "Gadayuddha"
+          ],
+          "updatedAt": 1523472292106,
+          "publicationStatement": [
+            "Beṅgaḷūru : Kannaḍa Sāhitya Pariṣattu, 1985."
+          ],
+          "identifier": [
+            "urn:bnum:10015200",
+            "urn:lccn:86903378"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Bhīma (Hindu mythology) -- Poetry."
+          ],
+          "titleDisplay": [
+            "Sāhasabhīmavijayaṃ (Gadāyuddhaṃ) / Kavicakravarti Kaviranna viracitam ; gadyānuvāda Ār. Vi. Kulakarṇi."
+          ],
+          "uri": "b10015200",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Beṅgaḷūru :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Gadayuddha",
+            "Sāhasabhīma vijaya."
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013128214"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013128214"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013128214"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10007322",
+              "shelfMark": [
+                "*OLA 87-2376"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "22 cm."
+          ]
+        },
+        "sort": [
+          "b10015200"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10015230",
         "_score": null,
         "_source": {
@@ -2141,6 +2791,205 @@
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
+        "_id": "b10016294",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "xliv, 96, 22 p., [1] leaf of plates : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada (Kannada and roman scripts); paraphrase in English and Kannada; introd. in English.",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Kannada language",
+            "Kannada language -- Grammar"
+          ],
+          "publisherLiteral": [
+            "Asian Educational Services,"
+          ],
+          "language": [
+            {
+              "id": "lang:kan",
+              "label": "Kannada"
+            }
+          ],
+          "dateEndString": [
+            "1884"
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Nāga Varmā's Karnātaka bhāshā-bhūshana : the oldest grammar extant of the language Karṇāṭaka bhāṣābhūṣana"
+          ],
+          "shelfMark": [
+            "*OLA 87-1958"
+          ],
+          "creatorLiteral": [
+            "Nāgavarma, active 12th century."
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "85901530"
+          ],
+          "contributorLiteral": [
+            "Rice, B. Lewis (Benjamin Lewis), 1837-1927."
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 87-1958"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10016294"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "85901530"
+            }
+          ],
+          "uniformTitle": [
+            "Karṇāṭaka bhāṣabhūṣaṇa"
+          ],
+          "dateEndYear": [
+            1884
+          ],
+          "updatedAt": 1523472349220,
+          "publicationStatement": [
+            "New Delhi : Asian Educational Services, 1985."
+          ],
+          "identifier": [
+            "urn:bnum:10016294",
+            "urn:lccn:85901530"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Kannada language -- Grammar."
+          ],
+          "titleDisplay": [
+            "Nāga Varmā's Karnātaka bhāshā-bhūshana : the oldest grammar extant of the language Karṇāṭaka bhāṣābhūṣana / Nāgavarma krta ; edited with an introduction, Lewis Rice."
+          ],
+          "uri": "b10016294",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "New Delhi :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Karṇāṭaka bhāṣabhūṣaṇa"
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013128081"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013128081"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013128081"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10007686",
+              "shelfMark": [
+                "*OLA 87-1958"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available "
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "22 cm."
+          ]
+        },
+        "sort": [
+          "b10016294"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
         "_id": "b10016426",
         "_score": null,
         "_source": {
@@ -2318,6 +3167,206 @@
         },
         "sort": [
           "b10016426"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10016756",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "vii, 262 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Cover title: Five hundred Indian plants, in Kanarese.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Includes index.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada; includes scientific names in Latin; popular names in English and Indic languages (Kannada script).",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Medicinal plants",
+            "Medicinal plants -- India",
+            "Medicinal plants -- India -- Dictionaries"
+          ],
+          "publisherLiteral": [
+            "Periodical Expert Book Agency,"
+          ],
+          "language": [
+            {
+              "id": "lang:kan",
+              "label": "Kannada"
+            }
+          ],
+          "dateEndString": [
+            "1922"
+          ],
+          "createdYear": [
+            1986
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Five hundred Indian plants, their use in medicine and arts Sahasrārdha vrkṣādigaḷa varṇane."
+          ],
+          "shelfMark": [
+            "*OLA 87-4611"
+          ],
+          "createdString": [
+            "1986"
+          ],
+          "idLccn": [
+            "87900750"
+          ],
+          "dateStartYear": [
+            1986
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 87-4611"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10016756"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "87900750"
+            }
+          ],
+          "dateEndYear": [
+            1922
+          ],
+          "updatedAt": 1525296796952,
+          "publicationStatement": [
+            "Delhi, India : Periodical Expert Book Agency, 1986."
+          ],
+          "identifier": [
+            "urn:bnum:10016756",
+            "urn:lccn:87900750"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1986"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Medicinal plants -- India -- Dictionaries."
+          ],
+          "titleDisplay": [
+            "Five hundred Indian plants, their use in medicine and arts Sahasrārdha vrkṣādigaḷa varṇane."
+          ],
+          "uri": "b10016756",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Delhi, India :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Sahasrārdha vrkṣādigaḷa varṇane."
+          ],
+          "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433013271295"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 87-4611"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433013271295"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "idBarcode": [
+                "33433013271295"
+              ],
+              "requestable": [
+                true
+              ],
+              "uri": "i10008066",
+              "shelfMark": [
+                "*OLA 87-4611"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            "22 cm."
+          ]
+        },
+        "sort": [
+          "b10016756"
         ]
       },
       {
@@ -14372,1097 +15421,6 @@
         },
         "sort": [
           "b10996867"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b11013588",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "v. ;"
-          ],
-          "subjectLiteral_exploded": [
-            "Proverbs, Kannada"
-          ],
-          "publisherLiteral": [
-            "Kannaḍa Sāhitya Pariṣattu,"
-          ],
-          "language": [
-            {
-              "id": "lang:kan",
-              "label": "Kannada"
-            }
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "createdYear": [
-            1982
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Kannaḍa gādegaḷa mahākōśa"
-          ],
-          "shelfMark": [
-            "*OLA 86-810"
-          ],
-          "createdString": [
-            "1982"
-          ],
-          "seriesStatement": [
-            "Beḷḷi biṭṭa baḷḷi ; 91"
-          ],
-          "contributorLiteral": [
-            "Rāmārādhya, Hu. Ma., 1907-"
-          ],
-          "dateStartYear": [
-            1982
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "identifier": [
-            "urn:bnum:11013588",
-            "urn:lccn:83900063 /SA"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1982"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Proverbs, Kannada."
-          ],
-          "titleDisplay": [
-            "Kannaḍa gādegaḷa mahākōśa / sampādakaru Hu. Ma. Rāmārādhya."
-          ],
-          "uri": "b11013588",
-          "lccClassification": [
-            "PN6519.K25 K36 1982"
-          ],
-          "numItems": [
-            2
-          ],
-          "numAvailable": [
-            2
-          ],
-          "placeOfPublication": [
-            "Beṅgaḷūru :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433013000033"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212082",
-              "shelfMark": [
-                "*OLA 86-810|zLibrary has: Vol. 1-2. v. 1"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433013000041"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212083",
-              "shelfMark": [
-                "*OLA 86-810|zLibrary has: Vol. 1-2. v. 2"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "22 cm."
-          ]
-        },
-        "sort": [
-          "b11013588"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b11015378",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "v. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Language",
-              "label": "In Kannada.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Vishnu (Hindu deity)",
-            "Vishnu (Hindu deity) -- Poetry"
-          ],
-          "publisherLiteral": [
-            "Śāradā Mandira,"
-          ],
-          "language": [
-            {
-              "id": "lang:kan",
-              "label": "Kannada"
-            }
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "createdYear": [
-            1975
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Kannaḍa Bhāgavata"
-          ],
-          "shelfMark": [
-            "*OLA 86-828"
-          ],
-          "creatorLiteral": [
-            "Nityātma Śukayōgi, 15th cent."
-          ],
-          "createdString": [
-            "1975"
-          ],
-          "idLccn": [
-            "77902350"
-          ],
-          "seriesStatement": [
-            "Kannaḍa kavikāvyamāle"
-          ],
-          "contributorLiteral": [
-            "Veṅkaṭarāmappa, Ke."
-          ],
-          "dateStartYear": [
-            1975
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OLA 86-828"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "11015378"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "77902350"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp1022678"
-            }
-          ],
-          "uniformTitle": [
-            "Kannaḍa Bhāgavata"
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "updatedAt": 1568689702256,
-          "publicationStatement": [
-            "Maisūru : Śāradā Mandira, 1975-"
-          ],
-          "identifier": [
-            "urn:bnum:11015378",
-            "urn:lccn:77902350",
-            "urn:undefined:(WaOLN)nyp1022678"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1975"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Vishnu (Hindu deity) -- Poetry."
-          ],
-          "titleDisplay": [
-            "Kannaḍa Bhāgavata / Nityātma Śukayōgi viracita ; [sampādaka], Ke. Veṅkaṭarāmappa."
-          ],
-          "uri": "b11015378",
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Maisūru :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "titleAlt": [
-            "Kannaḍa Bhāgavata"
-          ],
-          "tableOfContents": [
-            "2. Trtīya caturtha skandagaḷu."
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433013000074"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OLA 86-828|zLibrary has: Vol. 2."
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433013000074"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433013000074"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212373",
-              "shelfMark": [
-                "*OLA 86-828|zLibrary has: Vol. 2."
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "26 cm."
-          ]
-        },
-        "sort": [
-          "b11015378"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b11015385",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "v. ;"
-          ],
-          "publisherLiteral": [
-            "Gītā Buk Haus,"
-          ],
-          "language": [
-            {
-              "id": "lang:kan",
-              "label": "Kannada"
-            }
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "createdYear": [
-            1973
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Śrī Cakrēśvari : kādambari"
-          ],
-          "shelfMark": [
-            "*OLA 86-497"
-          ],
-          "creatorLiteral": [
-            "Ta. Rā. Su. (Taḷakina Rāmasvāmayya Subbarāv), 1923-"
-          ],
-          "createdString": [
-            "1973"
-          ],
-          "contributorLiteral": [
-            "Ta. Rā. Su. (Taḷakina Rāmasvāmayya Subbarāv), 1923-"
-          ],
-          "dateStartYear": [
-            1973
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "identifier": [
-            "urn:bnum:11015385",
-            "urn:lccn:75902471"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1973"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "titleDisplay": [
-            "Śrī Cakrēśvari : kādambari / Ta. Rā. Su."
-          ],
-          "uri": "b11015385",
-          "lccClassification": [
-            "PL4659.S87 S7"
-          ],
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Maisūru :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433012999722"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212374",
-              "shelfMark": [
-                "*OLA 86-497|zLibrary has: Vol. 1."
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "20 cm."
-          ]
-        },
-        "sort": [
-          "b11015385"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b11015395",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "v."
-          ],
-          "subjectLiteral_exploded": [
-            "Sanskrit literature",
-            "Sanskrit literature -- Jaina authors",
-            "Sanskrit literature -- Jaina authors -- History and criticism"
-          ],
-          "publisherLiteral": [
-            "Ādarśa Jaina Granthamāle; prtigaḷu doreyuva sthaḷa: Samāja Pustakālaya, Dhāravāḍa]"
-          ],
-          "language": [
-            {
-              "id": "lang:kan",
-              "label": "Kannada"
-            }
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "createdYear": [
-            1971
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Saṃskrta vāṅmayakke Jaina kavigala kāṇike."
-          ],
-          "shelfMark": [
-            "*OKB 86-496"
-          ],
-          "creatorLiteral": [
-            "Bhujabalī Śāstrī, Ke., 1897-"
-          ],
-          "createdString": [
-            "1971"
-          ],
-          "seriesStatement": [
-            "Ādarśa Jaina granthamāle"
-          ],
-          "contributorLiteral": [
-            "Bhujabalī Śāstrī, Ke., 1897-"
-          ],
-          "dateStartYear": [
-            1971
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "identifier": [
-            "urn:bnum:11015395",
-            "urn:lccn:72904941"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1971"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Sanskrit literature -- Jaina authors -- History and criticism."
-          ],
-          "titleDisplay": [
-            "Saṃskrta vāṅmayakke Jaina kavigala kāṇike. [Lēkhaka] Ke. Bhujabali Śāstri."
-          ],
-          "uri": "b11015395",
-          "lccClassification": [
-            "PK2905 .B54"
-          ],
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "Mūḍubidare,"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433058548516"
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i13107889",
-              "shelfMark": [
-                "*OKB 86-496"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:mal92",
-                  "label": "Schwarzman Building M2 - General Research Room 315"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "18 cm."
-          ]
-        },
-        "sort": [
-          "b11015395"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b11015414",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "v. : ill. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Vol. 2 published in 1971.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "Vols. 4 & 5 in one.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Kannada.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Education",
-            "Education -- Karnataka",
-            "Kannada language"
-          ],
-          "publisherLiteral": [
-            "Suruci Prakāśana,"
-          ],
-          "language": [
-            {
-              "id": "lang:kan",
-              "label": "Kannada"
-            }
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "createdYear": [
-            1970
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "Kulapatiya bhāṣaṇagaḷu"
-          ],
-          "shelfMark": [
-            "*OLA 86-779"
-          ],
-          "creatorLiteral": [
-            "Javare Gowda, Deve Gowda, 1918-"
-          ],
-          "createdString": [
-            "1970"
-          ],
-          "idLccn": [
-            "73918859"
-          ],
-          "dateStartYear": [
-            1970
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OLA 86-779"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "11015414"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "73918859"
-            }
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "updatedAt": 1616591929189,
-          "publicationStatement": [
-            "Maisūru : Suruci Prakāśana, 1970?-"
-          ],
-          "identifier": [
-            "urn:bnum:11015414",
-            "urn:lccn:73918859"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1970"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Education -- Karnataka.",
-            "Kannada language."
-          ],
-          "titleDisplay": [
-            "Kulapatiya bhāṣaṇagaḷu / Dējagau."
-          ],
-          "uri": "b11015414",
-          "numItems": [
-            4
-          ],
-          "numAvailable": [
-            4
-          ],
-          "placeOfPublication": [
-            "Maisūru :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433012999938"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 2"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433012999938"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433012999938"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212378",
-              "shelfMark": [
-                "*OLA 86-779|zLibrary has: Vols. 2-6. v. 2"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433012999946"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 3"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433012999946"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433012999946"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212379",
-              "shelfMark": [
-                "*OLA 86-779|zLibrary has: Vols. 2-6. v. 3"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433012999953"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 4-5"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433012999953"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433012999953"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212380",
-              "shelfMark": [
-                "*OLA 86-779|zLibrary has: Vols. 2-6. v. 4-5"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433012999961"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OLA 86-779|zLibrary has: Vols. 2-6. v. 6"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433012999961"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433012999961"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10212381",
-              "shelfMark": [
-                "*OLA 86-779|zLibrary has: Vols. 2-6. v. 6"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "22 cm."
-          ]
-        },
-        "sort": [
-          "b11015414"
         ]
       }
     ]
