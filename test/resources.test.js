@@ -94,6 +94,26 @@ describe('Resources query', function () {
       expect(body.bool.should[0].query_string).to.be.a('object')
       expect(body.bool.should[0].query_string.query).to.equal('potatoes')
     })
+
+    it('accepts advanced search parameters', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ contributor: 'Poe', title: 'Raven', subject: 'ravens' })
+      const body = resourcesPrivMethods.buildElasticQuery(params)
+      expect(body).to.be.a('object')
+      expect(body.bool).to.be.a('object')
+      expect(body.bool.should).to.be.a('array')
+      expect(body.bool.should[0].query_string).to.be.a('object')
+      expect(body.bool.should[0].query_string.fields).to.be.a('array')
+      expect(body.bool.should[0].query_string.fields[0]).to.equal('title^5')
+      expect(body.bool.should[0].query_string.query).to.equal('Raven')
+      expect(body.bool.should[1].query_string).to.be.a('object')
+      expect(body.bool.should[1].query_string.fields).to.be.a('array')
+      expect(body.bool.should[1].query_string.fields[0]).to.equal('subjectLiteral^2')
+      expect(body.bool.should[1].query_string.query).to.equal('ravens')
+      expect(body.bool.should[2].query_string).to.be.a('object')
+      expect(body.bool.should[2].query_string.fields).to.be.a('array')
+      expect(body.bool.should[2].query_string.fields[0]).to.equal('creatorLiteral^4')
+      expect(body.bool.should[2].query_string.query).to.equal('Poe')
+    })
   })
 
   describe('buildElasticBody', function () {
