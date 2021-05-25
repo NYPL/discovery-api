@@ -1,16 +1,6 @@
 const { ItemResourceSerializer } = require('../lib/jsonld_serializers')
 
 describe('ItemResourceSerializer', () => {
-  const originalCoreVersion = process.env.NYPL_CORE_VERSION
-
-  before(() => {
-    process.env.NYPL_CORE_VERSION = 'v1.37a'
-  })
-
-  after(() => {
-    process.env.NYPL_CORE_VERSION = originalCoreVersion
-  })
-
   describe('sourceIdentifierPrefixByNyplSource', () => {
     it('produces camel case form of nypl source', () => {
       expect(ItemResourceSerializer.sourceIdentifierPrefixByNyplSource('sierra-nypl')).to.eq('SierraNypl')
