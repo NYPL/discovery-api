@@ -713,4 +713,50 @@ describe('Test Resources responses', function () {
       })
     })
   })
+
+  describe('annotatedMarc endpoint', () => {
+    let app = { logger: { debug: () => null } }
+
+    before(() => {
+      require('../lib/resources')(app)
+
+      // Configure the stubbing to serve up the same fixture for all calls:
+      fixtures.enableDataApiFixtures({
+        'bibs/sierra-nypl/11055155': 'bib-11055155.json',
+        'bibs/recap-cul/11055155': 'bib-11055155.json',
+        'bibs/recap-hl/11055155': 'bib-11055155.json'
+      })
+    })
+
+    after(() => {
+      fixtures.disableDataApiFixtures()
+    })
+
+    it('traslates nypl record id into necessary BibService call', () => {
+      return app.resources.annotatedMarc({ uri: 'b11055155' })
+        .then((data) => {
+          expect(data).to.be.a('object')
+          expect(data.bib).to.be.a('object')
+          expect(data.bib.id).to.eq('11055155')
+        })
+    })
+
+    it('traslates CUL record id into necessary BibService call', () => {
+      return app.resources.annotatedMarc({ uri: 'cb11055155' })
+        .then((data) => {
+          expect(data).to.be.a('object')
+          expect(data.bib).to.be.a('object')
+          expect(data.bib.id).to.eq('11055155')
+        })
+    })
+
+    it('traslates HL record id into necessary BibService call', () => {
+      return app.resources.annotatedMarc({ uri: 'hb11055155' })
+        .then((data) => {
+          expect(data).to.be.a('object')
+          expect(data.bib).to.be.a('object')
+          expect(data.bib.id).to.eq('11055155')
+        })
+    })
+  })
 })
