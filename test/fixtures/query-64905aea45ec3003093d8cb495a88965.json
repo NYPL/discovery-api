@@ -1,5 +1,5 @@
 {
-  "took": 348,
+  "took": 321,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 4079294,
+    "total": 4128092,
     "max_score": null,
     "hits": [
       {
@@ -4331,17 +4331,44 @@
             {
               "type": "nypl:Bnumber",
               "value": "10005862"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00507076"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0205852"
             }
           ],
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523471552016,
+          "holdings": [
+            {
+              "format": [
+                "PRINT"
+              ],
+              "location": [
+                {
+                  "code": "loc:scf",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ],
+              "uri": "h1144093",
+              "shelfMark": [
+                "Sc Ser.-M .N3674: 6th. 1982."
+              ]
+            }
+          ],
+          "updatedAt": 1621007474694,
           "publicationStatement": [
             "Urbana, Ill. : Afro-American Studies and Research Program, University of Illinois, [1983?-]"
           ],
           "identifier": [
-            "urn:bnum:10005862"
+            "urn:bnum:10005862",
+            "urn:undefined:NNSZ00507076",
+            "urn:undefined:(WaOLN)nyp0205852"
           ],
           "materialType": [
             {
@@ -4386,6 +4413,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "tableOfContents": [
+            "no. 1. Race/class.--no. 2. Studies on Black children and their families.--no. 3. Philosophical perspectives in Black studies.--no. 4. Black liberation movement.--no. 5. Social science and the Black experience."
           ],
           "items": [
             {
@@ -4570,17 +4600,44 @@
             {
               "type": "nypl:Bnumber",
               "value": "10005898"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00507113"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0205888"
             }
           ],
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1608146243304,
+          "holdings": [
+            {
+              "format": [
+                "PRINT"
+              ],
+              "location": [
+                {
+                  "code": "loc:scf",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ],
+              "uri": "h1144290",
+              "shelfMark": [
+                "Sc Ser.-M .M468"
+              ]
+            }
+          ],
+          "updatedAt": 1622826339802,
           "publicationStatement": [
             "Port-au-Prince : I.L.A. de Port-au-Prince, 1984-"
           ],
           "identifier": [
-            "urn:bnum:10005898"
+            "urn:bnum:10005898",
+            "urn:undefined:NNSZ00507113",
+            "urn:undefined:(WaOLN)nyp0205888"
           ],
           "materialType": [
             {
@@ -12860,49 +12917,9 @@
             {
               "holdingStatement": [
                 "1:1(May/Jun 1977)-12:53(Dec/Jan 1988/89),13:55(Apr/May 1989)-21:105(Oct/Dec 1997)-25:132(Dec 2001/Jan 2002),27:165(Apr 2005)-32:212(Dec/Jan 2010)",
-                "v. 32, no. 213 (2010-02) - v. 38, no. 269 (2015-09); v. 38, no. 271 (2015-11) - v. 40, no. 294 (2018-03); v. 41, no. 296 (2018-05) - no. 310 (2019-10); v. 42, no. 311 (2019-11) - no. 324 (2021-02)"
+                "v. 32, no. 213 (2010-02) - v. 38, no. 269 (2015-09); v. 38, no. 271 (2015-11) - v. 40, no. 294 (2018-03); v. 41, no. 296 (2018-05) - no. 310 (2019-10); v. 42, no. 311 (2019-11) - no. 325 (2021-04)"
               ],
               "checkInBoxes": [
-                {
-                  "coverage": "Vol. 38 No. 270 (Oct. 2015)",
-                  "copies": null,
-                  "position": "1",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 41 No. 304 (Mar. 2019)",
-                  "copies": null,
-                  "position": "2",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 41 No. 305 (Apr. 2019)",
-                  "copies": null,
-                  "position": "3",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 41 No. 306 (May. 2019)",
-                  "copies": null,
-                  "position": "4",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
                 {
                   "coverage": "Vol. 41 No. 307 (Jun. 2019)",
                   "copies": null,
@@ -12924,16 +12941,6 @@
                   "status": "Arrived"
                 },
                 {
-                  "coverage": "Vol. 42 No. 309 (Sep. 2019)",
-                  "copies": null,
-                  "position": "7",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
                   "coverage": "Vol. 41 No. 310 (Oct. 2019)",
                   "copies": null,
                   "position": "8",
@@ -12942,316 +12949,6 @@
                     "*LA 81-296"
                   ],
                   "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 311 (Nov. 2019)",
-                  "copies": null,
-                  "position": "9",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 312 (Dec. 2019)",
-                  "copies": null,
-                  "position": "10",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 313 (Feb. 2020)",
-                  "copies": null,
-                  "position": "11",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 314 (Mar. 2020)",
-                  "copies": null,
-                  "position": "12",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 315 (Apr. 2020)",
-                  "copies": null,
-                  "position": "13",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 316 (May. 2020)",
-                  "copies": null,
-                  "position": "14",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 317 (Jun. 2020)",
-                  "copies": null,
-                  "position": "15",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 318 (Jul. 2020)",
-                  "copies": null,
-                  "position": "16",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 319 (Sep. 2020)",
-                  "copies": null,
-                  "position": "17",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 320 (Oct. 2020)",
-                  "copies": null,
-                  "position": "18",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 321 (Nov. 2020)",
-                  "copies": null,
-                  "position": "19",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 322 (Dec. 2020)",
-                  "copies": null,
-                  "position": "20",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 323 (Feb. 2021)",
-                  "copies": null,
-                  "position": "21",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 42 No. 324 (Feb. 2021)",
-                  "copies": null,
-                  "position": "22",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 325 (Mar. 2021)",
-                  "copies": null,
-                  "position": "23",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 326 (Apr. 2021)",
-                  "copies": null,
-                  "position": "24",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 327 (May. 2021)",
-                  "copies": null,
-                  "position": "25",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 328 (Jun. 2021)",
-                  "copies": null,
-                  "position": "26",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 329 (Jul. 2021)",
-                  "copies": null,
-                  "position": "27",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 330 (Aug. 2021)",
-                  "copies": null,
-                  "position": "28",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 42 No. 331 (Sep. 2021)",
-                  "copies": null,
-                  "position": "29",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 332 (Oct. 2021)",
-                  "copies": null,
-                  "position": "30",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 333 (Nov. 2021)",
-                  "copies": null,
-                  "position": "31",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 334 (Dec. 2021)",
-                  "copies": null,
-                  "position": "32",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 335 (Jan. 2022)",
-                  "copies": null,
-                  "position": "33",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 336 (Feb. 2022)",
-                  "copies": null,
-                  "position": "34",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 337 (Mar. 2022)",
-                  "copies": null,
-                  "position": "35",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 338 (Apr. 2022)",
-                  "copies": null,
-                  "position": "36",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 339 (May. 2022)",
-                  "copies": null,
-                  "position": "37",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 340 (Jun. 2022)",
-                  "copies": null,
-                  "position": "38",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 43 No. 341 (Jul. 2022)",
-                  "copies": null,
-                  "position": "39",
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*LA 81-296"
-                  ],
-                  "status": "Expected"
                 }
               ],
               "identifier": [
@@ -13281,7 +12978,7 @@
               ]
             }
           ],
-          "updatedAt": 1619459476995,
+          "updatedAt": 1622139640520,
           "publicationStatement": [
             "[Milano, Ed. Diapason Milano]"
           ],
