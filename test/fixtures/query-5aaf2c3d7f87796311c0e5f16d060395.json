@@ -1,5 +1,5 @@
 {
-  "took": 447,
+  "took": 7,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,37 +7,36 @@
     "failed": 0
   },
   "hits": {
-    "total": 13580842,
-    "max_score": 15.385656,
+    "total": 1,
+    "max_score": 14.721558,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10011374",
-        "_score": 15.385656,
+        "_id": "b10022734",
+        "_score": 14.721558,
         "_source": {
           "extent": [
-            "2 v. illus."
+            "xiv, 381 p., [16] leaves of plates : ill. ;"
           ],
           "note": [
             {
-              "noteType": "Note",
-              "label": "Vol. 1 has added t.p.: The Table book ... Every Saturday.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "Originally published weekly, from Jan. 1827 to Jan. 1828 (55 nos.-including indexes)",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "Library's copy lacks added t.p.",
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
               "type": "bf:Note"
             }
           ],
+          "subjectLiteral_exploded": [
+            "African American arts",
+            "African American arts -- New York",
+            "Arts, Modern",
+            "Arts, Modern -- 20th century",
+            "Arts, Modern -- 20th century -- New York",
+            "Harlem (New York, N.Y.)",
+            "Harlem Renaissance"
+          ],
           "publisherLiteral": [
-            "Published for W. Hone, by Hunt and Clarke,"
+            "Knopf : distributed by Random House,"
           ],
           "language": [
             {
@@ -45,67 +44,64 @@
               "label": "English"
             }
           ],
-          "dateEndString": [
-            "1828"
-          ],
           "createdYear": [
-            1827
+            1981
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "The table book,"
+            "When Harlem was in vogue"
           ],
           "shelfMark": [
-            "JFE 86-498"
+            "IEC 81-1139"
           ],
           "creatorLiteral": [
-            "Hone, William, 1780-1842."
+            "Lewis, David Levering, 1936-"
           ],
           "createdString": [
-            "1827"
+            "1981"
           ],
           "idLccn": [
-            "35038534"
+            "80002704"
           ],
           "dateStartYear": [
-            1827
+            1981
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "JFE 86-498"
+              "value": "IEC 81-1139"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "10011374"
+              "value": "10022734"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0394495721 :"
             },
             {
               "type": "bf:Lccn",
-              "value": "35038534"
+              "value": "80002704"
             },
             {
               "type": "bf:Identifier",
-              "value": "NNSZ01213343"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0211346"
+              "value": "(WaOLN)nyp0022812"
             }
           ],
-          "dateEndYear": [
-            1828
-          ],
-          "updatedAt": 1616538241403,
+          "updatedAt": 1616627103721,
           "publicationStatement": [
-            "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
+            "New York : Knopf : distributed by Random House, 1981."
           ],
           "identifier": [
-            "urn:bnum:10011374",
-            "urn:lccn:35038534",
-            "urn:undefined:NNSZ01213343",
-            "urn:undefined:(WaOLN)nyp0211346"
+            "urn:bnum:10022734",
+            "urn:isbn:0394495721 :",
+            "urn:lccn:80002704",
+            "urn:undefined:(WaOLN)nyp0022812"
+          ],
+          "idIsbn": [
+            "0394495721 :"
           ],
           "materialType": [
             {
@@ -120,7 +116,7 @@
             }
           ],
           "dateString": [
-            "1827"
+            "1981"
           ],
           "mediaType": [
             {
@@ -128,21 +124,27 @@
               "label": "unmediated"
             }
           ],
-          "titleDisplay": [
-            "The table book, by William Hone."
+          "subjectLiteral": [
+            "African American arts -- New York.",
+            "Arts, Modern -- 20th century -- New York.",
+            "Harlem (New York, N.Y.)",
+            "Harlem Renaissance."
           ],
-          "uri": "b10011374",
+          "titleDisplay": [
+            "When Harlem was in vogue / David Levering Lewis."
+          ],
+          "uri": "b10022734",
           "lccClassification": [
-            "AC4 .H65"
+            "NX511.N4 L48 1981"
           ],
           "numItems": [
-            5
+            3
           ],
           "numAvailable": [
-            4
+            2
           ],
           "placeOfPublication": [
-            "London,"
+            "New York :"
           ],
           "issuance": [
             {
@@ -157,7 +159,7 @@
         "inner_hits": {
           "items": {
             "hits": {
-              "total": 5,
+              "total": 3,
               "max_score": null,
               "hits": [
                 {
@@ -167,214 +169,61 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10005488",
+                    "uri": "i10010902",
                     "status": [
                       {
-                        "id": "status:a",
-                        "label": "Available"
+                        "id": "status:t",
+                        "label": "In transit"
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available"
+                      "status:t||In transit"
                     ],
                     "owner": [
                       {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
+                        "id": "orgs:1105",
+                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
                       }
                     ],
                     "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
+                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:32",
-                        "label": "google project, book"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
+                        "id": "loc:mag82",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
+                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
                     ],
                     "shelfMark": [
-                      "*AY (Hone, W. Table book) v. 1"
+                      "IEC 81-1139"
                     ],
                     "identifierV2": [
                       {
-                        "value": "*AY (Hone, W. Table book) v. 1",
+                        "value": "IEC 81-1139",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433067332548"
+                        "value": "33433035187214"
                       }
                     ],
                     "identifier": [
-                      "urn:barcode:33433067332548"
+                      "urn:barcode:33433035187214"
                     ],
                     "idBarcode": [
-                      "33433067332548"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "shelfMark_sort": "a*AY (Hone, W. Table book) v. 000001"
-                  },
-                  "sort": [
-                    "a*AY (Hone, W. Table book) v. 000001"
-                  ]
-                },
-                {
-                  "_nested": {
-                    "field": "items",
-                    "offset": 1
-                  },
-                  "_score": null,
-                  "_source": {
-                    "uri": "i14747243",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available "
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available "
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:32",
-                        "label": "google project, book"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "shelfMark": [
-                      "*AY (Hone, W. Table book) v. 2"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*AY (Hone, W. Table book) v. 2",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433067332555"
-                      }
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433067332555"
-                    ],
-                    "idBarcode": [
-                      "33433067332555"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "shelfMark_sort": "a*AY (Hone, W. Table book) v. 000002"
-                  },
-                  "sort": [
-                    "a*AY (Hone, W. Table book) v. 000002"
-                  ]
-                },
-                {
-                  "_nested": {
-                    "field": "items",
-                    "offset": 2
-                  },
-                  "_score": null,
-                  "_source": {
-                    "uri": "i10005487",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:32",
-                        "label": "google project, book"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mal92",
-                        "label": "Schwarzman Building M2 - General Research Room 315"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
-                    ],
-                    "shelfMark": [
-                      "JFE 86-498 v. 1"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "JFE 86-498 v. 1",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433057532081"
-                      }
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433057532081"
-                    ],
-                    "idBarcode": [
-                      "33433057532081"
+                      "33433035187214"
                     ],
                     "requestable": [
                       false
@@ -388,10 +237,172 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
-                    "shelfMark_sort": "aJFE 86-498 v. 000001"
+                    "shelfMark_sort": "aIEC 81-001139"
                   },
                   "sort": [
-                    "aJFE 86-498 v. 000001"
+                    "aIEC 81-001139"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10010903",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:scff1",
+                        "label": "Schomburg Center - Research & Reference - Open Shelf"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:scff1||Schomburg Center - Research & Reference - Open Shelf"
+                    ],
+                    "shelfMark": [
+                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433015873411"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433015873411"
+                    ],
+                    "idBarcode": [
+                      "33433015873411"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:-",
+                        "label": "No restrictions"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:-||No restrictions"
+                    ],
+                    "shelfMark_sort": "aSc *700-L (Lewis, D. When Harlem was in vogue)"
+                  },
+                  "sort": [
+                    "aSc *700-L (Lewis, D. When Harlem was in vogue)"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10010904",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:scff2",
+                        "label": "Schomburg Center - Research & Reference"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:scff2||Schomburg Center - Research & Reference"
+                    ],
+                    "shelfMark": [
+                      "Sc E 96-780"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "Sc E 96-780",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433034124614"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433034124614"
+                    ],
+                    "idBarcode": [
+                      "33433034124614"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aSc E 96-000780"
+                  },
+                  "sort": [
+                    "aSc E 96-000780"
                   ]
                 }
               ]

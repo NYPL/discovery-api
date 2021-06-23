@@ -1,5 +1,5 @@
 {
-  "took": 431,
+  "took": 155,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,24 +7,24 @@
     "failed": 0
   },
   "hits": {
-    "total": 13580842,
-    "max_score": 16.232956,
+    "total": 1,
+    "max_score": 62.311436,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10022950",
-        "_score": 16.232956,
+        "_id": "b12709113",
+        "_score": 62.311436,
         "_source": {
           "extent": [
-            "224 p. ;"
+            "iv, 350 p. : ill., port. ;"
           ],
           "subjectLiteral_exploded": [
-            "Christianity and other religions",
-            "Christianity and other religions -- Judaism"
+            "Washington County (Neb.)",
+            "Washington County (Neb.) -- History"
           ],
           "publisherLiteral": [
-            "[D. Kirshenbaum],"
+            "Magic city printing co.,"
           ],
           "language": [
             {
@@ -33,42 +33,42 @@
             }
           ],
           "createdYear": [
-            1974
+            1937
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Religion--love or hate?"
+            "A history of Washington county, Nebraska"
           ],
           "shelfMark": [
-            "*PGZ 81-1452"
+            "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
           ],
           "creatorLiteral": [
-            "Kirshenbaum, D. (David), 1902-"
+            "Shrader, Forrest B."
           ],
           "createdString": [
-            "1974"
+            "1937"
           ],
           "dateStartYear": [
-            1974
+            1937
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "*PGZ 81-1452"
+              "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "10022950"
+              "value": "12709113"
             }
           ],
-          "updatedAt": 1523472855377,
+          "updatedAt": 1525298876009,
           "publicationStatement": [
-            "New York : [D. Kirshenbaum], 1974."
+            "[Omaha, : Magic city printing co., 1937]"
           ],
           "identifier": [
-            "urn:bnum:10022950"
+            "urn:bnum:12709113"
           ],
           "materialType": [
             {
@@ -83,7 +83,7 @@
             }
           ],
           "dateString": [
-            "1974"
+            "1937"
           ],
           "mediaType": [
             {
@@ -92,12 +92,12 @@
             }
           ],
           "subjectLiteral": [
-            "Christianity and other religions -- Judaism."
+            "Washington County (Neb.) -- History."
           ],
           "titleDisplay": [
-            "Religion--love or hate? / by David Kirshenbaum."
+            "A history of Washington county, Nebraska / by Forrest B. Shrader."
           ],
-          "uri": "b10022950",
+          "uri": "b12709113",
           "numItems": [
             1
           ],
@@ -105,16 +105,13 @@
             1
           ],
           "placeOfPublication": [
-            "New York :"
+            "[Omaha, :"
           ],
           "issuance": [
             {
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
-          ],
-          "titleAlt": [
-            "Love or hate."
           ],
           "dimensions": [
             "24 cm."
@@ -137,10 +134,10 @@
                       "accessMessage:1||Use in library"
                     ],
                     "identifier": [
-                      "urn:barcode:33433103848853"
+                      "urn:barcode:33433099509238"
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "accessMessage": [
                       {
@@ -149,47 +146,47 @@
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available "
+                      "status:a||Available"
                     ],
-                    "uri": "i14749981",
+                    "uri": "i16202472",
                     "shelfMark": [
-                      "*PGZ 81-1452"
+                      "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                     ],
                     "identifierV2": [
                       {
                         "type": "bf:ShelfMark",
-                        "value": "*PGZ 81-1452"
+                        "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433103848853"
+                        "value": "33433099509238"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division - Room 111"
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
                     ],
                     "idBarcode": [
-                      "33433103848853"
+                      "33433099509238"
                     ],
                     "requestable": [
                       false
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:2",
-                        "label": "book non-circ"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
                     ],
                     "status": [
                       {
                         "id": "status:a",
-                        "label": "Available "
+                        "label": "Available"
                       }
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:maf92",
-                        "label": "Schwarzman Building M2 - Dorot Jewish Division - Room 111"
+                        "id": "loc:mag92",
+                        "label": "Schwarzman Building M2 - Milstein Division Room 121"
                       }
                     ]
                   },

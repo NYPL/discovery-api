@@ -1,5 +1,5 @@
 {
-  "took": 164,
+  "took": 117,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,66 +8,83 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 69.97981,
+    "max_score": 89.12045,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b12423567",
-        "_score": 69.97981,
+        "_id": "b13627363",
+        "_score": 89.12045,
         "_source": {
           "extent": [
-            "202 p."
+            "128 p. illus."
           ],
           "subjectLiteral_exploded": [
-            "Campanella, Tommaso, 1568-1639"
+            "Cats",
+            "Cats -- Pictorial works"
           ],
           "publisherLiteral": [
-            "S. Neaulme,"
+            "Creative age press, inc."
           ],
           "language": [
             {
-              "id": "lang:lat",
-              "label": "Latin"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "createdYear": [
-            1741
+            1947
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Vita Th. Campanellae."
+            "Cats, cats, & cats,"
           ],
           "shelfMark": [
-            "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+            "VPS (Rice, E. Cats, cats, & cats)"
           ],
           "creatorLiteral": [
-            "Cyprian, Ernst Salomon, 1673-1745."
+            "Rice, Edward, 1917-"
           ],
           "createdString": [
-            "1741"
+            "1947"
+          ],
+          "idLccn": [
+            "agr47000211"
+          ],
+          "contributorLiteral": [
+            "Gleason, Jean, 1917-"
           ],
           "dateStartYear": [
-            1741
+            1947
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+              "value": "VPS (Rice, E. Cats, cats, & cats)"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "12423567"
+              "value": "13627363"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "agr47000211"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp3600714"
             }
           ],
-          "updatedAt": 1619759319951,
+          "updatedAt": 1599805777512,
           "publicationStatement": [
-            "Trajecti ad Rhenum, S. Neaulme, 1741."
+            "New York, Creative age press, inc. [c1947]"
           ],
           "identifier": [
-            "urn:bnum:12423567"
+            "urn:bnum:13627363",
+            "urn:lccn:agr47000211",
+            "urn:undefined:(WaOLN)nyp3600714"
           ],
           "materialType": [
             {
@@ -82,7 +99,7 @@
             }
           ],
           "dateString": [
-            "1741"
+            "1947"
           ],
           "mediaType": [
             {
@@ -91,12 +108,16 @@
             }
           ],
           "subjectLiteral": [
-            "Campanella, Tommaso, 1568-1639."
+            "Cats -- Pictorial works.",
+            "Cats."
           ],
           "titleDisplay": [
-            "Vita Th. Campanellae. Autore Ern. Sal. Cypriano. Accedunt hac secunda editione appendices IV. doctorum virorum de Campanellae vita, philosophia & libris schediasmata complectentes."
+            "Cats, cats, & cats, by Edward Rice and Jean Gleason."
           ],
-          "uri": "b12423567",
+          "uri": "b13627363",
+          "lccClassification": [
+            "SF447 .R5"
+          ],
           "numItems": [
             1
           ],
@@ -104,7 +125,7 @@
             1
           ],
           "placeOfPublication": [
-            "Trajecti ad Rhenum,"
+            "New York,"
           ],
           "issuance": [
             {
@@ -113,7 +134,7 @@
             }
           ],
           "dimensions": [
-            "16 cm."
+            "25 cm."
           ]
         },
         "inner_hits": {
@@ -129,7 +150,7 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i16020288",
+                    "uri": "i10754478",
                     "status": [
                       {
                         "id": "status:a",
@@ -139,62 +160,67 @@
                     "status_packed": [
                       "status:a||Available"
                     ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:2",
-                        "label": "book non-circ"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:mal92",
-                        "label": "Schwarzman Building M2 - General Research Room 315"
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                      "loc:rc2ma||Offsite"
                     ],
                     "shelfMark": [
-                      "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                      "VPS (Rice, E. Cats, cats, & cats)"
                     ],
                     "identifierV2": [
                       {
-                        "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)",
+                        "value": "VPS (Rice, E. Cats, cats, & cats)",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433104031624"
+                        "value": "33433006598316"
                       }
                     ],
-                    "physicalLocation": [
-                      "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
-                    ],
                     "identifier": [
-                      "urn:barcode:33433104031624"
+                      "urn:barcode:33433006598316"
                     ],
                     "idBarcode": [
-                      "33433104031624"
+                      "33433006598316"
                     ],
                     "requestable": [
-                      false
+                      true
                     ],
                     "accessMessage": [
                       {
-                        "id": "accessMessage:u",
-                        "label": "Supervised use"
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
                       }
                     ],
                     "accessMessage_packed": [
-                      "accessMessage:u||Supervised use"
-                    ],
-                    "shelfMark_sort": "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                      "accessMessage:2||Request in advance"
+                    ]
                   },
                   "sort": [
-                    "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                    null
                   ]
                 }
               ]
