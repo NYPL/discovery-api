@@ -1,5 +1,5 @@
 {
-  "took": 271,
+  "took": 195,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 797132,
+    "total": 799406,
     "max_score": null,
     "hits": [
       {
@@ -5890,17 +5890,44 @@
             {
               "type": "nypl:Bnumber",
               "value": "10005862"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00507076"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0205852"
             }
           ],
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1523471552016,
+          "holdings": [
+            {
+              "format": [
+                "PRINT"
+              ],
+              "location": [
+                {
+                  "code": "loc:scf",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ],
+              "uri": "h1144093",
+              "shelfMark": [
+                "Sc Ser.-M .N3674: 6th. 1982."
+              ]
+            }
+          ],
+          "updatedAt": 1621007474694,
           "publicationStatement": [
             "Urbana, Ill. : Afro-American Studies and Research Program, University of Illinois, [1983?-]"
           ],
           "identifier": [
-            "urn:bnum:10005862"
+            "urn:bnum:10005862",
+            "urn:undefined:NNSZ00507076",
+            "urn:undefined:(WaOLN)nyp0205852"
           ],
           "materialType": [
             {
@@ -5945,6 +5972,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "tableOfContents": [
+            "no. 1. Race/class.--no. 2. Studies on Black children and their families.--no. 3. Philosophical perspectives in Black studies.--no. 4. Black liberation movement.--no. 5. Social science and the Black experience."
           ],
           "items": [
             {
@@ -6582,17 +6612,44 @@
             {
               "type": "nypl:Bnumber",
               "value": "10005898"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00507113"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0205888"
             }
           ],
           "dateEndYear": [
             9999
           ],
-          "updatedAt": 1608146243304,
+          "holdings": [
+            {
+              "format": [
+                "PRINT"
+              ],
+              "location": [
+                {
+                  "code": "loc:scf",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ],
+              "uri": "h1144290",
+              "shelfMark": [
+                "Sc Ser.-M .M468"
+              ]
+            }
+          ],
+          "updatedAt": 1622826339802,
           "publicationStatement": [
             "Port-au-Prince : I.L.A. de Port-au-Prince, 1984-"
           ],
           "identifier": [
-            "urn:bnum:10005898"
+            "urn:bnum:10005898",
+            "urn:undefined:NNSZ00507113",
+            "urn:undefined:(WaOLN)nyp0205888"
           ],
           "materialType": [
             {
