@@ -56,10 +56,10 @@ describe('Resources query', function () {
       const body = resourcesPrivMethods.buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
-      expect(body.bool.should).to.be.a('array')
-      expect(body.bool.should[0]).to.be.a('object')
-      expect(body.bool.should[0].query_string).to.be.a('object')
-      expect(body.bool.should[0].query_string.query).to.equal('subjectLiteral:potatoes')
+      expect(body.bool.must).to.be.a('array')
+      expect(body.bool.must[0]).to.be.a('object')
+      expect(body.bool.must[0].query_string).to.be.a('object')
+      expect(body.bool.must[0].query_string.query).to.equal('subjectLiteral:potatoes')
     })
 
     it('uses "query string query" if subjectLiteral: quoted phrase used', function () {
@@ -67,10 +67,10 @@ describe('Resources query', function () {
       const body = resourcesPrivMethods.buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
-      expect(body.bool.should).to.be.a('array')
-      expect(body.bool.should[0]).to.be.a('object')
-      expect(body.bool.should[0].query_string).to.be.a('object')
-      expect(body.bool.should[0].query_string.query).to.equal('subjectLiteral:\"hot potatoes\"')
+      expect(body.bool.must).to.be.a('array')
+      expect(body.bool.must[0]).to.be.a('object')
+      expect(body.bool.must[0].query_string).to.be.a('object')
+      expect(body.bool.must[0].query_string.query).to.equal('subjectLiteral:\"hot potatoes\"')
     })
 
     it('escapes colon if field not recognized', function () {
@@ -78,10 +78,10 @@ describe('Resources query', function () {
       const body = resourcesPrivMethods.buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
-      expect(body.bool.should).to.be.a('array')
-      expect(body.bool.should[0]).to.be.a('object')
-      expect(body.bool.should[0].query_string).to.be.a('object')
-      expect(body.bool.should[0].query_string.query).to.equal('fladeedle\\:\"hot potatoes\"')
+      expect(body.bool.must).to.be.a('array')
+      expect(body.bool.must[0]).to.be.a('object')
+      expect(body.bool.must[0].query_string).to.be.a('object')
+      expect(body.bool.must[0].query_string.query).to.equal('fladeedle\\:\"hot potatoes\"')
     })
 
     it('uses "query string query" if plain keyword query used', function () {
@@ -89,10 +89,10 @@ describe('Resources query', function () {
       const body = resourcesPrivMethods.buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
-      expect(body.bool.should).to.be.a('array')
-      expect(body.bool.should[0]).to.be.a('object')
-      expect(body.bool.should[0].query_string).to.be.a('object')
-      expect(body.bool.should[0].query_string.query).to.equal('potatoes')
+      expect(body.bool.must).to.be.a('array')
+      expect(body.bool.must[0]).to.be.a('object')
+      expect(body.bool.must[0].query_string).to.be.a('object')
+      expect(body.bool.must[0].query_string.query).to.equal('potatoes')
     })
 
     it('accepts advanced search parameters', function () {
@@ -113,6 +113,45 @@ describe('Resources query', function () {
       expect(body.bool.must[2].query_string.fields).to.be.a('array')
       expect(body.bool.must[2].query_string.fields[0]).to.equal('creatorLiteral^4')
       expect(body.bool.must[2].query_string.query).to.equal('Poe')
+    })
+  })
+
+  describe('buildElasticQueryForKeywords', function () {
+    it('returns a simple query_string query for search_scope=all', function () {
+      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'all' })
+      expect(query).to.be.a('object')
+      expect(query.query_string).to.be.a('object')
+      expect(query.query_string.fields).to.be.a('array')
+    })
+
+    it('returns a simple query_string query for search_scope=title', function () {
+      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'title' })
+      expect(query).to.be.a('object')
+      expect(query.query_string).to.be.a('object')
+      expect(query.query_string.fields).to.be.a('array')
+      expect(query.query_string.fields).to.include('uniformTitle.folded')
+    })
+
+    it('returns a bool query for search_scope=standard_number', function () {
+      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'standard_number' })
+      expect(query).to.be.a('object')
+      expect(query.bool).to.be.a('object')
+      expect(query.bool.should).to.be.a('array')
+
+      // First clause is a query_string query across multiple root level fields
+      expect(query.bool.should[0]).to.be.a('object')
+      expect(query.bool.should[0].query_string).to.be.a('object')
+      expect(query.bool.should[0].query_string.fields).to.be.a('array')
+      expect(query.bool.should[0].query_string.fields).to.include('shelfMark')
+
+      // Second clause is a nested query_string query on items fields:
+      expect(query.bool.should[1]).to.be.a('object')
+      expect(query.bool.should[1].nested).to.be.a('object')
+      expect(query.bool.should[1].nested.path).to.eq('items')
+      expect(query.bool.should[1].nested.query).to.be.a('object')
+      expect(query.bool.should[1].nested.query.query_string).to.be.a('object')
+      expect(query.bool.should[1].nested.query.query_string.fields).to.be.a('array')
+      expect(query.bool.should[1].nested.query.query_string.fields).to.include('items.shelfMark')
     })
   })
 

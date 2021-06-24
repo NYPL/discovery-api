@@ -1,5 +1,5 @@
 {
-  "took": 654,
+  "took": 155,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,23 +8,23 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 90.057236,
+    "max_score": 62.311436,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b13627363",
-        "_score": 90.057236,
+        "_id": "b12709113",
+        "_score": 62.311436,
         "_source": {
           "extent": [
-            "128 p. illus."
+            "iv, 350 p. : ill., port. ;"
           ],
           "subjectLiteral_exploded": [
-            "Cats",
-            "Cats -- Pictorial works"
+            "Washington County (Neb.)",
+            "Washington County (Neb.) -- History"
           ],
           "publisherLiteral": [
-            "Creative age press, inc."
+            "Magic city printing co.,"
           ],
           "language": [
             {
@@ -33,58 +33,42 @@
             }
           ],
           "createdYear": [
-            1947
+            1937
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Cats, cats, & cats,"
+            "A history of Washington county, Nebraska"
           ],
           "shelfMark": [
-            "VPS (Rice, E. Cats, cats, & cats)"
+            "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
           ],
           "creatorLiteral": [
-            "Rice, Edward, 1917-"
+            "Shrader, Forrest B."
           ],
           "createdString": [
-            "1947"
-          ],
-          "idLccn": [
-            "agr47000211"
-          ],
-          "contributorLiteral": [
-            "Gleason, Jean, 1917-"
+            "1937"
           ],
           "dateStartYear": [
-            1947
+            1937
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "VPS (Rice, E. Cats, cats, & cats)"
+              "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "13627363"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "agr47000211"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp3600714"
+              "value": "12709113"
             }
           ],
-          "updatedAt": 1599805777512,
+          "updatedAt": 1525298876009,
           "publicationStatement": [
-            "New York, Creative age press, inc. [c1947]"
+            "[Omaha, : Magic city printing co., 1937]"
           ],
           "identifier": [
-            "urn:bnum:13627363",
-            "urn:lccn:agr47000211",
-            "urn:undefined:(WaOLN)nyp3600714"
+            "urn:bnum:12709113"
           ],
           "materialType": [
             {
@@ -99,7 +83,7 @@
             }
           ],
           "dateString": [
-            "1947"
+            "1937"
           ],
           "mediaType": [
             {
@@ -108,16 +92,12 @@
             }
           ],
           "subjectLiteral": [
-            "Cats -- Pictorial works.",
-            "Cats."
+            "Washington County (Neb.) -- History."
           ],
           "titleDisplay": [
-            "Cats, cats, & cats, by Edward Rice and Jean Gleason."
+            "A history of Washington county, Nebraska / by Forrest B. Shrader."
           ],
-          "uri": "b13627363",
-          "lccClassification": [
-            "SF447 .R5"
-          ],
+          "uri": "b12709113",
           "numItems": [
             1
           ],
@@ -125,7 +105,7 @@
             1
           ],
           "placeOfPublication": [
-            "New York,"
+            "[Omaha, :"
           ],
           "issuance": [
             {
@@ -134,7 +114,7 @@
             }
           ],
           "dimensions": [
-            "25 cm."
+            "24 cm."
           ]
         },
         "inner_hits": {
@@ -150,24 +130,46 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10754478",
-                    "status": [
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433099509238"
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "accessMessage": [
                       {
-                        "id": "status:a",
-                        "label": "Available"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
-                    "owner": [
+                    "uri": "i16202472",
+                    "shelfMark": [
+                      "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                    ],
+                    "identifierV2": [
                       {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
+                        "type": "bf:ShelfMark",
+                        "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433099509238"
                       }
                     ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                    ],
+                    "idBarcode": [
+                      "33433099509238"
+                    ],
+                    "requestable": [
+                      false
                     ],
                     "catalogItemType": [
                       {
@@ -175,48 +177,17 @@
                         "label": "book, limited circ, MaRLI"
                       }
                     ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
+                        "id": "loc:mag92",
+                        "label": "Schwarzman Building M2 - Milstein Division Room 121"
                       }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "shelfMark": [
-                      "VPS (Rice, E. Cats, cats, & cats)"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "VPS (Rice, E. Cats, cats, & cats)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433006598316"
-                      }
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433006598316"
-                    ],
-                    "idBarcode": [
-                      "33433006598316"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
                     ]
                   },
                   "sort": [
