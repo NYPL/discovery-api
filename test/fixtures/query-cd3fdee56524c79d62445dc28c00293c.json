@@ -1,5 +1,5 @@
 {
-  "took": 369,
+  "took": 31,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,24 +7,28 @@
     "failed": 0
   },
   "hits": {
-    "total": 13259923,
-    "max_score": 16.193409,
+    "total": 1,
+    "max_score": 33.24127,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10022950",
-        "_score": 16.193409,
+        "_id": "pb1717",
+        "_score": 33.24127,
         "_source": {
           "extent": [
-            "224 p. ;"
+            "x, 340 p. : ill. ;"
           ],
           "subjectLiteral_exploded": [
-            "Christianity and other religions",
-            "Christianity and other religions -- Judaism"
+            "Cats",
+            "Cats -- Fiction",
+            "Cats"
           ],
           "publisherLiteral": [
-            "[D. Kirshenbaum],"
+            "Lothrop, Lee & Shepard Books,"
+          ],
+          "description": [
+            "More than 40 stories and essays about cats by famous writers."
           ],
           "language": [
             {
@@ -33,42 +37,52 @@
             }
           ],
           "createdYear": [
-            1974
+            1979
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Religion--love or hate?"
-          ],
-          "shelfMark": [
-            "*PGZ 81-1452"
-          ],
-          "creatorLiteral": [
-            "Kirshenbaum, D. (David), 1902-"
+            "Cat encounters : a cat-lover's anthology /"
           ],
           "createdString": [
-            "1974"
+            "1979"
+          ],
+          "idLccn": [
+            "   79002437 "
+          ],
+          "contributorLiteral": [
+            "Lewis, Gogo.",
+            "Manley, Seon."
           ],
           "dateStartYear": [
-            1974
+            1979
           ],
           "identifierV2": [
             {
-              "type": "bf:ShelfMark",
-              "value": "*PGZ 81-1452"
+              "type": "nypl:Bnumber",
+              "value": "1717"
             },
             {
-              "type": "nypl:Bnumber",
-              "value": "10022950"
+              "type": "bf:Isbn",
+              "value": "0688419143"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "   79002437 "
             }
           ],
-          "updatedAt": 1523472855377,
+          "updatedAt": 1523549727960,
           "publicationStatement": [
-            "New York : [D. Kirshenbaum], 1974."
+            "New York : Lothrop, Lee & Shepard Books, c1979."
           ],
           "identifier": [
-            "urn:bnum:10022950"
+            "urn:bnum:1717",
+            "urn:isbn:0688419143",
+            "urn:lccn:   79002437 "
+          ],
+          "idIsbn": [
+            "0688419143"
           ],
           "materialType": [
             {
@@ -83,7 +97,7 @@
             }
           ],
           "dateString": [
-            "1974"
+            "1979"
           ],
           "mediaType": [
             {
@@ -92,12 +106,16 @@
             }
           ],
           "subjectLiteral": [
-            "Christianity and other religions -- Judaism."
+            "Cats -- Fiction.",
+            "Cats."
           ],
           "titleDisplay": [
-            "Religion--love or hate? / by David Kirshenbaum."
+            "Cat encounters : a cat-lover's anthology / selected by Seon Manley & Gogo Lewis."
           ],
-          "uri": "b10022950",
+          "uri": "pb1717",
+          "lccClassification": [
+            "SF445.5 .C378"
+          ],
           "numItems": [
             1
           ],
@@ -112,9 +130,6 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
-          ],
-          "titleAlt": [
-            "Love or hate."
           ],
           "dimensions": [
             "24 cm."
@@ -133,14 +148,20 @@
                   },
                   "_score": null,
                   "_source": {
+                    "owner": [
+                      {
+                        "id": "orgs:0003",
+                        "label": "Princeton University Library"
+                      }
+                    ],
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
                     "identifier": [
-                      "urn:barcode:33433103848853"
+                      "urn:barcode:32101087644330"
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
+                      "catalogItemType:1||non-circ"
                     ],
                     "accessMessage": [
                       {
@@ -151,45 +172,39 @@
                     "status_packed": [
                       "status:a||Available "
                     ],
-                    "uri": "i14749981",
+                    "uri": "pi2775",
                     "shelfMark": [
-                      "*PGZ 81-1452"
+                      "SF445.5 .C378"
                     ],
                     "identifierV2": [
                       {
                         "type": "bf:ShelfMark",
-                        "value": "*PGZ 81-1452"
+                        "value": "SF445.5 .C378"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433103848853"
+                        "value": "32101087644330"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division - Room 111"
-                    ],
                     "idBarcode": [
-                      "33433103848853"
+                      "32101087644330"
+                    ],
+                    "owner_packed": [
+                      "orgs:0003||Princeton University Library"
                     ],
                     "requestable": [
-                      false
+                      true
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:2",
-                        "label": "book non-circ"
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
                       }
                     ],
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available "
-                      }
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:maf92",
-                        "label": "Schwarzman Building M2 - Dorot Jewish Division - Room 111"
                       }
                     ]
                   },

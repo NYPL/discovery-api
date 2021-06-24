@@ -1,5 +1,5 @@
 {
-  "took": 181,
+  "took": 229,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -13393,6 +13393,18 @@
           "extent": [
             "v."
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 2 published in 1971.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Kannada.",
+              "type": "bf:Note"
+            }
+          ],
           "subjectLiteral_exploded": [
             "Kālidāsa.",
             "Kālidāsa. -- Poetry"
@@ -13422,7 +13434,7 @@
             "*OLA 84-4754"
           ],
           "creatorLiteral": [
-            "Rāmarāya, Samētanahaḷḷi, 1917-"
+            "Rāmarāya, Samētanahaḷḷi, 1917-1999"
           ],
           "createdString": [
             "1971"
@@ -13431,17 +13443,33 @@
             "Rāsa prakāśana, 9",
             "S. Rama Raya. Rāsa sāhitya, 16"
           ],
-          "contributorLiteral": [
-            "Rāmarāya, Samētanahaḷḷi, 1917-"
-          ],
           "dateStartYear": [
             1971
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OLA 84-4754"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10946973"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0954152"
+            }
           ],
           "dateEndYear": [
             9999
           ],
+          "updatedAt": 1623929059104,
+          "publicationStatement": [
+            "[Maṇḍya?] Rāsa Prakāśana [1971-"
+          ],
           "identifier": [
-            "urn:bnum:10946973"
+            "urn:bnum:10946973",
+            "urn:undefined:(WaOLN)nyp0954152"
           ],
           "materialType": [
             {
@@ -13489,6 +13517,9 @@
               "label": "monograph/item"
             }
           ],
+          "tableOfContents": [
+            "2. Vyavahārāṅgaṃ."
+          ],
           "items": [
             {
               "owner": [
@@ -13500,11 +13531,24 @@
               "identifier": [
                 "urn:barcode:33433012998641"
               ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLA 84-4754|zLibrary has: Vol. 2."
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433012998641"
+                }
+              ],
               "accessMessage": [
                 {
                   "id": "accessMessage:2",
                   "label": "Request in advance"
                 }
+              ],
+              "idBarcode": [
+                "33433012998641"
               ],
               "requestable": [
                 true
@@ -13517,16 +13561,12 @@
                 {
                   "id": "catalogItemType:55",
                   "label": "book, limited circ, MaRLI"
-                },
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [

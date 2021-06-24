@@ -1,5 +1,5 @@
 {
-  "took": 441,
+  "took": 117,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,27 +8,23 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 34.07579,
+    "max_score": 89.12045,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "pb1717",
-        "_score": 34.07579,
+        "_id": "b13627363",
+        "_score": 89.12045,
         "_source": {
           "extent": [
-            "x, 340 p. : ill. ;"
+            "128 p. illus."
           ],
           "subjectLiteral_exploded": [
             "Cats",
-            "Cats -- Fiction",
-            "Cats"
+            "Cats -- Pictorial works"
           ],
           "publisherLiteral": [
-            "Lothrop, Lee & Shepard Books,"
-          ],
-          "description": [
-            "More than 40 stories and essays about cats by famous writers."
+            "Creative age press, inc."
           ],
           "language": [
             {
@@ -37,52 +33,58 @@
             }
           ],
           "createdYear": [
-            1979
+            1947
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Cat encounters : a cat-lover's anthology /"
+            "Cats, cats, & cats,"
+          ],
+          "shelfMark": [
+            "VPS (Rice, E. Cats, cats, & cats)"
+          ],
+          "creatorLiteral": [
+            "Rice, Edward, 1917-"
           ],
           "createdString": [
-            "1979"
+            "1947"
           ],
           "idLccn": [
-            "   79002437 "
+            "agr47000211"
           ],
           "contributorLiteral": [
-            "Lewis, Gogo.",
-            "Manley, Seon."
+            "Gleason, Jean, 1917-"
           ],
           "dateStartYear": [
-            1979
+            1947
           ],
           "identifierV2": [
             {
-              "type": "nypl:Bnumber",
-              "value": "1717"
+              "type": "bf:ShelfMark",
+              "value": "VPS (Rice, E. Cats, cats, & cats)"
             },
             {
-              "type": "bf:Isbn",
-              "value": "0688419143"
+              "type": "nypl:Bnumber",
+              "value": "13627363"
             },
             {
               "type": "bf:Lccn",
-              "value": "   79002437 "
+              "value": "agr47000211"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp3600714"
             }
           ],
-          "updatedAt": 1523549727960,
+          "updatedAt": 1599805777512,
           "publicationStatement": [
-            "New York : Lothrop, Lee & Shepard Books, c1979."
+            "New York, Creative age press, inc. [c1947]"
           ],
           "identifier": [
-            "urn:bnum:1717",
-            "urn:isbn:0688419143",
-            "urn:lccn:   79002437 "
-          ],
-          "idIsbn": [
-            "0688419143"
+            "urn:bnum:13627363",
+            "urn:lccn:agr47000211",
+            "urn:undefined:(WaOLN)nyp3600714"
           ],
           "materialType": [
             {
@@ -97,7 +99,7 @@
             }
           ],
           "dateString": [
-            "1979"
+            "1947"
           ],
           "mediaType": [
             {
@@ -106,15 +108,15 @@
             }
           ],
           "subjectLiteral": [
-            "Cats -- Fiction.",
+            "Cats -- Pictorial works.",
             "Cats."
           ],
           "titleDisplay": [
-            "Cat encounters : a cat-lover's anthology / selected by Seon Manley & Gogo Lewis."
+            "Cats, cats, & cats, by Edward Rice and Jean Gleason."
           ],
-          "uri": "pb1717",
+          "uri": "b13627363",
           "lccClassification": [
-            "SF445.5 .C378"
+            "SF447 .R5"
           ],
           "numItems": [
             1
@@ -123,7 +125,7 @@
             1
           ],
           "placeOfPublication": [
-            "New York :"
+            "New York,"
           ],
           "issuance": [
             {
@@ -132,7 +134,7 @@
             }
           ],
           "dimensions": [
-            "24 cm."
+            "25 cm."
           ]
         },
         "inner_hits": {
@@ -148,64 +150,73 @@
                   },
                   "_score": null,
                   "_source": {
-                    "owner": [
+                    "uri": "i10754478",
+                    "status": [
                       {
-                        "id": "orgs:0003",
-                        "label": "Princeton University Library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "identifier": [
-                      "urn:barcode:32101087644330"
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:1||non-circ"
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available "
+                      "status:a||Available"
                     ],
-                    "uri": "pi2775",
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
                     "shelfMark": [
-                      "SF445.5 .C378"
+                      "VPS (Rice, E. Cats, cats, & cats)"
                     ],
                     "identifierV2": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "SF445.5 .C378"
+                        "value": "VPS (Rice, E. Cats, cats, & cats)",
+                        "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "32101087644330"
+                        "value": "33433006598316"
                       }
                     ],
-                    "idBarcode": [
-                      "32101087644330"
+                    "identifier": [
+                      "urn:barcode:33433006598316"
                     ],
-                    "owner_packed": [
-                      "orgs:0003||Princeton University Library"
+                    "idBarcode": [
+                      "33433006598316"
                     ],
                     "requestable": [
                       true
                     ],
-                    "catalogItemType": [
+                    "accessMessage": [
                       {
-                        "id": "catalogItemType:1",
-                        "label": "non-circ"
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
                       }
                     ],
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available "
-                      }
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
                     ]
                   },
                   "sort": [

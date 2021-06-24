@@ -1,5 +1,5 @@
 {
-  "took": 426,
+  "took": 236,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,63 +7,63 @@
     "failed": 0
   },
   "hits": {
-    "total": 29561,
+    "total": 29659,
     "max_score": 0,
     "hits": []
   },
   "aggregations": {
     "owner": {
-      "doc_count": 39364,
+      "doc_count": 40721,
       "_nested": {
         "doc_count_error_upper_bound": 0,
-        "sum_other_doc_count": 1662,
+        "sum_other_doc_count": 1648,
         "buckets": [
           {
             "key": "orgs:1000||Stephen A. Schwarzman Building",
-            "doc_count": 11705
+            "doc_count": 11729
           },
           {
             "key": "orgs:0002||Columbia University Libraries",
-            "doc_count": 4732
-          },
-          {
-            "key": "orgs:1101||General Research Division",
-            "doc_count": 3723
+            "doc_count": 5442
           },
           {
             "key": "orgs:0003||Princeton University Library",
-            "doc_count": 3546
+            "doc_count": 4078
+          },
+          {
+            "key": "orgs:1101||General Research Division",
+            "doc_count": 3729
           },
           {
             "key": "orgs:1002||New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
-            "doc_count": 1337
+            "doc_count": 1341
           },
           {
             "key": "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy",
-            "doc_count": 1058
+            "doc_count": 1062
           },
           {
             "key": "orgs:1119||Billy Rose Theatre Division",
-            "doc_count": 730
+            "doc_count": 749
           },
           {
             "key": "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division",
-            "doc_count": 716
+            "doc_count": 721
           },
           {
             "key": "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection",
-            "doc_count": 367
+            "doc_count": 370
           },
           {
             "key": "orgs:1108||Rare Book Division",
-            "doc_count": 364
+            "doc_count": 366
           }
         ]
       }
     },
     "contributorLiteral": {
       "doc_count_error_upper_bound": 18,
-      "sum_other_doc_count": 34134,
+      "sum_other_doc_count": 34361,
       "buckets": [
         {
           "key": "OverDrive, Inc.",
@@ -83,7 +83,7 @@
         },
         {
           "key": "Bibliotheca (Firm)",
-          "doc_count": 135
+          "doc_count": 136
         },
         {
           "key": "HistoryMakers (Video oral history collection), production company.",
@@ -110,16 +110,20 @@
           "doc_count": 95
         },
         {
+          "key": "Harty, Hamilton, 1879-1941.",
+          "doc_count": 72
+        },
+        {
           "key": "Worcester Dramatic Museum.",
           "doc_count": 72
         },
         {
-          "key": "Harty, Hamilton, 1879-1941.",
+          "key": "OverDrive, Inc., distributor",
           "doc_count": 71
         },
         {
-          "key": "OverDrive, Inc., distributor",
-          "doc_count": 60
+          "key": "OverDrive, Inc., distributor.",
+          "doc_count": 61
         },
         {
           "key": "Booz, Allen & Hamilton.",
@@ -131,7 +135,7 @@
         },
         {
           "key": "Handel, George Frideric, 1685-1759.",
-          "doc_count": 49
+          "doc_count": 50
         },
         {
           "key": "Hickey, Matthew,",
@@ -146,16 +150,20 @@
           "doc_count": 49
         },
         {
-          "key": "OverDrive, Inc., distributor.",
-          "doc_count": 48
-        },
-        {
           "key": "New York Public Library for the Performing Arts. Billy Rose Theatre Division. Theatre on Film and Tape Archive.",
           "doc_count": 45
         },
         {
           "key": "Metropolitan Opera (New York, N.Y.)",
           "doc_count": 44
+        },
+        {
+          "key": "Bibliotheca (Firm), distributor.",
+          "doc_count": 42
+        },
+        {
+          "key": "Hamilton, Newburgh, 1691-1761.",
+          "doc_count": 42
         },
         {
           "key": "Philip Hamilton McMillan Memorial Publication Fund.",
@@ -166,20 +174,16 @@
           "doc_count": 40
         },
         {
-          "key": "Bibliotheca (Firm), distributor.",
-          "doc_count": 39
-        },
-        {
           "key": "Hamilton, Chico, 1921-",
           "doc_count": 39
         },
         {
           "key": "Geological Survey (U.S.), issuing body.",
-          "doc_count": 37
+          "doc_count": 38
         },
         {
           "key": "Reynolds, Peter H. (Peter Hamilton), 1961-",
-          "doc_count": 36
+          "doc_count": 37
         },
         {
           "key": "Worcester Theatre (Front Street, Worcester, Mass.)",
@@ -230,6 +234,10 @@
           "doc_count": 23
         },
         {
+          "key": "Hamilton, Scott, 1954-",
+          "doc_count": 22
+        },
+        {
           "key": "Hamilton, Charles V.",
           "doc_count": 21
         },
@@ -250,20 +258,12 @@
           "doc_count": 20
         },
         {
-          "key": "Hamilton, Scott, 1954-",
-          "doc_count": 20
-        },
-        {
           "key": "Hamilton, Stuart.",
           "doc_count": 20
         },
         {
           "key": "Sinclair Hamilton Collection of American Illustrated Books. NjP",
           "doc_count": 20
-        },
-        {
-          "key": "Downes, Edward, 1911-",
-          "doc_count": 19
         }
       ]
     },
@@ -273,11 +273,11 @@
       "buckets": [
         {
           "key": "resourcetypes:txt||Text",
-          "doc_count": 27219
+          "doc_count": 27280
         },
         {
           "key": "resourcetypes:aud||Audio",
-          "doc_count": 1112
+          "doc_count": 1138
         },
         {
           "key": "resourcetypes:mov||Moving image",
@@ -285,19 +285,19 @@
         },
         {
           "key": "resourcetypes:car||Cartographic",
-          "doc_count": 246
+          "doc_count": 248
         },
         {
           "key": "resourcetypes:not||Notated music",
-          "doc_count": 193
+          "doc_count": 194
         },
         {
           "key": "resourcetypes:img||Still image",
-          "doc_count": 172
+          "doc_count": 179
         },
         {
           "key": "resourcetypes:mix||Mixed material",
-          "doc_count": 130
+          "doc_count": 129
         },
         {
           "key": "resourcetypes:mul||Multimedia",
@@ -311,15 +311,15 @@
       "buckets": [
         {
           "key": "urn:biblevel:m||monograph/item",
-          "doc_count": 28572
+          "doc_count": 28667
         },
         {
           "key": "urn:biblevel:s||serial",
-          "doc_count": 455
+          "doc_count": 456
         },
         {
           "key": "urn:biblevel:c||collection",
-          "doc_count": 258
+          "doc_count": 259
         },
         {
           "key": "urn:biblevel:b||serial component part",
@@ -327,7 +327,7 @@
         },
         {
           "key": "urn:biblevel:d||subunit",
-          "doc_count": 59
+          "doc_count": 58
         },
         {
           "key": "urn:biblevel:i||integrating resource",
@@ -337,11 +337,11 @@
     },
     "publisher": {
       "doc_count_error_upper_bound": 25,
-      "sum_other_doc_count": 20893,
+      "sum_other_doc_count": 20966,
       "buckets": [
         {
           "key": "H. Hamilton,",
-          "doc_count": 853
+          "doc_count": 854
         },
         {
           "key": "Hamilton,",
@@ -365,7 +365,7 @@
         },
         {
           "key": "Oxford University Press,",
-          "doc_count": 162
+          "doc_count": 165
         },
         {
           "key": "Simpkin, Marshall, Hamilton, Kent,",
@@ -417,7 +417,7 @@
         },
         {
           "key": "Cambridge University Press,",
-          "doc_count": 68
+          "doc_count": 69
         },
         {
           "key": "Simpkin, Marshall, Hamilton, Kent & Co., Ltd.,",
@@ -456,10 +456,6 @@
           "doc_count": 50
         },
         {
-          "key": "Princeton University Press,",
-          "doc_count": 48
-        },
-        {
           "key": "Alexander Hamilton Institute",
           "doc_count": 47
         },
@@ -469,6 +465,10 @@
         },
         {
           "key": "J. Murray,",
+          "doc_count": 47
+        },
+        {
+          "key": "Princeton University Press,",
           "doc_count": 47
         },
         {
@@ -488,12 +488,12 @@
           "doc_count": 43
         },
         {
-          "key": "Routledge,",
-          "doc_count": 39
+          "key": "Dodd, Mead,",
+          "doc_count": 40
         },
         {
-          "key": "Simon & Schuster,",
-          "doc_count": 39
+          "key": "Routledge,",
+          "doc_count": 40
         },
         {
           "key": "Harper & brothers,",
@@ -516,6 +516,14 @@
           "doc_count": 36
         },
         {
+          "key": "Concord Jazz,",
+          "doc_count": 35
+        },
+        {
+          "key": "G.P. Putnam's Sons,",
+          "doc_count": 34
+        },
+        {
           "key": "Hamilton & Co.,",
           "doc_count": 34
         },
@@ -524,20 +532,12 @@
           "doc_count": 33
         },
         {
-          "key": "Concord Jazz,",
-          "doc_count": 33
-        },
-        {
-          "key": "G.P. Putnam's Sons,",
-          "doc_count": 33
-        },
-        {
-          "key": "Dodd, Mead,",
-          "doc_count": 32
-        },
-        {
           "key": "St. Martin's Press,",
           "doc_count": 32
+        },
+        {
+          "key": "Columbia University Press,",
+          "doc_count": 31
         }
       ]
     },
@@ -547,23 +547,23 @@
       "buckets": [
         {
           "key": "lang:eng||English",
-          "doc_count": 27609
+          "doc_count": 27687
         },
         {
           "key": "lang:zxx||No linguistic content",
-          "doc_count": 243
+          "doc_count": 249
         },
         {
           "key": "lang:fre||French",
-          "doc_count": 228
+          "doc_count": 229
         },
         {
           "key": "lang:ger||German",
-          "doc_count": 193
+          "doc_count": 192
         },
         {
           "key": "lang:spa||Spanish",
-          "doc_count": 165
+          "doc_count": 164
         },
         {
           "key": "lang:lat||Latin",
@@ -571,11 +571,11 @@
         },
         {
           "key": "lang:por||Portuguese",
-          "doc_count": 121
+          "doc_count": 123
         },
         {
           "key": "lang:ita||Italian",
-          "doc_count": 100
+          "doc_count": 102
         },
         {
           "key": "lang:swe||Swedish",
@@ -583,15 +583,15 @@
         },
         {
           "key": "lang:und||Undetermined",
-          "doc_count": 18
-        },
-        {
-          "key": "lang:dut||Dutch",
-          "doc_count": 16
+          "doc_count": 20
         },
         {
           "key": "lang:rus||Russian",
           "doc_count": 16
+        },
+        {
+          "key": "lang:dut||Dutch",
+          "doc_count": 15
         },
         {
           "key": "lang:mul||Multiple languages",
@@ -753,31 +753,31 @@
       "buckets": [
         {
           "key": "mediatypes:n||unmediated",
-          "doc_count": 22691
+          "doc_count": 22976
         },
         {
           "key": "mediatypes:c||computer",
-          "doc_count": 4420
+          "doc_count": 4348
         },
         {
           "key": "mediatypes:undefined||unmediated",
-          "doc_count": 981
+          "doc_count": 984
         },
         {
           "key": "mediatypes:h||microform",
-          "doc_count": 730
+          "doc_count": 661
         },
         {
           "key": "mediatypes:v||video",
-          "doc_count": 178
+          "doc_count": 153
+        },
+        {
+          "key": "mediatypes:s||audio",
+          "doc_count": 11
         },
         {
           "key": "mediatypes:undefined||audio",
           "doc_count": 11
-        },
-        {
-          "key": "mediatypes:s||audio",
-          "doc_count": 5
         },
         {
           "key": "mediatypes:undefined||microform",
@@ -795,15 +795,15 @@
     },
     "subjectLiteral": {
       "doc_count_error_upper_bound": 33,
-      "sum_other_doc_count": 66173,
+      "sum_other_doc_count": 66597,
       "buckets": [
         {
           "key": "Hamilton, Alexander, 1757-1804.",
-          "doc_count": 477
+          "doc_count": 476
         },
         {
           "key": "United States.",
-          "doc_count": 265
+          "doc_count": 272
         },
         {
           "key": "Theater programs.",
@@ -811,11 +811,11 @@
         },
         {
           "key": "African Americans.",
-          "doc_count": 151
+          "doc_count": 152
         },
         {
           "key": "Man-woman relationships -- Fiction.",
-          "doc_count": 146
+          "doc_count": 147
         },
         {
           "key": "Concert programs.",
@@ -855,11 +855,11 @@
         },
         {
           "key": "Artists' books.",
-          "doc_count": 91
+          "doc_count": 92
         },
         {
           "key": "English fiction.",
-          "doc_count": 91
+          "doc_count": 92
         },
         {
           "key": "Hamilton family.",
@@ -875,7 +875,7 @@
         },
         {
           "key": "Jefferson, Thomas, 1743-1826.",
-          "doc_count": 78
+          "doc_count": 77
         },
         {
           "key": "Tariff -- United States.",
@@ -887,10 +887,14 @@
         },
         {
           "key": "United States -- Politics and government -- 1783-1809.",
-          "doc_count": 71
+          "doc_count": 72
         },
         {
           "key": "Constitutional law -- United States.",
+          "doc_count": 69
+        },
+        {
+          "key": "United States -- Politics and government -- 1775-1783.",
           "doc_count": 69
         },
         {
@@ -898,12 +902,8 @@
           "doc_count": 68
         },
         {
-          "key": "United States -- Politics and government -- 1775-1783.",
-          "doc_count": 68
-        },
-        {
           "key": "Jazz.",
-          "doc_count": 62
+          "doc_count": 67
         },
         {
           "key": "Authors, English -- 20th century -- Biography.",
@@ -915,23 +915,27 @@
         },
         {
           "key": "Blake, Anita (Fictitious character) -- Fiction.",
-          "doc_count": 60
+          "doc_count": 59
+        },
+        {
+          "key": "Politics and government.",
+          "doc_count": 59
         },
         {
           "key": "Theater -- New York.",
           "doc_count": 59
         },
         {
-          "key": "Vampires -- Fiction.",
+          "key": "Statesmen -- United States -- Biography.",
           "doc_count": 58
         },
         {
-          "key": "Statesmen -- United States -- Biography.",
+          "key": "Man-woman relationships.",
           "doc_count": 57
         },
         {
-          "key": "Politics and government.",
-          "doc_count": 56
+          "key": "Vampires -- Fiction.",
+          "doc_count": 57
         },
         {
           "key": "Burr, Aaron, 1756-1836.",
@@ -942,10 +946,6 @@
           "doc_count": 54
         },
         {
-          "key": "Man-woman relationships.",
-          "doc_count": 53
-        },
-        {
           "key": "English drama.",
           "doc_count": 52
         },
@@ -954,15 +954,15 @@
           "doc_count": 50
         },
         {
+          "key": "Great Britain.",
+          "doc_count": 50
+        },
+        {
           "key": "Murder -- Investigation -- Fiction.",
-          "doc_count": 48
+          "doc_count": 49
         },
         {
           "key": "Concerts -- Worcester.",
-          "doc_count": 47
-        },
-        {
-          "key": "Great Britain.",
           "doc_count": 47
         },
         {
@@ -994,14 +994,14 @@
           "doc_count": 44
         },
         {
-          "key": "Nelson, Horatio Nelson, Viscount, 1758-1805.",
+          "key": "Voyages and travels.",
           "doc_count": 44
         }
       ]
     },
     "creatorLiteral": {
       "doc_count_error_upper_bound": 23,
-      "sum_other_doc_count": 22640,
+      "sum_other_doc_count": 22721,
       "buckets": [
         {
           "key": "Hamilton, Alexander, 1757-1804.",
@@ -1025,11 +1025,11 @@
         },
         {
           "key": "Hamilton, Laurell K.",
-          "doc_count": 78
+          "doc_count": 80
         },
         {
           "key": "Child, Hamilton, 1836-",
-          "doc_count": 72
+          "doc_count": 75
         },
         {
           "key": "Hamilton, Gail, 1833-1896.",
@@ -1104,10 +1104,6 @@
           "doc_count": 40
         },
         {
-          "key": "Stephens, Alexander H. (Alexander Hamilton), 1812-1883.",
-          "doc_count": 40
-        },
-        {
           "key": "Hamilton, Cosmo, 1872?-1942.",
           "doc_count": 39
         },
@@ -1152,11 +1148,11 @@
           "doc_count": 32
         },
         {
-          "key": "Belhaven, John Hamilton, Baron, 1656-1708.",
-          "doc_count": 31
+          "key": "Stephens, Alexander H. (Alexander Hamilton), 1812-1883.",
+          "doc_count": 32
         },
         {
-          "key": "Hamilton, Linda H.",
+          "key": "Belhaven, John Hamilton, Baron, 1656-1708.",
           "doc_count": 31
         },
         {
@@ -1202,6 +1198,10 @@
         {
           "key": "Hamilton, Alexander, 1739-1802.",
           "doc_count": 26
+        },
+        {
+          "key": "Brogan, D. W. (Denis William), 1900-1974.",
+          "doc_count": 25
         }
       ]
     }
