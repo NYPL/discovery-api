@@ -128,6 +128,45 @@ describe('Resources query', function () {
       expect(body.query.bool.filter[0].term).to.be.a('object')
       expect(body.query.bool.filter[0].term.subjectLiteral_exploded).to.equal('United States -- History')
     })
+
+    describe('nyplSource filtering', function () {
+      it('does not filter by nyplSource when HIDE_NYPL_SOURCE is not set', function () {
+        expect(process.env.HIDE_NYPL_SOURCE).to.be.a('undefined')
+
+        const params = resourcesPrivMethods.parseSearchParams({ q: '' })
+        const body = resourcesPrivMethods.buildElasticBody(params)
+
+        expect(body).to.be.a('object')
+        expect(body.query).to.be.a('undefined')
+      })
+
+      it('filters by nyplSource when HIDE_NYPL_SOURCE is set', function () {
+        process.env.HIDE_NYPL_SOURCE = 'recap-hl'
+
+        const params = resourcesPrivMethods.parseSearchParams({ q: '' })
+        const body = resourcesPrivMethods.buildElasticBody(params)
+
+        // Expect query to resemble: {"from":0,"size":50,"query":{"bool":{"filter":[{"bool":{"must_not":{"terms":{"nyplSource":["recap-hl"]}}}}]}},"sort":["uri"]}
+        expect(body).to.be.a('object')
+        expect(body).to.have.deep.property('query', {
+          bool: {
+            filter: [
+              {
+                bool: {
+                  must_not: {
+                    terms: {
+                      nyplSource: ['recap-hl']
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        })
+
+        delete process.env.HIDE_NYPL_SOURCE
+      })
+    })
   })
 })
 
@@ -711,6 +750,52 @@ describe('Test Resources responses', function () {
           done()
         })
       })
+    })
+  })
+
+  describe('annotatedMarc endpoint', () => {
+    let app = { logger: { debug: () => null } }
+
+    before(() => {
+      require('../lib/resources')(app)
+
+      // Configure the stubbing to serve up the same fixture for all calls:
+      fixtures.enableDataApiFixtures({
+        'bibs/sierra-nypl/11055155': 'bib-11055155.json',
+        'bibs/recap-cul/11055155': 'bib-11055155.json',
+        'bibs/recap-hl/11055155': 'bib-11055155.json'
+      })
+    })
+
+    after(() => {
+      fixtures.disableDataApiFixtures()
+    })
+
+    it('traslates nypl record id into necessary BibService call', () => {
+      return app.resources.annotatedMarc({ uri: 'b11055155' })
+        .then((data) => {
+          expect(data).to.be.a('object')
+          expect(data.bib).to.be.a('object')
+          expect(data.bib.id).to.eq('11055155')
+        })
+    })
+
+    it('traslates CUL record id into necessary BibService call', () => {
+      return app.resources.annotatedMarc({ uri: 'cb11055155' })
+        .then((data) => {
+          expect(data).to.be.a('object')
+          expect(data.bib).to.be.a('object')
+          expect(data.bib.id).to.eq('11055155')
+        })
+    })
+
+    it('traslates HL record id into necessary BibService call', () => {
+      return app.resources.annotatedMarc({ uri: 'hb11055155' })
+        .then((data) => {
+          expect(data).to.be.a('object')
+          expect(data.bib).to.be.a('object')
+          expect(data.bib.id).to.eq('11055155')
+        })
     })
   })
 })
