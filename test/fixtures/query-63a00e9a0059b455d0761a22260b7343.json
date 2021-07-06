@@ -1,5 +1,5 @@
 {
-  "took": 4,
+  "took": 153,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,67 +8,66 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 15.2330885,
+    "max_score": 70.20237,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10022950",
-        "_score": 15.2330885,
+        "_id": "b12423567",
+        "_score": 70.20237,
         "_source": {
           "extent": [
-            "224 p. ;"
+            "202 p."
           ],
           "subjectLiteral_exploded": [
-            "Christianity and other religions",
-            "Christianity and other religions -- Judaism"
+            "Campanella, Tommaso, 1568-1639"
           ],
           "publisherLiteral": [
-            "[D. Kirshenbaum],"
+            "S. Neaulme,"
           ],
           "language": [
             {
-              "id": "lang:eng",
-              "label": "English"
+              "id": "lang:lat",
+              "label": "Latin"
             }
           ],
           "createdYear": [
-            1974
+            1741
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Religion--love or hate?"
+            "Vita Th. Campanellae."
           ],
           "shelfMark": [
-            "*PGZ 81-1452"
+            "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
           ],
           "creatorLiteral": [
-            "Kirshenbaum, D. (David), 1902-"
+            "Cyprian, Ernst Salomon, 1673-1745."
           ],
           "createdString": [
-            "1974"
+            "1741"
           ],
           "dateStartYear": [
-            1974
+            1741
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "*PGZ 81-1452"
+              "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "10022950"
+              "value": "12423567"
             }
           ],
-          "updatedAt": 1523472855377,
+          "updatedAt": 1619759319951,
           "publicationStatement": [
-            "New York : [D. Kirshenbaum], 1974."
+            "Trajecti ad Rhenum, S. Neaulme, 1741."
           ],
           "identifier": [
-            "urn:bnum:10022950"
+            "urn:bnum:12423567"
           ],
           "materialType": [
             {
@@ -83,7 +82,7 @@
             }
           ],
           "dateString": [
-            "1974"
+            "1741"
           ],
           "mediaType": [
             {
@@ -92,12 +91,12 @@
             }
           ],
           "subjectLiteral": [
-            "Christianity and other religions -- Judaism."
+            "Campanella, Tommaso, 1568-1639."
           ],
           "titleDisplay": [
-            "Religion--love or hate? / by David Kirshenbaum."
+            "Vita Th. Campanellae. Autore Ern. Sal. Cypriano. Accedunt hac secunda editione appendices IV. doctorum virorum de Campanellae vita, philosophia & libris schediasmata complectentes."
           ],
-          "uri": "b10022950",
+          "uri": "b12423567",
           "numItems": [
             1
           ],
@@ -105,7 +104,7 @@
             1
           ],
           "placeOfPublication": [
-            "New York :"
+            "Trajecti ad Rhenum,"
           ],
           "issuance": [
             {
@@ -113,11 +112,8 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Love or hate."
-          ],
           "dimensions": [
-            "24 cm."
+            "16 cm."
           ]
         },
         "inner_hits": {
@@ -133,46 +129,15 @@
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433103848853"
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
-                    ],
-                    "accessMessage": [
+                    "uri": "i16020288",
+                    "status": [
                       {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available "
-                    ],
-                    "uri": "i14749981",
-                    "shelfMark": [
-                      "*PGZ 81-1452"
-                    ],
-                    "identifierV2": [
-                      {
-                        "type": "bf:ShelfMark",
-                        "value": "*PGZ 81-1452"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433103848853"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division - Room 111"
-                    ],
-                    "idBarcode": [
-                      "33433103848853"
-                    ],
-                    "requestable": [
-                      false
+                      "status:a||Available"
                     ],
                     "catalogItemType": [
                       {
@@ -180,21 +145,56 @@
                         "label": "book non-circ"
                       }
                     ],
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available "
-                      }
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:maf92",
-                        "label": "Schwarzman Building M2 - Dorot Jewish Division - Room 111"
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
                       }
-                    ]
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433104031624"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433104031624"
+                    ],
+                    "idBarcode": [
+                      "33433104031624"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:u",
+                        "label": "Supervised use"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:u||Supervised use"
+                    ],
+                    "shelfMark_sort": "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
                   },
                   "sort": [
-                    null
+                    "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
                   ]
                 }
               ]
