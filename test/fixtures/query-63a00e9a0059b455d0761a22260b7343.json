@@ -1,5 +1,5 @@
 {
-  "took": 584,
+  "took": 153,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 71.98836,
+    "max_score": 70.20237,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b12423567",
-        "_score": 71.98836,
+        "_score": 70.20237,
         "_source": {
           "extent": [
             "202 p."
@@ -62,7 +62,7 @@
               "value": "12423567"
             }
           ],
-          "updatedAt": 1614893648777,
+          "updatedAt": 1619759319951,
           "publicationStatement": [
             "Trajecti ad Rhenum, S. Neaulme, 1741."
           ],
@@ -101,7 +101,7 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "Trajecti ad Rhenum,"
@@ -132,12 +132,12 @@
                     "uri": "i16020288",
                     "status": [
                       {
-                        "id": "status:u",
-                        "label": "Temporarily unavailable"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:u||Temporarily unavailable"
+                      "status:a||Available"
                     ],
                     "catalogItemType": [
                       {
@@ -190,10 +190,11 @@
                     ],
                     "accessMessage_packed": [
                       "accessMessage:u||Supervised use"
-                    ]
+                    ],
+                    "shelfMark_sort": "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
                   },
                   "sort": [
-                    null
+                    "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
                   ]
                 }
               ]

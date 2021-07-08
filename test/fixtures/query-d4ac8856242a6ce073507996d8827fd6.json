@@ -1,5 +1,5 @@
 {
-  "took": 441,
+  "took": 97,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,27 +8,23 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 34.07579,
+    "max_score": 62.225235,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "pb1717",
-        "_score": 34.07579,
+        "_id": "b12709113",
+        "_score": 62.225235,
         "_source": {
           "extent": [
-            "x, 340 p. : ill. ;"
+            "iv, 350 p. : ill., port. ;"
           ],
           "subjectLiteral_exploded": [
-            "Cats",
-            "Cats -- Fiction",
-            "Cats"
+            "Washington County (Neb.)",
+            "Washington County (Neb.) -- History"
           ],
           "publisherLiteral": [
-            "Lothrop, Lee & Shepard Books,"
-          ],
-          "description": [
-            "More than 40 stories and essays about cats by famous writers."
+            "Magic city printing co.,"
           ],
           "language": [
             {
@@ -37,52 +33,42 @@
             }
           ],
           "createdYear": [
-            1979
+            1937
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Cat encounters : a cat-lover's anthology /"
+            "A history of Washington county, Nebraska"
+          ],
+          "shelfMark": [
+            "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+          ],
+          "creatorLiteral": [
+            "Shrader, Forrest B."
           ],
           "createdString": [
-            "1979"
-          ],
-          "idLccn": [
-            "   79002437 "
-          ],
-          "contributorLiteral": [
-            "Lewis, Gogo.",
-            "Manley, Seon."
+            "1937"
           ],
           "dateStartYear": [
-            1979
+            1937
           ],
           "identifierV2": [
             {
+              "type": "bf:ShelfMark",
+              "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+            },
+            {
               "type": "nypl:Bnumber",
-              "value": "1717"
-            },
-            {
-              "type": "bf:Isbn",
-              "value": "0688419143"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "   79002437 "
+              "value": "12709113"
             }
           ],
-          "updatedAt": 1523549727960,
+          "updatedAt": 1525298876009,
           "publicationStatement": [
-            "New York : Lothrop, Lee & Shepard Books, c1979."
+            "[Omaha, : Magic city printing co., 1937]"
           ],
           "identifier": [
-            "urn:bnum:1717",
-            "urn:isbn:0688419143",
-            "urn:lccn:   79002437 "
-          ],
-          "idIsbn": [
-            "0688419143"
+            "urn:bnum:12709113"
           ],
           "materialType": [
             {
@@ -97,7 +83,7 @@
             }
           ],
           "dateString": [
-            "1979"
+            "1937"
           ],
           "mediaType": [
             {
@@ -106,16 +92,12 @@
             }
           ],
           "subjectLiteral": [
-            "Cats -- Fiction.",
-            "Cats."
+            "Washington County (Neb.) -- History."
           ],
           "titleDisplay": [
-            "Cat encounters : a cat-lover's anthology / selected by Seon Manley & Gogo Lewis."
+            "A history of Washington county, Nebraska / by Forrest B. Shrader."
           ],
-          "uri": "pb1717",
-          "lccClassification": [
-            "SF445.5 .C378"
-          ],
+          "uri": "b12709113",
           "numItems": [
             1
           ],
@@ -123,7 +105,7 @@
             1
           ],
           "placeOfPublication": [
-            "New York :"
+            "[Omaha, :"
           ],
           "issuance": [
             {
@@ -148,20 +130,14 @@
                   },
                   "_score": null,
                   "_source": {
-                    "owner": [
-                      {
-                        "id": "orgs:0003",
-                        "label": "Princeton University Library"
-                      }
-                    ],
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
                     "identifier": [
-                      "urn:barcode:32101087644330"
+                      "urn:barcode:33433099509238"
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:1||non-circ"
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "accessMessage": [
                       {
@@ -170,41 +146,47 @@
                       }
                     ],
                     "status_packed": [
-                      "status:a||Available "
+                      "status:a||Available"
                     ],
-                    "uri": "pi2775",
+                    "uri": "i16202472",
                     "shelfMark": [
-                      "SF445.5 .C378"
+                      "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                     ],
                     "identifierV2": [
                       {
                         "type": "bf:ShelfMark",
-                        "value": "SF445.5 .C378"
+                        "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "32101087644330"
+                        "value": "33433099509238"
                       }
                     ],
-                    "idBarcode": [
-                      "32101087644330"
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
                     ],
-                    "owner_packed": [
-                      "orgs:0003||Princeton University Library"
+                    "idBarcode": [
+                      "33433099509238"
                     ],
                     "requestable": [
-                      true
+                      false
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:1",
-                        "label": "non-circ"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
                     ],
                     "status": [
                       {
                         "id": "status:a",
-                        "label": "Available "
+                        "label": "Available"
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mag92",
+                        "label": "Schwarzman Building M2 - Milstein Division Room 121"
                       }
                     ]
                   },

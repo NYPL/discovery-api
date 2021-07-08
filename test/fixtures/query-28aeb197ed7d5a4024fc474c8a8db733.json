@@ -1,5 +1,5 @@
 {
-  "took": 795,
+  "took": 88,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 51.866074,
+    "max_score": 51.055447,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b13565153",
-        "_score": 51.866074,
+        "_score": 51.055447,
         "_source": {
           "extent": [
             "430 p. : ill. ;"
@@ -89,7 +89,7 @@
           "dateEndYear": [
             1853
           ],
-          "updatedAt": 1616589941850,
+          "updatedAt": 1618499494304,
           "publicationStatement": [
             "New York : John Wiley, 1854, c1853."
           ],
@@ -129,7 +129,7 @@
             2
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
             "New York :"
@@ -164,12 +164,12 @@
                     "uri": "i10708577",
                     "status": [
                       {
-                        "id": "status:t",
-                        "label": "In transit"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:t||In transit"
+                      "status:a||Available"
                     ],
                     "owner": [
                       {
@@ -221,7 +221,7 @@
                       "33433006564110"
                     ],
                     "requestable": [
-                      false
+                      true
                     ],
                     "accessMessage": [
                       {
