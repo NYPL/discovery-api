@@ -1,5 +1,5 @@
 {
-  "took": 4,
+  "took": 97,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,95 +8,67 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 15.194898,
+    "max_score": 62.225235,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10001936",
-        "_score": 15.194898,
+        "_id": "b12709113",
+        "_score": 62.225235,
         "_source": {
           "extent": [
-            "400 p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Publication date from cover.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Additional Formats",
-              "label": "Also available on microform;",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Armenian.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Processing Action",
-              "label": "Microfilmed;",
-              "type": "bf:Note"
-            }
+            "iv, 350 p. : ill., port. ;"
           ],
           "subjectLiteral_exploded": [
-            "Armenians",
-            "Armenians -- Iran",
-            "Armenians -- Iran -- History"
+            "Washington County (Neb.)",
+            "Washington County (Neb.) -- History"
           ],
           "publisherLiteral": [
-            "Tparan Hovhannu Tēr-Abrahamian,"
+            "Magic city printing co.,"
           ],
           "language": [
             {
-              "id": "lang:arm",
-              "label": "Armenian"
+              "id": "lang:eng",
+              "label": "English"
             }
           ],
           "createdYear": [
-            1891
+            1937
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan"
+            "A history of Washington county, Nebraska"
           ],
           "shelfMark": [
-            "*ONR 84-743"
+            "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
           ],
           "creatorLiteral": [
-            "Shermazanian, Galust."
+            "Shrader, Forrest B."
           ],
           "createdString": [
-            "1891"
+            "1937"
           ],
           "dateStartYear": [
-            1891
+            1937
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "*ONR 84-743"
+              "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "10001936"
+              "value": "12709113"
             }
           ],
-          "updatedAt": 1525296780864,
+          "updatedAt": 1525298876009,
           "publicationStatement": [
-            "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
+            "[Omaha, : Magic city printing co., 1937]"
           ],
           "identifier": [
-            "urn:bnum:10001936"
+            "urn:bnum:12709113"
           ],
           "materialType": [
             {
@@ -111,7 +83,7 @@
             }
           ],
           "dateString": [
-            "1891"
+            "1937"
           ],
           "mediaType": [
             {
@@ -120,20 +92,20 @@
             }
           ],
           "subjectLiteral": [
-            "Armenians -- Iran -- History."
+            "Washington County (Neb.) -- History."
           ],
           "titleDisplay": [
-            "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan / Ashkhatasirutʻiamb Galust Shermazaniani."
+            "A history of Washington county, Nebraska / by Forrest B. Shrader."
           ],
-          "uri": "b10001936",
+          "uri": "b12709113",
           "numItems": [
-            2
+            1
           ],
           "numAvailable": [
             1
           ],
           "placeOfPublication": [
-            "Ṛostov (Doni Vra) :"
+            "[Omaha, :"
           ],
           "issuance": [
             {
@@ -142,34 +114,15 @@
             }
           ],
           "dimensions": [
-            "21 cm."
+            "24 cm."
           ]
         },
         "inner_hits": {
           "items": {
             "hits": {
-              "total": 2,
+              "total": 1,
               "max_score": null,
               "hits": [
-                {
-                  "_nested": {
-                    "field": "items",
-                    "offset": 1
-                  },
-                  "_score": null,
-                  "_source": {
-                    "electronicLocator": [
-                      {
-                        "label": "Full text available via HathiTrust",
-                        "url": "http://hdl.handle.net/2027/nyp.33433001892276"
-                      }
-                    ],
-                    "uri": "i10001936-e"
-                  },
-                  "sort": [
-                    null
-                  ]
-                },
                 {
                   "_nested": {
                     "field": "items",
@@ -177,60 +130,51 @@
                   },
                   "_score": null,
                   "_source": {
-                    "owner": [
-                      {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
-                      }
-                    ],
                     "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
+                      "accessMessage:1||Use in library"
                     ],
                     "identifier": [
-                      "urn:barcode:33433001892276"
+                      "urn:barcode:33433099509238"
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "accessMessage": [
                       {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
-                    "uri": "i10001320",
+                    "uri": "i16202472",
                     "shelfMark": [
-                      "*ONR 84-743"
+                      "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                     ],
                     "identifierV2": [
                       {
                         "type": "bf:ShelfMark",
-                        "value": "*ONR 84-743"
+                        "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433001892276"
+                        "value": "33433099509238"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
                     ],
                     "idBarcode": [
-                      "33433001892276"
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
+                      "33433099509238"
                     ],
                     "requestable": [
-                      true
+                      false
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:32",
-                        "label": "google project, book"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
                     ],
                     "status": [
@@ -241,8 +185,8 @@
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
+                        "id": "loc:mag92",
+                        "label": "Schwarzman Building M2 - Milstein Division Room 121"
                       }
                     ]
                   },
