@@ -206,6 +206,30 @@ describe('Resources query', function () {
         delete process.env.HIDE_NYPL_SOURCE
       })
     })
+
+    it('processes isbn correctly', () => {
+      const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
+      const body = resourcesPrivMethods.buildElasticBody(params)
+      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIsbn: '0689844921' } } } } })
+    })
+
+    it('processes issn correctly', () => {
+      const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
+      const body = resourcesPrivMethods.buildElasticBody(params)
+      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIssn: '1234-5678' } } } } })
+    })
+
+    it('processes lccn correctly', () => {
+      const params = resourcesPrivMethods.parseSearchParams({ lccn: '00068799' })
+      const body = resourcesPrivMethods.buildElasticBody(params)
+      expect(body).to.deep.equal({ query: { regexp: { idLccn: { value: '[^\\d]*00068799[^\\d]*' } } } })
+    })
+
+    it('processes oclc correctly', () => {
+      const params = resourcesPrivMethods.parseSearchParams({ oclc: '1033548057' })
+      const body = resourcesPrivMethods.buildElasticBody(params)
+      expect(body).to.deep.equal({ query: { regexp: { 'identifierV2.value': { value: '.*\\(OCoLC\\)1033548057([^\\d].*)?' } } } })
+    })
   })
 })
 
