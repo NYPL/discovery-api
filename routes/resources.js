@@ -13,7 +13,7 @@ module.exports = function (app) {
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject']
+  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject', 'isbn', 'issn', 'lccn', 'oclc']
 
   const respond = (res, _resp, params) => {
     var contentType = 'application/ld+json'
