@@ -170,6 +170,7 @@ describe('Resources query', function () {
 
     describe('nyplSource filtering', function () {
       it('does not filter by nyplSource when HIDE_NYPL_SOURCE is not set', function () {
+        delete process.env.HIDE_NYPL_SOURCE
         expect(process.env.HIDE_NYPL_SOURCE).to.be.a('undefined')
 
         const params = resourcesPrivMethods.parseSearchParams({ q: '' })
