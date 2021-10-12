@@ -1,0 +1,275 @@
+{
+  "took": 14,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 29.852142,
+    "hits": [
+      {
+        "_index": "resources-2020-05-08",
+        "_type": "resource",
+        "_id": "b21088122",
+        "_score": 29.852142,
+        "_source": {
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Description based on first issue; title from caption.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Additional Formats",
+              "label": "Also issued on microfilm from Library of Congress Photoduplication Service.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "serialPublicationDates": [
+            "No. 153 (June 2, 2005)-"
+          ],
+          "subjectLiteral_exploded": [
+            "Kampala (Uganda)",
+            "Kampala (Uganda) -- Newspapers",
+            "Uganda",
+            "Uganda -- Newspapers"
+          ],
+          "publisherLiteral": [
+            "Monitor Publications,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "dateEndString": [
+            "9999"
+          ],
+          "createdYear": [
+            2005
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Daily monitor."
+          ],
+          "shelfMark": [
+            "Sc News Daily monitor (Kampala, Uganda)"
+          ],
+          "createdString": [
+            "2005"
+          ],
+          "idLccn": [
+            "  2005327157"
+          ],
+          "dateStartYear": [
+            2005
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc News Daily monitor (Kampala, Uganda)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "21088122"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "  2005327157"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)61395020"
+            }
+          ],
+          "uniformTitle": [
+            "Daily monitor (Kampala, Uganda)"
+          ],
+          "dateEndYear": [
+            9999
+          ],
+          "holdings": [
+            {
+              "holdingStatement": [
+                "no.  (2018-09) - no. 18 (2018-01-19); no. 20 (2018-01-21) - no. 81 (2018-03-23); no. 83 (2018-03-25) - no. 88 (2018-03-30); no. 309 (2018-11-06) - no. 309 (2018-11-06); no. 181 (2017-07-01) - no. 181 (2017-07-01); no. 183 (2017-07-03) - no. 188 (2017-07-08); no. 190 (2017-07-10) - no. 195 (2017-07-15); no. 197 (2017-07-17) - no. 199 (2017-07-19); no. 201 (2017-07-21) - no. 202 (2017-07-22); no. 204 (2017-07-24) - no. 209 (2017-07-29); no. 211 (2017-07-31) - no. 216 (2017-08-05); no. 218 (2017-08-07) - no. 223 (2018-08-12); no. 225 (2018-08-14) - no. 230 (2018-08-19); no. 232 (2018-08-21) - no. 237 (2018-08-26); no. 239 (2018-08-28) - no. 243 (2016-09-28); no. 243 (2018-09-01) - no. 358 (2017-12-25); no. 360 (2017-12-27) - no. 365 (2018-01-01)"
+              ],
+              "location": [
+                {
+                  "code": "loc:scf",
+                  "label": "Schomburg Center - Research & Reference"
+                }
+              ],
+              "uri": "h1137773",
+              "shelfMark": [
+                "Sc News Daily monitor (Kampala, Uganda)"
+              ]
+            }
+          ],
+          "updatedAt": 1628041779699,
+          "publicationStatement": [
+            "Kampala : Monitor Publications, 2005-"
+          ],
+          "identifier": [
+            "urn:bnum:21088122",
+            "urn:lccn:  2005327157",
+            "urn:undefined:(OCoLC)61395020"
+          ],
+          "genreForm": [
+            "Newspapers."
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "2005"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Kampala (Uganda) -- Newspapers.",
+            "Uganda -- Newspapers.",
+            "Uganda."
+          ],
+          "titleDisplay": [
+            "Daily monitor."
+          ],
+          "uri": "b21088122",
+          "numItems": [
+            136
+          ],
+          "numAvailable": [
+            131
+          ],
+          "placeOfPublication": [
+            "Kampala :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:s",
+              "label": "serial"
+            }
+          ],
+          "titleAlt": [
+            "Sunday monitor"
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": 15.023023,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 135
+                  },
+                  "_score": 15.023023,
+                  "_source": {
+                    "uri": "i32086897",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:29",
+                        "label": "bundled materials (vols.)"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:29||bundled materials (vols.)"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rccf2",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rccf2||Offsite"
+                    ],
+                    "shelfMark": [
+                      "Sc News Daily monitor (Kampala, Uganda) no. 364-294 (Oct. 1-31, 2013)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "Sc News Daily monitor (Kampala, Uganda) no. 364-294 (Oct. 1-31, 2013)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433093003253"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "Sc News Daily monitor (Kampala, Uganda)"
+                    ],
+                    "enumerationChronology": [
+                      "no. 364-294 (Oct. 1-31, 2013)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433093003253"
+                    ],
+                    "idBarcode": [
+                      "33433093003253"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "aSc News Daily monitor (Kampala, Uganda) no. 000364-294 (Oct. 1-31, 2013)"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
