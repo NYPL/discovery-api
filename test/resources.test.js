@@ -170,6 +170,7 @@ describe('Resources query', function () {
 
     describe('nyplSource filtering', function () {
       it('does not filter by nyplSource when HIDE_NYPL_SOURCE is not set', function () {
+        delete process.env.HIDE_NYPL_SOURCE
         expect(process.env.HIDE_NYPL_SOURCE).to.be.a('undefined')
 
         const params = resourcesPrivMethods.parseSearchParams({ q: '' })
@@ -210,13 +211,13 @@ describe('Resources query', function () {
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { term: { idIsbn: '0689844921' } } })
+      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIsbn: '0689844921' } } } } })
     })
 
     it('processes issn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { term: { idIssn: '1234-5678' } } })
+      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIssn: '1234-5678' } } } } })
     })
 
     it('processes lccn correctly', () => {
@@ -228,7 +229,7 @@ describe('Resources query', function () {
     it('processes oclc correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ oclc: '1033548057' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { regexp: { 'identifierV2.value': { value: '.*\\(OCoLC\\)1033548057([^\\d].*)?' } } } })
+      expect(body).to.deep.equal({ query: { bool: { must: { term: { idOclc: '1033548057' } } } } })
     })
   })
 })
