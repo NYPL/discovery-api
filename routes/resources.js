@@ -28,8 +28,6 @@ module.exports = function (app) {
   }
 
   const handleError = (res, error, params) => {
-    app.logger.error('Resources#handleError:', error)
-
     var statusCode = 500
     switch (error.name) {
       case 'InvalidParameterError':
@@ -40,6 +38,7 @@ module.exports = function (app) {
         break
       default:
         statusCode = 500
+        app.logger.error('Resources#handleError:', error)
     }
     res.status(statusCode).send({ status: statusCode, name: error.name, error: error.message ? error.message : error })
     return false

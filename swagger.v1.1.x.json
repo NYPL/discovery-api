@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "0.1.1",
+    "version": "1.1.1",
     "title": "Discovery API",
     "description": "NYPL research holdings as linked data"
   },
-  "host": "api.nypltech.org",
+  "host": "platform.nypl.org",
   "basePath": "/api",
   "schemes": [
     "https"
@@ -23,7 +23,7 @@
           "discovery"
         ],
         "summary": "Search resources (bibs and items)",
-        "description": "Match by keyword\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> `/resources?filters[property1]=value1&filters[property2]=value2`\n\nWhere `property*` is one of: \n\n> 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL-discovery/discovery-api/blob/master/README.md)\n",
+        "description": "Match by keyword\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> `/resources?filters[property1]=value1&filters[property2]=value2`\n\nWhere `property*` is one of: \n\n> 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL/discovery-api/blob/main/README.md)\n",
         "parameters": [
           {
             "name": "q",
@@ -79,7 +79,7 @@
           {
             "name": "search_scope",
             "in": "query",
-            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber, standard_number). See https://github.com/NYPL-discovery/discovery-api/blob/master/lib/resources.js to review specific fields matched in each scope and how they're boosted.",
+            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber, standard_number). See https://github.com/NYPL/discovery-api/blob/main/lib/resources.js to review specific fields matched in each scope and how they're boosted.",
             "required": false,
             "type": "string",
             "enum": [
@@ -99,6 +99,62 @@
             "description": "Specify a hash of filters to apply, where key is: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "items_size",
+            "in": "query",
+            "description": "Specify many items to return",
+            "default": 100,
+            "type": "number"
+          },
+          {
+            "name": "items_from",
+            "type": "number",
+            "in": "query",
+            "description": "Specify starting index for retrieved items",
+            "default": 0
+          },
+          {
+            "name": "contributor",
+            "type": "string",
+            "in": "query",
+            "description": "Fuzzy match on contributor name"
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "in": "query",
+            "description": "Fuzzy match on title"
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "in": "query",
+            "description": "Fuzzy match on subject"
+          },
+          {
+            "name": "isbn",
+            "type": "string",
+            "in": "query",
+            "description": "Match on ISBN"
+          },
+          {
+            "name": "issn",
+            "type": "string",
+            "in": "query",
+            "description": "Match on ISSN"
+          },
+          {
+            "name": "lccn",
+            "type": "string",
+            "in": "query",
+            "description": "Match on LCCN"
+          },
+          {
+            "name": "oclc",
+            "type": "string",
+            "in": "query",
+            "description": "Match on OCLC number"
           }
         ],
         "responses": {
