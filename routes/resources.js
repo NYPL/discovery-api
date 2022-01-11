@@ -35,6 +35,7 @@ module.exports = function (app) {
         break
       case 'NotFoundError':
         statusCode = 404
+        app.logger.info(error.mesage)
         break
       default:
         statusCode = 500

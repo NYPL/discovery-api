@@ -1,5 +1,3 @@
-const sinon = require('sinon')
-
 const errors = require('../lib/errors')
 
 const fixtures = require('./fixtures')
@@ -281,9 +279,6 @@ describe('Resources query', function () {
   })
 
   describe('findByUri errors', () => {
-    let loggerInfoSpy = null
-    let loggerErrorSpy = null
-
     before(() => {
       fixtures.enableEsFixtures()
     })
@@ -292,29 +287,14 @@ describe('Resources query', function () {
       fixtures.disableEsFixtures()
     })
 
-    beforeEach(() => {
-      loggerInfoSpy = sinon.spy(app.logger, 'info')
-      loggerErrorSpy = sinon.spy(app.logger, 'error')
-    })
-
-    afterEach(() => {
-      loggerInfoSpy.restore()
-      loggerErrorSpy.restore()
-    })
-
-    it('handles connection error by logging appropriate ERROR log', () => {
+    it('handles connection error by rejecting with Error', () => {
       const call = () => app.resources.findByUri({ uri: 'b123-connection-error' })
       return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
     })
 
-    it('handles bib 404 by logging appropriate INFO log', () => {
+    it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
-        .then(() => {
-          expect(loggerInfoSpy.callCount).to.eq(1)
-          expect(loggerInfoSpy.args[0][0]).to.equal('Record not found: b123')
-          expect(loggerErrorSpy.callCount).to.eq(0)
-        })
     })
   })
 })
