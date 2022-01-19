@@ -1,5 +1,5 @@
 const config = require('config')
-const swaggerDocs = require('./swagger.v0.1.json')
+const swaggerDocs = require('./swagger.v1.1.x.json')
 const pjson = require('./package.json')
 
 require('dotenv').config()
