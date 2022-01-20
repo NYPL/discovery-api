@@ -85,7 +85,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri(i[0-9]+)`, function (req, res) {
     var params = { uri: req.params.uri, itemUri: req.params.itemUri }
 
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
