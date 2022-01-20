@@ -1,19 +1,33 @@
-Master: [![Build Status](https://travis-ci.org/NYPL-discovery/discovery-api.svg?branch=master)](https://travis-ci.org/NYPL-discovery/discovery-api)
+[![Build Status](https://travis-ci.com/NYPL/discovery-api.svg?branch=main)](https://travis-ci.com/NYPL/discovery-api)
 
-# Documentation
+# Discovery API
 
-Check the [v0.1.1 swagger](https://github.com/NYPL-discovery/discovery-api/blob/master/swagger.v0.1.json) for the machine readable api contract.
+This is the API providing most of bibliographic data to the [NYPL Research Catalog front-end](https://github.com/NYPL/discovery-front-end). Check the [current swagger](https://github.com/NYPL/discovery-api/blob/main/swagger.v1.1.x.json) for the machine readable api contract. 
 
 ## Installing & Running Locally
 
-This app uses [nvm](https://github.com/creationix/nvm).
+Use [nvm](https://github.com/creationix/nvm) to set your Node version:
 
-1.  Clone this repo.
-1.  `cd` into the newly cloned directory
-1.  `nvm use`
-1.  `npm install`
-1.  Decrypt the appropriate config/[environment].env file and copy to .env. The values are encrypted using nypl-digital-dev
-`npm start` to start the app!
+```
+nvm use
+```
+
+Install dependencies:
+
+```
+npm i
+```
+
+Create a `.env` based on `.env.example`. Fill it with values from the appropriate `config/[environment].env` file (`qa.env` is probably sensible). Note - if using values from `config/[environment].env` - you must decrypt the following keys using [`aws kms decrypt`](https://github.com/NYPL/engineering-general/blob/main/security/secrets.md#encryptingdecrypting) (or [kms-util](https://github.com/NYPL-discovery/kms-util)) (i.e. all values in `.env` must be decrypted):
+ * `SCSB_URL`
+ * `SCSCB_API_KEY`
+ * `NYPL_OAUTH_SECRET`
+
+Now start the app:
+
+```
+npm start
+```
 
 Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
 
@@ -27,32 +41,27 @@ Note that config variables are maintained in `./config/*.env` as a formality and
 
 When HTC changes the SCSB endpoint, apply changes to the relevant environment file in `config/` (encrypting the value if sensitive) and also manually apply the change to the running Beanstalk app (without encrypting the value).
 
-## Git & Deployment Workflow
+## Contributing
 
 This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#prs-target-main-merge-to-deployment-branches) git workflow.
 
-[`master`](https://github.com/NYPL-discovery/discovery-api/tree/master) has the lastest-and-greatest commits, [`production`](https://github.com/NYPL-discovery/discovery-api/tree/production) should represent what's in
-our production environment. Because we deploy often, `master` and `production`
-will often be in parity.
+[`main`](https://github.com/NYPL-discovery/discovery-api/tree/main) has the lastest-and-greatest commits, [`production`](https://github.com/NYPL-discovery/discovery-api/tree/production) should represent what's in our production environment. Because we deploy often, `main` and `production` will often be in parity.
 
 ### Ideal Workflow
 
-1. Cut a feature branch off of `master`.
-1. Commit changes to your feature branch.
-1. File a pull request against `master` and assign reviewers.
-1. After the PR is accepted, merge into `master`.
-1. Merge / promote master into `production` and push to origin.
-1. [Deploy](#deployment) to production when appropriate (Ideally very soon)
+1. Cut a feature branch off of `main`
+1. Commit changes to your feature branch
+1. File a pull request against `main` and assign a reviewer
+1. After the PR is accepted, merge into `main`
+1. Merge `main` > `qa`
+1. Confirm app deploys to QA and run appropriate testing
+1. Merge `main` > `production`
 
-### Release Tags
+## Deployment
 
-Release tags are created based on production branch after a new version has been deployed to the Production tier.
-We're dedicated to:
+This app is deployed via a deployment hook in `.travis.yml`. Pushes to `qa` deploy to our QA deployment; Pushes to `production` deploy to our Production deployment. We generally don't update `development` or use the Development deployment.
 
-* Making sure release tag version mirrors the app version in `package.json`.
-* Bumping that version on each deployment.
-
-## Initial Creation / Deployment to Elastic Beanstalk
+### Initial Creation / Deployment to Elastic Beanstalk
 
 1. `.ebextensions` directory needed at application's root directory
 2. `.ebextensions/00_environment.config` to store environment variables. For environment variables that needs to be hidden,
@@ -81,13 +90,13 @@ eb create discovery-api-[environmentname] \
 
 ## Testing
 
-The following runs a series of tests against local fixtures:
+Run all tests:
 
 ```
 npm test
 ```
 
-Almost all HTTP dependencies are rerouted to fixtures (nypl-core mapping files are a known exception). All fixtures can be updated dynamically (using whatever elastic, scsb, & platform api config is present in `process.env` or `./.env`) via the following:
+Almost all HTTP dependencies are rerouted to fixtures (except for requesting nypl-core mapping files). All fixtures can be updated dynamically (using whatever elastic, scsb, & platform api config is present in `process.env` or `./.env`) via the following:
 
 ```
 UPDATE_FIXTURES=all npm test
@@ -107,11 +116,11 @@ REMOVE_UNUSED_FIXTURES=true npm test
 
 The above command can be used to fill in missing fixtures as new tests are written.
 
-## Deployment
+## API Documentation
 
-`npm run deploy-[development|qa|production]`
+The following summarises the kinds of queries that are possible with this app. See the [swagger](https://github.com/NYPL/discovery-api/blob/main/swagger.v1.1.x.json) for the complete [OpenAPI 2.0](https://swagger.io/resources/open-api/) spec.
 
-## Searching
+### Searching
 
 Match by keyword:
 
