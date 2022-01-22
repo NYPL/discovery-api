@@ -96,25 +96,25 @@ Run all tests:
 npm test
 ```
 
-Almost all HTTP dependencies are rerouted to fixtures (except for requesting nypl-core mapping files). All fixtures can be updated dynamically (using whatever elastic, scsb, & platform api config is present in `process.env` or `./.env`) via the following:
+### Adding fixtures
 
-```
-UPDATE_FIXTURES=all npm test
-```
+Almost all HTTP dependencies are rerouted to fixtures (except for requesting nypl-core mapping files). All fixtures can be updated dynamically (using creds in `./.env`) via the following:
 
-Rebuilding fixtures tends to introduce trivial git diff noise, so one may use the following to *only* generate fixtures that don't already exist:
+Run tests and automatically build any missing Elasticsearch or SCSB fixtures:
 
 ```
 UPDATE_FIXTURES=if-missing npm test
 ```
 
-Remove fixtures that are no longer used in any test with this flag:
+The above command can be used to fill in missing fixtures as new tests are written or ES queries change.
+
+As ES queries change, some auto generated fixtures may no longer be used by any tests. Remove them with this flag:
 
 ```
 REMOVE_UNUSED_FIXTURES=true npm test
 ```
 
-The above command can be used to fill in missing fixtures as new tests are written.
+Note that other Platform API fixtures (e.g. requests on the Bib service like `bibs/sierra-nypl/1234`) must be fetched and saved manually and then enabled in a `before` via `fixtures.enableDataApiFixtures({ %requestpath% : %fixturepath%`, ... })`. (There's not a great reason for the extra work required to create and use other Platform API fixtures except that there are fewer of them and they tend not to need to change as ES queries change.)
 
 ## API Documentation
 
