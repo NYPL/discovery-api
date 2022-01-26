@@ -150,7 +150,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           var items = response.hits.hits[0]._source.items
 
-          // A ReCAP item with Discovery status 'Avaiable', but SCSB
+          // A ReCAP item with Discovery status 'Available', but SCSB
           // status 'Not Available' should be made 'Not Available'
           var unavailableItem = items.find((item) => {
             return item.uri === 'i102836649'
@@ -165,6 +165,26 @@ describe('Response with updated availability', function () {
           })
           expect(availableItem.status[0].id).to.equal('status:a')
           expect(availableItem.status[0].label).to.equal('Available')
+        })
+  })
+
+  it('marks ReCAP items that are SCSB Available items as physRequestable', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
+    availabilityResolver.restClient = getFakeRestClient()
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          // A ReCAP item with SCSB status 'Available' should be
+          // made physRequestable:
+          var availableItem = items.find((item) => {
+            return item.uri === 'i10283664'
+          })
+          expect(availableItem.physRequestable[0]).to.equal(true)
         })
   })
 
