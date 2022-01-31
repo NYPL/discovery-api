@@ -1,5 +1,6 @@
 let AvailabilityResolver = require('../lib/availability_resolver.js')
 let elasticSearchResponse = require('./fixtures/elastic_search_response.js')
+// let specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 
 function getFakeRestClient () {
   var response = [
@@ -307,4 +308,18 @@ describe('Response with updated availability', function () {
         })
     })
   })
+
+  // describe('Special collections items', function () {
+  //   let availabilityResolver = null
+  //   before(function () {
+  //     availabilityResolver = new AvailabilityResolver(specRequestableElasticSearchResponse())
+  //   })
+  //   it('marks items as specRequestable when there is an aeonURL present', function () {
+  //     let response = availabilityResolver.responseWithUpdatedAvailability()
+  //     const items = response.hits.hits[0]._source.items
+  //     const specRequestableItem = items.find((item) => item.uri === 'i22566485')
+  //     expect(specRequestableItem.specRequestable[0]).to.equal(true)
+  //   })
+  // })
 })
+
