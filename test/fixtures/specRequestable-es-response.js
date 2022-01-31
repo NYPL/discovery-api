@@ -34,7 +34,7 @@ module.exports = () => {
             'level': 'debug',
             'items': [
               {
-                'aeonURL': 'fakeaeonurl.nypl.org',
+                'aeonUrl': 'fakeaeonurl.nypl.org',
                 'uri': 'i22566485',
                 'identifier': [
                   'urn:barcode:33433058338470'

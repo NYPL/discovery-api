@@ -1,6 +1,6 @@
 let AvailabilityResolver = require('../lib/availability_resolver.js')
 let elasticSearchResponse = require('./fixtures/elastic_search_response.js')
-// let specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
+let specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 
 function getFakeRestClient () {
   var response = [
@@ -36,8 +36,13 @@ function getFakeRestClient () {
       'itemBarcode': '10000201179999',
       'itemAvailabilityStatus': 'Not Available',
       'errorMessage': null
+    },
+    // Special collections item:
+    {
+      'itemBarcode': '33433058338470',
+      'itemAvailabilityStatus': 'Available',
+      'errorMessage': null
     }
-
   ]
 
   return {
@@ -309,17 +314,30 @@ describe('Response with updated availability', function () {
     })
   })
 
-  // describe('Special collections items', function () {
-  //   let availabilityResolver = null
-  //   before(function () {
-  //     availabilityResolver = new AvailabilityResolver(specRequestableElasticSearchResponse())
-  //   })
-  //   it('marks items as specRequestable when there is an aeonURL present', function () {
-  //     let response = availabilityResolver.responseWithUpdatedAvailability()
-  //     const items = response.hits.hits[0]._source.items
-  //     const specRequestableItem = items.find((item) => item.uri === 'i22566485')
-  //     expect(specRequestableItem.specRequestable[0]).to.equal(true)
-  //   })
-  // })
+  describe('Special collections items', function () {
+    let availabilityResolver = null
+    before(function () {
+      availabilityResolver = new AvailabilityResolver(specRequestableElasticSearchResponse())
+      availabilityResolver.restClient = getFakeRestClient()
+    })
+    it('marks items as specRequestable when there is an aeonURL present', function () {
+      return availabilityResolver.responseWithUpdatedAvailability()
+      .then((response) => {
+        const items = response.hits.hits[0]._source.items
+        const specRequestableItem = items.find((item) => item.uri === 'i22566485')
+        console.log(specRequestableItem)
+        expect(specRequestableItem.specRequestable[0]).to.equal(true)
+      })
+    })
+    it('marks items as not specRequestable when there is no aeonURL present', function () {
+      return availabilityResolver.responseWithUpdatedAvailability()
+      .then((response) => {
+        const items = response.hits.hits[0]._source.items
+        const specRequestableItem = items.find((item) => item.uri === 'i10283665')
+        console.log(specRequestableItem)
+        expect(specRequestableItem.specRequestable[0]).to.equal(false)
+      })
+    })
+  })
 })
 
