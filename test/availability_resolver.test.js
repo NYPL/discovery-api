@@ -334,7 +334,6 @@ describe('Response with updated availability', function () {
       .then((response) => {
         const items = response.hits.hits[0]._source.items
         const specRequestableItem = items.find((item) => item.uri === 'i10283665')
-        console.log(specRequestableItem)
         expect(specRequestableItem.specRequestable[0]).to.equal(false)
       })
     })
