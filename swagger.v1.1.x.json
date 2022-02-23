@@ -773,6 +773,13 @@
             "$ref": "#/definitions/EntityStub"
           }
         },
+        "aeonRequestable": {
+          "type": "array",
+          "description": "Boolean indicating if an item is requestable through the Aeon interface",
+          "items":{
+            "type": "boolean"
+          }
+        },
         "deliveryLocation": {
           "type": "array",
           "description": "Delivery locations",
@@ -802,6 +809,13 @@
           "description": "Owning institution",
           "items": {
             "$ref": "#/definitions/EntityStub"
+          }
+        },
+        "physRequestable": {
+          "type": "array",
+          "description": "Boolean indicating whether an item is available for a physical hold request",
+          "items":{
+            "type": "boolean"
           }
         },
         "requestable": {

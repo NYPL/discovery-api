@@ -338,5 +338,30 @@ describe('Response with updated availability', function () {
       })
     })
   })
+
+  describe('eddRequestable items', function () {
+    let availabilityResolver = null
+    before(function () {
+      availabilityResolver = new AvailabilityResolver(specRequestableElasticSearchResponse())
+      availabilityResolver.restClient = getFakeRestClient()
+    })
+    it.only('marks items eddRequestable:true when its reCAP code is listed as such in nypl-core', () => {
+      return availabilityResolver.responseWithUpdatedAvailability()
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
+
+        // A ReCAP item with customer code NA (eddRequestable = true)
+        var availableItem = items.find((item) => {
+          return item.uri === 'i10283664'
+        })
+        expect(availableItem.eddRequestable).to.equal(true)
+      })
+    })
+    it('marks items eddRequestable:false when its reCAP code is listed as such in nypl-core', () => {
+    })
+  })
 })
 
