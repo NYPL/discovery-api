@@ -354,11 +354,10 @@ describe('Response with updated availability', function () {
           var items = response.hits.hits[0]._source.items
 
           // A ReCAP item with customer code NA (eddRequestable = true)
-          var availableItem = items.find((item) => {
+          var eddItem = items.find((item) => {
             return item.uri === 'i102836649'
           })
-          console.log('item', availableItem)
-          expect(availableItem.eddRequestable).to.equal(true)
+          expect(eddItem.eddRequestable).to.equal(true)
         })
     })
     it('marks items eddRequestable:false when its reCAP code is listed as such in nypl-core', () => {
@@ -370,11 +369,10 @@ describe('Response with updated availability', function () {
           var items = response.hits.hits[0]._source.items
 
           // A ReCAP item with customer code NC (eddRequestable = false)
-          var availableItem = items.find((item) => {
+          var nonEddItem = items.find((item) => {
             return item.uri === 'i10283664'
           })
-          console.log('item', availableItem)
-          expect(availableItem.eddRequestable).to.equal(false)
+          expect(nonEddItem.eddRequestable).to.equal(false)
         })
     })
   })
