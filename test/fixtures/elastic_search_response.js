@@ -240,7 +240,7 @@ exports.fakeElasticSearchResponseNyplItem = () => {
                   false
                 ]
               },
-              { 'recapCustomerCode': 'NA',
+              {
                 'holdingLocation': [
                   {
                     'label': 'OFFSITE - Request in Advance',
