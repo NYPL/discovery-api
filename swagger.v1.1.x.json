@@ -773,19 +773,16 @@
             "$ref": "#/definitions/EntityStub"
           }
         },
-        "aeonRequestable": {
-          "type": "array",
-          "description": "Boolean indicating if an item is requestable through the Aeon interface",
-          "items":{
-            "type": "boolean"
-          }
-        },
         "deliveryLocation": {
           "type": "array",
           "description": "Delivery locations",
           "items": {
             "$ref": "#/definitions/EntityStub"
           }
+        },
+        "eddRequestable": {
+          "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
+          "type": "boolean"
         },
         "holdingLocation": {
           "type": "array",
@@ -825,15 +822,18 @@
             "type": "boolean"
           }
         },
-        "eddRequestable": {
-          "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
-          "type": "boolean"
-        },
         "shelfMark": {
           "type": "array",
           "description": "Callnumber(s)",
           "items": {
             "type": "string"
+          }
+        },
+        "specRequestable": {
+          "type": "array",
+          "description": "Boolean indicating if an item is requestable through the Aeon interface",
+          "items":{
+            "type": "boolean"
           }
         },
         "status": {
