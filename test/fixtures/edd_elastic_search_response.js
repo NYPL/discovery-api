@@ -191,7 +191,7 @@ module.exports = () => {
                   }
                 ],
                 'status_packed': [
-                  'status:na||Not Available'
+                  'status:a||Available'
                 ],
                 'owner': [
                   {
@@ -219,8 +219,8 @@ module.exports = () => {
                 ],
                 'status': [
                   {
-                    'id': 'status:na',
-                    'label': 'Not available'
+                    'id': 'status:a',
+                    'label': 'Available'
                   }
                 ],
                 'owner_packed': [
@@ -283,6 +283,68 @@ module.exports = () => {
                   {
                     'id': 'status:a',
                     'label': 'Available'
+                  }
+                ],
+                'owner_packed': [
+                  'orgs:1000||Stephen A. Schwarzman Building'
+                ],
+                'requestable': [
+                  false
+                ],
+                'identifier': [
+                  'urn:barcode:1000020117'
+                ],
+                'holdingLocation_packed': [
+                  'loc:rc2ma||OFFSITE - Request in Advance'
+                ],
+                'shelfMark': [
+                  '*OFC 90-2649 2'
+                ],
+                'suppressed': [
+                  false
+                ]
+              },
+              // eddRequestable but unavailable (partner item)
+              {
+                'uri': 'i10283667',
+                'recapCustomerCode': ['HL'],
+                'holdingLocation': [
+                  {
+                    'label': 'OFFSITE - Request in Advance',
+                    'id': 'loc:rc2ma'
+                  }
+                ],
+                'status_packed': [
+                  'status:na||Not Available'
+                ],
+                'owner': [
+                  {
+                    'id': 'orgs:1000',
+                    'label': 'Stephen A. Schwarzman Building'
+                  }
+                ],
+                'deliveryLocation': [
+                  {
+                    'id': 'loc:mala',
+                    'label': 'SASB - Allen Scholar Room'
+                  }
+                ],
+                'deliveryLocation_packed': [
+                  'loc:mala||SASB - Allen Scholar Room'
+                ],
+                'accessMessage_packed': [
+                  'accessMessage:2||ADV REQUEST'
+                ],
+                'accessMessage': [
+                  {
+                    'id': 'accessMessage:2',
+                    'label': 'ADV REQUEST'
+                  }
+                ],
+                'status': [
+                  {
+                    'id': 'status:na',
+                    'label': 'Not Available'
                   }
                 ],
                 'owner_packed': [
