@@ -1,5 +1,6 @@
 let AvailabilityResolver = require('../lib/availability_resolver.js')
 let elasticSearchResponse = require('./fixtures/elastic_search_response.js')
+let eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
 let specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 
 function getFakeRestClient () {
@@ -69,15 +70,15 @@ describe('Response with updated availability', function () {
     expect(indexedAsUnavailable.status[0].label).to.equal('Not available')
 
     return availabilityResolver.responseWithUpdatedAvailability()
-    .then((modifedResponse) => {
-      let theItem = modifedResponse.hits.hits[0]._source.items.find((item) => {
-        return item.uri === indexedAsUnavailableURI
-      })
+      .then((modifedResponse) => {
+        let theItem = modifedResponse.hits.hits[0]._source.items.find((item) => {
+          return item.uri === indexedAsUnavailableURI
+        })
 
-      // Test AvailabilityResolver munges it into availability
-      expect(theItem.status[0].id).to.equal('status:a')
-      expect(theItem.status[0].label).to.equal('Available')
-    })
+        // Test AvailabilityResolver munges it into availability
+        expect(theItem.status[0].id).to.equal('status:a')
+        expect(theItem.status[0].label).to.equal('Available')
+      })
   })
 
   it('will change an items status to "Unavailable" if ElasticSearch says it\'s Available but SCSB says it is Unvailable', function () {
@@ -150,28 +151,28 @@ describe('Response with updated availability', function () {
     availabilityResolver.restClient = getFakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          // A ReCAP item with Discovery status 'Available', but SCSB
-          // status 'Not Available' should be made 'Not Available'
-          var unavailableItem = items.find((item) => {
-            return item.uri === 'i102836649'
-          })
-          expect(unavailableItem.status[0].id).to.equal('status:na')
-          expect(unavailableItem.status[0].label).to.equal('Not available')
-
-          // A ReCAP item with Discovery status 'Not Avaiable', but SCSB
-          // status 'Available' should be made available:
-          var availableItem = items.find((item) => {
-            return item.uri === 'i10283664'
-          })
-          expect(availableItem.status[0].id).to.equal('status:a')
-          expect(availableItem.status[0].label).to.equal('Available')
+        // A ReCAP item with Discovery status 'Available', but SCSB
+        // status 'Not Available' should be made 'Not Available'
+        var unavailableItem = items.find((item) => {
+          return item.uri === 'i102836649'
         })
+        expect(unavailableItem.status[0].id).to.equal('status:na')
+        expect(unavailableItem.status[0].label).to.equal('Not available')
+
+        // A ReCAP item with Discovery status 'Not Avaiable', but SCSB
+        // status 'Available' should be made available:
+        var availableItem = items.find((item) => {
+          return item.uri === 'i10283664'
+        })
+        expect(availableItem.status[0].id).to.equal('status:a')
+        expect(availableItem.status[0].label).to.equal('Available')
+      })
   })
 
   it('marks ReCAP items that are SCSB Available items as physRequestable', function () {
@@ -179,19 +180,19 @@ describe('Response with updated availability', function () {
     availabilityResolver.restClient = getFakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          // A ReCAP item with SCSB status 'Available' should be
-          // made physRequestable:
-          var availableItem = items.find((item) => {
-            return item.uri === 'i10283664'
-          })
-          expect(availableItem.physRequestable[0]).to.equal(true)
+        // A ReCAP item with SCSB status 'Available' should be
+        // made physRequestable:
+        var availableItem = items.find((item) => {
+          return item.uri === 'i10283664'
         })
+        expect(availableItem.physRequestable[0]).to.equal(true)
+      })
   })
 
   it('marks SCSB Available items (that are indexed as Not Available) as requestable', function () {
@@ -199,19 +200,19 @@ describe('Response with updated availability', function () {
     availabilityResolver.restClient = getFakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          // A ReCAP item with Discovery status 'Not Available', but SCSB
-          // status 'Available' should be made requestable:
-          var availableItem = items.find((item) => {
-            return item.uri === 'i10283664'
-          })
-          expect(availableItem.requestable[0]).to.equal(true)
+        // A ReCAP item with Discovery status 'Not Available', but SCSB
+        // status 'Available' should be made requestable:
+        var availableItem = items.find((item) => {
+          return item.uri === 'i10283664'
         })
+        expect(availableItem.requestable[0]).to.equal(true)
+      })
   })
 
   it('marks SCSB Not-Available items as not requestable', function () {
@@ -219,17 +220,17 @@ describe('Response with updated availability', function () {
     availabilityResolver.restClient = getFakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          // A ReCAP item with SCSB status 'Not Available' should be made not
-          // requestable:
-          var notAvailableItem = items.find((item) => item.uri === 'i102836649')
-          expect(notAvailableItem.requestable[0]).to.equal(false)
-        })
+        // A ReCAP item with SCSB status 'Not Available' should be made not
+        // requestable:
+        var notAvailableItem = items.find((item) => item.uri === 'i102836649')
+        expect(notAvailableItem.requestable[0]).to.equal(false)
+      })
   })
 
   it('marks on-site (loc:scff2) Available items as requestable', function () {
@@ -238,15 +239,15 @@ describe('Response with updated availability', function () {
 
     process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          var availableItem = items.find((item) => item.uri === 'i10283665')
-          expect(availableItem.requestable[0]).to.equal(true)
-        })
+        var availableItem = items.find((item) => item.uri === 'i10283665')
+        expect(availableItem.requestable[0]).to.equal(true)
+      })
   })
 
   it('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
@@ -255,15 +256,15 @@ describe('Response with updated availability', function () {
 
     process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          var notAvailableItem = items.find((item) => item.uri === 'i10283665777')
-          expect(notAvailableItem.requestable[0]).to.equal(false)
-        })
+        var notAvailableItem = items.find((item) => item.uri === 'i10283665777')
+        expect(notAvailableItem.requestable[0]).to.equal(false)
+      })
   })
 
   it('marks on-site (loc:scff2) Available items as not requestable if "on-site-edd" feature flag missing', function () {
@@ -272,15 +273,15 @@ describe('Response with updated availability', function () {
 
     process.env.FEATURES = ''
     return availabilityResolver.responseWithUpdatedAvailability()
-        .then((modifedResponse) => {
-          return modifedResponse
-        })
-        .then((response) => {
-          var items = response.hits.hits[0]._source.items
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
 
-          var availableItem = items.find((item) => item.uri === 'i10283665')
-          expect(availableItem.requestable[0]).to.equal(false)
-        })
+        var availableItem = items.find((item) => item.uri === 'i10283665')
+        expect(availableItem.requestable[0]).to.equal(false)
+      })
   })
 
   describe('CUL item', function () {
@@ -322,20 +323,57 @@ describe('Response with updated availability', function () {
     })
     it('marks items as specRequestable when there is an aeonURL present', function () {
       return availabilityResolver.responseWithUpdatedAvailability()
-      .then((response) => {
-        const items = response.hits.hits[0]._source.items
-        const specRequestableItem = items.find((item) => item.uri === 'i22566485')
-        console.log(specRequestableItem)
-        expect(specRequestableItem.specRequestable[0]).to.equal(true)
-      })
+        .then((response) => {
+          const items = response.hits.hits[0]._source.items
+          const specRequestableItem = items.find((item) => item.uri === 'i22566485')
+          expect(specRequestableItem.specRequestable[0]).to.equal(true)
+        })
     })
     it('marks items as not specRequestable when there is no aeonURL present', function () {
       return availabilityResolver.responseWithUpdatedAvailability()
-      .then((response) => {
-        const items = response.hits.hits[0]._source.items
-        const specRequestableItem = items.find((item) => item.uri === 'i10283665')
-        expect(specRequestableItem.specRequestable[0]).to.equal(false)
-      })
+        .then((response) => {
+          const items = response.hits.hits[0]._source.items
+          const specRequestableItem = items.find((item) => item.uri === 'i10283665')
+          expect(specRequestableItem.specRequestable[0]).to.equal(false)
+        })
+    })
+  })
+
+  describe('eddRequestable items', function () {
+    let availabilityResolver = null
+    before(function () {
+      availabilityResolver = new AvailabilityResolver(eddElasticSearchResponse())
+      availabilityResolver.restClient = getFakeRestClient()
+    })
+    it('marks items eddRequestable:true when its reCAP code is listed as such in nypl-core', () => {
+      return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          // A ReCAP item with customer code NA (eddRequestable = true)
+          var eddItem = items.find((item) => {
+            return item.uri === 'i102836649'
+          })
+          expect(eddItem.eddRequestable).to.equal(true)
+        })
+    })
+    it('marks items eddRequestable:false when its reCAP code is listed as such in nypl-core', () => {
+      return availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          var items = response.hits.hits[0]._source.items
+
+          // A ReCAP item with customer code NC (eddRequestable = false)
+          var nonEddItem = items.find((item) => {
+            return item.uri === 'i10283664'
+          })
+          expect(nonEddItem.eddRequestable).to.equal(false)
+        })
     })
   })
 })
