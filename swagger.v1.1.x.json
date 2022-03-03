@@ -809,11 +809,8 @@
           }
         },
         "physRequestable": {
-          "type": "array",
-          "description": "Boolean indicating whether an item is available for a physical hold request",
-          "items":{
-            "type": "boolean"
-          }
+          "type": "boolean",
+          "description": "Indiates whether an item is available for a physical hold request"
         },
         "requestable": {
           "type": "array",
@@ -830,11 +827,8 @@
           }
         },
         "specRequestable": {
-          "type": "array",
-          "description": "Boolean indicating if an item is requestable through the Aeon interface",
-          "items":{
-            "type": "boolean"
-          }
+          "type": "boolean",
+          "description": "Indicates if an item is requestable through the Aeon interface"
         },
         "status": {
           "type": "array",

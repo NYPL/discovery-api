@@ -140,7 +140,6 @@ describe('Response with updated availability', function () {
       .then((modifiedResponse) => {
         // Find the modified item in the response:
         let theItem = modifiedResponse.hits.hits[0]._source.items.find((item) => item.uri === indexedButNotAvailableInSCSBURI)
-
         // Our fakeRESTClient said its barcode doesn't exist, so it should appear with `requestable` false
         expect(theItem.requestable[0]).to.equal(false)
       })
@@ -191,7 +190,7 @@ describe('Response with updated availability', function () {
         var availableItem = items.find((item) => {
           return item.uri === 'i10283664'
         })
-        expect(availableItem.physRequestable[0]).to.equal(true)
+        expect(availableItem.physRequestable).to.equal(true)
       })
   })
 
@@ -326,7 +325,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           const items = response.hits.hits[0]._source.items
           const specRequestableItem = items.find((item) => item.uri === 'i22566485')
-          expect(specRequestableItem.specRequestable[0]).to.equal(true)
+          expect(specRequestableItem.specRequestable).to.equal(true)
         })
     })
     it('marks items as not specRequestable when there is no aeonURL present', function () {
@@ -334,7 +333,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           const items = response.hits.hits[0]._source.items
           const specRequestableItem = items.find((item) => item.uri === 'i10283665')
-          expect(specRequestableItem.specRequestable[0]).to.equal(false)
+          expect(specRequestableItem.specRequestable).to.equal(false)
         })
     })
   })
