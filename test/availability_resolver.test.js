@@ -140,7 +140,6 @@ describe('Response with updated availability', function () {
       .then((modifiedResponse) => {
         // Find the modified item in the response:
         let theItem = modifiedResponse.hits.hits[0]._source.items.find((item) => item.uri === indexedButNotAvailableInSCSBURI)
-        console.log(theItem)
         // Our fakeRESTClient said its barcode doesn't exist, so it should appear with `requestable` false
         expect(theItem.requestable[0]).to.equal(false)
       })
