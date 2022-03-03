@@ -183,7 +183,7 @@ module.exports = () => {
               // not eddRequestable
               {
                 'uri': 'i10283664',
-                'recapCustomerCode': ['NC'],
+                'recapCustomerCode': 'NC',
                 'holdingLocation': [
                   {
                     'label': 'OFFSITE - Request in Advance',
@@ -245,7 +245,7 @@ module.exports = () => {
               // eddRequestable
               {
                 'uri': 'i102836649',
-                'recapCustomerCode': ['NA'],
+                'recapCustomerCode': 'NA',
                 'holdingLocation': [
                   {
                     'label': 'OFFSITE - Request in Advance',
@@ -307,7 +307,7 @@ module.exports = () => {
               // eddRequestable but unavailable (partner item)
               {
                 'uri': 'i10283667',
-                'recapCustomerCode': ['HL'],
+                'recapCustomerCode': 'HL',
                 'holdingLocation': [
                   {
                     'label': 'OFFSITE - Request in Advance',
