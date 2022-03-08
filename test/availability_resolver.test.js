@@ -2,54 +2,60 @@ let AvailabilityResolver = require('../lib/availability_resolver.js')
 let elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 let eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
 let specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
+let logger = require('../lib/logger')
+const { expect } = require('chai')
+const sinon = require('sinon')
 
-function getFakeRestClient () {
-  var response = [
-    {
-      'itemBarcode': '33433058338470',
-      'itemAvailabilityStatus': "Item Barcode doesn't exist in SCSB database.",
-      'errorMessage': null
-    },
-    {
-      'itemBarcode': '32101071572406',
-      'itemAvailabilityStatus': 'Not Available',
-      'errorMessage': null
-    },
-    {
-      'itemBarcode': '1000546836',
-      'itemAvailabilityStatus': 'Available',
-      'errorMessage': null
-    },
-    // An item in rc2ma", which ES has as Available:
-    {
-      'itemBarcode': '10005468369',
-      'itemAvailabilityStatus': 'Not Available',
-      'errorMessage': null
-    },
-    // CUL item (available):
-    {
-      'itemBarcode': '1000020117',
-      'itemAvailabilityStatus': 'Available',
-      'errorMessage': null
-    },
-    // CUL item (not available):
-    {
-      'itemBarcode': '10000201179999',
-      'itemAvailabilityStatus': 'Not Available',
-      'errorMessage': null
-    },
-    // Special collections item:
-    {
-      'itemBarcode': '33433058338470',
-      'itemAvailabilityStatus': 'Available',
-      'errorMessage': null
-    }
-  ]
+class FakeRestClient {
+  constructor () {
+    this.response = [
+      {
+        'itemBarcode': '33433058338470',
+        'itemAvailabilityStatus': "Item Barcode doesn't exist in SCSB database.",
+        'errorMessage': null
+      },
+      {
+        'itemBarcode': '32101071572406',
+        'itemAvailabilityStatus': 'Not Available',
+        'errorMessage': null
+      },
+      {
+        'itemBarcode': '1000546836',
+        'itemAvailabilityStatus': 'Available',
+        'errorMessage': null
+      },
+      // An item in rc2ma", which ES has as Available:
+      {
+        'itemBarcode': '10005468369',
+        'itemAvailabilityStatus': 'Not Available',
+        'errorMessage': null
+      },
+      // CUL item (available):
+      {
+        'itemBarcode': '1000020117',
+        'itemAvailabilityStatus': 'Available',
+        'errorMessage': null
+      },
+      // CUL item (not available):
+      {
+        'itemBarcode': '10000201179999',
+        'itemAvailabilityStatus': 'Not Available',
+        'errorMessage': null
+      },
+      // Special collections item:
+      {
+        'itemBarcode': '33433058338470',
+        'itemAvailabilityStatus': 'Available',
+        'errorMessage': null
+      }
+    ]
+  }
+  getItemsAvailabilityForBarcodes (barcodes) {
+    return Promise.resolve(this.response)
+  }
 
-  return {
-    getItemsAvailabilityForBarcodes: function (barcodes) {
-      return Promise.resolve(response)
-    }
+  recapCustomerCodeByBarcode (barcode) {
+    return Promise.resolve('recapCode')
   }
 }
 
@@ -57,7 +63,7 @@ describe('Response with updated availability', function () {
   it('will change an items status to "Available" if ElasticSearch says it\'s unavailable but SCSB says it is Available', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
 
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     let indexedAsUnavailableURI = 'i10283664'
 
@@ -83,7 +89,7 @@ describe('Response with updated availability', function () {
 
   it('will change an items status to "Unavailable" if ElasticSearch says it\'s Available but SCSB says it is Unvailable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     let indexedAsAvailableURI = 'i102836649'
     let indexedAsAvailable = elasticSearchResponse.fakeElasticSearchResponseNyplItem().hits.hits[0]._source.items.find((item) => {
@@ -108,7 +114,7 @@ describe('Response with updated availability', function () {
 
   it('will return the original ElasticSearchResponse\'s status for the item if the SCSB can\'t find an item with the barcode', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     let indexedButNotAvailableInSCSBURI = 'i22566485'
     let indexedButNotAvailableInSCSB = elasticSearchResponse.fakeElasticSearchResponseNyplItem().hits.hits[0]._source.items.find((item) => {
@@ -132,7 +138,7 @@ describe('Response with updated availability', function () {
 
   it('will set requestable to false for an item not found in ReCAP', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     let indexedButNotAvailableInSCSBURI = 'i22566485'
 
@@ -147,7 +153,7 @@ describe('Response with updated availability', function () {
 
   it('includes the latest availability status of items', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
@@ -176,7 +182,7 @@ describe('Response with updated availability', function () {
 
   it('marks ReCAP items that are SCSB Available items as physRequestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
@@ -196,7 +202,7 @@ describe('Response with updated availability', function () {
 
   it('marks SCSB Available items (that are indexed as Not Available) as requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
@@ -216,7 +222,7 @@ describe('Response with updated availability', function () {
 
   it('marks SCSB Not-Available items as not requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
@@ -234,7 +240,7 @@ describe('Response with updated availability', function () {
 
   it('marks on-site (loc:scff2) Available items as requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
@@ -251,7 +257,7 @@ describe('Response with updated availability', function () {
 
   it('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
@@ -268,7 +274,7 @@ describe('Response with updated availability', function () {
 
   it('marks on-site (loc:scff2) Available items as not requestable if "on-site-edd" feature flag missing', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = getFakeRestClient()
+    availabilityResolver.restClient = new FakeRestClient()
 
     process.env.FEATURES = ''
     return availabilityResolver.responseWithUpdatedAvailability()
@@ -288,7 +294,7 @@ describe('Response with updated availability', function () {
 
     before(function () {
       availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseCulItem())
-      availabilityResolver.restClient = getFakeRestClient()
+      availabilityResolver.restClient = new FakeRestClient()
     })
 
     it('marks CUL item Available when SCSB API indicates it is so', function () {
@@ -318,7 +324,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = null
     before(function () {
       availabilityResolver = new AvailabilityResolver(specRequestableElasticSearchResponse())
-      availabilityResolver.restClient = getFakeRestClient()
+      availabilityResolver.restClient = new FakeRestClient()
     })
     it('marks items as specRequestable when there is an aeonURL present', function () {
       return availabilityResolver.responseWithUpdatedAvailability()
@@ -342,7 +348,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = null
     before(function () {
       availabilityResolver = new AvailabilityResolver(eddElasticSearchResponse())
-      availabilityResolver.restClient = getFakeRestClient()
+      availabilityResolver.restClient = new FakeRestClient()
     })
     it('marks items eddRequestable:true when its reCAP code is listed as such in nypl-core', () => {
       return availabilityResolver.responseWithUpdatedAvailability()
@@ -373,6 +379,45 @@ describe('Response with updated availability', function () {
           })
           expect(nonEddItem.eddRequestable).to.equal(false)
         })
+    })
+  })
+
+  describe.only('checks recapCustomerCodes when options specifies', () => {
+    let availabilityResolver = null
+    before(function () {
+      availabilityResolver = new AvailabilityResolver(eddElasticSearchResponse())
+      availabilityResolver.restClient = new FakeRestClient()
+    })
+    it('logs an error when item\'s code does not match SCSB', () => {
+      const loggerSpy = sinon.spy(logger, 'error')
+      availabilityResolver.responseWithUpdatedAvailability(null, { queryRecapCustomerCode: true })
+        .then(() => {
+          expect(loggerSpy.calledOnce)
+        })
+      logger.error.restore()
+    })
+
+    it('updates recapCustomerCode when item\'s code does not match SCSB', () => {
+      availabilityResolver.responseWithUpdatedAvailability()
+        .then((modifedResponse) => {
+          return modifedResponse
+        })
+        .then((response) => {
+          let items = response.hits.hits[0]._source.items
+          // A ReCAP item with customer code NC
+          const queryItem = items.find((item) => {
+            return item.uri === 'i10283664'
+          })
+          return expect(queryItem.recapCustomerCode).to.equal('recapCode')
+        })
+    })
+
+    it('does nothing current recapCustomerCode and SCSB code are a match', () => {
+
+    })
+
+    it('does not query SCSB unless specified in options', () => {
+
     })
   })
 })
