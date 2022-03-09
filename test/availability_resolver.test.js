@@ -384,7 +384,7 @@ describe('Response with updated availability', function () {
     })
   })
 
-  describe.only('checks recapCustomerCodes when options specifies', () => {
+  describe('checks recapCustomerCodes when options specifies', () => {
     let availabilityResolver = null
     it('logs an error when item\'s code does not match SCSB', () => {
       availabilityResolver = new AvailabilityResolver(recapScsbQueryMismatch())
