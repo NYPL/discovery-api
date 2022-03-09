@@ -2,6 +2,8 @@ let AvailabilityResolver = require('../lib/availability_resolver.js')
 let elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 let eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
 let specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
+let recapScsbQueryMatch = require('./fixtures/recap-scsb-query-match')
+let recapScsbQueryMismatch = require('./fixtures/recap-scsb-query-mismatch')
 let logger = require('../lib/logger')
 const { expect } = require('chai')
 const sinon = require('sinon')
@@ -55,7 +57,7 @@ class FakeRestClient {
   }
 
   recapCustomerCodeByBarcode (barcode) {
-    return Promise.resolve('recapCode')
+    return Promise.resolve('NC')
   }
 }
 
@@ -384,40 +386,50 @@ describe('Response with updated availability', function () {
 
   describe.only('checks recapCustomerCodes when options specifies', () => {
     let availabilityResolver = null
-    before(function () {
-      availabilityResolver = new AvailabilityResolver(eddElasticSearchResponse())
-      availabilityResolver.restClient = new FakeRestClient()
-    })
     it('logs an error when item\'s code does not match SCSB', () => {
+      availabilityResolver = new AvailabilityResolver(recapScsbQueryMismatch())
+      availabilityResolver.restClient = new FakeRestClient()
       const loggerSpy = sinon.spy(logger, 'error')
-      availabilityResolver.responseWithUpdatedAvailability(null, { queryRecapCustomerCode: true })
+      return availabilityResolver.responseWithUpdatedAvailability(null, { queryRecapCustomerCode: true })
         .then(() => {
-          expect(loggerSpy.calledOnce)
+          expect(loggerSpy.calledOnce).to.equal(true)
+          logger.error.restore()
         })
-      logger.error.restore()
     })
 
     it('updates recapCustomerCode when item\'s code does not match SCSB', () => {
-      availabilityResolver.responseWithUpdatedAvailability()
+      return availabilityResolver.responseWithUpdatedAvailability()
         .then((modifedResponse) => {
           return modifedResponse
         })
         .then((response) => {
           let items = response.hits.hits[0]._source.items
-          // A ReCAP item with customer code NC
+          // A ReCAP item with customer code XX
           const queryItem = items.find((item) => {
-            return item.uri === 'i10283664'
+            return item.uri === 'i10283667'
           })
-          return expect(queryItem.recapCustomerCode).to.equal('recapCode')
+          expect(queryItem.recapCustomerCode).to.equal('NC')
         })
     })
 
-    it('does nothing current recapCustomerCode and SCSB code are a match', () => {
-
+    it('does nothing when current recapCustomerCode and SCSB code are a match', () => {
+      availabilityResolver = new AvailabilityResolver(recapScsbQueryMatch())
+      availabilityResolver.restClient = new FakeRestClient()
+      const loggerSpy = sinon.spy(logger, 'error')
+      return availabilityResolver.responseWithUpdatedAvailability()
+        .then(() => {
+          expect(loggerSpy.notCalled).to.equal(true)
+          logger.error.restore()
+        })
     })
 
     it('does not query SCSB unless specified in options', () => {
-
+      const stubsyB = sinon.spy(availabilityResolver.restClient, 'recapCustomerCodeByBarcode')
+      return availabilityResolver.responseWithUpdatedAvailability()
+        .then(() => {
+          expect(stubsyB.notCalled).to.equal(true)
+          availabilityResolver.restClient.recapCustomerCodeByBarcode.restore()
+        })
     })
   })
 })
