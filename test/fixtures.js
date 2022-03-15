@@ -194,7 +194,7 @@ function writeScsbByBarcodesResponseToFixture (properties, resp) {
  * fixtures via whatever ES is configured
  */
 function enableScsbFixtures () {
-  const SCSBRestClient = require('@nypl/scsb-rest-client')
+  const SCSBRestClient = require('../lib/scsb-recap-client')
 
   // If tests are run with `UPDATE_FIXTURES=[all|if-missing] npm test`, rebuild fixtures:
   if (process.env.UPDATE_FIXTURES) {
@@ -223,6 +223,7 @@ function enableScsbFixtures () {
     // should load a local fixture:
     sinon.stub(SCSBRestClient.prototype, 'getItemsAvailabilityForBarcodes')
       .callsFake(scsbByBarcodesViaFixtures)
+    sinon.stub(SCSBRestClient.prototype, 'recapCustomerCodeByBarcode').callsFake(() => Promise.resolve('NC'))
   }
 }
 
@@ -230,7 +231,7 @@ function enableScsbFixtures () {
  * Use in `after/afterEach` to restore (de-mock) app.esClient.search
  */
 function disableScsbFixtures () {
-  const SCSBRestClient = require('@nypl/scsb-rest-client')
+  const SCSBRestClient = require('../lib/scsb-recap-client')
 
   SCSBRestClient.prototype.getItemsAvailabilityForBarcodes.restore()
 }
