@@ -408,7 +408,7 @@ describe('Response with updated availability', function () {
           const queryItem = items.find((item) => {
             return item.uri === 'i10283667'
           })
-          expect(queryItem.recapCustomerCode).to.equal('NC')
+          expect(queryItem.recapCustomerCode[0]).to.equal('NC')
         })
     })
 
