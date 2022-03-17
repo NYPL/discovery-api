@@ -2,7 +2,10 @@ const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
 
 // Set some env variables:
-require('dotenv').config({ path: './config/test.env' })
+require('dotenv').config({
+  // If we're updating fixtures, load some real creds
+  path: process.env.UPDATE_FIXTURES ? '.env' : './config/test.env'
+})
 
 // Establish base url for local queries:
 global.TEST_BASE_URL = `http://localhost:${process.env.PORT}`

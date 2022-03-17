@@ -780,6 +780,10 @@
             "$ref": "#/definitions/EntityStub"
           }
         },
+        "eddRequestable": {
+          "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
+          "type": "boolean"
+        },
         "holdingLocation": {
           "type": "array",
           "description": "Delivery locations",
@@ -804,6 +808,10 @@
             "$ref": "#/definitions/EntityStub"
           }
         },
+        "physRequestable": {
+          "type": "boolean",
+          "description": "Indiates whether an item is available for a physical hold request"
+        },
         "requestable": {
           "type": "array",
           "description": "Boolean indicating whether or not a hold request may be placed on this item based on its status, location, and other concerns.",
@@ -811,16 +819,16 @@
             "type": "boolean"
           }
         },
-        "eddRequestable": {
-          "description": "Boolean indicating whether or not item is available for Electronic Document Delivery.",
-          "type": "boolean"
-        },
         "shelfMark": {
           "type": "array",
           "description": "Callnumber(s)",
           "items": {
             "type": "string"
           }
+        },
+        "specRequestable": {
+          "type": "boolean",
+          "description": "Indicates if an item is requestable through the Aeon interface"
         },
         "status": {
           "type": "array",
