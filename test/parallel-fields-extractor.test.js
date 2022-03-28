@@ -3,7 +3,7 @@ const parallelFieldsExtractor = require('../lib/parallel-fields-extractor')
 const parallelFieldsBib = require('./fixtures/parallel-fields-response.json')
 const elasticSearchResponseFixture = require('./fixtures/query-023c19c59c3511325e7d0e3046fcc8b1.json')
 
-describe.only('Parallel Fields Extractor', () => {
+describe('Parallel Fields Extractor', () => {
   describe('When a bib has a parallel fields property', () => {
     it('returns the elasticSearchResponse object', () => {
       const response = parallelFieldsExtractor(parallelFieldsBib)
