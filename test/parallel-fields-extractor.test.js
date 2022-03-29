@@ -2,6 +2,7 @@ const { expect } = require('chai')
 const parallelFieldsExtractor = require('../lib/parallel-fields-extractor')
 const parallelFieldsBib = require('./fixtures/parallel-fields-response.json')
 const elasticSearchResponseFixture = require('./fixtures/query-023c19c59c3511325e7d0e3046fcc8b1.json')
+const indexFixture = require('./fixtures/parallel-fields-index.json')
 
 describe('Parallel Fields Extractor', () => {
   describe('When a bib has a parallel fields property', () => {
@@ -13,6 +14,10 @@ describe('Parallel Fields Extractor', () => {
       const parallelsExtracted = parallelFieldsExtractor(parallelFieldsBib).hits.hits[0]._source
       expect(Object.keys(parallelsExtracted).length).to.equal(4)
       expect(parallelsExtracted).to.deep.equal({ 'parallelPublicationStatement': ['Москва : Вагриус, 2006.'], 'parallelTableOfContents': ['Черный маг -- Копыто инженера -- Вечер страшной субботы -- Великий канцлер -- Фантастический роман -- Золотое Копье -- Князь тьмы -- Мастер и Маргарита (полная рукописная редакция) -- Мастер и Маргарита (окончательная редакция).'], 'parallelNote': ['\"Литературно-художественное издание\"--Colophon.'], 'parallelPlaceOfPublication': ['Москва :'] })
+    })
+    it('adds parallel field values to the property array on the index indicated', () => {
+      const parallelNote = parallelFieldsExtractor(indexFixture).hits.hits[0]._source.parallelNote
+      expect(parallelNote).to.deep.equal([undefined, undefined, 'Issued by: Народна библиотека Краљево.'])
     })
   })
   describe('When a bib has no parallel fields property', () => {
