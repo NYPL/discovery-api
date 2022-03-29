@@ -1,27 +1,309 @@
 {
-  "hits": {
-    "hits": [
-      {
-        "_source": {
-          "parallelDisplayField": [
-            {
+  "_index": "resources-2020-05-08",
+  "_type": "resource",
+  "_id": "b16737214",
+  "_version": 4,
+  "found": true,
+  "_source": {
+      "updatedAt": 1648221225278,
+      "uri": "b16737214",
+      "nyplSource": [
+          "sierra-nypl"
+      ],
+      "uris": [
+          "b16737214",
+          "b16737214-i17417767"
+      ],
+      "type": [
+          "nypl:Item"
+      ],
+      "title_sort": [
+          "\"moĭ bednyĭ, bednyĭ master-- \" : polnoe sobranie redak︠t︡siĭ i variantov romana "
+      ],
+      "contributorLiteral": [
+          "Losev, V. I.",
+          "Bulgakov, Mikhail, 1891-1940."
+      ],
+      "contributor_sort": [
+          "losev, v. i."
+      ],
+      "creatorLiteral": [
+          "Bulgakov, Mikhail, 1891-1940."
+      ],
+      "creator_sort": [
+          "bulgakov, mikhail, 1891-1940."
+      ],
+      "dateStartYear": [
+          2006
+      ],
+      "dateString": [
+          "2006"
+      ],
+      "createdYear": [
+          2006
+      ],
+      "createdString": [
+          "2006"
+      ],
+      "mediaType": [
+          {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+          }
+      ],
+      "mediaType_packed": [
+          "mediatypes:n||unmediated"
+      ],
+      "carrierType": [
+          {
+              "id": "carriertypes:nc",
+              "label": "volume"
+          }
+      ],
+      "carrierType_packed": [
+          "carriertypes:nc||volume"
+      ],
+      "issuance": [
+          {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+          }
+      ],
+      "issuance_packed": [
+          "urn:biblevel:m||monograph/item"
+      ],
+      "language": [
+          {
+              "id": "lang:rus",
+              "label": "Russian"
+          }
+      ],
+      "language_packed": [
+          "lang:rus||Russian"
+      ],
+      "shelfMark": [
+          "*QD 07-6575"
+      ],
+      "identifierV2": [
+          {
+              "value": "*QD 07-6575",
+              "type": "bf:ShelfMark"
+          },
+          {
+              "type": "nypl:Bnumber",
+              "value": "16737214"
+          },
+          {
+              "type": "bf:Isbn",
+              "value": "9785969703643"
+          },
+          {
+              "type": "bf:Isbn",
+              "value": "5969703648"
+          },
+          {
+              "type": "nypl:Oclc",
+              "value": "165065425"
+          },
+          {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)165065425"
+          },
+          {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)M300000033"
+          }
+      ],
+      "materialType": [
+          {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+          }
+      ],
+      "materialType_packed": [
+          "resourcetypes:txt||Text"
+      ],
+      "identifier": [
+          "urn:bnum:16737214",
+          "urn:isbn:9785969703643",
+          "urn:isbn:5969703648",
+          "urn:oclc:165065425",
+          "urn:undefined:(OCoLC)165065425",
+          "urn:undefined:(WaOLN)M300000033"
+      ],
+      "idIsbn": [
+          "9785969703643",
+          "5969703648"
+      ],
+      "idOclc": [
+          "165065425"
+      ],
+      "tableOfContents": [
+          "Chernyĭ mag -- Kopyto inzhenera -- Vecher strashnoĭ subboty -- Velikiĭ kan︠t︡sler -- Fantasticheskiĭ roman -- Zolotoe Kopʹe -- Kn︠i︡azʹ tʹmy -- Master i Margarita (polna︠i︡a rukopisna︠i︡a redak︠t︡si︠i︡a) -- Master i Margarita (okonchatelʹna︠i︡a redak︠t︡si︠i︡a)."
+      ],
+      "dimensions": [
+          "27 cm."
+      ],
+      "extent": [
+          "1005 p. : ports., facsims. ;"
+      ],
+      "lccClassification": [
+          "PG3476.B78 M33 2006"
+      ],
+      "placeOfPublication": [
+          "Moskva :"
+      ],
+      "publicationStatement": [
+          "Moskva : Vagrius, 2006."
+      ],
+      "publisherLiteral": [
+          "Vagrius,"
+      ],
+      "subjectLiteral": [
+          "Bulgakov, Mikhail, 1891-1940."
+      ],
+      "title": [
+          "\"Moĭ bednyĭ, bednyĭ master-- \" : polnoe sobranie redak︠t︡siĭ i variantov romana \"Master i Margarita\" /"
+      ],
+      "titleDisplay": [
+          "\"Moĭ bednyĭ, bednyĭ master-- \" : polnoe sobranie redak︠t︡siĭ i variantov romana \"Master i Margarita\" / Mikhail Bulgakov ; izdanie podgotovil Viktor Losev."
+      ],
+      "parallelPublisher": [
+          "Вагриус,"
+      ],
+      "parallelCreatorLiteral": [
+          "Булгаков, Михаил Афанасьевич, 1891-1940."
+      ],
+      "parallelContributorLiteral": [
+          "",
+          "Булгаков, Михаил Афанасьевич, 1891-1940."
+      ],
+      "parallelSubjectLiteral": [
+          "Булгаков, Михаил Афанасьевич, 1891-1940."
+      ],
+      "parallelTitle": [
+          "\"Мой бедный, бедный мастер-- \" : полное собрание редакций и вариантов романа \"Мастер и Маргарита\" /"
+      ],
+      "parallelTitleDisplay": [
+          "\"Мой бедный, бедный мастер-- \" : полное собрание редакций и вариантов романа \"Мастер и Маргарита\" / Михаил Булгаков ; издание подготовил Виктор Лосев."
+      ],
+      "parallelDisplayField": [
+          {
+              "fieldName": "publicationStatement",
+              "index": 0,
+              "value": "Москва : Вагриус, 2006."
+          },
+          {
+              "fieldName": "tableOfContents",
+              "index": 0,
+              "value": "Черный маг -- Копыто инженера -- Вечер страшной субботы -- Великий канцлер -- Фантастический роман -- Золотое Копье -- Князь тьмы -- Мастер и Маргарита (полная рукописная редакция) -- Мастер и Маргарита (окончательная редакция)."
+          },
+          {
               "fieldName": "note",
               "index": 0,
-              "value": ""
-            },
-            {
-              "fieldName": "note",
-              "index": 1,
-              "value": ""
-            },
-            {
-              "fieldName": "note",
-              "index": 2,
-              "@value": "Issued by: Народна библиотека Краљево."
-            }
-          ]
-        }
-      }
-    ]
+              "value": "\"Литературно-художественное издание\"--Colophon."
+          },
+          {
+              "fieldName": "placeOfPublication",
+              "index": 0,
+              "value": "Москва :"
+          }
+      ],
+      "subjectLiteral_exploded": [
+          "Bulgakov, Mikhail, 1891-1940"
+      ],
+      "note": [
+          {
+              "type": "bf:Note",
+              "noteType": "Note",
+              "label": "\"Literaturno-khudozhestvennoe izdanie\"--Colophon."
+          }
+      ],
+      "holdings": [],
+      "items": [
+          {
+              "uri": "i17417767",
+              "status": [
+                  {
+                      "id": "status:a",
+                      "label": "Available"
+                  }
+              ],
+              "status_packed": [
+                  "status:a||Available"
+              ],
+              "owner": [
+                  {
+                      "id": "orgs:1000",
+                      "label": "Stephen A. Schwarzman Building"
+                  }
+              ],
+              "owner_packed": [
+                  "orgs:1000||Stephen A. Schwarzman Building"
+              ],
+              "catalogItemType": [
+                  {
+                      "id": "catalogItemType:55",
+                      "label": "book, limited circ, MaRLI"
+                  }
+              ],
+              "catalogItemType_packed": [
+                  "catalogItemType:55||book, limited circ, MaRLI"
+              ],
+              "holdingLocation": [
+                  {
+                      "id": "loc:rc2ma",
+                      "label": "Offsite"
+                  }
+              ],
+              "holdingLocation_packed": [
+                  "loc:rc2ma||Offsite"
+              ],
+              "shelfMark": [
+                  "*QD 07-6575"
+              ],
+              "identifierV2": [
+                  {
+                      "value": "*QD 07-6575",
+                      "type": "bf:ShelfMark"
+                  },
+                  {
+                      "type": "bf:Barcode",
+                      "value": "33433073352803"
+                  }
+              ],
+              "physicalLocation": [
+                  "*QD 07-6575"
+              ],
+              "recapCustomerCode": [
+                  "NA"
+              ],
+              "identifier": [
+                  "urn:barcode:33433073352803"
+              ],
+              "idBarcode": [
+                  "33433073352803"
+              ],
+              "requestable": [
+                  true
+              ],
+              "accessMessage": [
+                  {
+                      "id": "accessMessage:2",
+                      "label": "Request in advance"
+                  }
+              ],
+              "accessMessage_packed": [
+                  "accessMessage:2||Request in advance"
+              ],
+              "shelfMark_sort": "a*QD 07-006575"
+          }
+      ],
+      "numItems": [
+          1
+      ],
+      "numAvailable": [
+          1
+      ]
   }
 }
