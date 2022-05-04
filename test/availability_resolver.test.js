@@ -256,7 +256,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it.only('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
+  it('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
