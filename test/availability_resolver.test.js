@@ -240,11 +240,10 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks on-site (loc:scff2) Available items as requestable', function () {
+  it.only('marks on-site (loc:scff2) Available items as requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
-    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
@@ -257,11 +256,10 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
+  it.only('marks on-site (loc:scff2) Not-Available items as not requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
-    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
