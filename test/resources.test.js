@@ -214,7 +214,16 @@ describe('Resources query', function () {
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIsbn: '0689844921' } } } } })
+      expect(body).to.deep.equal({
+        query: {
+          bool: {
+            should: [
+              { term: { idIsbn: '0689844921' } },
+              { term: { idIsbn_clean: '0689844921' } }
+            ]
+          }
+        }
+      })
     })
 
     it('processes issn correctly', () => {
