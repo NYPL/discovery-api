@@ -220,7 +220,8 @@ describe('Resources query', function () {
             should: [
               { term: { idIsbn: '0689844921' } },
               { term: { idIsbn_clean: '0689844921' } }
-            ]
+            ],
+            minimum_should_match: 1
           }
         }
       })
