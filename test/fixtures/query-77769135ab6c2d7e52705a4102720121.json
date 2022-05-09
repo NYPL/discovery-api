@@ -1,0 +1,276 @@
+{
+  "took": 117,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 49.10901,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b13565153",
+        "_score": 49.10901,
+        "_source": {
+          "extent": [
+            "430 p. : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Title on spine: Ladies companion to the flower garden.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Ladies' companion to the flower-garden (p. [97]-340), has half- title page.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Monthly calendar of work to be done in the flower-garden: p. [425]-430.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Flower gardening",
+            "Gardening"
+          ],
+          "publisherLiteral": [
+            "John Wiley,"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "dateEndString": [
+            "1853"
+          ],
+          "createdYear": [
+            1854
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Gardening for ladies : and, Companion to the flower-garden"
+          ],
+          "shelfMark": [
+            "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+          ],
+          "creatorLiteral": [
+            "Loudon, Mrs. (Jane), 1807-1858."
+          ],
+          "createdString": [
+            "1854"
+          ],
+          "contributorLiteral": [
+            "Downing, A. J. (Andrew Jackson), 1815-1852."
+          ],
+          "dateStartYear": [
+            1854
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "13565153"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp3539974"
+            }
+          ],
+          "dateEndYear": [
+            1853
+          ],
+          "updatedAt": 1636445026964,
+          "publicationStatement": [
+            "New York : John Wiley, 1854, c1853."
+          ],
+          "identifier": [
+            "urn:bnum:13565153",
+            "urn:undefined:(WaOLN)nyp3539974"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1854"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Flower gardening.",
+            "Gardening."
+          ],
+          "titleDisplay": [
+            "Gardening for ladies : and, Companion to the flower-garden / by Mrs. Loudon."
+          ],
+          "uri": "b13565153",
+          "numItems": [
+            2
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "New York :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Companion to the flower-garden.",
+            "Ladies' companion to the flower garden."
+          ],
+          "dimensions": [
+            "20 cm."
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 2,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10708577",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rcma2",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rcma2||Offsite"
+                    ],
+                    "shelfMark": [
+                      "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433006564110"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433006564110"
+                    ],
+                    "idBarcode": [
+                      "33433006564110"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "aVQG (Loudon, J. W. Gardening for ladies. 1854)"
+                  },
+                  "sort": [
+                    "aVQG (Loudon, J. W. Gardening for ladies. 1854)"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i13565153-e",
+                    "electronicLocator": [
+                      {
+                        "url": "http://babel.hathitrust.org/cgi/pt?id=nyp.33433006564110",
+                        "label": "Full text available via HathiTrust"
+                      }
+                    ],
+                    "shelfMark_sort": "bi13565153-e"
+                  },
+                  "sort": [
+                    "bi13565153-e"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
