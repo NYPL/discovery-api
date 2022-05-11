@@ -229,3 +229,6 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 
 > /resources/b15704876-i25375512
 
+### Features
+
+There is currently one feature flag in this app, which is 'no-on-site-edd'. When it is set, all onsite items have an eddRequestable property of false. 

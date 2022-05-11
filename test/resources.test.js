@@ -146,15 +146,24 @@ describe('Resources query', function () {
       expect(query.bool.should[0].query_string).to.be.a('object')
       expect(query.bool.should[0].query_string.fields).to.be.a('array')
       expect(query.bool.should[0].query_string.fields).to.include('shelfMark')
+      expect(query.bool.should[0].query_string.query).to.equal('fladeedle')
+      console.log('should: ', JSON.stringify(query.bool.should, null, 2))
 
-      // Second clause is a nested query_string query on items fields:
+      // Second clause is a query_string query across multiple root level fields, with literal query
       expect(query.bool.should[1]).to.be.a('object')
-      expect(query.bool.should[1].nested).to.be.a('object')
-      expect(query.bool.should[1].nested.path).to.eq('items')
-      expect(query.bool.should[1].nested.query).to.be.a('object')
-      expect(query.bool.should[1].nested.query.query_string).to.be.a('object')
-      expect(query.bool.should[1].nested.query.query_string.fields).to.be.a('array')
-      expect(query.bool.should[1].nested.query.query_string.fields).to.include('items.shelfMark')
+      expect(query.bool.should[1].query_string).to.be.a('object')
+      expect(query.bool.should[1].query_string.fields).to.be.a('array')
+      expect(query.bool.should[1].query_string.fields).to.include('shelfMark')
+      expect(query.bool.should[1].query_string.query).to.equal('"fladeedle"')
+
+      // Third clause is a nested query_string query on items fields:
+      expect(query.bool.should[2]).to.be.a('object')
+      expect(query.bool.should[2].nested).to.be.a('object')
+      expect(query.bool.should[2].nested.path).to.eq('items')
+      expect(query.bool.should[2].nested.query).to.be.a('object')
+      expect(query.bool.should[2].nested.query.query_string).to.be.a('object')
+      expect(query.bool.should[2].nested.query.query_string.fields).to.be.a('array')
+      expect(query.bool.should[2].nested.query.query_string.fields).to.include('items.shelfMark')
     })
   })
 
@@ -214,7 +223,17 @@ describe('Resources query', function () {
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIsbn: '0689844921' } } } } })
+      expect(body).to.deep.equal({
+        query: {
+          bool: {
+            should: [
+              { term: { idIsbn: '0689844921' } },
+              { term: { idIsbn_clean: '0689844921' } }
+            ],
+            minimum_should_match: 1
+          }
+        }
+      })
     })
 
     it('processes issn correctly', () => {

@@ -244,7 +244,6 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
-    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
@@ -261,7 +260,6 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
-    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
@@ -274,11 +272,11 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks on-site (loc:scff2) Available items as not requestable if "on-site-edd" feature flag missing', function () {
+  it('marks on-site (loc:scff2) Available items as not requestable if "no-on-site-edd" feature flag is set', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
-    process.env.FEATURES = ''
+    process.env.FEATURES = 'no-on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
