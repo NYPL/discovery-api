@@ -1,3 +1,4 @@
+const { expect } = require('chai')
 const errors = require('../lib/errors')
 
 const fixtures = require('./fixtures')
@@ -15,7 +16,7 @@ describe('Resources query', function () {
 
   describe('parseSearchParams', function () {
     it('parses params, sets defaults', function () {
-      const params = resourcesPrivMethods.parseSearchParams({ })
+      const params = resourcesPrivMethods.parseSearchParams({})
       expect(params).to.be.a('object')
       expect(params.q).to.equal(undefined)
       expect(params.search_scope).to.equal('all')
@@ -23,6 +24,7 @@ describe('Resources query', function () {
       expect(params.per_page).to.equal(50)
       expect(params.sort).to.equal(undefined)
       expect(params.filters).to.equal(undefined)
+      expect(params.merge_checkin_cards).to.equal(false)
     })
   })
 

@@ -1,3 +1,5 @@
+const { expect } = require('chai')
+
 const parseParams = require('../lib/util').parseParams
 
 describe('Util', () => {
@@ -9,6 +11,15 @@ describe('Util', () => {
 
       expect(outgoing).to.be.an('object')
       expect(outgoing.foo).to.equal(3)
+    })
+
+    it('should parse a boolean', () => {
+      const incoming = { 'bool': true }
+      const spec = { bool: { type: 'boolean' } }
+      const outgoing = parseParams(incoming, spec)
+
+      expect(outgoing).to.be.an('object')
+      expect(outgoing.bool).to.equal(true)
     })
 
     it('should parse a single value unless multiple allowed', () => {
@@ -27,7 +38,7 @@ describe('Util', () => {
       var incoming = {
         'filters': {
           'subjectLiteral': 'cats',
-          'contributorLiteral': [ 'Contrib 1', 'Contrib 2' ],
+          'contributorLiteral': ['Contrib 1', 'Contrib 2'],
           'date': '2012',
           'badNumeric': 'blah'
         }
