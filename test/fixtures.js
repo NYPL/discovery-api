@@ -17,6 +17,8 @@ function esFixturePath (properties) {
   return `./test/fixtures/query-${md5(qs.stringify(properties.body))}.json`
 }
 
+let missingFixturePaths = 0
+
 /**
  * Emulates app.esClient.search function via local fixtures
  */
@@ -28,6 +30,7 @@ function esClientSearchViaFixtures (properties) {
     fs.readFile(path, 'utf8', (err, content) => {
       if (err) {
         console.error(`Missing fixture (${path}) for `, JSON.stringify(properties, null, 2))
+        missingFixturePaths += 1
         return reject(err)
       }
 
@@ -288,8 +291,12 @@ after(function () {
       })
     // Otherwise, just report on them:
     } else {
-      console.log(`The following fixtures were not used:\n${unused.map((path) => `\n  ${path}`)}`)
+      console.log(`${unused.length} fixture(s) were not used`)
     }
+  }
+
+  if (missingFixturePaths) {
+    console.error(`Missing ${missingFixturePaths} fixture(s). Run the following to build them:\n  UPDATE_FIXTURES=if-missing npm test`)
   }
 })
 
