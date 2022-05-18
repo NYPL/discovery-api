@@ -26,7 +26,7 @@ describe('Resources query', function () {
       expect(params.per_page).to.equal(50)
       expect(params.sort).to.equal(undefined)
       expect(params.filters).to.equal(undefined)
-      expect(params.merge_checkin_cards).to.equal(false)
+      expect(params.merge_checkin_card_items).to.equal(false)
     })
   })
 
@@ -328,7 +328,7 @@ describe('Resources query', function () {
     })
 
     it('handles connection error by rejecting with Error', () => {
-      const call = () => app.resources.findByUri({ uri: 'b123-connection-error', merge_checkin_cards: true })
+      const call = () => app.resources.findByUri({ uri: 'b123-connection-error', merge_checkin_card_items: true })
       return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
     })
   })
