@@ -1,4 +1,6 @@
 const { expect } = require('chai')
+const fs = require('fs')
+const sinon = require('sinon')
 const errors = require('../lib/errors')
 
 const fixtures = require('./fixtures')
@@ -299,7 +301,7 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri errors', () => {
+  describe('findByUri 404', () => {
     before(() => {
       fixtures.enableEsFixtures()
     })
@@ -308,14 +310,26 @@ describe('Resources query', function () {
       fixtures.disableEsFixtures()
     })
 
-    it('handles connection error by rejecting with Error', () => {
-      const call = () => app.resources.findByUri({ uri: 'b123-connection-error' })
-      return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
-    })
-
     it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
+    })
+  })
+
+  describe('findByUri connection error', () => {
+    before(() => {
+      sinon.stub(app.esClient, 'search').callsFake((req) => {
+        return Promise.resolve(fs.readFileSync('./test/fixtures/es-connection-error.json', 'utf8'))
+      })
+    })
+
+    after(() => {
+      app.esClient.search.restore()
+    })
+
+    it('handles connection error by rejecting with Error', () => {
+      const call = () => app.resources.findByUri({ uri: 'b123-connection-error', merge_checkin_cards: true })
+      return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
     })
   })
 })

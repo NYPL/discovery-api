@@ -288,7 +288,7 @@ after(function () {
       })
     // Otherwise, just report on them:
     } else {
-      console.log(`The following fixtures were not used:\n${unused.map((path) => `\n  ${path}`)}`)
+      console.log(`${unused.length} fixtures were not used`)
     }
   }
 })
