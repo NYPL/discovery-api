@@ -13,7 +13,7 @@ describe('Util', () => {
       expect(outgoing.foo).to.equal(3)
     })
 
-    it.only('should parse a boolean', () => {
+    it('should parse a boolean', () => {
       const incoming = { 'true': 'true', 'false': 'false' }
       const spec = { true: { type: 'boolean' }, false: { type: 'boolean' } }
       const outgoing = parseParams(incoming, spec)
