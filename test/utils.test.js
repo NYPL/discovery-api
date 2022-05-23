@@ -13,13 +13,14 @@ describe('Util', () => {
       expect(outgoing.foo).to.equal(3)
     })
 
-    it('should parse a boolean', () => {
-      const incoming = { 'bool': true }
-      const spec = { bool: { type: 'boolean' } }
+    it.only('should parse a boolean', () => {
+      const incoming = { 'true': 'true', 'false': 'false' }
+      const spec = { true: { type: 'boolean' }, false: { type: 'boolean' } }
       const outgoing = parseParams(incoming, spec)
 
       expect(outgoing).to.be.an('object')
-      expect(outgoing.bool).to.equal(true)
+      expect(outgoing.true).to.equal(true)
+      expect(outgoing.false).to.equal(false)
     })
 
     it('should parse a single value unless multiple allowed', () => {
