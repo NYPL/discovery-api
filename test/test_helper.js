@@ -1,10 +1,42 @@
+const fs = require('fs')
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
+const dotenv = require('dotenv')
+const kmsHelper = require('../lib/kms-helper')
 
-// Set some env variables:
-require('dotenv').config({
-  // If we're updating fixtures, load some real creds
-  path: process.env.UPDATE_FIXTURES ? '.env' : './config/test.env'
+// Load baseline test env vars:
+dotenv.config({ path: './config/test.env' })
+
+before(() => {
+  // If we're updating fixtures, load real production creds
+  if (process.env.UPDATE_FIXTURES) {
+    const productionEnv = dotenv.parse(fs.readFileSync('./config/production.env'))
+    return Promise.all(
+      [
+        // These are the config params that will allow us to build fixtures
+        // from real production data:
+        'SCSB_URL',
+        'SCSB_API_KEY',
+        'ELASTICSEARCH_HOST',
+        'RESOURCES_INDEX',
+        'NYPL_OAUTH_URL',
+        'NYPL_OAUTH_ID',
+        'NYPL_OAUTH_SECRET',
+        'NYPL_API_BASE_URL'
+      ].map((key) => {
+        const value = productionEnv[key]
+        let handleValue = Promise.resolve(value)
+        // Decrypt the config that's encrypted:
+        if ([ 'SCSB_URL', 'SCSB_API_KEY', 'NYPL_OAUTH_SECRET' ].includes(key)) {
+          handleValue = kmsHelper.decrypt(value)
+        }
+        return handleValue
+          .then((value) => {
+            process.env[key] = value
+          })
+      })
+    )
+  }
 })
 
 // Establish base url for local queries:

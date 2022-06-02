@@ -1,0 +1,240 @@
+{
+  "took": 80,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 120.43242,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b13627363",
+        "_score": 120.43242,
+        "_source": {
+          "extent": [
+            "128 p. illus."
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Cats",
+            "Cats -- Pictorial works"
+          ],
+          "publisherLiteral": [
+            "Creative age press, inc."
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1947
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Cats, cats, & cats,"
+          ],
+          "shelfMark": [
+            "VPS (Rice, E. Cats, cats, & cats)"
+          ],
+          "creatorLiteral": [
+            "Rice, Edward, 1917-"
+          ],
+          "createdString": [
+            "1947"
+          ],
+          "idLccn": [
+            "agr47000211"
+          ],
+          "contributorLiteral": [
+            "Gleason, Jean, 1917-"
+          ],
+          "dateStartYear": [
+            1947
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "VPS (Rice, E. Cats, cats, & cats)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "13627363"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "agr47000211"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp3600714"
+            }
+          ],
+          "updatedAt": 1636428476541,
+          "publicationStatement": [
+            "New York, Creative age press, inc. [c1947]"
+          ],
+          "identifier": [
+            "urn:bnum:13627363",
+            "urn:lccn:agr47000211",
+            "urn:undefined:(WaOLN)nyp3600714"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1947"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Cats -- Pictorial works.",
+            "Cats."
+          ],
+          "titleDisplay": [
+            "Cats, cats, & cats, by Edward Rice and Jean Gleason."
+          ],
+          "uri": "b13627363",
+          "lccClassification": [
+            "SF447 .R5"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "New York,"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "25 cm."
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10754478",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "shelfMark": [
+                      "VPS (Rice, E. Cats, cats, & cats)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "VPS (Rice, E. Cats, cats, & cats)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433006598316"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "VPS (Rice, E. Cats, cats, & cats)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433006598316"
+                    ],
+                    "idBarcode": [
+                      "33433006598316"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "aVPS (Rice, E. Cats, cats, & cats)"
+                  },
+                  "sort": [
+                    "aVPS (Rice, E. Cats, cats, & cats)"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
