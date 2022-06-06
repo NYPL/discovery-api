@@ -237,6 +237,7 @@ function disableScsbFixtures () {
   const SCSBRestClient = require('../lib/scsb-recap-client')
 
   SCSBRestClient.prototype.getItemsAvailabilityForBarcodes.restore()
+  SCSBRestClient.prototype.recapCustomerCodeByBarcode.restore()
 }
 
 let dataApiClient = null

@@ -1,9 +1,23 @@
 const axios = require('axios')
 const { expect } = require('chai')
 const sinon = require('sinon')
-const app = require('../app')
+const fixtures = require('./fixtures')
 
 describe('resources routes', function () {
+  let app
+
+  before(function () {
+    fixtures.enableEsFixtures()
+    fixtures.enableScsbFixtures()
+
+    app = require('../app')
+  })
+
+  after(function () {
+    fixtures.disableEsFixtures()
+    fixtures.disableScsbFixtures()
+  })
+
   describe('item id', function () {
     it('recognizes harvard item ids', function () {
       const findByUriSpy = sinon.spy(app.resources.findByUri)
