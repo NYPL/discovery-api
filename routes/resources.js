@@ -87,9 +87,10 @@ module.exports = function (app) {
 
   app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri([a-z]?i[0-9]+)`, function (req, res) {
     var params = { uri: req.params.uri, itemUri: req.params.itemUri }
-
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
-      .then((responseBody) => respond(res, responseBody, params))
+      .then((responseBody) => {
+        return respond(res, responseBody, params)
+      })
       .catch((error) => handleError(res, error, params))
   })
 
@@ -106,7 +107,9 @@ module.exports = function (app) {
     }
 
     return handler(params, { baseUrl: app.baseUrl }, req)
-      .then((responseBody) => respond(res, responseBody, params))
+      .then((responseBody) => {
+        respond(res, responseBody, params)
+      })
       .catch((error) => handleError(res, error, params))
   })
 }
