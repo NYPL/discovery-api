@@ -13,8 +13,9 @@ describe.only('resources routes', function () {
     app = require('../app')
 
     sinon.stub(app.resources, 'findByUri').callsFake((params) => {
+      console.log('stub')
       paramsToTest = params
-      return { response: 'response' }
+      Promise.resolve({ response: 'response' })
     })
   })
 
