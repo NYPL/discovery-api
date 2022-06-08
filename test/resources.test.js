@@ -151,7 +151,6 @@ describe('Resources query', function () {
       expect(query.bool.should[0].query_string.fields).to.be.a('array')
       expect(query.bool.should[0].query_string.fields).to.include('shelfMark')
       expect(query.bool.should[0].query_string.query).to.equal('fladeedle')
-      console.log('should: ', JSON.stringify(query.bool.should, null, 2))
 
       // Second clause is a query_string query across multiple root level fields, with literal query
       expect(query.bool.should[1]).to.be.a('object')
