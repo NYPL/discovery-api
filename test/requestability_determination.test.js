@@ -1,4 +1,8 @@
-const { requestableBasedOnStatusAndHoldingLocation } = require('../lib/requestability_determination')
+const {
+  requestableBasedOnHoldingLocation,
+  requestableBasedOnStatus,
+  requestableBasedOnStatusAndHoldingLocation
+} = require('../lib/requestability_determination')
 
 describe('requestableBasedOnStatusAndHoldingLocation', function () {
   it('will flip a requestable item to not-requestable if its holding location is requestable=false', function () {
@@ -16,5 +20,44 @@ describe('requestableBasedOnStatusAndHoldingLocation', function () {
     }
 
     expect(requestableBasedOnStatusAndHoldingLocation(notRequestableByStatus)).to.equal(false)
+  })
+})
+
+describe('requestableBasedOnHoldingLocation', function () {
+  // These expectations rely on the requestability of these locations being
+  // somewhat static, which has been generally true
+
+  it('identifies a non-requestable location', function () {
+    expect(
+      requestableBasedOnHoldingLocation({
+        holdingLocation: [ { id: 'loc:rccd8' } ]
+      })
+    ).to.equal(false)
+  })
+
+  it('identifies a requestable location', function () {
+    expect(
+      requestableBasedOnHoldingLocation({
+        holdingLocation: [ { id: 'loc:rcpm2' } ]
+      })
+    ).to.equal(true)
+  })
+})
+
+describe('requestableBasedOnStatus', function () {
+  it('identifies a non-requestable status', function () {
+    expect(
+      requestableBasedOnStatus({
+        status: [ { id: 'status:b' } ]
+      })
+    ).to.equal(false)
+  })
+
+  it('identifies a requestable status', function () {
+    expect(
+      requestableBasedOnStatus({
+        status: [ { id: 'status:a' } ]
+      })
+    ).to.equal(true)
   })
 })
