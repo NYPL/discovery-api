@@ -198,7 +198,7 @@ describe('Response with updated availability', function () {
         var availableItem = items.find((item) => {
           return item.uri === 'i10283664'
         })
-        expect(availableItem.physRequestable).to.equal(true)
+        expect(availableItem.physRequestable[0]).to.equal(true)
       })
   })
 
@@ -272,7 +272,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks on-site (loc:scff2) Available items as not requestable if "no-on-site-edd" feature flag is set', function () {
+  it.only('marks on-site (loc:scff2) Available items as not requestable if "no-on-site-edd" feature flag is set', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -285,7 +285,7 @@ describe('Response with updated availability', function () {
         var items = response.hits.hits[0]._source.items
 
         var availableItem = items.find((item) => item.uri === 'i10283665')
-        expect(availableItem.requestable[0]).to.equal(false)
+        expect(availableItem.eddRequestable[0]).to.equal(false)
       })
   })
 
@@ -331,7 +331,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           const items = response.hits.hits[0]._source.items
           const specRequestableItem = items.find((item) => item.uri === 'i22566485')
-          expect(specRequestableItem.specRequestable).to.equal(true)
+          expect(specRequestableItem.specRequestable[0]).to.equal(true)
         })
     })
     it('marks items as not specRequestable when there is no aeonURL present', function () {
@@ -339,7 +339,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           const items = response.hits.hits[0]._source.items
           const specRequestableItem = items.find((item) => item.uri === 'i10283665')
-          expect(specRequestableItem.specRequestable).to.equal(false)
+          expect(specRequestableItem.specRequestable[0]).to.equal(false)
         })
     })
   })
@@ -362,7 +362,7 @@ describe('Response with updated availability', function () {
           var eddItem = items.find((item) => {
             return item.uri === 'i102836649'
           })
-          expect(eddItem.eddRequestable).to.equal(true)
+          expect(eddItem.eddRequestable[0]).to.equal(true)
         })
     })
     it('marks items eddRequestable:false when its reCAP code is listed as such in nypl-core', () => {
@@ -377,7 +377,7 @@ describe('Response with updated availability', function () {
           var nonEddItem = items.find((item) => {
             return item.uri === 'i10283664'
           })
-          expect(nonEddItem.eddRequestable).to.equal(false)
+          expect(nonEddItem.eddRequestable[0]).to.equal(false)
         })
     })
   })
