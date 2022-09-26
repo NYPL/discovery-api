@@ -198,7 +198,7 @@ describe('Response with updated availability', function () {
         var availableItem = items.find((item) => {
           return item.uri === 'i10283664'
         })
-        expect(availableItem.physRequestable[0]).to.equal(true)
+        expect(availableItem.physRequestable).to.equal(true)
       })
   })
 
@@ -222,7 +222,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks SCSB Not-Available items as not requestable', function () {
+  it('marks SCSB Not-Available items as requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -236,7 +236,8 @@ describe('Response with updated availability', function () {
         // A ReCAP item with SCSB status 'Not Available' should be made not
         // requestable:
         var notAvailableItem = items.find((item) => item.uri === 'i102836649')
-        expect(notAvailableItem.requestable[0]).to.equal(false)
+        expect(notAvailableItem.requestable[0]).to.equal(true)
+        expect(notAvailableItem.status[0].label).to.equal('Not available')
       })
   })
 
@@ -272,7 +273,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it.only('marks on-site (loc:scff2) Available items as not requestable if "no-on-site-edd" feature flag is set', function () {
+  it('marks on-site (loc:scff2) Available items as not requestable if "no-on-site-edd" feature flag is set', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -285,7 +286,7 @@ describe('Response with updated availability', function () {
         var items = response.hits.hits[0]._source.items
 
         var availableItem = items.find((item) => item.uri === 'i10283665')
-        expect(availableItem.eddRequestable[0]).to.equal(false)
+        expect(availableItem.eddRequestable).to.equal(false)
       })
   })
 
@@ -308,14 +309,13 @@ describe('Response with updated availability', function () {
         })
     })
 
-    it('marks CUL item Not Available when SCSB API indicates it is so', function () {
+    it('marks CUL item not avilable when SCSB API indicates it is so', function () {
       return availabilityResolver.responseWithUpdatedAvailability()
         .then((response) => {
           var items = response.hits.hits[0]._source.items
 
-          var availableItem = items.find((item) => item.uri === 'ci14555049999')
-          expect(availableItem.requestable[0]).to.equal(false)
-          expect(availableItem.status[0].label).to.equal('Not available')
+          var notAvailableItem = items.find((item) => item.uri === 'ci14555049999')
+          expect(notAvailableItem.status[0].label).to.equal('Not available')
         })
     })
   })
@@ -331,7 +331,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           const items = response.hits.hits[0]._source.items
           const specRequestableItem = items.find((item) => item.uri === 'i22566485')
-          expect(specRequestableItem.specRequestable[0]).to.equal(true)
+          expect(specRequestableItem.specRequestable).to.equal(true)
         })
     })
     it('marks items as not specRequestable when there is no aeonURL present', function () {
@@ -339,7 +339,7 @@ describe('Response with updated availability', function () {
         .then((response) => {
           const items = response.hits.hits[0]._source.items
           const specRequestableItem = items.find((item) => item.uri === 'i10283665')
-          expect(specRequestableItem.specRequestable[0]).to.equal(false)
+          expect(specRequestableItem.specRequestable).to.equal(false)
         })
     })
   })
@@ -362,7 +362,7 @@ describe('Response with updated availability', function () {
           var eddItem = items.find((item) => {
             return item.uri === 'i102836649'
           })
-          expect(eddItem.eddRequestable[0]).to.equal(true)
+          expect(eddItem.eddRequestable).to.equal(true)
         })
     })
     it('marks items eddRequestable:false when its reCAP code is listed as such in nypl-core', () => {
@@ -377,7 +377,7 @@ describe('Response with updated availability', function () {
           var nonEddItem = items.find((item) => {
             return item.uri === 'i10283664'
           })
-          expect(nonEddItem.eddRequestable[0]).to.equal(false)
+          expect(nonEddItem.eddRequestable).to.equal(false)
         })
     })
   })
