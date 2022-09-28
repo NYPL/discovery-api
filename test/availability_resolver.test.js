@@ -222,7 +222,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks SCSB Not-Available items as not requestable', function () {
+  it('marks SCSB Not-Available items as requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -236,7 +236,8 @@ describe('Response with updated availability', function () {
         // A ReCAP item with SCSB status 'Not Available' should be made not
         // requestable:
         var notAvailableItem = items.find((item) => item.uri === 'i102836649')
-        expect(notAvailableItem.requestable[0]).to.equal(false)
+        expect(notAvailableItem.requestable[0]).to.equal(true)
+        expect(notAvailableItem.status[0].label).to.equal('Not available')
       })
   })
 
@@ -285,7 +286,7 @@ describe('Response with updated availability', function () {
         var items = response.hits.hits[0]._source.items
 
         var availableItem = items.find((item) => item.uri === 'i10283665')
-        expect(availableItem.requestable[0]).to.equal(false)
+        expect(availableItem.eddRequestable).to.equal(false)
       })
   })
 
@@ -308,14 +309,13 @@ describe('Response with updated availability', function () {
         })
     })
 
-    it('marks CUL item Not Available when SCSB API indicates it is so', function () {
+    it('marks CUL item not avilable when SCSB API indicates it is so', function () {
       return availabilityResolver.responseWithUpdatedAvailability()
         .then((response) => {
           var items = response.hits.hits[0]._source.items
 
-          var availableItem = items.find((item) => item.uri === 'ci14555049999')
-          expect(availableItem.requestable[0]).to.equal(false)
-          expect(availableItem.status[0].label).to.equal('Not available')
+          var notAvailableItem = items.find((item) => item.uri === 'ci14555049999')
+          expect(notAvailableItem.status[0].label).to.equal('Not available')
         })
     })
   })
