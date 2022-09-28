@@ -206,6 +206,7 @@ exports.fakeElasticSearchResponseNyplItem = () => {
                   'loc:mala||SASB - Allen Scholar Room'
                 ],
                 'uri': 'i10283664',
+                'recapCustomerCode': ['NP'],
                 'accessMessage_packed': [
                   'accessMessage:2||ADV REQUEST'
                 ],
@@ -266,6 +267,7 @@ exports.fakeElasticSearchResponseNyplItem = () => {
                   'loc:mala||SASB - Allen Scholar Room'
                 ],
                 'uri': 'i102836649',
+                'recapCustomerCode': ['NP'],
                 'accessMessage_packed': [
                   'accessMessage:2||ADV REQUEST'
                 ],
@@ -592,6 +594,7 @@ exports.fakeElasticSearchResponseCulItem = () => {
                   'LD1237.5D 1989 .C166'
                 ],
                 'uri': 'ci1455504',
+                'recapCustomerCode': ['NP'],
                 'identifierV2': [
                   {
                     'type': 'bf:ShelfMark',
