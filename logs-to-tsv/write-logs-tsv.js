@@ -1,29 +1,5 @@
 const { readFileSync, writeFileSync, readdirSync } = require('fs')
 
-/**
- * A script to generate a TSV file that organizes discovery API search queries. 
- * To rerun script without downloading more logs, run without arguments
- * Depends on local installation of awslogs:
- *    brew install awslogs 
- * or 
- *    pip install awslogs
- * 
- * Usage:
- * 
- * node logs --start START --end END
- * 
- * Start and end can be any number of days, weeks, or hours back, or a date
- * 1h
- * 3d
- * 2w
- * 10/4/2022
- * 
- */
-
-// const argv = require('minimist')(process.argv.slice(2))
-
-// const { start, end } = argv
-
 const convertToTSV = (arr) => {
   const array = [Object.keys(arr[0])].concat(arr)
   return array.map((log) => {
@@ -61,12 +37,12 @@ const parseLogs = (logs) => {
 }
 
 const writeLogs = () => {
-  const logs = readdirSync('cloudwatch-logs/logs-out')
+  const logs = readdirSync('logs-to-tsv/logs-out')
   const parsedLogs = logs.map((logFilePath) => {
-    const logFile = readFileSync('cloudwatch-logs/logs-out/' + logFilePath, 'utf-8')
+    const logFile = readFileSync('logs-to-tsv/logs-out/' + logFilePath, 'utf-8')
     return parseLogs(logFile.split('\t'))
   })
-  writeFileSync('./logsOut.tsv', convertToTSV(parsedLogs.flat()))
+  writeFileSync('logs-to-tsv/logsOut.tsv', convertToTSV(parsedLogs.flat()))
 }
 
 writeLogs()

@@ -5,16 +5,14 @@ const client = new CloudWatchLogsClient({ accessKeyId: 'AKIA5YTHPEF4S7ZQNPX7', s
 
 const start = new Date();
 start.setMonth(start.getMonth() - 3)
-const end = Date.now()
 
 const inputs = []
 for (let i = 0; i < 20; i++) {
-  start.setDate(start.getDate() + 2)
   inputs.push({
-    "endTime": end,
+    "startTime": Date.parse(start),
+    "endTime": start.setDate(start.getDate() + 2),
     "logGroupName": "/aws/elasticbeanstalk/discovery-api-production/var/log/nginx/access.log",
-    "queryString": "fields @message | sort @timestamp desc | filter @message like \"/resources?\" | filter @message not like \"filters\" | limit 10000 | filter message not like \"oclc\"",
-    "startTime": Date.parse(start)
+    "queryString": "fields @message | sort @timestamp desc | filter @message like \"/resources?\" | filter @message not like \"filters\" | limit 10000 | filter @message not like \"oclc\"",
   })
 }
 
@@ -36,7 +34,7 @@ const checkResultStatusAndDownload = async (queryIds, completedQueries = {}, num
               const value = result[0].value.split(' ')
               return `${value[3]}]  ${value[6]}`
             }).join('\t')
-            writeFileSync(`log-${queryId.split('-')[0]}.txt`, queryResults)
+            writeFileSync(`logs-to-tsv/logs-out/log-${queryId.split('-')[0]}.txt`, queryResults)
             completedQueries[queryId] = true
           }
         } catch (e) {
