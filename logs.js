@@ -8,7 +8,7 @@ start.setMonth(start.getMonth() - 3)
 const end = Date.now()
 
 const inputs = []
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 20; i++) {
   start.setDate(start.getDate() + 2)
   inputs.push({
     "endTime": end,
@@ -34,13 +34,14 @@ const checkResultStatusAndDownload = async (queryIds, completedQueries = {}, num
             console.log(`query at index ${i} complete`)
             const queryResults = results.map(result => {
               const value = result[0].value.split(' ')
-              return value[3] + value[5]
+              return `${value[3]}]  ${value[6]}`
             }).join('\t')
-            writeFileSync(`log-${queryId.split('-')[0]}.json`, queryResults)
+            writeFileSync(`log-${queryId.split('-')[0]}.txt`, queryResults)
             completedQueries[queryId] = true
           }
         } catch (e) {
           if (e.__type === "ThrottlingException") console.log('throttle exception')
+          else if (e.__type === 'LimitExceededException') console.log('query limit reached')
           else console.log(e)
         }
       }
