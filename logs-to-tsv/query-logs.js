@@ -1,7 +1,21 @@
 const { CloudWatchLogsClient, StartQueryCommand, GetQueryResultsCommand } = require("@aws-sdk/client-cloudwatch-logs")
 const { writeFileSync } = require('fs')
+const aws = require('aws-sdk')
 
-const client = new CloudWatchLogsClient({ accessKeyId: 'access key id', secretAccessKey: 'secret access key', region: 'us-east-1' });
+const awsInit = (profile) => {
+  // Set aws creds:
+  aws.config.credentials = new aws.SharedIniFileCredentials({
+    profile: profile || 'nypl-digital-dev'
+  })
+
+  // Set aws region:
+  const awsSecurity = { region: 'us-east-1' }
+  aws.config.update(awsSecurity)
+}
+
+awsInit()
+
+const client = new CloudWatchLogsClient();
 
 const start = new Date();
 start.setMonth(start.getMonth() - 3)
