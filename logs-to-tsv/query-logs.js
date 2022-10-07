@@ -1,7 +1,7 @@
 const { CloudWatchLogsClient, StartQueryCommand, GetQueryResultsCommand } = require("@aws-sdk/client-cloudwatch-logs")
 const { writeFileSync } = require('fs')
 
-const client = new CloudWatchLogsClient({ accessKeyId: 'AKIA5YTHPEF4S7ZQNPX7', secretAccessKey: '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', region: 'us-east-1' });
+const client = new CloudWatchLogsClient({ accessKeyId: 'access key id', secretAccessKey: 'secret access key', region: 'us-east-1' });
 
 const start = new Date();
 start.setMonth(start.getMonth() - 3)
