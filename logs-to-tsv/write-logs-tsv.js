@@ -33,7 +33,7 @@ const parseLogs = (logs) => {
       }
     }, {})
   })
-    .filter(request => request)
+    .filter((request) => request)
 }
 
 const writeLogs = () => {
@@ -46,7 +46,6 @@ const writeLogs = () => {
 }
 
 writeLogs()
-
 
 // code for getting filters information
 
