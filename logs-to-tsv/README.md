@@ -4,6 +4,7 @@ This folder holds two script files. query-logs.js queries AWS Cloudwatch for app
 ## How to use
 `npm i`
 `cd logs-to-tsv`
+`mkdir logs-out`
 `nvm use`
 `node query-logs`
 `node write-logs-tsv`
