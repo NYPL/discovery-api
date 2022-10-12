@@ -2,10 +2,10 @@
 This folder holds two script files. query-logs.js queries AWS Cloudwatch for approximately 200,000 GET requests that look like initial searches from the Discovery Front End. It then writes the api requests to logs-to-tsv/logs-out. write-logs-tsv.js takes the files in that directory and writes them to a tsv.
 
 ## How to use
-`npm i`
 `cd logs-to-tsv`
-`mkdir logs-out`
 `nvm use`
+`npm i`
+`mkdir logs-out`
 `node query-logs`
 `node write-logs-tsv`
 The .tsv output will be found at `logs-to-tsv/logs-out.tsv`
