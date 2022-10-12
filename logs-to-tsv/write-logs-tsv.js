@@ -43,6 +43,7 @@ const writeLogs = () => {
     return parseLogs(logFile.split('\t'))
   })
   writeFileSync('./logs-out.tsv', convertToTSV(parsedLogs.flat()))
+  console.log('wrote logs to file')
 }
 
 writeLogs()
