@@ -37,12 +37,12 @@ const parseLogs = (logs) => {
 }
 
 const writeLogs = () => {
-  const logs = readdirSync('logs-to-tsv/logs-out')
+  const logs = readdirSync('./logs-out')
   const parsedLogs = logs.map((logFilePath) => {
-    const logFile = readFileSync('logs-to-tsv/logs-out/' + logFilePath, 'utf-8')
+    const logFile = readFileSync('./logs-out/' + logFilePath, 'utf-8')
     return parseLogs(logFile.split('\t'))
   })
-  writeFileSync('logs-to-tsv/logsOut.tsv', convertToTSV(parsedLogs.flat()))
+  writeFileSync('./logs-out.tsv', convertToTSV(parsedLogs.flat()))
 }
 
 writeLogs()
