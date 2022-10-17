@@ -85,20 +85,30 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
+  /**
+   *  Item route
+   *  Responds with the bib and only the single requested item
+   *
+   *  e.g. discovery/resources/b1234-i9876
+   */
   app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri([a-z]?i[0-9]+)`, function (req, res) {
     var params = { uri: req.params.uri, itemUri: req.params.itemUri }
+
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
       .then((responseBody) => respond(res, responseBody, params))
       .catch((error) => handleError(res, error, params))
   })
 
+  /**
+   * Bib route
+   * Responds with the identified bib
+   *
+   * e.g. discovery/resources/b1234
+   */
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
-    var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items'])
-    var params = { uri: req.params.uri, merge_checkin_card_items: gatheredParams.merge_checkin_card_items === 'true' }
-    if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
-    if (Number.isInteger(parseInt(gatheredParams.items_from))) params.items_from = gatheredParams.items_from
+    const params = Object.assign({}, req.query, { uri: req.params.uri })
 
-    var handler = app.resources.findByUri
+    let handler = app.resources.findByUri
 
     if (req.params.ext === 'annotated-marc') {
       handler = app.resources.annotatedMarc

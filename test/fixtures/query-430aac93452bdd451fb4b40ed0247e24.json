@@ -1,5 +1,5 @@
 {
-  "took": 5,
+  "took": 4,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 15.597922,
+    "max_score": 14.759901,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10011374",
-        "_score": 15.597922,
+        "_score": 14.759901,
         "_source": {
           "extent": [
             "2 v. illus."
@@ -40,7 +40,7 @@
             "sierra-nypl"
           ],
           "publisherLiteral": [
-            "Published for W. Hone, by Hunt and Clarke,"
+            "Published for W. Hone, by Hunt and Clarke"
           ],
           "language": [
             {
@@ -58,7 +58,7 @@
             "nypl:Item"
           ],
           "title": [
-            "The table book,"
+            "The table book"
           ],
           "shelfMark": [
             "JFE 86-498"
@@ -71,6 +71,9 @@
           ],
           "idLccn": [
             "35038534"
+          ],
+          "numElectronicResources": [
+            4
           ],
           "dateStartYear": [
             1827
@@ -100,7 +103,7 @@
           "dateEndYear": [
             1828
           ],
-          "updatedAt": 1636138047697,
+          "updatedAt": 1659462565696,
           "publicationStatement": [
             "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
           ],
@@ -139,13 +142,13 @@
             "AC4 .H65"
           ],
           "numItems": [
-            5
+            4
           ],
           "numAvailable": [
             4
           ],
           "placeOfPublication": [
-            "London,"
+            "London"
           ],
           "issuance": [
             {
@@ -225,6 +228,9 @@
                     ],
                     "enumerationChronology": [
                       "v. 1"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
                     ],
                     "identifier": [
                       "urn:barcode:33433067332548"
@@ -312,6 +318,9 @@
                     ],
                     "enumerationChronology": [
                       "v. 2"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
                     ],
                     "identifier": [
                       "urn:barcode:33433067332555"

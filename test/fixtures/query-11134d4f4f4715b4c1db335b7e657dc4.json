@@ -1,5 +1,5 @@
 {
-  "took": 8,
+  "took": 2,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 15.61646,
+    "max_score": 15.504025,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10001936",
-        "_score": 15.61646,
+        "_score": 15.504025,
         "_source": {
           "extent": [
             "400 p. ;"
@@ -171,67 +171,24 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10001320",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
                     "owner": [
                       {
                         "id": "orgs:1000",
                         "label": "Stephen A. Schwarzman Building"
                       }
                     ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:32",
-                        "label": "google project, book"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "shelfMark": [
-                      "*ONR 84-743"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*ONR 84-743",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433001892276"
-                      }
-                    ],
-                    "physicalLocation": [
-                      "*ONR 84-743"
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
                     ],
                     "identifier": [
                       "urn:barcode:33433001892276"
                     ],
-                    "idBarcode": [
-                      "33433001892276"
+                    "physicalLocation": [
+                      "*ONR 84-743"
                     ],
-                    "requestable": [
-                      true
+                    "shelfMark_sort": "a*ONR 84-000743",
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
                     ],
                     "accessMessage": [
                       {
@@ -239,10 +196,56 @@
                         "label": "Request in advance"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
+                    "status_packed": [
+                      "status:a||Available"
                     ],
-                    "shelfMark_sort": "a*ONR 84-000743"
+                    "uri": "i10001320",
+                    "shelfMark": [
+                      "*ONR 84-743"
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*ONR 84-743"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433001892276"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "idBarcode": [
+                      "33433001892276"
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ]
                   },
                   "sort": [
                     "a*ONR 84-000743"
@@ -255,14 +258,14 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10001936-e",
+                    "shelfMark_sort": "bi10001936-e",
                     "electronicLocator": [
                       {
-                        "url": "http://hdl.handle.net/2027/nyp.33433001892276",
-                        "label": "Full text available via HathiTrust"
+                        "label": "Full text available via HathiTrust",
+                        "url": "http://hdl.handle.net/2027/nyp.33433001892276"
                       }
                     ],
-                    "shelfMark_sort": "bi10001936-e"
+                    "uri": "i10001936-e"
                   },
                   "sort": [
                     "bi10001936-e"

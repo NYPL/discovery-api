@@ -4,10 +4,18 @@ const sinon = require('sinon')
 describe('resources routes', function () {
   let app
   let findByUriStub
+
   before(function () {
     app = require('../app')
-    findByUriStub = sinon.stub(app.resources, 'findByUri').callsFake(() => Promise.resolve({ response: 'response' })
-    )
+  })
+
+  beforeEach(function () {
+    findByUriStub = sinon.stub(app.resources, 'findByUri')
+      .callsFake(() => Promise.resolve({ response: 'response' }))
+  })
+
+  afterEach(() => {
+    app.resources.findByUri.restore()
   })
 
   describe('item id', function () {
@@ -40,14 +48,11 @@ describe('resources routes', function () {
       )
     })
     it('rejects non item ids', function () {
-      app.resources.findByUri.restore()
       const params = { uri: 'pb9900000', itemUri: 'xx2317307' }
-      findByUriStub = sinon.stub(app.resources, 'findByUri').callsFake(() => Promise.resolve({ response: 'response' }))
       return axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${params.uri}-${params.itemUri}`).then(() => {
         // Check that the item route was bypassed and findByUri was called in the next express route
-        sinon.assert.calledWith(findByUriStub, {merge_checkin_card_items: false, uri: `${params.uri}-${params.itemUri}`})
-      }
-      )
+        sinon.assert.calledWith(findByUriStub, { uri: `${params.uri}-${params.itemUri}` })
+      })
     })
   })
 })
