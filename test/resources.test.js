@@ -27,6 +27,7 @@ describe('Resources query', function () {
       expect(params.sort).to.equal(undefined)
       expect(params.filters).to.equal(undefined)
       expect(params.merge_checkin_card_items).to.equal(false)
+      expect(params.include_item_aggregations).to.equal(true)
     })
   })
 

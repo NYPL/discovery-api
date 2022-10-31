@@ -94,7 +94,7 @@ module.exports = function (app) {
 
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
     var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations'])
-    var params = { uri: req.params.uri, merge_checkin_card_items: gatheredParams.merge_checkin_card_items === 'true', include_item_aggregations: gatheredParams.include_item_aggregations === 'true' }
+    var params = { uri: req.params.uri, merge_checkin_card_items: gatheredParams.merge_checkin_card_items === 'true', include_item_aggregations: gatheredParams.include_item_aggregations !== 'false' }
 
     if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
     if (Number.isInteger(parseInt(gatheredParams.items_from))) params.items_from = gatheredParams.items_from
