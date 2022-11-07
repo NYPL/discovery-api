@@ -2,6 +2,7 @@ const request = require('request-promise')
 const assert = require('assert')
 
 const fixtures = require('./fixtures')
+const { expect } = require('chai')
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
@@ -60,6 +61,8 @@ describe('Test Resources responses', function () {
 
         assert.equal(doc.createdYear, 1974)
 
+        assert(doc.itemAggregations)
+
         done()
       })
     })
@@ -77,6 +80,12 @@ describe('Test Resources responses', function () {
         expect(doc.items.length).to.equal(1)
 
         expect(doc.items[0].uri).to.equal('i32086897')
+
+        expect(doc.hasItemVolumes).to.equal(true)
+
+        expect(doc.hasItemDates).to.equal(true)
+
+        expect(doc.itemAggregations)
         done()
       })
     })
