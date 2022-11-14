@@ -1,5 +1,5 @@
 {
-  "took": 26,
+  "took": 25,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 29.852142,
+    "max_score": 29.156029,
     "hits": [
       {
         "_index": "resources-2020-05-08",
         "_type": "resource",
         "_id": "b21088122",
-        "_score": 29.852142,
+        "_score": 29.156029,
         "_source": {
           "note": [
             {
@@ -35,19 +35,25 @@
             "No. 153 (June 2, 2005)-"
           ],
           "subjectLiteral_exploded": [
-            "Kampala (Uganda)",
-            "Kampala (Uganda) -- Newspapers",
             "Uganda",
-            "Uganda -- Newspapers"
+            "Uganda -- Newspapers",
+            "Kampala (Uganda)",
+            "Kampala (Uganda) -- Newspapers"
+          ],
+          "numItemDatesParsed": [
+            183
           ],
           "publisherLiteral": [
-            "Monitor Publications,"
+            "Monitor Publications"
           ],
           "language": [
             {
               "id": "lang:eng",
               "label": "English"
             }
+          ],
+          "numItemsTotal": [
+            183
           ],
           "dateEndString": [
             "9999"
@@ -64,11 +70,17 @@
           "shelfMark": [
             "Sc News Daily monitor (Kampala, Uganda)"
           ],
+          "numItemVolumesParsed": [
+            165
+          ],
           "createdString": [
             "2005"
           ],
           "idLccn": [
             "  2005327157"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             2005
@@ -87,9 +99,20 @@
               "value": "  2005327157"
             },
             {
+              "type": "nypl:Oclc",
+              "value": "61395020"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "61395020"
+            },
+            {
               "type": "bf:Identifier",
               "value": "(OCoLC)61395020"
             }
+          ],
+          "idOclc": [
+            "61395020"
           ],
           "uniformTitle": [
             "Daily monitor (Kampala, Uganda)"
@@ -100,7 +123,52 @@
           "holdings": [
             {
               "holdingStatement": [
-                "no.  (2018-09) - no. 18 (2018-01-19); no. 20 (2018-01-21) - no. 81 (2018-03-23); no. 83 (2018-03-25) - no. 88 (2018-03-30); no. 309 (2018-11-06) - no. 309 (2018-11-06); no. 181 (2017-07-01) - no. 181 (2017-07-01); no. 183 (2017-07-03) - no. 188 (2017-07-08); no. 190 (2017-07-10) - no. 195 (2017-07-15); no. 197 (2017-07-17) - no. 199 (2017-07-19); no. 201 (2017-07-21) - no. 202 (2017-07-22); no. 204 (2017-07-24) - no. 209 (2017-07-29); no. 211 (2017-07-31) - no. 216 (2017-08-05); no. 218 (2017-08-07) - no. 223 (2018-08-12); no. 225 (2018-08-14) - no. 230 (2018-08-19); no. 232 (2018-08-21) - no. 237 (2018-08-26); no. 239 (2018-08-28) - no. 243 (2016-09-28); no. 243 (2018-09-01) - no. 358 (2017-12-25); no. 360 (2017-12-27) - no. 365 (2018-01-01)"
+                "152(Jun 1, 2005)-272(Sep 29, 2018)-",
+                "2018-10"
+              ],
+              "checkInBoxes": [
+                {
+                  "coverage": "Sep. 2020",
+                  "position": "1",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "Sc News Daily monitor (Kampala, Uganda)"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "Oct. 2020",
+                  "position": "2",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "Sc News Daily monitor (Kampala, Uganda)"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "Nov. 2020",
+                  "position": "3",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "Sc News Daily monitor (Kampala, Uganda)"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "Dec. 2020",
+                  "position": "4",
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "Sc News Daily monitor (Kampala, Uganda)"
+                  ],
+                  "status": "Expected"
+                }
+              ],
+              "notes": [
+                "Incomplete"
+              ],
+              "format": [
+                "PRINT"
               ],
               "location": [
                 {
@@ -114,17 +182,21 @@
               ]
             }
           ],
-          "updatedAt": 1628041779699,
+          "updatedAt": 1667851377934,
           "publicationStatement": [
             "Kampala : Monitor Publications, 2005-"
           ],
           "identifier": [
             "urn:bnum:21088122",
             "urn:lccn:  2005327157",
+            "urn:oclc:61395020",
             "urn:undefined:(OCoLC)61395020"
           ],
           "genreForm": [
             "Newspapers."
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -148,8 +220,8 @@
             }
           ],
           "subjectLiteral": [
-            "Kampala (Uganda) -- Newspapers.",
             "Uganda -- Newspapers.",
+            "Kampala (Uganda) -- Newspapers.",
             "Uganda."
           ],
           "titleDisplay": [
@@ -157,13 +229,13 @@
           ],
           "uri": "b21088122",
           "numItems": [
-            136
+            183
           ],
           "numAvailable": [
-            131
+            182
           ],
           "placeOfPublication": [
-            "Kampala :"
+            "Kampala"
           ],
           "issuance": [
             {
@@ -179,14 +251,14 @@
           "items": {
             "hits": {
               "total": 1,
-              "max_score": 15.023023,
+              "max_score": 14.731405,
               "hits": [
                 {
                   "_nested": {
                     "field": "items",
-                    "offset": 135
+                    "offset": 182
                   },
-                  "_score": 15.023023,
+                  "_score": 14.731405,
                   "_source": {
                     "uri": "i32086897",
                     "status": [
@@ -238,11 +310,14 @@
                         "value": "33433093003253"
                       }
                     ],
+                    "enumerationChronology": [
+                      "no. 364-294 (Oct. 1-31, 2013)"
+                    ],
                     "physicalLocation": [
                       "Sc News Daily monitor (Kampala, Uganda)"
                     ],
-                    "enumerationChronology": [
-                      "no. 364-294 (Oct. 1-31, 2013)"
+                    "recapCustomerCode": [
+                      "NS"
                     ],
                     "identifier": [
                       "urn:barcode:33433093003253"
@@ -261,6 +336,27 @@
                     ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
+                    ],
+                    "volumeRange": [
+                      {
+                        "gte": 294,
+                        "lte": 364
+                      }
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "2013-10-01",
+                        "lte": "2013-10-31"
+                      }
+                    ],
+                    "enumerationChronology_sort": [
+                      "       294-2013-10-01"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
                     ],
                     "shelfMark_sort": "aSc News Daily monitor (Kampala, Uganda) no. 000364-294 (Oct. 1-31, 2013)"
                   }

@@ -51,8 +51,9 @@ describe('resources routes', function () {
       const params = { uri: 'pb9900000', itemUri: 'xx2317307' }
       return axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${params.uri}-${params.itemUri}`).then(() => {
         // Check that the item route was bypassed and findByUri was called in the next express route
-        sinon.assert.calledWith(findByUriStub, { uri: `${params.uri}-${params.itemUri}` })
-      })
+        sinon.assert.calledWith(findByUriStub, { include_item_aggregations: true, merge_checkin_card_items: false, uri: `${params.uri}-${params.itemUri}` })
+      }
+      )
     })
   })
 })
