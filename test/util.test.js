@@ -178,7 +178,7 @@ describe('Util', function () {
     it('parses a list of strings', () => {
       expect(util.parseParam('1', { type: 'string-list' })).to.deep.equal(['1'])
       expect(util.parseParam('1,2', { type: 'string-list' })).to.deep.equal(['1', '2'])
-      expect(util.parseParam('foo, bar', { type: 'string-list' })).to.deep.equal(['foo', 'bar'])
+      expect(util.parseParam('foo,bar', { type: 'string-list' })).to.deep.equal(['foo', 'bar'])
     })
   })
 })
