@@ -332,4 +332,97 @@ describe('Resources query', function () {
       return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
     })
   })
+
+  describe('esRangeValue', () => {
+    it('should handle a range with two values', () => {
+      expect(resourcesPrivMethods.esRangeValue([123, 456])).to.deep.equal({
+        gte: 123,
+        lte: 456
+      })
+    })
+
+    it('should handle a range with one value', () => {
+      expect(resourcesPrivMethods.esRangeValue([123])).to.deep.equal({
+        gte: 123,
+        lte: 123
+      })
+    })
+  })
+
+  describe('itemsFilterContext', () => {
+    it('should return an empty object in case of no query', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({})).to.deep.equal({})
+    })
+
+    it('should return an empty object in case there are no filters', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: {} })).to.deep.equal({})
+    })
+
+    it('should return filters for volume in case there is a volume', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: { volume: [1, 2] } }))
+       .to.deep.equal({ filter: [{ range: { 'items.volumeRange': { gte: 1, lte: 2 } } }] })
+    })
+
+    it('should return filters for date in case there is a date', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: { date: [1, 2] } }))
+        .to.deep.equal({ filter: [{ range: { 'items.dateRange': { gte: 1, lte: 2 } } }] })
+    })
+
+    it('should return filters for format in case there is a format', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: { format: ['text', 'microfilm', 'AV'] } }))
+        .to.deep.equal({ filter: [{ terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } }] })
+    })
+
+    it('should return filters for location in case there is a location', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] } }))
+        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
+    })
+
+    it('should return filters for status in case there is a status', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: { status: ['Available', 'Unavailable', 'In Process'] } }))
+        .to.deep.equal({ filter: [{ terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }] })
+    })
+
+    it('should combine all filters in case of multiple filters', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({
+        query: {
+          volume: [1, 2],
+          date: [3, 4],
+          format: ['text', 'microfilm', 'AV'],
+          location: ['SASB', 'LPA', 'Schomburg'],
+          status: ['Available', 'Unavailable', 'In Process']
+        }
+      })).to.deep.equal({
+        filter: [
+          { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
+          { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
+          { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
+          { terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } },
+          { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
+        ]
+      })
+    })
+
+    it('should ignore all other parameters', () => {
+      expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] }, something: 'else' }))
+        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
+    })
+  })
+
+  describe('itemsQueryContext', () => {
+    it('should match all when merge_checkin_card_items is truthy', () => {
+      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
+        .to.deep.equal({ must: { match_all: {} } })
+    })
+
+    it('should ignore check in card items when merge_checkin_card_items is not set', () => {
+      expect(resourcesPrivMethods.itemsQueryContext({}))
+        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } })
+    })
+
+    it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
+      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
+        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } })
+    })
+  })
 })
