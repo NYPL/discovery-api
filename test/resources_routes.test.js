@@ -18,6 +18,31 @@ describe('resources routes', function () {
     app.resources.findByUri.restore()
   })
 
+  describe('bib id with item filters', function () {
+    it('passes filters to handler', function () {
+      const params = {
+        uri: 'b1234'
+      }
+
+      const query = 'item_date=1-2&item_volume=3-4&item_format=text,microfilm&item_location=SASB,LPA&item_status=here'
+
+      const expectedParams = {
+        uri: params.uri,
+        item_date: '1-2',
+        item_volume: '3-4',
+        item_format: 'text,microfilm',
+        item_location: 'SASB,LPA',
+        item_status: 'here',
+        include_item_aggregations: true,
+        merge_checkin_card_items: false
+      }
+
+      return axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${params.uri}?${query}`).then(() => {
+        sinon.assert.calledWith(findByUriStub, expectedParams)
+      })
+    })
+  })
+
   describe('item id', function () {
     it('recognizes harvard item ids', function () {
       const params = { uri: 'hb990000049180203941', itemUri: 'hi231730706390003941' }

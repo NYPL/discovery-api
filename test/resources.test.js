@@ -333,6 +333,77 @@ describe('Resources query', function () {
     })
   })
 
+  describe('findByUri with filters', () => {
+    let request
+    before(() => {
+      sinon.stub(app.esClient, 'search').callsFake((req) => {
+        request = req
+        return Promise.resolve(fs.readFileSync('./test/fixtures/es-connection-error.json', 'utf8'))
+      })
+    })
+
+    after(() => {
+      app.esClient.search.restore()
+    })
+
+    it('passes filters to esClient', () => {
+      const call = () => app.resources.findByUri({
+        uri: 'b123',
+        item_volume: '1-2',
+        item_date: '3-4',
+        item_format: 'text,microfilm',
+        item_location: 'SASB,LPA',
+        item_status: 'here,there'
+      })
+      call()
+      expect(request.body.query.bool.filter[0].bool.should[1].nested.query.bool.filter)
+        .to.deep.equal(
+        [
+          {
+            'range': {
+              'items.volumeRange': {
+                'gte': 1,
+                'lte': 2
+              }
+            }
+          },
+          {
+            'range': {
+              'items.dateRange': {
+                'gte': 3,
+                'lte': 4
+              }
+            }
+          },
+          {
+            'terms': {
+              'items.formatLiteral': [
+                'text',
+                'microfilm'
+              ]
+            }
+          },
+          {
+            'terms': {
+              'items.holdingLocation.id': [
+                'SASB',
+                'LPA'
+              ]
+            }
+          },
+          {
+            'terms': {
+              'items.status.id': [
+                'here',
+                'there'
+              ]
+            }
+          }
+        ]
+        )
+    })
+  })
+
   describe('esRangeValue', () => {
     it('should handle a range with two values', () => {
       expect(resourcesPrivMethods.esRangeValue([123, 456])).to.deep.equal({
@@ -423,6 +494,78 @@ describe('Resources query', function () {
     it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
         .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } })
+    })
+  })
+
+  describe('addInnerHits', () => {
+    it('should include query for items', () => {
+      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2 }))
+        .to.deep.equal({
+          query: {
+            bool: {
+              filter: [
+                {
+                  bool: {
+                    should: [
+                      { term: { numItems: 0 } },
+                      {
+                        nested: {
+                          path: 'items',
+                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } } },
+                          inner_hits: {
+                            sort: [{ 'items.shelfMark_sort': 'asc' }],
+                            size: 1,
+                            from: 2
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        })
+    })
+
+    it('should include filters for items', () => {
+      expect(resourcesPrivMethods.addInnerHits(
+        { query: { bool: {} } },
+        { size: 1, from: 2, query: { volume: [1, 2], location: ['SASB', 'LPA'], other: 'filter' } }
+      )).to.deep.equal({
+        query: {
+          bool: {
+            filter: [
+              {
+                bool: {
+                  should: [
+                    { term: { numItems: 0 } },
+                    {
+                      nested: {
+                        path: 'items',
+                        query: {
+                          bool: {
+                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } },
+                            filter: [
+                              { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
+                              { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
+                            ]
+                          }
+                        },
+                        inner_hits: {
+                          sort: [{ 'items.shelfMark_sort': 'asc' }],
+                          size: 1,
+                          from: 2
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      })
     })
   })
 })
