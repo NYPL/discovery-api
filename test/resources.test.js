@@ -488,12 +488,12 @@ describe('Resources query', function () {
 
     it('should ignore check in card items when merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } })
+        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
     })
 
     it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } })
+        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
     })
   })
 
@@ -511,7 +511,7 @@ describe('Resources query', function () {
                       {
                         nested: {
                           path: 'items',
-                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } } } },
+                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
                           inner_hits: {
                             sort: [{ 'items.shelfMark_sort': 'asc' }],
                             size: 1,
@@ -545,7 +545,7 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem ' } },
+                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } },
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }

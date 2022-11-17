@@ -1,0 +1,584 @@
+{
+  "took": 7,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 14.917993,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10011374",
+        "_score": 14.917993,
+        "_source": {
+          "extent": [
+            "2 v. illus."
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 1 has added t.p.: The Table book ... Every Saturday.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Originally published weekly, from Jan. 1827 to Jan. 1828 (55 nos.-including indexes)",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Library's copy lacks added t.p.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "publisherLiteral": [
+            "Published for W. Hone, by Hunt and Clarke"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "dateEndString": [
+            "1828"
+          ],
+          "createdYear": [
+            1827
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The table book"
+          ],
+          "shelfMark": [
+            "JFE 86-498"
+          ],
+          "creatorLiteral": [
+            "Hone, William, 1780-1842."
+          ],
+          "createdString": [
+            "1827"
+          ],
+          "idLccn": [
+            "35038534"
+          ],
+          "numElectronicResources": [
+            4
+          ],
+          "dateStartYear": [
+            1827
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JFE 86-498"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10011374"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "35038534"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ01213343"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0211346"
+            }
+          ],
+          "dateEndYear": [
+            1828
+          ],
+          "updatedAt": 1659462565696,
+          "publicationStatement": [
+            "London, Published for W. Hone, by Hunt and Clarke, 1827-1828."
+          ],
+          "identifier": [
+            "urn:bnum:10011374",
+            "urn:lccn:35038534",
+            "urn:undefined:NNSZ01213343",
+            "urn:undefined:(WaOLN)nyp0211346"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1827"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "The table book, by William Hone."
+          ],
+          "uri": "b10011374",
+          "lccClassification": [
+            "AC4 .H65"
+          ],
+          "numItems": [
+            4
+          ],
+          "numAvailable": [
+            4
+          ],
+          "placeOfPublication": [
+            "London"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 5,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10005488",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "shelfMark": [
+                      "*AY (Hone, W. Table book) v. 1"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*AY (Hone, W. Table book) v. 1",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433067332548"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "*AY (Hone, W. Table book)"
+                    ],
+                    "enumerationChronology": [
+                      "v. 1"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433067332548"
+                    ],
+                    "idBarcode": [
+                      "33433067332548"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "a*AY (Hone, W. Table book) v. 000001"
+                  },
+                  "sort": [
+                    "a*AY (Hone, W. Table book) v. 000001"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i14747243",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "shelfMark": [
+                      "*AY (Hone, W. Table book) v. 2"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*AY (Hone, W. Table book) v. 2",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433067332555"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "*AY (Hone, W. Table book)"
+                    ],
+                    "enumerationChronology": [
+                      "v. 2"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433067332555"
+                    ],
+                    "idBarcode": [
+                      "33433067332555"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "a*AY (Hone, W. Table book) v. 000002"
+                  },
+                  "sort": [
+                    "a*AY (Hone, W. Table book) v. 000002"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10005487",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "JFE 86-498 v. 1"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "JFE 86-498 v. 1",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433057532081"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "JFE 86-498"
+                    ],
+                    "enumerationChronology": [
+                      "v. 1"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433057532081"
+                    ],
+                    "idBarcode": [
+                      "33433057532081"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aJFE 86-498 v. 000001"
+                  },
+                  "sort": [
+                    "aJFE 86-498 v. 000001"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 3
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i13785802",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:32",
+                        "label": "google project, book"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "JFE 86-498 v. 2"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "JFE 86-498 v. 2",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433057532339"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "JFE 86-498"
+                    ],
+                    "enumerationChronology": [
+                      "v. 2"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433057532339"
+                    ],
+                    "idBarcode": [
+                      "33433057532339"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "shelfMark_sort": "aJFE 86-498 v. 000002"
+                  },
+                  "sort": [
+                    "aJFE 86-498 v. 000002"
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 4
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10011374-e",
+                    "electronicLocator": [
+                      {
+                        "url": "http://hdl.handle.net/2027/nyp.33433057532081",
+                        "label": "Full text available via HathiTrust--v. 1"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/nyp.33433057532339",
+                        "label": "Full text available via HathiTrust--v. 2"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/nyp.33433067332548",
+                        "label": "Full text available via HathiTrust--v. 1"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/nyp.33433067332555",
+                        "label": "Full text available via HathiTrust--v. 2"
+                      }
+                    ],
+                    "shelfMark_sort": "bi10011374-e"
+                  },
+                  "sort": [
+                    "bi10011374-e"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 5,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "loc:mal92||Schwarzman Building M2 - General Research Room 315",
+            "doc_count": 2
+          },
+          {
+            "key": "loc:rc2ma||Offsite",
+            "doc_count": 2
+          }
+        ]
+      }
+    },
+    "item_format": {
+      "doc_count": 5,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_status": {
+      "doc_count": 5,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 4
+          }
+        ]
+      }
+    }
+  }
+}
