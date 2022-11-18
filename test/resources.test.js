@@ -356,7 +356,7 @@ describe('Resources query', function () {
         item_status: 'here,there'
       })
       call()
-      expect(request.body.query.bool.filter[0].bool.should[1].nested.query.bool.filter)
+      expect(request.body.query.bool.filter[0].bool.should[0].nested.query.bool.filter)
         .to.deep.equal(
         [
           {
@@ -507,7 +507,6 @@ describe('Resources query', function () {
                 {
                   bool: {
                     should: [
-                      { term: { numItems: 0 } },
                       {
                         nested: {
                           path: 'items',
@@ -518,7 +517,8 @@ describe('Resources query', function () {
                             from: 2
                           }
                         }
-                      }
+                      },
+                      { match_all: { } }
                     ]
                   }
                 }
@@ -539,7 +539,6 @@ describe('Resources query', function () {
               {
                 bool: {
                   should: [
-                    { term: { numItems: 0 } },
                     {
                       nested: {
                         path: 'items',
@@ -558,7 +557,8 @@ describe('Resources query', function () {
                           from: 2
                         }
                       }
-                    }
+                    },
+                    { match_all: { } }
                   ]
                 }
               }

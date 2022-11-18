@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 const { ResourceSerializer } = require('../lib/jsonld_serializers')
-const esResponse = require('./fixtures/query-0a396ca30306a6e0a3f578cb41dcaae1.json')
+const esResponse = require('./fixtures/item-filter-aggregations.json')
 describe('Resource Serializer', () => {
   describe('.formatItemFilterAggregations()', () => {
     let aggregationsFormatted
