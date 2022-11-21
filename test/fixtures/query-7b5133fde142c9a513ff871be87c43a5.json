@@ -1,5 +1,5 @@
 {
-  "took": 7,
+  "took": 20,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 14.462061,
+    "max_score": 14.116943,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b18932917",
-        "_score": 14.462061,
+        "_score": 14.116943,
         "_source": {
           "extent": [
             "52 linear ft., 127 boxes"
@@ -158,6 +158,9 @@
           "createdString": [
             "1893"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
             "Jones, Thomas Jesse, 1873-1950.",
             "Stokes, Anson Phelps, 1874-1958.",
@@ -195,7 +198,7 @@
           "dateEndYear": [
             1970
           ],
-          "updatedAt": 1652878555668,
+          "updatedAt": 1663684576550,
           "identifier": [
             "urn:bnum:18932917",
             "urn:oclc:715462601",
@@ -296,7 +299,7 @@
             128
           ],
           "numAvailable": [
-            124
+            125
           ],
           "issuance": [
             {
@@ -370,6 +373,9 @@
                     ],
                     "enumerationChronology": [
                       "Box 1"
+                    ],
+                    "recapCustomerCode": [
+                      "NS"
                     ],
                     "identifier": [
                       "urn:barcode:33433076133762"
@@ -449,6 +455,9 @@
                     "enumerationChronology": [
                       "Box 2"
                     ],
+                    "recapCustomerCode": [
+                      "NS"
+                    ],
                     "identifier": [
                       "urn:barcode:33433076133770"
                     ],
@@ -527,6 +536,9 @@
                     "enumerationChronology": [
                       "Box 3"
                     ],
+                    "recapCustomerCode": [
+                      "NS"
+                    ],
                     "identifier": [
                       "urn:barcode:33433076133788"
                     ],
@@ -557,5 +569,53 @@
         }
       }
     ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 128,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "loc:rccd8||Offsite",
+            "doc_count": 127
+          },
+          {
+            "key": "loc:scdd2||Schomburg Center - Manuscripts & Archives",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_format": {
+      "doc_count": 128,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_status": {
+      "doc_count": 128,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 125
+          },
+          {
+            "key": "status:co||Loaned",
+            "doc_count": 2
+          },
+          {
+            "key": "status:t||In transit",
+            "doc_count": 1
+          }
+        ]
+      }
+    }
   }
 }
