@@ -4,10 +4,43 @@ const sinon = require('sinon')
 describe('resources routes', function () {
   let app
   let findByUriStub
+
   before(function () {
     app = require('../app')
-    findByUriStub = sinon.stub(app.resources, 'findByUri').callsFake(() => Promise.resolve({ response: 'response' })
-    )
+  })
+
+  beforeEach(function () {
+    findByUriStub = sinon.stub(app.resources, 'findByUri')
+      .callsFake(() => Promise.resolve({ response: 'response' }))
+  })
+
+  afterEach(() => {
+    app.resources.findByUri.restore()
+  })
+
+  describe('bib id with item filters', function () {
+    it('passes filters to handler', function () {
+      const params = {
+        uri: 'b1234'
+      }
+
+      const query = 'item_date=1-2&item_volume=3-4&item_format=text,microfilm&item_location=SASB,LPA&item_status=here'
+
+      const expectedParams = {
+        uri: params.uri,
+        item_date: '1-2',
+        item_volume: '3-4',
+        item_format: 'text,microfilm',
+        item_location: 'SASB,LPA',
+        item_status: 'here',
+        include_item_aggregations: true,
+        merge_checkin_card_items: false
+      }
+
+      return axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${params.uri}?${query}`).then(() => {
+        sinon.assert.calledWith(findByUriStub, expectedParams)
+      })
+    })
   })
 
   describe('item id', function () {
@@ -40,9 +73,7 @@ describe('resources routes', function () {
       )
     })
     it('rejects non item ids', function () {
-      app.resources.findByUri.restore()
       const params = { uri: 'pb9900000', itemUri: 'xx2317307' }
-      findByUriStub = sinon.stub(app.resources, 'findByUri').callsFake(() => Promise.resolve({ response: 'response' }))
       return axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${params.uri}-${params.itemUri}`).then(() => {
         // Check that the item route was bypassed and findByUri was called in the next express route
         sinon.assert.calledWith(findByUriStub, { include_item_aggregations: true, merge_checkin_card_items: false, uri: `${params.uri}-${params.itemUri}` })
