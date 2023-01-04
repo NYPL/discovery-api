@@ -301,6 +301,58 @@ exports.fakeElasticSearchResponseNyplItem = () => {
                 'suppressed': [
                   false
                 ]
+              },
+              {
+                'holdingLocation': [
+                  {
+                    'label': 'OFFSITE - Request in Advance (unrequestable location)',
+                    'id': 'loc:rcpd8'
+                  }
+                ],
+                'status_packed': [
+                  'status:a||Available'
+                ],
+                'owner': [
+                  {
+                    'id': 'orgs:1000',
+                    'label': 'Stephen A. Schwarzman Building'
+                  }
+                ],
+                'uri': 'i102836649-unrequestable',
+                'recapCustomerCode': ['NP'],
+                'accessMessage_packed': [
+                  'accessMessage:2||ADV REQUEST'
+                ],
+                'accessMessage': [
+                  {
+                    'id': 'accessMessage:2',
+                    'label': 'ADV REQUEST'
+                  }
+                ],
+                'status': [
+                  {
+                    'id': 'status:a',
+                    'label': 'Available'
+                  }
+                ],
+                'owner_packed': [
+                  'orgs:1000||Stephen A. Schwarzman Building'
+                ],
+                'requestable': [
+                  false
+                ],
+                'identifier': [
+                  'urn:barcode:10005468369'
+                ],
+                'holdingLocation_packed': [
+                  'loc:rcpd8||OFFSITE - Request in Advance'
+                ],
+                'shelfMark': [
+                  '*OFC 90-2649 2'
+                ],
+                'suppressed': [
+                  false
+                ]
               }
             ],
             'message': 'ResourceSerializer#serialize',
