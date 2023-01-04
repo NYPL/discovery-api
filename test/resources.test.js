@@ -415,7 +415,7 @@ describe('Resources query', function () {
     it('should handle a range with one value', () => {
       expect(resourcesPrivMethods.esRangeValue([123])).to.deep.equal({
         gte: 123,
-        lte: 123
+        lt: 124
       })
     })
   })
@@ -512,7 +512,7 @@ describe('Resources query', function () {
                           path: 'items',
                           query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
                           inner_hits: {
-                            sort: [{ 'items.shelfMark_sort': 'asc' }],
+                            sort: [{ 'items.enumerationChronology_sort': 'asc' }],
                             size: 1,
                             from: 2
                           }
@@ -552,7 +552,7 @@ describe('Resources query', function () {
                           }
                         },
                         inner_hits: {
-                          sort: [{ 'items.shelfMark_sort': 'asc' }],
+                          sort: [{ 'items.enumerationChronology_sort': 'asc' }],
                           size: 1,
                           from: 2
                         }
