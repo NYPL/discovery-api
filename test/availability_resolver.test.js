@@ -182,7 +182,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks ReCAP items that are SCSB Available items as physRequestable', function () {
+  it('marks ReCAP items that are in requestable locations and have delivery locations as physRequestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -193,12 +193,28 @@ describe('Response with updated availability', function () {
       .then((response) => {
         var items = response.hits.hits[0]._source.items
 
-        // A ReCAP item with SCSB status 'Available' should be
-        // made physRequestable:
         var availableItem = items.find((item) => {
           return item.uri === 'i10283664'
         })
         expect(availableItem.physRequestable).to.equal(true)
+      })
+  })
+
+  it('marks ReCAP items that are in unrequestable locations as not physRequestable', function () {
+    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
+    availabilityResolver.restClient = new FakeRestClient()
+
+    return availabilityResolver.responseWithUpdatedAvailability()
+      .then((modifedResponse) => {
+        return modifedResponse
+      })
+      .then((response) => {
+        var items = response.hits.hits[0]._source.items
+
+        var availableItem = items.find((item) => {
+          return item.uri === 'i102836649-unrequestable'
+        })
+        expect(availableItem.physRequestable).to.equal(false)
       })
   })
 
