@@ -67,30 +67,26 @@ describe('Test Resources responses', function () {
       })
     })
 
-    // TODO: find a bib-item pair in production for the following test:
-    // it('Resource data for b21088122-i32086897 are what we expect', function (done) {
-    //   request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b21088122-i32086897`, function (err, response, body) {
-    //     if (err) throw err
-    //
-    //     assert.equal(200, response.statusCode)
-    //
-    //     var doc = JSON.parse(body)
-    //     console.log('items: ', doc.items.length, doc.hasItemVolumes, doc.hasItemDates, doc.itemAggregations)
-    //
-    //     expect(doc.items).to.be.a('array')
-    //
-    //     expect(doc.items.length).to.equal(1)
-    //
-    //     expect(doc.items[0].uri).to.equal('i32086897')
-    //
-    //     expect(doc.hasItemVolumes).to.equal(true)
-    //
-    //     expect(doc.hasItemDates).to.equal(true)
-    //
-    //     expect(doc.itemAggregations)
-    //     done()
-    //   })
-    // })
+    it('Resource data for b21088122-i32086897 are what we expect', function (done) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b11984689-i29976055`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        const doc = JSON.parse(body)
+
+        expect(doc.items).to.be.a('array')
+
+        expect(doc.items.length).to.equal(1)
+        expect(doc.items[0].uri).to.equal('i29976055')
+
+        expect(doc.hasItemVolumes).to.equal(true)
+        expect(doc.hasItemDates).to.equal(true)
+
+        expect(doc.itemAggregations)
+        done()
+      })
+    })
 
     it('extracts identifiers in ENTITY style if indexed as entity', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374`, function (err, response, body) {
