@@ -512,7 +512,7 @@ describe('Resources query', function () {
                           path: 'items',
                           query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
                           inner_hits: {
-                            sort: [{ 'items.enumerationChronology_sort': 'asc' }],
+                            sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                             size: 1,
                             from: 2
                           }
@@ -552,7 +552,7 @@ describe('Resources query', function () {
                           }
                         },
                         inner_hits: {
-                          sort: [{ 'items.enumerationChronology_sort': 'asc' }],
+                          sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                           size: 1,
                           from: 2
                         }
