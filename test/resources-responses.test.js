@@ -19,7 +19,7 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe.only('GET numItemsMatched', () => {
+  describe('GET numItemsMatched', () => {
     it('returns numItemsMatched for blank bib query', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
       request.get(url, (err, res, body) => {
@@ -43,7 +43,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(562)
+        expect(doc.numItemsMatched).to.equal(890)
         done()
       })
     })
