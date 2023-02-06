@@ -19,6 +19,25 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
+  describe.only('GET numItemsMatched', function () {
+    it('returns numItemsMatched for blank bib query', () => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
+      return request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(779)
+      })
+    })
+    it('returns numItemsMatched for blank bib query merge check in cards', () => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?item_location=loc:mal82'
+      return request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(779)
+      })
+    })
+  })
+
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.id} has correct type ${spec.type}`, function (done) {
@@ -440,9 +459,7 @@ describe('Test Resources responses', function () {
           nextUrl += `&filters[dateBefore]=${dates[1]}`
           return request.get(nextUrl, function (err, response, body) {
             if (err) throw err
-
             var doc = JSON.parse(body)
-
             // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
