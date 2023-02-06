@@ -19,21 +19,41 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe.only('GET numItemsMatched', function () {
-    it('returns numItemsMatched for blank bib query', () => {
+  describe.only('GET numItemsMatched', () => {
+    it('returns numItemsMatched for blank bib query', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
-      return request.get(url, (err, res, body) => {
+      request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(779)
+        expect(doc.numItemsMatched).to.equal(694)
+        done()
       })
     })
-    it('returns numItemsMatched for blank bib query merge check in cards', () => {
+    it('returns numItemsMatched for bib with location query', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?item_location=loc:mal82'
-      return request.get(url, (err, res, body) => {
+      request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(779)
+        expect(doc.numItemsMatched).to.equal(562)
+        done()
+      })
+    })
+    it('returns numItemsMatched for blank bib query merge check in cards', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=true'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(562)
+        done()
+      })
+    })
+    it('returns numItemsMatched for query merge check in cards and status:na', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=true&item_status=status:na'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(7)
+        done()
       })
     })
   })
