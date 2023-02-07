@@ -56,6 +56,15 @@ describe('Test Resources responses', function () {
         done()
       })
     })
+    it('does nothing to a search query with no hits', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources?q=fladeedle'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(undefined)
+        done()
+      })
+    })
   })
 
   describe('GET sample resources', function () {
