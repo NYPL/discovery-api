@@ -19,6 +19,54 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
+  describe('GET numItemsMatched', () => {
+    it('returns numItemsMatched for blank bib query', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(694)
+        done()
+      })
+    })
+    it('returns numItemsMatched for bib with location query', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?item_location=loc:mal82'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(562)
+        done()
+      })
+    })
+    it('returns numItemsMatched for blank bib query merge check in cards', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=true'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(890)
+        done()
+      })
+    })
+    it('returns numItemsMatched for query merge check in cards and status:na', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=true&item_status=status:na'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(7)
+        done()
+      })
+    })
+    it('does nothing to a search query with no hits', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources?q=fladeedle'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(undefined)
+        done()
+      })
+    })
+  })
+
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.id} has correct type ${spec.type}`, function (done) {
@@ -440,9 +488,7 @@ describe('Test Resources responses', function () {
           nextUrl += `&filters[dateBefore]=${dates[1]}`
           return request.get(nextUrl, function (err, response, body) {
             if (err) throw err
-
             var doc = JSON.parse(body)
-
             // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
