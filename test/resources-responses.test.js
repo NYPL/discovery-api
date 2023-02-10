@@ -65,6 +65,54 @@ describe('Test Resources responses', function () {
         done()
       })
     })
+    describe('electronic resources changes count', () => {
+      it('decrements - e resources, no item filters', (done) => {
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001'
+        console.log(url)
+        request.get(url, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          expect(doc.numItemsMatched).to.equal(4)
+          done()
+        })
+      })
+      it('decrements - item_format is same as bib material type', (done) => {
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text'
+        request.get(url, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          expect(doc.numItemsMatched).to.equal(4)
+          done()
+        })
+      })
+      it('item_format is same as bib material type, multiple filters', (done) => {
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text&item_location=loc:mal92'
+        request.get(url, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          expect(doc.numItemsMatched).to.equal(1)
+          done()
+        })
+      })
+      it('item_format is same as bib material type, multiple format filters', (done) => {
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text,anotherformat'
+        request.get(url, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          expect(doc.numItemsMatched).to.equal(4)
+          done()
+        })
+      })
+      it('item_format is same as bib material type, multiple format filters', (done) => {
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text,anotherformat'
+        request.get(url, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          expect(doc.numItemsMatched).to.equal(4)
+          done()
+        })
+      })
+    })
   })
 
   describe('GET sample resources', function () {
@@ -572,7 +620,7 @@ describe('Test Resources responses', function () {
       '"ISBN -- 020"',
       '44455533322211'
     ].forEach((num) => {
-      it.only(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
+      it(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
         request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err
 
