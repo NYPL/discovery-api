@@ -215,6 +215,7 @@ describe('Test Resources responses', function () {
       })
     })
   })
+
   describe('GET resource', function () {
     it('returns supplementaryContent', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b18932917`, function (err, response, body) {
@@ -358,7 +359,6 @@ describe('Test Resources responses', function () {
                   // Ensure dates are ascending (some cataloging reverses them):
                   .sort((a, b) => a - b)
                 // The bib's start date should be <= dateBefore
-                if (itemDates[0] > dateBefore) console.log('before ' + dateBefore + ' failed for ', itemDates)
                 expect(itemDates[0]).to.be.at.most(dateBefore)
               })
 
