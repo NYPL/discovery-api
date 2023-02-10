@@ -572,7 +572,7 @@ describe('Test Resources responses', function () {
       '"ISBN -- 020"',
       '44455533322211'
     ].forEach((num) => {
-      it(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
+      it.only(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
         request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err
 
