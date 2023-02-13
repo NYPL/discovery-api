@@ -1,0 +1,313 @@
+{
+  "took": 12,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 14.381419,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b14937001",
+        "_score": 14.381419,
+        "_source": {
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "From 1807-June 1837 title reads: Morgenblatt für gebildete stände.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Kunst-blatt. Stuttgart, 1816-1849.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Supplement",
+              "label": "Includes the current supplements Literatur-blatt 1817-1849; Kunstblatt 1816-1849; Intelligenz-blatt 1817-1847.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "J. G. Cotta'sche buchhandlung."
+          ],
+          "language": [
+            {
+              "id": "lang:ger",
+              "label": "German"
+            }
+          ],
+          "numItemsTotal": [
+            4
+          ],
+          "dateEndString": [
+            "1"
+          ],
+          "createdYear": [
+            1855
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Morgenblatt für gebildete leser."
+          ],
+          "shelfMark": [
+            "*DF+ (Morgenblatt für gebildete Leser)"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1855"
+          ],
+          "idLccn": [
+            "cau08001961"
+          ],
+          "numElectronicResources": [
+            88
+          ],
+          "dateStartYear": [
+            1855
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*DF+ (Morgenblatt für gebildete Leser)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "14937001"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "cau08001961"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "1608345"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "0494254"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)ret0001042"
+            }
+          ],
+          "idOclc": [
+            "1608345"
+          ],
+          "dateEndYear": [
+            1
+          ],
+          "updatedAt": 1671729582968,
+          "publicationStatement": [
+            "Stuttgart, Tübingen [etc.], J. G. Cotta'sche buchhandlung."
+          ],
+          "identifier": [
+            "urn:bnum:14937001",
+            "urn:lccn:cau08001961",
+            "urn:oclc:1608345",
+            "urn:undefined:0494254",
+            "urn:undefined:(WaOLN)ret0001042"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1855"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "Morgenblatt für gebildete leser."
+          ],
+          "uri": "b14937001",
+          "numItems": [
+            4
+          ],
+          "numAvailable": [
+            4
+          ],
+          "placeOfPublication": [
+            "Stuttgart, Tübingen [etc.]"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:s",
+              "label": "serial"
+            }
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i28543800",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433097964930"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "Jahrg. 1860"
+                    ],
+                    "physicalLocation": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433097964930"
+                    ],
+                    "idBarcode": [
+                      "33433097964930"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. 001860"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 5,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "loc:rc2ma||Offsite",
+            "doc_count": 3
+          },
+          {
+            "key": "loc:mal92||Schwarzman Building M2 - General Research Room 315",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_format": {
+      "doc_count": 5,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Text",
+            "doc_count": 5
+          }
+        ]
+      }
+    },
+    "item_status": {
+      "doc_count": 5,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 4
+          }
+        ]
+      }
+    }
+  }
+}
