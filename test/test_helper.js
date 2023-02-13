@@ -10,7 +10,7 @@ dotenv.config({ path: './config/test.env' })
 before(() => {
   // If we're updating fixtures, load real production creds
   if (process.env.UPDATE_FIXTURES) {
-    const productionEnv = dotenv.parse(fs.readFileSync('./config/qa.env'))
+    const productionEnv = dotenv.parse(fs.readFileSync('./config/production.env'))
     return Promise.all(
       [
         // These are the config params that will allow us to build fixtures
