@@ -221,7 +221,6 @@ function enableScsbFixtures () {
         return scsbFixtureExists(fixturePrefix, arg1).then((exists) => {
           // If it doesn't exist, or we're updating everything, update it:
           if (process.env.UPDATE_FIXTURES === 'all' || !exists) {
-            // console.log(`Fetching scsb response for barcodes: ${arg1}`)
             console.log(`Writing ${scsbFixturePath(fixturePrefix, arg1)} because ${process.env.UPDATE_FIXTURES === 'all' ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
             return original(arg1)
               // Now write the response to local fixture:
