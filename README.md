@@ -232,3 +232,15 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 ### Features
 
 There is currently one feature flag in this app, which is 'no-on-site-edd'. When it is set, all onsite items have an eddRequestable property of false.
+
+### num* properties
+| Property                 | Meaning      | Includes item types |
+|--------------------------|--------------|---------------------|
+| numItemsTotal            | Total number of items including checkin card items | all (phys, checkin-card, electronic) |
+| numItems                 | Number of items (excluding checkin card items) | phys, electronic |
+| numAvailable             | Number items indexed "available" | all |
+| numCheckinCardItems      | Number of checkin card items | - |
+| numElectronicResources   | Number of electronic resources for the bib. Note that these are currently stored as "electronicLocator" values on a single "items" entry (i.e. if numElectronicResources is >= 1, exactly one of the bib's items will represent all of the e-resources) | - |
+| numItemDatesParsed       | Number items (including checkin card items) with parsed dateRanges | all |
+| numItemVolumesParsed     | Number items (including checkin card items) with parsed volumeRanges | all |
+| numItemsMatched          | When there's an active items_* filter, the represents the number of items matching the filter(s). When there are no active item_* filters, this represents all physical items | phys, checkin card |
