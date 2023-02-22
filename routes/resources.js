@@ -95,7 +95,7 @@ module.exports = function (app) {
 
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
     var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from'])
-    var params = { uri: req.params.uri }
+    var params = { uri: req.params.uri, addElectronicResources: req.params.addElectronicResources }
     if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
     if (Number.isInteger(parseInt(gatheredParams.items_from))) params.items_from = gatheredParams.items_from
 
