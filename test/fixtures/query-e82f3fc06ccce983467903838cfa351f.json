@@ -1,5 +1,5 @@
 {
-  "took": 243,
+  "took": 115,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 13.72774,
+    "max_score": 13.425867,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10833141",
-        "_score": 13.72774,
+        "_score": 13.425867,
         "_source": {
           "extent": [
             "volumes : illustrations ;"
@@ -839,7 +839,7 @@
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Expected"
+                  "status": "Arrived"
                 },
                 {
                   "coverage": "Vol. 99 No. 3 (Mar. 6, 2023)",
@@ -2062,7 +2062,7 @@
               ]
             }
           ],
-          "updatedAt": 1677166796998,
+          "updatedAt": 1677266852802,
           "publicationStatement": [
             "New York : F-R Pub. Corp., 1925-",
             "[New York] : D. Carey",
@@ -2125,7 +2125,7 @@
             694
           ],
           "numAvailable": [
-            835
+            837
           ],
           "placeOfPublication": [
             "New York",
@@ -2155,7 +2155,7 @@
           },
           "items": {
             "hits": {
-              "total": 13,
+              "total": 12,
               "max_score": null,
               "hits": [
                 {
@@ -2827,80 +2827,6 @@
                 {
                   "_nested": {
                     "field": "items",
-                    "offset": 193
-                  },
-                  "_score": null,
-                  "_source": {
-                    "uri": "i-h1144777-9",
-                    "status": [
-                      {
-                        "id": "status:na",
-                        "label": "Not Available (ReCAP)"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:na||Not Available (ReCAP)"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:makk3",
-                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker)",
-                        "type": "bf:ShelfMark"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "Vol. 99 No. 2 (Feb. 27, 2023)"
-                    ],
-                    "volumeRaw": [
-                      "Vol. 99 No. 2"
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "volumeRange": [
-                      {
-                        "gte": 99,
-                        "lte": 99
-                      }
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2023-02-27",
-                        "lte": "2023-02-27"
-                      }
-                    ],
-                    "enumerationChronology_sort": [
-                      "        99-2023-02-27"
-                    ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker)"
-                  },
-                  "sort": [
-                    "        99-2023-02-27"
-                  ]
-                },
-                {
-                  "_nested": {
-                    "field": "items",
                     "offset": 184
                   },
                   "_score": null,
@@ -3174,7 +3100,7 @@
         "buckets": [
           {
             "key": "status:a||Available",
-            "doc_count": 835
+            "doc_count": 837
           },
           {
             "key": "status:i||At bindery",
@@ -3182,11 +3108,7 @@
           },
           {
             "key": "status:na||Not Available (ReCAP)",
-            "doc_count": 13
-          },
-          {
-            "key": "status:co||Loaned",
-            "doc_count": 1
+            "doc_count": 12
           }
         ]
       }

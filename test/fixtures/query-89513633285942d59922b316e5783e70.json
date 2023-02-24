@@ -1,5 +1,5 @@
 {
-  "took": 1741,
+  "took": 977,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 13.614022,
+    "max_score": 13.514368,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b10833141",
-        "_score": 13.614022,
+        "_score": 13.514368,
         "_source": {
           "extent": [
             "volumes : illustrations ;"
@@ -839,7 +839,7 @@
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Expected"
+                  "status": "Arrived"
                 },
                 {
                   "coverage": "Vol. 99 No. 3 (Mar. 6, 2023)",
@@ -2062,7 +2062,7 @@
               ]
             }
           ],
-          "updatedAt": 1677166796998,
+          "updatedAt": 1677266852802,
           "publicationStatement": [
             "New York : F-R Pub. Corp., 1925-",
             "[New York] : D. Carey",
@@ -2125,7 +2125,7 @@
             694
           ],
           "numAvailable": [
-            835
+            837
           ],
           "placeOfPublication": [
             "New York",
@@ -2834,12 +2834,12 @@
                     "uri": "i-h1144777-9",
                     "status": [
                       {
-                        "id": "status:na",
-                        "label": "Not Available (ReCAP)"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:na||Not Available (ReCAP)"
+                      "status:a||Available"
                     ],
                     "holdingLocation": [
                       {
@@ -9612,7 +9612,7 @@
         "buckets": [
           {
             "key": "status:a||Available",
-            "doc_count": 835
+            "doc_count": 837
           },
           {
             "key": "status:i||At bindery",
@@ -9620,11 +9620,7 @@
           },
           {
             "key": "status:na||Not Available (ReCAP)",
-            "doc_count": 13
-          },
-          {
-            "key": "status:co||Loaned",
-            "doc_count": 1
+            "doc_count": 12
           }
         ]
       }

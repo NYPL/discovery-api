@@ -1,5 +1,5 @@
 {
-  "took": 331,
+  "took": 150,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 1318281,
+    "total": 1384503,
     "max_score": null,
     "hits": [
       {
@@ -31,19 +31,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Dante Alighieri, 1265-1321",
             "Dante Alighieri, 1265-1321 -- Criticism and interpretation",
             "Gmelin, Hermann, 1900-1958"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Stauffenburg,"
+            "Stauffenburg"
           ],
           "language": [
             {
               "id": "lang:ger",
               "label": "German"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1985
@@ -57,6 +66,9 @@
           "shelfMark": [
             "JFE 86-3252"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1985"
           ],
@@ -66,9 +78,12 @@
           "seriesStatement": [
             "Romanica et comparatistica ; Bd. 4"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Baum, Richard.",
             "Gmelin, Hermann, 1900-1958.",
+            "Baum, Richard.",
             "Hirdt, Willi."
           ],
           "dateStartYear": [
@@ -90,19 +105,35 @@
             {
               "type": "bf:Lccn",
               "value": "86124252"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPGNYPG-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200001"
             }
           ],
-          "updatedAt": 1536782413067,
+          "idOclc": [
+            "NYPGNYPG-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Tübingen : Stauffenburg, c1985."
           ],
           "identifier": [
             "urn:bnum:10000002",
             "urn:isbn:3923721544",
-            "urn:lccn:86124252"
+            "urn:lccn:86124252",
+            "urn:oclc:NYPGNYPG-B",
+            "urn:undefined:(WaOLN)nyp0200001"
           ],
           "idIsbn": [
             "3923721544"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -143,7 +174,10 @@
             1
           ],
           "placeOfPublication": [
-            "Tübingen :"
+            "Tübingen"
+          ],
+          "titleAlt": [
+            "Dante Alighieri neunzehnhundertfünfundachtzig."
           ],
           "issuance": [
             {
@@ -151,13 +185,26 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Dante Alighieri neunzehnhundertfünfundachtzig."
-          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433046113795"
+              ],
+              "physicalLocation": [
+                "JFE 86-3252"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858031",
+              "shelfMark": [
+                "JFE 86-3252"
               ],
               "identifierV2": [
                 {
@@ -169,21 +216,11 @@
                   "value": "33433046113795"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433046113795"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i12858031",
-              "shelfMark": [
-                "JFE 86-3252"
               ],
               "catalogItemType": [
                 {
@@ -194,7 +231,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -202,8 +239,14 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
+          ],
+          "idIsbn_clean": [
+            "3923721544"
           ],
           "dimensions": [
             "23 cm."
@@ -222,18 +265,27 @@
           "extent": [
             "199 p. : col. ill. maps ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Hebrides (Scotland)",
             "Hebrides (Scotland) -- Pictorial works"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Constable,"
+            "Constable"
           ],
           "language": [
             {
               "id": "lang:eng",
               "label": "English"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1989
@@ -247,6 +299,9 @@
           "shelfMark": [
             "JFF 89-526"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Waite, Charlie."
           ],
@@ -256,8 +311,14 @@
           "idLccn": [
             "gb 89012970"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "dateStartYear": [
             1989
+          ],
+          "donor": [
+            "Gift of the Drue Heinz Book Fund for English Literature"
           ],
           "identifierV2": [
             {
@@ -275,19 +336,35 @@
             {
               "type": "bf:Lccn",
               "value": "gb 89012970"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPGUKBPGP8917-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200002"
             }
           ],
-          "updatedAt": 1536782413246,
+          "idOclc": [
+            "NYPGUKBPGP8917-B"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "London : Constable, 1989."
           ],
           "identifier": [
             "urn:bnum:10000003",
             "urn:isbn:0094675708 :",
-            "urn:lccn:gb 89012970"
+            "urn:lccn:gb 89012970",
+            "urn:oclc:NYPGUKBPGP8917-B",
+            "urn:undefined:(WaOLN)nyp0200002"
           ],
           "idIsbn": [
-            "0094675708 :"
+            "0094675708 "
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -324,7 +401,7 @@
             1
           ],
           "placeOfPublication": [
-            "London :"
+            "London"
           ],
           "issuance": [
             {
@@ -337,6 +414,22 @@
               "identifier": [
                 "urn:barcode:33433050409147"
               ],
+              "physicalLocation": [
+                "JFF 89-526"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783780",
+              "shelfMark": [
+                "JFF 89-526"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -347,21 +440,11 @@
                   "value": "33433050409147"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433050409147"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783780",
-              "shelfMark": [
-                "JFF 89-526"
               ],
               "catalogItemType": [
                 {
@@ -372,7 +455,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -380,8 +463,14 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
+          ],
+          "idIsbn_clean": [
+            "0094675708"
           ],
           "dimensions": [
             "26 cm."
@@ -407,18 +496,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Ramana, Maharshi",
             "Ramana, Maharshi -- Biography"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Śrī Ramaṇāśrama,"
+            "Śrī Ramaṇāśrama"
           ],
           "language": [
             {
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1974
@@ -432,8 +530,14 @@
           "shelfMark": [
             "*OLY 82-4666"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1974"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1974
@@ -446,14 +550,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000126"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000074-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100074"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200125"
             }
           ],
-          "updatedAt": 1536782413960,
+          "idOclc": [
+            "NYPG001000074-B"
+          ],
+          "updatedAt": 1674870759272,
           "publicationStatement": [
             "Tirūvaṇṇāmalai : Śrī Ramaṇāśrama, 1974."
           ],
           "identifier": [
-            "urn:bnum:10000126"
+            "urn:bnum:10000126",
+            "urn:oclc:NYPG001000074-B",
+            "urn:undefined:NNSZ00100074",
+            "urn:undefined:(WaOLN)nyp0200125"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -490,7 +615,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tirūvaṇṇāmalai :"
+            "Tirūvaṇṇāmalai"
           ],
           "issuance": [
             {
@@ -503,6 +628,22 @@
               "identifier": [
                 "urn:barcode:33433060417551"
               ],
+              "physicalLocation": [
+                "*OLY 82-4666"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783800",
+              "shelfMark": [
+                "*OLY 82-4666"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -513,21 +654,11 @@
                   "value": "33433060417551"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417551"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783800",
-              "shelfMark": [
-                "*OLY 82-4666"
               ],
               "catalogItemType": [
                 {
@@ -538,7 +669,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -546,6 +677,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -583,18 +717,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Hindu gods",
             "Hindu hymns, Sanskrit"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Go. Venkaṭarāmaśāstri],"
+            "Go. Venkaṭarāmaśāstri]"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -608,6 +751,9 @@
           "shelfMark": [
             "*OLY 83-4674"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Lakshmikantaiah, Garikapati, 1900-"
           ],
@@ -616,6 +762,9 @@
           ],
           "idLccn": [
             "75902648"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Lakshmikantaiah, Garikapati, 1900-"
@@ -635,18 +784,39 @@
             {
               "type": "bf:Lccn",
               "value": "75902648"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000104-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100104"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200155"
             }
+          ],
+          "idOclc": [
+            "NYPG001000104-B"
           ],
           "uniformTitle": [
             "Aṣṭakapañcaka"
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1674870754295,
           "publicationStatement": [
             "[S.l. : Go. Venkaṭarāmaśāstri], 1972."
           ],
           "identifier": [
             "urn:bnum:10000156",
-            "urn:lccn:75902648"
+            "urn:lccn:75902648",
+            "urn:oclc:NYPG001000104-B",
+            "urn:undefined:NNSZ00100104",
+            "urn:undefined:(WaOLN)nyp0200155"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -687,7 +857,11 @@
             1
           ],
           "placeOfPublication": [
-            "[S.l. :"
+            "[S.l."
+          ],
+          "titleAlt": [
+            "Aṣṭakapañcaka",
+            "Jaladhijānandalaharī."
           ],
           "issuance": [
             {
@@ -695,20 +869,26 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Aṣṭakapañcaka",
-            "Jaladhijānandalaharī."
-          ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060370396"
+              ],
+              "physicalLocation": [
+                "*OLY 83-4674"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783803",
+              "shelfMark": [
+                "*OLY 83-4674"
               ],
               "identifierV2": [
                 {
@@ -720,21 +900,11 @@
                   "value": "33433060370396"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060370396"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783803",
-              "shelfMark": [
-                "*OLY 83-4674"
               ],
               "catalogItemType": [
                 {
@@ -745,7 +915,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -753,6 +923,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -785,19 +958,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Vaishnavism",
             "Vaishnavism -- Prayer books and devotions",
             "Vaishnavism -- Prayer books and devotions -- Tamil"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Nārāyaṇacāmi Nāyaṭu,"
+            "Nārāyaṇacāmi Nāyaṭu"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1975
@@ -811,11 +993,17 @@
           "shelfMark": [
             "*OLY 83-4895"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1975"
           ],
           "idLccn": [
             "76901471"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Narayanaswami Naidu, Tiruchirrambalam Krishnaswamy, 1906-"
@@ -835,18 +1023,39 @@
             {
               "type": "bf:Lccn",
               "value": "76901471"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000113-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100113"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200164"
             }
+          ],
+          "idOclc": [
+            "NYPG001000113-B"
           ],
           "uniformTitle": [
             "Nālāyirat tivviyap pirapantam. Selections."
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1674870755402,
           "publicationStatement": [
             "Kaṭalūr : Nārāyaṇacāmi Nāyaṭu, 1975."
           ],
           "identifier": [
             "urn:bnum:10000165",
-            "urn:lccn:76901471"
+            "urn:lccn:76901471",
+            "urn:oclc:NYPG001000113-B",
+            "urn:undefined:NNSZ00100113",
+            "urn:undefined:(WaOLN)nyp0200164"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -886,7 +1095,7 @@
             1
           ],
           "placeOfPublication": [
-            "Kaṭalūr :"
+            "Kaṭalūr"
           ],
           "issuance": [
             {
@@ -896,14 +1105,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060419649"
+              ],
+              "physicalLocation": [
+                "*OLY 83-4895"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783808",
+              "shelfMark": [
+                "*OLY 83-4895"
               ],
               "identifierV2": [
                 {
@@ -915,21 +1134,11 @@
                   "value": "33433060419649"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060419649"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783808",
-              "shelfMark": [
-                "*OLY 83-4895"
               ],
               "catalogItemType": [
                 {
@@ -940,7 +1149,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -948,6 +1157,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -980,8 +1192,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Rām Sanehīs"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Rāmasnehī Sāhitya Śodha Saṃsthāna"
@@ -991,6 +1209,9 @@
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1973
@@ -1004,6 +1225,9 @@
           "shelfMark": [
             "*OLY 84-85"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Pāṇḍeya, Śivāśaṅkara, 1935-"
           ],
@@ -1015,6 +1239,9 @@
           ],
           "seriesStatement": [
             "Rāmasnehī sāhitya śodha saṃsthāna, pushpa 1"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1973
@@ -1031,15 +1258,36 @@
             {
               "type": "bf:Lccn",
               "value": "74901467"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000125-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100125"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200176"
             }
           ],
-          "updatedAt": 1536782412148,
+          "idOclc": [
+            "NYPG001000125-B"
+          ],
+          "updatedAt": 1674870754295,
           "publicationStatement": [
             "Dillī, Rāmasnehī Sāhitya Śodha Saṃsthāna [1973]"
           ],
           "identifier": [
             "urn:bnum:10000177",
-            "urn:lccn:74901467"
+            "urn:lccn:74901467",
+            "urn:oclc:NYPG001000125-B",
+            "urn:undefined:NNSZ00100125",
+            "urn:undefined:(WaOLN)nyp0200176"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1079,7 +1327,7 @@
             1
           ],
           "placeOfPublication": [
-            "Dillī,"
+            "Dillī"
           ],
           "issuance": [
             {
@@ -1089,14 +1337,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060419680"
+              ],
+              "physicalLocation": [
+                "*OLY 84-85"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783812",
+              "shelfMark": [
+                "*OLY 84-85"
               ],
               "identifierV2": [
                 {
@@ -1108,21 +1366,11 @@
                   "value": "33433060419680"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060419680"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783812",
-              "shelfMark": [
-                "*OLY 84-85"
               ],
               "catalogItemType": [
                 {
@@ -1133,7 +1381,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1141,6 +1389,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1168,8 +1419,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Vālmīki"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Periyār Cuyamariyātaip Piracāra Niṟuvaṉa Veḷiyīṭu"
@@ -1179,6 +1436,9 @@
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -1192,6 +1452,9 @@
           "shelfMark": [
             "*OLY 83-2592"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Rāmacāmi, Ī. Ve., Tantai Periyār, 1878-1973."
           ],
@@ -1200,6 +1463,9 @@
           ],
           "idLccn": [
             "73903633"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1972
@@ -1216,15 +1482,36 @@
             {
               "type": "bf:Lccn",
               "value": "73903633"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000143-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100143"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200194"
             }
           ],
-          "updatedAt": 1536782412087,
+          "idOclc": [
+            "NYPG001000143-B"
+          ],
+          "updatedAt": 1674870759272,
           "publicationStatement": [
             "Tirucci, Periyār Cuyamariyātaip Piracāra Niṟuvaṉa Veḷiyīṭu [1972]"
           ],
           "identifier": [
             "urn:bnum:10000195",
-            "urn:lccn:73903633"
+            "urn:lccn:73903633",
+            "urn:oclc:NYPG001000143-B",
+            "urn:undefined:NNSZ00100143",
+            "urn:undefined:(WaOLN)nyp0200194"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1264,7 +1551,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tirucci,"
+            "Tirucci"
           ],
           "issuance": [
             {
@@ -1274,14 +1561,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060418526"
+              ],
+              "physicalLocation": [
+                "*OLY 83-2592"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783817",
+              "shelfMark": [
+                "*OLY 83-2592"
               ],
               "identifierV2": [
                 {
@@ -1293,21 +1590,11 @@
                   "value": "33433060418526"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060418526"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783817",
-              "shelfMark": [
-                "*OLY 83-2592"
               ],
               "catalogItemType": [
                 {
@@ -1318,7 +1605,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1326,6 +1613,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1353,17 +1643,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Ramana, Maharshi"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Śivalāla Agravāla eṇḍa Kampanī,"
+            "Śivalāla Agravāla eṇḍa Kampanī"
           ],
           "language": [
             {
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1978
@@ -1377,11 +1676,17 @@
           "shelfMark": [
             "*OLY 82-3981"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Vedālaṅkāra, Vedarāja."
           ],
           "createdString": [
             "1978"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Osbourne, Arthur."
@@ -1397,14 +1702,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000203"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000151-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100151"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200202"
             }
           ],
-          "updatedAt": 1536782413960,
+          "idOclc": [
+            "NYPG001000151-B"
+          ],
+          "updatedAt": 1674870754295,
           "publicationStatement": [
             "Āgarā : Śivalāla Agravāla eṇḍa Kampanī, 1978."
           ],
           "identifier": [
-            "urn:bnum:10000203"
+            "urn:bnum:10000203",
+            "urn:oclc:NYPG001000151-B",
+            "urn:undefined:NNSZ00100151",
+            "urn:undefined:(WaOLN)nyp0200202"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1441,7 +1767,7 @@
             1
           ],
           "placeOfPublication": [
-            "Āgarā :"
+            "Āgarā"
           ],
           "issuance": [
             {
@@ -1451,14 +1777,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060417486"
+              ],
+              "physicalLocation": [
+                "*OLY 82-3981"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783820",
+              "shelfMark": [
+                "*OLY 82-3981"
               ],
               "identifierV2": [
                 {
@@ -1470,21 +1806,11 @@
                   "value": "33433060417486"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417486"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783820",
-              "shelfMark": [
-                "*OLY 82-3981"
               ],
               "catalogItemType": [
                 {
@@ -1495,7 +1821,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1503,6 +1829,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1540,19 +1869,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Hindu devotional literature, Tamil",
             "Vaishnavites",
             "Vaishnavites -- Biography"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "[Thirumazhisaiars' Association,"
+            "[Thirumazhisaiars' Association"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -1566,11 +1904,17 @@
           "shelfMark": [
             "*OLY 84-1084"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1972"
           ],
           "idLccn": [
             "73902510"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Thirumazhisaiars' Association."
@@ -1590,15 +1934,36 @@
             {
               "type": "bf:Lccn",
               "value": "73902510"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000177-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100177"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200228"
             }
           ],
-          "updatedAt": 1536782413246,
+          "idOclc": [
+            "NYPG001000177-B"
+          ],
+          "updatedAt": 1674870755402,
           "publicationStatement": [
             "Madras : [Thirumazhisaiars' Association, 1972]"
           ],
           "identifier": [
             "urn:bnum:10000229",
-            "urn:lccn:73902510"
+            "urn:lccn:73902510",
+            "urn:oclc:NYPG001000177-B",
+            "urn:undefined:NNSZ00100177",
+            "urn:undefined:(WaOLN)nyp0200228"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1636,7 +2001,7 @@
             1
           ],
           "placeOfPublication": [
-            "Madras :"
+            "Madras"
           ],
           "issuance": [
             {
@@ -1649,6 +2014,22 @@
               "identifier": [
                 "urn:barcode:33433060419979"
               ],
+              "physicalLocation": [
+                "*OLY 84-1084"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783829",
+              "shelfMark": [
+                "*OLY 84-1084"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -1659,21 +2040,11 @@
                   "value": "33433060419979"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060419979"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783829",
-              "shelfMark": [
-                "*OLY 84-1084"
               ],
               "catalogItemType": [
                 {
@@ -1684,7 +2055,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1692,6 +2063,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1719,17 +2093,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Ramana, Maharshi"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Sri Ramanasramam,"
+            "Sri Ramanasramam"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -1743,11 +2126,17 @@
           "shelfMark": [
             "*OLY 82-3739"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Sarma, K. Lakshmana."
           ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -1760,14 +2149,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000292"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000245-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100245"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200291"
             }
           ],
-          "updatedAt": 1536782413006,
+          "idOclc": [
+            "NYPG001000245-B"
+          ],
+          "updatedAt": 1674870759272,
           "publicationStatement": [
             "Tiruvannamalai : Sri Ramanasramam, 1980."
           ],
           "identifier": [
-            "urn:bnum:10000292"
+            "urn:bnum:10000292",
+            "urn:oclc:NYPG001000245-B",
+            "urn:undefined:NNSZ00100245",
+            "urn:undefined:(WaOLN)nyp0200291"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1804,7 +2214,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tiruvannamalai :"
+            "Tiruvannamalai"
           ],
           "issuance": [
             {
@@ -1814,14 +2224,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060417452"
+              ],
+              "physicalLocation": [
+                "*OLY 82-3739"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783845",
+              "shelfMark": [
+                "*OLY 82-3739"
               ],
               "identifierV2": [
                 {
@@ -1833,21 +2253,11 @@
                   "value": "33433060417452"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417452"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783845",
-              "shelfMark": [
-                "*OLY 82-3739"
               ],
               "catalogItemType": [
                 {
@@ -1858,7 +2268,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1866,6 +2276,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1893,17 +2306,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Hindu hymns"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Khemarāja Śrīkṛshṇadāsa,"
+            "Khemarāja Śrīkṛshṇadāsa"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1963
@@ -1917,11 +2339,17 @@
           "shelfMark": [
             "*OLY 82-3968"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1963"
           ],
           "idLccn": [
             "sa 68013360"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1963
@@ -1938,15 +2366,36 @@
             {
               "type": "bf:Lccn",
               "value": "sa 68013360"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000291-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100291"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200337"
             }
           ],
-          "updatedAt": 1536782417144,
+          "idOclc": [
+            "NYPG001000291-B"
+          ],
+          "updatedAt": 1674870759272,
           "publicationStatement": [
             "Bambaī, Khemarāja Śrīkṛshṇadāsa, 1963."
           ],
           "identifier": [
             "urn:bnum:10000338",
-            "urn:lccn:sa 68013360"
+            "urn:lccn:sa 68013360",
+            "urn:oclc:NYPG001000291-B",
+            "urn:undefined:NNSZ00100291",
+            "urn:undefined:(WaOLN)nyp0200337"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1986,7 +2435,7 @@
             1
           ],
           "placeOfPublication": [
-            "Bambaī,"
+            "Bambaī"
           ],
           "issuance": [
             {
@@ -1996,14 +2445,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060417478"
+              ],
+              "physicalLocation": [
+                "*OLY 82-3968"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783847",
+              "shelfMark": [
+                "*OLY 82-3968"
               ],
               "identifierV2": [
                 {
@@ -2015,21 +2474,11 @@
                   "value": "33433060417478"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417478"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783847",
-              "shelfMark": [
-                "*OLY 82-3968"
               ],
               "catalogItemType": [
                 {
@@ -2040,7 +2489,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2048,6 +2497,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2085,13 +2537,19 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Hygiene",
             "Jaʻfar al-Ṣādiq, 702?-765 or 6",
-            "Medicine, Medieval"
+            "Medicine, Medieval",
+            "Hygiene"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Bungāh-i Maṭbūʻātī-i ʻAṭāʼī,"
+            "Bungāh-i Maṭbūʻātī-i ʻAṭāʼī"
           ],
           "language": [
             {
@@ -2099,11 +2557,14 @@
               "label": "Persian"
             }
           ],
-          "dateEndString": [
-            "1962"
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1961
+          ],
+          "dateEndString": [
+            "1962"
           ],
           "type": [
             "nypl:Item"
@@ -2114,6 +2575,9 @@
           "shelfMark": [
             "*OGI 82-3991"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Khalīlī, Muḥammad."
           ],
@@ -2122,6 +2586,9 @@
           ],
           "idLccn": [
             "72274632"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Tihrānī, Nāṣir al-Dīn Ṣādiq."
@@ -2141,18 +2608,39 @@
             {
               "type": "bf:Lccn",
               "value": "72274632"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000297-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100297"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200343"
             }
+          ],
+          "idOclc": [
+            "NYPG001000297-B"
           ],
           "dateEndYear": [
             1962
           ],
-          "updatedAt": 1536782421934,
+          "updatedAt": 1674870759272,
           "publicationStatement": [
             "Tihrān, Bungāh-i Maṭbūʻātī-i ʻAṭāʼī, 1339 [1961 or 1962]"
           ],
           "identifier": [
             "urn:bnum:10000344",
-            "urn:lccn:72274632"
+            "urn:lccn:72274632",
+            "urn:oclc:NYPG001000297-B",
+            "urn:undefined:NNSZ00100297",
+            "urn:undefined:(WaOLN)nyp0200343"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2176,9 +2664,9 @@
             }
           ],
           "subjectLiteral": [
-            "Hygiene.",
             "Jaʻfar al-Ṣādiq, 702?-765 or 6.",
-            "Medicine, Medieval."
+            "Medicine, Medieval.",
+            "Hygiene."
           ],
           "titleDisplay": [
             "Ṭibb al-Ṣādiq, ṭibb va bihdāsht az naẓar-i Imām Jaʻfar Ṣādiq. Taʼlīf-i Muḥammad Khalī̄li. Tarjumah va sharḥ az Naṣīr al-Dīn Ṣādiq Tihrānī."
@@ -2194,7 +2682,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tihrān,"
+            "Tihrān"
           ],
           "issuance": [
             {
@@ -2204,20 +2692,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433058031224"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058031224"
-                }
+              "physicalLocation": [
+                "*OGI 82-3991"
               ],
               "accessMessage": [
                 {
@@ -2225,15 +2704,28 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858044",
+              "shelfMark": [
+                "*OGI 82-3991"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGI 82-3991"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058031224"
+                }
+              ],
               "idBarcode": [
                 "33433058031224"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i12858044",
-              "shelfMark": [
-                "*OGI 82-3991"
               ],
               "catalogItemType": [
                 {
@@ -2244,7 +2736,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2252,6 +2744,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2284,19 +2779,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Hygiene",
+            "ʻAlī al-Riḍā ibn Mūsá, -818 or 19",
             "Medicine, Medieval",
-            "ʻAlī al-Riḍā ibn Mūsá, d. 818 or 19"
+            "Hygiene"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Muḥammad Rizā Lavāsānī,"
+            "Muḥammad Rizā Lavāsānī"
           ],
           "language": [
             {
               "id": "lang:per",
               "label": "Persian"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1961
@@ -2305,10 +2809,13 @@
             "nypl:Item"
           ],
           "title": [
-            "Ṭibb va bihdāsht az naẓar-i Imām ʻAlī ibn Mūsā al-Rizā,"
+            "Ṭibb va bihdāsht az naẓar-i Imām ʻAlī ibn Mūsā al-Rizā"
           ],
           "shelfMark": [
             "*OGI 82-3989"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "creatorLiteral": [
             "Tihrānī, Nāṣir al-Dīn Ṣādiq."
@@ -2319,8 +2826,11 @@
           "idLccn": [
             "74214957"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "ʻAlī al-Riḍā ibn Mūsá, d. 818 or 19."
+            "ʻAlī al-Riḍā ibn Mūsá, -818 or 19."
           ],
           "dateStartYear": [
             1961
@@ -2337,15 +2847,36 @@
             {
               "type": "bf:Lccn",
               "value": "74214957"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000298-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100298"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200344"
             }
           ],
-          "updatedAt": 1536782421720,
+          "idOclc": [
+            "NYPG001000298-B"
+          ],
+          "updatedAt": 1674870754295,
           "publicationStatement": [
             "Tihrān, Muḥammad Rizā Lavāsānī, 1340 [1961]"
           ],
           "identifier": [
             "urn:bnum:10000345",
-            "urn:lccn:74214957"
+            "urn:lccn:74214957",
+            "urn:oclc:NYPG001000298-B",
+            "urn:undefined:NNSZ00100298",
+            "urn:undefined:(WaOLN)nyp0200344"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2369,9 +2900,9 @@
             }
           ],
           "subjectLiteral": [
-            "Hygiene.",
+            "ʻAlī al-Riḍā ibn Mūsá, -818 or 19.",
             "Medicine, Medieval.",
-            "ʻAlī al-Riḍā ibn Mūsá, d. 818 or 19."
+            "Hygiene."
           ],
           "titleDisplay": [
             "Ṭibb va bihdāsht az naẓar-i Imām ʻAlī ibn Mūsā al-Rizā, nivishtah-ʼi Naṣīr al-Dīn Mīr Ṣādiqī Tihrānī."
@@ -2387,7 +2918,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tihrān,"
+            "Tihrān"
           ],
           "issuance": [
             {
@@ -2397,25 +2928,33 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433058030721"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058030721"
-                }
+              "physicalLocation": [
+                "*OGI 82-3989"
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858045",
+              "shelfMark": [
+                "*OGI 82-3989"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGI 82-3989"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058030721"
                 }
               ],
               "idBarcode": [
@@ -2424,20 +2963,16 @@
               "requestable": [
                 false
               ],
-              "uri": "i12858045",
-              "shelfMark": [
-                "*OGI 82-3989"
-              ],
               "catalogItemType": [
                 {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2445,6 +2980,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2477,18 +3015,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Iran",
             "Iran -- Description and travel"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Mīrzā Ḥabīb Allāh,"
+            "Mīrzā Ḥabīb Allāh"
           ],
           "language": [
             {
               "id": "lang:per",
               "label": "Persian"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "dateEndString": [
             "1880"
@@ -2505,11 +3052,17 @@
           "shelfMark": [
             "*ONA+ 82-2677"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Muʻtamid al-Sulṭān, Muḥammad Taqī khān Ḥakīm, mutakhalliṣ bih Ḥakīm."
           ],
           "createdString": [
             "1879"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1879
@@ -2522,17 +3075,38 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000348"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000301-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100301"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200347"
             }
+          ],
+          "idOclc": [
+            "NYPG001000301-B"
           ],
           "dateEndYear": [
             1880
           ],
-          "updatedAt": 1622750497814,
+          "updatedAt": 1674870755402,
           "publicationStatement": [
             "Ṭihrān : Mīrzā Ḥabīb Allāh, 1305 [1879 or 1880]"
           ],
           "identifier": [
-            "urn:bnum:10000348"
+            "urn:bnum:10000348",
+            "urn:oclc:NYPG001000301-B",
+            "urn:undefined:NNSZ00100301",
+            "urn:undefined:(WaOLN)nyp0200347"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2566,10 +3140,10 @@
             1
           ],
           "numAvailable": [
-            0
+            1
           ],
           "placeOfPublication": [
-            "Ṭihrān :"
+            "Ṭihrān"
           ],
           "issuance": [
             {
@@ -2588,6 +3162,19 @@
               "physicalLocation": [
                 "*ONA+ 82-2677  "
               ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783848",
+              "shelfMark": [
+                "*ONA+ 82-2677  "
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2598,21 +3185,11 @@
                   "value": "33433059840763"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433059840763"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783848",
-              "shelfMark": [
-                "*ONA+ 82-2677  "
               ],
               "catalogItemType": [
                 {
@@ -2622,8 +3199,8 @@
               ],
               "status": [
                 {
-                  "id": "status:co",
-                  "label": "Loaned"
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2631,6 +3208,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2663,18 +3243,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Shiites",
             "Shiites -- Biography"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Intishārāt-i Markazī,"
+            "Intishārāt-i Markazī"
           ],
           "language": [
             {
               "id": "lang:per",
               "label": "Persian"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1949
@@ -2688,11 +3277,17 @@
           "shelfMark": [
             "*OGI 83-4798"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
-            "Qummī, ʻAbbās ibn Muḥammad Riḍā, d. 1941."
+            "Qummī, ʻAbbās ibn Muḥammad Riḍā, -1941."
           ],
           "createdString": [
             "1949"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1949
@@ -2705,14 +3300,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000379"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000332-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100332"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200378"
             }
           ],
-          "updatedAt": 1536782417070,
+          "idOclc": [
+            "NYPG001000332-B"
+          ],
+          "updatedAt": 1676664769349,
           "publicationStatement": [
             "[Tihrān?] : Intishārāt-i Markazī, 1327 [1949]"
           ],
           "identifier": [
-            "urn:bnum:10000379"
+            "urn:bnum:10000379",
+            "urn:oclc:NYPG001000332-B",
+            "urn:undefined:NNSZ00100332",
+            "urn:undefined:(WaOLN)nyp0200378"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2749,7 +3365,7 @@
             1
           ],
           "placeOfPublication": [
-            "[Tihrān?] :"
+            "[Tihrān?]"
           ],
           "issuance": [
             {
@@ -2762,16 +3378,30 @@
               "identifier": [
                 "urn:barcode:33433058030051"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058030051"
-                }
+              "physicalLocation": [
+                "*OGI 83-4798"
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858047",
+              "shelfMark": [
+                "*OGI 83-4798"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGI 83-4798"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058030051"
                 }
               ],
               "idBarcode": [
@@ -2780,20 +3410,16 @@
               "requestable": [
                 false
               ],
-              "uri": "i12858047",
-              "shelfMark": [
-                "*OGI 83-4798"
-              ],
               "catalogItemType": [
                 {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
+                  "id": "catalogItemType:32",
+                  "label": "google project, book"
                 }
               ],
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2801,6 +3427,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2828,11 +3457,17 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Fasts and feasts",
             "Fasts and feasts -- Hinduism",
             "Hindu temples",
             "Hindu temples -- Tamil Nadu"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Cāstā Patippakam"
@@ -2842,6 +3477,9 @@
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -2855,6 +3493,9 @@
           "shelfMark": [
             "*OLY 84-1823"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Gopalakrishnan, Sattanathapuram Subramania, 1916-"
           ],
@@ -2863,6 +3504,9 @@
           ],
           "idLccn": [
             "74913252"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1970
@@ -2879,15 +3523,36 @@
             {
               "type": "bf:Lccn",
               "value": "74913252"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000346-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100346"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200391"
             }
           ],
-          "updatedAt": 1536782417144,
+          "idOclc": [
+            "NYPG001000346-B"
+          ],
+          "updatedAt": 1674870759272,
           "publicationStatement": [
             "Tiruccentūr, Cāstā Patippakam [1970]"
           ],
           "identifier": [
             "urn:bnum:10000392",
-            "urn:lccn:74913252"
+            "urn:lccn:74913252",
+            "urn:oclc:NYPG001000346-B",
+            "urn:undefined:NNSZ00100346",
+            "urn:undefined:(WaOLN)nyp0200391"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2928,7 +3593,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tiruccentūr,"
+            "Tiruccentūr"
           ],
           "issuance": [
             {
@@ -2938,14 +3603,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060420118"
+              ],
+              "physicalLocation": [
+                "*OLY 84-1823"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783870",
+              "shelfMark": [
+                "*OLY 84-1823"
               ],
               "identifierV2": [
                 {
@@ -2957,21 +3632,11 @@
                   "value": "33433060420118"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060420118"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783870",
-              "shelfMark": [
-                "*OLY 84-1823"
               ],
               "catalogItemType": [
                 {
@@ -2982,7 +3647,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2990,6 +3655,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3022,18 +3690,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Hindu philosophy",
             "Śaivism"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Araci Puk Ṭippō,"
+            "Araci Puk Ṭippō"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -3047,6 +3724,9 @@
           "shelfMark": [
             "*OLY 84-1838"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Kaliyāṇacuntaraṉār, Tiru. Vi., 1883-1953."
           ],
@@ -3055,6 +3735,9 @@
           ],
           "idLccn": [
             "73913694"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Saivasiddhanta Sabha."
@@ -3074,15 +3757,36 @@
             {
               "type": "bf:Lccn",
               "value": "73913694"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000351-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100351"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200396"
             }
           ],
-          "updatedAt": 1536782422361,
+          "idOclc": [
+            "NYPG001000351-B"
+          ],
+          "updatedAt": 1674870762646,
           "publicationStatement": [
             "Ceṉṉai, Araci Puk Ṭippō, 1970."
           ],
           "identifier": [
             "urn:bnum:10000397",
-            "urn:lccn:73913694"
+            "urn:lccn:73913694",
+            "urn:oclc:NYPG001000351-B",
+            "urn:undefined:NNSZ00100351",
+            "urn:undefined:(WaOLN)nyp0200396"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3123,7 +3827,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -3133,14 +3837,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060420126"
+              ],
+              "physicalLocation": [
+                "*OLY 84-1838"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783872",
+              "shelfMark": [
+                "*OLY 84-1838"
               ],
               "identifierV2": [
                 {
@@ -3152,21 +3866,11 @@
                   "value": "33433060420126"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060420126"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783872",
-              "shelfMark": [
-                "*OLY 84-1838"
               ],
               "catalogItemType": [
                 {
@@ -3177,7 +3881,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3185,6 +3889,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3212,18 +3919,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Murugan (Hindu deity)",
             "Murugan (Hindu deity) -- Poetry"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Acciṭṭōr Kāntitācaṉ Accakam,"
+            "Acciṭṭōr Kāntitācaṉ Accakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1969
@@ -3237,14 +3953,20 @@
           "shelfMark": [
             "*OLY 84-1725"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
-            "Ciṉṉattampi Nāvalar, 18th cent."
+            "Ciṉṉattampi Nāvalar, active 18th century."
           ],
           "createdString": [
             "1969"
           ],
           "idLccn": [
             "74914694"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Paḻaṉiccāmip Pulavar, K."
@@ -3264,15 +3986,36 @@
             {
               "type": "bf:Lccn",
               "value": "74914694"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000360-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100360"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200405"
             }
           ],
-          "updatedAt": 1536782416939,
+          "idOclc": [
+            "NYPG001000360-B"
+          ],
+          "updatedAt": 1674870755402,
           "publicationStatement": [
             "[Kōvai, Acciṭṭōr Kāntitācaṉ Accakam, 1969]"
           ],
           "identifier": [
             "urn:bnum:10000406",
-            "urn:lccn:74914694"
+            "urn:lccn:74914694",
+            "urn:oclc:NYPG001000360-B",
+            "urn:undefined:NNSZ00100360",
+            "urn:undefined:(WaOLN)nyp0200405"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3312,7 +4055,7 @@
             1
           ],
           "placeOfPublication": [
-            "[Kōvai,"
+            "[Kōvai"
           ],
           "issuance": [
             {
@@ -3322,14 +4065,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060420076"
+              ],
+              "physicalLocation": [
+                "*OLY 84-1725"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783876",
+              "shelfMark": [
+                "*OLY 84-1725"
               ],
               "identifierV2": [
                 {
@@ -3341,21 +4094,11 @@
                   "value": "33433060420076"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060420076"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783876",
-              "shelfMark": [
-                "*OLY 84-1725"
               ],
               "catalogItemType": [
                 {
@@ -3366,7 +4109,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3374,6 +4117,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3401,17 +4147,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Karumari Amman (Hindu deity)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Cūppar Pavar Papḷikēṣaṉs,"
+            "Cūppar Pavar Papḷikēṣaṉs"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -3425,6 +4180,9 @@
           "shelfMark": [
             "*OLY 84-1817"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Śrī Tēvi Karumāri Tāsar."
           ],
@@ -3433,6 +4191,9 @@
           ],
           "idLccn": [
             "75914516"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1970
@@ -3449,15 +4210,36 @@
             {
               "type": "bf:Lccn",
               "value": "75914516"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000367-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100367"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200412"
             }
           ],
-          "updatedAt": 1536782423539,
+          "idOclc": [
+            "NYPG001000367-B"
+          ],
+          "updatedAt": 1674870762646,
           "publicationStatement": [
             "Ceṉṉai : Cūppar Pavar Papḷikēṣaṉs, [1970]"
           ],
           "identifier": [
             "urn:bnum:10000413",
-            "urn:lccn:75914516"
+            "urn:lccn:75914516",
+            "urn:oclc:NYPG001000367-B",
+            "urn:undefined:NNSZ00100367",
+            "urn:undefined:(WaOLN)nyp0200412"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3494,7 +4276,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai :"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -3507,6 +4289,22 @@
               "identifier": [
                 "urn:barcode:33433060420100"
               ],
+              "physicalLocation": [
+                "*OLY 84-1817"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783880",
+              "shelfMark": [
+                "*OLY 84-1817"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3517,21 +4315,11 @@
                   "value": "33433060420100"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060420100"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783880",
-              "shelfMark": [
-                "*OLY 84-1817"
               ],
               "catalogItemType": [
                 {
@@ -3542,7 +4330,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3550,6 +4338,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3577,19 +4368,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Hindu philosophy",
             "Nammāḻvār",
+            "Hindu philosophy",
             "Vaishnavism"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Araci Puk Ṭippō,"
+            "Araci Puk Ṭippō"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1969
@@ -3603,6 +4403,9 @@
           "shelfMark": [
             "*OLY 84-1736"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Kaliyāṇacuntaraṉār, Tiru. Vi., 1883-1953."
           ],
@@ -3611,6 +4414,9 @@
           ],
           "idLccn": [
             "74913567"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1969
@@ -3627,15 +4433,36 @@
             {
               "type": "bf:Lccn",
               "value": "74913567"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000375-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100375"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200420"
             }
           ],
-          "updatedAt": 1536782417144,
+          "idOclc": [
+            "NYPG001000375-B"
+          ],
+          "updatedAt": 1674870755402,
           "publicationStatement": [
             "Ceṉṉai, Araci Puk Ṭippō, 1969."
           ],
           "identifier": [
             "urn:bnum:10000421",
-            "urn:lccn:74913567"
+            "urn:lccn:74913567",
+            "urn:oclc:NYPG001000375-B",
+            "urn:undefined:NNSZ00100375",
+            "urn:undefined:(WaOLN)nyp0200420"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3659,8 +4486,8 @@
             }
           ],
           "subjectLiteral": [
-            "Hindu philosophy.",
             "Nammāḻvār.",
+            "Hindu philosophy.",
             "Vaishnavism."
           ],
           "titleDisplay": [
@@ -3677,7 +4504,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -3687,14 +4514,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060420092"
+              ],
+              "physicalLocation": [
+                "*OLY 84-1736"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783883",
+              "shelfMark": [
+                "*OLY 84-1736"
               ],
               "identifierV2": [
                 {
@@ -3706,21 +4543,11 @@
                   "value": "33433060420092"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060420092"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783883",
-              "shelfMark": [
-                "*OLY 84-1736"
               ],
               "catalogItemType": [
                 {
@@ -3731,7 +4558,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3739,6 +4566,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3771,18 +4601,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Jaimini",
             "Mimamsa"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Ānandāśramasaṃsthā,"
+            "Ānandāśramasaṃsthā"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1973
@@ -3796,6 +4635,9 @@
           "shelfMark": [
             "*OKM 97-3015"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Murārimiśra."
           ],
@@ -3807,6 +4649,9 @@
           ],
           "seriesStatement": [
             "Ānandāśramasaṃskrtagranthāvaliḥ; granthāṇkaḥ 137"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Ānandāśramasaṃsthā."
@@ -3826,18 +4671,39 @@
             {
               "type": "bf:Lccn",
               "value": "76903136"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000378-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100378"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200423"
             }
+          ],
+          "idOclc": [
+            "NYPG001000378-B"
           ],
           "uniformTitle": [
             "Aṅgatvanirukti"
           ],
-          "updatedAt": 1536782417070,
+          "updatedAt": 1674870755402,
           "publicationStatement": [
             "Puṇyākhyapattane : Ānandāśramasaṃsthā, 1973."
           ],
           "identifier": [
             "urn:bnum:10000424",
-            "urn:lccn:76903136"
+            "urn:lccn:76903136",
+            "urn:oclc:NYPG001000378-B",
+            "urn:undefined:NNSZ00100378",
+            "urn:undefined:(WaOLN)nyp0200423"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3878,7 +4744,10 @@
             1
           ],
           "placeOfPublication": [
-            "Puṇyākhyapattane :"
+            "Puṇyākhyapattane"
+          ],
+          "titleAlt": [
+            "Aṅgatvanirukti"
           ],
           "issuance": [
             {
@@ -3886,19 +4755,13 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Aṅgatvanirukti"
-          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433058597968"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058597968"
-                }
+              "physicalLocation": [
+                "*OKM 97-3015"
               ],
               "accessMessage": [
                 {
@@ -3906,15 +4769,28 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783885",
+              "shelfMark": [
+                "*OKM 97-3015"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKM 97-3015"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058597968"
+                }
+              ],
               "idBarcode": [
                 "33433058597968"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783885",
-              "shelfMark": [
-                "*OKM 97-3015"
               ],
               "catalogItemType": [
                 {
@@ -3925,7 +4801,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3933,6 +4809,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3960,8 +4839,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Caracuvatimāl] Nūlnilaiyak kaurava kāriyatarici S. Kōpālaiyaravarkaḷ,"
+            "Caracuvatimāl] Nūlnilaiyak kaurava kāriyatarici S. Kōpālaiyaravarkaḷ"
           ],
           "language": [
             {
@@ -3969,11 +4854,14 @@
               "label": "Tamil"
             }
           ],
-          "dateEndString": [
-            "1963"
+          "numItemsTotal": [
+            2
           ],
           "createdYear": [
             1961
+          ],
+          "dateEndString": [
+            "1963"
           ],
           "type": [
             "nypl:Item"
@@ -3984,6 +4872,9 @@
           "shelfMark": [
             "*OKOK 81-2812"
           ],
+          "numItemVolumesParsed": [
+            2
+          ],
           "createdString": [
             "1961"
           ],
@@ -3992,6 +4883,9 @@
           ],
           "seriesStatement": [
             "Tañcai Caracuvati Māl. Veḷiyīṭu eṇ 91, 100"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Ativira Rama Pandian, active 1562.",
@@ -4012,7 +4906,22 @@
             {
               "type": "bf:Lccn",
               "value": "sa 65009124"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000416-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100416"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200460"
             }
+          ],
+          "idOclc": [
+            "NYPG001000416-B"
           ],
           "uniformTitle": [
             "Puranas. Kūrmapurāṇa. Tamil"
@@ -4020,13 +4929,19 @@
           "dateEndYear": [
             1963
           ],
-          "updatedAt": 1536782423539,
+          "updatedAt": 1674870762646,
           "publicationStatement": [
             "[Tañcai, Caracuvatimāl] Nūlnilaiyak kaurava kāriyatarici S. Kōpālaiyaravarkaḷ, 1961-1963."
           ],
           "identifier": [
             "urn:bnum:10000461",
-            "urn:lccn:sa 65009124"
+            "urn:lccn:sa 65009124",
+            "urn:oclc:NYPG001000416-B",
+            "urn:undefined:NNSZ00100416",
+            "urn:undefined:(WaOLN)nyp0200460"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4063,7 +4978,11 @@
             2
           ],
           "placeOfPublication": [
-            "[Tañcai,"
+            "[Tañcai"
+          ],
+          "titleAlt": [
+            "Puranas. Kūrmapurāṇa.",
+            "Kūrma Purāṇa."
           ],
           "issuance": [
             {
@@ -4071,32 +4990,39 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Kūrma Purāṇa.",
-            "Puranas. Kūrmapurāṇa."
-          ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433058648969"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058648969"
-                }
+              "physicalLocation": [
+                "*OKOK 81-2812"
               ],
               "accessMessage": [
                 {
                   "id": "accessMessage:1",
                   "label": "Use in library"
                 }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783890",
+              "shelfMark": [
+                "*OKOK 81-2812 v. 1"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 81-2812 v. 1"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058648969"
+                }
+              ],
+              "enumerationChronology": [
+                "v. 1"
               ],
               "idBarcode": [
                 "33433058648969"
@@ -4104,10 +5030,6 @@
               "requestable": [
                 false
               ],
-              "uri": "i13783890",
-              "shelfMark": [
-                "*OKOK 81-2812"
-              ],
               "catalogItemType": [
                 {
                   "id": "catalogItemType:55",
@@ -4117,7 +5039,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4125,23 +5047,23 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "volumeRange": [
+                {
+                  "gte": 1,
+                  "lte": 1
+                }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             },
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433058648977"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058648977"
-                }
+              "physicalLocation": [
+                "*OKOK 81-2812"
               ],
               "accessMessage": [
                 {
@@ -4149,15 +5071,31 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783891",
+              "shelfMark": [
+                "*OKOK 81-2812 v. 2"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKOK 81-2812 v. 2"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058648977"
+                }
+              ],
+              "enumerationChronology": [
+                "v. 2"
+              ],
               "idBarcode": [
                 "33433058648977"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783891",
-              "shelfMark": [
-                "*OKOK 81-2812"
               ],
               "catalogItemType": [
                 {
@@ -4168,7 +5106,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4176,6 +5114,15 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "volumeRange": [
+                {
+                  "gte": 2,
+                  "lte": 2
+                }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4213,8 +5160,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Ahiṃsā"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Sohanalāla Jainadharma Pracāraka Samiti; prāpti-sthāna: Pārśvanātha Vidyāśrama Śodha Saṃsthāna, Vārāṇasī"
@@ -4224,6 +5177,9 @@
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -4237,6 +5193,9 @@
           "shelfMark": [
             "*OLX 83-155"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Sinha, Bashistha Narayan, 1935-"
           ],
@@ -4248,6 +5207,9 @@
           ],
           "seriesStatement": [
             "Pārśvanātha Vidyāśrama granthamālā, 17"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1972
@@ -4264,15 +5226,36 @@
             {
               "type": "bf:Lccn",
               "value": "73900921"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000423-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100423"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200467"
             }
           ],
-          "updatedAt": 1536782417144,
+          "idOclc": [
+            "NYPG001000423-B"
+          ],
+          "updatedAt": 1674870767447,
           "publicationStatement": [
             "Amrtasara, Sohanalāla Jainadharma Pracāraka Samiti; prāpti-sthāna: Pārśvanātha Vidyāśrama Śodha Saṃsthāna, Vārāṇasī [1972]"
           ],
           "identifier": [
             "urn:bnum:10000468",
-            "urn:lccn:73900921"
+            "urn:lccn:73900921",
+            "urn:oclc:NYPG001000423-B",
+            "urn:undefined:NNSZ00100423",
+            "urn:undefined:(WaOLN)nyp0200467"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4312,7 +5295,7 @@
             1
           ],
           "placeOfPublication": [
-            "Amrtasara,"
+            "Amrtasara"
           ],
           "issuance": [
             {
@@ -4322,14 +5305,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060359332"
+              ],
+              "physicalLocation": [
+                "*OLX 83-155"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783893",
+              "shelfMark": [
+                "*OLX 83-155"
               ],
               "identifierV2": [
                 {
@@ -4341,21 +5334,11 @@
                   "value": "33433060359332"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060359332"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783893",
-              "shelfMark": [
-                "*OLX 83-155"
               ],
               "catalogItemType": [
                 {
@@ -4366,7 +5349,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4374,6 +5357,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4411,12 +5397,18 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Islamic Empire",
             "Islamic Empire -- Description and travel"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "AMS Press,"
+            "AMS Press"
           ],
           "language": [
             {
@@ -4424,11 +5416,14 @@
               "label": "Arabic"
             }
           ],
-          "dateEndString": [
-            "1907"
+          "numItemsTotal": [
+            3
           ],
           "createdYear": [
             1973
+          ],
+          "dateEndString": [
+            "1907"
           ],
           "type": [
             "nypl:Item"
@@ -4439,6 +5434,9 @@
           "shelfMark": [
             "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Ibn Jubayr, Muḥammad ibn Aḥmad, 1145-1217."
           ],
@@ -4448,9 +5446,12 @@
           "idLccn": [
             "77173005"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Goeje, M. J. de (Michael Jan), 1836-1909.",
-            "Wright, William, 1830-1889."
+            "Wright, William, 1830-1889.",
+            "Goeje, M. J. de (Michael Jan), 1836-1909."
           ],
           "dateStartYear": [
             1973
@@ -4467,7 +5468,22 @@
             {
               "type": "bf:Lccn",
               "value": "77173005"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000036-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200636"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200626"
             }
+          ],
+          "idOclc": [
+            "NYPG002000036-B"
           ],
           "uniformTitle": [
             "\"E.J.W. Gibb memorial\" series ; v.5."
@@ -4475,13 +5491,19 @@
           "dateEndYear": [
             1907
           ],
-          "updatedAt": 1616647495677,
+          "updatedAt": 1674870762646,
           "publicationStatement": [
             "[New York, AMS Press, 1973] 1907."
           ],
           "identifier": [
             "urn:bnum:10000627",
-            "urn:lccn:77173005"
+            "urn:lccn:77173005",
+            "urn:oclc:NYPG002000036-B",
+            "urn:undefined:NNSZ00200636",
+            "urn:undefined:(WaOLN)nyp0200626"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4521,7 +5543,10 @@
             3
           ],
           "placeOfPublication": [
-            "[New York,"
+            "[New York"
+          ],
+          "titleAlt": [
+            "Travels of Ibn Jubayr."
           ],
           "issuance": [
             {
@@ -4529,13 +5554,93 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Travels of Ibn Jubayr."
-          ],
           "items": [
+            {
+              "owner": [
+                {
+                  "id": "orgs:1000",
+                  "label": "Stephen A. Schwarzman Building"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433115326104"
+              ],
+              "physicalLocation": [
+                "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:u",
+                  "label": "Supervised use"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i31207836",
+              "shelfMark": [
+                "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433115326104"
+                }
+              ],
+              "idBarcode": [
+                "33433115326104"
+              ],
+              "requestable": [
+                true
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:66",
+                  "label": "book, poor condition, non-MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rc2ma",
+                  "label": "Offsite"
+                }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
+              ]
+            },
             {
               "identifier": [
                 "urn:barcode:33433096515220"
+              ],
+              "physicalLocation": [
+                "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000365",
+              "shelfMark": [
+                "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
               ],
               "identifierV2": [
                 {
@@ -4547,21 +5652,11 @@
                   "value": "33433096515220"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433096515220"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i10000365",
-              "shelfMark": [
-                "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
               ],
               "catalogItemType": [
                 {
@@ -4580,61 +5675,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
               ],
-              "identifier": [
-                "urn:barcode:33433115326104"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433115326104"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:u",
-                  "label": "Supervised use"
-                }
-              ],
-              "idBarcode": [
-                "33433115326104"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i31207836",
-              "shelfMark": [
-                "*OAC (\"E. J. W. Gibb memorial\" series. v. 5)"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:66",
-                  "label": "book, poor condition, non-MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
+              "formatLiteral": [
+                "Text"
               ]
             },
             {
@@ -4647,6 +5690,22 @@
               "identifier": [
                 "urn:barcode:33433014525079"
               ],
+              "physicalLocation": [
+                "*OFV 87-659"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000366",
+              "shelfMark": [
+                "*OFV 87-659"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4657,21 +5716,11 @@
                   "value": "33433014525079"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433014525079"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000366",
-              "shelfMark": [
-                "*OFV 87-659"
               ],
               "catalogItemType": [
                 {
@@ -4690,6 +5739,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4732,18 +5787,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Historical drama, Sanskrit",
             "Historical drama, Sanskrit -- History and criticism"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Devanāgara Prakāśana,"
+            "Devanāgara Prakāśana"
           ],
           "language": [
             {
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1974
@@ -4757,6 +5821,9 @@
           "shelfMark": [
             "*OKB 83.388"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Sharma, Shyama."
           ],
@@ -4765,6 +5832,9 @@
           ],
           "idLccn": [
             "75900847"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1974
@@ -4781,15 +5851,36 @@
             {
               "type": "bf:Lccn",
               "value": "75900847"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000037-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200637"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200627"
             }
           ],
-          "updatedAt": 1536782425029,
+          "idOclc": [
+            "NYPG002000037-B"
+          ],
+          "updatedAt": 1674870772746,
           "publicationStatement": [
             "Jayapura : Devanāgara Prakāśana, [1974]"
           ],
           "identifier": [
             "urn:bnum:10000628",
-            "urn:lccn:75900847"
+            "urn:lccn:75900847",
+            "urn:oclc:NYPG002000037-B",
+            "urn:undefined:NNSZ00200637",
+            "urn:undefined:(WaOLN)nyp0200627"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4829,7 +5920,7 @@
             1
           ],
           "placeOfPublication": [
-            "Jayapura :"
+            "Jayapura"
           ],
           "issuance": [
             {
@@ -4842,11 +5933,8 @@
               "identifier": [
                 "urn:barcode:33433058548284"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058548284"
-                }
+              "physicalLocation": [
+                "*OKB 83.388"
               ],
               "accessMessage": [
                 {
@@ -4854,15 +5942,28 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858062",
+              "shelfMark": [
+                "*OKB 83.388"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKB 83.388"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058548284"
+                }
+              ],
               "idBarcode": [
                 "33433058548284"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i12858062",
-              "shelfMark": [
-                "*OKB 83.388"
               ],
               "catalogItemType": [
                 {
@@ -4873,7 +5974,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4881,6 +5982,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4913,20 +6017,29 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Bhakti in literature",
+            "Rāma (Hindu deity) in literature",
             "Indic literature",
             "Indic literature -- History and criticism",
-            "Rāma (Hindu deity) in literature"
+            "Bhakti in literature"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Hindī Vibhāga, Kalakattā Viśvavidyālaya ke lie Hindī Pustaka Ejensī,"
+            "Hindī Vibhāga, Kalakattā Viśvavidyālaya ke lie Hindī Pustaka Ejensī"
           ],
           "language": [
             {
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1974
@@ -4940,6 +6053,9 @@
           "shelfMark": [
             "*OLY 83-185"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Siṃha, Bhagavatī Prasāda."
           ],
@@ -4951,6 +6067,9 @@
           ],
           "seriesStatement": [
             "Śrīghanaśyāmadāsa Biṛalā Hindī vyākhyānamālā; 1972"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1974
@@ -4969,6 +6088,10 @@
               "value": "75900873"
             },
             {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000039-B"
+            },
+            {
               "type": "bf:Identifier",
               "value": "NNSZ00200639"
             },
@@ -4977,15 +6100,22 @@
               "value": "(WaOLN)nyp0200629"
             }
           ],
-          "updatedAt": 1559577822636,
+          "idOclc": [
+            "NYPG002000039-B"
+          ],
+          "updatedAt": 1674870762646,
           "publicationStatement": [
             "Kalakattā : Hindī Vibhāga, Kalakattā Viśvavidyālaya ke lie Hindī Pustaka Ejensī, 1974."
           ],
           "identifier": [
             "urn:bnum:10000630",
             "urn:lccn:75900873",
+            "urn:oclc:NYPG002000039-B",
             "urn:undefined:NNSZ00200639",
             "urn:undefined:(WaOLN)nyp0200629"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5009,9 +6139,9 @@
             }
           ],
           "subjectLiteral": [
-            "Bhakti in literature.",
+            "Rāma (Hindu deity) in literature.",
             "Indic literature -- History and criticism.",
-            "Rāma (Hindu deity) in literature."
+            "Bhakti in literature."
           ],
           "titleDisplay": [
             "Rāmabhakti, paramparā aura sāhitya / vyākhyātā Bhagavatī Prasāda Siṃha."
@@ -5027,7 +6157,7 @@
             1
           ],
           "placeOfPublication": [
-            "Kalakattā :"
+            "Kalakattā"
           ],
           "issuance": [
             {
@@ -5040,6 +6170,22 @@
               "identifier": [
                 "urn:barcode:33433060417874"
               ],
+              "physicalLocation": [
+                "*OLY 83-185"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783898",
+              "shelfMark": [
+                "*OLY 83-185"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -5050,21 +6196,11 @@
                   "value": "33433060417874"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417874"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783898",
-              "shelfMark": [
-                "*OLY 83-185"
               ],
               "catalogItemType": [
                 {
@@ -5075,7 +6211,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5083,6 +6219,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5120,17 +6259,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Mahāvīra"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Jaina Viśva Bhāratī Prakāśana,"
+            "Jaina Viśva Bhāratī Prakāśana"
           ],
           "language": [
             {
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1974
@@ -5144,6 +6292,9 @@
           "shelfMark": [
             "*OLX 83-353"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Nathamal, Muni, 1920-"
           ],
@@ -5152,6 +6303,9 @@
           ],
           "idLccn": [
             "75900818"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1974
@@ -5168,15 +6322,36 @@
             {
               "type": "bf:Lccn",
               "value": "75900818"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000056-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200656"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200646"
             }
           ],
-          "updatedAt": 1536782424418,
+          "idOclc": [
+            "NYPG002000056-B"
+          ],
+          "updatedAt": 1674870772746,
           "publicationStatement": [
             "Lāḍnūṃ : Jaina Viśva Bhāratī Prakāśana, 1974."
           ],
           "identifier": [
             "urn:bnum:10000647",
-            "urn:lccn:75900818"
+            "urn:lccn:75900818",
+            "urn:oclc:NYPG002000056-B",
+            "urn:undefined:NNSZ00200656",
+            "urn:undefined:(WaOLN)nyp0200646"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5216,7 +6391,7 @@
             1
           ],
           "placeOfPublication": [
-            "Lāḍnūṃ :"
+            "Lāḍnūṃ"
           ],
           "issuance": [
             {
@@ -5226,14 +6401,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060359365"
+              ],
+              "physicalLocation": [
+                "*OLX 83-353"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783899",
+              "shelfMark": [
+                "*OLX 83-353"
               ],
               "identifierV2": [
                 {
@@ -5245,21 +6430,11 @@
                   "value": "33433060359365"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060359365"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783899",
-              "shelfMark": [
-                "*OLX 83-353"
               ],
               "catalogItemType": [
                 {
@@ -5270,7 +6445,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5278,6 +6453,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5305,8 +6483,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sokappadu, Ramanaidoo"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Tapovanam Pub. House"
@@ -5316,6 +6500,9 @@
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1965
@@ -5329,14 +6516,20 @@
           "shelfMark": [
             "*OLY 83-374"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1965"
           ],
           "idLccn": [
             "sa 68001969"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Vimalananda, Swami. and tr."
+            "Vimalananda, Swami."
           ],
           "dateStartYear": [
             1965
@@ -5353,18 +6546,39 @@
             {
               "type": "bf:Lccn",
               "value": "sa 68001969"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000063-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200663"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200653"
             }
+          ],
+          "idOclc": [
+            "NYPG002000063-B"
           ],
           "uniformTitle": [
             "Viṣṇusahasranāma."
           ],
-          "updatedAt": 1536782425252,
+          "updatedAt": 1674870767447,
           "publicationStatement": [
             "Tirupparaitturai; Tapovanam Pub. House [1965]"
           ],
           "identifier": [
             "urn:bnum:10000654",
-            "urn:lccn:sa 68001969"
+            "urn:lccn:sa 68001969",
+            "urn:oclc:NYPG002000063-B",
+            "urn:undefined:NNSZ00200663",
+            "urn:undefined:(WaOLN)nyp0200653"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5406,26 +6620,36 @@
           "placeOfPublication": [
             "Tirupparaitturai;"
           ],
+          "titleAlt": [
+            "Vishnu sahasranama stotram.",
+            "Viṣṇusahasranāmastotram."
+          ],
           "issuance": [
             {
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Vishnu sahasranama stotram.",
-            "Viṣṇusahasranāmastotram."
-          ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060417890"
+              ],
+              "physicalLocation": [
+                "*OLY 83-374"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783901",
+              "shelfMark": [
+                "*OLY 83-374"
               ],
               "identifierV2": [
                 {
@@ -5437,21 +6661,11 @@
                   "value": "33433060417890"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417890"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783901",
-              "shelfMark": [
-                "*OLY 83-374"
               ],
               "catalogItemType": [
                 {
@@ -5462,7 +6676,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5470,6 +6684,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5512,9 +6729,15 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Vaishnavism",
             "Vaishnavism -- Poetry"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "kiṭaikkumiṭam Krantamālā Āpīs]"
@@ -5524,6 +6747,9 @@
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -5537,6 +6763,9 @@
           "shelfMark": [
             "*OLY 83-2976"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Maṇavāḷa Māmuṉi, 1370-1444."
           ],
@@ -5546,9 +6775,12 @@
           "idLccn": [
             "73906525"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Annangaracharya, Prativadi Bhayankara, Swami, 1891-",
-            "Maṇavāḷa Māmuṉi, 1370-1444."
+            "Maṇavāḷa Māmuṉi, 1370-1444.",
+            "Annangaracharya, Prativadi Bhayankara, Swami, 1891-"
           ],
           "dateStartYear": [
             1970
@@ -5565,18 +6797,39 @@
             {
               "type": "bf:Lccn",
               "value": "73906525"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000146-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200746"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200736"
             }
+          ],
+          "idOclc": [
+            "NYPG002000146-B"
           ],
           "uniformTitle": [
             "Upatēcarattiṉamālai"
           ],
-          "updatedAt": 1536782428598,
+          "updatedAt": 1674870779642,
           "publicationStatement": [
             "[Kāñcīpuram, kiṭaikkumiṭam Krantamālā Āpīs] 1970."
           ],
           "identifier": [
             "urn:bnum:10000737",
-            "urn:lccn:73906525"
+            "urn:lccn:73906525",
+            "urn:oclc:NYPG002000146-B",
+            "urn:undefined:NNSZ00200746",
+            "urn:undefined:(WaOLN)nyp0200736"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5616,7 +6869,10 @@
             1
           ],
           "placeOfPublication": [
-            "[Kāñcīpuram,"
+            "[Kāñcīpuram"
+          ],
+          "titleAlt": [
+            "Upatēcarattiṉamālai"
           ],
           "issuance": [
             {
@@ -5624,13 +6880,26 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Upatēcarattiṉamālai"
-          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433060418666"
+              ],
+              "physicalLocation": [
+                "*OLY 83-2976"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783922",
+              "shelfMark": [
+                "*OLY 83-2976"
               ],
               "identifierV2": [
                 {
@@ -5642,21 +6911,11 @@
                   "value": "33433060418666"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060418666"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783922",
-              "shelfMark": [
-                "*OLY 83-2976"
               ],
               "catalogItemType": [
                 {
@@ -5667,7 +6926,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5675,6 +6934,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5707,6 +6969,12 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
             "Gītā Presa"
           ],
@@ -5715,6 +6983,9 @@
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "dateEndString": [
             "1967"
@@ -5731,11 +7002,17 @@
           "shelfMark": [
             "*OKLB 83-2978"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1966"
           ],
           "idLccn": [
             "sa 68015169"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Saṅkarācārya."
@@ -5755,7 +7032,22 @@
             {
               "type": "bf:Lccn",
               "value": "sa 68015169"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000148-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200748"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200738"
             }
+          ],
+          "idOclc": [
+            "NYPG002000148-B"
           ],
           "uniformTitle": [
             "Upanishads. Chāndogyopaniṣad."
@@ -5763,13 +7055,19 @@
           "dateEndYear": [
             1967
           ],
-          "updatedAt": 1536782425029,
+          "updatedAt": 1674870777259,
           "publicationStatement": [
             "Gorakhapura, Gītā Presa [1966 or 7]"
           ],
           "identifier": [
             "urn:bnum:10000739",
-            "urn:lccn:sa 68015169"
+            "urn:lccn:sa 68015169",
+            "urn:oclc:NYPG002000148-B",
+            "urn:undefined:NNSZ00200748",
+            "urn:undefined:(WaOLN)nyp0200738"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5806,7 +7104,7 @@
             1
           ],
           "placeOfPublication": [
-            "Gorakhapura,"
+            "Gorakhapura"
           ],
           "issuance": [
             {
@@ -5816,20 +7114,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433058574710"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058574710"
-                }
+              "physicalLocation": [
+                "*OKLB 83-2978"
               ],
               "accessMessage": [
                 {
@@ -5837,15 +7126,28 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783923",
+              "shelfMark": [
+                "*OKLB 83-2978"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKLB 83-2978"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058574710"
+                }
+              ],
               "idBarcode": [
                 "33433058574710"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783923",
-              "shelfMark": [
-                "*OKLB 83-2978"
               ],
               "catalogItemType": [
                 {
@@ -5856,7 +7158,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5864,6 +7166,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5896,18 +7201,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Kampar, active 9th century",
             "Vālmīki"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Es. Sukumār; kiṭaikkumiṭam Pāri Nilaiyam, Ceṉṉai,"
+            "Es. Sukumār; kiṭaikkumiṭam Pāri Nilaiyam, Ceṉṉai"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1971
@@ -5921,6 +7235,9 @@
           "shelfMark": [
             "*OLY 82-1781"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Srinivasan, K. S. (Karur Soundara), 1920-"
           ],
@@ -5929,6 +7246,9 @@
           ],
           "idLccn": [
             "72904732"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1971
@@ -5945,15 +7265,36 @@
             {
               "type": "bf:Lccn",
               "value": "72904732"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000204-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200804"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200794"
             }
           ],
-          "updatedAt": 1536782428905,
+          "idOclc": [
+            "NYPG002000204-B"
+          ],
+          "updatedAt": 1674870779642,
           "publicationStatement": [
             "[Putu Tilli, Es. Sukumār; kiṭaikkumiṭam Pāri Nilaiyam, Ceṉṉai, 1971]"
           ],
           "identifier": [
             "urn:bnum:10000795",
-            "urn:lccn:72904732"
+            "urn:lccn:72904732",
+            "urn:oclc:NYPG002000204-B",
+            "urn:undefined:NNSZ00200804",
+            "urn:undefined:(WaOLN)nyp0200794"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5994,7 +7335,7 @@
             1
           ],
           "placeOfPublication": [
-            "[Putu Tilli,"
+            "[Putu Tilli"
           ],
           "issuance": [
             {
@@ -6004,14 +7345,24 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060417288"
+              ],
+              "physicalLocation": [
+                "*OLY 82-1781"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783961",
+              "shelfMark": [
+                "*OLY 82-1781"
               ],
               "identifierV2": [
                 {
@@ -6023,21 +7374,11 @@
                   "value": "33433060417288"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417288"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783961",
-              "shelfMark": [
-                "*OLY 82-1781"
               ],
               "catalogItemType": [
                 {
@@ -6048,7 +7389,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6056,6 +7397,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6088,17 +7432,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Muḥammad, Prophet, -632"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "al-Azhar, Majmaʻal-Buḥūth al-Islāmīyah,"
+            "al-Azhar, Majmaʻal-Buḥūth al-Islāmīyah"
           ],
           "language": [
             {
               "id": "lang:ara",
               "label": "Arabic"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1969
@@ -6112,6 +7465,9 @@
           "shelfMark": [
             "*OGE 82-2828"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Maḥmūd, ʻAbd al-Ḥalīm."
           ],
@@ -6123,6 +7479,9 @@
           ],
           "seriesStatement": [
             "Silsilat al-buḥūth al-Islāmīyah, al-kitāb 1"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1969
@@ -6139,15 +7498,36 @@
             {
               "type": "bf:Lccn",
               "value": "76960922"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000227-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200827"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200817"
             }
           ],
-          "updatedAt": 1536782425252,
+          "idOclc": [
+            "NYPG002000227-B"
+          ],
+          "updatedAt": 1674870777259,
           "publicationStatement": [
             "[al-Qāhirah] al-Azhar, Majmaʻal-Buḥūth al-Islāmīyah, 1969."
           ],
           "identifier": [
             "urn:bnum:10000818",
-            "urn:lccn:76960922"
+            "urn:lccn:76960922",
+            "urn:oclc:NYPG002000227-B",
+            "urn:undefined:NNSZ00200827",
+            "urn:undefined:(WaOLN)nyp0200817"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6197,20 +7577,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433057993358"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433057993358"
-                }
+              "physicalLocation": [
+                "*OGE 82-2828"
               ],
               "accessMessage": [
                 {
@@ -6218,15 +7589,28 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858070",
+              "shelfMark": [
+                "*OGE 82-2828"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OGE 82-2828"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433057993358"
+                }
+              ],
               "idBarcode": [
                 "33433057993358"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i12858070",
-              "shelfMark": [
-                "*OGE 82-2828"
               ],
               "catalogItemType": [
                 {
@@ -6237,7 +7621,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6245,6 +7629,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6272,8 +7659,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Tulasīdāsa, 1532-1623"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Granthama"
@@ -6283,6 +7676,9 @@
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -6296,6 +7692,9 @@
           "shelfMark": [
             "*OLY 83-31"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Sharma, Munshi Ram, 1901-"
           ],
@@ -6304,6 +7703,9 @@
           ],
           "idLccn": [
             "72901165"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1972
@@ -6320,15 +7722,36 @@
             {
               "type": "bf:Lccn",
               "value": "72901165"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000322-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00200922"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200911"
             }
           ],
-          "updatedAt": 1536782428002,
+          "idOclc": [
+            "NYPG002000322-B"
+          ],
+          "updatedAt": 1674870783590,
           "publicationStatement": [
             "Kānapura, Granthama [1972]"
           ],
           "identifier": [
             "urn:bnum:10000912",
-            "urn:lccn:72901165"
+            "urn:lccn:72901165",
+            "urn:oclc:NYPG002000322-B",
+            "urn:undefined:NNSZ00200922",
+            "urn:undefined:(WaOLN)nyp0200911"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6368,7 +7791,7 @@
             1
           ],
           "placeOfPublication": [
-            "Kānapura,"
+            "Kānapura"
           ],
           "issuance": [
             {
@@ -6381,6 +7804,22 @@
               "identifier": [
                 "urn:barcode:33433060417726"
               ],
+              "physicalLocation": [
+                "*OLY 83-31"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783983",
+              "shelfMark": [
+                "*OLY 83-31"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -6391,21 +7830,11 @@
                   "value": "33433060417726"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433060417726"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783983",
-              "shelfMark": [
-                "*OLY 83-31"
               ],
               "catalogItemType": [
                 {
@@ -6416,7 +7845,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6424,6 +7853,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6450,6 +7882,9 @@
               "label": "In Tamil, foreword in English.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Cēsatri, Swami, 1870-1929",
@@ -6501,15 +7936,25 @@
             {
               "type": "bf:Lccn",
               "value": "76902259"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201039"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201028"
             }
           ],
-          "updatedAt": 1523471274960,
+          "updatedAt": 1636139596240,
           "publicationStatement": [
             "Kōyamputtūr : Srī Satkuru Cēsātri Svāmikaḷ Matyasta Pracārasapā, 1975."
           ],
           "identifier": [
             "urn:bnum:10001029",
-            "urn:lccn:76902259"
+            "urn:lccn:76902259",
+            "urn:undefined:NNSZ00201039",
+            "urn:undefined:(WaOLN)nyp0201028"
           ],
           "materialType": [
             {
@@ -6560,14 +8005,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060419664"
+              ],
+              "physicalLocation": [
+                "*OLY 83-4924"
               ],
               "identifierV2": [
                 {
@@ -6604,7 +8046,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6649,8 +8091,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Buddhist logic"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Prācya Prakāśana"
@@ -6660,6 +8108,9 @@
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1969
@@ -6673,6 +8124,9 @@
           "shelfMark": [
             "*OLWF 83-4679"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Mokṣākara Gupta."
           ],
@@ -6682,9 +8136,12 @@
           "idLccn": [
             "71901168"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Giri, Ragunath. and tr.",
-            "Jitāri, active 940-980."
+            "Jitāri, active 940-980.",
+            "Giri, Ragunath."
           ],
           "dateStartYear": [
             1969
@@ -6701,15 +8158,36 @@
             {
               "type": "bf:Lccn",
               "value": "71901168"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002000452-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201052"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201041"
             }
           ],
-          "updatedAt": 1523471271458,
+          "idOclc": [
+            "NYPG002000452-B"
+          ],
+          "updatedAt": 1673986529749,
           "publicationStatement": [
             "Vārāṇasī, Prācya Prakāśana [1969]"
           ],
           "identifier": [
             "urn:bnum:10001042",
-            "urn:lccn:71901168"
+            "urn:lccn:71901168",
+            "urn:oclc:NYPG002000452-B",
+            "urn:undefined:NNSZ00201052",
+            "urn:undefined:(WaOLN)nyp0201041"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6749,7 +8227,12 @@
             1
           ],
           "placeOfPublication": [
-            "Vārāṇasī,"
+            "Vārāṇasī"
+          ],
+          "titleAlt": [
+            "Bauddha-tarkabhāṣā.",
+            "Tarkabhasha.",
+            "Anekantavadanirasa."
           ],
           "issuance": [
             {
@@ -6757,27 +8240,13 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Anekantavadanirasa.",
-            "Bauddha-tarkabhāṣā.",
-            "Tarkabhasha."
-          ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433059862981"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433059862981"
-                }
+              "physicalLocation": [
+                "*OLWF 83-4679"
               ],
               "accessMessage": [
                 {
@@ -6785,15 +8254,28 @@
                   "label": "Use in library"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783998",
+              "shelfMark": [
+                "*OLWF 83-4679"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OLWF 83-4679"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433059862981"
+                }
+              ],
               "idBarcode": [
                 "33433059862981"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783998",
-              "shelfMark": [
-                "*OLWF 83-4679"
               ],
               "catalogItemType": [
                 {
@@ -6804,7 +8286,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6812,6 +8294,9 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6843,6 +8328,9 @@
               "label": "Text in Sanskrit; prefatory matter in Hindi.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Jaina logic"
@@ -6895,18 +8383,28 @@
             {
               "type": "bf:Lccn",
               "value": "76902374"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201094"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201082"
             }
           ],
           "dateEndYear": [
             1975
           ],
-          "updatedAt": 1523471281939,
+          "updatedAt": 1636143035644,
           "publicationStatement": [
             "Pindabāṛā : Bhāratīya Prācyatatva-Prakāśana Samiti ; Ȧhamadābāda : prāptisthāna, Śā. Ramaṇala Vajecanda, Vikrama Saṃ 2031 [1974 or 1975]"
           ],
           "identifier": [
             "urn:bnum:10001083",
-            "urn:lccn:76902374"
+            "urn:lccn:76902374",
+            "urn:undefined:NNSZ00201094",
+            "urn:undefined:(WaOLN)nyp0201082"
           ],
           "materialType": [
             {
@@ -6956,14 +8454,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060359589"
+              ],
+              "physicalLocation": [
+                "*OLX 84-289"
               ],
               "identifierV2": [
                 {
@@ -7000,7 +8495,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7027,6 +8522,9 @@
         "_source": {
           "extent": [
             "2 v. : ports. ;"
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Church history",
@@ -7074,14 +8572,24 @@
             {
               "type": "nypl:Bnumber",
               "value": "10001094"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201106"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201093"
             }
           ],
-          "updatedAt": 1523471271135,
+          "updatedAt": 1636072387033,
           "publicationStatement": [
             "[S.l.] : Maktabat al-Maḥabbah, 1964"
           ],
           "identifier": [
-            "urn:bnum:10001094"
+            "urn:bnum:10001094",
+            "urn:undefined:NNSZ00201106",
+            "urn:undefined:(WaOLN)nyp0201093"
           ],
           "materialType": [
             {
@@ -7129,63 +8637,6 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433017339361"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433017339361"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
-              "idBarcode": [
-                "33433017339361"
-              ],
-              "requestable": [
-                false
-              ],
-              "uri": "i11900431",
-              "shelfMark": [
-                "*OCF 81-3103"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:mal92",
-                  "label": "Schwarzman Building M2 - General Research Room 315"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433017339353"
               ],
@@ -7220,7 +8671,52 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:mal92",
+                  "label": "Schwarzman Building M2 - General Research Room 315"
+                }
+              ]
+            },
+            {
+              "identifier": [
+                "urn:barcode:33433017339361"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433017339361"
+                }
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "idBarcode": [
+                "33433017339361"
+              ],
+              "requestable": [
+                false
+              ],
+              "uri": "i11900431",
+              "shelfMark": [
+                "*OCF 81-3103"
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:55",
+                  "label": "book, limited circ, MaRLI"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7254,6 +8750,9 @@
               "label": "In Arabic.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Muḥammad, Prophet, -632",
@@ -7304,15 +8803,25 @@
             {
               "type": "bf:Lccn",
               "value": "74960195"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201124"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201111"
             }
           ],
-          "updatedAt": 1523471281901,
+          "updatedAt": 1636072366534,
           "publicationStatement": [
             "[al. Qāhirah] : Mukhtār Abū al-ʻAzāʼim, [1973]"
           ],
           "identifier": [
             "urn:bnum:10001112",
-            "urn:lccn:74960195"
+            "urn:lccn:74960195",
+            "urn:undefined:NNSZ00201124",
+            "urn:undefined:(WaOLN)nyp0201111"
           ],
           "materialType": [
             {
@@ -7396,7 +8905,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7431,6 +8940,9 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Music, Oriental",
             "Music, Oriental -- History and criticism"
@@ -7462,6 +8974,9 @@
           "idLccn": [
             "ne 66001433 /MN"
           ],
+          "contributorLiteral": [
+            "Otto Kinkeldey Memorial Collection."
+          ],
           "dateStartYear": [
             1950
           ],
@@ -7477,15 +8992,25 @@
             {
               "type": "bf:Lccn",
               "value": "ne 66001433 /MN"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201177"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201163"
             }
           ],
-          "updatedAt": 1523471271458,
+          "updatedAt": 1637345506387,
           "publicationStatement": [
             "Dimashq [1950]"
           ],
           "identifier": [
             "urn:bnum:10001164",
-            "urn:lccn:ne 66001433 /MN"
+            "urn:lccn:ne 66001433 /MN",
+            "urn:undefined:NNSZ00201177",
+            "urn:undefined:(WaOLN)nyp0201163"
           ],
           "materialType": [
             {
@@ -7538,14 +9063,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433098691227"
+              ],
+              "physicalLocation": [
+                "*OG (Allawerdi. Falsafat al-mūsīqá al-Sharqīyah)"
               ],
               "identifierV2": [
                 {
@@ -7582,7 +9104,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7633,7 +9155,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7641,6 +9163,9 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
               ]
             }
           ],
@@ -7672,6 +9197,9 @@
               "label": "Bibliography: p. 313-320.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Chinese literature",
@@ -7723,15 +9251,20 @@
             {
               "type": "bf:Lccn",
               "value": "76838266"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201203"
             }
           ],
-          "updatedAt": 1525296779410,
+          "updatedAt": 1636140614104,
           "publicationStatement": [
             "[Taipei] : Wen jin chu ban she, Min'guo 64 [1975]"
           ],
           "identifier": [
             "urn:bnum:10001190",
-            "urn:lccn:76838266"
+            "urn:lccn:76838266",
+            "urn:undefined:NNSZ00201203"
           ],
           "materialType": [
             {
@@ -7783,6 +9316,9 @@
             {
               "identifier": [
                 "urn:barcode:33433011952243"
+              ],
+              "physicalLocation": [
+                "*OVK 82-796"
               ],
               "identifierV2": [
                 {
@@ -7859,6 +9395,9 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Krishna (Hindu deity)"
           ],
@@ -7920,7 +9459,7 @@
           "uniformTitle": [
             "Puranas. Bhāgavatapurāṇa. Malayalam."
           ],
-          "updatedAt": 1546556845576,
+          "updatedAt": 1636077703170,
           "publicationStatement": [
             "[Trśūr] : Kēraḷa Sāhitya Akkādami ; Kōṭṭayaṃ : vitaraṇaṃ, Nāṣanal Bukk Sṯāḷ, 1976."
           ],
@@ -7975,14 +9514,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060419870"
+              ],
+              "physicalLocation": [
+                "*OLY 84-598"
               ],
               "identifierV2": [
                 {
@@ -8019,7 +9555,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8054,11 +9590,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Ramana, Maharshi"
           ],
           "publisherLiteral": [
-            "Śivalāla Agravāla eṇḍa Kampanī,"
+            "Śivalāla Agravāla eṇḍa Kampanī"
           ],
           "language": [
             {
@@ -8098,14 +9637,24 @@
             {
               "type": "nypl:Bnumber",
               "value": "10001239"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201252"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201237"
             }
           ],
-          "updatedAt": 1523471277271,
+          "updatedAt": 1653404628484,
           "publicationStatement": [
             "Āgarā : Śivalāla Agravāla eṇḍa Kampanī, 1979."
           ],
           "identifier": [
-            "urn:bnum:10001239"
+            "urn:bnum:10001239",
+            "urn:undefined:NNSZ00201252",
+            "urn:undefined:(WaOLN)nyp0201237"
           ],
           "materialType": [
             {
@@ -8142,7 +9691,7 @@
             1
           ],
           "placeOfPublication": [
-            "Āgarā :"
+            "Āgarā"
           ],
           "issuance": [
             {
@@ -8152,14 +9701,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060417494"
+              ],
+              "physicalLocation": [
+                "*OLY 82-3982"
               ],
               "identifierV2": [
                 {
@@ -8196,7 +9742,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8241,6 +9787,9 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Advaita",
             "Bādarāyaṇa"
@@ -8267,7 +9816,7 @@
             "*OKN 84-1977"
           ],
           "creatorLiteral": [
-            "Rāmādvaya, 14th cent."
+            "Rāmādvaya, active 14th century."
           ],
           "createdString": [
             "1973"
@@ -8281,7 +9830,7 @@
           ],
           "contributorLiteral": [
             "Caturvedī, Rādheśyāma, 1940-",
-            "Rāmādvaya, 14th cent."
+            "Rāmādvaya, active 14th century."
           ],
           "dateStartYear": [
             1973
@@ -8298,18 +9847,28 @@
             {
               "type": "bf:Lccn",
               "value": "74903417"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201253"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201238"
             }
           ],
           "uniformTitle": [
             "Vedāntakaumudī. Hindi & Sanskrit."
           ],
-          "updatedAt": 1523471277101,
+          "updatedAt": 1641393543446,
           "publicationStatement": [
             "Vārāṇasī] Kāśī Hindū Viśvavidyālaya Śodhaprakáśana, 1973."
           ],
           "identifier": [
             "urn:bnum:10001240",
-            "urn:lccn:74903417"
+            "urn:lccn:74903417",
+            "urn:undefined:NNSZ00201253",
+            "urn:undefined:(WaOLN)nyp0201238"
           ],
           "materialType": [
             {
@@ -8397,7 +9956,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8431,6 +9990,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Hinduism",
@@ -8484,15 +10046,25 @@
             {
               "type": "bf:Lccn",
               "value": "73903976"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201324"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201308"
             }
           ],
-          "updatedAt": 1523471277271,
+          "updatedAt": 1636119343632,
           "publicationStatement": [
             "Karūr, Tirucci Māvaṭṭam, Tamiḻaṉ Nilaiyam [1971]"
           ],
           "identifier": [
             "urn:bnum:10001310",
-            "urn:lccn:73903976"
+            "urn:lccn:73903976",
+            "urn:undefined:NNSZ00201324",
+            "urn:undefined:(WaOLN)nyp0201308"
           ],
           "materialType": [
             {
@@ -8547,6 +10119,9 @@
               "identifier": [
                 "urn:barcode:33433060418260"
               ],
+              "physicalLocation": [
+                "*OLY 83-1642"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -8582,7 +10157,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8617,6 +10192,9 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Parvati (Hindu deity)",
             "Parvati (Hindu deity) -- Poetry"
@@ -8643,7 +10221,7 @@
             "*OLY 83-1631"
           ],
           "creatorLiteral": [
-            "Apirāmi Paṭṭar, 18th cent."
+            "Apirāmi Paṭṭar, active 18th century."
           ],
           "createdString": [
             "1968"
@@ -8672,15 +10250,25 @@
             {
               "type": "bf:Lccn",
               "value": "77904332"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201330"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201314"
             }
           ],
-          "updatedAt": 1523471284034,
+          "updatedAt": 1641330883378,
           "publicationStatement": [
             "Ceṉṉai, Amuta Nilaiyam [1968]"
           ],
           "identifier": [
             "urn:bnum:10001316",
-            "urn:lccn:77904332"
+            "urn:lccn:77904332",
+            "urn:undefined:NNSZ00201330",
+            "urn:undefined:(WaOLN)nyp0201314"
           ],
           "materialType": [
             {
@@ -8730,14 +10318,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060418252"
+              ],
+              "physicalLocation": [
+                "*OLY 83-1631"
               ],
               "identifierV2": [
                 {
@@ -8774,7 +10359,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8808,6 +10393,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Murugan (Hindu deity)",
@@ -8861,15 +10449,25 @@
             {
               "type": "bf:Lccn",
               "value": "77910693"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201367"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201349"
             }
           ],
-          "updatedAt": 1523471288916,
+          "updatedAt": 1636121455901,
           "publicationStatement": [
             "[Aṇṇāmalainakar : Vācuki Patippakam] ; Ceṉṉai : viṟpaṉai urimai, Pāri Nilaiyam, [1969]"
           ],
           "identifier": [
             "urn:bnum:10001351",
-            "urn:lccn:77910693"
+            "urn:lccn:77910693",
+            "urn:undefined:NNSZ00201367",
+            "urn:undefined:(WaOLN)nyp0201349"
           ],
           "materialType": [
             {
@@ -8916,14 +10514,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060419987"
+              ],
+              "physicalLocation": [
+                "*OLY 84-1362"
               ],
               "identifierV2": [
                 {
@@ -8960,7 +10555,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -8999,6 +10594,9 @@
               "label": "In Sanskrit.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Hinduism",
@@ -9066,7 +10664,7 @@
               "value": "(WaOLN)nyp0201372"
             }
           ],
-          "updatedAt": 1547835851410,
+          "updatedAt": 1636128327571,
           "publicationStatement": [
             "Vārāṇasyām, [Director, Research Institute, Varanaseya Sanskrit Vishvavidyalaya] 1885 tame Śakābde [1963]"
           ],
@@ -9127,6 +10725,9 @@
               "identifier": [
                 "urn:barcode:33433060417882"
               ],
+              "physicalLocation": [
+                "*OLY 83-204"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -9162,7 +10763,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -9196,6 +10797,9 @@
               "label": "In Tamil.",
               "type": "bf:Note"
             }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
             "Siva (Hindu deity)"
@@ -9245,18 +10849,28 @@
             {
               "type": "bf:Lccn",
               "value": "77904612"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201394"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201376"
             }
           ],
           "uniformTitle": [
             "Puranas. Liṅgapurāṇa. Tamil."
           ],
-          "updatedAt": 1523471278084,
+          "updatedAt": 1653404628484,
           "publicationStatement": [
             "Ceṉṉai, Vācu Piracuram [1969]"
           ],
           "identifier": [
             "urn:bnum:10001378",
-            "urn:lccn:77904612"
+            "urn:lccn:77904612",
+            "urn:undefined:NNSZ00201394",
+            "urn:undefined:(WaOLN)nyp0201376"
           ],
           "materialType": [
             {
@@ -9296,7 +10910,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -9306,14 +10920,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060418278"
+              ],
+              "physicalLocation": [
+                "*OLY 83-1666"
               ],
               "identifierV2": [
                 {
@@ -9350,7 +10961,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -9390,6 +11001,9 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Naya"
           ],
@@ -9409,7 +11023,7 @@
             "nypl:Item"
           ],
           "title": [
-            "ʻNa caʼ ratnamālikā; Svopajñanūtanālokaṭīkāsamvalitā,"
+            "ʻNa caʼ ratnamālikā; Svopajñanūtanālokaṭīkāsamvalitā"
           ],
           "shelfMark": [
             "*OKM 83-1701"
@@ -9444,15 +11058,25 @@
             {
               "type": "bf:Lccn",
               "value": "sa 68010892"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201395"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201377"
             }
           ],
-          "updatedAt": 1523471286134,
+          "updatedAt": 1653404628484,
           "publicationStatement": [
             "Vārāṇasyām [Director, Research Institute, Varanaseya Sanskrit Vishvavidyalaya; Prāptisthānam: Prakāśanavibhāgaḥ, Vārāṇaseyasaṃskṛta viśvavidyālayaḥ] 1887 tame śakābde [1965]"
           ],
           "identifier": [
             "urn:bnum:10001379",
-            "urn:lccn:sa 68010892"
+            "urn:lccn:sa 68010892",
+            "urn:undefined:NNSZ00201395",
+            "urn:undefined:(WaOLN)nyp0201377"
           ],
           "materialType": [
             {
@@ -9536,7 +11160,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -9581,11 +11205,14 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Parvati (Hindu deity)",
-            "Parvati (Hindu deity) -- Songs and music",
             "Songs, Tamil",
-            "Songs, Tamil -- Texts"
+            "Songs, Tamil -- Texts",
+            "Parvati (Hindu deity)",
+            "Parvati (Hindu deity) -- Songs and music"
           ],
           "language": [
             {
@@ -9632,15 +11259,25 @@
             {
               "type": "bf:Lccn",
               "value": "70903904"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201404"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201386"
             }
           ],
-          "updatedAt": 1523471286134,
+          "updatedAt": 1653404628484,
           "publicationStatement": [
             "[Ceṉṉai, 1968]"
           ],
           "identifier": [
             "urn:bnum:10001388",
-            "urn:lccn:70903904"
+            "urn:lccn:70903904",
+            "urn:undefined:NNSZ00201404",
+            "urn:undefined:(WaOLN)nyp0201386"
           ],
           "materialType": [
             {
@@ -9664,8 +11301,8 @@
             }
           ],
           "subjectLiteral": [
-            "Parvati (Hindu deity) -- Songs and music.",
-            "Songs, Tamil -- Texts."
+            "Songs, Tamil -- Texts.",
+            "Parvati (Hindu deity) -- Songs and music."
           ],
           "titleDisplay": [
             "Śrī Tēvi Mahātmiyam; kīrttaṉaikaḷ. Ākkiyōṉ Kē. Si. Tiyākarājaṉ."
@@ -9681,7 +11318,7 @@
             1
           ],
           "placeOfPublication": [
-            "[Ceṉṉai,"
+            "[Ceṉṉai"
           ],
           "issuance": [
             {
@@ -9691,14 +11328,11 @@
           ],
           "items": [
             {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
               "identifier": [
                 "urn:barcode:33433060418286"
+              ],
+              "physicalLocation": [
+                "*OLY 83-1674"
               ],
               "identifierV2": [
                 {
@@ -9735,7 +11369,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
