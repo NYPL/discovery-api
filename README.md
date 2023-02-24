@@ -2,7 +2,7 @@
 
 # Discovery API
 
-This is the API providing most of bibliographic data to the [NYPL Research Catalog front-end](https://github.com/NYPL/discovery-front-end). Check the [current swagger](https://github.com/NYPL/discovery-api/blob/main/swagger.v1.1.x.json) for the machine readable api contract. 
+This is the API providing most of bibliographic data to the [NYPL Research Catalog front-end](https://github.com/NYPL/discovery-front-end). Check the [current swagger](https://github.com/NYPL/discovery-api/blob/main/swagger.v1.1.x.json) for the machine readable api contract.
 
 ## Installing & Running Locally
 
@@ -246,3 +246,5 @@ There is currently one feature flag in this app, which is 'no-on-site-edd'. When
 | numItemsMatched          | When there's an active item_* filter, the represents the number of items matching the filter(s). When there are no active item_* filters, this represents all physical items. Explicitly excludes the electronic item | phys, checkin card |
 
 NB: numAvailable and numItem*Parsed counts do not **exclude** the e-item, but these items are not indexed with statuses, volumes, or date ranges, and are therefore not actually included in this count.
+
+NB: As the table above indicates, there is a mismatch between what the front end and API regard as "electronic items". As far as the API is concerned, there is only at most ONE electronic item, which can have many electronic locator values. `numElectronicResources` counts these locator values, but the other item count values treat all the electronic resources as a single item.

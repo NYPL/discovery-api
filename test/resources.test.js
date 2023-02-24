@@ -525,12 +525,12 @@ describe('Resources query', function () {
 
     it('should ignore check in card items when merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
+        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }, { exists: { field: 'items.electronicLocator' } }] })
     })
 
     it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
+        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }, { exists: { field: 'items.electronicLocator' } }] })
     })
   })
 
@@ -547,11 +547,25 @@ describe('Resources query', function () {
                       {
                         nested: {
                           path: 'items',
-                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
+                          query: { bool: { must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }, { exists: { field: 'items.electronicLocator' } }] } },
                           inner_hits: {
                             sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                             size: 1,
-                            from: 2
+                            from: 2,
+                            name: 'items'
+                          }
+                        }
+                      },
+                      {
+                        nested: {
+                          inner_hits: {
+                            name: 'electronicResources'
+                          },
+                          path: 'items',
+                          query: {
+                            exists: {
+                              field: 'items.electronicLocator'
+                            }
                           }
                         }
                       },
@@ -581,7 +595,7 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } },
+                            must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }, { exists: { field: 'items.electronicLocator' } }],
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
@@ -591,7 +605,21 @@ describe('Resources query', function () {
                         inner_hits: {
                           sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                           size: 1,
-                          from: 2
+                          from: 2,
+                          name: 'items'
+                        }
+                      }
+                    },
+                    {
+                      nested: {
+                        inner_hits: {
+                          name: 'electronicResources'
+                        },
+                        path: 'items',
+                        query: {
+                          exists: {
+                            field: 'items.electronicLocator'
+                          }
                         }
                       }
                     },
