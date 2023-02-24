@@ -348,6 +348,23 @@ describe('Test Resources responses', function () {
         done()
       })
     })
+
+    it('should have electronicResources property', function (done) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        let eItem = doc.electronicResources.find((item) => item.electronicLocator)
+        assert(eItem.electronicLocator.length > 0)
+        assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
+        assert.equal(eItem.electronicLocator[0].label, 'Full text available via HathiTrust--v. 1')
+
+        done()
+      })
+    })
   })
 
   describe('GET resources search', function () {
