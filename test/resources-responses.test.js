@@ -43,7 +43,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(890)
+        expect(doc.numItemsMatched).to.equal(897) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })
@@ -52,7 +52,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(7)
+        expect(doc.numItemsMatched).to.equal(12) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })
@@ -330,7 +330,8 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it('returns item.electronicLocator', function (done) {
+    // skipping this test for now since we don't have have the option to include electronic resources in items
+    it.skip('returns item.electronicLocator', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
         if (err) throw err
 
@@ -341,6 +342,23 @@ describe('Test Resources responses', function () {
         let eItem = doc.items.find((item) => item.electronicLocator)
         assert(eItem.electronicLocator.length > 0)
         assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
+        assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
+        assert.equal(eItem.electronicLocator[0].label, 'Full text available via HathiTrust--v. 1')
+
+        done()
+      })
+    })
+
+    it('should have electronicResources property', function (done) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+
+        var doc = JSON.parse(body)
+
+        let eItem = doc.electronicResources.find((item) => item.electronicLocator)
+        assert(eItem.electronicLocator.length > 0)
         assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
         assert.equal(eItem.electronicLocator[0].label, 'Full text available via HathiTrust--v. 1')
 
