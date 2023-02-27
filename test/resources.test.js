@@ -525,12 +525,27 @@ describe('Resources query', function () {
 
     it('should ignore check in card items when merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
+        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
-    it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
+    it('should ignore check in card items when merge_checkin_card_items is falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
+        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+    })
+
+    it('should include check in card items when merge_checkin_card_items is truthy', () => {
+      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
+        .to.deep.equal({ must: { match_all: {} } })
+    })
+
+    it('should include check in card items but exclude electronic resources when merge_checkin_card_items is truthy and removeElectronicResourcesFromItemsArray is truthy', () => {
+      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true, merge_checkin_card_items: true }))
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }] })
+    })
+
+    it('should ignore electronic resources when removeElectronicResourcesFromItemsArray is set', () => {
+      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true }))
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
   })
 
@@ -547,11 +562,25 @@ describe('Resources query', function () {
                       {
                         nested: {
                           path: 'items',
-                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
+                          query: { bool: { must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] } },
                           inner_hits: {
                             sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                             size: 1,
-                            from: 2
+                            from: 2,
+                            name: 'items'
+                          }
+                        }
+                      },
+                      {
+                        nested: {
+                          inner_hits: {
+                            name: 'electronicResources'
+                          },
+                          path: 'items',
+                          query: {
+                            exists: {
+                              field: 'items.electronicLocator'
+                            }
                           }
                         }
                       },
@@ -581,7 +610,7 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } },
+                            must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }],
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
@@ -591,7 +620,21 @@ describe('Resources query', function () {
                         inner_hits: {
                           sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                           size: 1,
-                          from: 2
+                          from: 2,
+                          name: 'items'
+                        }
+                      }
+                    },
+                    {
+                      nested: {
+                        inner_hits: {
+                          name: 'electronicResources'
+                        },
+                        path: 'items',
+                        query: {
+                          exists: {
+                            field: 'items.electronicLocator'
+                          }
                         }
                       }
                     },

@@ -1,5 +1,5 @@
 {
-  "took": 300,
+  "took": 322,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -7,7 +7,7 @@
     "failed": 0
   },
   "hits": {
-    "total": 14834089,
+    "total": 18385137,
     "max_score": null,
     "hits": [
       {
@@ -31,19 +31,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Dante Alighieri, 1265-1321",
             "Dante Alighieri, 1265-1321 -- Criticism and interpretation",
             "Gmelin, Hermann, 1900-1958"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Stauffenburg,"
+            "Stauffenburg"
           ],
           "language": [
             {
               "id": "lang:ger",
               "label": "German"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1985
@@ -57,6 +66,9 @@
           "shelfMark": [
             "JFE 86-3252"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1985"
           ],
@@ -66,9 +78,12 @@
           "seriesStatement": [
             "Romanica et comparatistica ; Bd. 4"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Baum, Richard.",
             "Gmelin, Hermann, 1900-1958.",
+            "Baum, Richard.",
             "Hirdt, Willi."
           ],
           "dateStartYear": [
@@ -90,19 +105,35 @@
             {
               "type": "bf:Lccn",
               "value": "86124252"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPGNYPG-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200001"
             }
           ],
-          "updatedAt": 1536782413067,
+          "idOclc": [
+            "NYPGNYPG-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Tübingen : Stauffenburg, c1985."
           ],
           "identifier": [
             "urn:bnum:10000002",
             "urn:isbn:3923721544",
-            "urn:lccn:86124252"
+            "urn:lccn:86124252",
+            "urn:oclc:NYPGNYPG-B",
+            "urn:undefined:(WaOLN)nyp0200001"
           ],
           "idIsbn": [
             "3923721544"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -143,7 +174,10 @@
             1
           ],
           "placeOfPublication": [
-            "Tübingen :"
+            "Tübingen"
+          ],
+          "titleAlt": [
+            "Dante Alighieri neunzehnhundertfünfundachtzig."
           ],
           "issuance": [
             {
@@ -151,13 +185,26 @@
               "label": "monograph/item"
             }
           ],
-          "titleAlt": [
-            "Dante Alighieri neunzehnhundertfünfundachtzig."
-          ],
           "items": [
             {
               "identifier": [
                 "urn:barcode:33433046113795"
+              ],
+              "physicalLocation": [
+                "JFE 86-3252"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858031",
+              "shelfMark": [
+                "JFE 86-3252"
               ],
               "identifierV2": [
                 {
@@ -169,21 +216,11 @@
                   "value": "33433046113795"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433046113795"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i12858031",
-              "shelfMark": [
-                "JFE 86-3252"
               ],
               "catalogItemType": [
                 {
@@ -194,7 +231,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -202,8 +239,14 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
+          ],
+          "idIsbn_clean": [
+            "3923721544"
           ],
           "dimensions": [
             "23 cm."
@@ -222,18 +265,27 @@
           "extent": [
             "199 p. : col. ill. maps ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Hebrides (Scotland)",
             "Hebrides (Scotland) -- Pictorial works"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Constable,"
+            "Constable"
           ],
           "language": [
             {
               "id": "lang:eng",
               "label": "English"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1989
@@ -247,6 +299,9 @@
           "shelfMark": [
             "JFF 89-526"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Waite, Charlie."
           ],
@@ -256,8 +311,14 @@
           "idLccn": [
             "gb 89012970"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "dateStartYear": [
             1989
+          ],
+          "donor": [
+            "Gift of the Drue Heinz Book Fund for English Literature"
           ],
           "identifierV2": [
             {
@@ -275,19 +336,35 @@
             {
               "type": "bf:Lccn",
               "value": "gb 89012970"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPGUKBPGP8917-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200002"
             }
           ],
-          "updatedAt": 1536782413246,
+          "idOclc": [
+            "NYPGUKBPGP8917-B"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "London : Constable, 1989."
           ],
           "identifier": [
             "urn:bnum:10000003",
             "urn:isbn:0094675708 :",
-            "urn:lccn:gb 89012970"
+            "urn:lccn:gb 89012970",
+            "urn:oclc:NYPGUKBPGP8917-B",
+            "urn:undefined:(WaOLN)nyp0200002"
           ],
           "idIsbn": [
-            "0094675708 :"
+            "0094675708 "
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -324,7 +401,7 @@
             1
           ],
           "placeOfPublication": [
-            "London :"
+            "London"
           ],
           "issuance": [
             {
@@ -337,6 +414,22 @@
               "identifier": [
                 "urn:barcode:33433050409147"
               ],
+              "physicalLocation": [
+                "JFF 89-526"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:1",
+                  "label": "Use in library"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783780",
+              "shelfMark": [
+                "JFF 89-526"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -347,21 +440,11 @@
                   "value": "33433050409147"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:1",
-                  "label": "Use in library"
-                }
-              ],
               "idBarcode": [
                 "33433050409147"
               ],
               "requestable": [
                 false
-              ],
-              "uri": "i13783780",
-              "shelfMark": [
-                "JFF 89-526"
               ],
               "catalogItemType": [
                 {
@@ -372,7 +455,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -380,8 +463,14 @@
                   "id": "loc:mal92",
                   "label": "Schwarzman Building M2 - General Research Room 315"
                 }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
+          ],
+          "idIsbn_clean": [
+            "0094675708"
           ],
           "dimensions": [
             "26 cm."
@@ -417,17 +506,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Tiruvaḷḷuvar"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
+            "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1965
@@ -441,6 +539,9 @@
           "shelfMark": [
             "*OLB 84-1934"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Kothandapani Pillai, K., 1896-"
           ],
@@ -452,6 +553,9 @@
           ],
           "seriesStatement": [
             "Kaḻaka veḷiyīṭu, 1247"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1965
@@ -468,15 +572,36 @@
             {
               "type": "bf:Lccn",
               "value": "74915265"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000001-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100001"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200003"
             }
           ],
-          "updatedAt": 1595823889267,
+          "idOclc": [
+            "NYPG001000001-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Tirunelvēli, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1965."
           ],
           "identifier": [
             "urn:bnum:10000004",
-            "urn:lccn:74915265"
+            "urn:lccn:74915265",
+            "urn:oclc:NYPG001000001-B",
+            "urn:undefined:NNSZ00100001",
+            "urn:undefined:(WaOLN)nyp0200003"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -516,7 +641,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tirunelvēli,"
+            "Tirunelvēli"
           ],
           "issuance": [
             {
@@ -535,6 +660,22 @@
               "identifier": [
                 "urn:barcode:33433061301556"
               ],
+              "physicalLocation": [
+                "*OLB 84-1934"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783781",
+              "shelfMark": [
+                "*OLB 84-1934"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -545,21 +686,11 @@
                   "value": "33433061301556"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433061301556"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783781",
-              "shelfMark": [
-                "*OLB 84-1934"
               ],
               "catalogItemType": [
                 {
@@ -578,6 +709,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -615,18 +752,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Concertos (Violin)",
             "Concertos (Violin) -- Solo with piano"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Muzyka,"
+            "Muzyka"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -640,11 +786,17 @@
           "shelfMark": [
             "JMF 83-336"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Wieniawski, Henri, 1835-1880."
           ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -659,6 +811,10 @@
               "value": "10000005"
             },
             {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000001-C"
+            },
+            {
               "type": "bf:Identifier",
               "value": "11049. Muzyka"
             },
@@ -671,18 +827,25 @@
               "value": "(WaOLN)nyp0200004"
             }
           ],
+          "idOclc": [
+            "NYPG001000001-C"
+          ],
           "uniformTitle": [
             "Concertos, violin, orchestra, no. 2, op. 22, D minor; arranged"
           ],
-          "updatedAt": 1596480610085,
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Moskva : Muzyka, 1980."
           ],
           "identifier": [
             "urn:bnum:10000005",
+            "urn:oclc:NYPG001000001-C",
             "urn:undefined:11049. Muzyka",
             "urn:undefined:NNSZ00100551",
             "urn:undefined:(WaOLN)nyp0200004"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -719,7 +882,7 @@
             1
           ],
           "placeOfPublication": [
-            "Moskva :"
+            "Moskva"
           ],
           "issuance": [
             {
@@ -728,7 +891,7 @@
             }
           ],
           "titleAlt": [
-            "Concertos, no. 2, op. 22,"
+            "Concertos, no. 2, op. 22"
           ],
           "items": [
             {
@@ -741,6 +904,22 @@
               "identifier": [
                 "urn:barcode:33433032711909"
               ],
+              "physicalLocation": [
+                "JMF 83-336"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942022",
+              "shelfMark": [
+                "JMF 83-336"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -751,21 +930,11 @@
                   "value": "33433032711909"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433032711909"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942022",
-              "shelfMark": [
-                "JMF 83-336"
               ],
               "catalogItemType": [
                 {
@@ -784,6 +953,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -821,9 +996,15 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Islam",
             "Islam -- 20th century"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr"
@@ -834,6 +1015,9 @@
               "label": "Arabic"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "createdYear": [
             1968
           ],
@@ -841,10 +1025,13 @@
             "nypl:Item"
           ],
           "title": [
-            "Tajdīd al-tafkīr al-dīnī fī al-Islām,"
+            "Tajdīd al-tafkīr al-dīnī fī al-Islām"
           ],
           "shelfMark": [
             "*OGC 84-1984"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "creatorLiteral": [
             "Iqbal, Muhammad, Sir, 1877-1938."
@@ -854,6 +1041,9 @@
           ],
           "idLccn": [
             "75962707"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Maḥmūd, ʻAbbās."
@@ -873,15 +1063,36 @@
             {
               "type": "bf:Lccn",
               "value": "75962707"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000002-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100002"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200005"
             }
           ],
-          "updatedAt": 1595820297187,
+          "idOclc": [
+            "NYPG001000002-B"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "al-Qāhirah, Lajnat al-Taʼlīf wa-al-Tarjamah wa-al-Nashr [1968]"
           ],
           "identifier": [
             "urn:bnum:10000006",
-            "urn:lccn:75962707"
+            "urn:lccn:75962707",
+            "urn:oclc:NYPG001000002-B",
+            "urn:undefined:NNSZ00100002",
+            "urn:undefined:(WaOLN)nyp0200005"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -921,7 +1132,7 @@
             1
           ],
           "placeOfPublication": [
-            "al-Qāhirah,"
+            "al-Qāhirah"
           ],
           "issuance": [
             {
@@ -940,6 +1151,22 @@
               "identifier": [
                 "urn:barcode:33433022691665"
               ],
+              "physicalLocation": [
+                "*OGC 84-1984"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12540039",
+              "shelfMark": [
+                "*OGC 84-1984"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -950,21 +1177,11 @@
                   "value": "33433022691665"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433022691665"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i12540039",
-              "shelfMark": [
-                "*OGC 84-1984"
               ],
               "catalogItemType": [
                 {
@@ -983,6 +1200,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1015,19 +1238,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
+            "Guitar music",
             "Guitar",
-            "Guitar -- Studies and exercises",
-            "Guitar music"
+            "Guitar -- Studies and exercises"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Editio Musica,"
+            "Editio Musica"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1981
@@ -1041,11 +1273,17 @@
           "shelfMark": [
             "JMG 83-276"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Patachich, Iván."
           ],
           "createdString": [
             "1981"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1981
@@ -1060,6 +1298,10 @@
               "value": "10000007"
             },
             {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000002-C"
+            },
+            {
               "type": "bf:Identifier",
               "value": "Z.8917. Editio Musica"
             },
@@ -1072,18 +1314,25 @@
               "value": "(WaOLN)nyp0200006"
             }
           ],
+          "idOclc": [
+            "NYPG001000002-C"
+          ],
           "uniformTitle": [
             "Studies, guitar"
           ],
-          "updatedAt": 1569627322562,
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Budapest : Editio Musica, c1981."
           ],
           "identifier": [
             "urn:bnum:10000007",
+            "urn:oclc:NYPG001000002-C",
             "urn:undefined:Z.8917. Editio Musica",
             "urn:undefined:NNSZ00100552",
             "urn:undefined:(WaOLN)nyp0200006"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1107,8 +1356,8 @@
             }
           ],
           "subjectLiteral": [
-            "Guitar -- Studies and exercises.",
-            "Guitar music."
+            "Guitar music.",
+            "Guitar -- Studies and exercises."
           ],
           "titleDisplay": [
             "Due studi per chitarra / Patachich Iván."
@@ -1121,7 +1370,7 @@
             1
           ],
           "placeOfPublication": [
-            "Budapest :"
+            "Budapest"
           ],
           "issuance": [
             {
@@ -1130,7 +1379,7 @@
             }
           ],
           "titleAlt": [
-            "Studies,"
+            "Studies"
           ],
           "items": [
             {
@@ -1143,11 +1392,8 @@
               "identifier": [
                 "urn:barcode:33433032883591"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032883591"
-                }
+              "physicalLocation": [
+                "JMG 83-276"
               ],
               "accessMessage": [
                 {
@@ -1155,15 +1401,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942023",
+              "shelfMark": [
+                "JMG 83-276"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-276"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032883591"
+                }
+              ],
               "idBarcode": [
                 "33433032883591"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942023",
-              "shelfMark": [
-                "JMG 83-276"
               ],
               "catalogItemType": [
                 {
@@ -1182,6 +1441,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -1209,6 +1474,12 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
             "Parimaḷam Patippakam"
           ],
@@ -1217,6 +1488,9 @@
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1969
@@ -1230,6 +1504,9 @@
           "shelfMark": [
             "*OLB 84-1986"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Annadurai, C. N., 1909-1969."
           ],
@@ -1238,6 +1515,9 @@
           ],
           "idLccn": [
             "72913998"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1969
@@ -1254,15 +1534,36 @@
             {
               "type": "bf:Lccn",
               "value": "72913998"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000003-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100003"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200007"
             }
           ],
-          "updatedAt": 1536782413978,
+          "idOclc": [
+            "NYPG001000003-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Ceṉṉai, Parimaḷam Patippakam [1969]"
           ],
           "identifier": [
             "urn:bnum:10000008",
-            "urn:lccn:72913998"
+            "urn:lccn:72913998",
+            "urn:oclc:NYPG001000003-B",
+            "urn:undefined:NNSZ00100003",
+            "urn:undefined:(WaOLN)nyp0200007"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1299,7 +1600,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -1318,6 +1619,22 @@
               "identifier": [
                 "urn:barcode:33433061301689"
               ],
+              "physicalLocation": [
+                "*OLB 84-1986"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783782",
+              "shelfMark": [
+                "*OLB 84-1986"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -1328,21 +1645,11 @@
                   "value": "33433061301689"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433061301689"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783782",
-              "shelfMark": [
-                "*OLB 84-1986"
               ],
               "catalogItemType": [
                 {
@@ -1353,7 +1660,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1361,6 +1668,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1398,17 +1711,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Piano music"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Edition Peters ; C.F. Peters,"
+            "Edition Peters ; C.F. Peters"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -1422,11 +1744,17 @@
           "shelfMark": [
             "JMG 83-278"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Golle, Jürgen, 1942-"
           ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -1439,17 +1767,48 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000009"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000003-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Edition Peters Nr. 5489 Edition Peters"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "E.P. 13028. Edition Peters"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100553"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200008"
             }
+          ],
+          "idOclc": [
+            "NYPG001000003-C"
           ],
           "uniformTitle": [
             "Miniaturen, no. 2"
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Leipzig : Edition Peters ; New York : C.F. Peters, c1980."
           ],
           "identifier": [
-            "urn:bnum:10000009"
+            "urn:bnum:10000009",
+            "urn:oclc:NYPG001000003-C",
+            "urn:undefined:Edition Peters Nr. 5489 Edition Peters",
+            "urn:undefined:E.P. 13028. Edition Peters",
+            "urn:undefined:NNSZ00100553",
+            "urn:undefined:(WaOLN)nyp0200008"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1486,7 +1845,7 @@
             1
           ],
           "placeOfPublication": [
-            "Leipzig : New York :"
+            "Leipzig : New York"
           ],
           "issuance": [
             {
@@ -1508,11 +1867,8 @@
               "identifier": [
                 "urn:barcode:33433032883617"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032883617"
-                }
+              "physicalLocation": [
+                "JMG 83-278"
               ],
               "accessMessage": [
                 {
@@ -1520,15 +1876,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942024",
+              "shelfMark": [
+                "JMG 83-278"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-278"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032883617"
+                }
+              ],
               "idBarcode": [
                 "33433032883617"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942024",
-              "shelfMark": [
-                "JMG 83-278"
               ],
               "catalogItemType": [
                 {
@@ -1539,7 +1908,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1547,6 +1916,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -1579,17 +1954,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Cēkkiḻār, active 12th century"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Aṇṇāmalaip Palkalaikkaḻakam,"
+            "Aṇṇāmalaip Palkalaikkaḻakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1969
@@ -1603,6 +1987,9 @@
           "shelfMark": [
             "*OLB 84-1938"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Irācamāṇikkaṉār, Mā., 1907-1967."
           ],
@@ -1614,6 +2001,9 @@
           ],
           "seriesStatement": [
             "Corṇammāḷ corpoḻivu varicai, 6"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1969
@@ -1630,15 +2020,36 @@
             {
               "type": "bf:Lccn",
               "value": "72913466"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000004-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100004"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200009"
             }
           ],
-          "updatedAt": 1536782413246,
+          "idOclc": [
+            "NYPG001000004-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Aṇṇāmalainakar, Aṇṇāmalaip Palkalaikkaḻakam, 1969."
           ],
           "identifier": [
             "urn:bnum:10000010",
-            "urn:lccn:72913466"
+            "urn:lccn:72913466",
+            "urn:oclc:NYPG001000004-B",
+            "urn:undefined:NNSZ00100004",
+            "urn:undefined:(WaOLN)nyp0200009"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1678,7 +2089,7 @@
             1
           ],
           "placeOfPublication": [
-            "Aṇṇāmalainakar,"
+            "Aṇṇāmalainakar"
           ],
           "issuance": [
             {
@@ -1697,6 +2108,22 @@
               "identifier": [
                 "urn:barcode:33433061301598"
               ],
+              "physicalLocation": [
+                "*OLB 84-1938"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783783",
+              "shelfMark": [
+                "*OLB 84-1938"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -1707,21 +2134,11 @@
                   "value": "33433061301598"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433061301598"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783783",
-              "shelfMark": [
-                "*OLB 84-1938"
               ],
               "catalogItemType": [
                 {
@@ -1732,7 +2149,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1740,6 +2157,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -1760,19 +2183,28 @@
           "extent": [
             "46 p. of music ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
+            "Suites (Organ)",
             "Easter music (Organ)",
-            "Passion music",
-            "Suites (Organ)"
+            "Passion music"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Boeijenga,"
+            "Boeijenga"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "dateEndString": [
             "1982"
@@ -1789,11 +2221,17 @@
           "shelfMark": [
             "JMG 83-279"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Berg, Jan J. van den."
           ],
           "createdString": [
             "1976"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1976
@@ -1806,17 +2244,33 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000011"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000004-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200010"
             }
+          ],
+          "idOclc": [
+            "NYPG001000004-C"
           ],
           "dateEndYear": [
             1982
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Sneek [Netherlands] : Boeijenga, [between 1976 and 1982]."
           ],
           "identifier": [
-            "urn:bnum:10000011"
+            "urn:bnum:10000011",
+            "urn:oclc:NYPG001000004-C",
+            "urn:undefined:(WaOLN)nyp0200010"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -1840,9 +2294,9 @@
             }
           ],
           "subjectLiteral": [
+            "Suites (Organ)",
             "Easter music (Organ)",
-            "Passion music.",
-            "Suites (Organ)"
+            "Passion music."
           ],
           "titleDisplay": [
             "Passie en pasen : suite voor orgel, opus 50 / door Jan J. van den Berg."
@@ -1855,7 +2309,7 @@
             1
           ],
           "placeOfPublication": [
-            "Sneek [Netherlands] :"
+            "Sneek [Netherlands]"
           ],
           "issuance": [
             {
@@ -1877,6 +2331,22 @@
               "identifier": [
                 "urn:barcode:33433032883625"
               ],
+              "physicalLocation": [
+                "JMG 83-279"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942025",
+              "shelfMark": [
+                "JMG 83-279"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -1887,21 +2357,11 @@
                   "value": "33433032883625"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433032883625"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942025",
-              "shelfMark": [
-                "JMG 83-279"
               ],
               "catalogItemType": [
                 {
@@ -1912,7 +2372,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -1920,6 +2380,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -1952,17 +2418,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Ḥuṭayʼah, Jarwal ibn Aws, d. 650?"
+            "Ḥuṭayʼah, Jarwal ibn Aws, -650?"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Dār al-Thaqāfah,"
+            "Dār al-Thaqāfah"
           ],
           "language": [
             {
               "id": "lang:ara",
               "label": "Arabic"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -1976,11 +2451,17 @@
           "shelfMark": [
             "*OFS 84-1997"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Ḥāwī, Īlīyā Salīm."
           ],
           "createdString": [
             "1970"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1970
@@ -1993,14 +2474,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000012"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000005-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100005"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200011"
             }
           ],
-          "updatedAt": 1578411846354,
+          "idOclc": [
+            "NYPG001000005-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Bayrūt : Dār al-Thaqāfah, 1970."
           ],
           "identifier": [
-            "urn:bnum:10000012"
+            "urn:bnum:10000012",
+            "urn:oclc:NYPG001000005-B",
+            "urn:undefined:NNSZ00100005",
+            "urn:undefined:(WaOLN)nyp0200011"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2024,7 +2526,7 @@
             }
           ],
           "subjectLiteral": [
-            "Ḥuṭayʼah, Jarwal ibn Aws, d. 650?"
+            "Ḥuṭayʼah, Jarwal ibn Aws, -650?"
           ],
           "titleDisplay": [
             "al-Ḥuṭayʼah : fī sīratihi wa-nafsīyatihi wa-shiʻrihi / bi-qalam Īlīyā Ḥāwī."
@@ -2037,7 +2539,7 @@
             1
           ],
           "placeOfPublication": [
-            "Bayrūt :"
+            "Bayrūt"
           ],
           "issuance": [
             {
@@ -2056,6 +2558,22 @@
               "identifier": [
                 "urn:barcode:33433014514719"
               ],
+              "physicalLocation": [
+                "*OFS 84-1997"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000003",
+              "shelfMark": [
+                "*OFS 84-1997"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2066,21 +2584,11 @@
                   "value": "33433014514719"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433014514719"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000003",
-              "shelfMark": [
-                "*OFS 84-1997"
               ],
               "catalogItemType": [
                 {
@@ -2099,6 +2607,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2131,18 +2645,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Popular music",
             "Popular music -- Germany (East)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Harth Musik Verlag,"
+            "Harth Musik Verlag"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -2156,8 +2679,14 @@
           "shelfMark": [
             "JMF 83-366"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -2172,6 +2701,10 @@
               "value": "10000013"
             },
             {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000005-C"
+            },
+            {
               "type": "bf:Identifier",
               "value": "NNSZ00100555"
             },
@@ -2180,14 +2713,21 @@
               "value": "(WaOLN)nyp0200012"
             }
           ],
-          "updatedAt": 1565852438647,
+          "idOclc": [
+            "NYPG001000005-C"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Leipzig : Harth Musik Verlag, c1980."
           ],
           "identifier": [
             "urn:bnum:10000013",
+            "urn:oclc:NYPG001000005-C",
             "urn:undefined:NNSZ00100555",
             "urn:undefined:(WaOLN)nyp0200012"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2224,7 +2764,7 @@
             1
           ],
           "placeOfPublication": [
-            "Leipzig :"
+            "Leipzig"
           ],
           "issuance": [
             {
@@ -2246,11 +2786,8 @@
               "identifier": [
                 "urn:barcode:33433032712204"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032712204"
-                }
+              "physicalLocation": [
+                "JMF 83-366"
               ],
               "accessMessage": [
                 {
@@ -2258,15 +2795,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942026",
+              "shelfMark": [
+                "JMF 83-366"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-366"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032712204"
+                }
+              ],
               "idBarcode": [
                 "33433032712204"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942026",
-              "shelfMark": [
-                "JMF 83-366"
               ],
               "catalogItemType": [
                 {
@@ -2285,6 +2835,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -2317,19 +2873,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
+            "Panislamism",
             "Islam",
-            "Islam -- 20th century",
-            "Panislamism"
+            "Islam -- 20th century"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Muʼassasat al-Aʻlamī lil-Maṭbūʻāt,"
+            "Muʼassasat al-Aʻlamī lil-Maṭbūʻāt"
           ],
           "language": [
             {
               "id": "lang:ara",
               "label": "Arabic"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1975
@@ -2343,8 +2908,14 @@
           "shelfMark": [
             "*OGC 84-1996"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1975"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Shīrāzī, ʻAbd al-Karīm Bī Āzār."
@@ -2360,14 +2931,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000014"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000006-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100006"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200013"
             }
           ],
-          "updatedAt": 1536782413960,
+          "idOclc": [
+            "NYPG001000006-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Bayrūt : Muʼassasat al-Aʻlamī lil-Maṭbūʻāt, 1975."
           ],
           "identifier": [
-            "urn:bnum:10000014"
+            "urn:bnum:10000014",
+            "urn:oclc:NYPG001000006-B",
+            "urn:undefined:NNSZ00100006",
+            "urn:undefined:(WaOLN)nyp0200013"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2391,8 +2983,8 @@
             }
           ],
           "subjectLiteral": [
-            "Islam -- 20th century.",
-            "Panislamism."
+            "Panislamism.",
+            "Islam -- 20th century."
           ],
           "titleDisplay": [
             "al-Waḥdah al-Islāmīyah : aw al-taqrīb bayna al-madhāhib al-sabʻah, wathāʼiq khaṭīrah wa-buḥūth ʻilmīyah li-aʻāẓim ʻulamāʼ al-Muslimīn min al-sunnah wa-al-shīʻah / Jamʻ wa-tartīb ʻAbd al-Karīm Bī Āzār al-Shīrāzī."
@@ -2405,7 +2997,7 @@
             1
           ],
           "placeOfPublication": [
-            "Bayrūt :"
+            "Bayrūt"
           ],
           "issuance": [
             {
@@ -2427,6 +3019,22 @@
               "identifier": [
                 "urn:barcode:33433022691780"
               ],
+              "physicalLocation": [
+                "*OGC 84-1996"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12540040",
+              "shelfMark": [
+                "*OGC 84-1996"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2437,21 +3045,11 @@
                   "value": "33433022691780"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433022691780"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i12540040",
-              "shelfMark": [
-                "*OGC 84-1996"
               ],
               "catalogItemType": [
                 {
@@ -2462,7 +3060,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2470,6 +3068,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2479,6 +3083,188 @@
         },
         "sort": [
           "b10000014"
+        ]
+      },
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10000015",
+        "_score": null,
+        "_source": {
+          "extent": [
+            "25 p. of music ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "For organ.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Caption title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"A McAfee Music Publication.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Pl. no.: DM 220.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Suites (Organ)"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Belwin-Mills"
+          ],
+          "language": [
+            {
+              "id": "lang:zxx",
+              "label": "No linguistic content"
+            }
+          ],
+          "numItemsTotal": [
+            0
+          ],
+          "createdYear": [
+            1980
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Suite no. 1 : 1977"
+          ],
+          "shelfMark": [
+            "JNG 83-102"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "creatorLiteral": [
+            "Hampton, Calvin."
+          ],
+          "createdString": [
+            "1980"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "dateStartYear": [
+            1980
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JNG 83-102"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000015"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000006-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "DM 220. Belwin-Mills"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100556"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200014"
+            }
+          ],
+          "idOclc": [
+            "NYPG001000006-C"
+          ],
+          "uniformTitle": [
+            "Suite, organ, no. 1"
+          ],
+          "updatedAt": 1676391155327,
+          "publicationStatement": [
+            "Melville, NY : Belwin-Mills, [1980?]"
+          ],
+          "identifier": [
+            "urn:bnum:10000015",
+            "urn:oclc:NYPG001000006-C",
+            "urn:undefined:DM 220. Belwin-Mills",
+            "urn:undefined:NNSZ00100556",
+            "urn:undefined:(WaOLN)nyp0200014"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:not",
+              "label": "Notated music"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1980"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Suites (Organ)"
+          ],
+          "titleDisplay": [
+            "Suite no. 1 : 1977 / Calvin Hampton."
+          ],
+          "uri": "b10000015",
+          "numItems": [
+            0
+          ],
+          "numAvailable": [
+            0
+          ],
+          "placeOfPublication": [
+            "Melville, NY"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Suite, no. 1"
+          ],
+          "tableOfContents": [
+            "Fanfares -- Antiphon -- Toccata."
+          ],
+          "dimensions": [
+            "31 cm."
+          ]
+        },
+        "sort": [
+          "b10000015"
         ]
       },
       {
@@ -2497,17 +3283,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Kuṟuntokai"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Manṅkaḷa Nūlakam,"
+            "Manṅkaḷa Nūlakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1967
@@ -2521,6 +3316,9 @@
           "shelfMark": [
             "*OLB 84-1937"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Cellappaṉ, Cilampoli, 1929-"
           ],
@@ -2529,6 +3327,9 @@
           ],
           "idLccn": [
             "74913402"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1967
@@ -2545,15 +3346,36 @@
             {
               "type": "bf:Lccn",
               "value": "74913402"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000007-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100007"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200015"
             }
           ],
-          "updatedAt": 1536782413246,
+          "idOclc": [
+            "NYPG001000007-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Ceṉṉai, Manṅkaḷa Nūlakam, 1959 [i.e. 1967]"
           ],
           "identifier": [
             "urn:bnum:10000016",
-            "urn:lccn:74913402"
+            "urn:lccn:74913402",
+            "urn:oclc:NYPG001000007-B",
+            "urn:undefined:NNSZ00100007",
+            "urn:undefined:(WaOLN)nyp0200015"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2593,7 +3415,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -2612,6 +3434,22 @@
               "identifier": [
                 "urn:barcode:33433061301580"
               ],
+              "physicalLocation": [
+                "*OLB 84-1937"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783785",
+              "shelfMark": [
+                "*OLB 84-1937"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2622,21 +3460,11 @@
                   "value": "33433061301580"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433061301580"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783785",
-              "shelfMark": [
-                "*OLB 84-1937"
               ],
               "catalogItemType": [
                 {
@@ -2647,7 +3475,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -2655,6 +3483,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -2692,19 +3526,28 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Corbière, Tristan, 1845-1875",
             "Corbière, Tristan, 1845-1875 -- Musical settings",
             "Songs (Medium voice) with piano"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Donemus,"
+            "Donemus"
           ],
           "language": [
             {
               "id": "lang:fre",
               "label": "French"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1981
@@ -2718,11 +3561,17 @@
           "shelfMark": [
             "JMG 83-395"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Escher, Rudolf."
           ],
           "createdString": [
             "1981"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Corbière, Tristan, 1845-1875."
@@ -2740,6 +3589,10 @@
               "value": "10000017"
             },
             {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000007-C"
+            },
+            {
               "type": "bf:Identifier",
               "value": "NNSZ00100557"
             },
@@ -2748,14 +3601,21 @@
               "value": "(WaOLN)nyp0200016"
             }
           ],
-          "updatedAt": 1596645720537,
+          "idOclc": [
+            "NYPG001000007-C"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Amsterdam : Donemus, c1981."
           ],
           "identifier": [
             "urn:bnum:10000017",
+            "urn:oclc:NYPG001000007-C",
             "urn:undefined:NNSZ00100557",
             "urn:undefined:(WaOLN)nyp0200016"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2793,7 +3653,7 @@
             1
           ],
           "placeOfPublication": [
-            "Amsterdam :"
+            "Amsterdam"
           ],
           "issuance": [
             {
@@ -2812,6 +3672,22 @@
               "identifier": [
                 "urn:barcode:33433032735007"
               ],
+              "physicalLocation": [
+                "JMG 83-395"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942027",
+              "shelfMark": [
+                "JMG 83-395"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -2822,21 +3698,11 @@
                   "value": "33433032735007"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433032735007"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942027",
-              "shelfMark": [
-                "JMG 83-395"
               ],
               "catalogItemType": [
                 {
@@ -2855,6 +3721,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -2887,18 +3759,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Women",
             "Women -- Lebanon"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Dār al-Ṭalīʻah,"
+            "Dār al-Ṭalīʻah"
           ],
           "language": [
             {
               "id": "lang:ara",
               "label": "Arabic"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1975
@@ -2912,6 +3793,9 @@
           "shelfMark": [
             "*OFX 84-1995"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Bashshūr, Najlāʼ Naṣīr."
           ],
@@ -2920,6 +3804,9 @@
           ],
           "idLccn": [
             "78970449"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1975
@@ -2936,15 +3823,36 @@
             {
               "type": "bf:Lccn",
               "value": "78970449"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000008-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100008"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200017"
             }
           ],
-          "updatedAt": 1578411984817,
+          "idOclc": [
+            "NYPG001000008-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Bayrūt : Dār al-Ṭalīʻah, 1975."
           ],
           "identifier": [
             "urn:bnum:10000018",
-            "urn:lccn:78970449"
+            "urn:lccn:78970449",
+            "urn:oclc:NYPG001000008-B",
+            "urn:undefined:NNSZ00100008",
+            "urn:undefined:(WaOLN)nyp0200017"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -2984,7 +3892,7 @@
             1
           ],
           "placeOfPublication": [
-            "Bayrūt :"
+            "Bayrūt"
           ],
           "issuance": [
             {
@@ -3003,6 +3911,22 @@
               "identifier": [
                 "urn:barcode:33433002031718"
               ],
+              "physicalLocation": [
+                "*OFX 84-1995"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000004",
+              "shelfMark": [
+                "*OFX 84-1995"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3013,21 +3937,11 @@
                   "value": "33433002031718"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433002031718"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000004",
-              "shelfMark": [
-                "*OFX 84-1995"
               ],
               "catalogItemType": [
                 {
@@ -3046,6 +3960,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3078,17 +3998,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Waltzes (Piano)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Möseler,"
+            "Möseler"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1979
@@ -3102,11 +4031,17 @@
           "shelfMark": [
             "JMG 83-111"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Benary, Peter."
           ],
           "createdString": [
             "1979"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1979
@@ -3119,17 +4054,43 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000019"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000008-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Möseler M 18.487."
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100558"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200018"
             }
+          ],
+          "idOclc": [
+            "NYPG001000008-C"
           ],
           "uniformTitle": [
             "Walzer und ein Epilog"
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Wolfenbüttel : Möseler, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000019"
+            "urn:bnum:10000019",
+            "urn:oclc:NYPG001000008-C",
+            "urn:undefined:Möseler M 18.487.",
+            "urn:undefined:NNSZ00100558",
+            "urn:undefined:(WaOLN)nyp0200018"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3166,7 +4127,7 @@
             1
           ],
           "placeOfPublication": [
-            "Wolfenbüttel :"
+            "Wolfenbüttel"
           ],
           "issuance": [
             {
@@ -3189,11 +4150,8 @@
               "identifier": [
                 "urn:barcode:33433032845053"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032845053"
-                }
+              "physicalLocation": [
+                "JMG 83-111"
               ],
               "accessMessage": [
                 {
@@ -3201,15 +4159,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942028",
+              "shelfMark": [
+                "JMG 83-111"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-111"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032845053"
+                }
+              ],
               "idBarcode": [
                 "33433032845053"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942028",
-              "shelfMark": [
-                "JMG 83-111"
               ],
               "catalogItemType": [
                 {
@@ -3220,7 +4191,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3228,6 +4199,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -3255,17 +4232,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Tolkāppiyar"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Aṇṇāmalaip Palkalaik Kaḻakam,"
+            "Aṇṇāmalaip Palkalaik Kaḻakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -3279,6 +4265,9 @@
           "shelfMark": [
             "*OLB 84-1936"
           ],
+          "numItemVolumesParsed": [
+            1
+          ],
           "creatorLiteral": [
             "Veḷḷaivāraṇaṉ, Ka."
           ],
@@ -3287,6 +4276,9 @@
           ],
           "idLccn": [
             "74914844"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1970
@@ -3303,15 +4295,36 @@
             {
               "type": "bf:Lccn",
               "value": "74914844"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000009-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100009"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200019"
             }
           ],
-          "updatedAt": 1536782412087,
+          "idOclc": [
+            "NYPG001000009-B"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "[Aṇṇāmalainakar] Aṇṇāmalaip Palkalaik Kaḻakam, 1970."
           ],
           "identifier": [
             "urn:bnum:10000020",
-            "urn:lccn:74914844"
+            "urn:lccn:74914844",
+            "urn:oclc:NYPG001000009-B",
+            "urn:undefined:NNSZ00100009",
+            "urn:undefined:(WaOLN)nyp0200019"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3353,14 +4366,14 @@
           "placeOfPublication": [
             "[Aṇṇāmalainakar]"
           ],
+          "titleAlt": [
+            "Tolkāppiyam nutaliyaporuḷ."
+          ],
           "issuance": [
             {
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
-          ],
-          "titleAlt": [
-            "Tolkāppiyam nutaliyaporuḷ."
           ],
           "tableOfContents": [
             "Tolkāppiyam.--Tolkāppiyam nutaliyaporuḷ."
@@ -3376,6 +4389,22 @@
               "identifier": [
                 "urn:barcode:33433061301572"
               ],
+              "physicalLocation": [
+                "*OLB 84-1936"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783786",
+              "shelfMark": [
+                "*OLB 84-1936 v. 1"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3386,21 +4415,14 @@
                   "value": "33433061301572"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
+              "enumerationChronology": [
+                "v. 1"
               ],
               "idBarcode": [
                 "33433061301572"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783786",
-              "shelfMark": [
-                "*OLB 84-1936 v. 1"
               ],
               "catalogItemType": [
                 {
@@ -3411,7 +4433,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3419,6 +4441,18 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "volumeRange": [
+                {
+                  "gte": 1,
+                  "lte": 1
+                }
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3456,18 +4490,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Orchestral music",
             "Orchestral music -- Scores"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Verlag Neue Musik,"
+            "Verlag Neue Musik"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1978
@@ -3481,11 +4524,17 @@
           "shelfMark": [
             "JMG 83-113"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Weitzendorf, Heinz."
           ],
           "createdString": [
             "1978"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1978
@@ -3498,14 +4547,40 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000021"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000009-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NM 384. Verlag Neue Musik"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100559"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200020"
             }
           ],
-          "updatedAt": 1536782413067,
+          "idOclc": [
+            "NYPG001000009-C"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Berlin : Verlag Neue Musik, c1978."
           ],
           "identifier": [
-            "urn:bnum:10000021"
+            "urn:bnum:10000021",
+            "urn:oclc:NYPG001000009-C",
+            "urn:undefined:NM 384. Verlag Neue Musik",
+            "urn:undefined:NNSZ00100559",
+            "urn:undefined:(WaOLN)nyp0200020"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3542,7 +4617,7 @@
             1
           ],
           "placeOfPublication": [
-            "Berlin :"
+            "Berlin"
           ],
           "issuance": [
             {
@@ -3561,11 +4636,8 @@
               "identifier": [
                 "urn:barcode:33433032845079"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032845079"
-                }
+              "physicalLocation": [
+                "JMG 83-113"
               ],
               "accessMessage": [
                 {
@@ -3573,15 +4645,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942029",
+              "shelfMark": [
+                "JMG 83-113"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-113"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032845079"
+                }
+              ],
               "idBarcode": [
                 "33433032845079"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942029",
-              "shelfMark": [
-                "JMG 83-113"
               ],
               "catalogItemType": [
                 {
@@ -3592,7 +4677,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3600,6 +4685,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -3632,18 +4723,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Tamil language",
             "Tamil language -- Grammar"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
+            "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -3657,6 +4757,9 @@
           "shelfMark": [
             "*OLB 84-1935"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Puttamittiraṉār, active 11th century."
           ],
@@ -3669,9 +4772,12 @@
           "seriesStatement": [
             "Kaḻaka veḷiyīṭu, 1388"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Kōvintarāja Mutaliyār, Kā. Ra., 1874-1952.",
-            "Peruntēvaṉār, 11th cent."
+            "Peruntēvaṉār, active 11th century.",
+            "Kōvintarāja Mutaliyār, Kā. Ra., 1874-1952."
           ],
           "dateStartYear": [
             1970
@@ -3688,15 +4794,36 @@
             {
               "type": "bf:Lccn",
               "value": "73913714"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000010-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100010"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200021"
             }
           ],
-          "updatedAt": 1540833300762,
+          "idOclc": [
+            "NYPG001000010-B"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Ceṉṉai, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1970."
           ],
           "identifier": [
             "urn:bnum:10000022",
-            "urn:lccn:73913714"
+            "urn:lccn:73913714",
+            "urn:oclc:NYPG001000010-B",
+            "urn:undefined:NNSZ00100010",
+            "urn:undefined:(WaOLN)nyp0200021"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3736,16 +4863,16 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
+          ],
+          "titleAlt": [
+            "Viracōḻiyam."
           ],
           "issuance": [
             {
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
-          ],
-          "titleAlt": [
-            "Viracōḻiyam."
           ],
           "items": [
             {
@@ -3758,6 +4885,22 @@
               "identifier": [
                 "urn:barcode:33433061301564"
               ],
+              "physicalLocation": [
+                "*OLB 84-1935"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783787",
+              "shelfMark": [
+                "*OLB 84-1935"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -3768,21 +4911,11 @@
                   "value": "33433061301564"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433061301564"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783787",
-              "shelfMark": [
-                "*OLB 84-1935"
               ],
               "catalogItemType": [
                 {
@@ -3801,6 +4934,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -3843,18 +4982,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Band music",
             "Band music -- Scores"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Shawnee Press,"
+            "Shawnee Press"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1979
@@ -3868,11 +5016,17 @@
           "shelfMark": [
             "JMF 83-38"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Zaninelli, Luigi."
           ],
           "createdString": [
             "1979"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1979
@@ -3885,14 +5039,40 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000023"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000010-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "KC913 Shawnee Press"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100560"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200022"
             }
           ],
-          "updatedAt": 1536782412148,
+          "idOclc": [
+            "NYPG001000010-C"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Delaware Water Gap, Pa. : Shawnee Press, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000023"
+            "urn:bnum:10000023",
+            "urn:oclc:NYPG001000010-C",
+            "urn:undefined:KC913 Shawnee Press",
+            "urn:undefined:NNSZ00100560",
+            "urn:undefined:(WaOLN)nyp0200022"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -3929,7 +5109,7 @@
             1
           ],
           "placeOfPublication": [
-            "Delaware Water Gap, Pa. :"
+            "Delaware Water Gap, Pa."
           ],
           "issuance": [
             {
@@ -3948,11 +5128,8 @@
               "identifier": [
                 "urn:barcode:33433032709028"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032709028"
-                }
+              "physicalLocation": [
+                "JMF 83-38"
               ],
               "accessMessage": [
                 {
@@ -3960,15 +5137,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942030",
+              "shelfMark": [
+                "JMF 83-38"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-38"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032709028"
+                }
+              ],
               "idBarcode": [
                 "33433032709028"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942030",
-              "shelfMark": [
-                "JMF 83-38"
               ],
               "catalogItemType": [
                 {
@@ -3979,7 +5169,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -3987,6 +5177,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -4019,21 +5215,30 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Bahrain",
-            "Bahrain -- Economic conditions",
             "Bahrain -- History",
             "Bahrain -- History -- 20th century",
+            "Bahrain -- Economic conditions",
             "Bahrain -- Social conditions"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Dār Ibn Khaldūn,"
+            "Dār Ibn Khaldūn"
           ],
           "language": [
             {
               "id": "lang:ara",
               "label": "Arabic"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1976
@@ -4047,6 +5252,9 @@
           "shelfMark": [
             "*OFK 84-1944"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Rumayḥī, Muḥammad Ghānim."
           ],
@@ -4055,6 +5263,9 @@
           ],
           "idLccn": [
             "79971032"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1976
@@ -4071,15 +5282,36 @@
             {
               "type": "bf:Lccn",
               "value": "79971032"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000011-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100011"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200023"
             }
           ],
-          "updatedAt": 1578433338597,
+          "idOclc": [
+            "NYPG001000011-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "[Bayrūt] : Dār Ibn Khaldūn, 1976."
           ],
           "identifier": [
             "urn:bnum:10000024",
-            "urn:lccn:79971032"
+            "urn:lccn:79971032",
+            "urn:oclc:NYPG001000011-B",
+            "urn:undefined:NNSZ00100011",
+            "urn:undefined:(WaOLN)nyp0200023"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4103,8 +5335,8 @@
             }
           ],
           "subjectLiteral": [
-            "Bahrain -- Economic conditions.",
             "Bahrain -- History -- 20th century.",
+            "Bahrain -- Economic conditions.",
             "Bahrain -- Social conditions."
           ],
           "titleDisplay": [
@@ -4121,7 +5353,7 @@
             1
           ],
           "placeOfPublication": [
-            "[Bayrūt] :"
+            "[Bayrūt]"
           ],
           "issuance": [
             {
@@ -4140,6 +5372,22 @@
               "identifier": [
                 "urn:barcode:33433005548676"
               ],
+              "physicalLocation": [
+                "*OFK 84-1944"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000005",
+              "shelfMark": [
+                "*OFK 84-1944"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4150,21 +5398,11 @@
                   "value": "33433005548676"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433005548676"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000005",
-              "shelfMark": [
-                "*OFK 84-1944"
               ],
               "catalogItemType": [
                 {
@@ -4183,6 +5421,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4203,17 +5447,26 @@
           "extent": [
             "15 p. of music ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sonatas (Piano)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Möseler,"
+            "Möseler"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1979
@@ -4227,6 +5480,9 @@
           "shelfMark": [
             "JMF 83-107"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Stockmeier, Wolfgang."
           ],
@@ -4235,6 +5491,9 @@
           ],
           "seriesStatement": [
             "Hausmusik ; 179"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1979
@@ -4247,17 +5506,38 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000025"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000011-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100561"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200024"
             }
+          ],
+          "idOclc": [
+            "NYPG001000011-C"
           ],
           "uniformTitle": [
             "Sonatinas, piano"
           ],
-          "updatedAt": 1536782413910,
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Wolfenbüttel : Möseler, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000025"
+            "urn:bnum:10000025",
+            "urn:oclc:NYPG001000011-C",
+            "urn:undefined:NNSZ00100561",
+            "urn:undefined:(WaOLN)nyp0200024"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4294,7 +5574,7 @@
             1
           ],
           "placeOfPublication": [
-            "Wolfenbüttel :"
+            "Wolfenbüttel"
           ],
           "issuance": [
             {
@@ -4303,7 +5583,7 @@
             }
           ],
           "titleAlt": [
-            "Sonatinas,"
+            "Sonatinas"
           ],
           "items": [
             {
@@ -4316,11 +5596,8 @@
               "identifier": [
                 "urn:barcode:33433032709697"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032709697"
-                }
+              "physicalLocation": [
+                "JMF 83-107"
               ],
               "accessMessage": [
                 {
@@ -4328,15 +5605,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942031",
+              "shelfMark": [
+                "JMF 83-107"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-107"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032709697"
+                }
+              ],
               "idBarcode": [
                 "33433032709697"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942031",
-              "shelfMark": [
-                "JMF 83-107"
               ],
               "catalogItemType": [
                 {
@@ -4347,7 +5637,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4355,6 +5645,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -4387,18 +5683,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Women",
             "Women -- Syria"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī,"
+            "Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī"
           ],
           "language": [
             {
               "id": "lang:ara",
               "label": "Arabic"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1975
@@ -4412,6 +5717,9 @@
           "shelfMark": [
             "*OFX 84-1953"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Razzāz, Nabīlah."
           ],
@@ -4420,6 +5728,9 @@
           ],
           "idLccn": [
             "76960987"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1975
@@ -4436,15 +5747,36 @@
             {
               "type": "bf:Lccn",
               "value": "76960987"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000012-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100012"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200025"
             }
           ],
-          "updatedAt": 1578433234482,
+          "idOclc": [
+            "NYPG001000012-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Dimashq : Wizārat al-Thaqāfah wa-al-Irshād al-Qawmī, 1975."
           ],
           "identifier": [
             "urn:bnum:10000026",
-            "urn:lccn:76960987"
+            "urn:lccn:76960987",
+            "urn:oclc:NYPG001000012-B",
+            "urn:undefined:NNSZ00100012",
+            "urn:undefined:(WaOLN)nyp0200025"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4484,7 +5816,7 @@
             1
           ],
           "placeOfPublication": [
-            "Dimashq :"
+            "Dimashq"
           ],
           "issuance": [
             {
@@ -4503,6 +5835,22 @@
               "identifier": [
                 "urn:barcode:33433002031700"
               ],
+              "physicalLocation": [
+                "*OFX 84-1953"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000006",
+              "shelfMark": [
+                "*OFX 84-1953"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4513,21 +5861,11 @@
                   "value": "33433002031700"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433002031700"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000006",
-              "shelfMark": [
-                "*OFX 84-1953"
               ],
               "catalogItemType": [
                 {
@@ -4546,6 +5884,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4566,17 +5910,26 @@
           "extent": [
             "15 p. of music ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sonatas (Violin)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Möseler Verlag,"
+            "Möseler Verlag"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1979
@@ -4590,6 +5943,9 @@
           "shelfMark": [
             "JMF 83-95"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Köhler, Friedemann."
           ],
@@ -4598,6 +5954,9 @@
           ],
           "seriesStatement": [
             "Hausmusik ; 172"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1979
@@ -4610,17 +5969,38 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000027"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000012-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100562"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200026"
             }
+          ],
+          "idOclc": [
+            "NYPG001000012-C"
           ],
           "uniformTitle": [
             "Kleine Sonaten, violin"
           ],
-          "updatedAt": 1536782413067,
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Wolfenbüttel : Möseler Verlag, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000027"
+            "urn:bnum:10000027",
+            "urn:oclc:NYPG001000012-C",
+            "urn:undefined:NNSZ00100562",
+            "urn:undefined:(WaOLN)nyp0200026"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4657,7 +6037,7 @@
             1
           ],
           "placeOfPublication": [
-            "Wolfenbüttel :"
+            "Wolfenbüttel"
           ],
           "issuance": [
             {
@@ -4666,7 +6046,7 @@
             }
           ],
           "titleAlt": [
-            "Kleine Sonaten,"
+            "Kleine Sonaten"
           ],
           "items": [
             {
@@ -4679,11 +6059,8 @@
               "identifier": [
                 "urn:barcode:33433032709572"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032709572"
-                }
+              "physicalLocation": [
+                "JMF 83-95"
               ],
               "accessMessage": [
                 {
@@ -4691,15 +6068,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942032",
+              "shelfMark": [
+                "JMF 83-95"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-95"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032709572"
+                }
+              ],
               "idBarcode": [
                 "33433032709572"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942032",
-              "shelfMark": [
-                "JMF 83-95"
               ],
               "catalogItemType": [
                 {
@@ -4710,7 +6100,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4718,6 +6108,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -4755,17 +6151,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sūryamalla Miśraṇa, 1815-1868"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Rājasthāna Sāhitya Akādamī (Saṅgama),"
+            "Rājasthāna Sāhitya Akādamī (Saṅgama)"
           ],
           "language": [
             {
               "id": "lang:hin",
               "label": "Hindi"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1973
@@ -4779,14 +6184,20 @@
           "shelfMark": [
             "*OKTM 84-1945"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
-            "Khāna, Ālamaśāha, 1936-"
+            "Khāna, Ālama Śāha, 1936-2003."
           ],
           "createdString": [
             "1973"
           ],
           "idLccn": [
             "75903689"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1973
@@ -4803,15 +6214,36 @@
             {
               "type": "bf:Lccn",
               "value": "75903689"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000013-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100013"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200027"
             }
           ],
-          "updatedAt": 1536782413910,
+          "idOclc": [
+            "NYPG001000013-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Udayapura : Rājasthāna Sāhitya Akādamī (Saṅgama), 1973."
           ],
           "identifier": [
             "urn:bnum:10000028",
-            "urn:lccn:75903689"
+            "urn:lccn:75903689",
+            "urn:oclc:NYPG001000013-B",
+            "urn:undefined:NNSZ00100013",
+            "urn:undefined:(WaOLN)nyp0200027"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -4851,7 +6283,7 @@
             1
           ],
           "placeOfPublication": [
-            "Udayapura :"
+            "Udayapura"
           ],
           "issuance": [
             {
@@ -4870,6 +6302,22 @@
               "identifier": [
                 "urn:barcode:33433011094210"
               ],
+              "physicalLocation": [
+                "*OKTM 84-1945"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942033",
+              "shelfMark": [
+                "*OKTM 84-1945"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -4880,21 +6328,11 @@
                   "value": "33433011094210"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433011094210"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942033",
-              "shelfMark": [
-                "*OKTM 84-1945"
               ],
               "catalogItemType": [
                 {
@@ -4905,7 +6343,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -4913,6 +6351,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -4950,17 +6394,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Organ music"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "W. Hansen ; Distribution, Magnamusic-Baton,"
+            "W. Hansen ; Distribution, Magnamusic-Baton"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -4974,6 +6427,9 @@
           "shelfMark": [
             "JMF 83-93"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Lorentzen, Bent."
           ],
@@ -4982,6 +6438,9 @@
           ],
           "idLccn": [
             "82771131"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -4998,15 +6457,46 @@
             {
               "type": "bf:Lccn",
               "value": "82771131"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000013-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Wilhelm Hansen edition no. 4372."
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "29589."
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100563"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200028"
             }
           ],
-          "updatedAt": 1536782412087,
+          "idOclc": [
+            "NYPG001000013-C"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Copenhagen ; New York : W. Hansen ; [s.l.] : Distribution, Magnamusic-Baton, c1980."
           ],
           "identifier": [
             "urn:bnum:10000029",
-            "urn:lccn:82771131"
+            "urn:lccn:82771131",
+            "urn:oclc:NYPG001000013-C",
+            "urn:undefined:Wilhelm Hansen edition no. 4372.",
+            "urn:undefined:29589.",
+            "urn:undefined:NNSZ00100563",
+            "urn:undefined:(WaOLN)nyp0200028"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5046,7 +6536,7 @@
             1
           ],
           "placeOfPublication": [
-            "Copenhagen ; New York : [s.l.] :"
+            "Copenhagen ; New York : [s.l.]"
           ],
           "issuance": [
             {
@@ -5065,11 +6555,8 @@
               "identifier": [
                 "urn:barcode:33433032709556"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032709556"
-                }
+              "physicalLocation": [
+                "JMF 83-93"
               ],
               "accessMessage": [
                 {
@@ -5077,15 +6564,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942034",
+              "shelfMark": [
+                "JMF 83-93"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-93"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032709556"
+                }
+              ],
               "idBarcode": [
                 "33433032709556"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942034",
-              "shelfMark": [
-                "JMF 83-93"
               ],
               "catalogItemType": [
                 {
@@ -5096,7 +6596,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5104,6 +6604,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -5146,18 +6652,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sanskrit language",
             "Sanskrit language -- Suffixes and prefixes"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; prāptisthānam, Rāmalāla Kapūra Ṭrasṭa,"
+            "Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; prāptisthānam, Rāmalāla Kapūra Ṭrasṭa"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1974
@@ -5171,18 +6686,24 @@
           "shelfMark": [
             "*OKA 84-1931"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1974"
           ],
           "idLccn": [
             "75902275"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Dayananda Sarasvati, Swami, 1824-1883.",
-            "Pāṇini.",
-            "Yudhiṣṭhira Mīmāṃsaka, 1909-",
             "Āpiśali.",
-            "Śākatāyana."
+            "Pāṇini.",
+            "Śākatāyana.",
+            "Dayananda Sarasvati, Swami, 1824-1883.",
+            "Yudhiṣṭhira Mīmāṃsaka, 1909-"
           ],
           "dateStartYear": [
             1974
@@ -5199,18 +6720,39 @@
             {
               "type": "bf:Lccn",
               "value": "75902275"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000014-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100014"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200029"
             }
+          ],
+          "idOclc": [
+            "NYPG001000014-B"
           ],
           "uniformTitle": [
             "Uṇādisūtra."
           ],
-          "updatedAt": 1578432536487,
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Karanāla : Ra.Ba.Cau. Nārāyaṇasiṃha Dharmārtha Ṭrasṭa ; Bahālagaḍha, Harayāṇa : prāptisthānam, Rāmalāla Kapūra Ṭrasṭa, 1974."
           ],
           "identifier": [
             "urn:bnum:10000030",
-            "urn:lccn:75902275"
+            "urn:lccn:75902275",
+            "urn:oclc:NYPG001000014-B",
+            "urn:undefined:NNSZ00100014",
+            "urn:undefined:(WaOLN)nyp0200029"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5250,7 +6792,7 @@
             1
           ],
           "placeOfPublication": [
-            "Karanāla : Bahālagaḍha, Harayāṇa :"
+            "Karanāla : Bahālagaḍha, Harayāṇa"
           ],
           "issuance": [
             {
@@ -5269,6 +6811,22 @@
               "identifier": [
                 "urn:barcode:33433012968222"
               ],
+              "physicalLocation": [
+                "*OKA 84-1931"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000007",
+              "shelfMark": [
+                "*OKA 84-1931"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -5279,21 +6837,11 @@
                   "value": "33433012968222"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433012968222"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000007",
-              "shelfMark": [
-                "*OKA 84-1931"
               ],
               "catalogItemType": [
                 {
@@ -5312,6 +6860,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5332,17 +6886,26 @@
           "extent": [
             "21 p. of music ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Piano music"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "W. Müller,"
+            "W. Müller"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1979
@@ -5356,11 +6919,17 @@
           "shelfMark": [
             "JMG 83-17"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Petersen, Wilhelm, 1890-1957."
           ],
           "createdString": [
             "1979"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1979
@@ -5373,17 +6942,43 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000031"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000014-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "W. Müller WM 1713 SM."
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100564"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200030"
             }
+          ],
+          "idOclc": [
+            "NYPG001000014-C"
           ],
           "uniformTitle": [
             "Miniaturen"
           ],
-          "updatedAt": 1536782413246,
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Heidelberg : W. Müller, c1979."
           ],
           "identifier": [
-            "urn:bnum:10000031"
+            "urn:bnum:10000031",
+            "urn:oclc:NYPG001000014-C",
+            "urn:undefined:W. Müller WM 1713 SM.",
+            "urn:undefined:NNSZ00100564",
+            "urn:undefined:(WaOLN)nyp0200030"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5420,7 +7015,7 @@
             1
           ],
           "placeOfPublication": [
-            "Heidelberg :"
+            "Heidelberg"
           ],
           "issuance": [
             {
@@ -5443,11 +7038,8 @@
               "identifier": [
                 "urn:barcode:33433032841631"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032841631"
-                }
+              "physicalLocation": [
+                "JMG 83-17"
               ],
               "accessMessage": [
                 {
@@ -5455,15 +7047,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942035",
+              "shelfMark": [
+                "JMG 83-17"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-17"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032841631"
+                }
+              ],
               "idBarcode": [
                 "33433032841631"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942035",
-              "shelfMark": [
-                "JMG 83-17"
               ],
               "catalogItemType": [
                 {
@@ -5474,7 +7079,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5482,6 +7087,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -5514,20 +7125,29 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Jahrom (Iran : Province)",
             "Jahrom (Iran : Province) -- Biography",
             "Khafr (Iran)",
             "Khafr (Iran) -- Biography"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Kitābfurūshī-i Khayyām,"
+            "Kitābfurūshī-i Khayyām"
           ],
           "language": [
             {
               "id": "lang:per",
               "label": "Persian"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -5541,11 +7161,17 @@
           "shelfMark": [
             "*OMP 84-2007"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Ishrāq, Muḥammad Karīm."
           ],
           "createdString": [
             "1972"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1972
@@ -5558,14 +7184,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000032"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000015-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100015"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200031"
             }
           ],
-          "updatedAt": 1578432679896,
+          "idOclc": [
+            "NYPG001000015-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Tihrān : Kitābfurūshī-i Khayyām, 1351 [1972]"
           ],
           "identifier": [
-            "urn:bnum:10000032"
+            "urn:bnum:10000032",
+            "urn:oclc:NYPG001000015-B",
+            "urn:undefined:NNSZ00100015",
+            "urn:undefined:(WaOLN)nyp0200031"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5603,7 +7250,7 @@
             1
           ],
           "placeOfPublication": [
-            "Tihrān :"
+            "Tihrān"
           ],
           "issuance": [
             {
@@ -5622,6 +7269,22 @@
               "identifier": [
                 "urn:barcode:33433013173012"
               ],
+              "physicalLocation": [
+                "*OMP 84-2007"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000008",
+              "shelfMark": [
+                "*OMP 84-2007"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -5632,21 +7295,11 @@
                   "value": "33433013173012"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433013173012"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000008",
-              "shelfMark": [
-                "*OMP 84-2007"
               ],
               "catalogItemType": [
                 {
@@ -5665,6 +7318,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -5692,18 +7351,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
-            "Psalms (Music)",
-            "Sacred songs (Medium voice) with organ"
+            "Sacred songs (Medium voice) with organ",
+            "Psalms (Music)"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
-            "Agápe,"
+            "Agápe"
           ],
           "language": [
             {
               "id": "lang:eng",
               "label": "English"
             }
+          ],
+          "numItemsTotal": [
+            2
           ],
           "createdYear": [
             1981
@@ -5717,11 +7385,17 @@
           "shelfMark": [
             "JMG 83-59"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Nelhybel, Vaclav."
           ],
           "createdString": [
             "1981"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1981
@@ -5734,14 +7408,35 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000033"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000015-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100565"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200032"
             }
           ],
-          "updatedAt": 1536782413960,
+          "idOclc": [
+            "NYPG001000015-C"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Carol Stream, Ill. : Agápe, c1981."
           ],
           "identifier": [
-            "urn:bnum:10000033"
+            "urn:bnum:10000033",
+            "urn:oclc:NYPG001000015-C",
+            "urn:undefined:NNSZ00100565",
+            "urn:undefined:(WaOLN)nyp0200032"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -5765,8 +7460,8 @@
             }
           ],
           "subjectLiteral": [
-            "Psalms (Music)",
-            "Sacred songs (Medium voice) with organ."
+            "Sacred songs (Medium voice) with organ.",
+            "Psalms (Music)"
           ],
           "titleDisplay": [
             "Psalm settings / Vaclav Nelhybel."
@@ -5779,7 +7474,7 @@
             2
           ],
           "placeOfPublication": [
-            "Carol Stream, Ill. :"
+            "Carol Stream, Ill."
           ],
           "issuance": [
             {
@@ -5801,11 +7496,8 @@
               "identifier": [
                 "urn:barcode:33433032842035"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032842035"
-                }
+              "physicalLocation": [
+                "JMG 83-59"
               ],
               "accessMessage": [
                 {
@@ -5813,15 +7505,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942036",
+              "shelfMark": [
+                "JMG 83-59"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-59"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032842035"
+                }
+              ],
               "idBarcode": [
                 "33433032842035"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942036",
-              "shelfMark": [
-                "JMG 83-59"
               ],
               "catalogItemType": [
                 {
@@ -5840,6 +7545,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             },
             {
@@ -5847,6 +7558,15 @@
                 {
                   "id": "orgs:1123",
                   "label": "Music Division"
+                }
+              ],
+              "physicalLocation": [
+                "JMG 83-59"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-59"
                 }
               ],
               "accessMessage": [
@@ -5857,6 +7577,9 @@
               ],
               "requestable": [
                 false
+              ],
+              "type": [
+                "bf:Item"
               ],
               "uri": "i10942037",
               "shelfMark": [
@@ -5871,7 +7594,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -5879,6 +7602,9 @@
                   "id": "loc:mym32",
                   "label": "Performing Arts Research Collections - Music"
                 }
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -5921,14 +7647,23 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Prithivi Prakashan,"
+            "Prithivi Prakashan"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1974
@@ -5942,6 +7677,9 @@
           "shelfMark": [
             "*OKR 84-2006"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Budhasvāmin."
           ],
@@ -5954,10 +7692,13 @@
           "seriesStatement": [
             "Indian civilization series ; no. 4"
           ],
+          "numElectronicResources": [
+            0
+          ],
           "contributorLiteral": [
-            "Agrawala, Prithvi Kumar.",
+            "Guṇāḍhya.",
             "Agrawala, Vasudeva Sharana.",
-            "Guṇāḍhya."
+            "Agrawala, Prithvi Kumar."
           ],
           "dateStartYear": [
             1974
@@ -5974,15 +7715,36 @@
             {
               "type": "bf:Lccn",
               "value": "74903273"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000016-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100016"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200033"
             }
           ],
-          "updatedAt": 1578433613401,
+          "idOclc": [
+            "NYPG001000016-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Varanasi : Prithivi Prakashan, 1974."
           ],
           "identifier": [
             "urn:bnum:10000034",
-            "urn:lccn:74903273"
+            "urn:lccn:74903273",
+            "urn:oclc:NYPG001000016-B",
+            "urn:undefined:NNSZ00100016",
+            "urn:undefined:(WaOLN)nyp0200033"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6019,7 +7781,7 @@
             1
           ],
           "placeOfPublication": [
-            "Varanasi :"
+            "Varanasi"
           ],
           "issuance": [
             {
@@ -6038,6 +7800,22 @@
               "identifier": [
                 "urn:barcode:33433011528696"
               ],
+              "physicalLocation": [
+                "*OKR 84-2006"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000009",
+              "shelfMark": [
+                "*OKR 84-2006"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -6048,21 +7826,11 @@
                   "value": "33433011528696"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433011528696"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000009",
-              "shelfMark": [
-                "*OKR 84-2006"
               ],
               "catalogItemType": [
                 {
@@ -6081,6 +7849,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6113,17 +7887,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Suites (Piano)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Donemus,"
+            "Donemus"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            2
           ],
           "createdYear": [
             1980
@@ -6137,11 +7920,17 @@
           "shelfMark": [
             "JMG 83-6"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Kasbergen, Marinus, 1936-"
           ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -6154,17 +7943,38 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000035"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000016-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100566"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200034"
             }
+          ],
+          "idOclc": [
+            "NYPG001000016-C"
           ],
           "uniformTitle": [
             "Serenade, piano"
           ],
-          "updatedAt": 1536782413978,
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Amsterdam : Donemus, c1980."
           ],
           "identifier": [
-            "urn:bnum:10000035"
+            "urn:bnum:10000035",
+            "urn:oclc:NYPG001000016-C",
+            "urn:undefined:NNSZ00100566",
+            "urn:undefined:(WaOLN)nyp0200034"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6201,7 +8011,7 @@
             2
           ],
           "placeOfPublication": [
-            "Amsterdam :"
+            "Amsterdam"
           ],
           "issuance": [
             {
@@ -6210,7 +8020,7 @@
             }
           ],
           "titleAlt": [
-            "Serenade,"
+            "Serenade"
           ],
           "tableOfContents": [
             "Varianten -- Nocturne -- Toccata I -- Intermezzo -- Toccata II."
@@ -6219,59 +8029,17 @@
             {
               "owner": [
                 {
-                  "id": "orgs:1002",
-                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                  "id": "orgs:1123",
+                  "label": "Music Division"
                 }
               ],
-              "identifier": [
-                "urn:barcode:33433032841490"
+              "physicalLocation": [
+                "JMG 83-6"
               ],
               "identifierV2": [
                 {
-                  "type": "bf:Barcode",
-                  "value": "33433032841490"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433032841490"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10942038",
-              "shelfMark": [
-                "JMG 83-6"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:7",
-                  "label": "printed music, non-circ"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available "
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rcpm2",
-                  "label": "Offsite"
-                }
-              ]
-            },
-            {
-              "owner": [
-                {
-                  "id": "orgs:1123",
-                  "label": "Music Division"
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-6"
                 }
               ],
               "accessMessage": [
@@ -6282,6 +8050,9 @@
               ],
               "requestable": [
                 false
+              ],
+              "type": [
+                "bf:Item"
               ],
               "uri": "i10942039",
               "shelfMark": [
@@ -6296,7 +8067,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6304,6 +8075,76 @@
                   "id": "loc:mym32",
                   "label": "Performing Arts Research Collections - Music"
                 }
+              ],
+              "formatLiteral": [
+                "Notated music"
+              ]
+            },
+            {
+              "owner": [
+                {
+                  "id": "orgs:1002",
+                  "label": "New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center"
+                }
+              ],
+              "identifier": [
+                "urn:barcode:33433032841490"
+              ],
+              "physicalLocation": [
+                "JMG 83-6"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942038",
+              "shelfMark": [
+                "JMG 83-6"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-6"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032841490"
+                }
+              ],
+              "idBarcode": [
+                "33433032841490"
+              ],
+              "requestable": [
+                true
+              ],
+              "catalogItemType": [
+                {
+                  "id": "catalogItemType:7",
+                  "label": "printed music, non-circ"
+                }
+              ],
+              "status": [
+                {
+                  "id": "status:a",
+                  "label": "Available"
+                }
+              ],
+              "holdingLocation": [
+                {
+                  "id": "loc:rcpm2",
+                  "label": "Offsite"
+                }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -6336,18 +8177,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Nārāyaṇatīrtha, 17th cent",
             "Nārāyaṇatīrtha, 17th cent -- In literature"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "s.n.],"
+            "s.n.]"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1972
@@ -6361,6 +8211,9 @@
           "shelfMark": [
             "*OKB 84-1928"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Lakshmikantaiah, Garikapati, 1900-"
           ],
@@ -6369,6 +8222,9 @@
           ],
           "idLccn": [
             "75902755"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1972
@@ -6385,15 +8241,36 @@
             {
               "type": "bf:Lccn",
               "value": "75902755"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000017-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100017"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200035"
             }
           ],
-          "updatedAt": 1536782413960,
+          "idOclc": [
+            "NYPG001000017-B"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "[s.1. : s.n.], 1972"
           ],
           "identifier": [
             "urn:bnum:10000036",
-            "urn:lccn:75902755"
+            "urn:lccn:75902755",
+            "urn:oclc:NYPG001000017-B",
+            "urn:undefined:NNSZ00100017",
+            "urn:undefined:(WaOLN)nyp0200035"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6433,7 +8310,7 @@
             1
           ],
           "placeOfPublication": [
-            "[s.1. :"
+            "[s.1."
           ],
           "issuance": [
             {
@@ -6452,11 +8329,8 @@
               "identifier": [
                 "urn:barcode:33433058548433"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058548433"
-                }
+              "physicalLocation": [
+                "*OKB 84-1928"
               ],
               "accessMessage": [
                 {
@@ -6464,15 +8338,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i12858032",
+              "shelfMark": [
+                "*OKB 84-1928"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKB 84-1928"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058548433"
+                }
+              ],
               "idBarcode": [
                 "33433058548433"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i12858032",
-              "shelfMark": [
-                "*OKB 84-1928"
               ],
               "catalogItemType": [
                 {
@@ -6483,7 +8370,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6491,6 +8378,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6518,17 +8411,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Suites (Guitar)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Donemus,"
+            "Donemus"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -6542,11 +8444,17 @@
           "shelfMark": [
             "JMG 83-5"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Hekster, Walter."
           ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -6559,17 +8467,38 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000037"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000017-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100567"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200036"
             }
+          ],
+          "idOclc": [
+            "NYPG001000017-C"
           ],
           "uniformTitle": [
             "Studies, guitar"
           ],
-          "updatedAt": 1536782413978,
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Amsterdam : Donemus, c1980."
           ],
           "identifier": [
-            "urn:bnum:10000037"
+            "urn:bnum:10000037",
+            "urn:oclc:NYPG001000017-C",
+            "urn:undefined:NNSZ00100567",
+            "urn:undefined:(WaOLN)nyp0200036"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6606,7 +8535,7 @@
             1
           ],
           "placeOfPublication": [
-            "Amsterdam :"
+            "Amsterdam"
           ],
           "issuance": [
             {
@@ -6615,7 +8544,7 @@
             }
           ],
           "titleAlt": [
-            "Studies,"
+            "Studies"
           ],
           "items": [
             {
@@ -6628,11 +8557,8 @@
               "identifier": [
                 "urn:barcode:33433032841482"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032841482"
-                }
+              "physicalLocation": [
+                "JMG 83-5"
               ],
               "accessMessage": [
                 {
@@ -6640,15 +8566,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942040",
+              "shelfMark": [
+                "JMG 83-5"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-5"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032841482"
+                }
+              ],
               "idBarcode": [
                 "33433032841482"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942040",
-              "shelfMark": [
-                "JMG 83-5"
               ],
               "catalogItemType": [
                 {
@@ -6659,7 +8598,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6667,6 +8606,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -6694,18 +8639,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sanskrit poetry",
             "Sanskrit poetry -- Himachal Pradesh"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Himācala Kalā-Saṃskrti-Bhāṣā Akādamī,"
+            "Himācala Kalā-Saṃskrti-Bhāṣā Akādamī"
           ],
           "language": [
             {
               "id": "lang:san",
               "label": "Sanskrit"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1975
@@ -6719,11 +8673,17 @@
           "shelfMark": [
             "*OKP 84-1932"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1975"
           ],
           "idLccn": [
             "76900772"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Prarthi, Lall Chand, 1916-"
@@ -6743,15 +8703,36 @@
             {
               "type": "bf:Lccn",
               "value": "76900772"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000018-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100018"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200037"
             }
           ],
-          "updatedAt": 1536782413246,
+          "idOclc": [
+            "NYPG001000018-B"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "Śimalā : Himācala Kalā-Saṃskrti-Bhāṣā Akādamī, 1975."
           ],
           "identifier": [
             "urn:bnum:10000038",
-            "urn:lccn:76900772"
+            "urn:lccn:76900772",
+            "urn:oclc:NYPG001000018-B",
+            "urn:undefined:NNSZ00100018",
+            "urn:undefined:(WaOLN)nyp0200037"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6791,7 +8772,7 @@
             1
           ],
           "placeOfPublication": [
-            "Śimalā :"
+            "Śimalā"
           ],
           "issuance": [
             {
@@ -6810,6 +8791,22 @@
               "identifier": [
                 "urn:barcode:33433058153572"
               ],
+              "physicalLocation": [
+                "*OKP 84-1932"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783788",
+              "shelfMark": [
+                "*OKP 84-1932"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -6820,21 +8817,11 @@
                   "value": "33433058153572"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433058153572"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783788",
-              "shelfMark": [
-                "*OKP 84-1932"
               ],
               "catalogItemType": [
                 {
@@ -6845,7 +8832,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -6853,6 +8840,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -6873,17 +8866,26 @@
           "extent": [
             "49 p. of music ;"
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Sonatas (Piano)"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "C.F. Peters,"
+            "C.F. Peters"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -6897,11 +8899,17 @@
           "shelfMark": [
             "JMG 83-66"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Hässler, Johann Wilhelm, 1747-1822."
           ],
           "createdString": [
             "1980"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Oberdoerffer, Fritz."
@@ -6917,17 +8925,43 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000039"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000018-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Edition Peters no. 66799. C.F. Peters"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100568"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200038"
             }
+          ],
+          "idOclc": [
+            "NYPG001000018-C"
           ],
           "uniformTitle": [
             "Sonatas, piano. Selections"
           ],
-          "updatedAt": 1536782413006,
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "New York : C.F. Peters, c1980."
           ],
           "identifier": [
-            "urn:bnum:10000039"
+            "urn:bnum:10000039",
+            "urn:oclc:NYPG001000018-C",
+            "urn:undefined:Edition Peters no. 66799. C.F. Peters",
+            "urn:undefined:NNSZ00100568",
+            "urn:undefined:(WaOLN)nyp0200038"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -6964,7 +8998,7 @@
             1
           ],
           "placeOfPublication": [
-            "New York :"
+            "New York"
           ],
           "issuance": [
             {
@@ -6973,7 +9007,7 @@
             }
           ],
           "titleAlt": [
-            "Sonatas,"
+            "Sonatas"
           ],
           "items": [
             {
@@ -6986,11 +9020,8 @@
               "identifier": [
                 "urn:barcode:33433032842100"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032842100"
-                }
+              "physicalLocation": [
+                "JMG 83-66"
               ],
               "accessMessage": [
                 {
@@ -6998,15 +9029,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942041",
+              "shelfMark": [
+                "JMG 83-66"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMG 83-66"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032842100"
+                }
+              ],
               "idBarcode": [
                 "33433032842100"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942041",
-              "shelfMark": [
-                "JMG 83-66"
               ],
               "catalogItemType": [
                 {
@@ -7017,7 +9061,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7025,6 +9069,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -7052,17 +9102,26 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Kaliyāṇacuntaraṉār, Tiru. Vi., 1883-1953"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam,"
+            "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam"
           ],
           "language": [
             {
               "id": "lang:tam",
               "label": "Tamil"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1970
@@ -7076,6 +9135,9 @@
           "shelfMark": [
             "*OLB 84-1947"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Pulavar Arasu, 1900-"
           ],
@@ -7087,6 +9149,9 @@
           ],
           "seriesStatement": [
             "Kaḻaka veḷiyīṭu, 672"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1970
@@ -7103,15 +9168,36 @@
             {
               "type": "bf:Lccn",
               "value": "78913375"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000019-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100019"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200039"
             }
           ],
-          "updatedAt": 1536782413006,
+          "idOclc": [
+            "NYPG001000019-B"
+          ],
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Ceṉṉai, Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1970."
           ],
           "identifier": [
             "urn:bnum:10000040",
-            "urn:lccn:78913375"
+            "urn:lccn:78913375",
+            "urn:oclc:NYPG001000019-B",
+            "urn:undefined:NNSZ00100019",
+            "urn:undefined:(WaOLN)nyp0200039"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -7151,7 +9237,7 @@
             1
           ],
           "placeOfPublication": [
-            "Ceṉṉai,"
+            "Ceṉṉai"
           ],
           "issuance": [
             {
@@ -7170,6 +9256,22 @@
               "identifier": [
                 "urn:barcode:33433061301622"
               ],
+              "physicalLocation": [
+                "*OLB 84-1947"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783789",
+              "shelfMark": [
+                "*OLB 84-1947"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -7180,21 +9282,11 @@
                   "value": "33433061301622"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433061301622"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783789",
-              "shelfMark": [
-                "*OLB 84-1947"
               ],
               "catalogItemType": [
                 {
@@ -7205,7 +9297,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7213,6 +9305,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -7240,18 +9338,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Woodwind quintets (Clarinets (5))",
             "Woodwind quintets (Clarinets (5)) -- Scores"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Primavera,"
+            "Primavera"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -7265,6 +9372,9 @@
           "shelfMark": [
             "JMF 83-66"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Usher, Julia."
           ],
@@ -7273,6 +9383,9 @@
           ],
           "idLccn": [
             "81770739"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -7289,15 +9402,36 @@
             {
               "type": "bf:Lccn",
               "value": "81770739"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000019-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100569"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200040"
             }
           ],
-          "updatedAt": 1536782413978,
+          "idOclc": [
+            "NYPG001000019-C"
+          ],
+          "updatedAt": 1674870747963,
           "publicationStatement": [
             "London : Primavera, c1980."
           ],
           "identifier": [
             "urn:bnum:10000041",
-            "urn:lccn:81770739"
+            "urn:lccn:81770739",
+            "urn:oclc:NYPG001000019-C",
+            "urn:undefined:NNSZ00100569",
+            "urn:undefined:(WaOLN)nyp0200040"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -7337,7 +9471,7 @@
             1
           ],
           "placeOfPublication": [
-            "London :"
+            "London"
           ],
           "issuance": [
             {
@@ -7359,11 +9493,8 @@
               "identifier": [
                 "urn:barcode:33433032709291"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433032709291"
-                }
+              "physicalLocation": [
+                "JMF 83-66"
               ],
               "accessMessage": [
                 {
@@ -7371,15 +9502,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10942042",
+              "shelfMark": [
+                "JMF 83-66"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "JMF 83-66"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433032709291"
+                }
+              ],
               "idBarcode": [
                 "33433032709291"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10942042",
-              "shelfMark": [
-                "JMF 83-66"
               ],
               "catalogItemType": [
                 {
@@ -7390,7 +9534,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7398,6 +9542,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -7425,12 +9575,18 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Advaita",
             "Vedanta"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Devabhāṣā Prakāśana,"
+            "Devabhāṣā Prakāśana"
           ],
           "language": [
             {
@@ -7438,11 +9594,14 @@
               "label": "Sanskrit"
             }
           ],
-          "dateEndString": [
-            "1972"
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1971
+          ],
+          "dateEndString": [
+            "1972"
           ],
           "type": [
             "nypl:Item"
@@ -7453,11 +9612,17 @@
           "shelfMark": [
             "*OKN 84-1926"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "createdString": [
             "1971"
           ],
           "idLccn": [
             "72902870"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "contributorLiteral": [
             "Brahmashram, Śwami, 1915-"
@@ -7477,7 +9642,22 @@
             {
               "type": "bf:Lccn",
               "value": "72902870"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000020-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100020"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200041"
             }
+          ],
+          "idOclc": [
+            "NYPG001000020-B"
           ],
           "uniformTitle": [
             "Mahābhārata. Sanatsugātīya."
@@ -7485,13 +9665,19 @@
           "dateEndYear": [
             1972
           ],
-          "updatedAt": 1536782413960,
+          "updatedAt": 1674870747855,
           "publicationStatement": [
             "Prayāga, Devabhāṣā Prakāśana, Samvat 2028, i.e. 1971 or 2]"
           ],
           "identifier": [
             "urn:bnum:10000042",
-            "urn:lccn:72902870"
+            "urn:lccn:72902870",
+            "urn:oclc:NYPG001000020-B",
+            "urn:undefined:NNSZ00100020",
+            "urn:undefined:(WaOLN)nyp0200041"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -7532,7 +9718,7 @@
             1
           ],
           "placeOfPublication": [
-            "Prayāga,"
+            "Prayāga"
           ],
           "issuance": [
             {
@@ -7551,11 +9737,8 @@
               "identifier": [
                 "urn:barcode:33433058618392"
               ],
-              "identifierV2": [
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433058618392"
-                }
+              "physicalLocation": [
+                "*OKN 84-1926"
               ],
               "accessMessage": [
                 {
@@ -7563,15 +9746,28 @@
                   "label": "Request in advance"
                 }
               ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i13783790",
+              "shelfMark": [
+                "*OKN 84-1926"
+              ],
+              "identifierV2": [
+                {
+                  "type": "bf:ShelfMark",
+                  "value": "*OKN 84-1926"
+                },
+                {
+                  "type": "bf:Barcode",
+                  "value": "33433058618392"
+                }
+              ],
               "idBarcode": [
                 "33433058618392"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i13783790",
-              "shelfMark": [
-                "*OKN 84-1926"
               ],
               "catalogItemType": [
                 {
@@ -7582,7 +9778,7 @@
               "status": [
                 {
                   "id": "status:a",
-                  "label": "Available "
+                  "label": "Available"
                 }
               ],
               "holdingLocation": [
@@ -7590,6 +9786,12 @@
                   "id": "loc:rc2ma",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NA"
+              ],
+              "formatLiteral": [
+                "Text"
               ]
             }
           ],
@@ -7627,18 +9829,27 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "subjectLiteral_exploded": [
             "Wind ensembles",
             "Wind ensembles -- Scores"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
-            "Verlag Doblinger,"
+            "Verlag Doblinger"
           ],
           "language": [
             {
               "id": "lang:zxx",
               "label": "No linguistic content"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "createdYear": [
             1980
@@ -7652,6 +9863,9 @@
           "shelfMark": [
             "JMC 83-9"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "creatorLiteral": [
             "Eröd, Iván."
           ],
@@ -7660,6 +9874,9 @@
           ],
           "seriesStatement": [
             "Doblingers Studienpartituren ; Stp. 410"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "dateStartYear": [
             1980
@@ -7672,14 +9889,45 @@
             {
               "type": "nypl:Bnumber",
               "value": "10000043"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000020-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Stp. 410 Verlag Doblinger"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "D.15 579 Verlag Doblinger"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100570"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200042"
             }
           ],
-          "updatedAt": 1578432825145,
+          "idOclc": [
+            "NYPG001000020-C"
+          ],
+          "updatedAt": 1674870752089,
           "publicationStatement": [
             "Wien : Verlag Doblinger, c1980."
           ],
           "identifier": [
-            "urn:bnum:10000043"
+            "urn:bnum:10000043",
+            "urn:oclc:NYPG001000020-C",
+            "urn:undefined:Stp. 410 Verlag Doblinger",
+            "urn:undefined:D.15 579 Verlag Doblinger",
+            "urn:undefined:NNSZ00100570",
+            "urn:undefined:(WaOLN)nyp0200042"
+          ],
+          "numCheckinCardItems": [
+            0
           ],
           "materialType": [
             {
@@ -7716,7 +9964,7 @@
             1
           ],
           "placeOfPublication": [
-            "Wien :"
+            "Wien"
           ],
           "issuance": [
             {
@@ -7735,6 +9983,22 @@
               "identifier": [
                 "urn:barcode:33433004744128"
               ],
+              "physicalLocation": [
+                "JMC 83-9"
+              ],
+              "accessMessage": [
+                {
+                  "id": "accessMessage:2",
+                  "label": "Request in advance"
+                }
+              ],
+              "type": [
+                "bf:Item"
+              ],
+              "uri": "i10000010",
+              "shelfMark": [
+                "JMC 83-9"
+              ],
               "identifierV2": [
                 {
                   "type": "bf:ShelfMark",
@@ -7745,21 +10009,11 @@
                   "value": "33433004744128"
                 }
               ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
               "idBarcode": [
                 "33433004744128"
               ],
               "requestable": [
                 true
-              ],
-              "uri": "i10000010",
-              "shelfMark": [
-                "JMC 83-9"
               ],
               "catalogItemType": [
                 {
@@ -7778,6 +10032,12 @@
                   "id": "loc:rcpm2",
                   "label": "Offsite"
                 }
+              ],
+              "recapCustomerCode": [
+                "NP"
+              ],
+              "formatLiteral": [
+                "Notated music"
               ]
             }
           ],
@@ -7787,210 +10047,6 @@
         },
         "sort": [
           "b10000043"
-        ]
-      },
-      {
-        "_index": "resources-2018-04-09",
-        "_type": "resource",
-        "_id": "b10000044",
-        "_score": null,
-        "_source": {
-          "extent": [
-            "[99] p. ;"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Cover title: Biographies of Khri-chen Byaṅ-chub-chos-ʼphel and Śel-dkar Bla-ma Saṅs-rgyas-bstan-ʼphel.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "\"Reproduced from prints from blocks from Lhasa and Śel-dkar Dgaʼ-ldan-legs-bśad-gliṅ.\"",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "In Tibetan; pref. in English.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Byaṅ-chub-chos-ʼphel, Khri-chen LXIX, 1756-1838",
-            "Lamas",
-            "Lamas -- Tibet",
-            "Lamas -- Tibet -- Biography",
-            "Saṅs-rgyas-bstan-ʼphel, Śel-dkar Bla-ma, 1817-1884"
-          ],
-          "publisherLiteral": [
-            "Ngawang Sopa,"
-          ],
-          "language": [
-            {
-              "id": "lang:tib",
-              "label": "Tibetan"
-            }
-          ],
-          "createdYear": [
-            1976
-          ],
-          "type": [
-            "nypl:Item"
-          ],
-          "title": [
-            "ʼJam-mgon Rgyal-ba gñis-paʼi Rgyal-tshab Dpal-ldan Bla-ma Dam-pa Khyab-bdag Khri-chen Byaṅ-chub-chos-ʼphel dpal-bzaṅ-poʼi rnam par thar pa Dgaʼ ldan bstan paʼi mdzes rgyab [sic] : the biography of the 69th Khri-chen of Dgaʼ-ʼldan Byaṅ-chub-chos-ʼphel"
-          ],
-          "shelfMark": [
-            "*OZ+ 82-2361"
-          ],
-          "creatorLiteral": [
-            "Rgal-dbaṅ Chos-rje Blo-bzaṅ-ʼphrin-las-rnam-rgyal, active 1840-1860."
-          ],
-          "createdString": [
-            "1976"
-          ],
-          "idLccn": [
-            "77901316"
-          ],
-          "contributorLiteral": [
-            "Ngag-dbang-blo-bzang-rgya-mtsho, Dalai Lama V, 1617-1682."
-          ],
-          "dateStartYear": [
-            1976
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*OZ+ 82-2361"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10000044"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "77901316"
-            }
-          ],
-          "updatedAt": 1536782412087,
-          "publicationStatement": [
-            "New Delhi : Ngawang Sopa, 1976."
-          ],
-          "identifier": [
-            "urn:bnum:10000044",
-            "urn:lccn:77901316"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1976"
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Byaṅ-chub-chos-ʼphel, Khri-chen LXIX, 1756-1838.",
-            "Lamas -- Tibet -- Biography.",
-            "Saṅs-rgyas-bstan-ʼphel, Śel-dkar Bla-ma, 1817-1884."
-          ],
-          "titleDisplay": [
-            "ʼJam-mgon Rgyal-ba gñis-paʼi Rgyal-tshab Dpal-ldan Bla-ma Dam-pa Khyab-bdag Khri-chen Byaṅ-chub-chos-ʼphel dpal-bzaṅ-poʼi rnam par thar pa Dgaʼ ldan bstan paʼi mdzes rgyab [sic] : the biography of the 69th Khri-chen of Dgaʼ-ʼldan Byaṅ-chub-chos-ʼphel / by Dar-han Mkhan-sprul Blo-bzaṅ-ʼphrin-las-rnam-rgyal. Bkaʼ-gdams bstan-paʼi mdzod-ʼdzin Rje-btsun Bla-ma Saṅs-rgyas-bstan-ʼphel dpal-bzaṅ-poʼi rnam par thar pa dad ldan yid kyi dgaʼ ston : the biography of Saṅs-rgyas-bstan-ʼphel of Śel-dkar / by Śel-dkar Bkaʼ-ʼgyur Bla-ma Ṅag-dbaṅ-blo-bzaṅ-bstan-ʼdzin-tshul-khrims-rgyal-mtshan."
-          ],
-          "uri": "b10000044",
-          "lccClassification": [
-            "BQ942.Y367 R47 1976"
-          ],
-          "numItems": [
-            1
-          ],
-          "numAvailable": [
-            1
-          ],
-          "placeOfPublication": [
-            "New Delhi :"
-          ],
-          "issuance": [
-            {
-              "id": "urn:biblevel:m",
-              "label": "monograph/item"
-            }
-          ],
-          "items": [
-            {
-              "owner": [
-                {
-                  "id": "orgs:1000",
-                  "label": "Stephen A. Schwarzman Building"
-                }
-              ],
-              "identifier": [
-                "urn:barcode:33433015080645"
-              ],
-              "identifierV2": [
-                {
-                  "type": "bf:ShelfMark",
-                  "value": "*OZ+ 82-2361"
-                },
-                {
-                  "type": "bf:Barcode",
-                  "value": "33433015080645"
-                }
-              ],
-              "accessMessage": [
-                {
-                  "id": "accessMessage:2",
-                  "label": "Request in advance"
-                }
-              ],
-              "idBarcode": [
-                "33433015080645"
-              ],
-              "requestable": [
-                true
-              ],
-              "uri": "i10000011",
-              "shelfMark": [
-                "*OZ+ 82-2361"
-              ],
-              "catalogItemType": [
-                {
-                  "id": "catalogItemType:55",
-                  "label": "book, limited circ, MaRLI"
-                }
-              ],
-              "status": [
-                {
-                  "id": "status:a",
-                  "label": "Available"
-                }
-              ],
-              "holdingLocation": [
-                {
-                  "id": "loc:rc2ma",
-                  "label": "Offsite"
-                }
-              ]
-            }
-          ],
-          "dimensions": [
-            "28 x 37 cm."
-          ]
-        },
-        "sort": [
-          "b10000044"
         ]
       }
     ]

@@ -1,5 +1,5 @@
 {
-  "took": 101,
+  "took": 58,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -22,7 +22,7 @@
           "buckets": [
             {
               "key": "status:a||Available",
-              "doc_count": 704
+              "doc_count": 705
             },
             {
               "key": "status:i||At bindery",
@@ -30,7 +30,7 @@
             },
             {
               "key": "status:na||Not Available (ReCAP)",
-              "doc_count": 13
+              "doc_count": 12
             }
           ]
         }
