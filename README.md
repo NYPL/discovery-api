@@ -236,8 +236,8 @@ There is currently one feature flag in this app, which is 'no-on-site-edd'. When
 ### num* properties
 | Property                 | Meaning      | Includes item types |
 |--------------------------|--------------|---------------------|
-| numItemsTotal            | Total number of items including checkin card items and the single electronic item| all (phys, checkin-card, electronic) |
-| numItems                 | Number of items (excluding checkin card items) including the single electronic item| phys, electronic |
+| numItemsTotal            | Total number of actual items including checkin card items | phys, checkin |
+| numItems                 | Number of items (excluding checkin card items) | phys |
 | numAvailable             | Number items indexed "available" | phys, checkin card |
 | numCheckinCardItems      | Number of checkin card items | checkin card ONLY |
 | numElectronicResources   | Number of electronic resources for the bib. Note that these are currently stored as "electronicLocator" values on a single "items" entry (i.e. if numElectronicResources is >= 1, exactly one of the bib's items will represent all of the e-resources) | - |
