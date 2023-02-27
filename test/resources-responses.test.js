@@ -357,10 +357,25 @@ describe('Test Resources responses', function () {
 
         var doc = JSON.parse(body)
 
-        let eItem = doc.electronicResources.find((item) => item.electronicLocator)
-        assert(eItem.electronicLocator.length > 0)
-        assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
-        assert.equal(eItem.electronicLocator[0].label, 'Full text available via HathiTrust--v. 1')
+        let eItem = doc.electronicResources
+        expect(eItem).to.deep.equal([
+          {
+            url: 'http://hdl.handle.net/2027/nyp.33433057532081',
+            prefLabel: 'Full text available via HathiTrust--v. 1'
+          },
+          {
+            prefLabel: 'Full text available via HathiTrust--v. 2',
+            url: 'http://hdl.handle.net/2027/nyp.33433057532339'
+          },
+          {
+            prefLabel: 'Full text available via HathiTrust--v. 1',
+            url: 'http://hdl.handle.net/2027/nyp.33433067332548'
+          },
+          {
+            prefLabel: 'Full text available via HathiTrust--v. 2',
+            url: 'http://hdl.handle.net/2027/nyp.33433067332555'
+          }
+        ])
 
         done()
       })
