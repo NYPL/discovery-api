@@ -194,7 +194,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it.only('marks ReCAP items that are in unrequestable locations as not physRequestable', function () {
+  it('marks ReCAP items that are in unrequestable locations as not physRequestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
 
     return availabilityResolver.responseWithUpdatedAvailability()
@@ -513,16 +513,17 @@ describe('Response with updated availability', function () {
     })
   })
   describe('_fixPhysRequestablility', () => {
-    afterEach(() => {
-      holdingLocationStub.resetHistory()
-      deliveryResolverStub.resetHistory()
+    let deliveryResolverStub
+    let holdingLocationStub
+    beforeEach(() => {
+      deliveryResolverStub = sinon.stub(DeliveryLocationsResolver, '__deliveryLocationsByCustomerCode')
+      holdingLocationStub = sinon.stub(requestabilityDetermination, 'requestableBasedOnHoldingLocation')
     })
-    after(() => {
+    afterEach(() => {
       holdingLocationStub.restore()
       deliveryResolverStub.restore()
     })
-    const deliveryResolverStub = sinon.stub(DeliveryLocationsResolver, '__deliveryLocationsByCustomerCode')
-    const holdingLocationStub = sinon.stub(requestabilityDetermination, 'requestableBasedOnHoldingLocation')
+
     it('returns true for item with requestable m2 customer code', () => {
       const item = { m2CustomerCode: ['vk'] }
       deliveryResolverStub.returns(['loc:ma82, loc:456'])
