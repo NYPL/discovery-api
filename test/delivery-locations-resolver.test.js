@@ -273,4 +273,12 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
+  describe('deliveryLocationsByCustomerCode', () => {
+    it('returns undefined for unrequestable code', () =>
+      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('XS')).to.equal(undefined)
+    )
+    it('return delivery location for requestable code', () => {
+      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
+    })
+  })
 })
