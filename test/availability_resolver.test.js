@@ -516,7 +516,7 @@ describe('Response with updated availability', function () {
     let deliveryResolverStub
     let holdingLocationStub
     beforeEach(() => {
-      deliveryResolverStub = sinon.stub(DeliveryLocationsResolver, '__deliveryLocationsByCustomerCode')
+      deliveryResolverStub = sinon.stub(DeliveryLocationsResolver, 'deliveryLocationsByM2CustomerCode')
       holdingLocationStub = sinon.stub(requestabilityDetermination, 'requestableBasedOnHoldingLocation')
     })
     afterEach(() => {
