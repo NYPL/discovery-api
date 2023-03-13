@@ -273,12 +273,14 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
-  describe('deliveryLocationsByCustomerCode', () => {
-    it('returns undefined for unrequestable code', () =>
-      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('XS')).to.equal(undefined)
-    )
-    it('return delivery location for requestable code', () => {
-      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
-    })
+  describe('deliveryLocationsByM2CustomerCode', () => {
+    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
+      it('returns undefined for unrequestable code', () =>
+        expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('XS')).to.equal(undefined)
+      )
+      it('return delivery location for requestable code', () => {
+        expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
+      })
+    }
   })
 })

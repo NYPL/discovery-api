@@ -1,6 +1,6 @@
 language: node_js
 install: npm install
-script: NYPL_CORE_VERSION=v1.x-rom-com-prerelease-1.1 npm test
+script: NYPL_CORE_VERSION=v1.x-rom-com-prerelease-1.1 npm test && npm test
 before_deploy: echo 'All unit tests passed; Successfull built distribution assets;
   Preparing to deploy Discovery-API to AWS.'
 deploy:
