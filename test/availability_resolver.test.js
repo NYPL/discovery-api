@@ -191,10 +191,11 @@ describe('Response with updated availability', function () {
           return item.uri === 'i10283664'
         })
         expect(availableItem.physRequestable).to.equal(true)
+        expect(availableItem.eddRequestable).to.equal(true)
       })
   })
 
-  it('marks ReCAP items that are in unrequestable locations as not physRequestable', function () {
+  it('marks ReCAP items that are in unrequestable locations as not eddRequestable nor physRequestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
 
     return availabilityResolver.responseWithUpdatedAvailability()
@@ -205,6 +206,7 @@ describe('Response with updated availability', function () {
           return item.uri === 'i102836649-unrequestable'
         })
         expect(availableItem.physRequestable).to.equal(false)
+        expect(availableItem.eddRequestable).to.equal(false)
       })
   })
 
