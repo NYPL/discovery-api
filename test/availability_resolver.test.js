@@ -10,6 +10,8 @@ const recapScsbQueryMismatch = require('./fixtures/recap-scsb-query-mismatch')
 const logger = require('../lib/logger')
 const scsbClient = require('../lib/scsb-client')
 const esClient = require('../lib/es-client')
+const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver.js')
+const requestabilityDetermination = require('../lib/requestability_determination')
 
 const itemAvailabilityResponse = [
   {
@@ -510,6 +512,37 @@ describe('Response with updated availability', function () {
             { key: 'status:na||Not available (ReCAP)', doc_count: 1 }
           ])
         })
+    })
+  })
+  describe('_fixPhysRequestablility', () => {
+    let deliveryResolverStub
+    let holdingLocationStub
+    beforeEach(() => {
+      deliveryResolverStub = sinon.stub(DeliveryLocationsResolver, 'deliveryLocationsByM2CustomerCode')
+      holdingLocationStub = sinon.stub(requestabilityDetermination, 'requestableBasedOnHoldingLocation')
+    })
+    afterEach(() => {
+      holdingLocationStub.restore()
+      deliveryResolverStub.restore()
+    })
+
+    it('returns true for item with requestable m2 customer code', () => {
+      const item = { m2CustomerCode: ['vk'] }
+      deliveryResolverStub.returns(['loc:ma82, loc:456'])
+      holdingLocationStub.returns(true)
+      expect(AvailabilityResolver.prototype._fixPhysRequestability(item, false)).to.equal(true)
+    })
+    it('returns false for item with no m2 customer code', () => {
+      const item = { notM2: ['ab'] }
+      holdingLocationStub.returns(false)
+      expect(AvailabilityResolver.prototype._fixPhysRequestability(item, false)).to.equal(false)
+      expect(deliveryResolverStub.called).to.equal(false)
+    })
+    it('returns false for item with m2 customer code that has no delivery locations returned', () => {
+      const item = { m2CustomerCode: ['vk'] }
+      deliveryResolverStub.returns([])
+      holdingLocationStub.returns(true)
+      expect(AvailabilityResolver.prototype._fixPhysRequestability(item, false)).to.equal(false)
     })
   })
 })
