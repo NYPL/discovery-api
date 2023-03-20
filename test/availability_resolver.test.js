@@ -114,7 +114,7 @@ describe('Response with updated availability', function () {
 
         // Test AvailabilityResolver munges it into temporarily unavailable
         expect(theItem.status[0].id).to.equal('status:na')
-        expect(theItem.status[0].label).to.equal('Not available (ReCAP)')
+        expect(theItem.status[0].label).to.equal('Not available')
       })
   })
 
@@ -168,7 +168,7 @@ describe('Response with updated availability', function () {
           return item.uri === 'i102836649'
         })
         expect(unavailableItem.status[0].id).to.equal('status:na')
-        expect(unavailableItem.status[0].label).to.equal('Not available (ReCAP)')
+        expect(unavailableItem.status[0].label).to.equal('Not available')
 
         // A ReCAP item with Discovery status 'Not Avaiable', but SCSB
         // status 'Available' should be made available:
@@ -237,7 +237,7 @@ describe('Response with updated availability', function () {
         // requestable:
         var notAvailableItem = items.find((item) => item.uri === 'i102836649')
         expect(notAvailableItem.requestable[0]).to.equal(true)
-        expect(notAvailableItem.status[0].label).to.equal('Not available (ReCAP)')
+        expect(notAvailableItem.status[0].label).to.equal('Not available')
       })
   })
 
@@ -302,7 +302,7 @@ describe('Response with updated availability', function () {
           var items = response.hits.hits[0]._source.items
 
           var notAvailableItem = items.find((item) => item.uri === 'ci14555049999')
-          expect(notAvailableItem.status[0].label).to.equal('Not available (ReCAP)')
+          expect(notAvailableItem.status[0].label).to.equal('Not available')
         })
     })
   })
@@ -407,14 +407,14 @@ describe('Response with updated availability', function () {
     it('corrects bad na status labels', () => {
       const buckets = [
         {
-          key: 'status:na||Not Available (ReCAP)',
+          key: 'status:na||Not Available',
           doc_count: 1
         }
       ]
       expect(AvailabilityResolver.prototype._fixItemStatusAggregationLabels(buckets))
         .to.deep.equal([
           {
-            key: 'status:na||Not available (ReCAP)',
+            key: 'status:na||Not available',
             doc_count: 1
           }
         ])
@@ -434,7 +434,7 @@ describe('Response with updated availability', function () {
             doc_count: 4
           },
           {
-            key: 'status:na||Not available (ReCAP)',
+            key: 'status:na||Not available',
             doc_count: 2
           }
         ])
@@ -509,7 +509,7 @@ describe('Response with updated availability', function () {
           const buckets = modifiedResponse.aggregations.item_status._nested.buckets
           expect(buckets).to.deep.equal([
             { key: 'status:a||Available', doc_count: 3 },
-            { key: 'status:na||Not available (ReCAP)', doc_count: 1 }
+            { key: 'status:na||Not available', doc_count: 1 }
           ])
         })
     })
