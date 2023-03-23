@@ -233,18 +233,6 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 
 There is currently one feature flag in this app, which is 'no-on-site-edd'. When it is set, all onsite items have an eddRequestable property of false.
 
-### num* properties
-| Property                 | Meaning      | Includes item types |
-|--------------------------|--------------|---------------------|
-| numItemsTotal            | Total number of actual items including checkin card items | phys, checkin |
-| numItems                 | Number of items (excluding checkin card items) | phys |
-| numAvailable             | Number items indexed "available" | phys, checkin card |
-| numCheckinCardItems      | Number of checkin card items | checkin card ONLY |
-| numElectronicResources   | Number of electronic resources for the bib. Note that these are currently stored as "electronicLocator" values on a single "items" entry (i.e. if numElectronicResources is >= 1, exactly one of the bib's items will represent all of the e-resources) | - |
-| numItemDatesParsed       | Number items (including checkin card items) with parsed dateRanges | phys, checkin card |
-| numItemVolumesParsed     | Number items (including checkin card items) with parsed volumeRanges | phys, checkin card |
-| numItemsMatched          | When there's an active item_* filter, the represents the number of items matching the filter(s). When there are no active item_* filters, this represents all physical items. Explicitly excludes the electronic item | phys, checkin card |
-
 NB: numAvailable and numItem*Parsed counts do not **exclude** the e-item, but these items are not indexed with statuses, volumes, or date ranges, and are therefore not actually included in this count.
 
 NB: As the table above indicates, there is a mismatch between what the front end and API regard as "electronic items". As far as the API is concerned, there is only at most ONE electronic item, which can have many electronic locator values. `numElectronicResources` counts these locator values, but the other item count values treat all the electronic resources as a single item.
