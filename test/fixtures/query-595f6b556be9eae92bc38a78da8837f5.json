@@ -1,0 +1,527 @@
+{
+  "took": 10,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 15.454028,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10022734",
+        "_score": 15.454028,
+        "_source": {
+          "extent": [
+            "xiv, 381 p., [16] leaves of plates : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "African American arts",
+            "African American arts -- New York",
+            "Arts, Modern",
+            "Arts, Modern -- 20th century",
+            "Arts, Modern -- 20th century -- New York",
+            "Harlem Renaissance",
+            "Harlem (New York, N.Y.)"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Knopf : distributed by Random House"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            3
+          ],
+          "createdYear": [
+            1981
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "When Harlem was in vogue"
+          ],
+          "shelfMark": [
+            "IEC 81-1139"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "creatorLiteral": [
+            "Lewis, David Levering, 1936-"
+          ],
+          "createdString": [
+            "1981"
+          ],
+          "idLccn": [
+            "80002704"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "dateStartYear": [
+            1981
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "IEC 81-1139"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10022734"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0394495721 :"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "80002704"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG25743597-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0022812"
+            }
+          ],
+          "idOclc": [
+            "NYPG25743597-B"
+          ],
+          "updatedAt": 1670711998795,
+          "publicationStatement": [
+            "New York : Knopf : distributed by Random House, 1981."
+          ],
+          "identifier": [
+            "urn:bnum:10022734",
+            "urn:isbn:0394495721 :",
+            "urn:lccn:80002704",
+            "urn:oclc:NYPG25743597-B",
+            "urn:undefined:(WaOLN)nyp0022812"
+          ],
+          "idIsbn": [
+            "0394495721 "
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1981"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "African American arts -- New York.",
+            "Arts, Modern -- 20th century -- New York.",
+            "Harlem Renaissance.",
+            "Harlem (New York, N.Y.)"
+          ],
+          "titleDisplay": [
+            "When Harlem was in vogue / David Levering Lewis."
+          ],
+          "uri": "b10022734",
+          "lccClassification": [
+            "NX511.N4 L48 1981"
+          ],
+          "numItems": [
+            3
+          ],
+          "numAvailable": [
+            3
+          ],
+          "placeOfPublication": [
+            "New York"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "idIsbn_clean": [
+            "0394495721"
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 3,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10010904",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:scff2",
+                        "label": "Schomburg Center - Research & Reference"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:scff2||Schomburg Center - Research & Reference"
+                    ],
+                    "shelfMark": [
+                      "Sc E 96-780"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "Sc E 96-780",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433034124614"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "Sc E 96-780"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433034124614"
+                    ],
+                    "idBarcode": [
+                      "33433034124614"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "aSc E 96-000780"
+                  },
+                  "sort": [
+                    null
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10010903",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1114",
+                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:scff1",
+                        "label": "Schomburg Center - Research & Reference - Open Shelf"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:scff1||Schomburg Center - Research & Reference - Open Shelf"
+                    ],
+                    "shelfMark": [
+                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433015873411"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433015873411"
+                    ],
+                    "idBarcode": [
+                      "33433015873411"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:-",
+                        "label": "No restrictions"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:-||No restrictions"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "aSc *700-L (Lewis, D. When Harlem was in vogue)"
+                  },
+                  "sort": [
+                    null
+                  ]
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i10010902",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1105",
+                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mag82",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                    ],
+                    "shelfMark": [
+                      "IEC 81-1139"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "IEC 81-1139",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433035187214"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "IEC 81-1139"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433035187214"
+                    ],
+                    "idBarcode": [
+                      "33433035187214"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "aIEC 81-001139"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 3,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "loc:mag82||Schwarzman Building - Milstein Division Room 121",
+            "doc_count": 1
+          },
+          {
+            "key": "loc:scff1||Schomburg Center - Research & Reference - Open Shelf",
+            "doc_count": 1
+          },
+          {
+            "key": "loc:scff2||Schomburg Center - Research & Reference",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_format": {
+      "doc_count": 3,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Text",
+            "doc_count": 3
+          }
+        ]
+      }
+    },
+    "item_status": {
+      "doc_count": 3,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 3
+          }
+        ]
+      }
+    }
+  }
+}

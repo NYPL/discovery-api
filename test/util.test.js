@@ -181,4 +181,23 @@ describe('Util', function () {
       expect(util.parseParam('foo,bar', { type: 'string-list' })).to.deep.equal(['foo', 'bar'])
     })
   })
+
+  describe('deepValue', () => {
+    it('extracts existant values', () => {
+      expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b')).to.deep.equal({ c: 'foo' })
+      expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b.c')).to.deep.equal('foo')
+      expect(util.deepValue({ a: { b: [ { b1: 'foo' }, { b2: 'foo2' } ] } }, 'a.b[1].b2')).to.deep.equal('foo2')
+    })
+
+    it('returns null/undefined for nonexistant values', () => {
+      expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b.x')).to.deep.equal(null)
+      expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'x.y')).to.deep.equal(null)
+      expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b.c.d')).to.deep.equal(null)
+      expect(util.deepValue({ a: { b: [ { b1: 'foo' } ] } }, 'a.b[1].b2')).to.deep.equal(null)
+    })
+
+    it('resorts to default for nonexistant values', () => {
+      expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'x.y', 'fladeedle')).to.deep.equal('fladeedle')
+    })
+  })
 })

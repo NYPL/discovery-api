@@ -1,0 +1,229 @@
+{
+  "took": 36,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 32.999153,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "pb1717",
+        "_score": 32.999153,
+        "_source": {
+          "extent": [
+            "x, 340 p. : ill. ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Cats",
+            "Cats -- Fiction",
+            "Cats"
+          ],
+          "publisherLiteral": [
+            "Lothrop, Lee & Shepard Books,"
+          ],
+          "description": [
+            "More than 40 stories and essays about cats by famous writers."
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1979
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Cat encounters : a cat-lover's anthology /"
+          ],
+          "createdString": [
+            "1979"
+          ],
+          "idLccn": [
+            "   79002437 "
+          ],
+          "contributorLiteral": [
+            "Lewis, Gogo.",
+            "Manley, Seon."
+          ],
+          "dateStartYear": [
+            1979
+          ],
+          "identifierV2": [
+            {
+              "type": "nypl:Bnumber",
+              "value": "1717"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0688419143"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "   79002437 "
+            }
+          ],
+          "updatedAt": 1523549727960,
+          "publicationStatement": [
+            "New York : Lothrop, Lee & Shepard Books, c1979."
+          ],
+          "identifier": [
+            "urn:bnum:1717",
+            "urn:isbn:0688419143",
+            "urn:lccn:   79002437 "
+          ],
+          "idIsbn": [
+            "0688419143"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1979"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Cats -- Fiction.",
+            "Cats."
+          ],
+          "titleDisplay": [
+            "Cat encounters : a cat-lover's anthology / selected by Seon Manley & Gogo Lewis."
+          ],
+          "uri": "pb1717",
+          "lccClassification": [
+            "SF445.5 .C378"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "New York :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "owner": [
+                      {
+                        "id": "orgs:0003",
+                        "label": "Princeton University Library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:barcode:32101087644330"
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:1||non-circ"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available "
+                    ],
+                    "uri": "pi2775",
+                    "shelfMark": [
+                      "SF445.5 .C378"
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "SF445.5 .C378"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "32101087644330"
+                      }
+                    ],
+                    "idBarcode": [
+                      "32101087644330"
+                    ],
+                    "owner_packed": [
+                      "orgs:0003||Princeton University Library"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available "
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
