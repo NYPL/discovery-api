@@ -34,7 +34,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(562)
+        expect(doc.numItemsMatched).to.equal(563)
         done()
       })
     })
@@ -52,7 +52,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(12) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.equal(9) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })

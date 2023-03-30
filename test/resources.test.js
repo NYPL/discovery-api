@@ -518,24 +518,19 @@ describe('Resources query', function () {
   })
 
   describe('itemsQueryContext', () => {
-    it('should match all when merge_checkin_card_items is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
-    })
-
     it('should ignore check in card items when merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
     it('should ignore check in card items when merge_checkin_card_items is falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
     it('should include check in card items when merge_checkin_card_items is truthy', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }] })
     })
 
     it('should include check in card items but exclude electronic resources when merge_checkin_card_items is truthy and removeElectronicResourcesFromItemsArray is truthy', () => {
@@ -562,7 +557,14 @@ describe('Resources query', function () {
                       {
                         nested: {
                           path: 'items',
-                          query: { bool: { must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] } },
+                          query: {
+                            bool: {
+                              must_not: [
+                                { exists: { field: 'items.electronicLocator' } },
+                                { term: { 'items.type': 'nypl:CheckinCardItem' } }
+                              ]
+                            }
+                          },
                           inner_hits: {
                             sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                             size: 1,
@@ -610,7 +612,10 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }],
+                            must_not: [
+                              { exists: { field: 'items.electronicLocator' } },
+                              { term: { 'items.type': 'nypl:CheckinCardItem' } }
+                            ],
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
@@ -638,7 +643,20 @@ describe('Resources query', function () {
                         }
                       }
                     },
-                    { match_all: { } }
+                    { match_all: { } },
+                    {
+                      nested: {
+                        inner_hits: { name: 'allItems' },
+                        path: 'items',
+                        query: {
+                          bool: {
+                            must_not: [
+                              { exists: { field: 'items.electronicLocator' } }
+                            ]
+                          }
+                        }
+                      }
+                    }
                   ]
                 }
               }

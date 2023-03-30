@@ -1,0 +1,222 @@
+{
+  "took": 134,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 122.90753,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b12423567",
+        "_score": 122.90753,
+        "_source": {
+          "extent": [
+            "202 p."
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Campanella, Tommaso, 1568-1639"
+          ],
+          "publisherLiteral": [
+            "S. Neaulme"
+          ],
+          "language": [
+            {
+              "id": "lang:lat",
+              "label": "Latin"
+            }
+          ],
+          "createdYear": [
+            1741
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Vita Th. Campanellae."
+          ],
+          "shelfMark": [
+            "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+          ],
+          "creatorLiteral": [
+            "Cyprian, Ernst Salomon, 1673-1745."
+          ],
+          "createdString": [
+            "1741"
+          ],
+          "dateStartYear": [
+            1741
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "12423567"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp2408048"
+            }
+          ],
+          "updatedAt": 1657655482511,
+          "publicationStatement": [
+            "Trajecti ad Rhenum, S. Neaulme, 1741."
+          ],
+          "identifier": [
+            "urn:bnum:12423567",
+            "urn:undefined:(WaOLN)nyp2408048"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1741"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Campanella, Tommaso, 1568-1639."
+          ],
+          "titleDisplay": [
+            "Vita Th. Campanellae. Autore Ern. Sal. Cypriano. Accedunt hac secunda editione appendices IV. doctorum virorum de Campanellae vita, philosophia & libris schediasmata complectentes."
+          ],
+          "uri": "b12423567",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "Trajecti ad Rhenum"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "16 cm."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i16020288",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building M2 - General Research Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                    ],
+                    "shelfMark": [
+                      "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433104031624"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433104031624"
+                    ],
+                    "idBarcode": [
+                      "33433104031624"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:u",
+                        "label": "Supervised use"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:u||Supervised use"
+                    ],
+                    "shelfMark_sort": "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
