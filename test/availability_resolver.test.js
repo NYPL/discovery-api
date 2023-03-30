@@ -405,13 +405,26 @@ describe('Response with updated availability', function () {
 
   describe('_fixItemStatusAggregationLabels', () => {
     it('corrects bad na status labels', () => {
-      const buckets = [
-        {
-          key: 'status:na||Not Available',
-          doc_count: 1
+      const resp = {
+        hits: { hits: [] },
+        aggregations: {
+          item_status: {
+            _nested: {
+              buckets: [
+                {
+                  key: 'status:na||Not Available',
+                  doc_count: 1
+                }
+              ]
+            }
+          }
         }
-      ]
-      expect(AvailabilityResolver.prototype._fixItemStatusAggregationLabels(buckets))
+      }
+      const availabilityResolver = new AvailabilityResolver(resp)
+      availabilityResolver._fixItemStatusAggregationLabels()
+      const newBuckets = availabilityResolver
+        .elasticSearchResponse.aggregations.item_status._nested.buckets
+      expect(newBuckets)
         .to.deep.equal([
           {
             key: 'status:na||Not available',
