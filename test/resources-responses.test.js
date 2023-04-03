@@ -19,6 +19,19 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
+  describe('GET electronicResources', () => {
+    it('returns e resources array and count without aeon links', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14332438'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.electronicResources.length).to.equal(4)
+        expect(doc.electronicResources.filter((resource) => resource.url.includes('aeon')).length).to.equal(0)
+        expect(doc.items.filter((item) => item.aeonUrl).length).to.equal(1)
+        done()
+      })
+    })
+  })
   describe('GET numItemsMatched', () => {
     it('returns numItemsMatched for blank bib query', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
