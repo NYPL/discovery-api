@@ -36,6 +36,14 @@ describe('Resources query', function () {
       expect(params.merge_checkin_card_items).to.equal(true)
       expect(params.include_item_aggregations).to.equal(true)
     })
+
+    it('extracts merge_checkin_card_items', function () {
+      expect(
+        resourcesPrivMethods
+          .parseSearchParams({ merge_checkin_card_items: 'false' })
+          .merge_checkin_card_items
+        ).to.equal(false)
+    })
   })
 
   describe('escapeQuery', function () {
