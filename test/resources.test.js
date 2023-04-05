@@ -33,7 +33,7 @@ describe('Resources query', function () {
       expect(params.per_page).to.equal(50)
       expect(params.sort).to.equal(undefined)
       expect(params.filters).to.equal(undefined)
-      expect(params.merge_checkin_card_items).to.equal(false)
+      expect(params.merge_checkin_card_items).to.equal(true)
       expect(params.include_item_aggregations).to.equal(true)
     })
   })
@@ -560,6 +560,56 @@ describe('Resources query', function () {
                           query: {
                             bool: {
                               must_not: [
+                                { exists: { field: 'items.electronicLocator' } }
+                              ]
+                            }
+                          },
+                          inner_hits: {
+                            sort: [{ 'items.enumerationChronology_sort': 'desc' }],
+                            size: 1,
+                            from: 2,
+                            name: 'items'
+                          }
+                        }
+                      },
+                      {
+                        nested: {
+                          inner_hits: {
+                            name: 'electronicResources'
+                          },
+                          path: 'items',
+                          query: {
+                            exists: {
+                              field: 'items.electronicLocator'
+                            }
+                          }
+                        }
+                      },
+                      { match_all: { } }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        })
+    })
+
+    it('should exclude check in card items if explicitly set', () => {
+      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2, merge_checkin_card_items: false }))
+        .to.deep.equal({
+          query: {
+            bool: {
+              filter: [
+                {
+                  bool: {
+                    should: [
+                      {
+                        nested: {
+                          path: 'items',
+                          query: {
+                            bool: {
+                              must_not: [
                                 { exists: { field: 'items.electronicLocator' } },
                                 { term: { 'items.type': 'nypl:CheckinCardItem' } }
                               ]
@@ -613,8 +663,7 @@ describe('Resources query', function () {
                         query: {
                           bool: {
                             must_not: [
-                              { exists: { field: 'items.electronicLocator' } },
-                              { term: { 'items.type': 'nypl:CheckinCardItem' } }
+                              { exists: { field: 'items.electronicLocator' } }
                             ],
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
