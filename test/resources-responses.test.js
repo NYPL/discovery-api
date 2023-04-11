@@ -38,6 +38,15 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
+        expect(doc.numItemsMatched).to.equal(897)
+        done()
+      })
+    })
+    it('returns numItemsMatched excluding check in card items for blank bib query with merge_checkin_card_items false', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=false'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
         expect(doc.numItemsMatched).to.equal(694)
         done()
       })
