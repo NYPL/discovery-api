@@ -26,6 +26,7 @@ RUN rm -rf /usr/src/app/.elasticbeanstalk
 RUN rm -rf /usr/src/app/.git
 RUN rm -rf /usr/src/app/.gitignore
 
+# Environment variables for hosted stack in AWS Secrets Manager
 # COPY ./config/production.env /usr/src/app/.env
 
 # Link logs to stdout
@@ -39,4 +40,5 @@ FROM production as qa
 ENV NODE_ENV=qa
 ENV APP_ENV=qa
 
+# Environment variables for hosted stack in AWS Secrets Manager
 # COPY ./config/qa.env /usr/src/app/.env
