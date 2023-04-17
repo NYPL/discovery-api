@@ -537,6 +537,7 @@ describe('Response with updated availability', function () {
     afterEach(() => {
       holdingLocationStub.restore()
       deliveryResolverStub.restore()
+      process.env.ROMCOM_MAX_XA_BNUM = null
     })
 
     it('returns true for item with requestable m2 customer code', () => {
@@ -557,6 +558,18 @@ describe('Response with updated availability', function () {
       holdingLocationStub.returns(true)
       expect(AvailabilityResolver.prototype._fixPhysRequestability(item, false)).to.equal(false)
     })
+    it('overrides physRequestability for XA bnumbers when env variable is set', () => {
+      process.env.ROMCOM_MAX_XA_BNUM = 'b000000'
+      const item = { m2CustomerCode: ['XA'] }
+      deliveryResolverStub.returns(['loc:ma82, loc:456'])
+      holdingLocationStub.returns(true)
+      expect(AvailabilityResolver.prototype._fixPhysRequestability(item, false, 'b000001')).to.equal(false)
+    })
+    it('does not override physRequestability for XA bnumbers when env variable is not set', () => {
+      const item = { m2CustomerCode: ['XA'] }
+      deliveryResolverStub.returns(['loc:ma82, loc:456'])
+      holdingLocationStub.returns(true)
+      expect(AvailabilityResolver.prototype._fixPhysRequestability(item, false, 'b000001')).to.equal(true)
+    })
   })
 })
-
