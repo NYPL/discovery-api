@@ -90,8 +90,8 @@ const scholarRooms = [
 
 function takeThisPartyPartiallyOffline () {
   // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
-  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = () => {
-    return Promise.resolve({
+  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
+    const stubbedLookups = {
       '33433047331719': 'NP',
       '32101062243553': 'PA',
       'CU56521537': 'CU',
@@ -99,7 +99,15 @@ function takeThisPartyPartiallyOffline () {
       // Let's pretend this is a valid NYPL Map Division item barcode
       // and let's further pretend that HTC API tells us it's recap customer code is ND
       'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
-    })
+    }
+
+    // Return hash containing only requested barcodes:
+    return Promise.resolve(
+      barcodes.reduce((h, barcode) => {
+        h[barcode] = stubbedLookups[barcode]
+        return h
+      }, {})
+    )
   }
 }
 
