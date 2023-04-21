@@ -296,7 +296,7 @@ describe('Delivery-locations-resolver', function () {
   describe('resolveDeliveryLocations', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns delivery locations for requestable M2 items', () => {
-        const items = [{ m2CustomerCode: [ 'XA' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research'])
           .then((deliveryLocations) => {
@@ -310,14 +310,15 @@ describe('Delivery-locations-resolver', function () {
                   {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
                   {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
                   {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'}
-                ]
+                ],
+                uri: 'b123'
               }
             ])
           })
       })
 
       it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
-        const items = [{ m2CustomerCode: [ 'XA' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
@@ -336,7 +337,7 @@ describe('Delivery-locations-resolver', function () {
       })
 
       it('returns no delivery locations for non-requestable M2 customer codes', () => {
-        const items = [{ m2CustomerCode: [ 'XS' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XS' ] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
