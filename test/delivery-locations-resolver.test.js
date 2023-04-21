@@ -90,8 +90,8 @@ const scholarRooms = [
 
 function takeThisPartyPartiallyOffline () {
   // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
-  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = () => {
-    return Promise.resolve({
+  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
+    const stubbedLookups = {
       '33433047331719': 'NP',
       '32101062243553': 'PA',
       'CU56521537': 'CU',
@@ -99,7 +99,15 @@ function takeThisPartyPartiallyOffline () {
       // Let's pretend this is a valid NYPL Map Division item barcode
       // and let's further pretend that HTC API tells us it's recap customer code is ND
       'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
-    })
+    }
+
+    // Return hash containing only requested barcodes:
+    return Promise.resolve(
+      barcodes.reduce((h, barcode) => {
+        h[barcode] = stubbedLookups[barcode]
+        return h
+      }, {})
+    )
   }
 }
 
@@ -288,7 +296,7 @@ describe('Delivery-locations-resolver', function () {
   describe('resolveDeliveryLocations', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns delivery locations for requestable M2 items', () => {
-        const items = [{ m2CustomerCode: [ 'XA' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research'])
           .then((deliveryLocations) => {
@@ -302,14 +310,15 @@ describe('Delivery-locations-resolver', function () {
                   {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
                   {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
                   {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'}
-                ]
+                ],
+                uri: 'b123'
               }
             ])
           })
       })
 
       it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
-        const items = [{ m2CustomerCode: [ 'XA' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
@@ -328,7 +337,7 @@ describe('Delivery-locations-resolver', function () {
       })
 
       it('returns no delivery locations for non-requestable M2 customer codes', () => {
-        const items = [{ m2CustomerCode: [ 'XS' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XS' ] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
