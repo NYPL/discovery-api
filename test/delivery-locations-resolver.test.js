@@ -90,8 +90,8 @@ const scholarRooms = [
 
 function takeThisPartyPartiallyOffline () {
   // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
-  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = () => {
-    return Promise.resolve({
+  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
+    const stubbedLookups = {
       '33433047331719': 'NP',
       '32101062243553': 'PA',
       'CU56521537': 'CU',
@@ -99,7 +99,15 @@ function takeThisPartyPartiallyOffline () {
       // Let's pretend this is a valid NYPL Map Division item barcode
       // and let's further pretend that HTC API tells us it's recap customer code is ND
       'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
-    })
+    }
+
+    // Return hash containing only requested barcodes:
+    return Promise.resolve(
+      barcodes.reduce((h, barcode) => {
+        h[barcode] = stubbedLookups[barcode]
+        return h
+      }, {})
+    )
   }
 }
 
@@ -273,6 +281,7 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
+
   describe('deliveryLocationsByM2CustomerCode', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns undefined for unrequestable code', () =>
@@ -280,6 +289,60 @@ describe('Delivery-locations-resolver', function () {
       )
       it('return delivery location for requestable code', () => {
         expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
+      })
+    }
+  })
+
+  describe('resolveDeliveryLocations', () => {
+    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
+      it('returns delivery locations for requestable M2 items', () => {
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
+        return DeliveryLocationsResolver
+          .resolveDeliveryLocations(items, ['Research'])
+          .then((deliveryLocations) => {
+            expect(deliveryLocations).to.deep.equal([
+              {
+                eddRequestable: false,
+                m2CustomerCode: ['XA'],
+                deliveryLocation: [
+                  {id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300'},
+                  {id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111'},
+                  {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
+                  {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
+                  {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'}
+                ],
+                uri: 'b123'
+              }
+            ])
+          })
+      })
+
+      it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
+        return DeliveryLocationsResolver
+          .resolveDeliveryLocations(items, ['Research', 'Scholar'])
+          .then((deliveryLocations) => {
+            expect(deliveryLocations[0].deliveryLocation).to.deep.include.members([
+              {id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300'},
+              {id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111'},
+              {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
+              {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
+              {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'},
+              {id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room'},
+              {id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room'},
+              {id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room'},
+              {id: 'loc:malc', label: 'Schwarzman Building - Cullman Center'}
+            ])
+          })
+      })
+
+      it('returns no delivery locations for non-requestable M2 customer codes', () => {
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XS' ] }]
+        return DeliveryLocationsResolver
+          .resolveDeliveryLocations(items, ['Research', 'Scholar'])
+          .then((deliveryLocations) => {
+            expect(deliveryLocations.deliveryLocation).to.equal(undefined)
+          })
       })
     }
   })

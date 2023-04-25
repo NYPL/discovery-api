@@ -33,8 +33,16 @@ describe('Resources query', function () {
       expect(params.per_page).to.equal(50)
       expect(params.sort).to.equal(undefined)
       expect(params.filters).to.equal(undefined)
-      expect(params.merge_checkin_card_items).to.equal(false)
+      expect(params.merge_checkin_card_items).to.equal(true)
       expect(params.include_item_aggregations).to.equal(true)
+    })
+
+    it('extracts merge_checkin_card_items', function () {
+      expect(
+        resourcesPrivMethods
+          .parseSearchParams({ merge_checkin_card_items: 'false' })
+          .merge_checkin_card_items
+        ).to.equal(false)
     })
   })
 
@@ -518,24 +526,19 @@ describe('Resources query', function () {
   })
 
   describe('itemsQueryContext', () => {
-    it('should match all when merge_checkin_card_items is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
-    })
-
     it('should ignore check in card items when merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
     it('should ignore check in card items when merge_checkin_card_items is falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
     it('should include check in card items when merge_checkin_card_items is truthy', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
+        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }] })
     })
 
     it('should include check in card items but exclude electronic resources when merge_checkin_card_items is truthy and removeElectronicResourcesFromItemsArray is truthy', () => {
@@ -562,7 +565,64 @@ describe('Resources query', function () {
                       {
                         nested: {
                           path: 'items',
-                          query: { bool: { must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] } },
+                          query: {
+                            bool: {
+                              must_not: [
+                                { exists: { field: 'items.electronicLocator' } }
+                              ]
+                            }
+                          },
+                          inner_hits: {
+                            sort: [{ 'items.enumerationChronology_sort': 'desc' }],
+                            size: 1,
+                            from: 2,
+                            name: 'items'
+                          }
+                        }
+                      },
+                      {
+                        nested: {
+                          inner_hits: {
+                            name: 'electronicResources'
+                          },
+                          path: 'items',
+                          query: {
+                            exists: {
+                              field: 'items.electronicLocator'
+                            }
+                          }
+                        }
+                      },
+                      { match_all: { } }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        })
+    })
+
+    it('should exclude check in card items if explicitly set', () => {
+      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2, merge_checkin_card_items: false }))
+        .to.deep.equal({
+          query: {
+            bool: {
+              filter: [
+                {
+                  bool: {
+                    should: [
+                      {
+                        nested: {
+                          path: 'items',
+                          query: {
+                            bool: {
+                              must_not: [
+                                { exists: { field: 'items.electronicLocator' } },
+                                { term: { 'items.type': 'nypl:CheckinCardItem' } }
+                              ]
+                            }
+                          },
                           inner_hits: {
                             sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                             size: 1,
@@ -610,7 +670,9 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }],
+                            must_not: [
+                              { exists: { field: 'items.electronicLocator' } }
+                            ],
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
@@ -638,7 +700,20 @@ describe('Resources query', function () {
                         }
                       }
                     },
-                    { match_all: { } }
+                    { match_all: { } },
+                    {
+                      nested: {
+                        inner_hits: { name: 'allItems' },
+                        path: 'items',
+                        query: {
+                          bool: {
+                            must_not: [
+                              { exists: { field: 'items.electronicLocator' } }
+                            ]
+                          }
+                        }
+                      }
+                    }
                   ]
                 }
               }
