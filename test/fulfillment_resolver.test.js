@@ -2,7 +2,7 @@ const expect = require('chai').expect
 
 const FulfillmentResolver = require('../lib/fulfillment_resolver')
 
-describe.only('FulfillmentResolver', () => {
+describe('FulfillmentResolver', () => {
   describe('_onsiteLocation', () => {
     it('returns sc', () => {
       expect(FulfillmentResolver.prototype._onsiteLocation('sc')).to.equal('sc')
