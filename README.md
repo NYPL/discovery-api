@@ -6,27 +6,14 @@ This is the API providing most of bibliographic data to the [NYPL Research Catal
 
 ## Installing & Running Locally
 
-Use [nvm](https://github.com/creationix/nvm) to set your Node version:
-
+Start the container with AWS creds so that the app can decrypt config from `.env-docker`:
 ```
-nvm use
-```
-
-Install dependencies:
-
-```
-npm i
+ AWS_ACCESS_KEY_ID=... AWS_SECRET_ACCESS_KEY=... docker-compose up
 ```
 
-Create a `.env` based on `.env.example`. Fill it with values from the appropriate `config/[environment].env` file (`qa.env` is probably sensible). Note - if using values from `config/[environment].env` - you must decrypt the following keys using [`aws kms decrypt`](https://github.com/NYPL/engineering-general/blob/main/security/secrets.md#encryptingdecrypting) (or [kms-util](https://github.com/NYPL-discovery/kms-util)) (i.e. all values in `.env` must be decrypted):
- * `SCSB_URL`
- * `SCSCB_API_KEY`
- * `NYPL_OAUTH_SECRET`
-
-Now start the app:
-
+After making changes, rebuild the image:
 ```
-npm start
+docker-compose build
 ```
 
 Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
