@@ -36,12 +36,12 @@ describe('FulfillmentResolver', () => {
         .to.equal('fulfillment:hd-offsite')
     })
     it('returns correctly for onsite item', () => {
-      const item = {physRequestable: true, holdingLocation: {id: 'my'}}
+      const item = {physRequestable: true, holdingLocation: [{id: 'loc:my'}]}
       expect(FulfillmentResolver.prototype._determinePhysFulfillment(item, false))
         .to.equal('fulfillment:lpa-onsite')
     })
     it('returns undefined when fulfillmentPrefix is undefined', () => {
-      const item = {physRequestable: true, holdingLocation: {id: 'xyz'}}
+      const item = {physRequestable: true, holdingLocation: [{id: 'loc:xyz'}]}
       expect(FulfillmentResolver.prototype._determinePhysFulfillment(item, false))
         .to.equal(undefined)
     })
@@ -57,12 +57,12 @@ describe('FulfillmentResolver', () => {
         .to.equal('fulfillment:recap-edd')
     })
     it('returns correctly for onsite item', () => {
-      const item = {eddRequestable: true, holdingLocation: {id: 'sc'}}
+      const item = {eddRequestable: true, holdingLocation: [{id: 'loc:sc'}]}
       expect(FulfillmentResolver.prototype._determineEddFulfillment(item, false))
         .to.equal('fulfillment:sc-edd')
     })
     it('returns undefined when fulfillmentPrefix is undefined', () => {
-      const item = {eddRequestable: true, holdingLocation: {id: 'xyz'}}
+      const item = {eddRequestable: true, holdingLocation: [{id: 'loc:xyz'}]}
       expect(FulfillmentResolver.prototype._determineEddFulfillment(item, false))
         .to.equal(undefined)
     })
