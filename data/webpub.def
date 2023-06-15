@@ -16,8 +16,11 @@
 #updated 2014 07 24 by HM to suppress Internal note in Holdings records
 #updated 2015 01 14 by AGB to correct Holdings PUBLIC NOTE display
 #updated 2015 10 01 by HM to remove Help icon from Item Status header
-#updated 2017 07 24 by HM to suppress $0 identifier control subfield
+#updated 2017 07 24 by HM to suppress $0 'Authority record control number or standard number' control subfield
 #updated 2018 03 20 by HM to add 588 Source of Description note 
+#updated 2020 04 03 by HM to add 347 Digital File Characteristics
+#updated 2023 01 12 by HM to display 561 Provenance note
+#updated 2023 05 17 by HM to suppress $1 'Real World Object URI' control subfield from headings
 #
 #
 # converted by cvpubdef from HOLDINGS_POS: atpR
@@ -25,23 +28,23 @@
 #
 # converted from HOLDINGS_POS field tag: 'a'
 #
-b|a|100|-06|Author||b|
-b|a|110|-06|Author||b|
-b|a|111|-06|Conference||b|
-b|a||-06|Author||b|
+b|a|100|-016|Author||b|
+b|a|110|-016|Author||b|
+b|a|111|-016|Conference||b|
+b|a||-016|Author||b|
 #
 # added field group f for uniform title 3/14/16
 #
-b|f|130|-06|Uniform Title||b|
-b|f|240|-06|Uniform Title||b|
+b|f|130|-016|Uniform Title||b|
+b|f|240|-016|Uniform Title||b|
 #
 #
 # converted from HOLDINGS_POS field tag: 't'
 #
-b|t|130|-06|Uniform Title||b|
-b|t|240|-06|Uniform Title||b|
-b|t|245|-06|Title||b|
-b|t||-06|Title||b|
+b|t|130|-016|Uniform Title||b|
+b|t|240|-016|Uniform Title||b|
+b|t|245|-016|Title||b|
+b|t||-016|Title||b|
 #
 #
 # added 2012 10 01 changes to MARC 264 - Production, Publication, Distribution, Manufacture, and Copyright Notice (R) and MARC 25X
@@ -103,6 +106,7 @@ b|r|338|a|Type of Carrier||b|
 b|r|340|-6|Physical Medium||b|
 b|r|342|-6|Geospatial Data||b|
 b|r|343|-6|Planar Data||b|
+b|r|347|-1268|Digital File Characteristics||b|
 b|r|350|-6|||b|
 b|r|35[1257]|-6|Description||b|
 b|r|362|-6|Publication Date||b|
@@ -157,7 +161,7 @@ b|n|5550|-67|Finding Aids||b|
 b|n|556|-67|Documentation||b|
 b|n|5611.|-67|Provenance||b|
 b|n|5610.||||b|
-b|n|561 .||||b|
+b|n|561 .|-67|Provenance||b|
 b|n|562|-67|Copy/Version||b|
 b|n|563|-67|Binding||b|
 b|n|565|-67|Case File||b|
@@ -184,21 +188,21 @@ b|y|[^8]..|u|||b|
 b|y|8[^5].|u|||b|
 b|y|85[^6]|u|||b|
 b|y||u|Misc.||b|
-b|d|6[013][01]..|-02346|Subject||b|
-b|d|648|-0236|Chronological Term||b|
-b|d|65[01]..|-02346|Subject||b|
+b|d|6[013][01]..|-012346|Subject||b|
+b|d|648|-01236|Chronological Term||b|
+b|d|65[01]..|-012346|Subject||b|
 b|d|653|-26|Indexed Term||b|
-b|d|654|-02346|Topical Term||b|
-b|d|655..|-02356|Genre/Form||b|
-b|d|656|-0236|Occupation||b|
-b|d|657|-0236|Function||b|
-b|d|658|-026|Curriculum Objective||b|
-b|d|662|-0246|Place Name||b|
+b|d|654|-012346|Topical Term||b|
+b|d|655..|-012356|Genre/Form||b|
+b|d|656|-01236|Occupation||b|
+b|d|657|-01236|Function||b|
+b|d|658|-0126|Curriculum Objective||b|
+b|d|662|-01246|Place Name||b|
 b|d|69[0-9]..|-23469|Local Subject||b|
 b|d|752..|-26|Place of Publication||b|
 b|d||-02346|Subject||b|
-b|b|7[012][01]..|-06|Added Author||b|
-b|b||-06|Added Author||b|
+b|b|7[012][01]..|-016|Added Author||b|
+b|b||-016|Added Author||b|
 b|u|210|-6|Abbreviated Title||b|
 b|u|222|-6|Key Title||b|
 b|u|299||||b|
@@ -221,10 +225,10 @@ b|u|24710|-6|Former Title||b|
 b|u|24711|-6|||b|
 
 # modified 3/14/16 
-# b|u|7[34]0..|-06|Added Title||b|
-b|u|730..|-06|Added Title||b|
-b|u|740..|-06|Added Title||b|
-# b|u||-06|Added Title||b|
+# b|u|7[34]0..|-016|Added Title||b|
+b|u|730..|-016|Added Title||b|
+b|u|740..|-016|Added Title||b|
+# b|u||-016|Added Title||b|
 
 # New label for old-style Donor note
 b|u|799|-6|Donor/Sponsor||b|

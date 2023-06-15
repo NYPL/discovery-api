@@ -534,18 +534,32 @@ describe('Annotated Marc Rules', function () {
     })
   })
 
-  describe('Added Title 246 Fields', function () {
-    it('should have added title field for MARC tags 24630/1/blank', function () {
-      const sampleBib = { varFields: [{ fieldTag: 'u', marcTag: '246', ind1: '3', ind2: '0', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
-        { fieldTag: 'u', marcTag: '246', ind1: '3', ind2: ' ', subfields: [{ tag: 'a', content: 'town' }] }
-      ] }
+  describe('Added Title Page Title 246 Fields', function () {
+    it('should have added title field for MARC tags 24615/1/blank', function () {
+      const sampleBib = {
+        varFields: [
+          {
+            fieldTag: 'u',
+            marcTag: '246', ind1: '1', ind2: '5',
+            subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }]
+          },
+          // This one is a 246, but won't match the current pattern of ^24615:
+          {
+            fieldTag: 'u',
+            marcTag: '246', ind1: '3', ind2: ' ',
+            subfields: [{ tag: 'a', content: 'town' }]
+          }
+        ]
+      }
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.an('object')
       expect(serialized.bib.fields).to.be.an('array')
       expect(serialized.bib.fields).to.have.lengthOf(1)
-      expect(serialized.bib.fields[0].label).to.equal('Added Title')
+      expect(serialized.bib.fields[0].label).to.equal('Added Title Page Title')
       expect(serialized.bib.fields[0].values).to.be.an('array')
-      expect(serialized.bib.fields[0].values).to.have.lengthOf(2)
+      // Only the first 246 in the sampleBib matches:
+      expect(serialized.bib.fields[0].values).to.have.lengthOf(1)
+      expect(serialized.bib.fields[0].values[0].content).to.equal('how')
     })
   })
 
