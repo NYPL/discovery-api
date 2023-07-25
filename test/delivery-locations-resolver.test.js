@@ -296,7 +296,7 @@ describe('Delivery-locations-resolver', function () {
   describe('resolveDeliveryLocations', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns delivery locations for requestable M2 items', () => {
-        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: ['XA'] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research'])
           .then((deliveryLocations) => {
@@ -305,11 +305,11 @@ describe('Delivery-locations-resolver', function () {
                 eddRequestable: false,
                 m2CustomerCode: ['XA'],
                 deliveryLocation: [
-                  {id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300'},
-                  {id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111'},
-                  {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
-                  {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
-                  {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'}
+                  { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
+                  { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
+                  { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
+                  { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
+                  { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' }
                 ],
                 uri: 'b123'
               }
@@ -318,26 +318,26 @@ describe('Delivery-locations-resolver', function () {
       })
 
       it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
-        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: ['XA'] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
             expect(deliveryLocations[0].deliveryLocation).to.deep.include.members([
-              {id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300'},
-              {id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111'},
-              {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
-              {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
-              {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'},
-              {id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room'},
-              {id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room'},
-              {id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room'},
-              {id: 'loc:malc', label: 'Schwarzman Building - Cullman Center'}
+              { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
+              { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
+              { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
+              { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
+              { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' },
+              { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room' },
+              { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room' },
+              { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room' },
+              { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center' }
             ])
           })
       })
 
       it('returns no delivery locations for non-requestable M2 customer codes', () => {
-        const items = [{ uri: 'b123', m2CustomerCode: [ 'XS' ] }]
+        const items = [{ uri: 'b123', m2CustomerCode: ['XS'] }]
         return DeliveryLocationsResolver
           .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
@@ -345,5 +345,48 @@ describe('Delivery-locations-resolver', function () {
           })
       })
     }
+  })
+  describe('__deliveryLocationsByHoldingLocation', () => {
+    it('returns null if holding location code is not in nypl-core', () => {
+      const location = { id: 'not in nypl core' }
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location))
+        .to.equal(null)
+    })
+    it('returns locations for an m2 code with delivery locations', () => {
+      const location = { id: 'map92' }
+      const customerCode = 'XF'
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location, customerCode)
+        .every(({ label, code }) => label && code))
+    })
+    it('returns null for an m2 code that is not requestable', () => {
+      const location = { id: 'map92' }
+      const customerCode = 'IL'
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location, customerCode))
+        .to.deep.equal(null)
+    })
+    it('returns null for an m2 code that does not exist', () => {
+      const location = { id: 'map92' }
+      const customerCode = 'nope'
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location, customerCode))
+        .to.deep.equal(null)
+    })
+    it('returns null for a recap code with no sierra delivery locations', () => {
+      const location = { id: 'rc2ma' }
+      const customerCode = 'PJ'
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location, customerCode))
+        .to.deep.equal(null)
+    })
+    it('returns locations for a recap code with sierra delivery locations', () => {
+      const location = { id: 'rc2ma' }
+      const customerCode = 'DL'
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location, customerCode)
+        .every(({ label, code }) => label && code))
+    })
+    it('returns locations for a recap code that does not exist', () => {
+      const location = { id: 'rc2ma' }
+      const customerCode = 'lol'
+      expect(DeliveryLocationsResolver.deliveryLocationsByHoldingLocation(location, customerCode))
+        .to.equal(null)
+    })
   })
 })
