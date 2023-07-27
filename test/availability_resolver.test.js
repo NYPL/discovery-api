@@ -1,7 +1,6 @@
 const { expect } = require('chai')
 const sinon = require('sinon')
 
-const RequestabilityResolver = require('../lib/requestability_resolver')
 const AvailabilityResolver = require('../lib/availability_resolver.js')
 const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const recapScsbQueryMatch = require('./fixtures/recap-scsb-query-match')
@@ -207,8 +206,7 @@ describe('Response with updated availability', function () {
     it('updates recapCustomerCode when item\'s code does not match SCSB', () => {
       return availabilityResolver.responseWithUpdatedAvailability()
         .then((response) => {
-          let responseWithRequestability = new RequestabilityResolver(response).fixItemRequestability()
-          let items = responseWithRequestability.hits.hits[0]._source.items
+          let items = response.hits.hits[0]._source.items
           // A ReCAP item with customer code XX
           const queryItem = items.find((item) => {
             return item.uri === 'i10283667'

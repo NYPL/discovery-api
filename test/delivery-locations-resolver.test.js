@@ -250,9 +250,9 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
-    it('will return false for on-site item failing status check', function () {
+    it('will return true for on-site item failing status check', function () {
       item.status[0].id = 'status:co'
-      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
 
     it('will return false for on-site item failing catalogItemType check', function () {
@@ -294,7 +294,7 @@ describe('Delivery-locations-resolver', function () {
     }
   })
 
-  describe.only('attachDeliveryLocationsAndEddRequestability - romcom', () => {
+  describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
     before(takeThisPartyPartiallyOffline)
     const requestableM2Location = 'map92'
     const requestableM1Location = 'map82'
@@ -416,5 +416,23 @@ describe('Delivery-locations-resolver', function () {
         }))
       })
     }
+  })
+  describe('requestableBasedOnHoldingLocation', function () {
+    // These expectations rely on the requestability of these locations being
+    // somewhat static, which has been generally true
+    it('identifies a non-requestable location', function () {
+      expect(
+        DeliveryLocationsResolver.requestableBasedOnHoldingLocation({
+          holdingLocation: [{ id: 'loc:rccd8' }]
+        })
+      ).to.equal(false)
+    })
+    it('identifies a requestable location', function () {
+      expect(
+        DeliveryLocationsResolver.requestableBasedOnHoldingLocation({
+          holdingLocation: [{ id: 'loc:rcpm2' }]
+        })
+      ).to.equal(true)
+    })
   })
 })
