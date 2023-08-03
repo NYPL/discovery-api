@@ -144,5 +144,9 @@ describe('RequestabilityResolver', () => {
     it('mal82 item, big bnum', () => {
       expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, bigBnum)).to.be.false
     })
+    it('process.env.MAX_MAL82_BNUM is undefined', () => {
+      process.env.MAX_MAL82_BNUM = undefined
+      expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, bigBnum)).to.be.true
+    })
   })
 })
