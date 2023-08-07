@@ -343,6 +343,19 @@ describe('Delivery-locations-resolver', function () {
           })
       })
 
+      it('returns no delivery locations for item with requestable M2 holding locations but no m2 code', () => {
+        const items = [{
+          uri: 'b123',
+          // non requestable holding location overrides requestable m2 code
+          holdingLocation: [{ id: requestableM2Location }]
+        }]
+        return DeliveryLocationsResolver
+          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
+          .then((items) => {
+            expect(items[0].deliveryLocation).to.be.empty
+          })
+      })
+
       it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
         const items = [{
           uri: 'b123',
