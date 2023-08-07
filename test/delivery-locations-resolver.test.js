@@ -284,7 +284,7 @@ describe('Delivery-locations-resolver', function () {
   })
 
   describe('deliveryLocationsByM2CustomerCode', () => {
-    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
+    if (process.env.NYPL_CORE_VERSION && parseFloat(process.env.NYPL_CORE_VERSION.slice(1), 10) >= 2.1) {
       it('returns undefined for unrequestable code', () =>
         expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('XS')).to.equal(undefined)
       )
@@ -299,7 +299,8 @@ describe('Delivery-locations-resolver', function () {
     const requestableM2Location = 'map92'
     const requestableM1Location = 'map82'
     const nonrequestableM2Location = 'mab92'
-    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('romcom-2.0')) {
+    if (process.env.NYPL_CORE_VERSION && parseFloat(process.env.NYPL_CORE_VERSION.slice(1), 10) >= 2.1) {
+      console.log('dont forget to activate this ')
       it('will return delivery locations for an requestable M1 item', function () {
         const items = [{
           uri: 'b123',
