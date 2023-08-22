@@ -30,6 +30,18 @@ deploy:
     branch: qa
 - provider: elasticbeanstalk
   skip_cleanup: true
+  access_key_id: "$AWS_ACCESS_KEY_ID_PRODUCTION"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY_PRODUCTION"
+  region: us-east-1
+  app: discovery-api
+  env: discovery-api-qa-test
+  bucket_name: elasticbeanstalk-us-east-1-946183545209
+  bucket_path: discovery-api-qa
+  on:
+    repo: NYPL/discovery-api
+    branch: qa
+- provider: elasticbeanstalk
+  skip_cleanup: true
   access_key_id: "$AWS_ACCESS_KEY_ID_DEVELOPMENT"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY_DEVELOPMENT"
   region: us-east-1

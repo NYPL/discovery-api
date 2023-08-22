@@ -1,0 +1,348 @@
+{
+  "took": 4,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 15.040952,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b14332438",
+        "_score": 15.040952,
+        "_source": {
+          "extent": [
+            "4 v."
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "America",
+            "America -- Discovery and exploration",
+            "America -- History",
+            "Virginia",
+            "Virginia -- History",
+            "Virginia -- History -- Colonial period, ca. 1600-1775",
+            "New England",
+            "New England -- History",
+            "New England -- History -- Colonial period, ca. 1600-1775"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "A. Strahan"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "createdYear": [
+            1800
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The history of America ..."
+          ],
+          "shelfMark": [
+            "*KF 1800 (Robertson, W. History of America)"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "creatorLiteral": [
+            "Robertson, William, 1721-1793."
+          ],
+          "createdString": [
+            "1800"
+          ],
+          "numElectronicResources": [
+            5
+          ],
+          "contributorLiteral": [
+            "Robertson, William, 1753-1835."
+          ],
+          "dateStartYear": [
+            1800
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*KF 1800 (Robertson, W. History of America)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "14332438"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "7127252"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)R220000327"
+            }
+          ],
+          "idOclc": [
+            "7127252"
+          ],
+          "updatedAt": 1671731696724,
+          "publicationStatement": [
+            "London, A. Strahan, 1800."
+          ],
+          "identifier": [
+            "urn:bnum:14332438",
+            "urn:oclc:7127252",
+            "urn:undefined:(WaOLN)R220000327"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1800"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "America -- Discovery and exploration.",
+            "America -- History.",
+            "Virginia -- History -- Colonial period, ca. 1600-1775.",
+            "New England -- History -- Colonial period, ca. 1600-1775."
+          ],
+          "titleDisplay": [
+            "The history of America ..."
+          ],
+          "uri": "b14332438",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "London"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "8vo."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 1,
+              "max_score": 1,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": 1,
+                  "_source": {
+                    "uri": "i14332438-e",
+                    "electronicLocator": [
+                      {
+                        "url": "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Form=30&Title=The+history+of+America+...&Site=SASRB&CallNumber=*KF+1800+(Robertson,+W.+History+of+America)&Author=Robertson,+William,&ItemPlace=London,&ItemPublisher=A.+Strahan,&Date=1800.&ItemEdition=The+ninth+edition,+in+which+is+included+the+posthumous+volume,+containing+the+history+of+Virginia+to+the+year+1688,+and+of+New+England+to+the+year+1652.+[Edited+by+his+son.]&ItemInfo3=https://catalog.nypl.org/record=b14332438&ReferenceNumber=b14332438x&ItemISxN=i169831863&Genre=Book-text&Location=Schwarzman+Rare+Book+Division",
+                        "label": "Request access to this item in the Schwarzman Rare Books Collection"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/mdp.39015016750922",
+                        "label": "Full text available via HathiTrust - v.1"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/mdp.39015016750930",
+                        "label": "Full text available via HathiTrust - v.2"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/mdp.39015016750948",
+                        "label": "Full text available via HathiTrust - v.3"
+                      },
+                      {
+                        "url": "http://hdl.handle.net/2027/mdp.39015016750955",
+                        "label": "Full text available via HathiTrust - v.4"
+                      }
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "bi14332438-e"
+                  }
+                }
+              ]
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i16983186",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1108",
+                        "label": "Rare Book Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1108||Rare Book Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:marr2",
+                        "label": "Schwarzman Building - Rare Book Collection Room 328"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:marr2||Schwarzman Building - Rare Book Collection Room 328"
+                    ],
+                    "shelfMark": [
+                      "*KF 1800 (Robertson, W. History of America)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*KF 1800 (Robertson, W. History of America)",
+                        "type": "bf:ShelfMark"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "*KF 1800 (Robertson, W. History of America)"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:4",
+                        "label": "Restricted use"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:4||Restricted use"
+                    ],
+                    "aeonUrl": [
+                      "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Form=30&Title=The+history+of+America+...&Site=SASRB&CallNumber=*KF+1800+(Robertson,+W.+History+of+America)&Author=Robertson,+William,&ItemPlace=London,&ItemPublisher=A.+Strahan,&Date=1800.&ItemEdition=The+ninth+edition,+in+which+is+included+the+posthumous+volume,+containing+the+history+of+Virginia+to+the+year+1688,+and+of+New+England+to+the+year+1652.+[Edited+by+his+son.]&ItemInfo3=https://catalog.nypl.org/record=b14332438&ReferenceNumber=b14332438x&ItemISxN=i169831863&Genre=Book-text&Location=Schwarzman+Rare+Book+Division"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "a*KF 1800 (Robertson, W. History of America)"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 2,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "loc:marr2||Schwarzman Building - Rare Book Collection Room 328",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_format": {
+      "doc_count": 2,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Text",
+            "doc_count": 2
+          }
+        ]
+      }
+    },
+    "item_status": {
+      "doc_count": 2,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 1
+          }
+        ]
+      }
+    }
+  }
+}

@@ -38,7 +38,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(897)
+        expect(doc.numItemsMatched).to.equal(917)
         done()
       })
     })
@@ -47,7 +47,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(694)
+        expect(doc.numItemsMatched).to.equal(704)
         done()
       })
     })
@@ -56,7 +56,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(563)
+        expect(doc.numItemsMatched).to.equal(572)
         done()
       })
     })
@@ -65,7 +65,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(897) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.equal(917) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })
@@ -74,7 +74,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(9) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.equal(2) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })
