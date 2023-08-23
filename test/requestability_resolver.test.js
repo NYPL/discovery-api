@@ -2,10 +2,16 @@ const RequestabilityResolver = require('../lib/requestability_resolver')
 const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
+const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
 
 describe('RequestabilityResolver', () => {
   describe('fixItemRequestability', function () {
     const NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()
+    it('sets physRequestable false for items with no barcodes', () => {
+      const noBarcode = noBarcodeResponse()
+      const resp = RequestabilityResolver.fixItemRequestability(noBarcode)
+      expect(resp.hits.hits[0]._source.items.every((item) => item.physRequestable === false)).to.be.true
+    })
     it('will set requestable to false for an item not found in ReCAP', function () {
       let indexedButNotAvailableInSCSBURI = 'i22566485'
 
@@ -122,31 +128,6 @@ describe('RequestabilityResolver', () => {
         return item.uri === 'i10283664'
       })
       expect(nonEddItem.eddRequestable).to.equal(false)
-    })
-  })
-
-  describe('requestableByBatchingLimit', () => {
-    process.env.MAX_MAL82_BNUM = 'b500'
-    const mal82Item = { holdingLocation: [{ id: 'loc:mal82' }] }
-    const recapItem = { recapCustomerCode: ['XX'] }
-    const m2Item = { m2CustomerCode: ['XX'] }
-    const smallBnum = 'b1'
-    const bigBnum = 'b501'
-    it('m2 item - true', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(m2Item)).to.be.true
-    })
-    it('recap item - true', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(recapItem)).to.be.true
-    })
-    it('mal82 item, small bnum', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, smallBnum)).to.be.true
-    })
-    it('mal82 item, big bnum', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, bigBnum)).to.be.false
-    })
-    it('process.env.MAX_MAL82_BNUM is undefined', () => {
-      process.env.MAX_MAL82_BNUM = undefined
-      expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, bigBnum)).to.be.true
     })
   })
 })
