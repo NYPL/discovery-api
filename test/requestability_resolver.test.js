@@ -124,25 +124,4 @@ describe('RequestabilityResolver', () => {
       expect(nonEddItem.eddRequestable).to.equal(false)
     })
   })
-
-  describe('requestableByBatchingLimit', () => {
-    process.env.MAX_MAL82_BNUM = 'b500'
-    const mal82Item = { holdingLocation: [{ id: 'loc:mal82' }] }
-    const recapItem = { recapCustomerCode: ['XX'] }
-    const m2Item = { m2CustomerCode: ['XX'] }
-    const smallBnum = 'b1'
-    const bigBnum = 'b501'
-    it('m2 item - true', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(m2Item)).to.be.true
-    })
-    it('recap item - true', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(recapItem)).to.be.true
-    })
-    it('mal82 item, small bnum', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, smallBnum)).to.be.true
-    })
-    it('mal82 item, big bnum', () => {
-      expect(RequestabilityResolver.requestableByBatchingLimit(mal82Item, bigBnum)).to.be.false
-    })
-  })
 })
