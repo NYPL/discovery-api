@@ -293,8 +293,26 @@ describe('Delivery-locations-resolver', function () {
     }
   })
 
+<<<<<<< HEAD
   describe('resolveDeliveryLocations', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
+=======
+  describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
+    before(takeThisPartyPartiallyOffline)
+    const requestableM2Location = 'map92'
+    const requestableM1Location = 'map82'
+    const nonrequestableM2Location = 'mab92'
+    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('romcom-2.0')) {
+      it('will return delivery locations for an requestable M1 item', function () {
+        const items = [{
+          uri: 'b123',
+          holdingLocation: [{ id: requestableM1Location }]
+        }]
+        return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability(items).then((items) => {
+          expect(items[0].deliveryLocation).to.not.be.empty
+        })
+      })
+>>>>>>> parent of 9c606d0... change conditional nypl_core_version check
       it('returns delivery locations for requestable M2 items', () => {
         const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
