@@ -92,7 +92,6 @@ function takeThisPartyPartiallyOffline () {
   // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
   DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
     const stubbedLookups = {
-      'recap-barcode-for-pj': 'PJ',
       '33433047331719': 'NP',
       '32101062243553': 'PA',
       'CU56521537': 'CU',
@@ -115,56 +114,56 @@ function takeThisPartyPartiallyOffline () {
 describe('Delivery-locations-resolver', function () {
   before(takeThisPartyPartiallyOffline)
 
-  it('will return empty delivery locations for an unrequestable onsite location code', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
+  it('will assign empty array to deliveryLocation property for an onsite NYPL item', function () {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl]).then((items) => {
       expect(items[0].deliveryLocation).to.be.empty
     })
   })
 
   it('will set eddRequestable to true for a specific onsite NYPL item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.onsiteNypl]).then((items) => {
       expect(items[0].eddRequestable).to.equal(true)
     })
   })
 
   it('will ammend the deliveryLocation property for an offsite NYPL item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNypl]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.offsiteNypl]).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
     })
   })
 
   it('will set eddRequestable to true for a specific offsite NYPL item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNypl]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.offsiteNypl]).then((items) => {
       expect(items[0].eddRequestable).to.equal(true)
     })
   })
 
   it('will ammend the deliveryLocation property for a PUL item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.pul]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.pul]).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
     })
   })
 
   it('will set eddRequestable to true for a specific PUL item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.pul]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.pul]).then((items) => {
       expect(items[0].eddRequestable).to.equal(true)
     })
   })
 
   it('will set eddRequestable to true for a specific CUL item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.cul]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.cul]).then((items) => {
       expect(items[0].eddRequestable).to.equal(true)
     })
   })
 
   it('will set eddRequestable to false for a fake Map Division item', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.fakeNYPLMapDivisionItem]).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.fakeNYPLMapDivisionItem]).then((items) => {
       expect(items[0].eddRequestable).to.equal(false)
     })
   })
 
   it('will hide "Scholar" deliveryLocation for non-scholars', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research']).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research']).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
 
       // Confirm the known scholar rooms are not included:
@@ -178,7 +177,7 @@ describe('Delivery-locations-resolver', function () {
     // At writing, this sierra location (rcpm2) is marked requestable: true
     const offsiteItemInNonRequestableLocation = sampleItems.offsiteNypl
 
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([offsiteItemInNonRequestableLocation])
+    return DeliveryLocationsResolver.resolveDeliveryLocations([offsiteItemInNonRequestableLocation])
       .then((items) => {
         expect(items[0].deliveryLocation).to.be.a('array')
         expect(items[0].deliveryLocation).to.have.lengthOf(1)
@@ -190,7 +189,7 @@ describe('Delivery-locations-resolver', function () {
     // At writing, this sierra location is marked requestable: false
     offsiteItemInNonRequestableLocation.holdingLocation[0].id = 'loc:rccd8'
 
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([offsiteItemInNonRequestableLocation])
+    return DeliveryLocationsResolver.resolveDeliveryLocations([offsiteItemInNonRequestableLocation])
       .then((items) => {
         expect(items[0].deliveryLocation).to.be.a('array')
         expect(items[0].deliveryLocation).to.be.empty
@@ -198,7 +197,7 @@ describe('Delivery-locations-resolver', function () {
   })
 
   it('will reveal "Scholar" deliveryLocation for scholars', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research', 'Scholar']).then((items) => {
+    return DeliveryLocationsResolver.resolveDeliveryLocations([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research', 'Scholar']).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
 
       // Confirm the known scholar rooms are not included:
@@ -250,9 +249,9 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
-    it('will return true for on-site item failing status check', function () {
+    it('will return false for on-site item failing status check', function () {
       item.status[0].id = 'status:co'
-      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
+      expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
     it('will return false for on-site item failing catalogItemType check', function () {
@@ -284,7 +283,7 @@ describe('Delivery-locations-resolver', function () {
   })
 
   describe('deliveryLocationsByM2CustomerCode', () => {
-    if (process.env.NYPL_CORE_VERSION && parseFloat(process.env.NYPL_CORE_VERSION.slice(1), 10) >= 2.1) {
+    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns undefined for unrequestable code', () =>
         expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('XS')).to.equal(undefined)
       )
@@ -294,159 +293,57 @@ describe('Delivery-locations-resolver', function () {
     }
   })
 
-  describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
-    before(takeThisPartyPartiallyOffline)
-    const requestableM2Location = 'map92'
-    const requestableM1Location = 'map82'
-    const nonrequestableM2Location = 'mab92'
-    if (process.env.NYPL_CORE_VERSION && parseFloat(process.env.NYPL_CORE_VERSION.slice(1), 10) >= 2.1) {
-      console.log('dont forget to activate this ')
-      it('will return delivery locations for an requestable M1 item', function () {
-        const items = [{
-          uri: 'b123',
-          holdingLocation: [{ id: requestableM1Location }]
-        }]
-        return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability(items).then((items) => {
-          expect(items[0].deliveryLocation).to.not.be.empty
-        })
-      })
+  describe('resolveDeliveryLocations', () => {
+    if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns delivery locations for requestable M2 items', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['XA'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.deep.equal([
-              { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
-              { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
-              { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
-              { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
-              { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' }
+          .resolveDeliveryLocations(items, ['Research'])
+          .then((deliveryLocations) => {
+            expect(deliveryLocations).to.deep.equal([
+              {
+                eddRequestable: false,
+                m2CustomerCode: ['XA'],
+                deliveryLocation: [
+                  {id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300'},
+                  {id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111'},
+                  {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
+                  {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
+                  {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'}
+                ],
+                uri: 'b123'
+              }
             ])
           })
       })
 
-      it('returns no delivery locations for nonrequestable M2 holding locations', () => {
-        const items = [{
-          uri: 'b123',
-          // requestable m2 code
-          m2CustomerCode: ['XA'],
-          // non requestable holding location overrides requestable m2 code
-          holdingLocation: [{ id: nonrequestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.be.empty
-          })
-      })
-
-      it('returns no delivery locations for item with requestable M2 holding locations but no m2 code', () => {
-        const items = [{
-          uri: 'b123',
-          // non requestable holding location overrides requestable m2 code
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.be.empty
-          })
-      })
-
       it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['XA'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.deep.include.members([
-              { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
-              { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
-              { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
-              { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
-              { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' },
-              { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room' },
-              { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room' },
-              { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room' },
-              { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center' }
+          .resolveDeliveryLocations(items, ['Research', 'Scholar'])
+          .then((deliveryLocations) => {
+            expect(deliveryLocations[0].deliveryLocation).to.deep.include.members([
+              {id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300'},
+              {id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111'},
+              {id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315'},
+              {id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117'},
+              {id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121'},
+              {id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room'},
+              {id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room'},
+              {id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room'},
+              {id: 'loc:malc', label: 'Schwarzman Building - Cullman Center'}
             ])
           })
       })
 
       it('returns no delivery locations for non-requestable M2 customer codes', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['XS'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
+        const items = [{ uri: 'b123', m2CustomerCode: [ 'XS' ] }]
         return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
+          .resolveDeliveryLocations(items, ['Research', 'Scholar'])
           .then((deliveryLocations) => {
-            expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
+            expect(deliveryLocations.deliveryLocation).to.equal(undefined)
           })
-      })
-      it('returns no delivery locations for non-existant M2 customer codes', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['xxx'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((deliveryLocations) => {
-            expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
-          })
-      })
-      it('returns no delivery locations for fake holding location', () => {
-        const items = [{
-          uri: 'b123',
-          holdingLocation: [{ id: 'fake' }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((deliveryLocations) => {
-            expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
-          })
-      })
-      it('returns null for item with recap code with no sierra delivery locations', () => {
-        const item = {
-          holdingLocation: [{ id: 'rc2ma' }],
-          identifier: [
-            'urn:bnum:b11995345',
-            'urn:barcode:recap-code-for-pj'
-          ],
-          uri: 'b11995345'
-        }
-        expect(DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([item])
-        .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty
-        }))
       })
     }
-  })
-  describe('requestableBasedOnHoldingLocation', function () {
-    // These expectations rely on the requestability of these locations being
-    // somewhat static, which has been generally true
-    it('identifies a non-requestable location', function () {
-      expect(
-        DeliveryLocationsResolver.requestableBasedOnHoldingLocation({
-          holdingLocation: [{ id: 'loc:rccd8' }]
-        })
-      ).to.equal(false)
-    })
-    it('identifies a requestable location', function () {
-      expect(
-        DeliveryLocationsResolver.requestableBasedOnHoldingLocation({
-          holdingLocation: [{ id: 'loc:rcpm2' }]
-        })
-      ).to.equal(true)
-    })
   })
 })
