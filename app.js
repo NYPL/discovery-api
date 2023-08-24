@@ -8,10 +8,10 @@ const logger = require('./lib/logger')
 
 require('./lib/preflight_check')
 
-const express = require('express')
-const esClient = require('./lib/es-client')
+var express = require('express')
+var elasticsearch = require('elasticsearch')
 
-const app = express()
+var app = express()
 
 app.logger = logger
 app.thesaurus = config.thesaurus
@@ -22,7 +22,9 @@ require('./lib/resources')(app)
 require('./routes/resources')(app)
 require('./routes/misc')(app)
 
-app.esClient = esClient
+app.esClient = new elasticsearch.Client({
+  host: process.env.ELASTICSEARCH_HOST || config['elasticsearch'].host
+})
 
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')

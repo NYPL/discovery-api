@@ -19,101 +19,6 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe('GET numItemsMatched', () => {
-    it('returns numItemsMatched for blank bib query', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(694)
-        done()
-      })
-    })
-    it('returns numItemsMatched for bib with location query', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?item_location=loc:mal82'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(562)
-        done()
-      })
-    })
-    it('returns numItemsMatched for blank bib query merge check in cards', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=true'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(897) // this changed when I rebuild the fixtures with no code changes
-        done()
-      })
-    })
-    it('returns numItemsMatched for query merge check in cards and status:na', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=true&item_status=status:na'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(12) // this changed when I rebuild the fixtures with no code changes
-        done()
-      })
-    })
-    it('does nothing to a search query with no hits', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources?q=fladeedle'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(undefined)
-        done()
-      })
-    })
-    describe('electronic resources changes count', () => {
-      it('decrements - e resources, no item filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001'
-        request.get(url, (err, res, body) => {
-          if (err) throw err
-          const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
-          done()
-        })
-      })
-      it('decrements - item_format is same as bib material type', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text'
-        request.get(url, (err, res, body) => {
-          if (err) throw err
-          const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
-          done()
-        })
-      })
-      it('item_format is same as bib material type, multiple filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text&item_location=loc:mal92'
-        request.get(url, (err, res, body) => {
-          if (err) throw err
-          const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(1)
-          done()
-        })
-      })
-      it('item_format is same as bib material type, multiple format filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text,anotherformat'
-        request.get(url, (err, res, body) => {
-          if (err) throw err
-          const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
-          done()
-        })
-      })
-      it('item_format is same as bib material type, multiple format filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text,anotherformat'
-        request.get(url, (err, res, body) => {
-          if (err) throw err
-          const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
-          done()
-        })
-      })
-    })
-  })
-
   describe('GET sample resources', function () {
     sampleResources.forEach(function (spec) {
       it(`Resource ${spec.id} has correct type ${spec.type}`, function (done) {
@@ -310,7 +215,6 @@ describe('Test Resources responses', function () {
       })
     })
   })
-
   describe('GET resource', function () {
     it('returns supplementaryContent', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b18932917`, function (err, response, body) {
@@ -330,8 +234,7 @@ describe('Test Resources responses', function () {
       })
     })
 
-    // skipping this test for now since we don't have have the option to include electronic resources in items
-    it.skip('returns item.electronicLocator', function (done) {
+    it('returns item.electronicLocator', function (done) {
       request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
         if (err) throw err
 
@@ -344,38 +247,6 @@ describe('Test Resources responses', function () {
         assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
         assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
         assert.equal(eItem.electronicLocator[0].label, 'Full text available via HathiTrust--v. 1')
-
-        done()
-      })
-    })
-
-    it('should have electronicResources property', function (done) {
-      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b10011374?items_size=5`, function (err, response, body) {
-        if (err) throw err
-
-        assert.equal(200, response.statusCode)
-
-        var doc = JSON.parse(body)
-
-        let eItem = doc.electronicResources
-        expect(eItem).to.deep.equal([
-          {
-            url: 'http://hdl.handle.net/2027/nyp.33433057532081',
-            prefLabel: 'Full text available via HathiTrust--v. 1'
-          },
-          {
-            prefLabel: 'Full text available via HathiTrust--v. 2',
-            url: 'http://hdl.handle.net/2027/nyp.33433057532339'
-          },
-          {
-            prefLabel: 'Full text available via HathiTrust--v. 1',
-            url: 'http://hdl.handle.net/2027/nyp.33433067332548'
-          },
-          {
-            prefLabel: 'Full text available via HathiTrust--v. 2',
-            url: 'http://hdl.handle.net/2027/nyp.33433067332555'
-          }
-        ])
 
         done()
       })
@@ -487,6 +358,7 @@ describe('Test Resources responses', function () {
                   // Ensure dates are ascending (some cataloging reverses them):
                   .sort((a, b) => a - b)
                 // The bib's start date should be <= dateBefore
+                if (itemDates[0] > dateBefore) console.log('before ' + dateBefore + ' failed for ', itemDates)
                 expect(itemDates[0]).to.be.at.most(dateBefore)
               })
 
@@ -568,7 +440,9 @@ describe('Test Resources responses', function () {
           nextUrl += `&filters[dateBefore]=${dates[1]}`
           return request.get(nextUrl, function (err, response, body) {
             if (err) throw err
+
             var doc = JSON.parse(body)
+
             // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 

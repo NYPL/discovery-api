@@ -273,6 +273,7 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
+<<<<<<< HEAD
   describe('deliveryLocationsByM2CustomerCode', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns undefined for unrequestable code', () =>
@@ -376,4 +377,6 @@ describe('Delivery-locations-resolver', function () {
   })
 =======
 >>>>>>> parent of d1eee90... Merge branch 'main' into production
+=======
+>>>>>>> parent of 9227c23... Merge pull request #303 from NYPL/main
 })

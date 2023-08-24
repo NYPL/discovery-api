@@ -1,5 +1,5 @@
 {
-  "took": 13,
+  "took": 25,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,13 +8,13 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 29.305384,
+    "max_score": 29.754269,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
         "_id": "b11984689",
-        "_score": 29.305384,
+        "_score": 29.754269,
         "_source": {
           "extent": [
             "v. ill."
@@ -125,7 +125,7 @@
           "dateEndYear": [
             1962
           ],
-          "updatedAt": 1675262897750,
+          "updatedAt": 1674767176917,
           "publicationStatement": [
             "Don Mills, Ont. [etc.] Southam-Maclean Publications [etc.]"
           ],
@@ -195,14 +195,14 @@
           "items": {
             "hits": {
               "total": 1,
-              "max_score": 14.955997,
+              "max_score": 15.104201,
               "hits": [
                 {
                   "_nested": {
                     "field": "items",
                     "offset": 0
                   },
-                  "_score": 14.955997,
+                  "_score": 15.104201,
                   "_source": {
                     "uri": "i29976055",
                     "status": [

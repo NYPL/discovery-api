@@ -1,7 +1,6 @@
 const { expect } = require('chai')
 const fs = require('fs')
 const sinon = require('sinon')
-const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
 
 const fixtures = require('./fixtures')
@@ -15,12 +14,6 @@ describe('Resources query', function () {
     // We're passing a reference to a local object `resourcesPrivMethods` so
     // that we get access to otherwise private methods defined in lib/resources
     require('../lib/resources')(app, resourcesPrivMethods)
-
-    fixtures.enableScsbFixtures()
-  })
-
-  after(() => {
-    fixtures.disableScsbFixtures()
   })
 
   describe('parseSearchParams', function () {
@@ -323,7 +316,7 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri es connection error', () => {
+  describe('findByUri connection error', () => {
     before(() => {
       sinon.stub(app.esClient, 'search').callsFake((req) => {
         return Promise.resolve(fs.readFileSync('./test/fixtures/es-connection-error.json', 'utf8'))
@@ -340,48 +333,21 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri scsb connection error', () => {
-    before(() => {
-      fixtures.enableEsFixtures()
-
-      // Specifically disable scsb fixtrues for this scope
-      fixtures.disableScsbFixtures()
-
-      sinon.stub(scsbClient, 'getItemsAvailabilityForBnum')
-        .callsFake(() => Promise.reject())
-      sinon.stub(scsbClient, 'getItemsAvailabilityForBarcodes')
-        .callsFake(() => Promise.resolve([]))
-    })
-
-    after(() => {
-      fixtures.disableEsFixtures()
-      scsbClient.getItemsAvailabilityForBnum.restore()
-      scsbClient.getItemsAvailabilityForBarcodes.restore()
-
-      // Re-enable scsb fixtures
-      fixtures.enableScsbFixtures()
-    })
-
-    it('handles scsb connection error in initial availability lookup by resolving document', () => {
-      return app.resources.findByUri({ uri: 'b10833141', merge_checkin_card_items: true })
-        .then((resp) => {
-          expect(resp).to.be.a('object')
-          expect(resp['@id']).to.eq('res:b10833141')
-        })
-    })
-  })
-
   describe('findByUri with filters', () => {
+    let request
     before(() => {
-      fixtures.enableEsFixtures()
+      sinon.stub(app.esClient, 'search').callsFake((req) => {
+        request = req
+        return Promise.resolve(fs.readFileSync('./test/fixtures/es-connection-error.json', 'utf8'))
+      })
     })
 
     after(() => {
-      fixtures.disableEsFixtures()
+      app.esClient.search.restore()
     })
 
     it('passes filters to esClient', () => {
-      return app.resources.findByUri({
+      const call = () => app.resources.findByUri({
         uri: 'b123',
         item_volume: '1-2',
         item_date: '3-4',
@@ -389,55 +355,52 @@ describe('Resources query', function () {
         item_location: 'SASB,LPA',
         item_status: 'here,there'
       })
-        // This call is going to error because the bnum is fake
-        .catch((e) => {
-          // Verify correct nested filters were passed to ES query:
-          const searchCall1Arg1 = app.esClient.search.args[0][0]
-          const nestedFilters = searchCall1Arg1.query.bool.filter[0].bool.should[0].nested.query.bool.filter
-          expect(nestedFilters)
-            .to.deep.equal([
-              {
-                'range': {
-                  'items.volumeRange': {
-                    'gte': 1,
-                    'lte': 2
-                  }
-                }
-              },
-              {
-                'range': {
-                  'items.dateRange': {
-                    'gte': 3,
-                    'lte': 4
-                  }
-                }
-              },
-              {
-                'terms': {
-                  'items.formatLiteral': [
-                    'text',
-                    'microfilm'
-                  ]
-                }
-              },
-              {
-                'terms': {
-                  'items.holdingLocation.id': [
-                    'SASB',
-                    'LPA'
-                  ]
-                }
-              },
-              {
-                'terms': {
-                  'items.status.id': [
-                    'here',
-                    'there'
-                  ]
-                }
+      call()
+      expect(request.body.query.bool.filter[0].bool.should[0].nested.query.bool.filter)
+        .to.deep.equal(
+        [
+          {
+            'range': {
+              'items.volumeRange': {
+                'gte': 1,
+                'lte': 2
               }
-            ])
-        })
+            }
+          },
+          {
+            'range': {
+              'items.dateRange': {
+                'gte': 3,
+                'lte': 4
+              }
+            }
+          },
+          {
+            'terms': {
+              'items.formatLiteral': [
+                'text',
+                'microfilm'
+              ]
+            }
+          },
+          {
+            'terms': {
+              'items.holdingLocation.id': [
+                'SASB',
+                'LPA'
+              ]
+            }
+          },
+          {
+            'terms': {
+              'items.status.id': [
+                'here',
+                'there'
+              ]
+            }
+          }
+        ]
+        )
     })
   })
 
@@ -525,27 +488,12 @@ describe('Resources query', function () {
 
     it('should ignore check in card items when merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
     })
 
-    it('should ignore check in card items when merge_checkin_card_items is falsey', () => {
+    it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
-    })
-
-    it('should include check in card items when merge_checkin_card_items is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
-    })
-
-    it('should include check in card items but exclude electronic resources when merge_checkin_card_items is truthy and removeElectronicResourcesFromItemsArray is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true, merge_checkin_card_items: true }))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }] })
-    })
-
-    it('should ignore electronic resources when removeElectronicResourcesFromItemsArray is set', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true }))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
     })
   })
 
@@ -562,25 +510,11 @@ describe('Resources query', function () {
                       {
                         nested: {
                           path: 'items',
-                          query: { bool: { must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] } },
+                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
                           inner_hits: {
                             sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                             size: 1,
-                            from: 2,
-                            name: 'items'
-                          }
-                        }
-                      },
-                      {
-                        nested: {
-                          inner_hits: {
-                            name: 'electronicResources'
-                          },
-                          path: 'items',
-                          query: {
-                            exists: {
-                              field: 'items.electronicLocator'
-                            }
+                            from: 2
                           }
                         }
                       },
@@ -610,7 +544,7 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }],
+                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } },
                             filter: [
                               { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
@@ -620,21 +554,7 @@ describe('Resources query', function () {
                         inner_hits: {
                           sort: [{ 'items.enumerationChronology_sort': 'desc' }],
                           size: 1,
-                          from: 2,
-                          name: 'items'
-                        }
-                      }
-                    },
-                    {
-                      nested: {
-                        inner_hits: {
-                          name: 'electronicResources'
-                        },
-                        path: 'items',
-                        query: {
-                          exists: {
-                            field: 'items.electronicLocator'
-                          }
+                          from: 2
                         }
                       }
                     },
