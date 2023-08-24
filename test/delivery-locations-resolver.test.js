@@ -335,6 +335,24 @@ describe('Delivery-locations-resolver', function () {
           })
       })
 
+<<<<<<< HEAD
+=======
+      it('returns no delivery locations for nonrequestable M2 holding locations', () => {
+        const items = [{
+          uri: 'b123',
+          // requestable m2 code
+          m2CustomerCode: ['XA'],
+          // non requestable holding location overrides requestable m2 code
+          holdingLocation: [{ id: nonrequestableM2Location }]
+        }]
+        return DeliveryLocationsResolver
+          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
+          .then((items) => {
+            expect(items[0].deliveryLocation).to.be.empty
+          })
+      })
+
+>>>>>>> parent of dd48ea7... update package-lock
       it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
         const items = [{ uri: 'b123', m2CustomerCode: [ 'XA' ] }]
         return DeliveryLocationsResolver
