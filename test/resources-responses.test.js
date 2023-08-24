@@ -19,31 +19,9 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe('GET electronicResources', () => {
-    it('returns e resources array and count without aeon links', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14332438'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.electronicResources.length).to.equal(4)
-        expect(doc.electronicResources.filter((resource) => resource.url.includes('aeon')).length).to.equal(0)
-        expect(doc.items.filter((item) => item.aeonUrl).length).to.equal(1)
-        done()
-      })
-    })
-  })
   describe('GET numItemsMatched', () => {
     it('returns numItemsMatched for blank bib query', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141'
-      request.get(url, (err, res, body) => {
-        if (err) throw err
-        const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(897)
-        done()
-      })
-    })
-    it('returns numItemsMatched excluding check in card items for blank bib query with merge_checkin_card_items false', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?merge_checkin_card_items=false'
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
@@ -56,7 +34,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(563)
+        expect(doc.numItemsMatched).to.equal(562)
         done()
       })
     })
@@ -74,7 +52,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(9) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.equal(12) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })

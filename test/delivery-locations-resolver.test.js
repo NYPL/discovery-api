@@ -90,8 +90,8 @@ const scholarRooms = [
 
 function takeThisPartyPartiallyOffline () {
   // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
-  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
-    const stubbedLookups = {
+  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = () => {
+    return Promise.resolve({
       '33433047331719': 'NP',
       '32101062243553': 'PA',
       'CU56521537': 'CU',
@@ -99,15 +99,7 @@ function takeThisPartyPartiallyOffline () {
       // Let's pretend this is a valid NYPL Map Division item barcode
       // and let's further pretend that HTC API tells us it's recap customer code is ND
       'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
-    }
-
-    // Return hash containing only requested barcodes:
-    return Promise.resolve(
-      barcodes.reduce((h, barcode) => {
-        h[barcode] = stubbedLookups[barcode]
-        return h
-      }, {})
-    )
+    })
   }
 }
 
@@ -281,7 +273,6 @@ describe('Delivery-locations-resolver', function () {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
   })
-
   describe('deliveryLocationsByM2CustomerCode', () => {
     if (process.env.NYPL_CORE_VERSION && process.env.NYPL_CORE_VERSION.includes('rom-com')) {
       it('returns undefined for unrequestable code', () =>
@@ -292,6 +283,7 @@ describe('Delivery-locations-resolver', function () {
       })
     }
   })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   describe('resolveDeliveryLocations', () => {
@@ -382,4 +374,6 @@ describe('Delivery-locations-resolver', function () {
       })
     }
   })
+=======
+>>>>>>> parent of d1eee90... Merge branch 'main' into production
 })
