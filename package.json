@@ -19,8 +19,6 @@
     "winston": "2.3.1"
   },
   "devDependencies": {
-    "aws-sdk": "^2.1137.0",
-    "axios": "^0.27.2",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "md5": "^2.2.1",
@@ -52,9 +50,6 @@
       "describe",
       "expect",
       "it"
-    ],
-    "ignore": [
-      "/logs-to-tsv/*"
     ]
   },
   "version": "1.1.2"

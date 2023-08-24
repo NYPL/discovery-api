@@ -13,7 +13,7 @@ module.exports = function (app) {
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject', 'isbn', 'issn', 'lccn', 'oclc', 'merge_checkin_card_items', 'include_item_aggregations']
+  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject', 'isbn', 'issn', 'lccn', 'oclc']
 
   const respond = (res, _resp, params) => {
     var contentType = 'application/ld+json'
@@ -85,13 +85,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  /**
-   *  Item route
-   *  Responds with the bib and only the single requested item
-   *
-   *  e.g. discovery/resources/b1234-i9876
-   */
-  app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri([a-z]?i[0-9]+)`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri(i[0-9]+)`, function (req, res) {
     var params = { uri: req.params.uri, itemUri: req.params.itemUri }
 
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
@@ -99,20 +93,13 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  /**
-   * Bib route
-   * Responds with the identified bib
-   *
-   * e.g. discovery/resources/b1234
-   */
   app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
-    var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations'])
-    const params = Object.assign({}, req.query, { uri: req.params.uri })
-
+    var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from'])
+    var params = { uri: req.params.uri }
     if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
     if (Number.isInteger(parseInt(gatheredParams.items_from))) params.items_from = gatheredParams.items_from
 
-    let handler = app.resources.findByUri
+    var handler = app.resources.findByUri
 
     if (req.params.ext === 'annotated-marc') {
       handler = app.resources.annotatedMarc

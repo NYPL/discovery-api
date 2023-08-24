@@ -98,7 +98,7 @@ npm test
 
 ### Adding fixtures
 
-Almost all HTTP dependencies are rerouted to fixtures (except for requesting nypl-core mapping files). All fixtures can be updated dynamically (using creds in `./config/production.env`) via the following:
+Almost all HTTP dependencies are rerouted to fixtures (except for requesting nypl-core mapping files). All fixtures can be updated dynamically (using creds in `./.env`) via the following:
 
 Run tests and automatically build any missing Elasticsearch or SCSB fixtures:
 
@@ -229,6 +229,3 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 
 > /resources/b15704876-i25375512
 
-### Features
-
-There is currently one feature flag in this app, which is 'no-on-site-edd'. When it is set, all onsite items have an eddRequestable property of false.

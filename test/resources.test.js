@@ -1,6 +1,3 @@
-const { expect } = require('chai')
-const fs = require('fs')
-const sinon = require('sinon')
 const errors = require('../lib/errors')
 
 const fixtures = require('./fixtures')
@@ -18,7 +15,7 @@ describe('Resources query', function () {
 
   describe('parseSearchParams', function () {
     it('parses params, sets defaults', function () {
-      const params = resourcesPrivMethods.parseSearchParams({})
+      const params = resourcesPrivMethods.parseSearchParams({ })
       expect(params).to.be.a('object')
       expect(params.q).to.equal(undefined)
       expect(params.search_scope).to.equal('all')
@@ -26,8 +23,6 @@ describe('Resources query', function () {
       expect(params.per_page).to.equal(50)
       expect(params.sort).to.equal(undefined)
       expect(params.filters).to.equal(undefined)
-      expect(params.merge_checkin_card_items).to.equal(false)
-      expect(params.include_item_aggregations).to.equal(true)
     })
   })
 
@@ -151,23 +146,15 @@ describe('Resources query', function () {
       expect(query.bool.should[0].query_string).to.be.a('object')
       expect(query.bool.should[0].query_string.fields).to.be.a('array')
       expect(query.bool.should[0].query_string.fields).to.include('shelfMark')
-      expect(query.bool.should[0].query_string.query).to.equal('fladeedle')
 
-      // Second clause is a query_string query across multiple root level fields, with literal query
+      // Second clause is a nested query_string query on items fields:
       expect(query.bool.should[1]).to.be.a('object')
-      expect(query.bool.should[1].query_string).to.be.a('object')
-      expect(query.bool.should[1].query_string.fields).to.be.a('array')
-      expect(query.bool.should[1].query_string.fields).to.include('shelfMark')
-      expect(query.bool.should[1].query_string.query).to.equal('"fladeedle"')
-
-      // Third clause is a nested query_string query on items fields:
-      expect(query.bool.should[2]).to.be.a('object')
-      expect(query.bool.should[2].nested).to.be.a('object')
-      expect(query.bool.should[2].nested.path).to.eq('items')
-      expect(query.bool.should[2].nested.query).to.be.a('object')
-      expect(query.bool.should[2].nested.query.query_string).to.be.a('object')
-      expect(query.bool.should[2].nested.query.query_string.fields).to.be.a('array')
-      expect(query.bool.should[2].nested.query.query_string.fields).to.include('items.shelfMark')
+      expect(query.bool.should[1].nested).to.be.a('object')
+      expect(query.bool.should[1].nested.path).to.eq('items')
+      expect(query.bool.should[1].nested.query).to.be.a('object')
+      expect(query.bool.should[1].nested.query.query_string).to.be.a('object')
+      expect(query.bool.should[1].nested.query.query_string.fields).to.be.a('array')
+      expect(query.bool.should[1].nested.query.query_string.fields).to.include('items.shelfMark')
     })
   })
 
@@ -227,17 +214,7 @@ describe('Resources query', function () {
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({
-        query: {
-          bool: {
-            should: [
-              { term: { idIsbn: '0689844921' } },
-              { term: { idIsbn_clean: '0689844921' } }
-            ],
-            minimum_should_match: 1
-          }
-        }
-      })
+      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIsbn: '0689844921' } } } } })
     })
 
     it('processes issn correctly', () => {
@@ -301,7 +278,7 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri 404', () => {
+  describe('findByUri errors', () => {
     before(() => {
       fixtures.enableEsFixtures()
     })
@@ -310,262 +287,14 @@ describe('Resources query', function () {
       fixtures.disableEsFixtures()
     })
 
+    it('handles connection error by rejecting with Error', () => {
+      const call = () => app.resources.findByUri({ uri: 'b123-connection-error' })
+      return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
+    })
+
     it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
-    })
-  })
-
-  describe('findByUri connection error', () => {
-    before(() => {
-      sinon.stub(app.esClient, 'search').callsFake((req) => {
-        return Promise.resolve(fs.readFileSync('./test/fixtures/es-connection-error.json', 'utf8'))
-      })
-    })
-
-    after(() => {
-      app.esClient.search.restore()
-    })
-
-    it('handles connection error by rejecting with Error', () => {
-      const call = () => app.resources.findByUri({ uri: 'b123-connection-error', merge_checkin_card_items: true })
-      return expect(call()).to.be.rejectedWith(Error, 'Error connecting to index')
-    })
-  })
-
-  describe('findByUri with filters', () => {
-    let request
-    before(() => {
-      sinon.stub(app.esClient, 'search').callsFake((req) => {
-        request = req
-        return Promise.resolve(fs.readFileSync('./test/fixtures/es-connection-error.json', 'utf8'))
-      })
-    })
-
-    after(() => {
-      app.esClient.search.restore()
-    })
-
-    it('passes filters to esClient', () => {
-      const call = () => app.resources.findByUri({
-        uri: 'b123',
-        item_volume: '1-2',
-        item_date: '3-4',
-        item_format: 'text,microfilm',
-        item_location: 'SASB,LPA',
-        item_status: 'here,there'
-      })
-      call()
-      expect(request.body.query.bool.filter[0].bool.should[0].nested.query.bool.filter)
-        .to.deep.equal(
-        [
-          {
-            'range': {
-              'items.volumeRange': {
-                'gte': 1,
-                'lte': 2
-              }
-            }
-          },
-          {
-            'range': {
-              'items.dateRange': {
-                'gte': 3,
-                'lte': 4
-              }
-            }
-          },
-          {
-            'terms': {
-              'items.formatLiteral': [
-                'text',
-                'microfilm'
-              ]
-            }
-          },
-          {
-            'terms': {
-              'items.holdingLocation.id': [
-                'SASB',
-                'LPA'
-              ]
-            }
-          },
-          {
-            'terms': {
-              'items.status.id': [
-                'here',
-                'there'
-              ]
-            }
-          }
-        ]
-        )
-    })
-  })
-
-  describe('esRangeValue', () => {
-    it('should handle a range with two values', () => {
-      expect(resourcesPrivMethods.esRangeValue([123, 456])).to.deep.equal({
-        gte: 123,
-        lte: 456
-      })
-    })
-
-    it('should handle a range with one value', () => {
-      expect(resourcesPrivMethods.esRangeValue([123])).to.deep.equal({
-        gte: 123,
-        lt: 124
-      })
-    })
-  })
-
-  describe('itemsFilterContext', () => {
-    it('should return an empty object in case of no query', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({})).to.deep.equal({})
-    })
-
-    it('should return an empty object in case there are no filters', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: {} })).to.deep.equal({})
-    })
-
-    it('should return filters for volume in case there is a volume', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { volume: [1, 2] } }))
-       .to.deep.equal({ filter: [{ range: { 'items.volumeRange': { gte: 1, lte: 2 } } }] })
-    })
-
-    it('should return filters for date in case there is a date', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { date: [1, 2] } }))
-        .to.deep.equal({ filter: [{ range: { 'items.dateRange': { gte: 1, lte: 2 } } }] })
-    })
-
-    it('should return filters for format in case there is a format', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { format: ['text', 'microfilm', 'AV'] } }))
-        .to.deep.equal({ filter: [{ terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } }] })
-    })
-
-    it('should return filters for location in case there is a location', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] } }))
-        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
-    })
-
-    it('should return filters for status in case there is a status', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { status: ['Available', 'Unavailable', 'In Process'] } }))
-        .to.deep.equal({ filter: [{ terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }] })
-    })
-
-    it('should combine all filters in case of multiple filters', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({
-        query: {
-          volume: [1, 2],
-          date: [3, 4],
-          format: ['text', 'microfilm', 'AV'],
-          location: ['SASB', 'LPA', 'Schomburg'],
-          status: ['Available', 'Unavailable', 'In Process']
-        }
-      })).to.deep.equal({
-        filter: [
-          { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
-          { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
-          { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
-          { terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } },
-          { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
-        ]
-      })
-    })
-
-    it('should ignore all other parameters', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] }, something: 'else' }))
-        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
-    })
-  })
-
-  describe('itemsQueryContext', () => {
-    it('should match all when merge_checkin_card_items is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
-    })
-
-    it('should ignore check in card items when merge_checkin_card_items is not set', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
-    })
-
-    it('should ignore check in card items when merge_checkin_card_items is not falsey', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } })
-    })
-  })
-
-  describe('addInnerHits', () => {
-    it('should include query for items', () => {
-      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2 }))
-        .to.deep.equal({
-          query: {
-            bool: {
-              filter: [
-                {
-                  bool: {
-                    should: [
-                      {
-                        nested: {
-                          path: 'items',
-                          query: { bool: { must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } } } },
-                          inner_hits: {
-                            sort: [{ 'items.enumerationChronology_sort': 'desc' }],
-                            size: 1,
-                            from: 2
-                          }
-                        }
-                      },
-                      { match_all: { } }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        })
-    })
-
-    it('should include filters for items', () => {
-      expect(resourcesPrivMethods.addInnerHits(
-        { query: { bool: {} } },
-        { size: 1, from: 2, query: { volume: [1, 2], location: ['SASB', 'LPA'], other: 'filter' } }
-      )).to.deep.equal({
-        query: {
-          bool: {
-            filter: [
-              {
-                bool: {
-                  should: [
-                    {
-                      nested: {
-                        path: 'items',
-                        query: {
-                          bool: {
-                            must_not: { term: { 'items.type': 'nypl:CheckinCardItem' } },
-                            filter: [
-                              { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
-                              { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
-                            ]
-                          }
-                        },
-                        inner_hits: {
-                          sort: [{ 'items.enumerationChronology_sort': 'desc' }],
-                          size: 1,
-                          from: 2
-                        }
-                      }
-                    },
-                    { match_all: { } }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      })
     })
   })
 })

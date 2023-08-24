@@ -2,7 +2,6 @@ const request = require('request-promise')
 const assert = require('assert')
 
 const fixtures = require('./fixtures')
-const { expect } = require('chai')
 
 describe('Test Resources responses', function () {
   var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
@@ -61,29 +60,23 @@ describe('Test Resources responses', function () {
 
         assert.equal(doc.createdYear, 1974)
 
-        assert(doc.itemAggregations)
-
         done()
       })
     })
 
     it('Resource data for b21088122-i32086897 are what we expect', function (done) {
-      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b11984689-i29976055`, function (err, response, body) {
+      request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b21088122-i32086897`, function (err, response, body) {
         if (err) throw err
 
         assert.equal(200, response.statusCode)
 
-        const doc = JSON.parse(body)
+        var doc = JSON.parse(body)
 
         expect(doc.items).to.be.a('array')
 
         expect(doc.items.length).to.equal(1)
-        expect(doc.items[0].uri).to.equal('i29976055')
 
-        expect(doc.hasItemVolumes).to.equal(true)
-        expect(doc.hasItemDates).to.equal(true)
-
-        expect(doc.itemAggregations)
+        expect(doc.items[0].uri).to.equal('i32086897')
         done()
       })
     })
@@ -538,7 +531,7 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement[0]).to.be.a('object')
           expect(results.itemListElement[0].result).to.be.a('object')
           expect(results.itemListElement[0].result['@type']).to.include('nypl:Item')
-          expect(results.itemListElement.map((item) => item.result['@id'])).to.include('res:b22144813')
+          expect(results.itemListElement[0].result['@id']).to.equal('res:b22144813')
 
           done()
         })
@@ -546,7 +539,7 @@ describe('Test Resources responses', function () {
     })
 
     ; [
-      'b22144813',
+      'b22193421',
       '"Q-TAG (852 8b q tag.  Staff call in bib.)"', // Should match `identifierV2[@type=bf:ShelfMark].value`
       '"ISSN -- 022"', // Should match `identifierV2[@type=bf:Issn].value`
       '"LCCN -- 010"', // Should match `identifierV2[@type=bf:Lccn].value`
@@ -570,7 +563,7 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement[0]).to.be.a('object')
           expect(results.itemListElement[0].result).to.be.a('object')
           expect(results.itemListElement[0].result['@type']).to.include('nypl:Item')
-          expect(results.itemListElement.map((el) => el.result['@id'])).to.include('res:b22144813')
+          expect(results.itemListElement.some((el) => el.result['@id'] === 'res:b12082323'))
 
           done()
         })

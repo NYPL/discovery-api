@@ -50,26 +50,19 @@ var sampleItems = {
       'urn:bnum:cb1014551',
       'urn:barcode:CU56521537'
     ],
-    'uri': 'ci9876'
+    'uri': 'CU55057721'
   },
   offsiteNyplDeliverableToScholarRooms: {
     'identifier': [
       'urn:bnum:b11995155',
       'urn:barcode:33433011759648'
     ],
-    'holdingLocation': [
-      {
-        'id': 'loc:rcpm2',
-        'label': 'OFFSITE - Request in Advance for use at Performing Arts'
-      }
-    ],
     'uri': 'i10483065'
   },
   fakeNYPLMapDivisionItem: {
     'identifier': [
       'urn:barcode:made-up-barcode-that-recap-says-belongs-to-ND'
-    ],
-    'uri': 'i7654'
+    ]
   }
 }
 
@@ -163,29 +156,6 @@ describe('Delivery-locations-resolver', function () {
         expect(items[0].deliveryLocation).to.not.include(scholarRoom)
       })
     })
-  })
-
-  it('will serve deliveryLocations if item holdingLocation is requestable', function () {
-    // At writing, this sierra location (rcpm2) is marked requestable: true
-    const offsiteItemInNonRequestableLocation = sampleItems.offsiteNypl
-
-    return DeliveryLocationsResolver.resolveDeliveryLocations([offsiteItemInNonRequestableLocation])
-      .then((items) => {
-        expect(items[0].deliveryLocation).to.be.a('array')
-        expect(items[0].deliveryLocation).to.have.lengthOf(1)
-      })
-  })
-
-  it('will hide deliveryLocations if item holdingLocation is not requestable', function () {
-    const offsiteItemInNonRequestableLocation = JSON.parse(JSON.stringify(sampleItems.offsiteNypl))
-    // At writing, this sierra location is marked requestable: false
-    offsiteItemInNonRequestableLocation.holdingLocation[0].id = 'loc:rccd8'
-
-    return DeliveryLocationsResolver.resolveDeliveryLocations([offsiteItemInNonRequestableLocation])
-      .then((items) => {
-        expect(items[0].deliveryLocation).to.be.a('array')
-        expect(items[0].deliveryLocation).to.be.empty
-      })
   })
 
   it('will reveal "Scholar" deliveryLocation for scholars', function () {

@@ -1,0 +1,207 @@
+{
+  "took": 8,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 15.234121,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10022950",
+        "_score": 15.234121,
+        "_source": {
+          "extent": [
+            "224 p. ;"
+          ],
+          "subjectLiteral_exploded": [
+            "Christianity and other religions",
+            "Christianity and other religions -- Judaism"
+          ],
+          "publisherLiteral": [
+            "[D. Kirshenbaum],"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1974
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Religion--love or hate?"
+          ],
+          "shelfMark": [
+            "*PGZ 81-1452"
+          ],
+          "creatorLiteral": [
+            "Kirshenbaum, D. (David), 1902-"
+          ],
+          "createdString": [
+            "1974"
+          ],
+          "dateStartYear": [
+            1974
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*PGZ 81-1452"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10022950"
+            }
+          ],
+          "updatedAt": 1523472855377,
+          "publicationStatement": [
+            "New York : [D. Kirshenbaum], 1974."
+          ],
+          "identifier": [
+            "urn:bnum:10022950"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1974"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Christianity and other religions -- Judaism."
+          ],
+          "titleDisplay": [
+            "Religion--love or hate? / by David Kirshenbaum."
+          ],
+          "uri": "b10022950",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "New York :"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Love or hate."
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433103848853"
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available "
+                    ],
+                    "uri": "i14749981",
+                    "shelfMark": [
+                      "*PGZ 81-1452"
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*PGZ 81-1452"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433103848853"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division - Room 111"
+                    ],
+                    "idBarcode": [
+                      "33433103848853"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available "
+                      }
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:maf92",
+                        "label": "Schwarzman Building M2 - Dorot Jewish Division - Room 111"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

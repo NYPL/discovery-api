@@ -182,7 +182,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks ReCAP items that are in requestable locations and have delivery locations as physRequestable', function () {
+  it('marks ReCAP items that are SCSB Available items as physRequestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -193,30 +193,12 @@ describe('Response with updated availability', function () {
       .then((response) => {
         var items = response.hits.hits[0]._source.items
 
+        // A ReCAP item with SCSB status 'Available' should be
+        // made physRequestable:
         var availableItem = items.find((item) => {
           return item.uri === 'i10283664'
         })
         expect(availableItem.physRequestable).to.equal(true)
-        expect(availableItem.eddRequestable).to.equal(true)
-      })
-  })
-
-  it('marks ReCAP items that are in unrequestable locations as not eddRequestable nor physRequestable', function () {
-    let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
-    availabilityResolver.restClient = new FakeRestClient()
-
-    return availabilityResolver.responseWithUpdatedAvailability()
-      .then((modifedResponse) => {
-        return modifedResponse
-      })
-      .then((response) => {
-        var items = response.hits.hits[0]._source.items
-
-        var availableItem = items.find((item) => {
-          return item.uri === 'i102836649-unrequestable'
-        })
-        expect(availableItem.physRequestable).to.equal(false)
-        expect(availableItem.eddRequestable).to.equal(false)
       })
   })
 
@@ -240,7 +222,7 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks SCSB Not-Available items as requestable', function () {
+  it('marks SCSB Not-Available items as not requestable', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
@@ -254,8 +236,7 @@ describe('Response with updated availability', function () {
         // A ReCAP item with SCSB status 'Not Available' should be made not
         // requestable:
         var notAvailableItem = items.find((item) => item.uri === 'i102836649')
-        expect(notAvailableItem.requestable[0]).to.equal(true)
-        expect(notAvailableItem.status[0].label).to.equal('Not available')
+        expect(notAvailableItem.requestable[0]).to.equal(false)
       })
   })
 
@@ -263,6 +244,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
+    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
@@ -279,6 +261,7 @@ describe('Response with updated availability', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
+    process.env.FEATURES = 'on-site-edd'
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
@@ -291,11 +274,11 @@ describe('Response with updated availability', function () {
       })
   })
 
-  it('marks on-site (loc:scff2) Available items as not requestable if "no-on-site-edd" feature flag is set', function () {
+  it('marks on-site (loc:scff2) Available items as not requestable if "on-site-edd" feature flag missing', function () {
     let availabilityResolver = new AvailabilityResolver(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
     availabilityResolver.restClient = new FakeRestClient()
 
-    process.env.FEATURES = 'no-on-site-edd'
+    process.env.FEATURES = ''
     return availabilityResolver.responseWithUpdatedAvailability()
       .then((modifedResponse) => {
         return modifedResponse
@@ -304,7 +287,7 @@ describe('Response with updated availability', function () {
         var items = response.hits.hits[0]._source.items
 
         var availableItem = items.find((item) => item.uri === 'i10283665')
-        expect(availableItem.eddRequestable).to.equal(false)
+        expect(availableItem.requestable[0]).to.equal(false)
       })
   })
 
@@ -327,13 +310,14 @@ describe('Response with updated availability', function () {
         })
     })
 
-    it('marks CUL item not avilable when SCSB API indicates it is so', function () {
+    it('marks CUL item Not Available when SCSB API indicates it is so', function () {
       return availabilityResolver.responseWithUpdatedAvailability()
         .then((response) => {
           var items = response.hits.hits[0]._source.items
 
-          var notAvailableItem = items.find((item) => item.uri === 'ci14555049999')
-          expect(notAvailableItem.status[0].label).to.equal('Not available')
+          var availableItem = items.find((item) => item.uri === 'ci14555049999')
+          expect(availableItem.requestable[0]).to.equal(false)
+          expect(availableItem.status[0].label).to.equal('Not available')
         })
     })
   })

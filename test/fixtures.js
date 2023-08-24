@@ -17,8 +17,6 @@ function esFixturePath (properties) {
   return `./test/fixtures/query-${md5(qs.stringify(properties.body))}.json`
 }
 
-let missingFixturePaths = 0
-
 /**
  * Emulates app.esClient.search function via local fixtures
  */
@@ -30,7 +28,6 @@ function esClientSearchViaFixtures (properties) {
     fs.readFile(path, 'utf8', (err, content) => {
       if (err) {
         console.error(`Missing fixture (${path}) for `, JSON.stringify(properties, null, 2))
-        missingFixturePaths += 1
         return reject(err)
       }
 
@@ -237,9 +234,6 @@ function disableScsbFixtures () {
   const SCSBRestClient = require('../lib/scsb-recap-client')
 
   SCSBRestClient.prototype.getItemsAvailabilityForBarcodes.restore()
-  if (!process.env.UPDATE_FIXTURES) {
-    SCSBRestClient.prototype.recapCustomerCodeByBarcode.restore()
-  }
 }
 
 let dataApiClient = null
@@ -294,12 +288,8 @@ after(function () {
       })
     // Otherwise, just report on them:
     } else {
-      console.log(`${unused.length} fixture(s) were not used`)
+      console.log(`The following fixtures were not used:\n${unused.map((path) => `\n  ${path}`)}`)
     }
-  }
-
-  if (missingFixturePaths) {
-    console.error(`Missing ${missingFixturePaths} fixture(s). Run the following to build them:\n  UPDATE_FIXTURES=if-missing npm test`)
   }
 })
 
