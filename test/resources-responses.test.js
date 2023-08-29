@@ -137,7 +137,7 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET physRequestable', function () {
-    it('sets physRequestable:true for recap items without recap codes in ES', (done) => {
+    it('sets physRequestable:true for partner recap items without recap codes in ES', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/cb4032259'
       request.get(url, (err, res, body) => {
         if (err) throw err
@@ -146,6 +146,17 @@ describe('Test Resources responses', function () {
         done()
       })
     })
+
+    it('sets physRequestable:true for nypl recap items', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10628074'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.items[0].physRequestable).to.be.true
+        done()
+      })
+    })
+
     it('sets requestable:false for items without barcodes', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b13966759-i16894049'
       request.get(url, (err, res, body) => {

@@ -1,0 +1,325 @@
+{
+  "took": 18,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 15.464135,
+    "hits": [
+      {
+        "_index": "resources-2018-04-09",
+        "_type": "resource",
+        "_id": "b10628074",
+        "_score": 15.464135,
+        "_source": {
+          "extent": [
+            "387 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Diet",
+            "Diet -- Great Britain",
+            "Food consumption",
+            "Food consumption -- Great Britain"
+          ],
+          "publisherLiteral": [
+            "Scolar Press"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            1979
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
+          ],
+          "shelfMark": [
+            "JLD 80-944"
+          ],
+          "creatorLiteral": [
+            "Burnett, John, 1925-"
+          ],
+          "createdString": [
+            "1979"
+          ],
+          "idLccn": [
+            "79322081"
+          ],
+          "dateStartYear": [
+            1979
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JLD 80-944"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10628074"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0859674614 :"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "79322081"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "5330384"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "5330384"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NN804170330"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0633800"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)5330384"
+            }
+          ],
+          "idOclc": [
+            "5330384"
+          ],
+          "updatedAt": 1659164805775,
+          "publicationStatement": [
+            "London : Scolar Press, 1979."
+          ],
+          "identifier": [
+            "urn:bnum:10628074",
+            "urn:isbn:0859674614 :",
+            "urn:lccn:79322081",
+            "urn:oclc:5330384",
+            "urn:undefined:NN804170330",
+            "urn:undefined:(WaOLN)nyp0633800",
+            "urn:undefined:(OCoLC)5330384"
+          ],
+          "idIsbn": [
+            "0859674614 "
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1979"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Diet -- Great Britain.",
+            "Food consumption -- Great Britain."
+          ],
+          "titleDisplay": [
+            "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
+          ],
+          "uri": "b10628074",
+          "lccClassification": [
+            "TX360.G7 B8 1979"
+          ],
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "London"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "idIsbn_clean": [
+            "0859674614"
+          ],
+          "dimensions": [
+            "21 cm."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "i15761885",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "shelfMark": [
+                      "JLD 80-944"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "JLD 80-944",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433080108636"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "JLD 80-944"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433080108636"
+                    ],
+                    "idBarcode": [
+                      "33433080108636"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "shelfMark_sort": "aJLD 80-000944"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "loc:rc2ma||Offsite",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_format": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_status": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 1
+          }
+        ]
+      }
+    }
+  }
+}
