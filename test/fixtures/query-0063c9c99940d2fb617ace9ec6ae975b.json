@@ -1,5 +1,5 @@
 {
-  "took": 13,
+  "took": 18,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,44 +8,35 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 29.305384,
+    "max_score": 15.464135,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b11984689",
-        "_score": 29.305384,
+        "_id": "b10628074",
+        "_score": 15.464135,
         "_source": {
           "extent": [
-            "v. ill."
+            "387 p. ;"
           ],
           "note": [
             {
-              "noteType": "Note",
-              "label": "\"Established 1900.\"",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Numbering",
-              "label": "Most issues lack subtitle.",
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
               "type": "bf:Note"
             }
           ],
           "nyplSource": [
             "sierra-nypl"
           ],
-          "serialPublicationDates": [
-            "v. 42, no. 1-v. 62, no. 7; Jan. 1942-July 1962."
-          ],
           "subjectLiteral_exploded": [
-            "Woodwork",
-            "Woodwork -- Periodicals"
-          ],
-          "numItemDatesParsed": [
-            19
+            "Diet",
+            "Diet -- Great Britain",
+            "Food consumption",
+            "Food consumption -- Great Britain"
           ],
           "publisherLiteral": [
-            "Southam-Maclean Publications [etc.]"
+            "Scolar Press"
           ],
           "language": [
             {
@@ -53,92 +44,86 @@
               "label": "English"
             }
           ],
-          "numItemsTotal": [
-            19
-          ],
           "createdYear": [
-            1942
-          ],
-          "dateEndString": [
-            "1962"
+            1979
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "Canadian woodworker; millwork, furniture, plywood."
+            "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
           ],
           "shelfMark": [
-            "VMA (Canadian woodworker)"
+            "JLD 80-944"
           ],
-          "numItemVolumesParsed": [
-            19
+          "creatorLiteral": [
+            "Burnett, John, 1925-"
           ],
           "createdString": [
-            "1942"
+            "1979"
           ],
           "idLccn": [
-            "cn 76300447"
-          ],
-          "idIssn": [
-            "0316-9669"
-          ],
-          "numElectronicResources": [
-            0
+            "79322081"
           ],
           "dateStartYear": [
-            1942
+            1979
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "VMA (Canadian woodworker)"
+              "value": "JLD 80-944"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "11984689"
+              "value": "10628074"
             },
             {
-              "type": "bf:Issn",
-              "value": "0316-9669"
+              "type": "bf:Isbn",
+              "value": "0859674614 :"
             },
             {
               "type": "bf:Lccn",
-              "value": "cn 76300447"
+              "value": "79322081"
             },
             {
               "type": "nypl:Oclc",
-              "value": "NYPG94-S11794"
+              "value": "5330384"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "5330384"
             },
             {
               "type": "bf:Identifier",
-              "value": "(WaOLN)nyp1974025"
+              "value": "NN804170330"
             },
             {
               "type": "bf:Identifier",
-              "value": "RCON-STC"
+              "value": "(WaOLN)nyp0633800"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)5330384"
             }
           ],
           "idOclc": [
-            "NYPG94-S11794"
+            "5330384"
           ],
-          "dateEndYear": [
-            1962
-          ],
-          "updatedAt": 1675262897750,
+          "updatedAt": 1659164805775,
           "publicationStatement": [
-            "Don Mills, Ont. [etc.] Southam-Maclean Publications [etc.]"
+            "London : Scolar Press, 1979."
           ],
           "identifier": [
-            "urn:bnum:11984689",
-            "urn:issn:0316-9669",
-            "urn:lccn:cn 76300447",
-            "urn:oclc:NYPG94-S11794",
-            "urn:undefined:(WaOLN)nyp1974025",
-            "urn:undefined:RCON-STC"
+            "urn:bnum:10628074",
+            "urn:isbn:0859674614 :",
+            "urn:lccn:79322081",
+            "urn:oclc:5330384",
+            "urn:undefined:NN804170330",
+            "urn:undefined:(WaOLN)nyp0633800",
+            "urn:undefined:(OCoLC)5330384"
           ],
-          "numCheckinCardItems": [
-            0
+          "idIsbn": [
+            "0859674614 "
           ],
           "materialType": [
             {
@@ -153,7 +138,7 @@
             }
           ],
           "dateString": [
-            "1942"
+            "1979"
           ],
           "mediaType": [
             {
@@ -162,49 +147,59 @@
             }
           ],
           "subjectLiteral": [
-            "Woodwork -- Periodicals."
+            "Diet -- Great Britain.",
+            "Food consumption -- Great Britain."
           ],
           "titleDisplay": [
-            "Canadian woodworker; millwork, furniture, plywood."
+            "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
           ],
-          "uri": "b11984689",
+          "uri": "b10628074",
+          "lccClassification": [
+            "TX360.G7 B8 1979"
+          ],
           "numItems": [
-            19
+            1
           ],
           "numAvailable": [
-            19
+            1
           ],
           "placeOfPublication": [
-            "Don Mills, Ont. [etc.]"
-          ],
-          "titleAlt": [
-            "Canadian woodworker (1942)",
-            "Canadian woodworker and furniture manufacturer Jan.-Mar. 1942"
+            "London"
           ],
           "issuance": [
             {
-              "id": "urn:biblevel:s",
-              "label": "serial"
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
             }
           ],
+          "idIsbn_clean": [
+            "0859674614"
+          ],
           "dimensions": [
-            "29 cm."
+            "21 cm."
           ]
         },
         "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
           "items": {
             "hits": {
               "total": 1,
-              "max_score": 14.955997,
+              "max_score": null,
               "hits": [
                 {
                   "_nested": {
                     "field": "items",
                     "offset": 0
                   },
-                  "_score": 14.955997,
+                  "_score": null,
                   "_source": {
-                    "uri": "i29976055",
+                    "uri": "i15761885",
                     "status": [
                       {
                         "id": "status:a",
@@ -225,12 +220,12 @@
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
                       }
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
+                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "holdingLocation": [
                       {
@@ -242,32 +237,29 @@
                       "loc:rc2ma||Offsite"
                     ],
                     "shelfMark": [
-                      "VMA (Canadian woodworker) v. 44 (1944)"
+                      "JLD 80-944"
                     ],
                     "identifierV2": [
                       {
-                        "value": "VMA (Canadian woodworker) v. 44 (1944)",
+                        "value": "JLD 80-944",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433102812199"
+                        "value": "33433080108636"
                       }
                     ],
-                    "enumerationChronology": [
-                      "v. 44 (1944)"
-                    ],
                     "physicalLocation": [
-                      "VMA (Canadian woodworker)"
+                      "JLD 80-944"
                     ],
                     "recapCustomerCode": [
-                      "JS"
+                      "NA"
                     ],
                     "identifier": [
-                      "urn:barcode:33433102812199"
+                      "urn:barcode:33433080108636"
                     ],
                     "idBarcode": [
-                      "33433102812199"
+                      "33433080108636"
                     ],
                     "requestable": [
                       true
@@ -281,29 +273,11 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
-                    "volumeRange": [
-                      {
-                        "gte": 44,
-                        "lte": 44
-                      }
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "1944",
-                        "lte": "1944"
-                      }
-                    ],
-                    "enumerationChronology_sort": [
-                      "        44-1944"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "shelfMark_sort": "aVMA (Canadian woodworker) v. 000044 (1944)"
-                  }
+                    "shelfMark_sort": "aJLD 80-000944"
+                  },
+                  "sort": [
+                    null
+                  ]
                 }
               ]
             }
@@ -314,40 +288,35 @@
   },
   "aggregations": {
     "item_location": {
-      "doc_count": 19,
+      "doc_count": 1,
       "_nested": {
         "doc_count_error_upper_bound": 0,
         "sum_other_doc_count": 0,
         "buckets": [
           {
             "key": "loc:rc2ma||Offsite",
-            "doc_count": 19
+            "doc_count": 1
           }
         ]
       }
     },
     "item_format": {
-      "doc_count": 19,
+      "doc_count": 1,
       "_nested": {
         "doc_count_error_upper_bound": 0,
         "sum_other_doc_count": 0,
-        "buckets": [
-          {
-            "key": "Text",
-            "doc_count": 19
-          }
-        ]
+        "buckets": []
       }
     },
     "item_status": {
-      "doc_count": 19,
+      "doc_count": 1,
       "_nested": {
         "doc_count_error_upper_bound": 0,
         "sum_other_doc_count": 0,
         "buckets": [
           {
             "key": "status:a||Available",
-            "doc_count": 19
+            "doc_count": 1
           }
         ]
       }
