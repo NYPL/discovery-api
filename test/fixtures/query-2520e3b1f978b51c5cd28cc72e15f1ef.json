@@ -1,5 +1,5 @@
 {
-  "took": 476,
+  "took": 35,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,26 +8,35 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 109.62506,
+    "max_score": 15.496055,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b12709113",
-        "_score": 109.62506,
+        "_id": "cb4032259",
+        "_score": 15.496055,
         "_source": {
           "extent": [
-            "iv, 350 p. : ill., port. ;"
+            "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliographical footnotes.",
+              "type": "bf:Note"
+            }
           ],
           "nyplSource": [
-            "sierra-nypl"
+            "recap-cul"
           ],
           "subjectLiteral_exploded": [
-            "Washington County (Neb.)",
-            "Washington County (Neb.) -- History"
+            "Diet",
+            "Diet -- Great Britain",
+            "Food consumption",
+            "Food consumption -- Great Britain"
           ],
           "publisherLiteral": [
-            "Magic city printing co.,"
+            "Nelson,"
           ],
           "language": [
             {
@@ -36,42 +45,58 @@
             }
           ],
           "createdYear": [
-            1937
+            1966
           ],
           "type": [
             "nypl:Item"
           ],
           "title": [
-            "A history of Washington county, Nebraska"
-          ],
-          "shelfMark": [
-            "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+            "Plenty and want ; a social history of diet in England from 1815 to the present day."
           ],
           "creatorLiteral": [
-            "Shrader, Forrest B."
+            "Burnett, John, 1925-2006."
           ],
           "createdString": [
-            "1937"
+            "1966"
+          ],
+          "idLccn": [
+            "   66070181 "
           ],
           "dateStartYear": [
-            1937
+            1966
           ],
           "identifierV2": [
             {
-              "type": "bf:ShelfMark",
-              "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+              "type": "nypl:Bnumber",
+              "value": "4032259"
             },
             {
-              "type": "nypl:Bnumber",
-              "value": "12709113"
+              "type": "bf:Lccn",
+              "value": "   66070181 "
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)ocm01650294"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(NNC)4032259"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "4032259"
             }
           ],
-          "updatedAt": 1636332069027,
+          "updatedAt": 1631229286701,
           "publicationStatement": [
-            "[Omaha, : Magic city printing co., 1937]"
+            "[London] : Nelson, 1966."
           ],
           "identifier": [
-            "urn:bnum:12709113"
+            "urn:bnum:4032259",
+            "urn:lccn:   66070181 ",
+            "urn:undefined:(OCoLC)ocm01650294",
+            "urn:undefined:(NNC)4032259",
+            "urn:undefined:4032259"
           ],
           "materialType": [
             {
@@ -81,26 +106,30 @@
           ],
           "carrierType": [
             {
-              "id": "carriertypes:nc",
+              "id": "carriertypes:undefined",
               "label": "volume"
             }
           ],
           "dateString": [
-            "1937"
+            "1966"
           ],
           "mediaType": [
             {
-              "id": "mediatypes:n",
+              "id": "mediatypes:undefined",
               "label": "unmediated"
             }
           ],
           "subjectLiteral": [
-            "Washington County (Neb.) -- History."
+            "Diet -- Great Britain.",
+            "Food consumption -- Great Britain."
           ],
           "titleDisplay": [
-            "A history of Washington county, Nebraska / by Forrest B. Shrader."
+            "Plenty and want ; a social history of diet in England from 1815 to the present day."
           ],
-          "uri": "b12709113",
+          "uri": "cb4032259",
+          "lccClassification": [
+            "TX360.G7 B8"
+          ],
           "numItems": [
             1
           ],
@@ -108,7 +137,7 @@
             1
           ],
           "placeOfPublication": [
-            "[Omaha, :"
+            "[London] :"
           ],
           "issuance": [
             {
@@ -117,7 +146,7 @@
             }
           ],
           "dimensions": [
-            "24 cm."
+            "23 cm"
           ]
         },
         "inner_hits": {
@@ -140,7 +169,7 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i16202472",
+                    "uri": "ci4087955",
                     "status": [
                       {
                         "id": "status:a",
@@ -150,59 +179,59 @@
                     "status_packed": [
                       "status:a||Available"
                     ],
+                    "owner": [
+                      {
+                        "id": "orgs:0002",
+                        "label": "Columbia University Libraries"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:0002||Columbia University Libraries"
+                    ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:55",
-                        "label": "book, limited circ, MaRLI"
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
                       }
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mag92",
-                        "label": "Schwarzman Building M2 - Milstein Division Room 121"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                      "catalogItemType:1||non-circ"
                     ],
                     "shelfMark": [
-                      "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                      "TX360.G79 B93 1966"
                     ],
                     "identifierV2": [
                       {
-                        "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                        "value": "TX360.G79 B93 1966",
                         "type": "bf:ShelfMark"
                       },
                       {
                         "type": "bf:Barcode",
-                        "value": "33433099509238"
+                        "value": "HS65164695"
                       }
                     ],
                     "physicalLocation": [
-                      "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                      "TX360.G79 B93 1966"
                     ],
                     "identifier": [
-                      "urn:barcode:33433099509238"
+                      "urn:barcode:HS65164695"
                     ],
                     "idBarcode": [
-                      "33433099509238"
+                      "HS65164695"
                     ],
                     "requestable": [
-                      false
+                      true
                     ],
                     "accessMessage": [
                       {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
                       }
                     ],
                     "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                      "accessMessage:2||Request in advance"
                     ],
-                    "shelfMark_sort": "aIWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                    "shelfMark_sort": "aTX360.G79 B93 001966"
                   },
                   "sort": [
                     null
@@ -214,5 +243,36 @@
         }
       }
     ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_format": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_status": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 1
+          }
+        ]
+      }
+    }
   }
 }
