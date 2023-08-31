@@ -1,5 +1,5 @@
 {
-  "took": 6,
+  "took": 19,
   "timed_out": false,
   "_shards": {
     "total": 3,
@@ -8,21 +8,33 @@
   },
   "hits": {
     "total": 1,
-    "max_score": 14.366621,
+    "max_score": 15.492526,
     "hits": [
       {
         "_index": "resources-2018-04-09",
         "_type": "resource",
-        "_id": "b10022734",
-        "_score": 14.366621,
+        "_id": "b13966759",
+        "_score": 15.492526,
         "_source": {
           "extent": [
-            "xiv, 381 p., [16] leaves of plates : ill. ;"
+            "418 p. : ill., facsims., ports. ;"
+          ],
+          "parallelDisplayField": [
+            {
+              "fieldName": "publicationStatement",
+              "index": 0,
+              "value": "‏תל אביב : ועד ארגון יוצאי חורוסטוב בישראל, 8691."
+            },
+            {
+              "fieldName": "placeOfPublication",
+              "index": 0,
+              "value": "‏תל אביב"
+            }
           ],
           "note": [
             {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references and index.",
+              "noteType": "Language",
+              "label": "Hebrew orYiddish.",
               "type": "bf:Note"
             }
           ],
@@ -30,101 +42,120 @@
             "sierra-nypl"
           ],
           "subjectLiteral_exploded": [
-            "African American arts",
-            "African American arts -- New York",
-            "Arts, Modern",
-            "Arts, Modern -- 20th century",
-            "Arts, Modern -- 20th century -- New York",
-            "Harlem Renaissance",
-            "Harlem (New York, N.Y.)"
+            "Jews",
+            "Jews -- Khorostkov",
+            "Jews -- Khorostkov -- History",
+            "Holocaust, Jewish (1939-1945)",
+            "Holocaust, Jewish (1939-1945) -- Khorostkov",
+            "Khorostkov (Ukraine)",
+            "Khorostkov (Ukraine) -- Ethnic relations"
           ],
           "numItemDatesParsed": [
             0
           ],
           "publisherLiteral": [
-            "Knopf : distributed by Random House"
+            "Ṿaʻad irgun yotsʼe Ḥorosṭḳov be-Yiśraʼel"
+          ],
+          "parallelPublisherLiteral": [
+            "‏ועד ארגון יוצאי חורוסטוב בישראל"
           ],
           "language": [
             {
-              "id": "lang:eng",
-              "label": "English"
+              "id": "lang:heb",
+              "label": "Hebrew"
             }
           ],
           "numItemsTotal": [
-            3
+            2
           ],
           "createdYear": [
-            1981
+            1968
           ],
           "type": [
             "nypl:Item"
           ],
+          "parallelTitle": [
+            "‏ספר חורוסטוב = Chrostkow book"
+          ],
           "title": [
-            "When Harlem was in vogue"
+            "Sefer Ḥorosṭḳov = Chorostkow book"
           ],
           "shelfMark": [
-            "IEC 81-1139"
+            "*PXW (Khorostkov) (Sefer Ḥorosṭḳov. 1968)"
           ],
           "numItemVolumesParsed": [
             0
           ],
-          "creatorLiteral": [
-            "Lewis, David Levering, 1936-"
-          ],
           "createdString": [
-            "1981"
+            "1968"
           ],
           "idLccn": [
-            "80002704"
+            "he 68003086"
           ],
           "numElectronicResources": [
-            0
+            2
+          ],
+          "contributorLiteral": [
+            "Sztokfisz, David."
           ],
           "dateStartYear": [
-            1981
+            1968
           ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
-              "value": "IEC 81-1139"
+              "value": "*PXW (Khorostkov) (Sefer Ḥorosṭḳov. 1968)"
             },
             {
               "type": "nypl:Bnumber",
-              "value": "10022734"
-            },
-            {
-              "type": "bf:Isbn",
-              "value": "0394495721 :"
+              "value": "13966759"
             },
             {
               "type": "bf:Lccn",
-              "value": "80002704"
+              "value": "he 68003086"
             },
             {
               "type": "nypl:Oclc",
-              "value": "NYPG25743597-B"
+              "value": "19207169"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "19207169"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPH98-B4722"
             },
             {
               "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0022812"
+              "value": "(WaOLN)nyp0553876"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)19207169"
             }
           ],
           "idOclc": [
-            "NYPG25743597-B"
+            "19207169",
+            "NYPH98-B4722"
           ],
-          "updatedAt": 1680644374508,
+          "updatedAt": 1678659577819,
+          "parallelTitleAlt": [
+            "‏חורוסטקוב; ספר-זכרון"
+          ],
           "publicationStatement": [
-            "New York : Knopf : distributed by Random House, 1981."
+            "Tel Aviv : Ṿaʻad irgun yotsʼe Ḥorosṭḳov be-Yiśraʼel, 1968."
           ],
           "identifier": [
-            "urn:bnum:10022734",
-            "urn:isbn:0394495721 :",
-            "urn:lccn:80002704",
-            "urn:oclc:NYPG25743597-B",
-            "urn:undefined:(WaOLN)nyp0022812"
+            "urn:bnum:13966759",
+            "urn:lccn:he 68003086",
+            "urn:oclc:19207169",
+            "urn:oclc:NYPH98-B4722",
+            "urn:undefined:(WaOLN)nyp0553876",
+            "urn:undefined:(OCoLC)19207169"
           ],
-          "idIsbn": [
-            "0394495721 "
+          "genreForm": [
+            "Memorial books (Holocaust)"
           ],
           "numCheckinCardItems": [
             0
@@ -142,7 +173,7 @@
             }
           ],
           "dateString": [
-            "1981"
+            "1968"
           ],
           "mediaType": [
             {
@@ -151,26 +182,34 @@
             }
           ],
           "subjectLiteral": [
-            "African American arts -- New York.",
-            "Arts, Modern -- 20th century -- New York.",
-            "Harlem Renaissance.",
-            "Harlem (New York, N.Y.)"
+            "Jews -- Khorostkov -- History.",
+            "Holocaust, Jewish (1939-1945) -- Khorostkov.",
+            "Khorostkov (Ukraine) -- Ethnic relations."
           ],
           "titleDisplay": [
-            "When Harlem was in vogue / David Levering Lewis."
+            "Sefer Ḥorosṭḳov = Chorostkow book / ha-ʻorekh, Daṿid Shṭoḳfish."
           ],
-          "uri": "b10022734",
+          "uri": "b13966759",
           "lccClassification": [
-            "NX511.N4 L48 1981"
+            "DS135.R93 K42 1968"
+          ],
+          "parallelContributorLiteral": [
+            "‏שטאקפיש, דוד."
           ],
           "numItems": [
-            3
+            2
           ],
           "numAvailable": [
-            3
+            2
+          ],
+          "parallelTitleDisplay": [
+            "‏ספר חורוסטוב = Chrostkow book / העורך, דוד שטאקפיש."
           ],
           "placeOfPublication": [
-            "New York"
+            "Tel Aviv"
+          ],
+          "titleAlt": [
+            "Horosṭḳov; sefer zikaron"
           ],
           "issuance": [
             {
@@ -178,103 +217,33 @@
               "label": "monograph/item"
             }
           ],
-          "idIsbn_clean": [
-            "0394495721"
-          ],
           "dimensions": [
-            "24 cm."
+            "25 cm."
           ]
         },
         "inner_hits": {
           "electronicResources": {
             "hits": {
-              "total": 0,
-              "max_score": null,
-              "hits": []
-            }
-          },
-          "items": {
-            "hits": {
-              "total": 3,
-              "max_score": null,
+              "total": 1,
+              "max_score": 1,
               "hits": [
                 {
                   "_nested": {
                     "field": "items",
                     "offset": 2
                   },
-                  "_score": null,
+                  "_score": 1,
                   "_source": {
-                    "uri": "i10010904",
-                    "status": [
+                    "uri": "i13966759-e",
+                    "electronicLocator": [
                       {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1114",
-                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:55",
-                        "label": "book, limited circ, MaRLI"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:scff2",
-                        "label": "Schomburg Center - Research & Reference"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:scff2||Schomburg Center - Research & Reference"
-                    ],
-                    "shelfMark": [
-                      "Sc E 96-780"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "Sc E 96-780",
-                        "type": "bf:ShelfMark"
+                        "url": "https://digitalcollections.nypl.org/items/f9706f90-64a7-0133-547d-00505686a51c",
+                        "label": "NYPL Digital Collections"
                       },
                       {
-                        "type": "bf:Barcode",
-                        "value": "33433034124614"
+                        "url": "https://www.yiddishbookcenter.org/collections/yizkor-books/yzk-nybc313724",
+                        "label": "Yiddish Book Center"
                       }
-                    ],
-                    "physicalLocation": [
-                      "Sc E 96-780"
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433034124614"
-                    ],
-                    "idBarcode": [
-                      "33433034124614"
-                    ],
-                    "requestable": [
-                      false
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
                     ],
                     "type": [
                       "bf:Item"
@@ -282,12 +251,17 @@
                     "formatLiteral": [
                       "Text"
                     ],
-                    "shelfMark_sort": "aSc E 96-000780"
-                  },
-                  "sort": [
-                    null
-                  ]
-                },
+                    "shelfMark_sort": "bi13966759-e"
+                  }
+                }
+              ]
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
                 {
                   "_nested": {
                     "field": "items",
@@ -295,7 +269,7 @@
                   },
                   "_score": null,
                   "_source": {
-                    "uri": "i10010903",
+                    "uri": "i16894049",
                     "status": [
                       {
                         "id": "status:a",
@@ -307,142 +281,42 @@
                     ],
                     "owner": [
                       {
-                        "id": "orgs:1114",
-                        "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                        "id": "orgs:1103",
+                        "label": "Dorot Jewish Division"
                       }
                     ],
                     "owner_packed": [
-                      "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                      "orgs:1103||Dorot Jewish Division"
                     ],
                     "catalogItemType": [
                       {
-                        "id": "catalogItemType:2",
-                        "label": "book non-circ"
+                        "id": "catalogItemType:65",
+                        "label": "book, good condition, non-MaRLI"
                       }
                     ],
                     "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
+                      "catalogItemType:65||book, good condition, non-MaRLI"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:scff1",
-                        "label": "Schomburg Center - Research & Reference - Open Shelf"
+                        "id": "loc:maf82",
+                        "label": "Schwarzman Building - Dorot Jewish Division Room 111"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:scff1||Schomburg Center - Research & Reference - Open Shelf"
+                      "loc:maf82||Schwarzman Building - Dorot Jewish Division Room 111"
                     ],
                     "shelfMark": [
-                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+                      "*PXW (Khorostkov) (Sefer Horostkov. 1968)"
                     ],
                     "identifierV2": [
                       {
-                        "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)",
+                        "value": "*PXW (Khorostkov) (Sefer Horostkov. 1968)",
                         "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433015873411"
                       }
                     ],
                     "physicalLocation": [
-                      "Sc *700-L (Lewis, D. When Harlem was in vogue)"
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433015873411"
-                    ],
-                    "idBarcode": [
-                      "33433015873411"
-                    ],
-                    "requestable": [
-                      false
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:-",
-                        "label": "No restrictions"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:-||No restrictions"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "shelfMark_sort": "aSc *700-L (Lewis, D. When Harlem was in vogue)"
-                  },
-                  "sort": [
-                    null
-                  ]
-                },
-                {
-                  "_nested": {
-                    "field": "items",
-                    "offset": 0
-                  },
-                  "_score": null,
-                  "_source": {
-                    "uri": "i10010902",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1105",
-                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:55",
-                        "label": "book, limited circ, MaRLI"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mag82",
-                        "label": "Schwarzman Building - Milstein Division Room 121"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
-                    ],
-                    "shelfMark": [
-                      "IEC 81-1139"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "IEC 81-1139",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433035187214"
-                      }
-                    ],
-                    "physicalLocation": [
-                      "IEC 81-1139"
-                    ],
-                    "identifier": [
-                      "urn:barcode:33433035187214"
-                    ],
-                    "idBarcode": [
-                      "33433035187214"
+                      "*PXW (Khorostkov) (Sefer Horostkov. 1968)"
                     ],
                     "requestable": [
                       false
@@ -462,11 +336,183 @@
                     "formatLiteral": [
                       "Text"
                     ],
-                    "shelfMark_sort": "aIEC 81-001139"
+                    "shelfMark_sort": "a*PXW (Khorostkov) (Sefer Horostkov. 1968)"
                   },
                   "sort": [
                     null
                   ]
+                }
+              ]
+            }
+          },
+          "allItems": {
+            "hits": {
+              "total": 2,
+              "max_score": 1,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": 1,
+                  "_source": {
+                    "uri": "i16894049",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1103",
+                        "label": "Dorot Jewish Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1103||Dorot Jewish Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:65",
+                        "label": "book, good condition, non-MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:65||book, good condition, non-MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:maf82",
+                        "label": "Schwarzman Building - Dorot Jewish Division Room 111"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:maf82||Schwarzman Building - Dorot Jewish Division Room 111"
+                    ],
+                    "shelfMark": [
+                      "*PXW (Khorostkov) (Sefer Horostkov. 1968)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*PXW (Khorostkov) (Sefer Horostkov. 1968)",
+                        "type": "bf:ShelfMark"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "*PXW (Khorostkov) (Sefer Horostkov. 1968)"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "a*PXW (Khorostkov) (Sefer Horostkov. 1968)"
+                  }
+                },
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": 1,
+                  "_source": {
+                    "uri": "i25791623",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1103",
+                        "label": "Dorot Jewish Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1103||Dorot Jewish Division"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:65",
+                        "label": "book, good condition, non-MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:65||book, good condition, non-MaRLI"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:maff3",
+                        "label": "Schwarzman Building - Dorot Jewish Division Desk Room 111"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:maff3||Schwarzman Building - Dorot Jewish Division Desk Room 111"
+                    ],
+                    "shelfMark": [
+                      "*P (Yizkor books. Reprint. Khorostkov)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*P (Yizkor books. Reprint. Khorostkov)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433084745110"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "*P (Yizkor books. Reprint. Khorostkov)"
+                    ],
+                    "identifier": [
+                      "urn:barcode:33433084745110"
+                    ],
+                    "idBarcode": [
+                      "33433084745110"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "a*P (Yizkor books. Reprint. Khorostkov)"
+                  }
                 }
               ]
             }
@@ -483,15 +529,11 @@
         "sum_other_doc_count": 0,
         "buckets": [
           {
-            "key": "loc:mag82||Schwarzman Building - Milstein Division Room 121",
+            "key": "loc:maf82||Schwarzman Building - Dorot Jewish Division Room 111",
             "doc_count": 1
           },
           {
-            "key": "loc:scff1||Schomburg Center - Research & Reference - Open Shelf",
-            "doc_count": 1
-          },
-          {
-            "key": "loc:scff2||Schomburg Center - Research & Reference",
+            "key": "loc:maff3||Schwarzman Building - Dorot Jewish Division Desk Room 111",
             "doc_count": 1
           }
         ]
@@ -518,7 +560,7 @@
         "buckets": [
           {
             "key": "status:a||Available",
-            "doc_count": 3
+            "doc_count": 2
           }
         ]
       }
