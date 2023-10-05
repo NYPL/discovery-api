@@ -33,7 +33,7 @@ describe('JSONLD Serializers', () => {
         numItems: [10]
       }
       const serialized = ResourceSerializer.serialize(esDoc)
-      // When 8 of 10 items have parsed dates, we fail the min 80% thresshold:
+      // When 8 of 10 items have parsed dates, we meet the min 80% thresshold:
       expect(serialized.hasItemDates).to.equal(true)
     })
 
