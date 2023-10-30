@@ -1,0 +1,300 @@
+{
+  "took": 5,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 14.900511,
+    "hits": [
+      {
+        "_index": "resources-2020-05-08",
+        "_type": "resource",
+        "_id": "pb2847934",
+        "_score": 14.900511,
+        "_source": {
+          "extent": [
+            "103 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"First performed at the Royal Court Theatre Upstairs ... on 12th February 1999.\"",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "recap-pul"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Oberon"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "createdYear": [
+            1999
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Toast"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "creatorLiteral": [
+            "Bean, Richard, 1956-"
+          ],
+          "createdString": [
+            "1999"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "dateStartYear": [
+            1999
+          ],
+          "identifierV2": [
+            {
+              "type": "nypl:Bnumber",
+              "value": "2847934"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "1840021047"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "SCSB-964143"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(CStRLIN)GAEGO42263032-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(GEU)(Sirsi)o42263032"
+            }
+          ],
+          "idOclc": [
+            "SCSB-964143"
+          ],
+          "updatedAt": 1691435028691,
+          "publicationStatement": [
+            "London : Oberon, 1999."
+          ],
+          "identifier": [
+            "urn:bnum:2847934",
+            "urn:isbn:1840021047",
+            "urn:oclc:SCSB-964143",
+            "urn:undefined:(CStRLIN)GAEGO42263032-B",
+            "urn:undefined:(GEU)(Sirsi)o42263032"
+          ],
+          "idIsbn": [
+            "1840021047"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1999"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "Toast / by Richard Bean."
+          ],
+          "uri": "pb2847934",
+          "numItems": [
+            1
+          ],
+          "numAvailable": [
+            1
+          ],
+          "placeOfPublication": [
+            "London"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "idIsbn_clean": [
+            "1840021047"
+          ],
+          "dimensions": [
+            "21 cm."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 1,
+              "max_score": null,
+              "hits": [
+                {
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "uri": "pi2440892",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:0003",
+                        "label": "Princeton University Library"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:0003||Princeton University Library"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:1||non-circ"
+                    ],
+                    "shelfMark": [
+                      "PR6052.E176 T627 1999"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "PR6052.E176 T627 1999",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "32101095377683"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "PR6052.E176 T627 1999"
+                    ],
+                    "recapCustomerCode": [
+                      "PA"
+                    ],
+                    "identifier": [
+                      "urn:barcode:32101095377683"
+                    ],
+                    "idBarcode": [
+                      "32101095377683"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "shelfMark_sort": "aPR6052.E176 T627 001999"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_format": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Text",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_status": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 1
+          }
+        ]
+      }
+    }
+  }
+}

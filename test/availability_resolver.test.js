@@ -356,5 +356,22 @@ describe('Response with updated availability', function () {
           ])
         })
     })
+
+    it('incorporates Not Available statuses for partner items that are not available in ReCAP', () => {
+      const availabilityResolver = new AvailabilityResolver(
+        require('./fixtures/es-response-pb2847934.json')
+      )
+
+      const recapBarcodesByStatus = {
+        'Not Available': ['32101095377683']
+      }
+      return availabilityResolver.responseWithUpdatedAvailability({ recapBarcodesByStatus })
+        .then((modifiedResponse) => {
+          const buckets = modifiedResponse.aggregations.item_status._nested.buckets
+          expect(buckets).to.deep.equal([
+            { key: 'status:na||Not available', doc_count: 1 }
+          ])
+        })
+    })
   })
 })
