@@ -3,6 +3,51 @@ const { expect } = require('chai')
 const util = require('../lib/util')
 
 describe('Util', function () {
+  describe('isSchomburg', () => {
+    it('returns false for non schomburg location', () => {
+      const item = {
+        'holdingLocation': [
+          {
+            'id': 'loc:mal'
+          }
+        ]
+      }
+      expect(util.isInSchomburg(item)).to.be.false
+    })
+    it('returns true for schomburg items', () => {
+      const item = {
+        'holdingLocation': [
+          {
+            'id': 'loc:scff3'
+          }
+        ]
+      }
+      expect(util.isInSchomburg(item)).to.be.true
+    })
+  })
+  describe('isSchomburgRequestableItemType', () => {
+    it('returns false for items with incorrect item type', () => {
+      const item = {
+        'catalogItemType': [
+          {
+            'id': 'catalogItemType:2'
+          }
+        ]
+      }
+      expect(util.isSchomburgRequestableItemType(item)).to.be.false
+    })
+    it('returns true for  correct item type', () => {
+      const item = {
+        'catalogItemType': [
+          {
+            'id': 'catalogItemType:26'
+          }
+        ]
+      }
+      expect(util.isSchomburgRequestableItemType(item)).to.be.true
+    })
+  })
+
   describe('backslashes', function () {
     it('escapes specials', function () {
       const result = util.backslashes('?', 2)
@@ -186,14 +231,14 @@ describe('Util', function () {
     it('extracts existant values', () => {
       expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b')).to.deep.equal({ c: 'foo' })
       expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b.c')).to.deep.equal('foo')
-      expect(util.deepValue({ a: { b: [ { b1: 'foo' }, { b2: 'foo2' } ] } }, 'a.b[1].b2')).to.deep.equal('foo2')
+      expect(util.deepValue({ a: { b: [{ b1: 'foo' }, { b2: 'foo2' }] } }, 'a.b[1].b2')).to.deep.equal('foo2')
     })
 
     it('returns null/undefined for nonexistant values', () => {
       expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b.x')).to.deep.equal(null)
       expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'x.y')).to.deep.equal(null)
       expect(util.deepValue({ a: { b: { c: 'foo' } } }, 'a.b.c.d')).to.deep.equal(null)
-      expect(util.deepValue({ a: { b: [ { b1: 'foo' } ] } }, 'a.b[1].b2')).to.deep.equal(null)
+      expect(util.deepValue({ a: { b: [{ b1: 'foo' }] } }, 'a.b[1].b2')).to.deep.equal(null)
     })
 
     it('resorts to default for nonexistant values', () => {
@@ -203,29 +248,29 @@ describe('Util', function () {
 
   describe('itemHasRecapHoldingLocation', () => {
     it('identifies an item with a rc location', () => {
-      expect(util.itemHasRecapHoldingLocation({ holdingLocation: [ { id: 'loc:rc' } ] })).to.equal(true)
-      expect(util.itemHasRecapHoldingLocation({ holdingLocation: [ { id: 'loc:rc2ma' } ] })).to.equal(true)
+      expect(util.itemHasRecapHoldingLocation({ holdingLocation: [{ id: 'loc:rc' }] })).to.equal(true)
+      expect(util.itemHasRecapHoldingLocation({ holdingLocation: [{ id: 'loc:rc2ma' }] })).to.equal(true)
     })
 
     it('rejects an item with a non-rc location', () => {
-      expect(util.itemHasRecapHoldingLocation({ holdingLocation: [ { id: 'loc:xx' } ] })).to.equal(false)
+      expect(util.itemHasRecapHoldingLocation({ holdingLocation: [{ id: 'loc:xx' }] })).to.equal(false)
       expect(util.itemHasRecapHoldingLocation({ holdingLocation: [] })).to.equal(false)
-      expect(util.itemHasRecapHoldingLocation({ })).to.equal(false)
+      expect(util.itemHasRecapHoldingLocation({})).to.equal(false)
     })
   })
 
   describe('barcodeFromItem', () => {
     it('extracts barcode from item', () => {
-      expect(util.barcodeFromItem({ identifier: [ 'urn:barcode:1234' ] })).to.equal('1234')
-      expect(util.barcodeFromItem({ identifier: [ 'urn:another:foo', 'urn:barcode:1234' ] })).to.equal('1234')
-      expect(util.barcodeFromItem({ identifier: [ '', null, 'fladeedle', 'urn:barcode:1234' ] })).to.equal('1234')
+      expect(util.barcodeFromItem({ identifier: ['urn:barcode:1234'] })).to.equal('1234')
+      expect(util.barcodeFromItem({ identifier: ['urn:another:foo', 'urn:barcode:1234'] })).to.equal('1234')
+      expect(util.barcodeFromItem({ identifier: ['', null, 'fladeedle', 'urn:barcode:1234'] })).to.equal('1234')
     })
 
     it('gracefully handles missing identifier prop', () => {
-      expect(util.barcodeFromItem({ })).to.equal(null)
+      expect(util.barcodeFromItem({})).to.equal(null)
       expect(util.barcodeFromItem({ identifier: null })).to.equal(null)
       expect(util.barcodeFromItem({ identifier: [] })).to.equal(null)
-      expect(util.barcodeFromItem({ identifier: [ null ] })).to.equal(null)
+      expect(util.barcodeFromItem({ identifier: [null] })).to.equal(null)
     })
   })
 })
