@@ -25,28 +25,6 @@ describe('Util', function () {
       expect(util.isInSchomburg(item)).to.be.true
     })
   })
-  describe('isSchomburgRequestableItemType', () => {
-    it('returns false for items with incorrect item type', () => {
-      const item = {
-        'catalogItemType': [
-          {
-            'id': 'catalogItemType:2'
-          }
-        ]
-      }
-      expect(util.isSchomburgRequestableItemType(item)).to.be.false
-    })
-    it('returns true for  correct item type', () => {
-      const item = {
-        'catalogItemType': [
-          {
-            'id': 'catalogItemType:26'
-          }
-        ]
-      }
-      expect(util.isSchomburgRequestableItemType(item)).to.be.true
-    })
-  })
 
   describe('backslashes', function () {
     it('escapes specials', function () {

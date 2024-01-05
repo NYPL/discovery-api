@@ -10,7 +10,7 @@ var sampleItems = {
     'uri': 'i12227153',
     'holdingLocation': [
       {
-        'id': 'loc:scff2',
+        'id': 'loc:scff1',
         'label': 'Schomburg Center - Research & Reference'
       }
     ],

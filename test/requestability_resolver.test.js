@@ -3,8 +3,31 @@ const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
 const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
+const { scff3Microfiche, invalidTypeScff3, scff2Microfilm, invalidTypeScff2 } = require('./fixtures/schomburg.js')
 
 describe('RequestabilityResolver', () => {
+  describe('Schomburg requestability', () => {
+    it('returns physRequestable true for scff3 microfiche', () => {
+      const resp = RequestabilityResolver.fixItemRequestability(scff3Microfiche)
+      const item = resp.hits.hits[0]._source.items[0]
+      expect(item.physRequestable).to.be.true
+    })
+    it('returns physRequestable false for invalid item type, scff3', () => {
+      const resp = RequestabilityResolver.fixItemRequestability(invalidTypeScff3)
+      const item = resp.hits.hits[0]._source.items[0]
+      expect(item.physRequestable).to.be.false
+    })
+    it('returns physRequestable true for scff2 microfilm', () => {
+      const resp = RequestabilityResolver.fixItemRequestability(scff2Microfilm)
+      const item = resp.hits.hits[0]._source.items[0]
+      expect(item.physRequestable).to.be.true
+    })
+    it('returns physRequestable false for invalid item type, scff2', () => {
+      const resp = RequestabilityResolver.fixItemRequestability(invalidTypeScff2)
+      const item = resp.hits.hits[0]._source.items[0]
+      expect(item.physRequestable).to.be.false
+    })
+  })
   describe('fixItemRequestability', function () {
     const NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()
     it('sets physRequestable false for items with no barcodes', () => {
