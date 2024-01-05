@@ -284,152 +284,149 @@ describe('Delivery-locations-resolver', function () {
   })
 
   describe('deliveryLocationsByM2CustomerCode', () => {
-    if (process.env.NYPL_CORE_VERSION && parseFloat(process.env.NYPL_CORE_VERSION.slice(1), 10) >= 2.1) {
-      it('returns undefined for unrequestable code', () =>
-        expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('XS')).to.equal(undefined)
-      )
-      it('return delivery location for requestable code', () => {
-        expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
-      })
-    }
+    const unrequestableM2CustomerCode = 'EM'
+    it('returns undefined for unrequestable code', () =>
+      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode(unrequestableM2CustomerCode)).to.equal(undefined)
+    )
+    it('return delivery location for requestable code', () => {
+      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
+    })
   })
 
   describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
     before(takeThisPartyPartiallyOffline)
     const requestableM2Location = 'map92'
     const requestableM1Location = 'map82'
-    const nonrequestableM2Location = 'mab92'
-    if (process.env.NYPL_CORE_VERSION && parseFloat(process.env.NYPL_CORE_VERSION.slice(1), 10) >= 2.1) {
-      console.log('dont forget to activate this ')
-      it('will return delivery locations for an requestable M1 item', function () {
-        const items = [{
-          uri: 'b123',
-          holdingLocation: [{ id: requestableM1Location }]
-        }]
-        return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability(items).then((items) => {
-          expect(items[0].deliveryLocation).to.not.be.empty
+    const nonrequestableM2Location = 'ccj92'
+    const unrequestableM2CustomerCode = 'EM'
+    it('will return delivery locations for an requestable M1 item', function () {
+      const items = [{
+        uri: 'b123',
+        holdingLocation: [{ id: requestableM1Location }]
+      }]
+      return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability(items).then((items) => {
+        expect(items[0].deliveryLocation).to.not.be.empty
+      })
+    })
+    it('returns delivery locations for requestable M2 items', () => {
+      const items = [{
+        uri: 'b123',
+        m2CustomerCode: ['XA'],
+        holdingLocation: [{ id: requestableM2Location }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
+        .then((items) => {
+          expect(items[0].deliveryLocation).to.deep.equal([
+            { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
+            { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
+            { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
+            { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
+            { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' }
+          ])
         })
-      })
-      it('returns delivery locations for requestable M2 items', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['XA'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.deep.equal([
-              { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
-              { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
-              { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
-              { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
-              { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' }
-            ])
-          })
-      })
+    })
 
-      it('returns no delivery locations for nonrequestable M2 holding locations', () => {
-        const items = [{
-          uri: 'b123',
-          // requestable m2 code
-          m2CustomerCode: ['XA'],
-          // non requestable holding location overrides requestable m2 code
-          holdingLocation: [{ id: nonrequestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.be.empty
-          })
-      })
+    it('returns no delivery locations for nonrequestable M2 holding locations', () => {
+      const items = [{
+        uri: 'b123',
+        // requestable m2 code
+        m2CustomerCode: [unrequestableM2CustomerCode],
+        // non requestable holding location overrides requestable m2 code
+        holdingLocation: [{ id: nonrequestableM2Location }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
+        .then((items) => {
+          expect(items[0].deliveryLocation).to.be.empty
+        })
+    })
 
-      it('returns no delivery locations for item with requestable M2 holding locations but no m2 code', () => {
-        const items = [{
-          uri: 'b123',
-          // non requestable holding location overrides requestable m2 code
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.be.empty
-          })
-      })
+    it('returns no delivery locations for item with requestable M2 holding locations but no m2 code', () => {
+      const items = [{
+        uri: 'b123',
+        // non requestable holding location overrides requestable m2 code
+        holdingLocation: [{ id: requestableM2Location }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
+        .then((items) => {
+          expect(items[0].deliveryLocation).to.be.empty
+        })
+    })
 
-      it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['XA'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((items) => {
-            expect(items[0].deliveryLocation).to.deep.include.members([
-              { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
-              { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
-              { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
-              { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
-              { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' },
-              { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room' },
-              { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room' },
-              { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room' },
-              { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center' }
-            ])
-          })
-      })
+    it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
+      const items = [{
+        uri: 'b123',
+        m2CustomerCode: ['XA'],
+        holdingLocation: [{ id: requestableM2Location }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
+        .then((items) => {
+          expect(items[0].deliveryLocation).to.deep.include.members([
+            { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
+            { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
+            { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
+            { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
+            { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' },
+            { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room' },
+            { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room' },
+            { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room' },
+            { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center' }
+          ])
+        })
+    })
 
-      it('returns no delivery locations for non-requestable M2 customer codes', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['XS'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((deliveryLocations) => {
-            expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
-          })
-      })
-      it('returns no delivery locations for non-existant M2 customer codes', () => {
-        const items = [{
-          uri: 'b123',
-          m2CustomerCode: ['xxx'],
-          holdingLocation: [{ id: requestableM2Location }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((deliveryLocations) => {
-            expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
-          })
-      })
-      it('returns no delivery locations for fake holding location', () => {
-        const items = [{
-          uri: 'b123',
-          holdingLocation: [{ id: 'fake' }]
-        }]
-        return DeliveryLocationsResolver
-          .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
-          .then((deliveryLocations) => {
-            expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
-          })
-      })
-      it('returns null for item with recap code with no sierra delivery locations', () => {
-        const item = {
-          holdingLocation: [{ id: 'rc2ma' }],
-          identifier: [
-            'urn:bnum:b11995345',
-            'urn:barcode:recap-code-for-pj'
-          ],
-          uri: 'b11995345'
-        }
-        expect(DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([item])
+    it('returns no delivery locations for non-requestable M2 customer codes', () => {
+      const items = [{
+        uri: 'b123',
+        m2CustomerCode: [unrequestableM2CustomerCode],
+        holdingLocation: [{ id: requestableM2Location }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
+        .then((deliveryLocations) => {
+          expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
+        })
+    })
+    it('returns no delivery locations for non-existant M2 customer codes', () => {
+      const items = [{
+        uri: 'b123',
+        m2CustomerCode: ['xxx'],
+        holdingLocation: [{ id: requestableM2Location }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
+        .then((deliveryLocations) => {
+          expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
+        })
+    })
+    it('returns no delivery locations for fake holding location', () => {
+      const items = [{
+        uri: 'b123',
+        holdingLocation: [{ id: 'fake' }]
+      }]
+      return DeliveryLocationsResolver
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
+        .then((deliveryLocations) => {
+          expect(deliveryLocations[0].deliveryLocation).to.deep.equal([])
+        })
+    })
+    it('returns null for item with recap code with no sierra delivery locations', () => {
+      const item = {
+        holdingLocation: [{ id: 'rc2ma' }],
+        identifier: [
+          'urn:bnum:b11995345',
+          'urn:barcode:recap-code-for-pj'
+        ],
+        uri: 'b11995345'
+      }
+      expect(DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([item])
         .then((items) => {
           expect(items[0].deliveryLocation).to.be.empty
         }))
-      })
-    }
+    })
   })
   describe('requestableBasedOnHoldingLocation', function () {
     // These expectations rely on the requestability of these locations being
