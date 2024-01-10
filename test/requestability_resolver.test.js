@@ -17,10 +17,10 @@ describe('RequestabilityResolver', () => {
       const item = resp.hits.hits[0]._source.items[0]
       expect(item.physRequestable).to.be.false
     })
-    it('returns physRequestable true for scff2 microfilm', () => {
+    it('returns physRequestable false for scff2 microfilm', () => {
       const resp = RequestabilityResolver.fixItemRequestability(scff2Microfilm)
       const item = resp.hits.hits[0]._source.items[0]
-      expect(item.physRequestable).to.be.true
+      expect(item.physRequestable).to.be.false
     })
     it('returns physRequestable false for invalid item type, scff2', () => {
       const resp = RequestabilityResolver.fixItemRequestability(invalidTypeScff2)
