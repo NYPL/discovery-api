@@ -318,11 +318,11 @@ describe('Delivery-locations-resolver', function () {
         .attachDeliveryLocationsAndEddRequestability(items, ['Research'])
         .then((items) => {
           expect(items[0].deliveryLocation).to.deep.equal([
-            { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
-            { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
-            { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
-            { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
-            { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' }
+            { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315', sortPosition: 1 },
+            { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300', sortPosition: 2 },
+            { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111', sortPosition: 2 },
+            { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117', sortPosition: 2 },
+            { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121', sortPosition: 2 }
           ])
         })
     })
@@ -365,15 +365,15 @@ describe('Delivery-locations-resolver', function () {
         .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
         .then((items) => {
           expect(items[0].deliveryLocation).to.deep.include.members([
-            { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300' },
-            { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111' },
-            { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315' },
-            { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117' },
-            { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121' },
-            { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room' },
-            { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room' },
-            { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room' },
-            { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center' }
+            { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room', sortPosition: 0 },
+            { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center', sortPosition: 0 },
+            { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room', sortPosition: 0 },
+            { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room', sortPosition: 0 },
+            { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315', sortPosition: 1 },
+            { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300', sortPosition: 2 },
+            { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111', sortPosition: 2 },
+            { id: 'loc:map', label: 'Schwarzman Building - Map Division Room 117', sortPosition: 2 },
+            { id: 'loc:mag', label: 'Schwarzman Building - Milstein Division Room 121', sortPosition: 2 }
           ])
         })
     })
