@@ -197,11 +197,24 @@ describe('Delivery-locations-resolver', function () {
       })
   })
 
-  it('will reveal "Scholar" deliveryLocation for scholars', function () {
+  it('will reveal "Scholar" deliveryLocation for scholars with specific scholar room', function () {
+    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research', 'Scholar'], { code: 'mal17' }).then((items) => {
+      expect(items[0].deliveryLocation).to.not.be.empty
+
+      // Confirm the non specified scholar rooms are not included:
+      scholarRooms.forEach((scholarRoom) => {
+        if (scholarRoom.id !== 'loc:mal17') {
+          expect(items[0].deliveryLocation.map((location) => location.id)).not.to.include(scholarRoom.id)
+        }
+      })
+    })
+  })
+
+  it('will reveal all "Scholar" deliveryLocations for scholars with no specific scholar room', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research', 'Scholar']).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
 
-      // Confirm the known scholar rooms are not included:
+      // Confirm that all scholar rooms are included:
       scholarRooms.forEach((scholarRoom) => {
         expect(items[0].deliveryLocation.map((location) => location.id)).to.include(scholarRoom.id)
       })
