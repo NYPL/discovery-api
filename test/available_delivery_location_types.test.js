@@ -23,8 +23,12 @@ describe('AvailableDeliveryLocationTypes', function () {
   })
 
   it('maps patron type 78 to [\'Scholar\', \'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('scholar-patron-id').then(({ deliveryLocationTypes }) => {
+    return AvailableDeliveryLocationTypes.getByPatronId('scholar-patron-id').then(({ deliveryLocationTypes, scholarRoom }) => {
       expect(deliveryLocationTypes).to.eql(['Research', 'Scholar'])
+      expect(scholarRoom).to.eql({
+        code: 'mal17',
+        label: 'Schwarzman Building - Scholar Room 217'
+      })
     })
   })
 
