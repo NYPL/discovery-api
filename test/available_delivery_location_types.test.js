@@ -17,19 +17,19 @@ describe('AvailableDeliveryLocationTypes', function () {
   })
 
   it('maps patron type 10 to [\'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('branch-patron-id').then((deliveryLocationTypes) => {
+    return AvailableDeliveryLocationTypes.getByPatronId('branch-patron-id').then(({ deliveryLocationTypes }) => {
       expect(deliveryLocationTypes).to.eql(['Research'])
     })
   })
 
   it('maps patron type 78 to [\'Scholar\', \'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('scholar-patron-id').then((deliveryLocationTypes) => {
-      expect(deliveryLocationTypes).to.eql(['Scholar', 'Research'])
+    return AvailableDeliveryLocationTypes.getByPatronId('scholar-patron-id').then(({ deliveryLocationTypes }) => {
+      expect(deliveryLocationTypes).to.eql(['Research', 'Scholar'])
     })
   })
 
   it('maps an unrecognizable patron type to [\'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('unrecognizable-ptype-patron-id').then((deliveryLocationTypes) => {
+    return AvailableDeliveryLocationTypes.getByPatronId('unrecognizable-ptype-patron-id').then(({ deliveryLocationTypes }) => {
       expect(deliveryLocationTypes).to.eql(['Research'])
     })
   })
