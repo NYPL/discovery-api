@@ -1,6 +1,40 @@
 var DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
 
 var sampleItems = {
+  onsiteOnlySchomburg:
+  {
+    '@id': 'res:i11982421',
+    '@type': [
+      'bf:Item'
+    ],
+    'holdingLocation': [
+      {
+        'id': 'loc:scff3',
+        'prefLabel': 'Schomburg Center - Research & Reference - Desk'
+      }
+    ],
+    'idBarcode': [
+      '33433036951154'
+    ],
+    'identifier': [
+      {
+        '@type': 'bf:ShelfMark',
+        '@value': 'Sc Micro F-1843'
+      },
+      {
+        '@type': 'bf:Barcode',
+        '@value': '33433036951154'
+      }
+    ],
+    'specRequestable': false,
+    'status': [
+      {
+        '@id': 'status:a',
+        'prefLabel': 'Available'
+      }
+    ],
+    'uri': 'i11982421'
+  },
   onsiteNypl: {
     'identifier': [
       'urn:bnum:b11995345',
@@ -115,6 +149,17 @@ function takeThisPartyPartiallyOffline () {
 describe('Delivery-locations-resolver', function () {
   before(takeThisPartyPartiallyOffline)
 
+  it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', function () {
+    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], ['Research', 'Scholar'], { code: 'mala' }).then((items) => {
+      expect(items[0].deliveryLocation).to.not.be.empty
+
+      // Confirm the known scholar rooms are not included:
+      scholarRooms.forEach((scholarRoom) => {
+        expect(items[0].deliveryLocation).to.not.include(scholarRoom)
+      })
+    })
+  })
+
   it('will return empty delivery locations for an unrequestable onsite location code', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
       expect(items[0].deliveryLocation).to.be.empty
@@ -212,13 +257,13 @@ describe('Delivery-locations-resolver', function () {
     })
   })
 
-  it('will reveal all "Scholar" deliveryLocations for scholars with no specific scholar room', function () {
+  it('will hide "Scholar" deliveryLocations for scholars with no specific scholar room', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], ['Research', 'Scholar']).then((items) => {
       expect(items[0].deliveryLocation).to.not.be.empty
 
       // Confirm that all scholar rooms are included:
       scholarRooms.forEach((scholarRoom) => {
-        expect(items[0].deliveryLocation.map((location) => location.id)).to.include(scholarRoom.id)
+        expect(items[0].deliveryLocation.map((location) => location.id)).not.to.include(scholarRoom.id)
       })
     })
   })
@@ -370,20 +415,18 @@ describe('Delivery-locations-resolver', function () {
         })
     })
 
-    it('returns scholar delivery locations for requestable M2 items when Scholar rooms requested', () => {
+    it('returns scholar delivery locations for requestable M2 items when scholar room is provided', () => {
       const items = [{
         uri: 'b123',
         m2CustomerCode: ['XA'],
         holdingLocation: [{ id: requestableM2Location }]
       }]
+      const scholarRoom = { code: 'malc' }
       return DeliveryLocationsResolver
-        .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'])
+        .attachDeliveryLocationsAndEddRequestability(items, ['Research', 'Scholar'], scholarRoom)
         .then((items) => {
           expect(items[0].deliveryLocation).to.deep.include.members([
-            { id: 'loc:mala', label: 'Schwarzman Building - Allen Scholar Room', sortPosition: 0 },
             { id: 'loc:malc', label: 'Schwarzman Building - Cullman Center', sortPosition: 0 },
-            { id: 'loc:maln', label: 'Schwarzman Building - Noma Scholar Room', sortPosition: 0 },
-            { id: 'loc:malw', label: 'Schwarzman Building - Wertheim Scholar Room', sortPosition: 0 },
             { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315', sortPosition: 1 },
             { id: 'loc:mab', label: 'Schwarzman Building - Art & Architecture Room 300', sortPosition: 2 },
             { id: 'loc:maf', label: 'Schwarzman Building - Dorot Jewish Division Room 111', sortPosition: 2 },
