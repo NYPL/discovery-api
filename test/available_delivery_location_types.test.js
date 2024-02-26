@@ -16,21 +16,21 @@ describe('AvailableDeliveryLocationTypes', function () {
     fixtures.disableDataApiFixtures()
   })
 
-  it('maps patron type 10 to [\'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('branch-patron-id').then((deliveryLocationTypes) => {
-      expect(deliveryLocationTypes).to.eql(['Research'])
+  it('returns no scholar room code for ptype 10 (research)', function () {
+    return AvailableDeliveryLocationTypes.getScholarRoomByPatronId('branch-patron-id').then((deliveryLocationTypes) => {
+      expect(deliveryLocationTypes).to.eql(undefined)
     })
   })
 
-  it('maps patron type 78 to [\'Scholar\', \'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('scholar-patron-id').then((deliveryLocationTypes) => {
-      expect(deliveryLocationTypes).to.eql(['Scholar', 'Research'])
+  it('returns scholar room code for ptype 87 (research)', function () {
+    return AvailableDeliveryLocationTypes.getScholarRoomByPatronId('scholar-patron-id').then((deliveryLocationTypes) => {
+      expect(deliveryLocationTypes).to.eql('mala')
     })
   })
 
-  it('maps an unrecognizable patron type to [\'Research\']', function () {
-    return AvailableDeliveryLocationTypes.getByPatronId('unrecognizable-ptype-patron-id').then((deliveryLocationTypes) => {
-      expect(deliveryLocationTypes).to.eql(['Research'])
+  it('returns no scholar room code for unrecognizable ptype', function () {
+    return AvailableDeliveryLocationTypes.getScholarRoomByPatronId('unrecognizable-ptype-patron-id').then((deliveryLocationTypes) => {
+      expect(deliveryLocationTypes).to.eql(undefined)
     })
   })
 })
