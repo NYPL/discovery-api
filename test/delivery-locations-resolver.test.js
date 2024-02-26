@@ -225,8 +225,6 @@ describe('Delivery-locations-resolver', function () {
 
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([offsiteItemInNonRequestableLocation])
       .then((items) => {
-        console.log('spaghetti')
-        console.log(items[0])
         expect(items[0].deliveryLocation).to.be.a('array')
         expect(items[0].deliveryLocation).to.have.lengthOf(1)
       })
