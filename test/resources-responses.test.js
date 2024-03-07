@@ -38,7 +38,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(897)
+        expect(doc.numItemsMatched).to.equal(917)
         done()
       })
     })
@@ -47,7 +47,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(694)
+        expect(doc.numItemsMatched).to.equal(704)
         done()
       })
     })
@@ -56,7 +56,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(563)
+        expect(doc.numItemsMatched).to.equal(572)
         done()
       })
     })
@@ -65,7 +65,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(897) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.equal(917) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })
@@ -74,7 +74,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(9) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.equal(2) // this changed when I rebuild the fixtures with no code changes
         done()
       })
     })
@@ -132,6 +132,38 @@ describe('Test Resources responses', function () {
           expect(doc.numItemsMatched).to.equal(4)
           done()
         })
+      })
+    })
+  })
+
+  describe('GET physRequestable', function () {
+    it('sets physRequestable:true for partner recap items without recap codes in ES', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/cb4032259'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.items[0].physRequestable).to.be.true
+        done()
+      })
+    })
+
+    it('sets physRequestable:true for nypl recap items', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10628074'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.items[0].physRequestable).to.be.true
+        done()
+      })
+    })
+
+    it('sets requestable:false for items without barcodes', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b13966759-i16894049'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.items[0].requestable[0]).to.be.false
+        done()
       })
     })
   })

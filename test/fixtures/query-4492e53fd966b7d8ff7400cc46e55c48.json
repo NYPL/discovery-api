@@ -1,0 +1,208 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": 15.034133,
+    "hits": [
+      {
+        "_index": "resources-2020-05-08",
+        "_type": "resource",
+        "_id": "b10621616",
+        "_score": 15.034133,
+        "_source": {
+          "extent": [
+            "16 p.;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Cover title.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Microfiche.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Puerto Rico",
+            "Puerto Rico -- Politics and government"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "[s. n.]"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            0
+          ],
+          "createdYear": [
+            1909
+          ],
+          "title": [
+            "Porto Rico. The effort of the House of Delegates to revolutionize the government and coerce Congress by refusing to pass appropriation bills and the legislation necessary to maintain government and order in the Island. Speech of Hon. Chauncey M. Depew ... in the Senate of the United States, July 9, 1909."
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [
+            "Sc Micro F-1843"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1909"
+          ],
+          "creatorLiteral": [
+            "Depew, Chauncey M. (Chauncey Mitchell), 1834-1928."
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "dateStartYear": [
+            1909
+          ],
+          "idOclc": [
+            "NYPG804081658-B"
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc Micro F-1843"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10621616"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG804081658-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NN804081658"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0627286"
+            }
+          ],
+          "updatedAt": 1700086883065,
+          "publicationStatement": [
+            "Washington, D. C.; [s. n.] 1909."
+          ],
+          "identifier": [
+            "urn:shelfmark:Sc Micro F-1843",
+            "urn:bnum:10621616",
+            "urn:oclc:NYPG804081658-B",
+            "urn:identifier:NN804081658",
+            "urn:identifier:(WaOLN)nyp0627286"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1909"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Puerto Rico -- Politics and government."
+          ],
+          "titleDisplay": [
+            "Porto Rico. The effort of the House of Delegates to revolutionize the government and coerce Congress by refusing to pass appropriation bills and the legislation necessary to maintain government and order in the Island. Speech of Hon. Chauncey M. Depew ... in the Senate of the United States, July 9, 1909."
+          ],
+          "uri": "b10621616",
+          "placeOfPublication": [
+            "Washington, D. C.;"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "25 cm."
+          ]
+        },
+        "inner_hits": {
+          "electronicResources": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          },
+          "items": {
+            "hits": {
+              "total": 0,
+              "max_score": null,
+              "hits": []
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 0,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_format": {
+      "doc_count": 0,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_status": {
+      "doc_count": 0,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    }
+  }
+}
