@@ -6,23 +6,23 @@ describe('Util', function () {
   describe('isSchomburg', () => {
     it('returns false for non schomburg location', () => {
       const item = {
-        'holdingLocation': [
+        holdingLocation: [
           {
-            'id': 'loc:mal'
+            id: 'loc:mal'
           }
         ]
       }
-      expect(util.isInSchomburg(item)).to.be.false
+      expect(util.isInSchomburg(item)).to.equal(false)
     })
     it('returns true for schomburg items', () => {
       const item = {
-        'holdingLocation': [
+        holdingLocation: [
           {
-            'id': 'loc:scff3'
+            id: 'loc:scff3'
           }
         ]
       }
-      expect(util.isInSchomburg(item)).to.be.true
+      expect(util.isInSchomburg(item)).to.equal(true)
     })
   })
 
@@ -36,16 +36,16 @@ describe('Util', function () {
 
   describe('parseParams', () => {
     it('should parse an int', () => {
-      var incoming = { 'foo': '3' }
-      var spec = { foo: { type: 'int' } }
-      var outgoing = util.parseParams(incoming, spec)
+      const incoming = { foo: '3' }
+      const spec = { foo: { type: 'int' } }
+      const outgoing = util.parseParams(incoming, spec)
 
       expect(outgoing).to.be.an('object')
       expect(outgoing.foo).to.equal(3)
     })
 
     it('should parse a boolean', () => {
-      const incoming = { 'true': 'true', 'false': 'false' }
+      const incoming = { true: 'true', false: 'false' }
       const spec = { true: { type: 'boolean' }, false: { type: 'boolean' } }
       const outgoing = util.parseParams(incoming, spec)
 
@@ -55,9 +55,9 @@ describe('Util', function () {
     })
 
     it('should parse a single value unless multiple allowed', () => {
-      var incoming = { 'notRepeatable': ['first val', 'second val'], 'repeatable': ['1', '3'] }
-      var spec = { notRepeatable: { type: 'string' }, repeatable: { type: 'int', repeatable: true } }
-      var outgoing = util.parseParams(incoming, spec)
+      const incoming = { notRepeatable: ['first val', 'second val'], repeatable: ['1', '3'] }
+      const spec = { notRepeatable: { type: 'string' }, repeatable: { type: 'int', repeatable: true } }
+      const outgoing = util.parseParams(incoming, spec)
 
       expect(outgoing.notRepeatable).to.be.a('string')
       expect(outgoing.notRepeatable).to.equal('second val')
@@ -67,15 +67,15 @@ describe('Util', function () {
     })
 
     it('should parse a hash of filters', () => {
-      var incoming = {
-        'filters': {
-          'subjectLiteral': 'cats',
-          'contributorLiteral': ['Contrib 1', 'Contrib 2'],
-          'date': '2012',
-          'badNumeric': 'blah'
+      const incoming = {
+        filters: {
+          subjectLiteral: 'cats',
+          contributorLiteral: ['Contrib 1', 'Contrib 2'],
+          date: '2012',
+          badNumeric: 'blah'
         }
       }
-      var spec = {
+      const spec = {
         filters: {
           type: 'hash',
           fields: {
@@ -86,7 +86,7 @@ describe('Util', function () {
           }
         }
       }
-      var outgoing = util.parseParams(incoming, spec)
+      const outgoing = util.parseParams(incoming, spec)
 
       expect(outgoing).to.be.an('object')
       expect(outgoing.filters).to.be.a('object')
@@ -101,13 +101,13 @@ describe('Util', function () {
     })
 
     it('should apply defaults', () => {
-      var incoming = {
-        'q': '',
-        'filters': {
-          'badNumeric': 'blah'
+      const incoming = {
+        q: '',
+        filters: {
+          badNumeric: 'blah'
         }
       }
-      var spec = {
+      const spec = {
         q: { type: 'string', default: 'default query' },
         page: { type: 'int', default: 1 },
         filters: {
@@ -117,7 +117,7 @@ describe('Util', function () {
           }
         }
       }
-      var outgoing = util.parseParams(incoming, spec)
+      const outgoing = util.parseParams(incoming, spec)
 
       expect(outgoing).to.be.an('object')
 

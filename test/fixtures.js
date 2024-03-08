@@ -23,7 +23,7 @@ let missingFixturePaths = 0
  * Emulates app.esClient.search function via local fixtures
  */
 function esClientSearchViaFixtures (properties) {
-  let path = esFixturePath(properties)
+  const path = esFixturePath(properties)
   usedFixturePaths[path] = true
 
   if (process.env.DEBUG_FIXTURES) console.log(`Using ES fixture ${path}`)
@@ -50,7 +50,7 @@ function esClientSearchViaFixtures (properties) {
  *   process.env.UPDATE_FIXTURES = 'if-missing'
  */
 function writeEsResponseToFixture (properties, resp) {
-  let path = esFixturePath(properties)
+  const path = esFixturePath(properties)
   return new Promise((resolve, reject) => {
     fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
       if (err) return reject(err)
@@ -66,7 +66,7 @@ function writeEsResponseToFixture (properties, resp) {
  * @returns {Promise} A promise that resolves a boolean: true if fixture exists, false otherwise.
  */
 function esFixtureExists (properties) {
-  let path = esFixturePath(properties)
+  const path = esFixturePath(properties)
   return new Promise((resolve, reject) => {
     fs.access(path, (err, fd) => {
       const exists = !err
@@ -140,7 +140,7 @@ function scsbFixturePath (type, args) {
  * @returns {Promise} A promise that resolves a boolean: true if fixture exists, false otherwise.
  */
 function scsbFixtureExists (type, barcodes) {
-  let path = scsbFixturePath(type, barcodes)
+  const path = scsbFixturePath(type, barcodes)
   return new Promise((resolve, reject) => {
     fs.access(path, (err, fd) => {
       const exists = !err
@@ -155,7 +155,7 @@ const usedFixturePaths = {}
  * Emulates SCSBClient.getItemAvailabilityForBarcodes via local fixtures
  */
 function scsbViaFixtures (type, barcodes) {
-  let path = scsbFixturePath(type, barcodes)
+  const path = scsbFixturePath(type, barcodes)
   usedFixturePaths[path] = true
 
   return new Promise((resolve, reject) => {
@@ -180,7 +180,7 @@ function scsbViaFixtures (type, barcodes) {
  *   process.env.UPDATE_FIXTURES = 'if-missing'
  */
 function writeScsbResponseToFixture (type, properties, resp) {
-  let path = scsbFixturePath(type, properties)
+  const path = scsbFixturePath(type, properties)
   return new Promise((resolve, reject) => {
     fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
       if (err) return reject(err)
@@ -272,7 +272,7 @@ function enableDataApiFixtures (pathToFixtureMap) {
   // Override app's _doAuthenticatedRequest call to return fixtures for specific paths, otherwise fail:
   sinon.stub(dataApiClient, '_doAuthenticatedRequest').callsFake(function (requestOptions) {
     // Get relative api path: (e.g. 'patrons/1234')
-    const requestPath = url.parse(requestOptions.uri).path.replace('/api/v0.1/', '')
+    const requestPath = new url.URL(requestOptions.uri).path.replace('/api/v0.1/', '')
     if (pathToFixtureMap[requestPath]) {
       const content = fs.readFileSync(path.join('./test/fixtures/', pathToFixtureMap[requestPath]), 'utf8')
       return Promise.resolve(JSON.parse(content))

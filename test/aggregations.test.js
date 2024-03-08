@@ -1,5 +1,5 @@
-var request = require('request-promise')
-var assert = require('assert')
+const request = require('request-promise')
+const assert = require('assert')
 
 const fixtures = require('./fixtures')
 
@@ -14,7 +14,7 @@ describe('Aggregations response', function () {
     fixtures.disableEsFixtures()
   })
 
-  var requestPath = '/api/v0.1/discovery/resources/aggregations?q=hamilton&search_scope=all'
+  const requestPath = '/api/v0.1/discovery/resources/aggregations?q=hamilton&search_scope=all'
   // This is a bad test.
   // * It's super dependent on our index at the time of writing.
   // * It talks to the network
@@ -25,8 +25,8 @@ describe('Aggregations response', function () {
     request.get(`${global.TEST_BASE_URL}${requestPath}`, function (err, response, body) {
       if (err) throw err
       assert.equal(200, response.statusCode)
-      var doc = JSON.parse(body)
-      var values = doc.itemListElement[0].values
+      const doc = JSON.parse(body)
+      const values = doc.itemListElement[0].values
       expect(values.length).to.be.above(0)
       expect(values[0].value).to.equal('orgs:1000')
       expect(values[0].label).to.equal('Stephen A. Schwarzman Building')

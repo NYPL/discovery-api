@@ -30,10 +30,10 @@
     "request-promise": "^4.1.1",
     "should": "^7.0.2",
     "sinon": "^4.3.0",
-    "standard": "^6.0.8"
+    "standard": "^17.0.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/standard --env mocha --globals expect && NODE_ENV=test ./node_modules/.bin/mocha test --exit",
+    "test": "./node_modules/.bin/standard --env mocha && NODE_ENV=test ./node_modules/.bin/mocha test --exit",
     "start": "node app.js",
     "deploy-development": "git checkout development && git pull origin development && eb deploy discovery-api-dev --profile nypl-sandbox",
     "deploy-qa": "git checkout qa && git pull origin qa && eb deploy discovery-api-qa --profile nypl-digital-dev",
@@ -48,7 +48,9 @@
   "standard": {
     "globals": [
       "after",
+      "afterEach",
       "before",
+      "beforeEach",
       "describe",
       "expect",
       "it"

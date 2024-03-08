@@ -5,7 +5,7 @@ const fixtures = require('./fixtures')
 const { expect } = require('chai')
 
 describe('Test Resources responses', function () {
-  var sampleResources = [{id: 'b10015541', type: 'nypl:Item'}, {id: 'b10022950', type: 'nypl:Item'}]
+  const sampleResources = [{ id: 'b10015541', type: 'nypl:Item' }, { id: 'b10022950', type: 'nypl:Item' }]
 
   this.timeout(10000)
 
@@ -142,7 +142,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.items[0].physRequestable).to.be.true
+        expect(doc.items[0].physRequestable).to.equal(true)
         done()
       })
     })
@@ -152,7 +152,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.items[0].physRequestable).to.be.true
+        expect(doc.items[0].physRequestable).to.equal(true)
         done()
       })
     })
@@ -162,7 +162,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.items[0].requestable[0]).to.be.false
+        expect(doc.items[0].requestable[0]).to.equal(false)
         done()
       })
     })
@@ -174,7 +174,7 @@ describe('Test Resources responses', function () {
         request.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${spec.id}`, function (err, response, body) {
           if (err) throw err
           assert.equal(200, response.statusCode)
-          var doc = JSON.parse(body)
+          const doc = JSON.parse(body)
           assert(doc['@type'].indexOf(spec.type) >= 0)
           done()
         })
@@ -189,7 +189,7 @@ describe('Test Resources responses', function () {
 
         assert.equal(200, response.statusCode)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         assert(doc.title)
         assert.equal(doc.title[0], 'Religion--love or hate?')
@@ -243,7 +243,7 @@ describe('Test Resources responses', function () {
 
         assert.equal(200, response.statusCode)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         // At writing the fixture has both `identifier` and `identifierV2` fields,
         // so it will choose the latter (which are stored as entities)
@@ -297,7 +297,7 @@ describe('Test Resources responses', function () {
 
         expect(response.statusCode).to.equal(200)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         expect(doc.identifier).to.be.a('array')
 
@@ -327,7 +327,7 @@ describe('Test Resources responses', function () {
 
         assert.equal(200, response.statusCode)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         assert(doc.title)
         assert.equal(doc.title[0], 'When Harlem was in vogue')
@@ -350,7 +350,7 @@ describe('Test Resources responses', function () {
 
         expect(response.statusCode).to.equal(200)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         expect(doc.note).to.be.a('array')
         expect(doc.note).to.have.lengthOf(5)
@@ -372,7 +372,7 @@ describe('Test Resources responses', function () {
 
         assert.equal(200, response.statusCode)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         assert(doc.supplementaryContent)
         assert(doc.supplementaryContent.length > 0)
@@ -391,9 +391,9 @@ describe('Test Resources responses', function () {
 
         assert.equal(200, response.statusCode)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
-        let eItem = doc.items.find((item) => item.electronicLocator)
+        const eItem = doc.items.find((item) => item.electronicLocator)
         assert(eItem.electronicLocator.length > 0)
         assert.equal(eItem.electronicLocator[0]['@type'], 'nypl:ElectronicLocation')
         assert.equal(eItem.electronicLocator[0].url, 'http://hdl.handle.net/2027/nyp.33433057532081')
@@ -409,9 +409,9 @@ describe('Test Resources responses', function () {
 
         assert.equal(200, response.statusCode)
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
-        let eItem = doc.electronicResources
+        const eItem = doc.electronicResources
         expect(eItem).to.deep.equal([
           {
             url: 'http://hdl.handle.net/2027/nyp.33433057532081',
@@ -437,7 +437,7 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET resources search', function () {
-    var searchAllUrl = null
+    let searchAllUrl = null
 
     before(() => {
       searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=`
@@ -453,11 +453,11 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it(`Resource search all (${searchAllUrl}) returns lots o\' results`, function (done) {
+    it(`Resource search all (${searchAllUrl}) returns lots o' results`, function (done) {
       request.get(searchAllUrl, function (err, response, body) {
         if (err) throw err
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         assert(doc.totalResults > 400000)
         assert.equal(50, doc.itemListElement.length)
@@ -469,7 +469,7 @@ describe('Test Resources responses', function () {
     it('Resource search all page 1 has requested page size', function (done) {
       request.get(`${searchAllUrl}&per_page=42`, function (err, response, body) {
         if (err) throw err
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
 
         assert.equal(42, doc.itemListElement.length)
 
@@ -480,13 +480,13 @@ describe('Test Resources responses', function () {
     it('Resource search pagination is consistent', function (done) {
       request.get(`${searchAllUrl}&page=101&per_page=1`, function (err, response, body) {
         if (err) throw err
-        var doc = JSON.parse(body)
-        var item101 = doc.itemListElement[0].result
+        const doc = JSON.parse(body)
+        const item101 = doc.itemListElement[0].result
 
         // Now fetch same item in different way:
         request.get(`${searchAllUrl}&page=2&per_page=100`, function (err, response, body) {
           if (err) throw err
-          var doc = JSON.parse(body)
+          const doc = JSON.parse(body)
           assert.equal(doc.itemListElement[0].result['@id'], item101['@id'])
           done()
         })
@@ -500,14 +500,14 @@ describe('Test Resources responses', function () {
           request.get(`${searchAllUrl}&filters[holdingLocation]=${holdingLocationId}`, function (err, response, body) {
             if (err) throw err
 
-            let doc = JSON.parse(body)
+            const doc = JSON.parse(body)
             // Ensure we received results
             expect(doc.totalResults).to.be.above(1)
 
             // Ensure each result...
             doc.itemListElement.forEach((element) => {
               // .. has some items that ...
-              let itemsWithHoldingLocation = element.result.items.filter((item) => {
+              const itemsWithHoldingLocation = element.result.items.filter((item) => {
                 if (!item.holdingLocation) return false
                 // .. have holding locations that match the filtered location.
                 return item.holdingLocation.filter((loc) => loc['@id'] === holdingLocationId).length > 0
@@ -583,24 +583,24 @@ describe('Test Resources responses', function () {
     })
 
     it('Ensure a chain of added filters reduces resultset correctly', function (done) {
-      var dates = [1984, 1985]
+      const dates = [1984, 1985]
 
-      var nextUrl = searchAllUrl
+      let nextUrl = searchAllUrl
 
       // Fetch all results:
       request.get(nextUrl, function (err, response, body) {
         if (err) throw err
 
-        var doc = JSON.parse(body)
+        const doc = JSON.parse(body)
         // Establish ALL count:
-        var prevTotal = doc.totalResults
+        let prevTotal = doc.totalResults
 
         // Next, add filter on the first date (objects whose start/end date range include 1984)
         nextUrl = `${nextUrl}&filters[dateAfter]=${dates[0]}`
         return request.get(nextUrl, function (err, response, body) {
           if (err) throw err
 
-          var doc = JSON.parse(body)
+          const doc = JSON.parse(body)
 
           // Ensure count decreased:
           expect(doc.totalResults).to.be.below(prevTotal)
@@ -622,7 +622,7 @@ describe('Test Resources responses', function () {
           nextUrl += `&filters[dateBefore]=${dates[1]}`
           return request.get(nextUrl, function (err, response, body) {
             if (err) throw err
-            var doc = JSON.parse(body)
+            const doc = JSON.parse(body)
             // Ensure count decreased:
             expect(doc.totalResults).to.be.below(prevTotal)
 
@@ -646,7 +646,7 @@ describe('Test Resources responses', function () {
             return request.get(nextUrl, function (err, response, body) {
               if (err) throw err
 
-              var doc = JSON.parse(body)
+              const doc = JSON.parse(body)
 
               // Ensure count decreased:
               expect(doc.totalResults).to.be.below(prevTotal)
@@ -684,7 +684,7 @@ describe('Test Resources responses', function () {
   })
 
   describe('search_scope=standard_number', function () {
-    var searchAllUrl = null
+    let searchAllUrl = null
 
     before(() => {
       searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?search_scope=standard_number&q=`
@@ -759,12 +759,12 @@ describe('Test Resources responses', function () {
 
     // Some bnumbers and the item callnumbers that should produce them:
     const bnumStandardNumberMapping = {
-      'b11826883': 'JQL 08-18',
-      'b13627363': 'VPS (Rice, E. Cats, cats, & cats)',
-      'b12423567': 'AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)',
-      'pb1717': 'SF445.5 .C378',
-      'b13565153': 'VQG (Loudon, J. W. Gardening for ladies. 1854)',
-      'b12709113': 'IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)'
+      b11826883: 'JQL 08-18',
+      b13627363: 'VPS (Rice, E. Cats, cats, & cats)',
+      b12423567: 'AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)',
+      pb1717: 'SF445.5 .C378',
+      b13565153: 'VQG (Loudon, J. W. Gardening for ladies. 1854)',
+      b12709113: 'IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)'
     }
 
     Object.keys(bnumStandardNumberMapping).forEach((bnum) => {

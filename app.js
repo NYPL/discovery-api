@@ -56,7 +56,7 @@ const run = async () => {
     res.send(swaggerDocs)
   })
 
-  const port = process.env.PORT || config['port']
+  const port = process.env.PORT || config.port
 
   require('./lib/globals')(app).then((app) => {
     app.listen(port, function () {

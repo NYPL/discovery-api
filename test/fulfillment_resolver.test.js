@@ -75,7 +75,7 @@ describe('FulfillmentResolver', () => {
     const setup = (phys, edd) => {
       physStub = stub(FulfillmentResolver.prototype, '_determinePhysFulfillment').returns(phys)
       eddStub = stub(FulfillmentResolver.prototype, '_determineEddFulfillment').returns(edd)
-      const item = {recapCustomerCode: 'xx'}
+      const item = { recapCustomerCode: 'xx' }
       itemWithFulfillment = new FulfillmentResolver({ hits: { hits: [{ _source: { items: [item] } }] } }).responseWithFulfillment().hits.hits[0]._source.items[0]
     }
     const teardown = () => {
@@ -90,8 +90,8 @@ describe('FulfillmentResolver', () => {
     })
     it('attaches fulfillment values if they are defined', () => {
       setup('phys', 'edd')
-      expect(itemWithFulfillment.physFulfillment).to.deep.equal({'@id': 'phys'})
-      expect(itemWithFulfillment.eddFulfillment).to.deep.equal({'@id': 'edd'})
+      expect(itemWithFulfillment.physFulfillment).to.deep.equal({ '@id': 'phys' })
+      expect(itemWithFulfillment.eddFulfillment).to.deep.equal({ '@id': 'edd' })
       teardown()
     })
   })

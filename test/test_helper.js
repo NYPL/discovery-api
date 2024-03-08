@@ -27,7 +27,7 @@ before(() => {
         const value = productionEnv[key]
         let handleValue = Promise.resolve(value)
         // Decrypt the config that's encrypted:
-        if ([ 'SCSB_URL', 'SCSB_API_KEY', 'NYPL_OAUTH_SECRET' ].includes(key)) {
+        if (['SCSB_URL', 'SCSB_API_KEY', 'NYPL_OAUTH_SECRET'].includes(key)) {
           handleValue = kmsHelper.decrypt(value)
         }
         return handleValue

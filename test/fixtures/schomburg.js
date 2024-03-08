@@ -1,44 +1,44 @@
 module.exports = {
   scff3Microfiche: {
-    'took': 817,
-    'timed_out': false,
-    '_shards': {
-      'total': 3,
-      'successful': 3,
-      'failed': 0
+    took: 817,
+    timed_out: false,
+    _shards: {
+      total: 3,
+      successful: 3,
+      failed: 0
     },
-    'hits': {
-      'total': 18434492,
-      'max_score': null,
-      'hits': [{
-        '_index': 'resources-2020-05-08',
-        '_type': 'resource',
-        '_id': 'b10769327',
-        '_version': 6,
-        'found': true,
-        '_source': {
-          'extent': [
+    hits: {
+      total: 18434492,
+      max_score: null,
+      hits: [{
+        _index: 'resources-2020-05-08',
+        _type: 'resource',
+        _id: 'b10769327',
+        _version: 6,
+        found: true,
+        _source: {
+          extent: [
             'v, 107 leaves.'
           ],
-          'note': [
+          note: [
             {
-              'noteType': 'Thesis',
-              'label': 'Thesis (Ph. D.)--University of California, Berkeley, June 1977.',
-              'type': 'bf:Note'
+              noteType: 'Thesis',
+              label: 'Thesis (Ph. D.)--University of California, Berkeley, June 1977.',
+              type: 'bf:Note'
             },
             {
-              'noteType': 'Bibliography',
-              'label': 'Bibliography: leaves 100-107.',
-              'type': 'bf:Note'
+              noteType: 'Bibliography',
+              label: 'Bibliography: leaves 100-107.',
+              type: 'bf:Note'
             },
             {
-              'noteType': 'Reproduction',
-              'label': 'Microfiche.',
-              'type': 'bf:Note'
+              noteType: 'Reproduction',
+              label: 'Microfiche.',
+              type: 'bf:Note'
             }
           ],
-          'nyplSource': 'sierra-nypl',
-          'subjectLiteral_exploded': [
+          nyplSource: 'sierra-nypl',
+          subjectLiteral_exploded: [
             'African American children',
             'African American children -- Language',
             'African Americans',
@@ -46,193 +46,193 @@ module.exports = {
             'Black English',
             'Reading (Elementary)'
           ],
-          'language': [
+          language: [
             {
-              'id': 'lang:eng',
-              'label': 'English'
+              id: 'lang:eng',
+              label: 'English'
             }
           ],
-          'createdYear': [
+          createdYear: [
             1977
           ],
-          'type': [
+          type: [
             'nypl:Item'
           ],
-          'title': [
+          title: [
             'The effect of Black examiners, who speak Black dialect or standard English, on the test performance of Black second and third grade students administered the survey of primary reading development [microform] / '
           ],
-          'shelfMark': [
+          shelfMark: [
             'Sc Micro F-10210'
           ],
-          'creatorLiteral': [
+          creatorLiteral: [
             'Fisch, Elaine.'
           ],
-          'createdString': [
+          createdString: [
             '1977'
           ],
-          'materialType_packed': [
+          materialType_packed: [
             'resourcetypes:txt||Text'
           ],
-          'language_packed': [
+          language_packed: [
             'lang:eng||English'
           ],
-          'dateStartYear': [
+          dateStartYear: [
             1977
           ],
-          'identifierV2': [
+          identifierV2: [
             {
-              'type': 'bf:ShelfMark',
-              'value': 'Sc Micro F-10210'
+              type: 'bf:ShelfMark',
+              value: 'Sc Micro F-10210'
             },
             {
-              'type': 'nypl:Bnumber',
-              'value': '10769327'
+              type: 'nypl:Bnumber',
+              value: '10769327'
             },
             {
-              'type': 'bf:Identifier',
-              'value': '(WaOLN)nyp0776221'
+              type: 'bf:Identifier',
+              value: '(WaOLN)nyp0776221'
             }
           ],
-          'creator_sort': [
+          creator_sort: [
             'fisch, elaine.'
           ],
-          'carrierType_packed': [
+          carrierType_packed: [
             'carriertypes:nc||volume'
           ],
-          'issuance_packed': [
+          issuance_packed: [
             'urn:biblevel:m||monograph/item'
           ],
-          'holdings': [],
-          'updatedAt': 1619446503123,
-          'mediaType_packed': [
+          holdings: [],
+          updatedAt: 1619446503123,
+          mediaType_packed: [
             'mediatypes:n||unmediated'
           ],
-          'publicationStatement': [
+          publicationStatement: [
             '1977.'
           ],
-          'identifier': [
+          identifier: [
             'urn:bnum:10769327',
             'urn:undefined:(WaOLN)nyp0776221'
           ],
-          'materialType': [
+          materialType: [
             {
-              'id': 'resourcetypes:txt',
-              'label': 'Text'
+              id: 'resourcetypes:txt',
+              label: 'Text'
             }
           ],
-          'carrierType': [
+          carrierType: [
             {
-              'id': 'carriertypes:nc',
-              'label': 'volume'
+              id: 'carriertypes:nc',
+              label: 'volume'
             }
           ],
-          'title_sort': [
+          title_sort: [
             'the effect of black examiners, who speak black dialect or standard english, on t'
           ],
-          'dateString': [
+          dateString: [
             '1977'
           ],
-          'mediaType': [
+          mediaType: [
             {
-              'id': 'mediatypes:n',
-              'label': 'unmediated'
+              id: 'mediatypes:n',
+              label: 'unmediated'
             }
           ],
-          'subjectLiteral': [
+          subjectLiteral: [
             'African American children -- Language.',
             'African Americans -- Study and teaching.',
             'Black English.',
             'Reading (Elementary)'
           ],
-          'titleDisplay': [
+          titleDisplay: [
             'The effect of Black examiners, who speak Black dialect or standard English, on the test performance of Black second and third grade students administered the survey of primary reading development [microform] /  by Elaine Fisch.'
           ],
-          'uri': 'b10769327',
-          'numItems': [
+          uri: 'b10769327',
+          numItems: [
             1
           ],
-          'numAvailable': [
+          numAvailable: [
             1
           ],
-          'uris': [
+          uris: [
             'b10769327',
             'b10769327-i13909591'
           ],
-          'issuance': [
+          issuance: [
             {
-              'id': 'urn:biblevel:m',
-              'label': 'monograph/item'
+              id: 'urn:biblevel:m',
+              label: 'monograph/item'
             }
           ],
-          'items': [
+          items: [
             {
-              'owner': [
+              owner: [
                 {
-                  'id': 'orgs:1114',
-                  'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                  id: 'orgs:1114',
+                  label: 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                 }
               ],
-              'accessMessage_packed': [
+              accessMessage_packed: [
                 'accessMessage:1||Use in library'
               ],
-              'identifier': [
+              identifier: [
                 'urn:barcode:33433058833009'
               ],
-              'shelfMark_sort': 'aSc Micro F-10210 no. 000001-2',
-              'catalogItemType_packed': [
+              shelfMark_sort: 'aSc Micro F-10210 no. 000001-2',
+              catalogItemType_packed: [
                 'catalogItemType:26||microfiche'
               ],
-              'accessMessage': [
+              accessMessage: [
                 {
-                  'id': 'accessMessage:1',
-                  'label': 'Use in library'
+                  id: 'accessMessage:1',
+                  label: 'Use in library'
                 }
               ],
-              'status_packed': [
+              status_packed: [
                 'status:a||Available '
               ],
-              'uri': 'i13909591',
-              'shelfMark': [
+              uri: 'i13909591',
+              shelfMark: [
                 'Sc Micro F-10210 no. 1-2'
               ],
-              'identifierV2': [
+              identifierV2: [
                 {
-                  'type': 'bf:ShelfMark',
-                  'value': 'Sc Micro F-10210 no. 1-2'
+                  type: 'bf:ShelfMark',
+                  value: 'Sc Micro F-10210 no. 1-2'
                 },
                 {
-                  'type': 'bf:Barcode',
-                  'value': '33433058833009'
+                  type: 'bf:Barcode',
+                  value: '33433058833009'
                 }
               ],
-              'holdingLocation_packed': [
+              holdingLocation_packed: [
                 'loc:scff3||Schomburg Center - Research & Reference - Desk'
               ],
-              'idBarcode': [
+              idBarcode: [
                 '33433058833009'
               ],
-              'owner_packed': [
+              owner_packed: [
                 'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
               ],
-              'requestable': [
+              requestable: [
                 false
               ],
-              'catalogItemType': [
+              catalogItemType: [
                 {
-                  'id': 'catalogItemType:26',
-                  'label': 'microfiche'
+                  id: 'catalogItemType:26',
+                  label: 'microfiche'
                 }
               ],
-              'status': [
+              status: [
                 {
-                  'id': 'status:a',
-                  'label': 'Available '
+                  id: 'status:a',
+                  label: 'Available '
                 }
               ],
-              'holdingLocation': [
+              holdingLocation: [
                 {
-                  'id': 'loc:scff3',
-                  'label': 'Schomburg Center - Research & Reference - Desk'
+                  id: 'loc:scff3',
+                  label: 'Schomburg Center - Research & Reference - Desk'
                 }
               ]
             }
@@ -242,237 +242,237 @@ module.exports = {
     }
   },
   invalidTypeScff3: {
-    'took': 817,
-    'timed_out': false,
-    '_shards': {
-      'total': 3,
-      'successful': 3,
-      'failed': 0
+    took: 817,
+    timed_out: false,
+    _shards: {
+      total: 3,
+      successful: 3,
+      failed: 0
     },
-    'hits': {
-      'total': 18434492,
-      'max_score': null,
-      'hits': [
+    hits: {
+      total: 18434492,
+      max_score: null,
+      hits: [
         {
-          '_index': 'resources-2020-05-08',
-          '_type': 'resource',
-          '_id': 'b13643829',
-          '_version': 3,
-          'found': true,
-          '_source': {
-            'extent': [
+          _index: 'resources-2020-05-08',
+          _type: 'resource',
+          _id: 'b13643829',
+          _version: 3,
+          found: true,
+          _source: {
+            extent: [
               '20 p. : ill. ;'
             ],
-            'note': [
+            note: [
               {
-                'noteType': 'Note',
-                'label': 'Cover title.',
-                'type': 'bf:Note'
+                noteType: 'Note',
+                label: 'Cover title.',
+                type: 'bf:Note'
               },
               {
-                'noteType': 'Note',
-                'label': 'At head of title: Dark & Lovely.',
-                'type': 'bf:Note'
+                noteType: 'Note',
+                label: 'At head of title: Dark & Lovely.',
+                type: 'bf:Note'
               }
             ],
-            'nyplSource': 'sierra-nypl',
-            'subjectLiteral_exploded': [
+            nyplSource: 'sierra-nypl',
+            subjectLiteral_exploded: [
               'African American families',
               'Family reunions',
               'Family reunions -- United States',
               'Family reunions -- United States -- Planning',
               'Still family'
             ],
-            'publisherLiteral': [
+            publisherLiteral: [
               's.n.,'
             ],
-            'language': [
+            language: [
               {
-                'id': 'lang:eng',
-                'label': 'English'
+                id: 'lang:eng',
+                label: 'English'
               }
             ],
-            'createdYear': [
+            createdYear: [
               1994
             ],
-            'dateEndString': [
+            dateEndString: [
               '1995'
             ],
-            'type': [
+            type: [
               'nypl:Item'
             ],
-            'title': [
+            title: [
               'Proud heritage guide to planning a successful family reunion'
             ],
-            'shelfMark': [
+            shelfMark: [
               'Sc D 98-2481'
             ],
-            'materialType_packed': [
+            materialType_packed: [
               'resourcetypes:txt||Text'
             ],
-            'createdString': [
+            createdString: [
               '1994'
             ],
-            'language_packed': [
+            language_packed: [
               'lang:eng||English'
             ],
-            'dateStartYear': [
+            dateStartYear: [
               1994
             ],
-            'identifierV2': [
+            identifierV2: [
               {
-                'type': 'bf:ShelfMark',
-                'value': 'Sc D 98-2481'
+                type: 'bf:ShelfMark',
+                value: 'Sc D 98-2481'
               },
               {
-                'type': 'nypl:Bnumber',
-                'value': '13643829'
+                type: 'nypl:Bnumber',
+                value: '13643829'
               }
             ],
-            'carrierType_packed': [
+            carrierType_packed: [
               'carriertypes:nc||volume'
             ],
-            'issuance_packed': [
+            issuance_packed: [
               'urn:biblevel:m||monograph/item'
             ],
-            'dateEndYear': [
+            dateEndYear: [
               1995
             ],
-            'updatedAt': 1524981554942,
-            'mediaType_packed': [
+            updatedAt: 1524981554942,
+            mediaType_packed: [
               'mediatypes:n||unmediated'
             ],
-            'publicationStatement': [
+            publicationStatement: [
               '[S.l. : s.n., 1994 or 1995]'
             ],
-            'identifier': [
+            identifier: [
               'urn:bnum:13643829'
             ],
-            'materialType': [
+            materialType: [
               {
-                'id': 'resourcetypes:txt',
-                'label': 'Text'
+                id: 'resourcetypes:txt',
+                label: 'Text'
               }
             ],
-            'carrierType': [
+            carrierType: [
               {
-                'id': 'carriertypes:nc',
-                'label': 'volume'
+                id: 'carriertypes:nc',
+                label: 'volume'
               }
             ],
-            'dateString': [
+            dateString: [
               '1994'
             ],
-            'title_sort': [
+            title_sort: [
               'proud heritage guide to planning a successful family reunion'
             ],
-            'mediaType': [
+            mediaType: [
               {
-                'id': 'mediatypes:n',
-                'label': 'unmediated'
+                id: 'mediatypes:n',
+                label: 'unmediated'
               }
             ],
-            'subjectLiteral': [
+            subjectLiteral: [
               'African American families.',
               'Family reunions -- United States -- Planning.',
               'Still family.'
             ],
-            'titleDisplay': [
+            titleDisplay: [
               'Proud heritage guide to planning a successful family reunion / compliments of the Still family.'
             ],
-            'uri': 'b13643829',
-            'numItems': [
+            uri: 'b13643829',
+            numItems: [
               1
             ],
-            'numAvailable': [
+            numAvailable: [
               1
             ],
-            'uris': [
+            uris: [
               'b13643829',
               'b13643829-i11305566'
             ],
-            'placeOfPublication': [
+            placeOfPublication: [
               '[S.l. :'
             ],
-            'issuance': [
+            issuance: [
               {
-                'id': 'urn:biblevel:m',
-                'label': 'monograph/item'
+                id: 'urn:biblevel:m',
+                label: 'monograph/item'
               }
             ],
-            'items': [
+            items: [
               {
-                'accessMessage_packed': [
+                accessMessage_packed: [
                   'accessMessage:1||Use in library'
                 ],
-                'owner': [
+                owner: [
                   {
-                    'id': 'orgs:1114',
-                    'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                    id: 'orgs:1114',
+                    label: 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                   }
                 ],
-                'identifier': [
+                identifier: [
                   'urn:barcode:33433015885043'
                 ],
-                'catalogItemType_packed': [
+                catalogItemType_packed: [
                   'catalogItemType:2||book non-circ'
                 ],
-                'accessMessage': [
+                accessMessage: [
                   {
-                    'id': 'accessMessage:1',
-                    'label': 'Use in library'
+                    id: 'accessMessage:1',
+                    label: 'Use in library'
                   }
                 ],
-                'status_packed': [
+                status_packed: [
                   'status:a||Available '
                 ],
-                'uri': 'i11305566',
-                'shelfMark': [
+                uri: 'i11305566',
+                shelfMark: [
                   'Sc D 98-2481'
                 ],
-                'identifierV2': [
+                identifierV2: [
                   {
-                    'type': 'bf:ShelfMark',
-                    'value': 'Sc D 98-2481'
+                    type: 'bf:ShelfMark',
+                    value: 'Sc D 98-2481'
                   },
                   {
-                    'type': 'bf:Barcode',
-                    'value': '33433015885043'
+                    type: 'bf:Barcode',
+                    value: '33433015885043'
                   }
                 ],
-                'holdingLocation_packed': [
+                holdingLocation_packed: [
                   'loc:scff3||Schomburg Center - Research & Reference - Desk'
                 ],
-                'idBarcode': [
+                idBarcode: [
                   '33433015885043'
                 ],
-                'owner_packed': [
+                owner_packed: [
                   'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                 ],
-                'requestable': [
+                requestable: [
                   false
                 ],
-                'catalogItemType': [
+                catalogItemType: [
                   {
-                    'id': 'catalogItemType:2',
-                    'label': 'book non-circ'
+                    id: 'catalogItemType:2',
+                    label: 'book non-circ'
                   }
                 ],
-                'status': [
+                status: [
                   {
-                    'id': 'status:a',
-                    'label': 'Available '
+                    id: 'status:a',
+                    label: 'Available '
                   }
                 ],
-                'holdingLocation': [
+                holdingLocation: [
                   {
-                    'id': 'loc:scff3',
-                    'label': 'Schomburg Center - Research & Reference - Desk'
+                    id: 'loc:scff3',
+                    label: 'Schomburg Center - Research & Reference - Desk'
                   }
                 ]
               }
             ],
-            'dimensions': [
+            dimensions: [
               '22 cm.'
             ]
           }
@@ -480,308 +480,308 @@ module.exports = {
     }
   },
   scff2Microfilm: {
-    'took': 817,
-    'timed_out': false,
-    '_shards': {
-      'total': 3,
-      'successful': 3,
-      'failed': 0
+    took: 817,
+    timed_out: false,
+    _shards: {
+      total: 3,
+      successful: 3,
+      failed: 0
     },
-    'hits': {
-      'total': 18434492,
-      'max_score': null,
-      'hits': [{
-        '_index': 'resources-2020-05-08',
-        '_type': 'resource',
-        '_id': 'b10224367',
-        '_version': 6,
-        'found': true,
-        '_source': {
-          'extent': [
+    hits: {
+      total: 18434492,
+      max_score: null,
+      hits: [{
+        _index: 'resources-2020-05-08',
+        _type: 'resource',
+        _id: 'b10224367',
+        _version: 6,
+        found: true,
+        _source: {
+          extent: [
             '223 p.'
           ],
-          'note': [
+          note: [
             {
-              'noteType': 'Reproduction',
-              'label': 'Microfilm.',
-              'type': 'bf:Note'
+              noteType: 'Reproduction',
+              label: 'Microfilm.',
+              type: 'bf:Note'
             }
           ],
-          'nyplSource': 'sierra-nypl',
-          'subjectLiteral_exploded': [
+          nyplSource: 'sierra-nypl',
+          subjectLiteral_exploded: [
             'Helper, Hinton Rowan, 1829-1909',
             'Slavery',
             'Slavery -- United States',
             'Slavery -- United States -- Controversial literature',
             'Slavery -- United States -- Controversial literature -- 1860-'
           ],
-          'publisherLiteral': [
+          publisherLiteral: [
             'J. T. Lloyd,'
           ],
-          'language': [
+          language: [
             {
-              'id': 'lang:eng',
-              'label': 'English'
+              id: 'lang:eng',
+              label: 'English'
             }
           ],
-          'createdYear': [
+          createdYear: [
             1860
           ],
-          'type': [
+          type: [
             'nypl:Item'
           ],
-          'title': [
+          title: [
             "Helper's Impending crisis dissected[microform]"
           ],
-          'shelfMark': [
+          shelfMark: [
             'Sc Micro R-864 [pt. G]'
           ],
-          'creatorLiteral': [
+          creatorLiteral: [
             'Wolfe, Samuel M.'
           ],
-          'createdString': [
+          createdString: [
             '1860'
           ],
-          'materialType_packed': [
+          materialType_packed: [
             'resourcetypes:txt||Text'
           ],
-          'idLccn': [
+          idLccn: [
             '11017853'
           ],
-          'language_packed': [
+          language_packed: [
             'lang:eng||English'
           ],
-          'dateStartYear': [
+          dateStartYear: [
             1860
           ],
-          'identifierV2': [
+          identifierV2: [
             {
-              'type': 'bf:ShelfMark',
-              'value': 'Sc Micro R-864 [pt. G]'
+              type: 'bf:ShelfMark',
+              value: 'Sc Micro R-864 [pt. G]'
             },
             {
-              'type': 'nypl:Bnumber',
-              'value': '10224367'
+              type: 'nypl:Bnumber',
+              value: '10224367'
             },
             {
-              'type': 'bf:Lccn',
-              'value': '11017853'
+              type: 'bf:Lccn',
+              value: '11017853'
             },
             {
-              'type': 'bf:Identifier',
-              'value': 'NN754080857'
+              type: 'bf:Identifier',
+              value: 'NN754080857'
             },
             {
-              'type': 'bf:Identifier',
-              'value': '(WaOLN)nyp0226236'
+              type: 'bf:Identifier',
+              value: '(WaOLN)nyp0226236'
             }
           ],
-          'creator_sort': [
+          creator_sort: [
             'wolfe, samuel m.'
           ],
-          'carrierType_packed': [
+          carrierType_packed: [
             'carriertypes:nc||volume'
           ],
-          'issuance_packed': [
+          issuance_packed: [
             'urn:biblevel:m||monograph/item'
           ],
-          'holdings': [],
-          'updatedAt': 1619445163123,
-          'mediaType_packed': [
+          holdings: [],
+          updatedAt: 1619445163123,
+          mediaType_packed: [
             'mediatypes:n||unmediated'
           ],
-          'publicationStatement': [
+          publicationStatement: [
             'Philadelphia: J. T. Lloyd, 1860.'
           ],
-          'identifier': [
+          identifier: [
             'urn:bnum:10224367',
             'urn:lccn:11017853',
             'urn:undefined:NN754080857',
             'urn:undefined:(WaOLN)nyp0226236'
           ],
-          'materialType': [
+          materialType: [
             {
-              'id': 'resourcetypes:txt',
-              'label': 'Text'
+              id: 'resourcetypes:txt',
+              label: 'Text'
             }
           ],
-          'carrierType': [
+          carrierType: [
             {
-              'id': 'carriertypes:nc',
-              'label': 'volume'
+              id: 'carriertypes:nc',
+              label: 'volume'
             }
           ],
-          'title_sort': [
+          title_sort: [
             "helper's impending crisis dissected[microform]"
           ],
-          'dateString': [
+          dateString: [
             '1860'
           ],
-          'mediaType': [
+          mediaType: [
             {
-              'id': 'mediatypes:n',
-              'label': 'unmediated'
+              id: 'mediatypes:n',
+              label: 'unmediated'
             }
           ],
-          'subjectLiteral': [
+          subjectLiteral: [
             'Helper, Hinton Rowan, 1829-1909.',
             'Slavery -- United States -- Controversial literature -- 1860-'
           ],
-          'titleDisplay': [
+          titleDisplay: [
             "Helper's Impending crisis dissected[microform] / by Samuel M.Wolfe, Virginia."
           ],
-          'uri': 'b10224367',
-          'numItems': [
+          uri: 'b10224367',
+          numItems: [
             2
           ],
-          'numAvailable': [
+          numAvailable: [
             2
           ],
-          'uris': [
+          uris: [
             'b10224367',
             'b10224367-i24028840',
             'b10224367-i30547944',
             'b10224367-i10053088'
           ],
-          'placeOfPublication': [
+          placeOfPublication: [
             'Philadelphia:'
           ],
-          'issuance': [
+          issuance: [
             {
-              'id': 'urn:biblevel:m',
-              'label': 'monograph/item'
+              id: 'urn:biblevel:m',
+              label: 'monograph/item'
             }
           ],
-          'items': [
+          items: [
             {
-              'owner': [
+              owner: [
                 {
-                  'id': 'orgs:1114',
-                  'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                  id: 'orgs:1114',
+                  label: 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                 }
               ],
-              'accessMessage_packed': [
+              accessMessage_packed: [
                 'accessMessage:1||Use in library'
               ],
-              'identifier': [
+              identifier: [
                 'urn:barcode:33433016495024'
               ],
-              'shelfMark_sort': 'aSc Micro R-000864',
-              'catalogItemType_packed': [
+              shelfMark_sort: 'aSc Micro R-000864',
+              catalogItemType_packed: [
                 'catalogItemType:6||microfilm service copy'
               ],
-              'accessMessage': [
+              accessMessage: [
                 {
-                  'id': 'accessMessage:1',
-                  'label': 'Use in library'
+                  id: 'accessMessage:1',
+                  label: 'Use in library'
                 }
               ],
-              'status_packed': [
+              status_packed: [
                 'status:a||Available '
               ],
-              'uri': 'i24028840',
-              'shelfMark': [
+              uri: 'i24028840',
+              shelfMark: [
                 'Sc Micro R-864'
               ],
-              'identifierV2': [
+              identifierV2: [
                 {
-                  'type': 'bf:ShelfMark',
-                  'value': 'Sc Micro R-864'
+                  type: 'bf:ShelfMark',
+                  value: 'Sc Micro R-864'
                 },
                 {
-                  'type': 'bf:Barcode',
-                  'value': '33433016495024'
+                  type: 'bf:Barcode',
+                  value: '33433016495024'
                 }
               ],
-              'holdingLocation_packed': [
+              holdingLocation_packed: [
                 'loc:scff2||Schomburg Center - Research & Reference'
               ],
-              'idBarcode': [
+              idBarcode: [
                 '33433016495024'
               ],
-              'owner_packed': [
+              owner_packed: [
                 'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
               ],
-              'requestable': [
+              requestable: [
                 false
               ],
-              'catalogItemType': [
+              catalogItemType: [
                 {
-                  'id': 'catalogItemType:6',
-                  'label': 'microfilm service copy'
+                  id: 'catalogItemType:6',
+                  label: 'microfilm service copy'
                 }
               ],
-              'status': [
+              status: [
                 {
-                  'id': 'status:a',
-                  'label': 'Available '
+                  id: 'status:a',
+                  label: 'Available '
                 }
               ],
-              'holdingLocation': [
+              holdingLocation: [
                 {
-                  'id': 'loc:scff2',
-                  'label': 'Schomburg Center - Research & Reference'
+                  id: 'loc:scff2',
+                  label: 'Schomburg Center - Research & Reference'
                 }
               ]
             },
             {
-              'owner': [
+              owner: [
                 {
-                  'id': 'orgs:1114',
-                  'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                  id: 'orgs:1114',
+                  label: 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                 }
               ],
-              'accessMessage_packed': [
+              accessMessage_packed: [
                 'accessMessage:1||Use in library'
               ],
-              'shelfMark_sort': 'aSc Micro R-864 [pt. G]',
-              'catalogItemType_packed': [
+              shelfMark_sort: 'aSc Micro R-864 [pt. G]',
+              catalogItemType_packed: [
                 'catalogItemType:6||microfilm service copy'
               ],
-              'accessMessage': [
+              accessMessage: [
                 {
-                  'id': 'accessMessage:1',
-                  'label': 'Use in library'
+                  id: 'accessMessage:1',
+                  label: 'Use in library'
                 }
               ],
-              'status_packed': [
+              status_packed: [
                 'status:a||Available'
               ],
-              'uri': 'i10053088',
-              'shelfMark': [
+              uri: 'i10053088',
+              shelfMark: [
                 'Sc Micro R-864 [pt. G]'
               ],
-              'identifierV2': [
+              identifierV2: [
                 {
-                  'type': 'bf:ShelfMark',
-                  'value': 'Sc Micro R-864 [pt. G]'
+                  type: 'bf:ShelfMark',
+                  value: 'Sc Micro R-864 [pt. G]'
                 }
               ],
-              'holdingLocation_packed': [
+              holdingLocation_packed: [
                 'loc:scff2||Schomburg Center - Research & Reference'
               ],
-              'owner_packed': [
+              owner_packed: [
                 'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
               ],
-              'requestable': [
+              requestable: [
                 false
               ],
-              'catalogItemType': [
+              catalogItemType: [
                 {
-                  'id': 'catalogItemType:6',
-                  'label': 'microfilm service copy'
+                  id: 'catalogItemType:6',
+                  label: 'microfilm service copy'
                 }
               ],
-              'status': [
+              status: [
                 {
-                  'id': 'status:a',
-                  'label': 'Available'
+                  id: 'status:a',
+                  label: 'Available'
                 }
               ],
-              'holdingLocation': [
+              holdingLocation: [
                 {
-                  'id': 'loc:scff2',
-                  'label': 'Schomburg Center - Research & Reference'
+                  id: 'loc:scff2',
+                  label: 'Schomburg Center - Research & Reference'
                 }
               ]
             }
@@ -791,308 +791,308 @@ module.exports = {
     }
   },
   invalidTypeScff2: {
-    'took': 817,
-    'timed_out': false,
-    '_shards': {
-      'total': 3,
-      'successful': 3,
-      'failed': 0
+    took: 817,
+    timed_out: false,
+    _shards: {
+      total: 3,
+      successful: 3,
+      failed: 0
     },
-    'hits': {
-      'total': 18434492,
-      'max_score': null,
-      'hits': [{
-        '_index': 'resources-2020-05-08',
-        '_type': 'resource',
-        '_id': 'b10224367',
-        '_version': 6,
-        'found': true,
-        '_source': {
-          'extent': [
+    hits: {
+      total: 18434492,
+      max_score: null,
+      hits: [{
+        _index: 'resources-2020-05-08',
+        _type: 'resource',
+        _id: 'b10224367',
+        _version: 6,
+        found: true,
+        _source: {
+          extent: [
             '223 p.'
           ],
-          'note': [
+          note: [
             {
-              'noteType': 'Reproduction',
-              'label': 'Microfilm.',
-              'type': 'bf:Note'
+              noteType: 'Reproduction',
+              label: 'Microfilm.',
+              type: 'bf:Note'
             }
           ],
-          'nyplSource': 'sierra-nypl',
-          'subjectLiteral_exploded': [
+          nyplSource: 'sierra-nypl',
+          subjectLiteral_exploded: [
             'Helper, Hinton Rowan, 1829-1909',
             'Slavery',
             'Slavery -- United States',
             'Slavery -- United States -- Controversial literature',
             'Slavery -- United States -- Controversial literature -- 1860-'
           ],
-          'publisherLiteral': [
+          publisherLiteral: [
             'J. T. Lloyd,'
           ],
-          'language': [
+          language: [
             {
-              'id': 'lang:eng',
-              'label': 'English'
+              id: 'lang:eng',
+              label: 'English'
             }
           ],
-          'createdYear': [
+          createdYear: [
             1860
           ],
-          'type': [
+          type: [
             'nypl:Item'
           ],
-          'title': [
+          title: [
             "Helper's Impending crisis dissected[microform]"
           ],
-          'shelfMark': [
+          shelfMark: [
             'Sc Micro R-864 [pt. G]'
           ],
-          'creatorLiteral': [
+          creatorLiteral: [
             'Wolfe, Samuel M.'
           ],
-          'createdString': [
+          createdString: [
             '1860'
           ],
-          'materialType_packed': [
+          materialType_packed: [
             'resourcetypes:txt||Text'
           ],
-          'idLccn': [
+          idLccn: [
             '11017853'
           ],
-          'language_packed': [
+          language_packed: [
             'lang:eng||English'
           ],
-          'dateStartYear': [
+          dateStartYear: [
             1860
           ],
-          'identifierV2': [
+          identifierV2: [
             {
-              'type': 'bf:ShelfMark',
-              'value': 'Sc Micro R-864 [pt. G]'
+              type: 'bf:ShelfMark',
+              value: 'Sc Micro R-864 [pt. G]'
             },
             {
-              'type': 'nypl:Bnumber',
-              'value': '10224367'
+              type: 'nypl:Bnumber',
+              value: '10224367'
             },
             {
-              'type': 'bf:Lccn',
-              'value': '11017853'
+              type: 'bf:Lccn',
+              value: '11017853'
             },
             {
-              'type': 'bf:Identifier',
-              'value': 'NN754080857'
+              type: 'bf:Identifier',
+              value: 'NN754080857'
             },
             {
-              'type': 'bf:Identifier',
-              'value': '(WaOLN)nyp0226236'
+              type: 'bf:Identifier',
+              value: '(WaOLN)nyp0226236'
             }
           ],
-          'creator_sort': [
+          creator_sort: [
             'wolfe, samuel m.'
           ],
-          'carrierType_packed': [
+          carrierType_packed: [
             'carriertypes:nc||volume'
           ],
-          'issuance_packed': [
+          issuance_packed: [
             'urn:biblevel:m||monograph/item'
           ],
-          'holdings': [],
-          'updatedAt': 1619445163123,
-          'mediaType_packed': [
+          holdings: [],
+          updatedAt: 1619445163123,
+          mediaType_packed: [
             'mediatypes:n||unmediated'
           ],
-          'publicationStatement': [
+          publicationStatement: [
             'Philadelphia: J. T. Lloyd, 1860.'
           ],
-          'identifier': [
+          identifier: [
             'urn:bnum:10224367',
             'urn:lccn:11017853',
             'urn:undefined:NN754080857',
             'urn:undefined:(WaOLN)nyp0226236'
           ],
-          'materialType': [
+          materialType: [
             {
-              'id': 'resourcetypes:txt',
-              'label': 'Text'
+              id: 'resourcetypes:txt',
+              label: 'Text'
             }
           ],
-          'carrierType': [
+          carrierType: [
             {
-              'id': 'carriertypes:nc',
-              'label': 'volume'
+              id: 'carriertypes:nc',
+              label: 'volume'
             }
           ],
-          'title_sort': [
+          title_sort: [
             "helper's impending crisis dissected[microform]"
           ],
-          'dateString': [
+          dateString: [
             '1860'
           ],
-          'mediaType': [
+          mediaType: [
             {
-              'id': 'mediatypes:n',
-              'label': 'unmediated'
+              id: 'mediatypes:n',
+              label: 'unmediated'
             }
           ],
-          'subjectLiteral': [
+          subjectLiteral: [
             'Helper, Hinton Rowan, 1829-1909.',
             'Slavery -- United States -- Controversial literature -- 1860-'
           ],
-          'titleDisplay': [
+          titleDisplay: [
             "Helper's Impending crisis dissected[microform] / by Samuel M.Wolfe, Virginia."
           ],
-          'uri': 'b10224367',
-          'numItems': [
+          uri: 'b10224367',
+          numItems: [
             2
           ],
-          'numAvailable': [
+          numAvailable: [
             2
           ],
-          'uris': [
+          uris: [
             'b10224367',
             'b10224367-i24028840',
             'b10224367-i30547944',
             'b10224367-i10053088'
           ],
-          'placeOfPublication': [
+          placeOfPublication: [
             'Philadelphia:'
           ],
-          'issuance': [
+          issuance: [
             {
-              'id': 'urn:biblevel:m',
-              'label': 'monograph/item'
+              id: 'urn:biblevel:m',
+              label: 'monograph/item'
             }
           ],
-          'items': [
+          items: [
             {
-              'owner': [
+              owner: [
                 {
-                  'id': 'orgs:1114',
-                  'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                  id: 'orgs:1114',
+                  label: 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                 }
               ],
-              'accessMessage_packed': [
+              accessMessage_packed: [
                 'accessMessage:1||Use in library'
               ],
-              'identifier': [
+              identifier: [
                 'urn:barcode:33433016495024'
               ],
-              'shelfMark_sort': 'aSc Micro R-000864',
-              'catalogItemType_packed': [
+              shelfMark_sort: 'aSc Micro R-000864',
+              catalogItemType_packed: [
                 'catalogItemType:6||microfilm service copy'
               ],
-              'accessMessage': [
+              accessMessage: [
                 {
-                  'id': 'accessMessage:1',
-                  'label': 'Use in library'
+                  id: 'accessMessage:1',
+                  label: 'Use in library'
                 }
               ],
-              'status_packed': [
+              status_packed: [
                 'status:a||Available '
               ],
-              'uri': 'i24028840',
-              'shelfMark': [
+              uri: 'i24028840',
+              shelfMark: [
                 'Sc Micro R-864'
               ],
-              'identifierV2': [
+              identifierV2: [
                 {
-                  'type': 'bf:ShelfMark',
-                  'value': 'Sc Micro R-864'
+                  type: 'bf:ShelfMark',
+                  value: 'Sc Micro R-864'
                 },
                 {
-                  'type': 'bf:Barcode',
-                  'value': '33433016495024'
+                  type: 'bf:Barcode',
+                  value: '33433016495024'
                 }
               ],
-              'holdingLocation_packed': [
+              holdingLocation_packed: [
                 'loc:scff2||Schomburg Center - Research & Reference'
               ],
-              'idBarcode': [
+              idBarcode: [
                 '33433016495024'
               ],
-              'owner_packed': [
+              owner_packed: [
                 'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
               ],
-              'requestable': [
+              requestable: [
                 false
               ],
-              'catalogItemType': [
+              catalogItemType: [
                 {
-                  'id': 'catalogItemType:4',
-                  'label': 'microfilm service copy'
+                  id: 'catalogItemType:4',
+                  label: 'microfilm service copy'
                 }
               ],
-              'status': [
+              status: [
                 {
-                  'id': 'status:a',
-                  'label': 'Available '
+                  id: 'status:a',
+                  label: 'Available '
                 }
               ],
-              'holdingLocation': [
+              holdingLocation: [
                 {
-                  'id': 'loc:scff2',
-                  'label': 'Schomburg Center - Research & Reference'
+                  id: 'loc:scff2',
+                  label: 'Schomburg Center - Research & Reference'
                 }
               ]
             },
             {
-              'owner': [
+              owner: [
                 {
-                  'id': 'orgs:1114',
-                  'label': 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
+                  id: 'orgs:1114',
+                  label: 'Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
                 }
               ],
-              'accessMessage_packed': [
+              accessMessage_packed: [
                 'accessMessage:1||Use in library'
               ],
-              'shelfMark_sort': 'aSc Micro R-864 [pt. G]',
-              'catalogItemType_packed': [
+              shelfMark_sort: 'aSc Micro R-864 [pt. G]',
+              catalogItemType_packed: [
                 'catalogItemType:6||microfilm service copy'
               ],
-              'accessMessage': [
+              accessMessage: [
                 {
-                  'id': 'accessMessage:1',
-                  'label': 'Use in library'
+                  id: 'accessMessage:1',
+                  label: 'Use in library'
                 }
               ],
-              'status_packed': [
+              status_packed: [
                 'status:a||Available'
               ],
-              'uri': 'i10053088',
-              'shelfMark': [
+              uri: 'i10053088',
+              shelfMark: [
                 'Sc Micro R-864 [pt. G]'
               ],
-              'identifierV2': [
+              identifierV2: [
                 {
-                  'type': 'bf:ShelfMark',
-                  'value': 'Sc Micro R-864 [pt. G]'
+                  type: 'bf:ShelfMark',
+                  value: 'Sc Micro R-864 [pt. G]'
                 }
               ],
-              'holdingLocation_packed': [
+              holdingLocation_packed: [
                 'loc:scff2||Schomburg Center - Research & Reference'
               ],
-              'owner_packed': [
+              owner_packed: [
                 'orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division'
               ],
-              'requestable': [
+              requestable: [
                 false
               ],
-              'catalogItemType': [
+              catalogItemType: [
                 {
-                  'id': 'catalogItemType:6',
-                  'label': 'microfilm service copy'
+                  id: 'catalogItemType:6',
+                  label: 'microfilm service copy'
                 }
               ],
-              'status': [
+              status: [
                 {
-                  'id': 'status:a',
-                  'label': 'Available'
+                  id: 'status:a',
+                  label: 'Available'
                 }
               ],
-              'holdingLocation': [
+              holdingLocation: [
                 {
-                  'id': 'loc:scff2',
-                  'label': 'Schomburg Center - Research & Reference'
+                  id: 'loc:scff2',
+                  label: 'Schomburg Center - Research & Reference'
                 }
               ]
             }
