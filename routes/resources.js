@@ -9,7 +9,7 @@ module.exports = function (app) {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
-    app.baseUrl = `http${req.secure ? 's' : ''}://${req.headers.host}/api/v${VER}/discovery`
+    app.baseUrl = `http${req.secure ? 's' : ''}://${req.get('host')}/api/v${VER}/discovery`
     next()
   })
 

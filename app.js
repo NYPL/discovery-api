@@ -10,6 +10,14 @@ const pjson = require('./package.json')
 
 const app = express()
 
+// Tell express to trust x-forwarded-proto and x-forwarded-host headers when
+// origin is local. This means req.hostname and req.protocol will
+// return the actual host and proto of the original request when forwarded
+// by the trusted proxy (Imperva). This is essential for building a valid login
+// redirect_uri
+// See https://expressjs.com/en/4x/api.html#trust.proxy.options.table
+app.set('trust proxy', 'loopback')
+
 const run = async () => {
   await loadConfig()
 
