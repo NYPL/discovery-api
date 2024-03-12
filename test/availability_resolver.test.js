@@ -53,7 +53,7 @@ const itemAvailabilityResponse = [
 
 describe('Response with updated availability', function () {
   beforeEach(() => {
-    sinon.stub(scsbClient._private.ScsbRestClient.prototype, 'getItemsAvailabilityForBarcodes')
+    sinon.stub(scsbClient, 'getItemsAvailabilityForBarcodes')
       .callsFake(() => Promise.resolve(itemAvailabilityResponse))
 
     sinon.stub(scsbClient, 'recapCustomerCodeByBarcode')
@@ -61,7 +61,7 @@ describe('Response with updated availability', function () {
   })
 
   afterEach(() => {
-    scsbClient._private.ScsbRestClient.prototype.getItemsAvailabilityForBarcodes.restore()
+    scsbClient.getItemsAvailabilityForBarcodes.restore()
     scsbClient.recapCustomerCodeByBarcode.restore()
   })
 
