@@ -151,7 +151,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], 'mala').then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty()
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm the known scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
@@ -162,7 +162,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will return empty delivery locations for an unrequestable onsite location code', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
-      expect(items[0].deliveryLocation).to.be.empty()
+      expect(items[0].deliveryLocation).to.have.lengthOf(0)
     })
   })
 
@@ -174,7 +174,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will ammend the deliveryLocation property for an offsite NYPL item', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNypl]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty()
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
   })
 
@@ -186,7 +186,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will ammend the deliveryLocation property for a PUL item', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.pul]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty()
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
   })
 
@@ -210,7 +210,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will hide "Scholar" deliveryLocation for non-scholars', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty()
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm the known scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
@@ -238,13 +238,13 @@ describe('Delivery-locations-resolver', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([offsiteItemInNonRequestableLocation])
       .then((items) => {
         expect(items[0].deliveryLocation).to.be.a('array')
-        expect(items[0].deliveryLocation).to.be.empty()
+        expect(items[0].deliveryLocation).to.have.lengthOf(0)
       })
   })
 
   it('will reveal specific scholar room deliveryLocation when specified', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], 'mal17').then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty()
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm the non specified scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
@@ -257,7 +257,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will hide "Scholar" deliveryLocations for scholars with no specific scholar room', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty()
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm that all scholar rooms are included:
       scholarRooms.forEach((scholarRoom) => {
@@ -353,19 +353,22 @@ describe('Delivery-locations-resolver', function () {
 
   describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
     before(takeThisPartyPartiallyOffline)
+
     const requestableM2Location = 'map92'
     const requestableM1Location = 'map82'
     const nonrequestableM2Location = 'ccj92'
     const unrequestableM2CustomerCode = 'EM'
+
     it('will return delivery locations for an requestable M1 item', function () {
       const items = [{
         uri: 'b123',
         holdingLocation: [{ id: requestableM1Location }]
       }]
       return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability(items).then((items) => {
-        expect(items[0].deliveryLocation).to.not.be.empty()
+        expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
       })
     })
+
     it('returns delivery locations for requestable M2 items', () => {
       const items = [{
         uri: 'b123',
@@ -396,7 +399,7 @@ describe('Delivery-locations-resolver', function () {
       return DeliveryLocationsResolver
         .attachDeliveryLocationsAndEddRequestability(items)
         .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty()
+          expect(items[0].deliveryLocation).to.have.lengthOf(0)
         })
     })
 
@@ -409,7 +412,7 @@ describe('Delivery-locations-resolver', function () {
       return DeliveryLocationsResolver
         .attachDeliveryLocationsAndEddRequestability(items)
         .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty()
+          expect(items[0].deliveryLocation).to.have.lengthOf(0)
         })
     })
 
@@ -480,7 +483,7 @@ describe('Delivery-locations-resolver', function () {
       }
       expect(DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([item])
         .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty()
+          expect(items[0].deliveryLocation).to.deep.equal([])
         }))
     })
   })

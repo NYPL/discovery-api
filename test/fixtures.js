@@ -34,7 +34,9 @@ function esClientSearchViaFixtures (properties) {
         missingFixturePaths += 1
         return reject(err)
       }
-
+      if (process.env.DEBUG_FIXTURES) {
+        console.log('Using fixture size ' + content.length + 'b')
+      }
       return resolve(JSON.parse(content))
     })
   })
@@ -50,6 +52,10 @@ function esClientSearchViaFixtures (properties) {
  *   process.env.UPDATE_FIXTURES = 'if-missing'
  */
 function writeEsResponseToFixture (properties, resp) {
+  // Get rid fo useless extras:
+  delete resp.headers
+  delete resp.meta
+
   const path = esFixturePath(properties)
   return new Promise((resolve, reject) => {
     fs.writeFile(path, JSON.stringify(resp, null, 2), (err, res) => {
@@ -272,7 +278,7 @@ function enableDataApiFixtures (pathToFixtureMap) {
   // Override app's _doAuthenticatedRequest call to return fixtures for specific paths, otherwise fail:
   sinon.stub(dataApiClient, '_doAuthenticatedRequest').callsFake(function (requestOptions) {
     // Get relative api path: (e.g. 'patrons/1234')
-    const requestPath = new url.URL(requestOptions.uri).path.replace('/api/v0.1/', '')
+    const requestPath = new url.URL(requestOptions.uri).pathname.replace('/api/v0.1/', '')
     if (pathToFixtureMap[requestPath]) {
       const content = fs.readFileSync(path.join('./test/fixtures/', pathToFixtureMap[requestPath]), 'utf8')
       return Promise.resolve(JSON.parse(content))

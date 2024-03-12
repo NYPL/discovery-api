@@ -1,17 +1,20 @@
 const request = require('request-promise')
 const assert = require('assert')
+const { expect } = require('chai')
 
 const fixtures = require('./fixtures')
-const { expect } = require('chai')
+const app = require('../app')
 
 describe('Test Resources responses', function () {
   const sampleResources = [{ id: 'b10015541', type: 'nypl:Item' }, { id: 'b10022950', type: 'nypl:Item' }]
 
   this.timeout(10000)
 
-  before(function () {
+  before(async () => {
     fixtures.enableEsFixtures()
     fixtures.enableScsbFixtures()
+
+    await app.start()
   })
 
   after(function () {
@@ -38,7 +41,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(917)
+        expect(doc.numItemsMatched).to.be.greaterThan(800)
         done()
       })
     })
@@ -65,7 +68,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(917) // this changed when I rebuild the fixtures with no code changes
+        expect(doc.numItemsMatched).to.be.greaterThan(800)
         done()
       })
     })
@@ -74,7 +77,10 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(2) // this changed when I rebuild the fixtures with no code changes
+        // Note: When updating fixtures, the following value may change. The
+        // most important thing is that it appears to filter out items from the
+        // 800+ item bib:
+        expect(doc.numItemsMatched).to.be.lessThan(20)
         done()
       })
     })

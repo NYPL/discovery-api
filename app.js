@@ -2,7 +2,7 @@ const config = require('config')
 const express = require('express')
 
 const esClient = require('./lib/es-client')
-const { loadConfig } = require('./lib/load-config')
+const loadConfig = require('./lib/load-config')
 const { preflightCheck } = require('./lib/preflight_check')
 
 const swaggerDocs = require('./swagger.v1.1.x.json')
@@ -18,8 +18,8 @@ const app = express()
 // See https://expressjs.com/en/4x/api.html#trust.proxy.options.table
 app.set('trust proxy', 'loopback')
 
-const run = async () => {
-  await loadConfig()
+app.init = async () => {
+  await loadConfig.loadConfig()
 
   preflightCheck()
 
@@ -55,16 +55,18 @@ const run = async () => {
   app.get('/api/v0.1/discovery/swagger', function (req, res) {
     res.send(swaggerDocs)
   })
+}
+
+app.start = async () => {
+  await app.init()
 
   const port = process.env.PORT || config.port
 
-  require('./lib/globals')(app).then((app) => {
-    app.listen(port, function () {
+  return require('./lib/globals')(app).then((app) => {
+    return app.listen(port, function () {
       app.logger.info('Server started on port ' + port)
     })
   })
 }
-
-run()
 
 module.exports = app

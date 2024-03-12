@@ -1,0 +1,62 @@
+{
+  "body": {
+    "took": 51,
+    "timed_out": false,
+    "_shards": {
+      "total": 3,
+      "successful": 3,
+      "failed": 0
+    },
+    "hits": {
+      "total": 0,
+      "max_score": null,
+      "hits": []
+    }
+  },
+  "statusCode": 200,
+  "headers": {
+    "date": "Mon, 11 Mar 2024 15:36:54 GMT",
+    "content-type": "application/json; charset=UTF-8",
+    "content-length": "123",
+    "connection": "keep-alive",
+    "access-control-allow-origin": "*"
+  },
+  "meta": {
+    "context": null,
+    "request": {
+      "params": {
+        "method": "POST",
+        "path": "/resources-2018-04-09/_search",
+        "body": "{\"from\":0,\"size\":50,\"query\":{\"function_score\":{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"fields\":[\"title^5\",\"title.folded^2\",\"description.folded\",\"subjectLiteral^2\",\"subjectLiteral.folded\",\"creatorLiteral^2\",\"creatorLiteral.folded\",\"contributorLiteral.folded\",\"note.label.folded\",\"publisherLiteral.folded\",\"seriesStatement.folded\",\"titleAlt.folded\",\"titleDisplay.folded\",\"contentsTitle.folded\",\"donor.folded\",\"parallelTitle.folded^5\",\"parallelTitleDisplay.folded\",\"parallelTitleAlt.folded\",\"parallelSeriesStatement.folded\",\"parallelCreatorLiteral.folded\",\"parallelPublisher\"],\"query\":\"fladeedle\",\"default_operator\":\"AND\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":\"100\",\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}}}},\"min_score\":0.65,\"sort\":[\"_score\"],\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]}}",
+        "querystring": "",
+        "headers": {
+          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
+          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
+          "content-type": "application/json",
+          "content-length": "1146"
+        },
+        "timeout": 30000
+      },
+      "options": {},
+      "id": 12
+    },
+    "name": "elasticsearch-js",
+    "connection": {
+      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
+      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
+      "headers": {},
+      "deadCount": 0,
+      "resurrectTimeout": 0,
+      "_openRequests": 0,
+      "status": "alive",
+      "roles": {
+        "master": true,
+        "data": true,
+        "ingest": true,
+        "ml": false
+      }
+    },
+    "attempts": 0,
+    "aborted": false
+  }
+}
