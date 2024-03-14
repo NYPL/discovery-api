@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/NYPL/discovery-api.svg?branch=main)](https://travis-ci.com/NYPL/discovery-api)
 
-# Discovery API
+# Discovery API (aka Research Catalog API)
 
 This is the API providing most of bibliographic data to the [NYPL Research Catalog front-end](https://github.com/NYPL/discovery-front-end). Check the [current swagger](https://github.com/NYPL/discovery-api/blob/main/swagger.v1.1.x.json) for the machine readable api contract.
 
@@ -18,22 +18,6 @@ docker-compose build
 
 Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
 
-If you are adding a dependency or need to rebuild package-lock.json, run this script:
-
-```
-nvm use; npm i -g npm@5.10.0
-```
-
-## About Environment Variables
-
-See `.env.example` for a description the variables. **If you're adding new variables please add them to .env.example and `./lib/preflight_check.js`**
-
-Note that config variables are maintained in `./config/*.env` as a formality and to assist onboarding; Changes made to those files will not effect deployed config. Config changes must be applied to the deployed Beanstalk app manually. Note that sensitive values are encrypted in `./config/*.env` whereas they are not in the deployed Beanstalk.
-
-### Changes to SCSB/UAT endpoints
-
-When HTC changes the SCSB endpoint, apply changes to the relevant environment file in `config/` (encrypting the value if sensitive) and also manually apply the change to the running Beanstalk app (without encrypting the value).
-
 ## Contributing
 
 This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#prs-target-main-merge-to-deployment-branches) git workflow.
@@ -49,37 +33,6 @@ This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.c
 1. Merge `main` > `qa`
 1. Confirm app deploys to QA and run appropriate testing
 1. Merge `main` > `production`
-
-## Deployment
-
-This app is deployed via a deployment hook in `.travis.yml`. Pushes to `qa` deploy to our QA deployment; Pushes to `production` deploy to our Production deployment. We generally don't update `development` or use the Development deployment.
-
-### Initial Creation / Deployment to Elastic Beanstalk
-
-1. `.ebextensions` directory needed at application's root directory
-2. `.ebextensions/00_environment.config` to store environment variables. For environment variables that needs to be hidden,
-3. `.ebextensions/03_nodecommand.config` to start node app after deployment.
-4. `eb init -i --profile <<your AWS profile>>`
-5. Initial creation of instance on Beanstalk:
-
-Please use the instance profile of _cloudwatchable-beanstalk_.
-Which has all the permissions needed for a traditional or Docker-flavored Beanstalk
-machine that wants to log to CloudWatch.
-
-```bash
-eb create discovery-api-[environmentname] \
-    --instance_type t2.small \
-    --instance_profile cloudwatchable-beanstalk \
-    --cname discovery-api-[environmentname] \
-    --vpc.id vpc-1e293a7b \
-    --vpc.elbsubnets public-subnet-id-1,public-subnet-id-2 \
-    --vpc.ec2subnets private-subnet-id-1,private-subnet-id-2 \
-    --vpc.elbpublic \
-    --tags Project=Discovery, Foo=Bar \
-    --keyname dgdvteam \
-    --scale 2 \
-    --envvars VAR_NAME_1="xxx",VAR_NAME_2="xxx"
-```
 
 ## Testing
 
