@@ -1,8 +1,6 @@
 const gatherParams = require('../lib/util').gatherParams
 
-const config = require('config')
-
-const VER = config.get('major_version')
+const VER = '0.1'
 
 module.exports = function (app) {
   app.all('*', function (req, res, next) {

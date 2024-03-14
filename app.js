@@ -1,4 +1,3 @@
-const config = require('config')
 const express = require('express')
 
 const esClient = require('./lib/es-client')
@@ -25,8 +24,6 @@ app.init = async () => {
 
   // Load logger after running above to ensure we respect LOG_LEVEL if set
   app.logger = require('./lib/logger')
-
-  app.thesaurus = config.thesaurus
 
   require('./lib/resources')(app)
 
@@ -60,12 +57,10 @@ app.init = async () => {
 app.start = async () => {
   await app.init()
 
-  const port = process.env.PORT || config.port
+  const port = process.env.PORT || 3000
 
-  return require('./lib/globals')(app).then((app) => {
-    return app.listen(port, function () {
-      app.logger.info('Server started on port ' + port)
-    })
+  return app.listen(port, function () {
+    app.logger.info('Server started on port ' + port)
   })
 }
 
