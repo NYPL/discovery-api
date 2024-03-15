@@ -6,7 +6,20 @@ This is the API providing most of bibliographic data to the [NYPL Research Catal
 
 ## Installing & Running Locally
 
-Start the container with AWS creds so that the app can decrypt config from `.env-docker`:
+For local development, it's easiest to just use local node binaries:
+
+```
+nvm use; ENV=qa npm start
+```
+
+Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
+
+### Using Docker
+
+Docker files are included for deployment and can be used locally.
+
+To start the container with AWS creds so that the app can decrypt config from `config/*`:
+
 ```
  AWS_ACCESS_KEY_ID=... AWS_SECRET_ACCESS_KEY=... docker-compose up
 ```
@@ -16,7 +29,13 @@ After making changes, rebuild the image:
 docker-compose build
 ```
 
-Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
+Or, equivalently, to build and run the image and container directly:
+
+```
+docker image build -t discovery-api:local .
+docker container rm discovery-api
+docker run --name discovery-api -e ENV=qa -e AWS_ACCESS_KEY_ID=... -e AWS_SECRET_ACCESS_KEY=... -p 8082:8082 -it discovery-api:local
+```
 
 ## Contributing
 
