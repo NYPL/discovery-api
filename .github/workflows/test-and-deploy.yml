@@ -17,7 +17,6 @@ jobs:
         run: npm test
   deploy-qa:
     if: github.ref == 'refs/heads/qa-node20'
-    name: Publish image to ECR and update ECS service
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
