@@ -7,15 +7,12 @@ RUN apt-get upgrade -y
 WORKDIR /usr/src/app
 
 # Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+COPY package-lock.json ./
 COPY package.json ./
-
 RUN npm cache verify
 RUN npm install
 
-# Bundle app source
-# Do not copy non-essential files
+# Add app source
 COPY . .
 
 # Remove any unneeded files
