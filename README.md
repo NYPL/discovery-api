@@ -9,6 +9,7 @@ This is the API providing most of bibliographic data to the [NYPL Research Catal
 For local development, it's easiest to just use local node binaries:
 
 ```
+nvm use; npm i
 nvm use; ENV=qa npm start
 ```
 
