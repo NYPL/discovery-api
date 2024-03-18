@@ -13,7 +13,11 @@ nvm use; npm i
 nvm use; ENV=qa npm start
 ```
 
-Note that when developing locally, you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip).
+Note that when developing locally, if connecting to a IP ACL protected index (a practice we're currently deprecating), you may need to [add your IP to the access control policy of the relevant ES domain](https://github.com/NYPL/aws/blob/b5c0af0ec8357af9a645d8b47a5dbb0090966071/common/elasticsearch.md#2-make-the-domain-public-restrict-by-ip). If your IP has not been authorized, you will see errors such as the following in the application logs:
+
+```
+error: Error connecting to index: 403: {"Message":"User: anonymous is not authorized to perform: es:ESHttpPost because no resource-based policy allows the es:ESHttpPost action"}
+```
 
 ### Using Docker
 
