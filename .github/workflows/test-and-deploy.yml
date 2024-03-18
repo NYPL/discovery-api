@@ -16,8 +16,12 @@ jobs:
       - name: Unit Tests
         run: npm test
   deploy-qa:
-    if: github.ref == 'refs/heads/qa-node20'
+    permissions:
+      id-token: write
+      contents: read
     runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/qa-node20'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
