@@ -20,7 +20,7 @@ jobs:
       id-token: write
       contents: read
     runs-on: ubuntu-latest
-    needs: test
+    needs: tests
     if: github.ref == 'refs/heads/qa-node20'
     steps:
       - name: Checkout repo
