@@ -110,6 +110,79 @@ describe('RequestabilityResolver', () => {
       var notAvailableItem = items.find((item) => item.uri === 'i10283665777')
       expect(notAvailableItem.requestable[0]).to.equal(true)
     })
+
+    describe('On-site edd requestability', function () {
+      let esResponse
+
+      beforeEach(() => {
+        const item = {
+          uri: 'i10283665',
+          accessMessage: [ { id: 'accessMessage:1' } ],
+          catalogItemType: [ { id: 'catalogItemType:2' } ],
+          status: [ { id: 'status:a' } ],
+          holdingLocation: [ { id: 'loc:scff2' } ],
+          identifier: [ 'urn:barcode:33433058338470' ]
+        }
+        esResponse = { hits: { hits: [ { _source: { items: [item] } } ] } }
+      })
+
+      it('an item that meets all on-site edd criteria is edd-requestable', function () {
+        let updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+
+        // Access message '-' still eddRequestable:
+        esResponse.hits.hits[0]._source.items[0].accessMessage = [
+          { id: 'accessMessage:-' }
+        ]
+        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+
+        // Access message '1' still eddRequestable:
+        esResponse.hits.hits[0]._source.items[0].accessMessage = [
+          { id: 'accessMessage:1' }
+        ]
+        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+
+        // Status 'na' still eddRequestable:
+        esResponse.hits.hits[0]._source.items[0].status = [
+          { id: 'status:na' }
+        ]
+        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+      })
+
+      it('an item that with an invalid accessMessage is no longer edd-requestable', function () {
+        esResponse.hits.hits[0]._source.items[0].accessMessage = [
+          { id: 'accessMessage:b' }
+        ]
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(false)
+      })
+
+      it('an item that with an invalid catalogItemType is no longer edd-requestable', function () {
+        esResponse.hits.hits[0]._source.items[0].catalogItemType = [
+          { id: 'catalogItemType:13' }
+        ]
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(false)
+      })
+
+      it('an item that with an invalid status is no longer edd-requestable', function () {
+        esResponse.hits.hits[0]._source.items[0].status = [
+          { id: 'status:o' }
+        ]
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(false)
+      })
+    })
   })
 
   describe('Special collections items', function () {
