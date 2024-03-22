@@ -309,7 +309,7 @@ describe('Delivery-locations-resolver', function () {
     })
 
     it('will return true for on-site item failing status check', function () {
-      item.status[0].id = 'status:co'
+      item.status[0].id = 'status:na'
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
 
