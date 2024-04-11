@@ -3,32 +3,8 @@ const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
 const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
-// const { scff3Microfiche, invalidTypeScff3, scff2Microfilm, invalidTypeScff2 } = require('./fixtures/schomburg.js')
-const { scff3Microfiche, invalidTypeScff3, invalidTypeScff2 } = require('./fixtures/schomburg.js')
 
 describe('RequestabilityResolver', () => {
-  describe('Schomburg requestability', () => {
-    it('returns physRequestable true for scff3 microfiche', () => {
-      const resp = RequestabilityResolver.fixItemRequestability(scff3Microfiche)
-      const item = resp.hits.hits[0]._source.items[0]
-      expect(item.physRequestable).to.equal(true)
-    })
-    it('returns physRequestable false for invalid item type, scff3', () => {
-      const resp = RequestabilityResolver.fixItemRequestability(invalidTypeScff3)
-      const item = resp.hits.hits[0]._source.items[0]
-      expect(item.physRequestable).to.equal(false)
-    })
-    // it('returns physRequestable true for scff2 microfilm', () => {
-    //   const resp = RequestabilityResolver.fixItemRequestability(scff2Microfilm)
-    //   const item = resp.hits.hits[0]._source.items[0]
-    //   expect(item.physRequestable).to.be.true
-    // })
-    it('returns physRequestable false for invalid item type, scff2', () => {
-      const resp = RequestabilityResolver.fixItemRequestability(invalidTypeScff2)
-      const item = resp.hits.hits[0]._source.items[0]
-      expect(item.physRequestable).to.equal(false)
-    })
-  })
   describe('fixItemRequestability', function () {
     const NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()
     it('sets physRequestable false for items with no barcodes', () => {
@@ -109,6 +85,79 @@ describe('RequestabilityResolver', () => {
 
       const notAvailableItem = items.find((item) => item.uri === 'i10283665777')
       expect(notAvailableItem.requestable[0]).to.equal(true)
+    })
+
+    describe('On-site edd requestability', function () {
+      let esResponse
+
+      beforeEach(() => {
+        const item = {
+          uri: 'i10283665',
+          accessMessage: [{ id: 'accessMessage:1' }],
+          catalogItemType: [{ id: 'catalogItemType:2' }],
+          status: [{ id: 'status:a' }],
+          holdingLocation: [{ id: 'loc:scff2' }],
+          identifier: ['urn:barcode:33433058338470']
+        }
+        esResponse = { hits: { hits: [{ _source: { items: [item] } }] } }
+      })
+
+      it('an item that meets all on-site edd criteria is edd-requestable', function () {
+        let updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+
+        // Access message '-' still eddRequestable:
+        esResponse.hits.hits[0]._source.items[0].accessMessage = [
+          { id: 'accessMessage:-' }
+        ]
+        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+
+        // Access message '1' still eddRequestable:
+        esResponse.hits.hits[0]._source.items[0].accessMessage = [
+          { id: 'accessMessage:1' }
+        ]
+        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+
+        // Status 'na' still eddRequestable:
+        esResponse.hits.hits[0]._source.items[0].status = [
+          { id: 'status:na' }
+        ]
+        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(true)
+      })
+
+      it('an item that with an invalid accessMessage is no longer edd-requestable', function () {
+        esResponse.hits.hits[0]._source.items[0].accessMessage = [
+          { id: 'accessMessage:b' }
+        ]
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(false)
+      })
+
+      it('an item that with an invalid catalogItemType is no longer edd-requestable', function () {
+        esResponse.hits.hits[0]._source.items[0].catalogItemType = [
+          { id: 'catalogItemType:13' }
+        ]
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(false)
+      })
+
+      it('an item that with an invalid status is no longer edd-requestable', function () {
+        esResponse.hits.hits[0]._source.items[0].status = [
+          { id: 'status:o' }
+        ]
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+          .hits.hits[0]._source.items[0]
+        expect(updatedItem.eddRequestable).to.equal(false)
+      })
     })
   })
 

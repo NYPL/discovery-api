@@ -3,29 +3,6 @@ const { expect } = require('chai')
 const util = require('../lib/util')
 
 describe('Util', function () {
-  describe('isSchomburg', () => {
-    it('returns false for non schomburg location', () => {
-      const item = {
-        holdingLocation: [
-          {
-            id: 'loc:mal'
-          }
-        ]
-      }
-      expect(util.isInSchomburg(item)).to.equal(false)
-    })
-    it('returns true for schomburg items', () => {
-      const item = {
-        holdingLocation: [
-          {
-            id: 'loc:scff3'
-          }
-        ]
-      }
-      expect(util.isInSchomburg(item)).to.equal(true)
-    })
-  })
-
   describe('backslashes', function () {
     it('escapes specials', function () {
       const result = util.backslashes('?', 2)
