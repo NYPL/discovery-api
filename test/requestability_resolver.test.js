@@ -3,6 +3,7 @@ const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
 const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
+const noRecapResponse = require('./fixtures/no_recap_response')
 
 describe('RequestabilityResolver', () => {
   describe('fixItemRequestability', function () {
@@ -201,6 +202,24 @@ describe('RequestabilityResolver', () => {
         return item.uri === 'i10283664'
       })
       expect(nonEddItem.eddRequestable).to.equal(false)
+    })
+  })
+
+  describe('Missing recapCustomerCode', function () {
+    const response = noRecapResponse.fakeElasticSearchResponseNyplItem()
+    const resolved = RequestabilityResolver.fixItemRequestability(response)
+    it('marks edd and physical requestability correctly', function () {
+      const items = resolved.hits.hits[0]._source.items
+      const firstItem = items.find((item) => {
+        return item.uri === 'i102836649'
+      })
+      const secondItem = items.find((item) => {
+        return item.uri === 'i102836659'
+      })
+      expect(firstItem.physRequestable).to.equal(true)
+      expect(firstItem.eddRequestable).to.equal(true)
+      expect(secondItem.physRequestable).to.equal(false)
+      expect(secondItem.eddRequestable).to.equal(false)
     })
   })
 })
