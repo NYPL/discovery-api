@@ -1,3 +1,5 @@
+const sinon = require('sinon')
+
 const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
 
 const sampleItems = {
@@ -149,13 +151,36 @@ function takeThisPartyPartiallyOffline () {
 describe('Delivery-locations-resolver', function () {
   before(takeThisPartyPartiallyOffline)
 
-  it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], 'mala').then((items) => {
-      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
+  describe('SC delivery locations', () => {
+    before(() => {
+      // Override NYPL-Core lookup for scff3 to make it requestable:
+      sinon.stub(DeliveryLocationsResolver, 'nyplCoreLocation').callsFake(() => {
+        return {
+          sierraDeliveryLocations: [
+            {
+              code: 'sc',
+              label: 'Schomburg Center - Research and Reference Division',
+              locationsApiSlug: 'schomburg',
+              deliveryLocationTypes: ['Research']
+            }
+          ],
+          requestable: true
+        }
+      })
+    })
 
-      // Confirm the known scholar rooms are not included:
-      scholarRooms.forEach((scholarRoom) => {
-        expect(items[0].deliveryLocation).to.not.include(scholarRoom)
+    after(() => {
+      DeliveryLocationsResolver.nyplCoreLocation.restore()
+    })
+
+    it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', function () {
+      return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], 'mala').then((items) => {
+        expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
+
+        // Confirm the known scholar rooms are not included:
+        scholarRooms.forEach((scholarRoom) => {
+          expect(items[0].deliveryLocation).to.not.include(scholarRoom)
+        })
       })
     })
   })
