@@ -512,7 +512,7 @@ describe('Delivery-locations-resolver', function () {
       expect(resolved.eddRequestable).to.equal(false)
     })
 
-    it('returns empty deliveryLocation and eddRequestable true based on holding location when missing recapCustomerCode', function () {
+    it('returns empty string delivery location and eddRequestable true based on holding location when missing recapCustomerCode', function () {
       const resolved = DeliveryLocationsResolver.getRecapDeliveryInfo({
         holdingLocation: [{ id: 'loc:rcpm2' }],
         uri: 'i14747243'
