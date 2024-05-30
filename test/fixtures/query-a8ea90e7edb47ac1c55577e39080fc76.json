@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 75,
+    "took": 34,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 2,
-      "max_score": 31.294983,
+      "total": {
+        "value": 2,
+        "relation": "eq"
+      },
+      "max_score": 31.66558,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-05-29",
           "_id": "pb1717",
-          "_score": 31.294983,
+          "_score": 31.66558,
           "_source": {
             "extent": [
               "x, 340 p. : ill. ;"
@@ -139,17 +142,25 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "pb1717",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -226,10 +237,9 @@
           }
         },
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-05-29",
           "_id": "pb9917173506421",
-          "_score": 30.657787,
+          "_score": 31.66558,
           "_source": {
             "extent": [
               "x, 340 p. : ill. ;"
@@ -404,17 +414,25 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "pb9917173506421",
                     "_nested": {
                       "field": "items",
                       "offset": 0

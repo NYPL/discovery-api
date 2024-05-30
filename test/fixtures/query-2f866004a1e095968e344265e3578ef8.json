@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 235,
+    "took": 116,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 5,
-      "max_score": 55.216125,
+      "total": {
+        "value": 5,
+        "relation": "eq"
+      },
+      "max_score": 69.03697,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-05-29",
           "_id": "b11826883",
-          "_score": 55.216125,
+          "_score": 69.03697,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -90,11 +93,11 @@
             "dateEndString": [
               "9999"
             ],
-            "type": [
-              "nypl:Item"
-            ],
             "title": [
               "Furniture history : the journal of the Furniture History Society."
+            ],
+            "type": [
+              "nypl:Item"
             ],
             "shelfMark": [
               "JQL 08-18"
@@ -119,6 +122,9 @@
             ],
             "dateStartYear": [
               1965
+            ],
+            "idOclc": [
+              "1570335"
             ],
             "identifierV2": [
               {
@@ -149,9 +155,6 @@
                 "type": "bf:Identifier",
                 "value": "(WaOLN)nyp1832956"
               }
-            ],
-            "idOclc": [
-              "1570335"
             ],
             "dateEndYear": [
               9999
@@ -464,7 +467,7 @@
                 "uri": "h1066822"
               }
             ],
-            "updatedAt": 1711467727798,
+            "updatedAt": 1714487263214,
             "publicationStatement": [
               "[London] : The Society"
             ],
@@ -514,15 +517,15 @@
             "placeOfPublication": [
               "[London]"
             ],
-            "titleAlt": [
-              "Furnit. hist.",
-              "Furniture history"
-            ],
             "issuance": [
               {
                 "id": "urn:biblevel:s",
                 "label": "serial"
               }
+            ],
+            "titleAlt": [
+              "Furnit. hist.",
+              "Furniture history"
             ],
             "dimensions": [
               "25 cm."
@@ -531,17 +534,25 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 70,
+                "total": {
+                  "value": 70,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b11826883",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -550,12 +561,12 @@
                     "_source": {
                       "accessMessage": [
                         {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
                         }
                       ],
                       "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
+                        "accessMessage:2||Request in advance"
                       ],
                       "catalogItemType": [
                         {
@@ -619,8 +630,11 @@
                       "physicalLocation": [
                         "JQL 08-18"
                       ],
+                      "recapCustomerCode": [
+                        "NA"
+                      ],
                       "requestable": [
-                        false
+                        true
                       ],
                       "shelfMark": [
                         "JQL 08-18 v. 59 (2023)"
@@ -628,12 +642,12 @@
                       "shelfMark_sort": "aJQL 08-18 v. 000059 (2023)",
                       "status": [
                         {
-                          "id": "status:t",
-                          "label": "In transit"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:t||In transit"
+                        "status:a||Available"
                       ],
                       "type": [
                         "bf:Item"
@@ -651,6 +665,8 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b11826883",
                     "_nested": {
                       "field": "items",
                       "offset": 69
@@ -728,6 +744,8 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b11826883",
                     "_nested": {
                       "field": "items",
                       "offset": 1
@@ -845,10 +863,302 @@
           }
         },
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-05-29",
+          "_id": "b21506221",
+          "_score": 16.792456,
+          "_source": {
+            "extent": [
+              "v. : ill. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "\"A magazine of art, design and architecture.\"",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Source of Description",
+                "label": "Description based on: Issue 01 (2007/08); title from cover.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Source of Description",
+                "label": "Latest issue consulted: Issue 01 (2007/08)",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "serialPublicationDates": [
+              "Issue 01 (2007-08)-"
+            ],
+            "subjectLiteral_exploded": [
+              "Art",
+              "Art -- Periodicals"
+            ],
+            "numItemDatesParsed": [
+              1
+            ],
+            "publisherLiteral": [
+              "Faculty of Art, Design and Architecture, Kingston University"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              2007
+            ],
+            "dateEndString": [
+              "9999"
+            ],
+            "title": [
+              "Kiosk."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "JQL 18-4"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "2007"
+            ],
+            "idIssn": [
+              "1755-9626"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "contributorLiteral": [
+              "Kingston University (London, England). Faculty of Art, Design and Architecture."
+            ],
+            "dateStartYear": [
+              2007
+            ],
+            "idOclc": [
+              "190792176"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "JQL 18-4"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "21506221"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "190792176"
+              },
+              {
+                "type": "bf:Issn",
+                "value": "1755-9626"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)190792176"
+              }
+            ],
+            "dateEndYear": [
+              9999
+            ],
+            "updatedAt": 1711593229661,
+            "publicationStatement": [
+              "London : Faculty of Art, Design and Architecture, Kingston University, 2007-"
+            ],
+            "genreForm": [
+              "Periodicals."
+            ],
+            "identifier": [
+              "urn:shelfmark:JQL 18-4",
+              "urn:bnum:21506221",
+              "urn:oclc:190792176",
+              "urn:issn:1755-9626",
+              "urn:identifier:(OCoLC)190792176"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "2007"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Art -- Periodicals.",
+              "Art."
+            ],
+            "titleDisplay": [
+              "Kiosk."
+            ],
+            "uri": "b21506221",
+            "lccClassification": [
+              "N1 .K56"
+            ],
+            "placeOfPublication": [
+              "London"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:s",
+                "label": "serial"
+              }
+            ],
+            "dimensions": [
+              "23 cm"
+            ]
+          },
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b21506221",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2007",
+                          "lte": "2008"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "issue 1 (2007/08)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "          -2007"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mab92",
+                          "label": "Schwarzman Building M2 - Art and Architecture Room 300"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mab92||Schwarzman Building M2 - Art and Architecture Room 300"
+                      ],
+                      "idBarcode": [
+                        "33433116522354"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 18-4 issue 1 (2007/08)",
+                        "urn:barcode:33433116522354"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "JQL 18-4 issue 1 (2007/08)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433116522354",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "physicalLocation": [
+                        "JQL 18-4"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "shelfMark": [
+                        "JQL 18-4 issue 1 (2007/08)"
+                      ],
+                      "shelfMark_sort": "aJQL 18-4 issue 1 (2007/08)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "uri": "i35913145"
+                    },
+                    "sort": [
+                      "          -2007"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-05-29",
           "_id": "b16775643",
-          "_score": 15.83865,
+          "_score": 16.792456,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -1054,17 +1364,25 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 10,
+                "total": {
+                  "value": 10,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b16775643",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -1177,6 +1495,8 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b16775643",
                     "_nested": {
                       "field": "items",
                       "offset": 1
@@ -1289,6 +1609,8 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b16775643",
                     "_nested": {
                       "field": "items",
                       "offset": 3
@@ -1400,28 +1722,22 @@
           }
         },
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
-          "_id": "b21506221",
-          "_score": 15.737711,
+          "_index": "resources-2024-05-29",
+          "_id": "b11560439",
+          "_score": 15.704178,
           "_source": {
             "extent": [
-              "v. : ill. ;"
+              "56 volumes : illustrations ;"
             ],
             "note": [
               {
-                "noteType": "Note",
-                "label": "\"A magazine of art, design and architecture.\"",
+                "noteType": "Source of Description",
+                "label": "Description based on: Jaarg. 16, nr. 1, published in 1968.",
                 "type": "bf:Note"
               },
               {
                 "noteType": "Source of Description",
-                "label": "Description based on: Issue 01 (2007/08); title from cover.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Source of Description",
-                "label": "Latest issue consulted: Issue 01 (2007/08)",
+                "label": "Latest issue consulted: Jaarg. 56, nr. 4 (2008).",
                 "type": "bf:Note"
               }
             ],
@@ -1429,101 +1745,127 @@
               "sierra-nypl"
             ],
             "serialPublicationDates": [
-              "Issue 01 (2007-08)-"
+              "Began 1953; ceased in 2008."
             ],
             "subjectLiteral_exploded": [
+              "Rijksmuseum (Netherlands)",
+              "Rijksmuseum (Netherlands) -- Periodicals",
               "Art",
-              "Art -- Periodicals"
+              "Art -- Periodicals",
+              "Art -- Netherlands",
+              "Art -- Netherlands -- Amsterdam",
+              "Art -- Netherlands -- Amsterdam -- Periodicals",
+              "Art -- Netherlands -- Amsterdam -- Periodicals -- Art",
+              "Netherlands",
+              "Netherlands -- Amsterdam"
             ],
             "numItemDatesParsed": [
-              1
+              28
             ],
             "publisherLiteral": [
-              "Faculty of Art, Design and Architecture, Kingston University"
+              "Rijks-Museum"
             ],
             "language": [
               {
-                "id": "lang:eng",
-                "label": "English"
+                "id": "lang:dut",
+                "label": "Dutch"
               }
             ],
             "numItemsTotal": [
-              1
+              28
             ],
             "createdYear": [
-              2007
+              1953
             ],
             "dateEndString": [
-              "9999"
+              "2008"
             ],
             "title": [
-              "Kiosk."
+              "Bulletin van het Rijksmuseum."
             ],
             "type": [
               "nypl:Item"
             ],
             "shelfMark": [
-              "JQL 18-4"
+              "JQL 08-19"
             ],
             "numItemVolumesParsed": [
-              0
+              28
             ],
             "createdString": [
-              "2007"
+              "1953"
+            ],
+            "creatorLiteral": [
+              "Rijksmuseum (Netherlands)"
+            ],
+            "idLccn": [
+              "2009219042"
             ],
             "idIssn": [
-              "1755-9626"
+              "0165-9510"
             ],
             "numElectronicResources": [
-              0
-            ],
-            "contributorLiteral": [
-              "Kingston University (London, England). Faculty of Art, Design and Architecture."
+              2
             ],
             "dateStartYear": [
-              2007
+              1953
+            ],
+            "donor": [
+              "Gift of the DeWitt Wallace Endowment Fund, named in honor of the founder of Reader's Digest"
             ],
             "idOclc": [
-              "190792176"
+              "4272788"
             ],
             "identifierV2": [
               {
                 "type": "bf:ShelfMark",
-                "value": "JQL 18-4"
+                "value": "JQL 08-19"
               },
               {
                 "type": "nypl:Bnumber",
-                "value": "21506221"
+                "value": "11560439"
               },
               {
                 "type": "nypl:Oclc",
-                "value": "190792176"
+                "value": "4272788"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "2009219042"
               },
               {
                 "type": "bf:Issn",
-                "value": "1755-9626"
+                "value": "0165-9510"
               },
               {
                 "type": "bf:Identifier",
-                "value": "(OCoLC)190792176"
+                "value": "(OCoLC)4272788"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)1481032 (OCoLC)646828412 (OCoLC)1001937252 (OCoLC)1036735109 (OCoLC)1052909875 (OCoLC)1064861871"
               }
             ],
             "dateEndYear": [
-              9999
+              2008
             ],
-            "updatedAt": 1711593229661,
+            "updatedAt": 1713883991037,
             "publicationStatement": [
-              "London : Faculty of Art, Design and Architecture, Kingston University, 2007-"
+              "Amsterdam : Rijks-Museum, -©2008."
             ],
             "genreForm": [
-              "Periodicals."
+              "Catalogs.",
+              "Periodicals.",
+              "Art."
             ],
             "identifier": [
-              "urn:shelfmark:JQL 18-4",
-              "urn:bnum:21506221",
-              "urn:oclc:190792176",
-              "urn:issn:1755-9626",
-              "urn:identifier:(OCoLC)190792176"
+              "urn:shelfmark:JQL 08-19",
+              "urn:bnum:11560439",
+              "urn:oclc:4272788",
+              "urn:lccn:2009219042",
+              "urn:issn:0165-9510",
+              "urn:identifier:(OCoLC)4272788",
+              "urn:identifier:(OCoLC)1481032 (OCoLC)646828412 (OCoLC)1001937252 (OCoLC)1036735109 (OCoLC)1052909875 (OCoLC)1064861871"
             ],
             "numCheckinCardItems": [
               0
@@ -1541,7 +1883,7 @@
               }
             ],
             "dateString": [
-              "2007"
+              "1953"
             ],
             "mediaType": [
               {
@@ -1550,18 +1892,30 @@
               }
             ],
             "subjectLiteral": [
+              "Rijksmuseum (Netherlands) -- Periodicals.",
+              "Rijksmuseum (Netherlands)",
               "Art -- Periodicals.",
-              "Art."
+              "Art -- Netherlands -- Amsterdam -- Periodicals -- Art.",
+              "Art.",
+              "Netherlands -- Amsterdam."
             ],
             "titleDisplay": [
-              "Kiosk."
+              "Bulletin van het Rijksmuseum."
             ],
-            "uri": "b21506221",
+            "uri": "b11560439",
             "lccClassification": [
-              "N1 .K56"
+              "N2460 .A3"
+            ],
+            "electronicResources": [
+              {
+                "url": "http://www.rijksmuseum.nl/bulletin?lang=en"
+              },
+              {
+                "url": "http://www.jstor.org/journals/01659510.html"
+              }
             ],
             "placeOfPublication": [
-              "London"
+              "Amsterdam"
             ],
             "issuance": [
               {
@@ -1569,24 +1923,36 @@
                 "label": "serial"
               }
             ],
+            "titleAlt": [
+              "Bull. Rÿksmus.",
+              "Bulletin van het Rÿksmuseum"
+            ],
             "dimensions": [
-              "23 cm"
+              "24 cm"
             ]
           },
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 28,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b11560439",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -1595,12 +1961,126 @@
                     "_source": {
                       "accessMessage": [
                         {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
                         }
                       ],
                       "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2008",
+                          "lte": "2008"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 56 (2008) & Index"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        56-2008"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433099607917"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-19 v. 56 (2008) & Index",
+                        "urn:barcode:33433099607917"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "JQL 08-19 v. 56 (2008) & Index",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433099607917",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-19"
+                      ],
+                      "recapCustomerCode": [
+                        "NQ"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "JQL 08-19 v. 56 (2008) & Index"
+                      ],
+                      "shelfMark_sort": "aJQL 08-19 v. 000056 (2008) & Index",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 56,
+                          "lte": 56
+                        }
+                      ],
+                      "uri": "i28757051"
+                    },
+                    "sort": [
+                      "        56-2008"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b11560439",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
                       ],
                       "catalogItemType": [
                         {
@@ -1614,54 +2094,66 @@
                       "dateRange": [
                         {
                           "gte": "2007",
-                          "lte": "2008"
+                          "lte": "2007"
                         }
                       ],
                       "enumerationChronology": [
-                        "issue 1 (2007/08)"
+                        "v. 55 (2007) & Index"
                       ],
                       "enumerationChronology_sort": [
-                        "          -2007"
+                        "        55-2007"
                       ],
                       "formatLiteral": [
                         "Text"
                       ],
                       "holdingLocation": [
                         {
-                          "id": "loc:mab92",
-                          "label": "Schwarzman Building M2 - Art and Architecture Room 300"
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
                         }
                       ],
                       "holdingLocation_packed": [
-                        "loc:mab92||Schwarzman Building M2 - Art and Architecture Room 300"
+                        "loc:rcmb2||Offsite"
                       ],
                       "idBarcode": [
-                        "33433116522354"
+                        "33433099608063"
                       ],
                       "identifier": [
-                        "urn:shelfmark:JQL 18-4 issue 1 (2007/08)",
-                        "urn:barcode:33433116522354"
+                        "urn:shelfmark:JQL 08-19 v. 55 (2007) & Index",
+                        "urn:barcode:33433099608063"
                       ],
                       "identifierV2": [
                         {
-                          "value": "JQL 18-4 issue 1 (2007/08)",
+                          "value": "JQL 08-19 v. 55 (2007) & Index",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433116522354",
+                          "value": "33433099608063",
                           "type": "bf:Barcode"
                         }
                       ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
                       "physicalLocation": [
-                        "JQL 18-4"
+                        "JQL 08-19"
+                      ],
+                      "recapCustomerCode": [
+                        "NQ"
                       ],
                       "requestable": [
-                        false
+                        true
                       ],
                       "shelfMark": [
-                        "JQL 18-4 issue 1 (2007/08)"
+                        "JQL 08-19 v. 55 (2007) & Index"
                       ],
-                      "shelfMark_sort": "aJQL 18-4 issue 1 (2007/08)",
+                      "shelfMark_sort": "aJQL 08-19 v. 000055 (2007) & Index",
                       "status": [
                         {
                           "id": "status:a",
@@ -1674,10 +2166,130 @@
                       "type": [
                         "bf:Item"
                       ],
-                      "uri": "i35913145"
+                      "volumeRange": [
+                        {
+                          "gte": 55,
+                          "lte": 55
+                        }
+                      ],
+                      "uri": "i28756751"
                     },
                     "sort": [
-                      "          -2007"
+                      "        55-2007"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b11560439",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 2
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2006",
+                          "lte": "2006"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 54 (2006) & Index"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        54-2006"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433099608188"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-19 v. 54 (2006) & Index",
+                        "urn:barcode:33433099608188"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "JQL 08-19 v. 54 (2006) & Index",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433099608188",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-19"
+                      ],
+                      "recapCustomerCode": [
+                        "NQ"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "JQL 08-19 v. 54 (2006) & Index"
+                      ],
+                      "shelfMark_sort": "aJQL 08-19 v. 000054 (2006) & Index",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 54,
+                          "lte": 54
+                        }
+                      ],
+                      "uri": "i28756731"
+                    },
+                    "sort": [
+                      "        54-2006"
                     ]
                   }
                 ]
@@ -1686,10 +2298,9 @@
           }
         },
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-05-29",
           "_id": "b12525718",
-          "_score": 13.032421,
+          "_score": 14.753523,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -1742,11 +2353,11 @@
             "dateEndString": [
               "9999"
             ],
-            "type": [
-              "nypl:Item"
-            ],
             "title": [
               "Bollettino dei Musei comunali di Roma"
+            ],
+            "type": [
+              "nypl:Item"
             ],
             "shelfMark": [
               "JQL 08-17"
@@ -1771,6 +2382,9 @@
             ],
             "dateStartYear": [
               1954
+            ],
+            "idOclc": [
+              "2785323"
             ],
             "identifierV2": [
               {
@@ -1797,9 +2411,6 @@
                 "type": "bf:Identifier",
                 "value": "(WaOLN)S010000043"
               }
-            ],
-            "idOclc": [
-              "2785323"
             ],
             "dateEndYear": [
               9999
@@ -2137,15 +2748,15 @@
             "placeOfPublication": [
               "[Roma]"
             ],
-            "titleAlt": [
-              "Boll. Mus. comunali Roma",
-              "Bollettino dei Musei comunali di Roma"
-            ],
             "issuance": [
               {
                 "id": "urn:biblevel:s",
                 "label": "serial"
               }
+            ],
+            "titleAlt": [
+              "Boll. Mus. comunali Roma",
+              "Bollettino dei Musei comunali di Roma"
             ],
             "dimensions": [
               "25 cm."
@@ -2154,17 +2765,25 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 45,
+                "total": {
+                  "value": 45,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b12525718",
                     "_nested": {
                       "field": "items",
                       "offset": 44
@@ -2242,6 +2861,8 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b12525718",
                     "_nested": {
                       "field": "items",
                       "offset": 43
@@ -2319,6 +2940,8 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-05-29",
+                    "_id": "b12525718",
                     "_nested": {
                       "field": "items",
                       "offset": 42
@@ -2393,571 +3016,6 @@
                     },
                     "sort": [
                       "        32-2018-01-01"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
-          "_id": "b11560439",
-          "_score": 12.923024,
-          "_source": {
-            "extent": [
-              "56 volumes : illustrations ;"
-            ],
-            "note": [
-              {
-                "noteType": "Source of Description",
-                "label": "Description based on: Jaarg. 16, nr. 1, published in 1968.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Source of Description",
-                "label": "Latest issue consulted: Jaarg. 56, nr. 4 (2008).",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "serialPublicationDates": [
-              "Began 1953; ceased in 2008."
-            ],
-            "subjectLiteral_exploded": [
-              "Rijksmuseum (Netherlands)",
-              "Rijksmuseum (Netherlands) -- Periodicals",
-              "Art",
-              "Art -- Periodicals",
-              "Art -- Netherlands",
-              "Art -- Netherlands -- Amsterdam",
-              "Art -- Netherlands -- Amsterdam -- Periodicals",
-              "Art -- Netherlands -- Amsterdam -- Periodicals -- Art",
-              "Netherlands",
-              "Netherlands -- Amsterdam"
-            ],
-            "numItemDatesParsed": [
-              28
-            ],
-            "publisherLiteral": [
-              "Rijks-Museum"
-            ],
-            "language": [
-              {
-                "id": "lang:dut",
-                "label": "Dutch"
-              }
-            ],
-            "numItemsTotal": [
-              28
-            ],
-            "createdYear": [
-              1953
-            ],
-            "dateEndString": [
-              "2008"
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "title": [
-              "Bulletin van het Rijksmuseum."
-            ],
-            "shelfMark": [
-              "JQL 08-19"
-            ],
-            "numItemVolumesParsed": [
-              28
-            ],
-            "createdString": [
-              "1953"
-            ],
-            "creatorLiteral": [
-              "Rijksmuseum (Netherlands)"
-            ],
-            "idLccn": [
-              "2009219042"
-            ],
-            "idIssn": [
-              "0165-9510"
-            ],
-            "numElectronicResources": [
-              2
-            ],
-            "dateStartYear": [
-              1953
-            ],
-            "donor": [
-              "Gift of the DeWitt Wallace Endowment Fund, named in honor of the founder of Reader's Digest"
-            ],
-            "identifierV2": [
-              {
-                "type": "bf:ShelfMark",
-                "value": "JQL 08-19"
-              },
-              {
-                "type": "nypl:Bnumber",
-                "value": "11560439"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "4272788"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "2009219042"
-              },
-              {
-                "type": "bf:Issn",
-                "value": "0165-9510"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(OCoLC)4272788"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(OCoLC)1481032 (OCoLC)646828412 (OCoLC)1001937252 (OCoLC)1036735109 (OCoLC)1052909875 (OCoLC)1064861871"
-              }
-            ],
-            "idOclc": [
-              "4272788"
-            ],
-            "dateEndYear": [
-              2008
-            ],
-            "updatedAt": 1711632738331,
-            "publicationStatement": [
-              "Amsterdam : Rijks-Museum, -©2008."
-            ],
-            "identifier": [
-              "urn:shelfmark:JQL 08-19",
-              "urn:bnum:11560439",
-              "urn:oclc:4272788",
-              "urn:lccn:2009219042",
-              "urn:issn:0165-9510",
-              "urn:identifier:(OCoLC)4272788",
-              "urn:identifier:(OCoLC)1481032 (OCoLC)646828412 (OCoLC)1001937252 (OCoLC)1036735109 (OCoLC)1052909875 (OCoLC)1064861871"
-            ],
-            "genreForm": [
-              "Catalogs.",
-              "Periodicals.",
-              "Art."
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:txt",
-                "label": "Text"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1953"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Rijksmuseum (Netherlands) -- Periodicals.",
-              "Rijksmuseum (Netherlands)",
-              "Art -- Periodicals.",
-              "Art -- Netherlands -- Amsterdam -- Periodicals -- Art.",
-              "Art.",
-              "Netherlands -- Amsterdam."
-            ],
-            "titleDisplay": [
-              "Bulletin van het Rijksmuseum."
-            ],
-            "uri": "b11560439",
-            "lccClassification": [
-              "N2460 .A3"
-            ],
-            "electronicResources": [
-              {
-                "url": "http://www.rijksmuseum.nl/bulletin?lang=en"
-              },
-              {
-                "url": "http://www.jstor.org/journals/01659510.html"
-              }
-            ],
-            "placeOfPublication": [
-              "Amsterdam"
-            ],
-            "titleAlt": [
-              "Bull. Rÿksmus.",
-              "Bulletin van het Rÿksmuseum"
-            ],
-            "issuance": [
-              {
-                "id": "urn:biblevel:s",
-                "label": "serial"
-              }
-            ],
-            "dimensions": [
-              "24 cm"
-            ]
-          },
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": 0,
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": 28,
-                "max_score": null,
-                "hits": [
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2008",
-                          "lte": "2008"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "v. 56 (2008) & Index"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        56-2008"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcmb2",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcmb2||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433099607917"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:JQL 08-19 v. 56 (2008) & Index",
-                        "urn:barcode:33433099607917"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "JQL 08-19 v. 56 (2008) & Index",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433099607917",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1110",
-                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                      ],
-                      "physicalLocation": [
-                        "JQL 08-19"
-                      ],
-                      "recapCustomerCode": [
-                        "NQ"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "JQL 08-19 v. 56 (2008) & Index"
-                      ],
-                      "shelfMark_sort": "aJQL 08-19 v. 000056 (2008) & Index",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 56,
-                          "lte": 56
-                        }
-                      ],
-                      "uri": "i28757051"
-                    },
-                    "sort": [
-                      "        56-2008"
-                    ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2007",
-                          "lte": "2007"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "v. 55 (2007) & Index"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        55-2007"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcmb2",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcmb2||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433099608063"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:JQL 08-19 v. 55 (2007) & Index",
-                        "urn:barcode:33433099608063"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "JQL 08-19 v. 55 (2007) & Index",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433099608063",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1110",
-                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                      ],
-                      "physicalLocation": [
-                        "JQL 08-19"
-                      ],
-                      "recapCustomerCode": [
-                        "NQ"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "JQL 08-19 v. 55 (2007) & Index"
-                      ],
-                      "shelfMark_sort": "aJQL 08-19 v. 000055 (2007) & Index",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 55,
-                          "lte": 55
-                        }
-                      ],
-                      "uri": "i28756751"
-                    },
-                    "sort": [
-                      "        55-2007"
-                    ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 2
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2006",
-                          "lte": "2006"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "v. 54 (2006) & Index"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        54-2006"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcmb2",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcmb2||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433099608188"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:JQL 08-19 v. 54 (2006) & Index",
-                        "urn:barcode:33433099608188"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "JQL 08-19 v. 54 (2006) & Index",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433099608188",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1110",
-                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                      ],
-                      "physicalLocation": [
-                        "JQL 08-19"
-                      ],
-                      "recapCustomerCode": [
-                        "NQ"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "JQL 08-19 v. 54 (2006) & Index"
-                      ],
-                      "shelfMark_sort": "aJQL 08-19 v. 000054 (2006) & Index",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 54,
-                          "lte": 54
-                        }
-                      ],
-                      "uri": "i28756731"
-                    },
-                    "sort": [
-                      "        54-2006"
                     ]
                   }
                 ]
