@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 116,
+    "took": 113,
     "timed_out": false,
     "_shards": {
       "total": 1,
@@ -13,12 +13,12 @@
         "value": 5,
         "relation": "eq"
       },
-      "max_score": 69.03697,
+      "max_score": 71.03697,
       "hits": [
         {
-          "_index": "resources-2024-05-29",
+          "_index": "resources-2024-05-31",
           "_id": "b11826883",
-          "_score": 69.03697,
+          "_score": 71.03697,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -551,7 +551,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b11826883",
                     "_nested": {
                       "field": "items",
@@ -665,7 +665,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b11826883",
                     "_nested": {
                       "field": "items",
@@ -744,7 +744,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b11826883",
                     "_nested": {
                       "field": "items",
@@ -863,9 +863,9 @@
           }
         },
         {
-          "_index": "resources-2024-05-29",
+          "_index": "resources-2024-05-31",
           "_id": "b21506221",
-          "_score": 16.792456,
+          "_score": 18.792456,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -1055,7 +1055,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b21506221",
                     "_nested": {
                       "field": "items",
@@ -1156,575 +1156,9 @@
           }
         },
         {
-          "_index": "resources-2024-05-29",
-          "_id": "b16775643",
-          "_score": 16.792456,
-          "_source": {
-            "extent": [
-              "v. : ill. ;"
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "Title from cover.",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "serialPublicationDates": [
-              "No. 16 (fall 1982)-"
-            ],
-            "subjectLiteral_exploded": [
-              "Art",
-              "Art -- Research",
-              "Art -- Research -- Periodicals"
-            ],
-            "numItemDatesParsed": [
-              10
-            ],
-            "publisherLiteral": [
-              "University of Illinois Press"
-            ],
-            "language": [
-              {
-                "id": "lang:eng",
-                "label": "English"
-              }
-            ],
-            "numItemsTotal": [
-              10
-            ],
-            "createdYear": [
-              1982
-            ],
-            "dateEndString": [
-              "9999"
-            ],
-            "title": [
-              "Visual arts research."
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "shelfMark": [
-              "JQL 08-3"
-            ],
-            "numItemVolumesParsed": [
-              2
-            ],
-            "createdString": [
-              "1982"
-            ],
-            "idLccn": [
-              "83644328"
-            ],
-            "idIssn": [
-              "0736-0770"
-            ],
-            "numElectronicResources": [
-              0
-            ],
-            "dateStartYear": [
-              1982
-            ],
-            "idOclc": [
-              "9069635"
-            ],
-            "identifierV2": [
-              {
-                "type": "bf:ShelfMark",
-                "value": "JQL 08-3"
-              },
-              {
-                "type": "nypl:Bnumber",
-                "value": "16775643"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "9069635"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "83644328"
-              },
-              {
-                "type": "bf:Issn",
-                "value": "0736-0770"
-              },
-              {
-                "type": "bf:Issn",
-                "identifierStatus": "incorrect",
-                "value": "0160-3221"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(OCoLC)9069635"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)S240000007"
-              }
-            ],
-            "dateEndYear": [
-              9999
-            ],
-            "holdings": [
-              {
-                "holdingStatement": [
-                  "9(1983)-27(2001)-"
-                ],
-                "identifier": [
-                  {
-                    "type": "bf:shelfMark",
-                    "value": "JQL 08-3"
-                  }
-                ],
-                "physicalLocation": [
-                  "JQL 08-3"
-                ],
-                "location": [
-                  {
-                    "code": "loc:mab82",
-                    "label": "Schwarzman Building M1 - Art & Architecture Room 300"
-                  }
-                ],
-                "shelfMark": [
-                  "JQL 08-3"
-                ],
-                "uri": "h1090282"
-              }
-            ],
-            "updatedAt": 1711226746443,
-            "publicationStatement": [
-              "[Champaign, Ill.] : University of Illinois Press, c1982-"
-            ],
-            "identifier": [
-              "urn:shelfmark:JQL 08-3",
-              "urn:bnum:16775643",
-              "urn:oclc:9069635",
-              "urn:lccn:83644328",
-              "urn:issn:0736-0770",
-              "urn:issn:0160-3221",
-              "urn:identifier:(OCoLC)9069635",
-              "urn:identifier:(WaOLN)S240000007"
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:txt",
-                "label": "Text"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1982"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Art -- Research -- Periodicals."
-            ],
-            "titleDisplay": [
-              "Visual arts research."
-            ],
-            "uri": "b16775643",
-            "lccClassification": [
-              "N81 .R49"
-            ],
-            "placeOfPublication": [
-              "[Champaign, Ill.]"
-            ],
-            "issuance": [
-              {
-                "id": "urn:biblevel:s",
-                "label": "serial"
-              }
-            ],
-            "titleAlt": [
-              "Vis. arts res.",
-              "Visual arts research"
-            ],
-            "dimensions": [
-              "23 cm."
-            ]
-          },
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 10,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-05-29",
-                    "_id": "b16775643",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2012",
-                          "lte": "2012"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "v. 38, no. 1, Issue 74 (Sum. 2012)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        38-2012"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcmb2",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcmb2||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433115147914"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:JQL 08-3 v. 38, no. 1, Issue 74 (Sum. 2012)",
-                        "urn:barcode:33433115147914"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "JQL 08-3 v. 38, no. 1, Issue 74 (Sum. 2012)",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433115147914",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1110",
-                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                      ],
-                      "physicalLocation": [
-                        "JQL 08-3"
-                      ],
-                      "recapCustomerCode": [
-                        "NQ"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "JQL 08-3 v. 38, no. 1, Issue 74 (Sum. 2012)"
-                      ],
-                      "shelfMark_sort": "aJQL 08-3 v. 000038, no. 1, Issue 74 (Sum. 2012)",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 38,
-                          "lte": 38
-                        }
-                      ],
-                      "uri": "i29405160"
-                    },
-                    "sort": [
-                      "        38-2012"
-                    ]
-                  },
-                  {
-                    "_index": "resources-2024-05-29",
-                    "_id": "b16775643",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "1989",
-                          "lte": "1990"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "v. 15-16 (1989-90)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        15-1989"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcmb2",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcmb2||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433105255586"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:JQL 08-3 v. 15-16 (1989-90)",
-                        "urn:barcode:33433105255586"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "JQL 08-3 v. 15-16 (1989-90)",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433105255586",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1110",
-                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                      ],
-                      "physicalLocation": [
-                        "JQL 08-3"
-                      ],
-                      "recapCustomerCode": [
-                        "NQ"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "JQL 08-3 v. 15-16 (1989-90)"
-                      ],
-                      "shelfMark_sort": "aJQL 08-3 v. 000015-16 (1989-90)",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 15,
-                          "lte": 16
-                        }
-                      ],
-                      "uri": "i29627807"
-                    },
-                    "sort": [
-                      "        15-1989"
-                    ]
-                  },
-                  {
-                    "_index": "resources-2024-05-29",
-                    "_id": "b16775643",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 3
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2000",
-                          "lte": "2001"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "26-27 (2000-2001)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "          -2000"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcmb2",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcmb2||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433074083142"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:JQL 08-3 26-27 (2000-2001)",
-                        "urn:barcode:33433074083142"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "JQL 08-3 26-27 (2000-2001)",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433074083142",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1110",
-                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
-                      ],
-                      "physicalLocation": [
-                        "JQL 08-3"
-                      ],
-                      "recapCustomerCode": [
-                        "NQ"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "JQL 08-3 26-27 (2000-2001)"
-                      ],
-                      "shelfMark_sort": "aJQL 08-3 26-27 (2000-2001)",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "uri": "i17662016"
-                    },
-                    "sort": [
-                      "          -2000"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2024-05-29",
+          "_index": "resources-2024-05-31",
           "_id": "b11560439",
-          "_score": 15.704178,
+          "_score": 17.704178,
           "_source": {
             "extent": [
               "56 volumes : illustrations ;"
@@ -1951,7 +1385,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b11560439",
                     "_nested": {
                       "field": "items",
@@ -2065,7 +1499,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b11560439",
                     "_nested": {
                       "field": "items",
@@ -2179,7 +1613,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b11560439",
                     "_nested": {
                       "field": "items",
@@ -2298,9 +1732,575 @@
           }
         },
         {
-          "_index": "resources-2024-05-29",
+          "_index": "resources-2024-05-31",
+          "_id": "b16775643",
+          "_score": 16.792456,
+          "_source": {
+            "extent": [
+              "v. : ill. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "Title from cover.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "serialPublicationDates": [
+              "No. 16 (fall 1982)-"
+            ],
+            "subjectLiteral_exploded": [
+              "Art",
+              "Art -- Research",
+              "Art -- Research -- Periodicals"
+            ],
+            "numItemDatesParsed": [
+              10
+            ],
+            "publisherLiteral": [
+              "University of Illinois Press"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              10
+            ],
+            "createdYear": [
+              1982
+            ],
+            "dateEndString": [
+              "9999"
+            ],
+            "title": [
+              "Visual arts research."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "JQL 08-3"
+            ],
+            "numItemVolumesParsed": [
+              2
+            ],
+            "createdString": [
+              "1982"
+            ],
+            "idLccn": [
+              "83644328"
+            ],
+            "idIssn": [
+              "0736-0770"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1982
+            ],
+            "idOclc": [
+              "9069635"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "JQL 08-3"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "16775643"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "9069635"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "83644328"
+              },
+              {
+                "type": "bf:Issn",
+                "value": "0736-0770"
+              },
+              {
+                "type": "bf:Issn",
+                "identifierStatus": "incorrect",
+                "value": "0160-3221"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)9069635"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)S240000007"
+              }
+            ],
+            "dateEndYear": [
+              9999
+            ],
+            "holdings": [
+              {
+                "holdingStatement": [
+                  "9(1983)-27(2001)-"
+                ],
+                "identifier": [
+                  {
+                    "type": "bf:shelfMark",
+                    "value": "JQL 08-3"
+                  }
+                ],
+                "physicalLocation": [
+                  "JQL 08-3"
+                ],
+                "location": [
+                  {
+                    "code": "loc:mab82",
+                    "label": "Schwarzman Building M1 - Art & Architecture Room 300"
+                  }
+                ],
+                "shelfMark": [
+                  "JQL 08-3"
+                ],
+                "uri": "h1090282"
+              }
+            ],
+            "updatedAt": 1711226746443,
+            "publicationStatement": [
+              "[Champaign, Ill.] : University of Illinois Press, c1982-"
+            ],
+            "identifier": [
+              "urn:shelfmark:JQL 08-3",
+              "urn:bnum:16775643",
+              "urn:oclc:9069635",
+              "urn:lccn:83644328",
+              "urn:issn:0736-0770",
+              "urn:issn:0160-3221",
+              "urn:identifier:(OCoLC)9069635",
+              "urn:identifier:(WaOLN)S240000007"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1982"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Art -- Research -- Periodicals."
+            ],
+            "titleDisplay": [
+              "Visual arts research."
+            ],
+            "uri": "b16775643",
+            "lccClassification": [
+              "N81 .R49"
+            ],
+            "placeOfPublication": [
+              "[Champaign, Ill.]"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:s",
+                "label": "serial"
+              }
+            ],
+            "titleAlt": [
+              "Vis. arts res.",
+              "Visual arts research"
+            ],
+            "dimensions": [
+              "23 cm."
+            ]
+          },
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 10,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-05-31",
+                    "_id": "b16775643",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2012",
+                          "lte": "2012"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 38, no. 1, Issue 74 (Sum. 2012)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        38-2012"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433115147914"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-3 v. 38, no. 1, Issue 74 (Sum. 2012)",
+                        "urn:barcode:33433115147914"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "JQL 08-3 v. 38, no. 1, Issue 74 (Sum. 2012)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433115147914",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-3"
+                      ],
+                      "recapCustomerCode": [
+                        "NQ"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "JQL 08-3 v. 38, no. 1, Issue 74 (Sum. 2012)"
+                      ],
+                      "shelfMark_sort": "aJQL 08-3 v. 000038, no. 1, Issue 74 (Sum. 2012)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 38,
+                          "lte": 38
+                        }
+                      ],
+                      "uri": "i29405160"
+                    },
+                    "sort": [
+                      "        38-2012"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-05-31",
+                    "_id": "b16775643",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "1989",
+                          "lte": "1990"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 15-16 (1989-90)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        15-1989"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433105255586"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-3 v. 15-16 (1989-90)",
+                        "urn:barcode:33433105255586"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "JQL 08-3 v. 15-16 (1989-90)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433105255586",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-3"
+                      ],
+                      "recapCustomerCode": [
+                        "NQ"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "JQL 08-3 v. 15-16 (1989-90)"
+                      ],
+                      "shelfMark_sort": "aJQL 08-3 v. 000015-16 (1989-90)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 15,
+                          "lte": 16
+                        }
+                      ],
+                      "uri": "i29627807"
+                    },
+                    "sort": [
+                      "        15-1989"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-05-31",
+                    "_id": "b16775643",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 3
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2000",
+                          "lte": "2001"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "26-27 (2000-2001)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "          -2000"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433074083142"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-3 26-27 (2000-2001)",
+                        "urn:barcode:33433074083142"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "JQL 08-3 26-27 (2000-2001)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433074083142",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-3"
+                      ],
+                      "recapCustomerCode": [
+                        "NQ"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "JQL 08-3 26-27 (2000-2001)"
+                      ],
+                      "shelfMark_sort": "aJQL 08-3 26-27 (2000-2001)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "uri": "i17662016"
+                    },
+                    "sort": [
+                      "          -2000"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-05-31",
           "_id": "b12525718",
-          "_score": 14.753523,
+          "_score": 16.753523,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -2782,7 +2782,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b12525718",
                     "_nested": {
                       "field": "items",
@@ -2861,7 +2861,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b12525718",
                     "_nested": {
                       "field": "items",
@@ -2940,7 +2940,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-05-29",
+                    "_index": "resources-2024-05-31",
                     "_id": "b12525718",
                     "_nested": {
                       "field": "items",

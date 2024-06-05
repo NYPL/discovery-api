@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 62,
+    "took": 27,
     "timed_out": false,
     "_shards": {
       "total": 1,
@@ -13,28 +13,28 @@
         "value": 1,
         "relation": "eq"
       },
-      "max_score": 159.35564,
+      "max_score": 130.26839,
       "hits": [
         {
-          "_index": "resources-2024-05-29",
-          "_id": "b12709113",
-          "_score": 159.35564,
+          "_index": "resources-2024-05-31",
+          "_id": "b13627363",
+          "_score": 130.26839,
           "_source": {
             "extent": [
-              "iv, 350 p. : ill., port. ;"
+              "128 p. illus."
             ],
             "nyplSource": [
               "sierra-nypl"
             ],
             "subjectLiteral_exploded": [
-              "Washington County (Neb.)",
-              "Washington County (Neb.) -- History"
+              "Cats",
+              "Cats -- Pictorial works"
             ],
             "numItemDatesParsed": [
               0
             ],
             "publisherLiteral": [
-              "Magic city printing co."
+              "Creative age press, inc."
             ],
             "language": [
               {
@@ -46,57 +46,73 @@
               1
             ],
             "createdYear": [
-              1937
+              1947
             ],
             "title": [
-              "A history of Washington county, Nebraska"
+              "Cats, cats, & cats"
             ],
             "type": [
               "nypl:Item"
             ],
             "shelfMark": [
-              "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+              "VPS (Rice, E. Cats, cats, & cats)"
             ],
             "numItemVolumesParsed": [
               0
             ],
             "createdString": [
-              "1937"
+              "1947"
             ],
             "creatorLiteral": [
-              "Shrader, Forrest B."
+              "Rice, Edward, 1917-"
+            ],
+            "idLccn": [
+              "agr47000211"
             ],
             "numElectronicResources": [
               0
             ],
+            "contributorLiteral": [
+              "Gleason, Jean, 1917-"
+            ],
             "dateStartYear": [
-              1937
+              1947
             ],
             "idOclc": [
-              "9566258"
+              "1303934"
             ],
             "identifierV2": [
               {
                 "type": "bf:ShelfMark",
-                "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                "value": "VPS (Rice, E. Cats, cats, & cats)"
               },
               {
                 "type": "nypl:Bnumber",
-                "value": "12709113"
+                "value": "13627363"
               },
               {
                 "type": "nypl:Oclc",
-                "value": "9566258"
+                "value": "1303934"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "agr47000211"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp3600714"
               }
             ],
-            "updatedAt": 1711220358338,
+            "updatedAt": 1711615235963,
             "publicationStatement": [
-              "[Omaha, : Magic city printing co., 1937]"
+              "New York, Creative age press, inc. [c1947]"
             ],
             "identifier": [
-              "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
-              "urn:bnum:12709113",
-              "urn:oclc:9566258"
+              "urn:shelfmark:VPS (Rice, E. Cats, cats, & cats)",
+              "urn:bnum:13627363",
+              "urn:oclc:1303934",
+              "urn:lccn:agr47000211",
+              "urn:identifier:(WaOLN)nyp3600714"
             ],
             "numCheckinCardItems": [
               0
@@ -114,7 +130,7 @@
               }
             ],
             "dateString": [
-              "1937"
+              "1947"
             ],
             "mediaType": [
               {
@@ -123,14 +139,18 @@
               }
             ],
             "subjectLiteral": [
-              "Washington County (Neb.) -- History."
+              "Cats.",
+              "Cats -- Pictorial works."
             ],
             "titleDisplay": [
-              "A history of Washington county, Nebraska / by Forrest B. Shrader."
+              "Cats, cats, & cats, by Edward Rice and Jean Gleason."
             ],
-            "uri": "b12709113",
+            "uri": "b13627363",
+            "lccClassification": [
+              "SF447 .R5"
+            ],
             "placeOfPublication": [
-              "[Omaha,"
+              "New York"
             ],
             "issuance": [
               {
@@ -139,7 +159,7 @@
               }
             ],
             "dimensions": [
-              "24 cm."
+              "25 cm."
             ]
           },
           "inner_hits": {
@@ -162,8 +182,8 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-05-29",
-                    "_id": "b12709113",
+                    "_index": "resources-2024-05-31",
+                    "_id": "b13627363",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -172,12 +192,12 @@
                     "_source": {
                       "accessMessage": [
                         {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
                         }
                       ],
                       "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
+                        "accessMessage:2||Request in advance"
                       ],
                       "catalogItemType": [
                         {
@@ -193,43 +213,52 @@
                       ],
                       "holdingLocation": [
                         {
-                          "id": "loc:mag92",
-                          "label": "Schwarzman Building M2 - Milstein Division Room 121"
+                          "id": "loc:rc2ma",
+                          "label": "Offsite"
                         }
                       ],
                       "holdingLocation_packed": [
-                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                        "loc:rc2ma||Offsite"
                       ],
                       "idBarcode": [
-                        "33433099509238"
+                        "33433006598316"
                       ],
                       "identifier": [
-                        "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
-                        "urn:barcode:33433099509238"
+                        "urn:shelfmark:VPS (Rice, E. Cats, cats, & cats)",
+                        "urn:barcode:33433006598316"
                       ],
                       "identifierV2": [
                         {
-                          "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                          "value": "VPS (Rice, E. Cats, cats, & cats)",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433099509238",
+                          "value": "33433006598316",
                           "type": "bf:Barcode"
                         }
                       ],
-                      "m2CustomerCode": [
-                        "XA"
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
                       ],
                       "physicalLocation": [
-                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                        "VPS (Rice, E. Cats, cats, & cats)"
+                      ],
+                      "recapCustomerCode": [
+                        "NL"
                       ],
                       "requestable": [
                         true
                       ],
                       "shelfMark": [
-                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                        "VPS (Rice, E. Cats, cats, & cats)"
                       ],
-                      "shelfMark_sort": "aIWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                      "shelfMark_sort": "aVPS (Rice, E. Cats, cats, & cats)",
                       "status": [
                         {
                           "id": "status:a",
@@ -242,7 +271,7 @@
                       "type": [
                         "bf:Item"
                       ],
-                      "uri": "i16202472"
+                      "uri": "i10754478"
                     },
                     "sort": [
                       null
