@@ -31,7 +31,7 @@ describe('Resources query', function () {
       expect(params.search_scope).to.equal('all')
       expect(params.page).to.equal(1)
       expect(params.per_page).to.equal(50)
-      expect(params.sort).to.equal(undefined)
+      expect(params.sort).to.equal('relevance')
       expect(params.filters).to.equal(undefined)
       expect(params.merge_checkin_card_items).to.equal(true)
       expect(params.include_item_aggregations).to.equal(true)

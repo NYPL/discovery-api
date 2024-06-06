@@ -459,13 +459,13 @@ describe('Test Resources responses', function () {
       })
     })
 
-    it(`Resource search all (${searchAllUrl}) returns lots o' results`, function (done) {
+    it(`Resource search all (${searchAllUrl}) returns lots o' results (10K max)`, function (done) {
       request.get(searchAllUrl, function (err, response, body) {
         if (err) throw err
 
         const doc = JSON.parse(body)
 
-        assert(doc.totalResults > 400000)
+        assert(doc.totalResults === 10000)
         assert.equal(50, doc.itemListElement.length)
 
         done()
@@ -591,7 +591,7 @@ describe('Test Resources responses', function () {
     it('Ensure a chain of added filters reduces resultset correctly', function (done) {
       const dates = [1984, 1985]
 
-      let nextUrl = searchAllUrl
+      let nextUrl = searchAllUrl + 'toast'
 
       // Fetch all results:
       request.get(nextUrl, function (err, response, body) {
