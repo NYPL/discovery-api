@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 6,
+    "took": 17,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 15.522671,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b10001936",
-          "_score": 15.522671,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "400 p. ;"
@@ -73,11 +76,11 @@
             "createdYear": [
               1891
             ],
-            "type": [
-              "nypl:Item"
-            ],
             "title": [
               "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan"
+            ],
+            "type": [
+              "nypl:Item"
             ],
             "shelfMark": [
               "*ONR 84-743"
@@ -85,17 +88,20 @@
             "numItemVolumesParsed": [
               0
             ],
-            "creatorLiteral": [
-              "Shermazanian, Galust."
-            ],
             "createdString": [
               "1891"
+            ],
+            "creatorLiteral": [
+              "Shermazanian, Galust."
             ],
             "numElectronicResources": [
               1
             ],
             "dateStartYear": [
               1891
+            ],
+            "idOclc": [
+              "NYPG002001377-B"
             ],
             "identifierV2": [
               {
@@ -119,18 +125,16 @@
                 "value": "(WaOLN)nyp0201934"
               }
             ],
-            "idOclc": [
-              "NYPG002001377-B"
-            ],
-            "updatedAt": 1671714296499,
+            "updatedAt": 1711185810085,
             "publicationStatement": [
               "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
             ],
             "identifier": [
+              "urn:shelfmark:*ONR 84-743",
               "urn:bnum:10001936",
               "urn:oclc:NYPG002001377-B",
-              "urn:undefined:NNSZ00201976",
-              "urn:undefined:(WaOLN)nyp0201934"
+              "urn:identifier:NNSZ00201976",
+              "urn:identifier:(WaOLN)nyp0201934"
             ],
             "numCheckinCardItems": [
               0
@@ -163,11 +167,11 @@
               "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan / Ashkhatasirutʻiamb Galust Shermazaniani."
             ],
             "uri": "b10001936",
-            "numItems": [
-              1
-            ],
-            "numAvailable": [
-              1
+            "electronicResources": [
+              {
+                "label": "Full text available via HathiTrust",
+                "url": "http://hdl.handle.net/2027/nyp.33433001892276"
+              }
             ],
             "placeOfPublication": [
               "Ṛostov (Doni Vra)"
@@ -185,65 +189,39 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 1,
-                "max_score": 1,
-                "hits": [
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": 1,
-                    "_source": {
-                      "uri": "i10001936-e",
-                      "electronicLocator": [
-                        {
-                          "url": "http://hdl.handle.net/2027/nyp.33433001892276",
-                          "label": "Full text available via HathiTrust"
-                        }
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "shelfMark_sort": "bi10001936-e"
-                    }
-                  }
-                ]
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10001936",
                     "_nested": {
                       "field": "items",
                       "offset": 0
                     },
                     "_score": null,
                     "_source": {
-                      "uri": "i10001320",
-                      "status": [
+                      "accessMessage": [
                         {
-                          "id": "status:a",
-                          "label": "Available"
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
                         }
                       ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1000",
-                          "label": "Stephen A. Schwarzman Building"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1000||Stephen A. Schwarzman Building"
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
                       ],
                       "catalogItemType": [
                         {
@@ -254,6 +232,9 @@
                       "catalogItemType_packed": [
                         "catalogItemType:32||google project, book"
                       ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
                       "holdingLocation": [
                         {
                           "id": "loc:rc2ma",
@@ -263,8 +244,12 @@
                       "holdingLocation_packed": [
                         "loc:rc2ma||Offsite"
                       ],
-                      "shelfMark": [
-                        "*ONR 84-743"
+                      "idBarcode": [
+                        "33433001892276"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*ONR 84-743",
+                        "urn:barcode:33433001892276"
                       ],
                       "identifierV2": [
                         {
@@ -272,9 +257,18 @@
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "type": "bf:Barcode",
-                          "value": "33433001892276"
+                          "value": "33433001892276",
+                          "type": "bf:Barcode"
                         }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
                       ],
                       "physicalLocation": [
                         "*ONR 84-743"
@@ -282,31 +276,26 @@
                       "recapCustomerCode": [
                         "NA"
                       ],
-                      "identifier": [
-                        "urn:barcode:33433001892276"
-                      ],
-                      "idBarcode": [
-                        "33433001892276"
-                      ],
                       "requestable": [
                         true
                       ],
-                      "accessMessage": [
+                      "shelfMark": [
+                        "*ONR 84-743"
+                      ],
+                      "shelfMark_sort": "a*ONR 84-000743",
+                      "status": [
                         {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
+                      "status_packed": [
+                        "status:a||Available"
                       ],
                       "type": [
                         "bf:Item"
                       ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "shelfMark_sort": "a*ONR 84-000743"
+                      "uri": "i10001320"
                     },
                     "sort": [
                       null
@@ -321,7 +310,7 @@
     },
     "aggregations": {
       "item_location": {
-        "doc_count": 2,
+        "doc_count": 1,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
@@ -334,20 +323,20 @@
         }
       },
       "item_format": {
-        "doc_count": 2,
+        "doc_count": 1,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
           "buckets": [
             {
               "key": "Text",
-              "doc_count": 2
+              "doc_count": 1
             }
           ]
         }
       },
       "item_status": {
-        "doc_count": 2,
+        "doc_count": 1,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
@@ -361,50 +350,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:56 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "4314",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b10001936\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "917"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 34
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }

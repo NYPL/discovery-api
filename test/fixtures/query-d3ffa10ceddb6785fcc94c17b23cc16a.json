@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 21,
+    "took": 7,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 14.457149,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b11984689",
-          "_score": 14.457149,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "v. ill."
@@ -126,7 +129,7 @@
             "dateEndYear": [
               1962
             ],
-            "updatedAt": 1698410917342,
+            "updatedAt": 1711143631058,
             "publicationStatement": [
               "Don Mills, Ont. [etc.] Southam-Maclean Publications [etc.]"
             ],
@@ -190,22 +193,30 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "allItems": {
               "hits": {
-                "total": 19,
-                "max_score": 1,
+                "total": {
+                  "value": 19,
+                  "relation": "eq"
+                },
+                "max_score": 0,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b11984689",
                     "_nested": {
                       "field": "items",
-                      "offset": 18
+                      "offset": 0
                     },
-                    "_score": 1,
+                    "_score": 0,
                     "_source": {
                       "accessMessage": [
                         {
@@ -227,15 +238,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "1944",
-                          "lte": "1944"
+                          "gte": "1962",
+                          "lte": "1962"
                         }
                       ],
                       "enumerationChronology": [
-                        "v. 44 (1944)"
+                        "v. 62 (Jan. -July 1962)"
                       ],
                       "enumerationChronology_sort": [
-                        "        44-1944"
+                        "        62-1962"
                       ],
                       "formatLiteral": [
                         "Text"
@@ -250,19 +261,19 @@
                         "loc:rc2ma||Offsite"
                       ],
                       "idBarcode": [
-                        "33433102812199"
+                        "33433102813007"
                       ],
                       "identifier": [
-                        "urn:shelfmark:VMA (Canadian woodworker) v. 44 (1944)",
-                        "urn:barcode:33433102812199"
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 62 (Jan. -July 1962)",
+                        "urn:barcode:33433102813007"
                       ],
                       "identifierV2": [
                         {
-                          "value": "VMA (Canadian woodworker) v. 44 (1944)",
+                          "value": "VMA (Canadian woodworker) v. 62 (Jan. -July 1962)",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433102812199",
+                          "value": "33433102813007",
                           "type": "bf:Barcode"
                         }
                       ],
@@ -285,9 +296,9 @@
                         true
                       ],
                       "shelfMark": [
-                        "VMA (Canadian woodworker) v. 44 (1944)"
+                        "VMA (Canadian woodworker) v. 62 (Jan. -July 1962)"
                       ],
-                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000044 (1944)",
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000062 (Jan. -July 1962)",
                       "status": [
                         {
                           "id": "status:a",
@@ -302,19 +313,21 @@
                       ],
                       "volumeRange": [
                         {
-                          "gte": 44,
-                          "lte": 44
+                          "gte": 62,
+                          "lte": 62
                         }
                       ],
-                      "uri": "i29976055"
+                      "uri": "i29978114"
                     }
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b11984689",
                     "_nested": {
                       "field": "items",
-                      "offset": 17
+                      "offset": 1
                     },
-                    "_score": 1,
+                    "_score": 0,
                     "_source": {
                       "accessMessage": [
                         {
@@ -336,15 +349,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "1945",
-                          "lte": "1945"
+                          "gte": "1961",
+                          "lte": "1961"
                         }
                       ],
                       "enumerationChronology": [
-                        "v. 45 (1945)"
+                        "v. 61 (1961)"
                       ],
                       "enumerationChronology_sort": [
-                        "        45-1945"
+                        "        61-1961"
                       ],
                       "formatLiteral": [
                         "Text"
@@ -359,19 +372,19 @@
                         "loc:rc2ma||Offsite"
                       ],
                       "idBarcode": [
-                        "33433102812025"
+                        "33433102812850"
                       ],
                       "identifier": [
-                        "urn:shelfmark:VMA (Canadian woodworker) v. 45 (1945)",
-                        "urn:barcode:33433102812025"
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 61 (1961)",
+                        "urn:barcode:33433102812850"
                       ],
                       "identifierV2": [
                         {
-                          "value": "VMA (Canadian woodworker) v. 45 (1945)",
+                          "value": "VMA (Canadian woodworker) v. 61 (1961)",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433102812025",
+                          "value": "33433102812850",
                           "type": "bf:Barcode"
                         }
                       ],
@@ -394,9 +407,9 @@
                         true
                       ],
                       "shelfMark": [
-                        "VMA (Canadian woodworker) v. 45 (1945)"
+                        "VMA (Canadian woodworker) v. 61 (1961)"
                       ],
-                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000045 (1945)",
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000061 (1961)",
                       "status": [
                         {
                           "id": "status:a",
@@ -411,19 +424,21 @@
                       ],
                       "volumeRange": [
                         {
-                          "gte": 45,
-                          "lte": 45
+                          "gte": 61,
+                          "lte": 61
                         }
                       ],
-                      "uri": "i29976057"
+                      "uri": "i29978115"
                     }
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b11984689",
                     "_nested": {
                       "field": "items",
-                      "offset": 16
+                      "offset": 2
                     },
-                    "_score": 1,
+                    "_score": 0,
                     "_source": {
                       "accessMessage": [
                         {
@@ -445,15 +460,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "1946",
-                          "lte": "1946"
+                          "gte": "1960",
+                          "lte": "1960"
                         }
                       ],
                       "enumerationChronology": [
-                        "v. 46 (1946)"
+                        "v. 60 (1960)"
                       ],
                       "enumerationChronology_sort": [
-                        "        46-1946"
+                        "        60-1960"
                       ],
                       "formatLiteral": [
                         "Text"
@@ -468,19 +483,19 @@
                         "loc:rc2ma||Offsite"
                       ],
                       "idBarcode": [
-                        "33433102812173"
+                        "33433102812553"
                       ],
                       "identifier": [
-                        "urn:shelfmark:VMA (Canadian woodworker) v. 46 (1946)",
-                        "urn:barcode:33433102812173"
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 60 (1960)",
+                        "urn:barcode:33433102812553"
                       ],
                       "identifierV2": [
                         {
-                          "value": "VMA (Canadian woodworker) v. 46 (1946)",
+                          "value": "VMA (Canadian woodworker) v. 60 (1960)",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433102812173",
+                          "value": "33433102812553",
                           "type": "bf:Barcode"
                         }
                       ],
@@ -503,9 +518,9 @@
                         true
                       ],
                       "shelfMark": [
-                        "VMA (Canadian woodworker) v. 46 (1946)"
+                        "VMA (Canadian woodworker) v. 60 (1960)"
                       ],
-                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000046 (1946)",
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000060 (1960)",
                       "status": [
                         {
                           "id": "status:a",
@@ -520,11 +535,11 @@
                       ],
                       "volumeRange": [
                         {
-                          "gte": 46,
-                          "lte": 46
+                          "gte": 60,
+                          "lte": 60
                         }
                       ],
-                      "uri": "i29976059"
+                      "uri": "i29978117"
                     }
                   }
                 ]
@@ -532,10 +547,15 @@
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b11984689",
                     "_nested": {
                       "field": "items",
                       "offset": 18
@@ -696,50 +716,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:56 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "8484",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b11984689\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}],\"filter\":[{\"term\":{\"items.uri\":\"i29976055\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}},{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"name\":\"allItems\"}}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "1103"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 29
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }

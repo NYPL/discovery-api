@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 9,
+    "took": 11,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 14.256477,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b10022734",
-          "_score": 14.256477,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "xiv, 381 p., [16] leaves of plates : ill. ;"
@@ -115,7 +118,7 @@
                 "value": "(WaOLN)nyp0022812"
               }
             ],
-            "updatedAt": 1706739063269,
+            "updatedAt": 1712858901614,
             "publicationStatement": [
               "New York : Knopf : distributed by Random House, 1981."
             ],
@@ -186,20 +189,28 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 3,
+                "total": {
+                  "value": 3,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10022734",
                     "_nested": {
                       "field": "items",
-                      "offset": 2
+                      "offset": 0
                     },
                     "_score": null,
                     "_source": {
@@ -226,49 +237,49 @@
                       ],
                       "holdingLocation": [
                         {
-                          "id": "loc:mag82",
-                          "label": "Schwarzman Building - Milstein Division Room 121"
+                          "id": "loc:scff2",
+                          "label": "Schomburg Center - Research & Reference"
                         }
                       ],
                       "holdingLocation_packed": [
-                        "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                        "loc:scff2||Schomburg Center - Research & Reference"
                       ],
                       "idBarcode": [
-                        "33433035187214"
+                        "33433034124614"
                       ],
                       "identifier": [
-                        "urn:shelfmark:IEC 81-1139",
-                        "urn:barcode:33433035187214"
+                        "urn:shelfmark:Sc E 96-780",
+                        "urn:barcode:33433034124614"
                       ],
                       "identifierV2": [
                         {
-                          "value": "IEC 81-1139",
+                          "value": "Sc E 96-780",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433035187214",
+                          "value": "33433034124614",
                           "type": "bf:Barcode"
                         }
                       ],
                       "owner": [
                         {
-                          "id": "orgs:1105",
-                          "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                          "id": "orgs:1114",
+                          "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
                         }
                       ],
                       "owner_packed": [
-                        "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                        "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
                       ],
                       "physicalLocation": [
-                        "IEC 81-1139"
+                        "Sc E 96-780"
                       ],
                       "requestable": [
                         true
                       ],
                       "shelfMark": [
-                        "IEC 81-1139"
+                        "Sc E 96-780"
                       ],
-                      "shelfMark_sort": "aIEC 81-001139",
+                      "shelfMark_sort": "aSc E 96-000780",
                       "status": [
                         {
                           "id": "status:a",
@@ -281,13 +292,15 @@
                       "type": [
                         "bf:Item"
                       ],
-                      "uri": "i10010902"
+                      "uri": "i10010904"
                     },
                     "sort": [
                       null
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10022734",
                     "_nested": {
                       "field": "items",
                       "offset": 1
@@ -379,9 +392,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10022734",
                     "_nested": {
                       "field": "items",
-                      "offset": 0
+                      "offset": 2
                     },
                     "_score": null,
                     "_source": {
@@ -408,49 +423,49 @@
                       ],
                       "holdingLocation": [
                         {
-                          "id": "loc:scff2",
-                          "label": "Schomburg Center - Research & Reference"
+                          "id": "loc:mag82",
+                          "label": "Schwarzman Building - Milstein Division Room 121"
                         }
                       ],
                       "holdingLocation_packed": [
-                        "loc:scff2||Schomburg Center - Research & Reference"
+                        "loc:mag82||Schwarzman Building - Milstein Division Room 121"
                       ],
                       "idBarcode": [
-                        "33433034124614"
+                        "33433035187214"
                       ],
                       "identifier": [
-                        "urn:shelfmark:Sc E 96-780",
-                        "urn:barcode:33433034124614"
+                        "urn:shelfmark:IEC 81-1139",
+                        "urn:barcode:33433035187214"
                       ],
                       "identifierV2": [
                         {
-                          "value": "Sc E 96-780",
+                          "value": "IEC 81-1139",
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "value": "33433034124614",
+                          "value": "33433035187214",
                           "type": "bf:Barcode"
                         }
                       ],
                       "owner": [
                         {
-                          "id": "orgs:1114",
-                          "label": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                          "id": "orgs:1105",
+                          "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
                         }
                       ],
                       "owner_packed": [
-                        "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division"
+                        "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
                       ],
                       "physicalLocation": [
-                        "Sc E 96-780"
+                        "IEC 81-1139"
                       ],
                       "requestable": [
                         true
                       ],
                       "shelfMark": [
-                        "Sc E 96-780"
+                        "IEC 81-1139"
                       ],
-                      "shelfMark_sort": "aSc E 96-000780",
+                      "shelfMark_sort": "aIEC 81-001139",
                       "status": [
                         {
                           "id": "status:a",
@@ -463,7 +478,7 @@
                       "type": [
                         "bf:Item"
                       ],
-                      "uri": "i10010904"
+                      "uri": "i10010902"
                     },
                     "sort": [
                       null
@@ -526,50 +541,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:56 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "7361",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b10022734\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "917"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 33
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }

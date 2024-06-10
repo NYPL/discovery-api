@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 1851,
+    "took": 60,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 13.585073,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b10833141",
-          "_score": 13.585073,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "volumes : illustrations ;"
@@ -66,7 +69,7 @@
               "New York (State) -- New York"
             ],
             "numItemDatesParsed": [
-              811
+              819
             ],
             "publisherLiteral": [
               "F-R Pub. Corp.",
@@ -80,7 +83,7 @@
               }
             ],
             "numItemsTotal": [
-              816
+              824
             ],
             "createdYear": [
               1925
@@ -88,17 +91,17 @@
             "dateEndString": [
               "9999"
             ],
-            "type": [
-              "nypl:Item"
-            ],
             "title": [
               "The New Yorker."
+            ],
+            "type": [
+              "nypl:Item"
             ],
             "shelfMark": [
               "*DA+ (New Yorker)"
             ],
             "numItemVolumesParsed": [
-              746
+              754
             ],
             "createdString": [
               "1925"
@@ -127,6 +130,9 @@
             ],
             "donor": [
               "Gift of the DeWitt Wallace Endowment Fund, named in honor of the founder of Reader's Digest (copy held in Per. Sect.)"
+            ],
+            "idOclc": [
+              "1760231"
             ],
             "identifierV2": [
               {
@@ -157,9 +163,6 @@
                 "type": "bf:Identifier",
                 "value": "(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305"
               }
-            ],
-            "idOclc": [
-              "1760231"
             ],
             "uniformTitle": [
               "New Yorker (New York, N.Y. : 1925)"
@@ -388,7 +391,7 @@
                   }
                 ],
                 "holdingStatement": [
-                  "[Bound vols.] 1(1925)-June, Sept.1951-68:9(1992), 68:11(1992)-69:4(1993), 69:6(1993)-72:25(1996), 72:27(1996)-75:25(1999), 75:27(1999)-76:45(2001), 77:1(2001)-77:27(2001), 77:29(2001)-81:15(2005), 81:18(2005)-83:13(2007), 83:17(2007)-85:22(2009), 85:24(2009)-86:11(2010), 86:13(2010)-88:12(2012), 88:14(2012)-88:20(2012), 88:39(2012)-90:38(2014), 91:5(2015), 91:9(2015), 91:14(2015)-92:36(2016), 92:38(2016)-97(2021)--"
+                  "[Bound vols.] 1(1925)-June, Sept.1951-68:9(1992), 68:11(1992)-69:4(1993), 69:6(1993)-72:25(1996), 72:27(1996)-75:25(1999), 75:27(1999)-76:45(2001), 77:1(2001)-77:27(2001), 77:29(2001)-81:15(2005), 81:18(2005)-83:13(2007), 83:17(2007)-85:22(2009), 85:24(2009)-86:11(2010), 86:13(2010)-88:12(2012), 88:14(2012)-88:20(2012), 88:39(2012)-90:38(2014), 91:5(2015), 91:9(2015), 91:14(2015)-92:36(2016), 92:38(2016)-97(2021)-"
                 ],
                 "identifier": [
                   {
@@ -1119,7 +1122,7 @@
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
                     "coverage": "Vol. 100 No. 6 (Mar. 25, 2024)",
@@ -1128,7 +1131,7 @@
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
                     "coverage": "Vol. 100 No. 7 (Apr. 1, 2024)",
@@ -1137,7 +1140,7 @@
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
                     "coverage": "Vol. 100 No. 8 (Apr. 8, 2024)",
@@ -1146,7 +1149,7 @@
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
                     "coverage": "Vol. 100 No. 9 (Apr. 15, 2024)",
@@ -1155,7 +1158,7 @@
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
                     "coverage": "Vol. 100 No. 10 (Apr. 22, 2024)",
@@ -1164,28 +1167,28 @@
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
-                    "coverage": "Vol. 100 No. 11 (Apr. 29, 2024)",
+                    "coverage": "Vol. 100 No. 11 (May. 6, 2024)",
                     "position": 84,
                     "type": "nypl:CheckInBox",
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
-                    "coverage": "Vol. 100 No. 12 (May. 6, 2024)",
+                    "coverage": "Vol. 100 No. 12 (May. 13, 2024)",
                     "position": 85,
                     "type": "nypl:CheckInBox",
                     "shelfMark": [
                       "*DA+ (New Yorker)"
                     ],
-                    "status": "Expected"
+                    "status": "Arrived"
                   },
                   {
-                    "coverage": "Vol. 100 No. 13 (May. 13, 2024)",
+                    "coverage": "Vol. 100 No. 13 (May. 20, 2024)",
                     "position": 86,
                     "type": "nypl:CheckInBox",
                     "shelfMark": [
@@ -1194,7 +1197,7 @@
                     "status": "Expected"
                   },
                   {
-                    "coverage": "Vol. 100 No. 14 (May. 20, 2024)",
+                    "coverage": "Vol. 100 No. 14 (May. 27, 2024)",
                     "position": 87,
                     "type": "nypl:CheckInBox",
                     "shelfMark": [
@@ -1203,8 +1206,53 @@
                     "status": "Expected"
                   },
                   {
-                    "coverage": "Vol. 100 No. 15 (May. 27, 2024)",
+                    "coverage": "Vol. 100 No. 15 (Jun. 3, 2024)",
                     "position": 88,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "Vol. 100 No. 16 (Jun. 10, 2024)",
+                    "position": 89,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "Vol. 100 No. 17 (Jun. 17, 2024)",
+                    "position": 90,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "Vol. 100 No. 18 (Jun. 24, 2024)",
+                    "position": 91,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "Vol. 100 No. 19 (Jul. 1, 2024)",
+                    "position": 92,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "Vol. 100 No. 20 (Jul. 8, 2024)",
+                    "position": 93,
                     "type": "nypl:CheckInBox",
                     "shelfMark": [
                       "*DA+ (New Yorker)"
@@ -1243,11 +1291,16 @@
                 "uri": "h1144777"
               }
             ],
-            "updatedAt": 1710006791578,
+            "updatedAt": 1715286949069,
             "publicationStatement": [
               "New York : F-R Pub. Corp., 1925-",
               "[New York] : D. Carey",
               "[New York] : Condé Nast Publications"
+            ],
+            "genreForm": [
+              "Collections.",
+              "Directories.",
+              "Periodicals."
             ],
             "identifier": [
               "urn:shelfmark:*DA+ (New Yorker)",
@@ -1258,13 +1311,8 @@
               "urn:identifier:(OCoLC)1760231",
               "urn:identifier:(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305"
             ],
-            "genreForm": [
-              "Collections.",
-              "Directories.",
-              "Periodicals."
-            ],
             "numCheckinCardItems": [
-              112
+              117
             ],
             "materialType": [
               {
@@ -1306,15 +1354,15 @@
               "New York",
               "[New York]"
             ],
-            "titleAlt": [
-              "New Yorker",
-              "The New Yorker"
-            ],
             "issuance": [
               {
                 "id": "urn:biblevel:s",
                 "label": "serial"
               }
+            ],
+            "titleAlt": [
+              "New Yorker",
+              "The New Yorker"
             ],
             "dimensions": [
               "28-31 cm"
@@ -1323,20 +1371,28 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 816,
+                "total": {
+                  "value": 824,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 791
+                      "offset": 799
                     },
                     "_score": null,
                     "_source": {
@@ -1351,15 +1407,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "2024-05-27",
-                          "lte": "2024-05-27"
+                          "gte": "2024-07-08",
+                          "lte": "2024-07-08"
                         }
                       ],
                       "enumerationChronology": [
-                        "Vol. 100 No. 15 (May. 27, 2024)"
+                        "Vol. 100 No. 20 (Jul. 8, 2024)"
                       ],
                       "enumerationChronology_sort": [
-                        "       100-2024-05-27"
+                        "       100-2024-07-08"
                       ],
                       "formatLiteral": [
                         "AUG. 23, 2021-CURRENT"
@@ -1403,17 +1459,19 @@
                         }
                       ],
                       "volumeRaw": [
-                        "Vol. 100 No. 15"
+                        "Vol. 100 No. 20"
                       ]
                     },
                     "sort": [
-                      "       100-2024-05-27"
+                      "       100-2024-07-08"
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 790
+                      "offset": 798
                     },
                     "_score": null,
                     "_source": {
@@ -1428,15 +1486,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "2024-05-20",
-                          "lte": "2024-05-20"
+                          "gte": "2024-07-01",
+                          "lte": "2024-07-01"
                         }
                       ],
                       "enumerationChronology": [
-                        "Vol. 100 No. 14 (May. 20, 2024)"
+                        "Vol. 100 No. 19 (Jul. 1, 2024)"
                       ],
                       "enumerationChronology_sort": [
-                        "       100-2024-05-20"
+                        "       100-2024-07-01"
                       ],
                       "formatLiteral": [
                         "AUG. 23, 2021-CURRENT"
@@ -1480,17 +1538,19 @@
                         }
                       ],
                       "volumeRaw": [
-                        "Vol. 100 No. 14"
+                        "Vol. 100 No. 19"
                       ]
                     },
                     "sort": [
-                      "       100-2024-05-20"
+                      "       100-2024-07-01"
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 789
+                      "offset": 797
                     },
                     "_score": null,
                     "_source": {
@@ -1505,15 +1565,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "2024-05-13",
-                          "lte": "2024-05-13"
+                          "gte": "2024-06-24",
+                          "lte": "2024-06-24"
                         }
                       ],
                       "enumerationChronology": [
-                        "Vol. 100 No. 13 (May. 13, 2024)"
+                        "Vol. 100 No. 18 (Jun. 24, 2024)"
                       ],
                       "enumerationChronology_sort": [
-                        "       100-2024-05-13"
+                        "       100-2024-06-24"
                       ],
                       "formatLiteral": [
                         "AUG. 23, 2021-CURRENT"
@@ -1557,17 +1617,19 @@
                         }
                       ],
                       "volumeRaw": [
-                        "Vol. 100 No. 13"
+                        "Vol. 100 No. 18"
                       ]
                     },
                     "sort": [
-                      "       100-2024-05-13"
+                      "       100-2024-06-24"
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 788
+                      "offset": 796
                     },
                     "_score": null,
                     "_source": {
@@ -1582,15 +1644,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "2024-05-06",
-                          "lte": "2024-05-06"
+                          "gte": "2024-06-17",
+                          "lte": "2024-06-17"
                         }
                       ],
                       "enumerationChronology": [
-                        "Vol. 100 No. 12 (May. 6, 2024)"
+                        "Vol. 100 No. 17 (Jun. 17, 2024)"
                       ],
                       "enumerationChronology_sort": [
-                        "       100-2024-05-06"
+                        "       100-2024-06-17"
                       ],
                       "formatLiteral": [
                         "AUG. 23, 2021-CURRENT"
@@ -1634,17 +1696,19 @@
                         }
                       ],
                       "volumeRaw": [
-                        "Vol. 100 No. 12"
+                        "Vol. 100 No. 17"
                       ]
                     },
                     "sort": [
-                      "       100-2024-05-06"
+                      "       100-2024-06-17"
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 787
+                      "offset": 795
                     },
                     "_score": null,
                     "_source": {
@@ -1659,15 +1723,15 @@
                       ],
                       "dateRange": [
                         {
-                          "gte": "2024-04-29",
-                          "lte": "2024-04-29"
+                          "gte": "2024-06-10",
+                          "lte": "2024-06-10"
                         }
                       ],
                       "enumerationChronology": [
-                        "Vol. 100 No. 11 (Apr. 29, 2024)"
+                        "Vol. 100 No. 16 (Jun. 10, 2024)"
                       ],
                       "enumerationChronology_sort": [
-                        "       100-2024-04-29"
+                        "       100-2024-06-10"
                       ],
                       "formatLiteral": [
                         "AUG. 23, 2021-CURRENT"
@@ -1711,17 +1775,414 @@
                         }
                       ],
                       "volumeRaw": [
+                        "Vol. 100 No. 16"
+                      ]
+                    },
+                    "sort": [
+                      "       100-2024-06-10"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 794
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2024-06-03",
+                          "lte": "2024-06-03"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "Vol. 100 No. 15 (Jun. 3, 2024)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "       100-2024-06-03"
+                      ],
+                      "formatLiteral": [
+                        "AUG. 23, 2021-CURRENT"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:makk3",
+                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*DA+ (New Yorker)",
+                          "type": "bf:ShelfMark"
+                        }
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker)",
+                      "status": [
+                        {
+                          "id": "status:na",
+                          "label": "Not available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:na||Not available"
+                      ],
+                      "type": [
+                        "nypl:CheckinCardItem"
+                      ],
+                      "uri": "i-h1144777-5",
+                      "volumeRange": [
+                        {
+                          "gte": 100,
+                          "lte": 100
+                        }
+                      ],
+                      "volumeRaw": [
+                        "Vol. 100 No. 15"
+                      ]
+                    },
+                    "sort": [
+                      "       100-2024-06-03"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 793
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2024-05-27",
+                          "lte": "2024-05-27"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "Vol. 100 No. 14 (May. 27, 2024)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "       100-2024-05-27"
+                      ],
+                      "formatLiteral": [
+                        "AUG. 23, 2021-CURRENT"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:makk3",
+                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*DA+ (New Yorker)",
+                          "type": "bf:ShelfMark"
+                        }
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker)",
+                      "status": [
+                        {
+                          "id": "status:na",
+                          "label": "Not available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:na||Not available"
+                      ],
+                      "type": [
+                        "nypl:CheckinCardItem"
+                      ],
+                      "uri": "i-h1144777-6",
+                      "volumeRange": [
+                        {
+                          "gte": 100,
+                          "lte": 100
+                        }
+                      ],
+                      "volumeRaw": [
+                        "Vol. 100 No. 14"
+                      ]
+                    },
+                    "sort": [
+                      "       100-2024-05-27"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 792
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2024-05-20",
+                          "lte": "2024-05-20"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "Vol. 100 No. 13 (May. 20, 2024)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "       100-2024-05-20"
+                      ],
+                      "formatLiteral": [
+                        "AUG. 23, 2021-CURRENT"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:makk3",
+                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*DA+ (New Yorker)",
+                          "type": "bf:ShelfMark"
+                        }
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker)",
+                      "status": [
+                        {
+                          "id": "status:na",
+                          "label": "Not available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:na||Not available"
+                      ],
+                      "type": [
+                        "nypl:CheckinCardItem"
+                      ],
+                      "uri": "i-h1144777-7",
+                      "volumeRange": [
+                        {
+                          "gte": 100,
+                          "lte": 100
+                        }
+                      ],
+                      "volumeRaw": [
+                        "Vol. 100 No. 13"
+                      ]
+                    },
+                    "sort": [
+                      "       100-2024-05-20"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 791
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2024-05-13",
+                          "lte": "2024-05-13"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "Vol. 100 No. 12 (May. 13, 2024)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "       100-2024-05-13"
+                      ],
+                      "formatLiteral": [
+                        "AUG. 23, 2021-CURRENT"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:makk3",
+                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*DA+ (New Yorker)",
+                          "type": "bf:ShelfMark"
+                        }
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "nypl:CheckinCardItem"
+                      ],
+                      "uri": "i-h1144777-8",
+                      "volumeRange": [
+                        {
+                          "gte": 100,
+                          "lte": 100
+                        }
+                      ],
+                      "volumeRaw": [
+                        "Vol. 100 No. 12"
+                      ]
+                    },
+                    "sort": [
+                      "       100-2024-05-13"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 790
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2024-05-06",
+                          "lte": "2024-05-06"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "Vol. 100 No. 11 (May. 6, 2024)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "       100-2024-05-06"
+                      ],
+                      "formatLiteral": [
+                        "AUG. 23, 2021-CURRENT"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:makk3",
+                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*DA+ (New Yorker)",
+                          "type": "bf:ShelfMark"
+                        }
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "nypl:CheckinCardItem"
+                      ],
+                      "uri": "i-h1144777-9",
+                      "volumeRange": [
+                        {
+                          "gte": 100,
+                          "lte": 100
+                        }
+                      ],
+                      "volumeRaw": [
                         "Vol. 100 No. 11"
                       ]
                     },
                     "sort": [
-                      "       100-2024-04-29"
+                      "       100-2024-05-06"
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 786
+                      "offset": 789
                     },
                     "_score": null,
                     "_source": {
@@ -1770,17 +2231,17 @@
                       "shelfMark_sort": "a*DA+ (New Yorker)",
                       "status": [
                         {
-                          "id": "status:na",
-                          "label": "Not available"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:na||Not available"
+                        "status:a||Available"
                       ],
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-5",
+                      "uri": "i-h1144777-10",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -1796,9 +2257,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 785
+                      "offset": 788
                     },
                     "_score": null,
                     "_source": {
@@ -1847,17 +2310,17 @@
                       "shelfMark_sort": "a*DA+ (New Yorker)",
                       "status": [
                         {
-                          "id": "status:na",
-                          "label": "Not available"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:na||Not available"
+                        "status:a||Available"
                       ],
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-6",
+                      "uri": "i-h1144777-11",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -1873,9 +2336,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 784
+                      "offset": 787
                     },
                     "_score": null,
                     "_source": {
@@ -1924,17 +2389,17 @@
                       "shelfMark_sort": "a*DA+ (New Yorker)",
                       "status": [
                         {
-                          "id": "status:na",
-                          "label": "Not available"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:na||Not available"
+                        "status:a||Available"
                       ],
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-7",
+                      "uri": "i-h1144777-12",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -1950,9 +2415,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 783
+                      "offset": 786
                     },
                     "_score": null,
                     "_source": {
@@ -2001,17 +2468,17 @@
                       "shelfMark_sort": "a*DA+ (New Yorker)",
                       "status": [
                         {
-                          "id": "status:na",
-                          "label": "Not available"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:na||Not available"
+                        "status:a||Available"
                       ],
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-8",
+                      "uri": "i-h1144777-13",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2027,9 +2494,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 782
+                      "offset": 785
                     },
                     "_score": null,
                     "_source": {
@@ -2078,17 +2547,17 @@
                       "shelfMark_sort": "a*DA+ (New Yorker)",
                       "status": [
                         {
-                          "id": "status:na",
-                          "label": "Not available"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:na||Not available"
+                        "status:a||Available"
                       ],
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-9",
+                      "uri": "i-h1144777-14",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2104,9 +2573,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 781
+                      "offset": 784
                     },
                     "_score": null,
                     "_source": {
@@ -2155,17 +2626,17 @@
                       "shelfMark_sort": "a*DA+ (New Yorker)",
                       "status": [
                         {
-                          "id": "status:na",
-                          "label": "Not available"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
                       "status_packed": [
-                        "status:na||Not available"
+                        "status:a||Available"
                       ],
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-10",
+                      "uri": "i-h1144777-15",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2181,9 +2652,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 763
+                      "offset": 766
                     },
                     "_score": null,
                     "_source": {
@@ -2242,7 +2715,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-28",
+                      "uri": "i-h1144777-33",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2258,9 +2731,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 762
+                      "offset": 765
                     },
                     "_score": null,
                     "_source": {
@@ -2319,7 +2794,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-29",
+                      "uri": "i-h1144777-34",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2335,9 +2810,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 780
+                      "offset": 783
                     },
                     "_score": null,
                     "_source": {
@@ -2396,7 +2873,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-11",
+                      "uri": "i-h1144777-16",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2412,9 +2889,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 761
+                      "offset": 764
                     },
                     "_score": null,
                     "_source": {
@@ -2473,7 +2952,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-30",
+                      "uri": "i-h1144777-35",
                       "volumeRange": [
                         {
                           "gte": 100,
@@ -2489,9 +2968,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 752
+                      "offset": 755
                     },
                     "_score": null,
                     "_source": {
@@ -2550,7 +3031,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-39",
+                      "uri": "i-h1144777-44",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -2566,9 +3047,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 751
+                      "offset": 754
                     },
                     "_score": null,
                     "_source": {
@@ -2627,7 +3110,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-40",
+                      "uri": "i-h1144777-45",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -2643,9 +3126,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 750
+                      "offset": 753
                     },
                     "_score": null,
                     "_source": {
@@ -2704,7 +3189,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-41",
+                      "uri": "i-h1144777-46",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -2720,9 +3205,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 749
+                      "offset": 752
                     },
                     "_score": null,
                     "_source": {
@@ -2781,7 +3268,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-42",
+                      "uri": "i-h1144777-47",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -2797,9 +3284,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 748
+                      "offset": 751
                     },
                     "_score": null,
                     "_source": {
@@ -2858,7 +3347,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-43",
+                      "uri": "i-h1144777-48",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -2874,9 +3363,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 747
+                      "offset": 750
                     },
                     "_score": null,
                     "_source": {
@@ -2935,7 +3426,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-44",
+                      "uri": "i-h1144777-49",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -2951,9 +3442,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 746
+                      "offset": 749
                     },
                     "_score": null,
                     "_source": {
@@ -3012,7 +3505,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-45",
+                      "uri": "i-h1144777-50",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3028,9 +3521,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 745
+                      "offset": 748
                     },
                     "_score": null,
                     "_source": {
@@ -3089,7 +3584,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-46",
+                      "uri": "i-h1144777-51",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3105,9 +3600,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 744
+                      "offset": 747
                     },
                     "_score": null,
                     "_source": {
@@ -3166,7 +3663,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-47",
+                      "uri": "i-h1144777-52",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3182,9 +3679,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 743
+                      "offset": 746
                     },
                     "_score": null,
                     "_source": {
@@ -3243,7 +3742,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-48",
+                      "uri": "i-h1144777-53",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3259,9 +3758,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 740
+                      "offset": 743
                     },
                     "_score": null,
                     "_source": {
@@ -3320,7 +3821,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-51",
+                      "uri": "i-h1144777-56",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3336,9 +3837,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 742
+                      "offset": 745
                     },
                     "_score": null,
                     "_source": {
@@ -3397,7 +3900,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-49",
+                      "uri": "i-h1144777-54",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3413,9 +3916,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 739
+                      "offset": 742
                     },
                     "_score": null,
                     "_source": {
@@ -3474,7 +3979,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-52",
+                      "uri": "i-h1144777-57",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3490,9 +3995,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 738
+                      "offset": 741
                     },
                     "_score": null,
                     "_source": {
@@ -3551,7 +4058,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-53",
+                      "uri": "i-h1144777-58",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3567,9 +4074,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 741
+                      "offset": 744
                     },
                     "_score": null,
                     "_source": {
@@ -3628,7 +4137,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-50",
+                      "uri": "i-h1144777-55",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3644,9 +4153,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 731
+                      "offset": 734
                     },
                     "_score": null,
                     "_source": {
@@ -3705,7 +4216,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-60",
+                      "uri": "i-h1144777-65",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3721,9 +4232,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 730
+                      "offset": 733
                     },
                     "_score": null,
                     "_source": {
@@ -3782,7 +4295,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-61",
+                      "uri": "i-h1144777-66",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3798,9 +4311,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 729
+                      "offset": 732
                     },
                     "_score": null,
                     "_source": {
@@ -3859,7 +4374,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-62",
+                      "uri": "i-h1144777-67",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3875,9 +4390,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 760
+                      "offset": 763
                     },
                     "_score": null,
                     "_source": {
@@ -3936,7 +4453,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-31",
+                      "uri": "i-h1144777-36",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -3952,9 +4469,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 737
+                      "offset": 740
                     },
                     "_score": null,
                     "_source": {
@@ -4013,7 +4532,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-54",
+                      "uri": "i-h1144777-59",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4029,9 +4548,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 759
+                      "offset": 762
                     },
                     "_score": null,
                     "_source": {
@@ -4090,7 +4611,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-32",
+                      "uri": "i-h1144777-37",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4106,9 +4627,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 758
+                      "offset": 761
                     },
                     "_score": null,
                     "_source": {
@@ -4167,7 +4690,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-33",
+                      "uri": "i-h1144777-38",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4183,9 +4706,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 728
+                      "offset": 731
                     },
                     "_score": null,
                     "_source": {
@@ -4244,7 +4769,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-63",
+                      "uri": "i-h1144777-68",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4260,9 +4785,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 733
+                      "offset": 736
                     },
                     "_score": null,
                     "_source": {
@@ -4321,7 +4848,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-58",
+                      "uri": "i-h1144777-63",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4337,9 +4864,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 732
+                      "offset": 735
                     },
                     "_score": null,
                     "_source": {
@@ -4398,7 +4927,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-59",
+                      "uri": "i-h1144777-64",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4414,9 +4943,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 727
+                      "offset": 730
                     },
                     "_score": null,
                     "_source": {
@@ -4475,7 +5006,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-64",
+                      "uri": "i-h1144777-69",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4491,9 +5022,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 736
+                      "offset": 739
                     },
                     "_score": null,
                     "_source": {
@@ -4552,7 +5085,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-55",
+                      "uri": "i-h1144777-60",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4568,9 +5101,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 735
+                      "offset": 738
                     },
                     "_score": null,
                     "_source": {
@@ -4629,7 +5164,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-56",
+                      "uri": "i-h1144777-61",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4645,9 +5180,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 734
+                      "offset": 737
                     },
                     "_score": null,
                     "_source": {
@@ -4706,7 +5243,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-57",
+                      "uri": "i-h1144777-62",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4722,9 +5259,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 726
+                      "offset": 729
                     },
                     "_score": null,
                     "_source": {
@@ -4783,7 +5322,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-65",
+                      "uri": "i-h1144777-70",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4799,9 +5338,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 725
+                      "offset": 728
                     },
                     "_score": null,
                     "_source": {
@@ -4860,7 +5401,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-66",
+                      "uri": "i-h1144777-71",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4876,9 +5417,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 757
+                      "offset": 760
                     },
                     "_score": null,
                     "_source": {
@@ -4937,7 +5480,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-34",
+                      "uri": "i-h1144777-39",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -4953,9 +5496,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 724
+                      "offset": 727
                     },
                     "_score": null,
                     "_source": {
@@ -5014,7 +5559,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-67",
+                      "uri": "i-h1144777-72",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5030,9 +5575,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 723
+                      "offset": 726
                     },
                     "_score": null,
                     "_source": {
@@ -5091,7 +5638,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-68",
+                      "uri": "i-h1144777-73",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5107,9 +5654,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 722
+                      "offset": 725
                     },
                     "_score": null,
                     "_source": {
@@ -5168,7 +5717,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-69",
+                      "uri": "i-h1144777-74",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5184,9 +5733,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 721
+                      "offset": 724
                     },
                     "_score": null,
                     "_source": {
@@ -5245,7 +5796,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-70",
+                      "uri": "i-h1144777-75",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5261,9 +5812,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 720
+                      "offset": 723
                     },
                     "_score": null,
                     "_source": {
@@ -5322,7 +5875,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-71",
+                      "uri": "i-h1144777-76",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5338,9 +5891,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 719
+                      "offset": 722
                     },
                     "_score": null,
                     "_source": {
@@ -5399,7 +5954,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-72",
+                      "uri": "i-h1144777-77",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5415,9 +5970,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 718
+                      "offset": 721
                     },
                     "_score": null,
                     "_source": {
@@ -5476,7 +6033,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-73",
+                      "uri": "i-h1144777-78",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5492,9 +6049,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 756
+                      "offset": 759
                     },
                     "_score": null,
                     "_source": {
@@ -5553,7 +6112,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-35",
+                      "uri": "i-h1144777-40",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5569,9 +6128,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 755
+                      "offset": 758
                     },
                     "_score": null,
                     "_source": {
@@ -5630,7 +6191,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-36",
+                      "uri": "i-h1144777-41",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5646,9 +6207,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 754
+                      "offset": 757
                     },
                     "_score": null,
                     "_source": {
@@ -5707,7 +6270,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-37",
+                      "uri": "i-h1144777-42",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5723,9 +6286,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 753
+                      "offset": 756
                     },
                     "_score": null,
                     "_source": {
@@ -5784,7 +6349,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-38",
+                      "uri": "i-h1144777-43",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5800,9 +6365,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 717
+                      "offset": 720
                     },
                     "_score": null,
                     "_source": {
@@ -5861,7 +6428,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-74",
+                      "uri": "i-h1144777-79",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5877,9 +6444,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 716
+                      "offset": 719
                     },
                     "_score": null,
                     "_source": {
@@ -5938,7 +6507,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-75",
+                      "uri": "i-h1144777-80",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -5954,9 +6523,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 715
+                      "offset": 718
                     },
                     "_score": null,
                     "_source": {
@@ -6015,7 +6586,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-76",
+                      "uri": "i-h1144777-81",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -6031,9 +6602,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 714
+                      "offset": 717
                     },
                     "_score": null,
                     "_source": {
@@ -6092,7 +6665,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-77",
+                      "uri": "i-h1144777-82",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -6108,9 +6681,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 713
+                      "offset": 716
                     },
                     "_score": null,
                     "_source": {
@@ -6169,7 +6744,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-78",
+                      "uri": "i-h1144777-83",
                       "volumeRange": [
                         {
                           "gte": 99,
@@ -6185,9 +6760,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 712
+                      "offset": 715
                     },
                     "_score": null,
                     "_source": {
@@ -6246,7 +6823,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-79",
+                      "uri": "i-h1144777-84",
                       "volumeRange": [
                         {
                           "gte": 98,
@@ -6262,9 +6839,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 709
+                      "offset": 712
                     },
                     "_score": null,
                     "_source": {
@@ -6323,7 +6902,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-82",
+                      "uri": "i-h1144777-87",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6339,9 +6918,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 708
+                      "offset": 711
                     },
                     "_score": null,
                     "_source": {
@@ -6400,7 +6981,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-83",
+                      "uri": "i-h1144777-88",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6416,9 +6997,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 707
+                      "offset": 710
                     },
                     "_score": null,
                     "_source": {
@@ -6477,7 +7060,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-84",
+                      "uri": "i-h1144777-89",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6493,9 +7076,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 706
+                      "offset": 709
                     },
                     "_score": null,
                     "_source": {
@@ -6554,7 +7139,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-85",
+                      "uri": "i-h1144777-90",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6570,9 +7155,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 705
+                      "offset": 708
                     },
                     "_score": null,
                     "_source": {
@@ -6631,7 +7218,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-86",
+                      "uri": "i-h1144777-91",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6647,9 +7234,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 779
+                      "offset": 782
                     },
                     "_score": null,
                     "_source": {
@@ -6708,7 +7297,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-12",
+                      "uri": "i-h1144777-17",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6724,9 +7313,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 704
+                      "offset": 707
                     },
                     "_score": null,
                     "_source": {
@@ -6785,7 +7376,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-87",
+                      "uri": "i-h1144777-92",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6801,9 +7392,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 778
+                      "offset": 781
                     },
                     "_score": null,
                     "_source": {
@@ -6862,7 +7455,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-13",
+                      "uri": "i-h1144777-18",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6878,9 +7471,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 777
+                      "offset": 780
                     },
                     "_score": null,
                     "_source": {
@@ -6939,7 +7534,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-14",
+                      "uri": "i-h1144777-19",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -6955,9 +7550,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 776
+                      "offset": 779
                     },
                     "_score": null,
                     "_source": {
@@ -7016,7 +7613,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-15",
+                      "uri": "i-h1144777-20",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7032,9 +7629,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 775
+                      "offset": 778
                     },
                     "_score": null,
                     "_source": {
@@ -7093,7 +7692,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-16",
+                      "uri": "i-h1144777-21",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7109,9 +7708,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 774
+                      "offset": 777
                     },
                     "_score": null,
                     "_source": {
@@ -7170,7 +7771,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-17",
+                      "uri": "i-h1144777-22",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7186,9 +7787,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 773
+                      "offset": 776
                     },
                     "_score": null,
                     "_source": {
@@ -7247,7 +7850,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-18",
+                      "uri": "i-h1144777-23",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7263,9 +7866,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 772
+                      "offset": 775
                     },
                     "_score": null,
                     "_source": {
@@ -7324,7 +7929,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-19",
+                      "uri": "i-h1144777-24",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7340,9 +7945,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 771
+                      "offset": 774
                     },
                     "_score": null,
                     "_source": {
@@ -7401,7 +8008,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-20",
+                      "uri": "i-h1144777-25",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7417,9 +8024,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 770
+                      "offset": 773
                     },
                     "_score": null,
                     "_source": {
@@ -7478,7 +8087,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-21",
+                      "uri": "i-h1144777-26",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7494,9 +8103,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 769
+                      "offset": 772
                     },
                     "_score": null,
                     "_source": {
@@ -7555,7 +8166,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-22",
+                      "uri": "i-h1144777-27",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7571,9 +8182,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 768
+                      "offset": 771
                     },
                     "_score": null,
                     "_source": {
@@ -7632,7 +8245,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-23",
+                      "uri": "i-h1144777-28",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7648,9 +8261,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 711
+                      "offset": 714
                     },
                     "_score": null,
                     "_source": {
@@ -7709,7 +8324,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-80",
+                      "uri": "i-h1144777-85",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7725,9 +8340,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 767
+                      "offset": 770
                     },
                     "_score": null,
                     "_source": {
@@ -7786,7 +8403,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-24",
+                      "uri": "i-h1144777-29",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7802,9 +8419,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 766
+                      "offset": 769
                     },
                     "_score": null,
                     "_source": {
@@ -7863,7 +8482,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-25",
+                      "uri": "i-h1144777-30",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7879,9 +8498,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 765
+                      "offset": 768
                     },
                     "_score": null,
                     "_source": {
@@ -7940,7 +8561,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-26",
+                      "uri": "i-h1144777-31",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -7956,9 +8577,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 764
+                      "offset": 767
                     },
                     "_score": null,
                     "_source": {
@@ -8017,7 +8640,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-27",
+                      "uri": "i-h1144777-32",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -8033,9 +8656,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 710
+                      "offset": 713
                     },
                     "_score": null,
                     "_source": {
@@ -8094,7 +8719,7 @@
                       "type": [
                         "nypl:CheckinCardItem"
                       ],
-                      "uri": "i-h1144777-81",
+                      "uri": "i-h1144777-86",
                       "volumeRange": [
                         {
                           "gte": 97,
@@ -8110,9 +8735,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 809
+                      "offset": 817
                     },
                     "_score": null,
                     "_source": {
@@ -8187,9 +8814,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 799
+                      "offset": 807
                     },
                     "_score": null,
                     "_source": {
@@ -8264,9 +8893,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 798
+                      "offset": 806
                     },
                     "_score": null,
                     "_source": {
@@ -8341,9 +8972,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 797
+                      "offset": 805
                     },
                     "_score": null,
                     "_source": {
@@ -8418,9 +9051,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 794
+                      "offset": 802
                     },
                     "_score": null,
                     "_source": {
@@ -8495,9 +9130,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 800
+                      "offset": 808
                     },
                     "_score": null,
                     "_source": {
@@ -8572,9 +9209,11 @@
                     ]
                   },
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10833141",
                     "_nested": {
                       "field": "items",
-                      "offset": 801
+                      "offset": 809
                     },
                     "_score": null,
                     "_source": {
@@ -8647,391 +9286,6 @@
                     "sort": [
                       "        97-2021-06-28"
                     ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 802
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021-06-21",
-                          "lte": "2021-06-21"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "Vol. 97 No. 17 (Jun. 21, 2021)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021-06-21"
-                      ],
-                      "formatLiteral": [
-                        "FEB. 15/22, 2021 - AUG. 16, 2021"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:makk3",
-                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*DA+ (New Yorker)",
-                          "type": "bf:ShelfMark"
-                        }
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker)",
-                      "status": [
-                        {
-                          "id": "status:i",
-                          "label": "At bindery"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:i||At bindery"
-                      ],
-                      "type": [
-                        "nypl:CheckinCardItem"
-                      ],
-                      "uri": "i-h1059671-13",
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ],
-                      "volumeRaw": [
-                        "Vol. 97 No. 17"
-                      ]
-                    },
-                    "sort": [
-                      "        97-2021-06-21"
-                    ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 803
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021-06-14",
-                          "lte": "2021-06-14"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "Vol. 97 No. 16 (Jun. 14, 2021)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021-06-14"
-                      ],
-                      "formatLiteral": [
-                        "FEB. 15/22, 2021 - AUG. 16, 2021"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:makk3",
-                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*DA+ (New Yorker)",
-                          "type": "bf:ShelfMark"
-                        }
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker)",
-                      "status": [
-                        {
-                          "id": "status:i",
-                          "label": "At bindery"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:i||At bindery"
-                      ],
-                      "type": [
-                        "nypl:CheckinCardItem"
-                      ],
-                      "uri": "i-h1059671-12",
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ],
-                      "volumeRaw": [
-                        "Vol. 97 No. 16"
-                      ]
-                    },
-                    "sort": [
-                      "        97-2021-06-14"
-                    ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 804
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021-06-07",
-                          "lte": "2021-06-07"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "Vol. 97 No. 15 (Jun. 7, 2021)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021-06-07"
-                      ],
-                      "formatLiteral": [
-                        "FEB. 15/22, 2021 - AUG. 16, 2021"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:makk3",
-                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*DA+ (New Yorker)",
-                          "type": "bf:ShelfMark"
-                        }
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker)",
-                      "status": [
-                        {
-                          "id": "status:i",
-                          "label": "At bindery"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:i||At bindery"
-                      ],
-                      "type": [
-                        "nypl:CheckinCardItem"
-                      ],
-                      "uri": "i-h1059671-11",
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ],
-                      "volumeRaw": [
-                        "Vol. 97 No. 15"
-                      ]
-                    },
-                    "sort": [
-                      "        97-2021-06-07"
-                    ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 805
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021-05-31",
-                          "lte": "2021-05-31"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "Vol. 97 No. 14 (May. 31, 2021)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021-05-31"
-                      ],
-                      "formatLiteral": [
-                        "FEB. 15/22, 2021 - AUG. 16, 2021"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:makk3",
-                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*DA+ (New Yorker)",
-                          "type": "bf:ShelfMark"
-                        }
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker)",
-                      "status": [
-                        {
-                          "id": "status:i",
-                          "label": "At bindery"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:i||At bindery"
-                      ],
-                      "type": [
-                        "nypl:CheckinCardItem"
-                      ],
-                      "uri": "i-h1059671-10",
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ],
-                      "volumeRaw": [
-                        "Vol. 97 No. 14"
-                      ]
-                    },
-                    "sort": [
-                      "        97-2021-05-31"
-                    ]
-                  },
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 806
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021-05-24",
-                          "lte": "2021-05-24"
-                        }
-                      ],
-                      "enumerationChronology": [
-                        "Vol. 97 No. 13 (May. 24, 2021)"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021-05-24"
-                      ],
-                      "formatLiteral": [
-                        "FEB. 15/22, 2021 - AUG. 16, 2021"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:makk3",
-                          "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*DA+ (New Yorker)",
-                          "type": "bf:ShelfMark"
-                        }
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker)",
-                      "status": [
-                        {
-                          "id": "status:i",
-                          "label": "At bindery"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:i||At bindery"
-                      ],
-                      "type": [
-                        "nypl:CheckinCardItem"
-                      ],
-                      "uri": "i-h1059671-9",
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ],
-                      "volumeRaw": [
-                        "Vol. 97 No. 13"
-                      ]
-                    },
-                    "sort": [
-                      "        97-2021-05-24"
-                    ]
                   }
                 ]
               }
@@ -9042,18 +9296,18 @@
     },
     "aggregations": {
       "item_location": {
-        "doc_count": 816,
+        "doc_count": 824,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
           "buckets": [
             {
               "key": "loc:mal82||Schwarzman Building - Main Reading Room 315",
-              "doc_count": 572
+              "doc_count": 575
             },
             {
               "key": "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108",
-              "doc_count": 112
+              "doc_count": 117
             },
             {
               "key": "loc:rc2ma||Offsite",
@@ -9067,18 +9321,18 @@
         }
       },
       "item_format": {
-        "doc_count": 816,
+        "doc_count": 824,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
           "buckets": [
             {
               "key": "Text",
-              "doc_count": 704
+              "doc_count": 707
             },
             {
               "key": "AUG. 23, 2021-CURRENT",
-              "doc_count": 88
+              "doc_count": 93
             },
             {
               "key": "FEB. 15/22, 2021 - AUG. 16, 2021",
@@ -9088,14 +9342,14 @@
         }
       },
       "item_status": {
-        "doc_count": 816,
+        "doc_count": 824,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
           "buckets": [
             {
               "key": "status:a||Available",
-              "doc_count": 755
+              "doc_count": 766
             },
             {
               "key": "status:i||At bindery",
@@ -9103,22 +9357,18 @@
             },
             {
               "key": "status:na||Not available",
-              "doc_count": 12
+              "doc_count": 9
             },
             {
               "key": "status:co||Loaned",
               "doc_count": 5
             },
             {
-              "key": "status:m||Missing",
-              "doc_count": 1
-            },
-            {
-              "key": "status:oh||On Holdshelf",
-              "doc_count": 1
-            },
-            {
               "key": "status:t||In transit",
+              "doc_count": 2
+            },
+            {
+              "key": "status:m||Missing",
               "doc_count": 1
             }
           ]
@@ -9126,50 +9376,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:53 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "123170",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b10833141\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "917"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 8
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }

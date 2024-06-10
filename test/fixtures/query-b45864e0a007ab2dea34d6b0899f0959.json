@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 5,
+    "took": 8,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 15.530987,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b14332438",
-          "_score": 15.530987,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "4 v."
@@ -52,11 +55,11 @@
             "createdYear": [
               1800
             ],
-            "type": [
-              "nypl:Item"
-            ],
             "title": [
               "The history of America ..."
+            ],
+            "type": [
+              "nypl:Item"
             ],
             "shelfMark": [
               "*KF 1800 (Robertson, W. History of America)"
@@ -64,20 +67,23 @@
             "numItemVolumesParsed": [
               0
             ],
-            "creatorLiteral": [
-              "Robertson, William, 1721-1793."
-            ],
             "createdString": [
               "1800"
             ],
+            "creatorLiteral": [
+              "Robertson, William, 1721-1793."
+            ],
             "numElectronicResources": [
-              5
+              4
             ],
             "contributorLiteral": [
               "Robertson, William, 1753-1835."
             ],
             "dateStartYear": [
               1800
+            ],
+            "idOclc": [
+              "7127252"
             ],
             "identifierV2": [
               {
@@ -97,17 +103,15 @@
                 "value": "(WaOLN)R220000327"
               }
             ],
-            "idOclc": [
-              "7127252"
-            ],
-            "updatedAt": 1671731696724,
+            "updatedAt": 1712865473006,
             "publicationStatement": [
               "London, A. Strahan, 1800."
             ],
             "identifier": [
+              "urn:shelfmark:*KF 1800 (Robertson, W. History of America)",
               "urn:bnum:14332438",
               "urn:oclc:7127252",
-              "urn:undefined:(WaOLN)R220000327"
+              "urn:identifier:(WaOLN)R220000327"
             ],
             "numCheckinCardItems": [
               0
@@ -143,11 +147,23 @@
               "The history of America ..."
             ],
             "uri": "b14332438",
-            "numItems": [
-              1
-            ],
-            "numAvailable": [
-              1
+            "electronicResources": [
+              {
+                "label": "Full text available via HathiTrust - v.1",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750922"
+              },
+              {
+                "label": "Full text available via HathiTrust - v.2",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750930"
+              },
+              {
+                "label": "Full text available via HathiTrust - v.3",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750948"
+              },
+              {
+                "label": "Full text available via HathiTrust - v.4",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750955"
+              }
             ],
             "placeOfPublication": [
               "London"
@@ -165,81 +181,39 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 1,
-                "max_score": 1,
-                "hits": [
-                  {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": 1,
-                    "_source": {
-                      "uri": "i14332438-e",
-                      "electronicLocator": [
-                        {
-                          "url": "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Form=30&Title=The+history+of+America+...&Site=SASRB&CallNumber=*KF+1800+(Robertson,+W.+History+of+America)&Author=Robertson,+William,&ItemPlace=London,&ItemPublisher=A.+Strahan,&Date=1800.&ItemEdition=The+ninth+edition,+in+which+is+included+the+posthumous+volume,+containing+the+history+of+Virginia+to+the+year+1688,+and+of+New+England+to+the+year+1652.+[Edited+by+his+son.]&ItemInfo3=https://catalog.nypl.org/record=b14332438&ReferenceNumber=b14332438x&ItemISxN=i169831863&Genre=Book-text&Location=Schwarzman+Rare+Book+Division",
-                          "label": "Request access to this item in the Schwarzman Rare Books Collection"
-                        },
-                        {
-                          "url": "http://hdl.handle.net/2027/mdp.39015016750922",
-                          "label": "Full text available via HathiTrust - v.1"
-                        },
-                        {
-                          "url": "http://hdl.handle.net/2027/mdp.39015016750930",
-                          "label": "Full text available via HathiTrust - v.2"
-                        },
-                        {
-                          "url": "http://hdl.handle.net/2027/mdp.39015016750948",
-                          "label": "Full text available via HathiTrust - v.3"
-                        },
-                        {
-                          "url": "http://hdl.handle.net/2027/mdp.39015016750955",
-                          "label": "Full text available via HathiTrust - v.4"
-                        }
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "shelfMark_sort": "bi14332438-e"
-                    }
-                  }
-                ]
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b14332438",
                     "_nested": {
                       "field": "items",
                       "offset": 0
                     },
                     "_score": null,
                     "_source": {
-                      "uri": "i16983186",
-                      "status": [
+                      "accessMessage": [
                         {
-                          "id": "status:a",
-                          "label": "Available"
+                          "id": "accessMessage:4",
+                          "label": "Restricted use"
                         }
                       ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1108",
-                          "label": "Rare Book Division"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1108||Rare Book Division"
+                      "accessMessage_packed": [
+                        "accessMessage:4||Restricted use"
                       ],
                       "catalogItemType": [
                         {
@@ -250,6 +224,9 @@
                       "catalogItemType_packed": [
                         "catalogItemType:2||book non-circ"
                       ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
                       "holdingLocation": [
                         {
                           "id": "loc:marr2",
@@ -259,8 +236,8 @@
                       "holdingLocation_packed": [
                         "loc:marr2||Schwarzman Building - Rare Book Collection Room 328"
                       ],
-                      "shelfMark": [
-                        "*KF 1800 (Robertson, W. History of America)"
+                      "identifier": [
+                        "urn:shelfmark:*KF 1800 (Robertson, W. History of America)"
                       ],
                       "identifierV2": [
                         {
@@ -268,31 +245,41 @@
                           "type": "bf:ShelfMark"
                         }
                       ],
+                      "owner": [
+                        {
+                          "id": "orgs:1108",
+                          "label": "Rare Book Division"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1108||Rare Book Division"
+                      ],
                       "physicalLocation": [
                         "*KF 1800 (Robertson, W. History of America)"
                       ],
                       "requestable": [
                         false
                       ],
-                      "accessMessage": [
+                      "shelfMark": [
+                        "*KF 1800 (Robertson, W. History of America)"
+                      ],
+                      "shelfMark_sort": "a*KF 1800 (Robertson, W. History of America)",
+                      "status": [
                         {
-                          "id": "accessMessage:4",
-                          "label": "Restricted use"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
-                      "accessMessage_packed": [
-                        "accessMessage:4||Restricted use"
-                      ],
-                      "aeonUrl": [
-                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Form=30&Title=The+history+of+America+...&Site=SASRB&CallNumber=*KF+1800+(Robertson,+W.+History+of+America)&Author=Robertson,+William,&ItemPlace=London,&ItemPublisher=A.+Strahan,&Date=1800.&ItemEdition=The+ninth+edition,+in+which+is+included+the+posthumous+volume,+containing+the+history+of+Virginia+to+the+year+1688,+and+of+New+England+to+the+year+1652.+[Edited+by+his+son.]&ItemInfo3=https://catalog.nypl.org/record=b14332438&ReferenceNumber=b14332438x&ItemISxN=i169831863&Genre=Book-text&Location=Schwarzman+Rare+Book+Division"
+                      "status_packed": [
+                        "status:a||Available"
                       ],
                       "type": [
                         "bf:Item"
                       ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "shelfMark_sort": "a*KF 1800 (Robertson, W. History of America)"
+                      "uri": "i16983186",
+                      "aeonUrl": [
+                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Author=Robertson%2C+William%2C+1721-1793.&CallNumber=*KF+1800+%28Robertson%2C+W.+History+of+America%29&Date=1800&Form=30&Genre=book+non-circ&ItemEdition=The+ninth+edition&ItemInfo1=Restricted+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db14332438&ItemISxN=i169831863&ItemPlace=London&ItemPublisher=A.+Strahan%2C+1800.&Location=Schwarzman+Rare+Book+Division&ReferenceNumber=b14332438x&Site=SASRB&Title=The+history+of+America+...&Transaction.CustomFields.Custom651=New+England+History+Colonial+period%2C+ca.+1600-1775."
+                      ]
                     },
                     "sort": [
                       null
@@ -307,7 +294,7 @@
     },
     "aggregations": {
       "item_location": {
-        "doc_count": 2,
+        "doc_count": 1,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
@@ -320,20 +307,20 @@
         }
       },
       "item_format": {
-        "doc_count": 2,
+        "doc_count": 1,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
           "buckets": [
             {
               "key": "Text",
-              "doc_count": 2
+              "doc_count": 1
             }
           ]
         }
       },
       "item_status": {
-        "doc_count": 2,
+        "doc_count": 1,
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
@@ -347,50 +334,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:47 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "5732",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b14332438\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "917"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 1
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }

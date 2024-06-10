@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 55,
+    "took": 6,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 15.044935,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b10015541",
-          "_score": 15.044935,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "v. : ill. ;"
@@ -36,12 +39,15 @@
               "sierra-nypl"
             ],
             "subjectLiteral_exploded": [
-              "Jacobs family",
               "Pritchard family",
-              "Rimmer family"
+              "Rimmer family",
+              "Jacobs family"
+            ],
+            "numItemDatesParsed": [
+              0
             ],
             "publisherLiteral": [
-              "D. Symmonds,"
+              "D. Symmonds"
             ],
             "language": [
               {
@@ -49,32 +55,44 @@
                 "label": "English"
               }
             ],
-            "dateEndString": [
-              "9999"
+            "numItemsTotal": [
+              2
             ],
             "createdYear": [
               1985
             ],
-            "type": [
-              "nypl:Item"
+            "dateEndString": [
+              "9999"
             ],
             "title": [
               "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s"
             ],
+            "type": [
+              "nypl:Item"
+            ],
             "shelfMark": [
               "APV (Pritchett) 87-2820"
             ],
-            "creatorLiteral": [
-              "Symmonds, Dorothy."
+            "numItemVolumesParsed": [
+              2
             ],
             "createdString": [
               "1985"
             ],
+            "creatorLiteral": [
+              "Symmonds, Dorothy."
+            ],
             "idLccn": [
               "85239758"
             ],
+            "numElectronicResources": [
+              0
+            ],
             "dateStartYear": [
               1985
+            ],
+            "idOclc": [
+              "NYPG017000068-B"
             ],
             "identifierV2": [
               {
@@ -84,6 +102,10 @@
               {
                 "type": "nypl:Bnumber",
                 "value": "10015541"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG017000068-B"
               },
               {
                 "type": "bf:Lccn",
@@ -97,14 +119,19 @@
             "dateEndYear": [
               9999
             ],
-            "updatedAt": 1636069238906,
+            "updatedAt": 1711089512041,
             "publicationStatement": [
               "Bellaire, Tex. (P.O. Box 26, Bellaire 77401) : D. Symmonds, c1985-<c1989   >"
             ],
             "identifier": [
+              "urn:shelfmark:APV (Pritchett) 87-2820",
               "urn:bnum:10015541",
+              "urn:oclc:NYPG017000068-B",
               "urn:lccn:85239758",
-              "urn:undefined:(WaOLN)nyp0215498"
+              "urn:identifier:(WaOLN)nyp0215498"
+            ],
+            "numCheckinCardItems": [
+              0
             ],
             "materialType": [
               {
@@ -128,9 +155,9 @@
               }
             ],
             "subjectLiteral": [
-              "Jacobs family.",
               "Pritchard family.",
-              "Rimmer family."
+              "Rimmer family.",
+              "Jacobs family."
             ],
             "titleDisplay": [
               "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s / by Dorothy Symmonds."
@@ -139,14 +166,8 @@
             "lccClassification": [
               "CS71.P9615 1985"
             ],
-            "numItems": [
-              2
-            ],
-            "numAvailable": [
-              2
-            ],
             "placeOfPublication": [
-              "Bellaire, Tex. (P.O. Box 26, Bellaire 77401) :"
+              "Bellaire, Tex. (P.O. Box 26, Bellaire 77401)"
             ],
             "issuance": [
               {
@@ -161,154 +182,39 @@
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 2,
+                "total": {
+                  "value": 2,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "identifier": [
-                        "urn:barcode:33433065651741"
-                      ],
-                      "physicalLocation": [
-                        "APV (Pritchett) 87-2820"
-                      ],
-                      "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000002",
-                      "m2CustomerCode": [
-                        "XA"
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:55||book, limited circ, MaRLI"
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "uri": "i14747616",
-                      "shelfMark": [
-                        "APV (Pritchett) 87-2820 v. 2"
-                      ],
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "APV (Pritchett) 87-2820 v. 2"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433065651741"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
-                      ],
-                      "enumerationChronology": [
-                        "v. 2"
-                      ],
-                      "idBarcode": [
-                        "33433065651741"
-                      ],
-                      "requestable": [
-                        false
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:55",
-                          "label": "book, limited circ, MaRLI"
-                        }
-                      ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mag92",
-                          "label": "Schwarzman Building M2 - Milstein Division Room 121"
-                        }
-                      ]
-                    },
-                    "sort": [
-                      null
-                    ]
-                  },
-                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10015541",
                     "_nested": {
                       "field": "items",
                       "offset": 0
                     },
                     "_score": null,
                     "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "identifier": [
-                        "urn:barcode:33433060936147"
-                      ],
-                      "physicalLocation": [
-                        "APV (Pritchett) 87-2820"
-                      ],
-                      "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000001",
-                      "m2CustomerCode": [
-                        "XA"
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:55||book, limited circ, MaRLI"
-                      ],
                       "accessMessage": [
                         {
                           "id": "accessMessage:1",
                           "label": "Use in library"
                         }
                       ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "uri": "i35838326",
-                      "shelfMark": [
-                        "APV (Pritchett) 87-2820 v. 1"
-                      ],
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "APV (Pritchett) 87-2820 v. 1"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433060936147"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
-                      ],
-                      "enumerationChronology": [
-                        "v. 1"
-                      ],
-                      "idBarcode": [
-                        "33433060936147"
-                      ],
-                      "requestable": [
-                        false
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
                       ],
                       "catalogItemType": [
                         {
@@ -316,21 +222,178 @@
                           "label": "book, limited circ, MaRLI"
                         }
                       ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
+                      "catalogItemType_packed": [
+                        "catalogItemType:55||book, limited circ, MaRLI"
+                      ],
+                      "enumerationChronology": [
+                        "v. 2"
+                      ],
+                      "enumerationChronology_sort": [
+                        "         2-"
+                      ],
+                      "formatLiteral": [
+                        "Text"
                       ],
                       "holdingLocation": [
                         {
                           "id": "loc:mag92",
                           "label": "Schwarzman Building M2 - Milstein Division Room 121"
                         }
-                      ]
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                      ],
+                      "idBarcode": [
+                        "33433065651741"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:APV (Pritchett) 87-2820 v. 2",
+                        "urn:barcode:33433065651741"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "APV (Pritchett) 87-2820 v. 2",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433065651741",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "m2CustomerCode": [
+                        "XA"
+                      ],
+                      "physicalLocation": [
+                        "APV (Pritchett) 87-2820"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "APV (Pritchett) 87-2820 v. 2"
+                      ],
+                      "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000002",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 2,
+                          "lte": 2
+                        }
+                      ],
+                      "uri": "i14747616"
                     },
                     "sort": [
-                      null
+                      "         2-"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10015541",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:55||book, limited circ, MaRLI"
+                      ],
+                      "enumerationChronology": [
+                        "v. 1"
+                      ],
+                      "enumerationChronology_sort": [
+                        "         1-"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mag92",
+                          "label": "Schwarzman Building M2 - Milstein Division Room 121"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                      ],
+                      "idBarcode": [
+                        "33433060936147"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:APV (Pritchett) 87-2820 v. 1",
+                        "urn:barcode:33433060936147"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "APV (Pritchett) 87-2820 v. 1",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433060936147",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "m2CustomerCode": [
+                        "XA"
+                      ],
+                      "physicalLocation": [
+                        "APV (Pritchett) 87-2820"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "APV (Pritchett) 87-2820 v. 1"
+                      ],
+                      "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000001",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 1,
+                          "lte": 1
+                        }
+                      ],
+                      "uri": "i35838326"
+                    },
+                    "sort": [
+                      "         1-"
                     ]
                   }
                 ]
@@ -359,7 +422,12 @@
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
-          "buckets": []
+          "buckets": [
+            {
+              "key": "Text",
+              "doc_count": 2
+            }
+          ]
         }
       },
       "item_status": {
@@ -377,50 +445,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:55 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "5556",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b10015541\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "917"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 26
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }

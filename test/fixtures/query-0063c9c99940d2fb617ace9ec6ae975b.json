@@ -1,21 +1,24 @@
 {
   "body": {
-    "took": 7,
+    "took": 15,
     "timed_out": false,
     "_shards": {
-      "total": 3,
-      "successful": 3,
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
       "failed": 0
     },
     "hits": {
-      "total": 1,
-      "max_score": 15.5077095,
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 16.395695,
       "hits": [
         {
-          "_index": "resources-2018-04-09",
-          "_type": "resource",
+          "_index": "resources-2024-06-05",
           "_id": "b10628074",
-          "_score": 15.5077095,
+          "_score": 16.395695,
           "_source": {
             "extent": [
               "387 p. ;"
@@ -36,6 +39,9 @@
               "Food consumption",
               "Food consumption -- Great Britain"
             ],
+            "numItemDatesParsed": [
+              0
+            ],
             "publisherLiteral": [
               "Scolar Press"
             ],
@@ -45,29 +51,42 @@
                 "label": "English"
               }
             ],
+            "numItemsTotal": [
+              1
+            ],
             "createdYear": [
               1979
-            ],
-            "type": [
-              "nypl:Item"
             ],
             "title": [
               "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
             ],
+            "type": [
+              "nypl:Item"
+            ],
             "shelfMark": [
               "JLD 80-944"
             ],
-            "creatorLiteral": [
-              "Burnett, John, 1925-"
+            "numItemVolumesParsed": [
+              0
             ],
             "createdString": [
               "1979"
             ],
+            "creatorLiteral": [
+              "Burnett, John, 1925-"
+            ],
             "idLccn": [
               "79322081"
             ],
+            "numElectronicResources": [
+              0
+            ],
             "dateStartYear": [
               1979
+            ],
+            "idOclc": [
+              "5330384",
+              "NYPG804170330-B"
             ],
             "identifierV2": [
               {
@@ -80,19 +99,19 @@
               },
               {
                 "type": "bf:Isbn",
-                "value": "0859674614 :"
+                "value": "0859674614"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "5330384"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG804170330-B"
               },
               {
                 "type": "bf:Lccn",
                 "value": "79322081"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "5330384"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "5330384"
               },
               {
                 "type": "bf:Identifier",
@@ -107,24 +126,26 @@
                 "value": "(OCoLC)5330384"
               }
             ],
-            "idOclc": [
-              "5330384"
-            ],
-            "updatedAt": 1659164805775,
+            "updatedAt": 1711304061983,
             "publicationStatement": [
               "London : Scolar Press, 1979."
             ],
-            "identifier": [
-              "urn:bnum:10628074",
-              "urn:isbn:0859674614 :",
-              "urn:lccn:79322081",
-              "urn:oclc:5330384",
-              "urn:undefined:NN804170330",
-              "urn:undefined:(WaOLN)nyp0633800",
-              "urn:undefined:(OCoLC)5330384"
-            ],
             "idIsbn": [
-              "0859674614 "
+              "0859674614"
+            ],
+            "identifier": [
+              "urn:shelfmark:JLD 80-944",
+              "urn:bnum:10628074",
+              "urn:isbn:0859674614",
+              "urn:oclc:5330384",
+              "urn:oclc:NYPG804170330-B",
+              "urn:lccn:79322081",
+              "urn:identifier:NN804170330",
+              "urn:identifier:(WaOLN)nyp0633800",
+              "urn:identifier:(OCoLC)5330384"
+            ],
+            "numCheckinCardItems": [
+              0
             ],
             "materialType": [
               {
@@ -158,12 +179,6 @@
             "lccClassification": [
               "TX360.G7 B8 1979"
             ],
-            "numItems": [
-              1
-            ],
-            "numAvailable": [
-              1
-            ],
             "placeOfPublication": [
               "London"
             ],
@@ -173,51 +188,49 @@
                 "label": "monograph/item"
               }
             ],
-            "idIsbn_clean": [
-              "0859674614"
-            ],
             "dimensions": [
               "21 cm."
+            ],
+            "idIsbn_clean": [
+              "0859674614"
             ]
           },
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": 0,
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": 1,
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
                 "max_score": null,
                 "hits": [
                   {
+                    "_index": "resources-2024-06-05",
+                    "_id": "b10628074",
                     "_nested": {
                       "field": "items",
                       "offset": 0
                     },
                     "_score": null,
                     "_source": {
-                      "uri": "i15761885",
-                      "status": [
+                      "accessMessage": [
                         {
-                          "id": "status:a",
-                          "label": "Available"
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
                         }
                       ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1000",
-                          "label": "Stephen A. Schwarzman Building"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1000||Stephen A. Schwarzman Building"
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
                       ],
                       "catalogItemType": [
                         {
@@ -228,6 +241,9 @@
                       "catalogItemType_packed": [
                         "catalogItemType:55||book, limited circ, MaRLI"
                       ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
                       "holdingLocation": [
                         {
                           "id": "loc:rc2ma",
@@ -237,8 +253,12 @@
                       "holdingLocation_packed": [
                         "loc:rc2ma||Offsite"
                       ],
-                      "shelfMark": [
-                        "JLD 80-944"
+                      "idBarcode": [
+                        "33433080108636"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JLD 80-944",
+                        "urn:barcode:33433080108636"
                       ],
                       "identifierV2": [
                         {
@@ -246,9 +266,18 @@
                           "type": "bf:ShelfMark"
                         },
                         {
-                          "type": "bf:Barcode",
-                          "value": "33433080108636"
+                          "value": "33433080108636",
+                          "type": "bf:Barcode"
                         }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
                       ],
                       "physicalLocation": [
                         "JLD 80-944"
@@ -256,25 +285,26 @@
                       "recapCustomerCode": [
                         "NA"
                       ],
-                      "identifier": [
-                        "urn:barcode:33433080108636"
-                      ],
-                      "idBarcode": [
-                        "33433080108636"
-                      ],
                       "requestable": [
                         true
                       ],
-                      "accessMessage": [
+                      "shelfMark": [
+                        "JLD 80-944"
+                      ],
+                      "shelfMark_sort": "aJLD 80-000944",
+                      "status": [
                         {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
+                          "id": "status:a",
+                          "label": "Available"
                         }
                       ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
+                      "status_packed": [
+                        "status:a||Available"
                       ],
-                      "shelfMark_sort": "aJLD 80-000944"
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "uri": "i15761885"
                     },
                     "sort": [
                       null
@@ -306,7 +336,12 @@
         "_nested": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
-          "buckets": []
+          "buckets": [
+            {
+              "key": "Text",
+              "doc_count": 1
+            }
+          ]
         }
       },
       "item_status": {
@@ -324,50 +359,5 @@
       }
     }
   },
-  "statusCode": 200,
-  "headers": {
-    "date": "Mon, 11 Mar 2024 15:36:55 GMT",
-    "content-type": "application/json; charset=UTF-8",
-    "content-length": "3891",
-    "connection": "keep-alive",
-    "access-control-allow-origin": "*"
-  },
-  "meta": {
-    "context": null,
-    "request": {
-      "params": {
-        "method": "POST",
-        "path": "/resources-2018-04-09/_search",
-        "body": "{\"size\":1,\"query\":{\"bool\":{\"must\":[{\"term\":{\"uri\":\"b10628074\"}}],\"filter\":[{\"bool\":{\"should\":[{\"nested\":{\"path\":\"items\",\"query\":{\"bool\":{\"must_not\":[{\"exists\":{\"field\":\"items.electronicLocator\"}}]}},\"inner_hits\":{\"sort\":[{\"items.enumerationChronology_sort\":\"desc\"}],\"size\":100,\"from\":0,\"name\":\"items\"}}},{\"nested\":{\"path\":\"items\",\"query\":{\"exists\":{\"field\":\"items.electronicLocator\"}},\"inner_hits\":{\"name\":\"electronicResources\"}}},{\"match_all\":{}}]}}]}},\"_source\":{\"excludes\":[\"uris\",\"*_packed\",\"*_sort\",\"items.*_packed\",\"contentsTitle\",\"items\"]},\"aggregations\":{\"item_location\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.holdingLocation_packed\"}}}},\"item_status\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.status_packed\"}}}},\"item_format\":{\"nested\":{\"path\":\"items\"},\"aggs\":{\"_nested\":{\"terms\":{\"size\":100,\"field\":\"items.formatLiteral\"}}}}}}",
-        "querystring": "",
-        "headers": {
-          "user-agent": "elasticsearch-js/7.12.0 (darwin 21.6.0-x64; Node.js v18.12.1)",
-          "x-elastic-client-meta": "es=7.12.0,js=18.12.1,t=7.12.0,hc=18.12.1",
-          "content-type": "application/json",
-          "content-length": "917"
-        },
-        "timeout": 30000
-      },
-      "options": {},
-      "id": 24
-    },
-    "name": "elasticsearch-js",
-    "connection": {
-      "url": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "id": "https://search-discovery-api-production-wio7hqrai645zhzi2cvpitpu6q.us-east-1.es.amazonaws.com/",
-      "headers": {},
-      "deadCount": 0,
-      "resurrectTimeout": 0,
-      "_openRequests": 0,
-      "status": "alive",
-      "roles": {
-        "master": true,
-        "data": true,
-        "ingest": true,
-        "ml": false
-      }
-    },
-    "attempts": 0,
-    "aborted": false
-  }
+  "statusCode": 200
 }
