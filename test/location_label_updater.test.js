@@ -10,7 +10,7 @@ describe('Location LabelUpdater', function () {
         _id: 'b10980129',
         _source: {
           items: [{
-            holdingLocation: [{ id: 'mai87', label: 'Some disgusting room' }]
+            holdingLocation: [{ id: 'mai82', label: 'Some disgusting room' }]
           }]
         }
       }]
@@ -18,7 +18,7 @@ describe('Location LabelUpdater', function () {
     }
 
     const updatedResponse = new LocationLabelUpdater(fakeESResponse).responseWithUpdatedLabels()
-    expect(updatedResponse.hits.hits[0]._source.items[0].holdingLocation[0].label).to.equal('Schwarzman Building - Periodicals and Microforms Room 119')
+    expect(updatedResponse.hits.hits[0]._source.items[0].holdingLocation[0].label).to.equal('Schwarzman Building M1 - Microforms Room 315')
   })
 
   it('will overwrite an ElasticSearch Response\'s holdings record location label', function () {

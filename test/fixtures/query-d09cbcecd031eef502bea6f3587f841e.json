@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 120,
+    "took": 119,
     "timed_out": false,
     "_shards": {
-      "total": 1,
-      "successful": 1,
+      "total": 2,
+      "successful": 2,
       "skipped": 0,
       "failed": 0
     },
@@ -16,9 +16,9 @@
       "max_score": null,
       "hits": [
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b12709113",
-          "_score": 161.35564,
+          "_score": 160.23509,
           "_source": {
             "extent": [
               "iv, 350 p. : ill., port. ;"
@@ -143,7 +143,7 @@
             ]
           },
           "sort": [
-            161.35564,
+            160.23509,
             "b12709113"
           ],
           "inner_hits": {
@@ -166,7 +166,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b12709113",
                     "_nested": {
                       "field": "items",

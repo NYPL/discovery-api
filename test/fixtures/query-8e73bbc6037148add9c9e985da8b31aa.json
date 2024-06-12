@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 1258,
+    "took": 397,
     "timed_out": false,
     "_shards": {
-      "total": 1,
-      "successful": 1,
+      "total": 2,
+      "successful": 2,
       "skipped": 0,
       "failed": 0
     },
@@ -16,9 +16,288 @@
       "max_score": null,
       "hits": [
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
+          "_id": "cb1808514",
+          "_score": 847.3456,
+          "_source": {
+            "extent": [
+              "1 score (3 unnumbered pages, 12 pages) ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "For orchestra.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Program notes by Jack Gottlieb.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Duration: ca. 2:30.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Recorded by the Israel Philharmonic, the composer conducting, on Deutsche Grammophon 2532 052.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Also available in a version for symphonic band.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "recap-cul"
+            ],
+            "subjectLiteral_exploded": [
+              "Orchestral music",
+              "Orchestral music -- Scores"
+            ],
+            "publisherLiteral": [
+              "Jalni Publications ; Boosey & Hawkes, sole selling agent"
+            ],
+            "dateEndString": [
+              "1980"
+            ],
+            "createdYear": [
+              1984
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "title": [
+              "A musical toast"
+            ],
+            "creatorLiteral": [
+              "Bernstein, Leonard, 1918-1990."
+            ],
+            "createdString": [
+              "1984"
+            ],
+            "seriesStatement": [
+              "Hawkes pocket scores"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1984
+            ],
+            "identifierV2": [
+              {
+                "type": "nypl:Bnumber",
+                "value": "1808514"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "ocm11578466"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "H.P.S. 976 Boosey & Hawkes"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)ocm11578466"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(NNC)1808514"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "1808514"
+              }
+            ],
+            "idOclc": [
+              "ocm11578466"
+            ],
+            "uniformTitle": [
+              "Musical toast",
+              "Hawkes pocket scores."
+            ],
+            "dateEndYear": [
+              1980
+            ],
+            "holdings": [],
+            "updatedAt": 1664590433971,
+            "publicationStatement": [
+              "[Place of publication not identified] : Jalni Publications ; New York, N.Y. : Boosey & Hawkes, sole selling agent, 1984, ©1980."
+            ],
+            "identifier": [
+              "urn:bnum:1808514",
+              "urn:oclc:ocm11578466",
+              "urn:undefined:H.P.S. 976 Boosey & Hawkes",
+              "urn:undefined:(OCoLC)ocm11578466",
+              "urn:undefined:(NNC)1808514",
+              "urn:undefined:1808514"
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:not",
+                "label": "Notated music"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1984"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Orchestral music -- Scores."
+            ],
+            "titleDisplay": [
+              "A musical toast / Leonard Bernstein."
+            ],
+            "uri": "cb1808514",
+            "numItems": [
+              1
+            ],
+            "numAvailable": [
+              1
+            ],
+            "placeOfPublication": [
+              "[Place of publication not identified] : New York, N.Y."
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "titleAlt": [
+              "Musical toast"
+            ],
+            "dimensions": [
+              "27 cm."
+            ]
+          },
+          "sort": [
+            847.3456,
+            "cb1808514"
+          ],
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-06-07",
+                    "_id": "cb1808514",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "uri": "ci2278358",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:0002",
+                          "label": "Columbia University Libraries"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:0002||Columbia University Libraries"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:1",
+                          "label": "non-circ"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:1||non-circ"
+                      ],
+                      "shelfMark": [
+                        "61 B458 M9"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "61 B458 M9",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "MR61509485"
+                        }
+                      ],
+                      "physicalLocation": [
+                        "61 B458 M9"
+                      ],
+                      "recapCustomerCode": [
+                        "MR"
+                      ],
+                      "identifier": [
+                        "urn:barcode:MR61509485"
+                      ],
+                      "idBarcode": [
+                        "MR61509485"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "shelfMark_sort": "a61 B458 M000009"
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-06-07",
           "_id": "b11294632",
-          "_score": 848.3208,
+          "_score": 846.5295,
           "_source": {
             "extent": [
               "xxi, 273 p. ;"
@@ -187,7 +466,7 @@
             ]
           },
           "sort": [
-            848.3208,
+            846.5295,
             "b11294632"
           ],
           "inner_hits": {
@@ -210,7 +489,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b11294632",
                     "_nested": {
                       "field": "items",
@@ -302,9 +581,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b10981311",
-          "_score": 846.3208,
+          "_score": 844.5295,
           "_source": {
             "extent": [
               "1 miniature score (12 p.) ;"
@@ -481,7 +760,7 @@
             ]
           },
           "sort": [
-            846.3208,
+            844.5295,
             "b10981311"
           ],
           "inner_hits": {
@@ -504,7 +783,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10981311",
                     "_nested": {
                       "field": "items",
@@ -605,288 +884,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
-          "_id": "cb1808514",
-          "_score": 845.6518,
-          "_source": {
-            "extent": [
-              "1 score (3 unnumbered pages, 12 pages) ;"
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "For orchestra.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Program notes by Jack Gottlieb.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Duration: ca. 2:30.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Recorded by the Israel Philharmonic, the composer conducting, on Deutsche Grammophon 2532 052.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Also available in a version for symphonic band.",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "recap-cul"
-            ],
-            "subjectLiteral_exploded": [
-              "Orchestral music",
-              "Orchestral music -- Scores"
-            ],
-            "publisherLiteral": [
-              "Jalni Publications ; Boosey & Hawkes, sole selling agent"
-            ],
-            "dateEndString": [
-              "1980"
-            ],
-            "createdYear": [
-              1984
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "title": [
-              "A musical toast"
-            ],
-            "creatorLiteral": [
-              "Bernstein, Leonard, 1918-1990."
-            ],
-            "createdString": [
-              "1984"
-            ],
-            "seriesStatement": [
-              "Hawkes pocket scores"
-            ],
-            "numElectronicResources": [
-              0
-            ],
-            "dateStartYear": [
-              1984
-            ],
-            "identifierV2": [
-              {
-                "type": "nypl:Bnumber",
-                "value": "1808514"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "ocm11578466"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "H.P.S. 976 Boosey & Hawkes"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(OCoLC)ocm11578466"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(NNC)1808514"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "1808514"
-              }
-            ],
-            "idOclc": [
-              "ocm11578466"
-            ],
-            "uniformTitle": [
-              "Musical toast",
-              "Hawkes pocket scores."
-            ],
-            "dateEndYear": [
-              1980
-            ],
-            "holdings": [],
-            "updatedAt": 1664590433971,
-            "publicationStatement": [
-              "[Place of publication not identified] : Jalni Publications ; New York, N.Y. : Boosey & Hawkes, sole selling agent, 1984, ©1980."
-            ],
-            "identifier": [
-              "urn:bnum:1808514",
-              "urn:oclc:ocm11578466",
-              "urn:undefined:H.P.S. 976 Boosey & Hawkes",
-              "urn:undefined:(OCoLC)ocm11578466",
-              "urn:undefined:(NNC)1808514",
-              "urn:undefined:1808514"
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:not",
-                "label": "Notated music"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1984"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Orchestral music -- Scores."
-            ],
-            "titleDisplay": [
-              "A musical toast / Leonard Bernstein."
-            ],
-            "uri": "cb1808514",
-            "numItems": [
-              1
-            ],
-            "numAvailable": [
-              1
-            ],
-            "placeOfPublication": [
-              "[Place of publication not identified] : New York, N.Y."
-            ],
-            "issuance": [
-              {
-                "id": "urn:biblevel:m",
-                "label": "monograph/item"
-              }
-            ],
-            "titleAlt": [
-              "Musical toast"
-            ],
-            "dimensions": [
-              "27 cm."
-            ]
-          },
-          "sort": [
-            845.6518,
-            "cb1808514"
-          ],
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 1,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-06-05",
-                    "_id": "cb1808514",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "uri": "ci2278358",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:0002",
-                          "label": "Columbia University Libraries"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:0002||Columbia University Libraries"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:1",
-                          "label": "non-circ"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:1||non-circ"
-                      ],
-                      "shelfMark": [
-                        "61 B458 M9"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "61 B458 M9",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "MR61509485"
-                        }
-                      ],
-                      "physicalLocation": [
-                        "61 B458 M9"
-                      ],
-                      "recapCustomerCode": [
-                        "MR"
-                      ],
-                      "identifier": [
-                        "urn:barcode:MR61509485"
-                      ],
-                      "idBarcode": [
-                        "MR61509485"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "shelfMark_sort": "a61 B458 M000009"
-                    },
-                    "sort": [
-                      null
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b13111567",
-          "_score": 752.1396,
+          "_score": 750.54047,
           "_source": {
             "extent": [
               "v."
@@ -1033,7 +1033,7 @@
             ]
           },
           "sort": [
-            752.1396,
+            750.54047,
             "b13111567"
           ],
           "inner_hits": {
@@ -1056,7 +1056,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b13111567",
                     "_nested": {
                       "field": "items",
@@ -1155,7 +1155,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b13111567",
                     "_nested": {
                       "field": "items",
@@ -1259,400 +1259,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
-          "_id": "b10861042",
-          "_score": 646.5859,
-          "_source": {
-            "extent": [
-              "24 p. : ill., ports. ;"
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "\"A publication commemorating the bicentennial of the evacuation of the British from New York City on November 25, 1783, at the end of the Revolutionary War.\"",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Bibliography",
-                "label": "Bibliography: p. 24.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Reproduction",
-                "label": "Microfilm.",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "subjectLiteral_exploded": [
-              "Evacuation Day, New York, N.Y., 1783",
-              "New York (N.Y.)",
-              "New York (N.Y.) -- History",
-              "New York (N.Y.) -- History -- Revolution, 1775-1783"
-            ],
-            "numItemDatesParsed": [
-              0
-            ],
-            "publisherLiteral": [
-              "Fraunces Tavern Museum"
-            ],
-            "language": [
-              {
-                "id": "lang:eng",
-                "label": "English"
-              }
-            ],
-            "numItemsTotal": [
-              2
-            ],
-            "createdYear": [
-              1984
-            ],
-            "title": [
-              "A toast to freedom New York celebrates Evacuation Day."
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "shelfMark": [
-              "*ZI-437 no. 20"
-            ],
-            "numItemVolumesParsed": [
-              2
-            ],
-            "createdString": [
-              "1984"
-            ],
-            "numElectronicResources": [
-              0
-            ],
-            "contributorLiteral": [
-              "Fraunces Tavern Museum.",
-              "Sons of the American Revolution. Empire State Society."
-            ],
-            "dateStartYear": [
-              1984
-            ],
-            "idOclc": [
-              "NYPG84-B40685"
-            ],
-            "identifierV2": [
-              {
-                "type": "bf:ShelfMark",
-                "value": "*ZI-437 no. 20"
-              },
-              {
-                "type": "nypl:Bnumber",
-                "value": "10861042"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "NYPG84-B40685"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)nyp0868084"
-              }
-            ],
-            "updatedAt": 1711309976175,
-            "publicationStatement": [
-              "New York : Fraunces Tavern Museum, 1984."
-            ],
-            "identifier": [
-              "urn:shelfmark:*ZI-437 no. 20",
-              "urn:bnum:10861042",
-              "urn:oclc:NYPG84-B40685",
-              "urn:identifier:(WaOLN)nyp0868084"
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:txt",
-                "label": "Text"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1984"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Evacuation Day, New York, N.Y., 1783.",
-              "New York (N.Y.) -- History -- Revolution, 1775-1783."
-            ],
-            "titleDisplay": [
-              "A toast to freedom [microform] :  New York celebrates Evacuation Day."
-            ],
-            "uri": "b10861042",
-            "placeOfPublication": [
-              "New York"
-            ],
-            "issuance": [
-              {
-                "id": "urn:biblevel:m",
-                "label": "monograph/item"
-              }
-            ],
-            "dimensions": [
-              "28 cm."
-            ]
-          },
-          "sort": [
-            646.5859,
-            "b10861042"
-          ],
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 2,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-06-05",
-                    "_id": "b10861042",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:6",
-                          "label": "microfilm service copy"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:6||microfilm service copy"
-                      ],
-                      "enumerationChronology": [
-                        "r. 2"
-                      ],
-                      "enumerationChronology_sort": [
-                        "         2-"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mag82",
-                          "label": "Schwarzman Building - Milstein Division Room 121"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mag82||Schwarzman Building - Milstein Division Room 121"
-                      ],
-                      "idBarcode": [
-                        "33433110534520"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*ZI-437 r. 2",
-                        "urn:barcode:33433110534520"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*ZI-437 r. 2",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433110534520",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1105",
-                          "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                      ],
-                      "physicalLocation": [
-                        "*ZI-437"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "*ZI-437 r. 2"
-                      ],
-                      "shelfMark_sort": "a*ZI-437 r. 000002",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 2,
-                          "lte": 2
-                        }
-                      ],
-                      "uri": "i31168756"
-                    },
-                    "sort": [
-                      "         2-"
-                    ]
-                  },
-                  {
-                    "_index": "resources-2024-06-05",
-                    "_id": "b10861042",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:6",
-                          "label": "microfilm service copy"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:6||microfilm service copy"
-                      ],
-                      "enumerationChronology": [
-                        "r. 1"
-                      ],
-                      "enumerationChronology_sort": [
-                        "         1-"
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mag82",
-                          "label": "Schwarzman Building - Milstein Division Room 121"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mag82||Schwarzman Building - Milstein Division Room 121"
-                      ],
-                      "idBarcode": [
-                        "33433110534512"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*ZI-437 r. 1",
-                        "urn:barcode:33433110534512"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*ZI-437 r. 1",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433110534512",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1105",
-                          "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                        }
-                      ],
-                      "owner_packed": [
-                        "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
-                      ],
-                      "physicalLocation": [
-                        "*ZI-437"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "shelfMark": [
-                        "*ZI-437 r. 1"
-                      ],
-                      "shelfMark_sort": "a*ZI-437 r. 000001",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 1,
-                          "lte": 1
-                        }
-                      ],
-                      "uri": "i24076491"
-                    },
-                    "sort": [
-                      "         1-"
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b18106748",
-          "_score": 646.5859,
+          "_score": 647.88916,
           "_source": {
             "extent": [
               "24 p. : ill. ;"
@@ -1813,7 +1422,7 @@
             ]
           },
           "sort": [
-            646.5859,
+            647.88916,
             "b18106748"
           ],
           "inner_hits": {
@@ -1836,7 +1445,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b18106748",
                     "_nested": {
                       "field": "items",
@@ -1928,9 +1537,400 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
+          "_id": "b10861042",
+          "_score": 645.20856,
+          "_source": {
+            "extent": [
+              "24 p. : ill., ports. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "\"A publication commemorating the bicentennial of the evacuation of the British from New York City on November 25, 1783, at the end of the Revolutionary War.\"",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Bibliography",
+                "label": "Bibliography: p. 24.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Reproduction",
+                "label": "Microfilm.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Evacuation Day, New York, N.Y., 1783",
+              "New York (N.Y.)",
+              "New York (N.Y.) -- History",
+              "New York (N.Y.) -- History -- Revolution, 1775-1783"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "Fraunces Tavern Museum"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              2
+            ],
+            "createdYear": [
+              1984
+            ],
+            "title": [
+              "A toast to freedom New York celebrates Evacuation Day."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*ZI-437 no. 20"
+            ],
+            "numItemVolumesParsed": [
+              2
+            ],
+            "createdString": [
+              "1984"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "contributorLiteral": [
+              "Fraunces Tavern Museum.",
+              "Sons of the American Revolution. Empire State Society."
+            ],
+            "dateStartYear": [
+              1984
+            ],
+            "idOclc": [
+              "NYPG84-B40685"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*ZI-437 no. 20"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "10861042"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG84-B40685"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp0868084"
+              }
+            ],
+            "updatedAt": 1711309976175,
+            "publicationStatement": [
+              "New York : Fraunces Tavern Museum, 1984."
+            ],
+            "identifier": [
+              "urn:shelfmark:*ZI-437 no. 20",
+              "urn:bnum:10861042",
+              "urn:oclc:NYPG84-B40685",
+              "urn:identifier:(WaOLN)nyp0868084"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1984"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Evacuation Day, New York, N.Y., 1783.",
+              "New York (N.Y.) -- History -- Revolution, 1775-1783."
+            ],
+            "titleDisplay": [
+              "A toast to freedom [microform] :  New York celebrates Evacuation Day."
+            ],
+            "uri": "b10861042",
+            "placeOfPublication": [
+              "New York"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "28 cm."
+            ]
+          },
+          "sort": [
+            645.20856,
+            "b10861042"
+          ],
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 2,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-06-07",
+                    "_id": "b10861042",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:6",
+                          "label": "microfilm service copy"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:6||microfilm service copy"
+                      ],
+                      "enumerationChronology": [
+                        "r. 2"
+                      ],
+                      "enumerationChronology_sort": [
+                        "         2-"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mag82",
+                          "label": "Schwarzman Building - Milstein Division Room 121"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                      ],
+                      "idBarcode": [
+                        "33433110534520"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*ZI-437 r. 2",
+                        "urn:barcode:33433110534520"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*ZI-437 r. 2",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433110534520",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1105",
+                          "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      ],
+                      "physicalLocation": [
+                        "*ZI-437"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "*ZI-437 r. 2"
+                      ],
+                      "shelfMark_sort": "a*ZI-437 r. 000002",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 2,
+                          "lte": 2
+                        }
+                      ],
+                      "uri": "i31168756"
+                    },
+                    "sort": [
+                      "         2-"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-06-07",
+                    "_id": "b10861042",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:6",
+                          "label": "microfilm service copy"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:6||microfilm service copy"
+                      ],
+                      "enumerationChronology": [
+                        "r. 1"
+                      ],
+                      "enumerationChronology_sort": [
+                        "         1-"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mag82",
+                          "label": "Schwarzman Building - Milstein Division Room 121"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                      ],
+                      "idBarcode": [
+                        "33433110534512"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*ZI-437 r. 1",
+                        "urn:barcode:33433110534512"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*ZI-437 r. 1",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433110534512",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1105",
+                          "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      ],
+                      "physicalLocation": [
+                        "*ZI-437"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "*ZI-437 r. 1"
+                      ],
+                      "shelfMark_sort": "a*ZI-437 r. 000001",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 1,
+                          "lte": 1
+                        }
+                      ],
+                      "uri": "i24076491"
+                    },
+                    "sort": [
+                      "         1-"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-06-07",
           "_id": "b12382054",
-          "_score": 644.5859,
+          "_score": 643.20856,
           "_source": {
             "extent": [
               "no."
@@ -2063,7 +2063,7 @@
             ]
           },
           "sort": [
-            644.5859,
+            643.20856,
             "b12382054"
           ],
           "inner_hits": {
@@ -2086,7 +2086,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b12382054",
                     "_nested": {
                       "field": "items",
@@ -2205,9 +2205,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "hb990084815100203941",
-          "_score": 435.43973,
+          "_score": 434.5292,
           "_source": {
             "extent": [
               "301 p. ;"
@@ -2354,7 +2354,7 @@
             ]
           },
           "sort": [
-            435.43973,
+            434.5292,
             "hb990084815100203941"
           ],
           "inner_hits": {
@@ -2377,7 +2377,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "hb990084815100203941",
                     "_nested": {
                       "field": "items",
@@ -2459,9 +2459,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "hb990002994230203941",
-          "_score": 422.32965,
+          "_score": 423.19406,
           "_source": {
             "extent": [
               "xi, 105 p., [1] folded leaf of plates : ill. ;"
@@ -2664,7 +2664,7 @@
             ]
           },
           "sort": [
-            422.32965,
+            423.19406,
             "hb990002994230203941"
           ],
           "inner_hits": {
@@ -2687,7 +2687,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "hb990002994230203941",
                     "_nested": {
                       "field": "items",
@@ -2778,9 +2778,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb1677200",
-          "_score": 384.0931,
+          "_score": 383.29346,
           "_source": {
             "extent": [
               "193, vi pages ;"
@@ -2941,7 +2941,7 @@
             ]
           },
           "sort": [
-            384.0931,
+            383.29346,
             "cb1677200"
           ],
           "inner_hits": {
@@ -2964,7 +2964,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb1677200",
                     "_nested": {
                       "field": "items",
@@ -3049,9 +3049,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "hb990060887580203941",
-          "_score": 27.120596,
+          "_score": 27.179132,
           "_source": {
             "extent": [
               "48 p."
@@ -3175,7 +3175,7 @@
             ]
           },
           "sort": [
-            27.120596,
+            27.179132,
             "hb990060887580203941"
           ],
           "inner_hits": {
@@ -3198,7 +3198,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "hb990060887580203941",
                     "_nested": {
                       "field": "items",
@@ -3271,9 +3271,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b11487687",
-          "_score": 17.070333,
+          "_score": 17.103212,
           "_source": {
             "extent": [
               "<4> photoprints : silver gelatin, b&w ;",
@@ -3458,7 +3458,7 @@
             ]
           },
           "sort": [
-            17.070333,
+            17.103212,
             "b11487687"
           ],
           "inner_hits": {
@@ -3481,7 +3481,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b11487687",
                     "_nested": {
                       "field": "items",
@@ -3582,9 +3582,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "hb990093581870203941",
-          "_score": 14.786613,
+          "_score": 14.74728,
           "_source": {
             "extent": [
               "xvi, 244 p. ;"
@@ -3760,7 +3760,7 @@
             ]
           },
           "sort": [
-            14.786613,
+            14.74728,
             "hb990093581870203941"
           ],
           "inner_hits": {
@@ -3783,7 +3783,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "hb990093581870203941",
                     "_nested": {
                       "field": "items",
@@ -3868,9 +3868,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b17948355",
-          "_score": 13.769606,
+          "_score": 13.784205,
           "_source": {
             "extent": [
               "1 videodisc (130 min.) : sound, color ;"
@@ -4139,7 +4139,7 @@
             ]
           },
           "sort": [
-            13.769606,
+            13.784205,
             "b17948355"
           ],
           "inner_hits": {
@@ -4162,7 +4162,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b17948355",
                     "_nested": {
                       "field": "items",
@@ -4254,9 +4254,286 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
+          "_id": "b15994132",
+          "_score": 12.464817,
+          "_source": {
+            "extent": [
+              "1 videocassette (VHS, NTSC) (58 min.) : sd., col. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "Title from original container.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Credits",
+                "label": "Camera: Caro Thompson.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Event",
+                "label": "Videotaped at Jacob's Pillow, Becket, Mass., June 23, Aug. 3 and other dates in summer 1984.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Morris dance",
+              "Break dancing"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "description": [
+              "This tape is a compilation of footage from special events during the 1984 season at Jacob's Pillow. The first segment includes footage from opening night festivities, including performances by the Pokingbrook Morris dancers and female garland dancers. The second segment records a brief presentation by Jacob's Pillow director Liz Thompson and dance patron Irene Hunter. Thompson speaks about the first appearance by the Martha Graham company at Jacob's Pillow and her own experience as a Graham dancer, and announces the naming of a building at Jacob's Pillow for Irene Hunter. Thompson proposes an audience toast to Hunter and Graham, and Hunter proposes a toast to Thompson. The third segment on the tape includes footage from outdoor daytime Gala festivities, including performances by two clowns making balloon sculptures, stilt-walkers, and breakdancers from the Rockwell Association. The fourth segment records a raffle held after a performance by the Hubbard Street Dance Company. The segment starts with the curtain calls following the performance; Marge Champion draws seat numbers and announces prizes for members of the audience. The last segment of the tape records breakdancing by a group of children and teenagers from Pittsfield."
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1984
+            ],
+            "title": [
+              "Jacob's Pillow. special events."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*MGZIA 4-4451"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1984"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "contributorLiteral": [
+              "Champion, Marge.",
+              "Thompson, Caro.",
+              "Jacob's Pillow Dance Festival."
+            ],
+            "dateStartYear": [
+              1984
+            ],
+            "donor": [
+              "Gift of Jacob's Pillow Dance Festival."
+            ],
+            "idOclc": [
+              "NYPT04-F167"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*MGZIA 4-4451"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "15994132"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPT04-F167"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)t280000016"
+              }
+            ],
+            "updatedAt": 1712867515154,
+            "publicationStatement": [
+              "1984."
+            ],
+            "genreForm": [
+              "Dance.",
+              "Video."
+            ],
+            "identifier": [
+              "urn:shelfmark:*MGZIA 4-4451",
+              "urn:bnum:15994132",
+              "urn:oclc:NYPT04-F167",
+              "urn:identifier:(WaOLN)t280000016"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:mov",
+                "label": "Moving image"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1984"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Morris dance.",
+              "Break dancing."
+            ],
+            "titleDisplay": [
+              "Jacob's Pillow. 1984 [videorecording] : special events."
+            ],
+            "uri": "b15994132",
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "tableOfContents": [
+              "June, 1984. Opening night: Morris dancers (11 min.) -- Audience toast (4 min.)",
+              "June 23, 1984. Gala festivities (19 min.)",
+              "Aug. 3, 1984. Hubbard Street raffle (8 min.)",
+              "[n.d.] Breakdancers from Pittsfield (16 min.)"
+            ],
+            "dimensions": [
+              "1/2 in."
+            ]
+          },
+          "sort": [
+            12.464817,
+            "b15994132"
+          ],
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-06-07",
+                    "_id": "b15994132",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:24",
+                          "label": "archival video recording"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:24||archival video recording"
+                      ],
+                      "formatLiteral": [
+                        "Moving image"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:pad22",
+                          "label": "Performing Arts Research Collections - Dance"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:pad22||Performing Arts Research Collections - Dance"
+                      ],
+                      "idBarcode": [
+                        "33433064016748"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*MGZIA 4-4451",
+                        "urn:barcode:33433064016748"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*MGZIA 4-4451",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433064016748",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "physicalLocation": [
+                        "*MGZIA 4-4451"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "shelfMark": [
+                        "*MGZIA 4-4451"
+                      ],
+                      "shelfMark_sort": "a*MGZIA 4-004451",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "uri": "i15404584",
+                      "aeonUrl": [
+                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&CallNumber=*MGZIA+4-4451&Date=1984&Form=30&Genre=archival+video+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db15994132&ItemISxN=i154045846&ItemNumber=33433064016748&ItemPublisher=1984.&Location=Performing+Arts+Dance+Division&ReferenceNumber=b159941325&Site=LPADNAMI&Title=Jacob%27s+Pillow.+special+events."
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-06-07",
           "_id": "b22159817",
-          "_score": 12.576336,
+          "_score": 12.428547,
           "_source": {
             "extent": [
               "1 videodisc (28 min.) : sound, color and black and white ;"
@@ -4480,7 +4757,7 @@
             ]
           },
           "sort": [
-            12.576336,
+            12.428547,
             "b22159817"
           ],
           "inner_hits": {
@@ -4503,7 +4780,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b22159817",
                     "_nested": {
                       "field": "items",
@@ -4604,286 +4881,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
-          "_id": "b15994132",
-          "_score": 12.306528,
-          "_source": {
-            "extent": [
-              "1 videocassette (VHS, NTSC) (58 min.) : sd., col. ;"
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "Title from original container.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Credits",
-                "label": "Camera: Caro Thompson.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Event",
-                "label": "Videotaped at Jacob's Pillow, Becket, Mass., June 23, Aug. 3 and other dates in summer 1984.",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "subjectLiteral_exploded": [
-              "Morris dance",
-              "Break dancing"
-            ],
-            "numItemDatesParsed": [
-              0
-            ],
-            "description": [
-              "This tape is a compilation of footage from special events during the 1984 season at Jacob's Pillow. The first segment includes footage from opening night festivities, including performances by the Pokingbrook Morris dancers and female garland dancers. The second segment records a brief presentation by Jacob's Pillow director Liz Thompson and dance patron Irene Hunter. Thompson speaks about the first appearance by the Martha Graham company at Jacob's Pillow and her own experience as a Graham dancer, and announces the naming of a building at Jacob's Pillow for Irene Hunter. Thompson proposes an audience toast to Hunter and Graham, and Hunter proposes a toast to Thompson. The third segment on the tape includes footage from outdoor daytime Gala festivities, including performances by two clowns making balloon sculptures, stilt-walkers, and breakdancers from the Rockwell Association. The fourth segment records a raffle held after a performance by the Hubbard Street Dance Company. The segment starts with the curtain calls following the performance; Marge Champion draws seat numbers and announces prizes for members of the audience. The last segment of the tape records breakdancing by a group of children and teenagers from Pittsfield."
-            ],
-            "language": [
-              {
-                "id": "lang:eng",
-                "label": "English"
-              }
-            ],
-            "numItemsTotal": [
-              1
-            ],
-            "createdYear": [
-              1984
-            ],
-            "title": [
-              "Jacob's Pillow. special events."
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "shelfMark": [
-              "*MGZIA 4-4451"
-            ],
-            "numItemVolumesParsed": [
-              0
-            ],
-            "createdString": [
-              "1984"
-            ],
-            "numElectronicResources": [
-              0
-            ],
-            "contributorLiteral": [
-              "Champion, Marge.",
-              "Thompson, Caro.",
-              "Jacob's Pillow Dance Festival."
-            ],
-            "dateStartYear": [
-              1984
-            ],
-            "donor": [
-              "Gift of Jacob's Pillow Dance Festival."
-            ],
-            "idOclc": [
-              "NYPT04-F167"
-            ],
-            "identifierV2": [
-              {
-                "type": "bf:ShelfMark",
-                "value": "*MGZIA 4-4451"
-              },
-              {
-                "type": "nypl:Bnumber",
-                "value": "15994132"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "NYPT04-F167"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)t280000016"
-              }
-            ],
-            "updatedAt": 1712867515154,
-            "publicationStatement": [
-              "1984."
-            ],
-            "genreForm": [
-              "Dance.",
-              "Video."
-            ],
-            "identifier": [
-              "urn:shelfmark:*MGZIA 4-4451",
-              "urn:bnum:15994132",
-              "urn:oclc:NYPT04-F167",
-              "urn:identifier:(WaOLN)t280000016"
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:mov",
-                "label": "Moving image"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1984"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Morris dance.",
-              "Break dancing."
-            ],
-            "titleDisplay": [
-              "Jacob's Pillow. 1984 [videorecording] : special events."
-            ],
-            "uri": "b15994132",
-            "issuance": [
-              {
-                "id": "urn:biblevel:m",
-                "label": "monograph/item"
-              }
-            ],
-            "tableOfContents": [
-              "June, 1984. Opening night: Morris dancers (11 min.) -- Audience toast (4 min.)",
-              "June 23, 1984. Gala festivities (19 min.)",
-              "Aug. 3, 1984. Hubbard Street raffle (8 min.)",
-              "[n.d.] Breakdancers from Pittsfield (16 min.)"
-            ],
-            "dimensions": [
-              "1/2 in."
-            ]
-          },
-          "sort": [
-            12.306528,
-            "b15994132"
-          ],
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 1,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-06-05",
-                    "_id": "b15994132",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:24",
-                          "label": "archival video recording"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:24||archival video recording"
-                      ],
-                      "formatLiteral": [
-                        "Moving image"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:pad22",
-                          "label": "Performing Arts Research Collections - Dance"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:pad22||Performing Arts Research Collections - Dance"
-                      ],
-                      "idBarcode": [
-                        "33433064016748"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*MGZIA 4-4451",
-                        "urn:barcode:33433064016748"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*MGZIA 4-4451",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433064016748",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "physicalLocation": [
-                        "*MGZIA 4-4451"
-                      ],
-                      "requestable": [
-                        false
-                      ],
-                      "shelfMark": [
-                        "*MGZIA 4-4451"
-                      ],
-                      "shelfMark_sort": "a*MGZIA 4-004451",
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "uri": "i15404584",
-                      "aeonUrl": [
-                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&CallNumber=*MGZIA+4-4451&Date=1984&Form=30&Genre=archival+video+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db15994132&ItemISxN=i154045846&ItemNumber=33433064016748&ItemPublisher=1984.&Location=Performing+Arts+Dance+Division&ReferenceNumber=b159941325&Site=LPADNAMI&Title=Jacob%27s+Pillow.+special+events."
-                      ]
-                    },
-                    "sort": [
-                      null
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b15557108",
-          "_score": 11.928482,
+          "_score": 11.9390745,
           "_source": {
             "extent": [
               "1 sound disc (64:00) : digital ;"
@@ -5059,7 +5059,7 @@
             ]
           },
           "sort": [
-            11.928482,
+            11.9390745,
             "b15557108"
           ],
           "inner_hits": {
@@ -5082,7 +5082,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b15557108",
                     "_nested": {
                       "field": "items",
@@ -5166,7 +5166,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b15557108",
                     "_nested": {
                       "field": "items",
@@ -5258,9 +5258,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b21858284",
-          "_score": 10.9203,
+          "_score": 10.90081,
           "_source": {
             "extent": [
               "1 online resource (1 sound file)."
@@ -5427,7 +5427,7 @@
             ]
           },
           "sort": [
-            10.9203,
+            10.90081,
             "b21858284"
           ],
           "inner_hits": {
@@ -5454,9 +5454,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b21977011",
-          "_score": 10.819521,
+          "_score": 10.827286,
           "_source": {
             "extent": [
               "3 audio discs : digital, CD audio, stereo ;"
@@ -5674,7 +5674,7 @@
             ]
           },
           "sort": [
-            10.819521,
+            10.827286,
             "b21977011"
           ],
           "inner_hits": {
@@ -5697,7 +5697,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b21977011",
                     "_nested": {
                       "field": "items",
@@ -5789,9 +5789,328 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
+          "_id": "b16645835",
+          "_score": 9.799138,
+          "_source": {
+            "extent": [
+              "1 sound cassette : analog, stereo."
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "Cassette contains Joseph Papp toasting his friend and benefactor George T. Delacorte, the recipiant of the Alexander Hamilton medal (year unknown), and Papp singing several songs from the 1930's at Columbia University.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "\"J. Papp at Columbia Univ.\"--Cassette.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Credits and information taken from auditioning of cassette.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "On container spine: J Papp. Columbia.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "NYSF inventory no. 1729.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Forms part of the New York Shakespeare Festival records; for papers, see the Billy Rose Theatre Collection, *T-Mss 1993-028; for sheet music and scores, see the Music Division, JPB 04-03.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Source",
+                "label": "The New York Shakespeare Festival and Gail Merrifield Papp;",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Linking Entry",
+                "label": "Forms part of: New York Shakespeare Festival recordings collection.",
+                "type": "bf:Note"
+              }
+            ],
+            "partOf": [
+              "New York Shakespeare Festival recordings collection."
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Delacorte, George T. 1893-1991",
+              "Songs with instrumental ensemble",
+              "Award presentations",
+              "Award presentations -- New York (State)",
+              "Award presentations -- New York (State) -- New York"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1980
+            ],
+            "dateEndString": [
+              "1989"
+            ],
+            "title": [
+              "J. Papp at Columbia University [speech and performance]"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*LTC 10267"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1980"
+            ],
+            "creatorLiteral": [
+              "Papp, Joseph"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "contributorLiteral": [
+              "Papp, Joseph",
+              "Hart, Lorenz, 1895-1943",
+              "Rodgers, Richard, 1902-1979",
+              "Dixon, Mort, 1892-1956.",
+              "Rose, Billy, 1899-1966",
+              "Warren, Harry, 1893-1981.",
+              "Harburg, E. Y. (Edgar Yipsel), 1896-1981",
+              "Gorney, Jay, 1896-1990",
+              "Silverman, Stanley",
+              "Columbia University.",
+              "New York Shakespeare Festival Public Theater. dnr"
+            ],
+            "dateStartYear": [
+              1980
+            ],
+            "idOclc": [
+              "166556166"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*LTC 10267"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "16645835"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "166556166"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)166556166"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)M310000283"
+              }
+            ],
+            "dateEndYear": [
+              1989
+            ],
+            "updatedAt": 1712869033543,
+            "publicationStatement": [
+              "[198-?]"
+            ],
+            "identifier": [
+              "urn:shelfmark:*LTC 10267",
+              "urn:bnum:16645835",
+              "urn:oclc:166556166",
+              "urn:identifier:(OCoLC)166556166",
+              "urn:identifier:(WaOLN)M310000283"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:aud",
+                "label": "Audio"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1980"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Delacorte, George T. 1893-1991.",
+              "Songs with instrumental ensemble.",
+              "Award presentations -- New York (State) -- New York."
+            ],
+            "titleDisplay": [
+              "J. Papp at Columbia University [sound recording]  : [speech and performance] / [toast and performance by J. Papp ; music arranged and conducted by Stanley Silverman.]"
+            ],
+            "uri": "b16645835",
+            "issuance": [
+              {
+                "id": "urn:biblevel:d",
+                "label": "subunit"
+              }
+            ],
+            "titleAlt": [
+              "Joseph Papp at Columbia",
+              "New York Shakespeare Festival recordings collection."
+            ],
+            "tableOfContents": [
+              "What do you want with money? ; Hallelujah, I'm a bum again / Rodgers, Hart -- I found a million dollar baby (In a five-and ten cent store) / Warren, Dixon & Rose -- Brother, can you spare a dime? / Gorney, Harburg -- Hallelujah, I'm a bum again (reprise)"
+            ]
+          },
+          "sort": [
+            9.799138,
+            "b16645835"
+          ],
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-06-07",
+                    "_id": "b16645835",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:23",
+                          "label": "archival sound recording"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:23||archival sound recording"
+                      ],
+                      "formatLiteral": [
+                        "Audio"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcph9",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcph9||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433077390452"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*LTC 10267 [Cassette]",
+                        "urn:barcode:33433077390452"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*LTC 10267 [Cassette]",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433077390452",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "physicalLocation": [
+                        "*LTC 10267 [Cassette]"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "shelfMark": [
+                        "*LTC 10267 [Cassette]"
+                      ],
+                      "shelfMark_sort": "a*LTC 10267 [Cassette]",
+                      "status": [
+                        {
+                          "id": "status:v",
+                          "label": "Preservation"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:v||Preservation"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "uri": "i17369755",
+                      "aeonUrl": [
+                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Author=Papp%2C+Joseph&CallNumber=*LTC+10267+%5BCassette%5D&Date=1980&Form=30&Genre=archival+sound+recording&ItemInfo1=Request+in+advance&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16645835&ItemISxN=i173697550&ItemNumber=33433077390452&ItemPublisher=%5B198-%3F%5D&Location=ReCAP&ReferenceNumber=b166458351&Site=LPAMRAMI&SubLocation=rcph9&Title=J.+Papp+at+Columbia+University+%5Bspeech+and+performance%5D"
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-06-07",
           "_id": "cb11820882",
-          "_score": 9.801378,
+          "_score": 9.783272,
           "_source": {
             "extent": [
               "2 audio discs : digital ;"
@@ -6003,7 +6322,7 @@
             ]
           },
           "sort": [
-            9.801378,
+            9.783272,
             "cb11820882"
           ],
           "inner_hits": {
@@ -6026,7 +6345,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb11820882",
                     "_nested": {
                       "field": "items",
@@ -6117,328 +6436,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
-          "_id": "b16645835",
-          "_score": 9.777194,
-          "_source": {
-            "extent": [
-              "1 sound cassette : analog, stereo."
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "Cassette contains Joseph Papp toasting his friend and benefactor George T. Delacorte, the recipiant of the Alexander Hamilton medal (year unknown), and Papp singing several songs from the 1930's at Columbia University.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "\"J. Papp at Columbia Univ.\"--Cassette.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Credits and information taken from auditioning of cassette.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "On container spine: J Papp. Columbia.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "NYSF inventory no. 1729.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Forms part of the New York Shakespeare Festival records; for papers, see the Billy Rose Theatre Collection, *T-Mss 1993-028; for sheet music and scores, see the Music Division, JPB 04-03.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Source",
-                "label": "The New York Shakespeare Festival and Gail Merrifield Papp;",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Linking Entry",
-                "label": "Forms part of: New York Shakespeare Festival recordings collection.",
-                "type": "bf:Note"
-              }
-            ],
-            "partOf": [
-              "New York Shakespeare Festival recordings collection."
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "subjectLiteral_exploded": [
-              "Delacorte, George T. 1893-1991",
-              "Songs with instrumental ensemble",
-              "Award presentations",
-              "Award presentations -- New York (State)",
-              "Award presentations -- New York (State) -- New York"
-            ],
-            "numItemDatesParsed": [
-              0
-            ],
-            "language": [
-              {
-                "id": "lang:eng",
-                "label": "English"
-              }
-            ],
-            "numItemsTotal": [
-              1
-            ],
-            "createdYear": [
-              1980
-            ],
-            "dateEndString": [
-              "1989"
-            ],
-            "title": [
-              "J. Papp at Columbia University [speech and performance]"
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "shelfMark": [
-              "*LTC 10267"
-            ],
-            "numItemVolumesParsed": [
-              0
-            ],
-            "createdString": [
-              "1980"
-            ],
-            "creatorLiteral": [
-              "Papp, Joseph"
-            ],
-            "numElectronicResources": [
-              0
-            ],
-            "contributorLiteral": [
-              "Papp, Joseph",
-              "Hart, Lorenz, 1895-1943",
-              "Rodgers, Richard, 1902-1979",
-              "Dixon, Mort, 1892-1956.",
-              "Rose, Billy, 1899-1966",
-              "Warren, Harry, 1893-1981.",
-              "Harburg, E. Y. (Edgar Yipsel), 1896-1981",
-              "Gorney, Jay, 1896-1990",
-              "Silverman, Stanley",
-              "Columbia University.",
-              "New York Shakespeare Festival Public Theater. dnr"
-            ],
-            "dateStartYear": [
-              1980
-            ],
-            "idOclc": [
-              "166556166"
-            ],
-            "identifierV2": [
-              {
-                "type": "bf:ShelfMark",
-                "value": "*LTC 10267"
-              },
-              {
-                "type": "nypl:Bnumber",
-                "value": "16645835"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "166556166"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(OCoLC)166556166"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)M310000283"
-              }
-            ],
-            "dateEndYear": [
-              1989
-            ],
-            "updatedAt": 1712869033543,
-            "publicationStatement": [
-              "[198-?]"
-            ],
-            "identifier": [
-              "urn:shelfmark:*LTC 10267",
-              "urn:bnum:16645835",
-              "urn:oclc:166556166",
-              "urn:identifier:(OCoLC)166556166",
-              "urn:identifier:(WaOLN)M310000283"
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:aud",
-                "label": "Audio"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1980"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Delacorte, George T. 1893-1991.",
-              "Songs with instrumental ensemble.",
-              "Award presentations -- New York (State) -- New York."
-            ],
-            "titleDisplay": [
-              "J. Papp at Columbia University [sound recording]  : [speech and performance] / [toast and performance by J. Papp ; music arranged and conducted by Stanley Silverman.]"
-            ],
-            "uri": "b16645835",
-            "issuance": [
-              {
-                "id": "urn:biblevel:d",
-                "label": "subunit"
-              }
-            ],
-            "titleAlt": [
-              "Joseph Papp at Columbia",
-              "New York Shakespeare Festival recordings collection."
-            ],
-            "tableOfContents": [
-              "What do you want with money? ; Hallelujah, I'm a bum again / Rodgers, Hart -- I found a million dollar baby (In a five-and ten cent store) / Warren, Dixon & Rose -- Brother, can you spare a dime? / Gorney, Harburg -- Hallelujah, I'm a bum again (reprise)"
-            ]
-          },
-          "sort": [
-            9.777194,
-            "b16645835"
-          ],
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 1,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-06-05",
-                    "_id": "b16645835",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:23",
-                          "label": "archival sound recording"
-                        }
-                      ],
-                      "catalogItemType_packed": [
-                        "catalogItemType:23||archival sound recording"
-                      ],
-                      "formatLiteral": [
-                        "Audio"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rcph9",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rcph9||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433077390452"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*LTC 10267 [Cassette]",
-                        "urn:barcode:33433077390452"
-                      ],
-                      "identifierV2": [
-                        {
-                          "value": "*LTC 10267 [Cassette]",
-                          "type": "bf:ShelfMark"
-                        },
-                        {
-                          "value": "33433077390452",
-                          "type": "bf:Barcode"
-                        }
-                      ],
-                      "physicalLocation": [
-                        "*LTC 10267 [Cassette]"
-                      ],
-                      "requestable": [
-                        false
-                      ],
-                      "shelfMark": [
-                        "*LTC 10267 [Cassette]"
-                      ],
-                      "shelfMark_sort": "a*LTC 10267 [Cassette]",
-                      "status": [
-                        {
-                          "id": "status:v",
-                          "label": "Preservation"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:v||Preservation"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "uri": "i17369755",
-                      "aeonUrl": [
-                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Author=Papp%2C+Joseph&CallNumber=*LTC+10267+%5BCassette%5D&Date=1980&Form=30&Genre=archival+sound+recording&ItemInfo1=Request+in+advance&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16645835&ItemISxN=i173697550&ItemNumber=33433077390452&ItemPublisher=%5B198-%3F%5D&Location=ReCAP&ReferenceNumber=b166458351&Site=LPAMRAMI&SubLocation=rcph9&Title=J.+Papp+at+Columbia+University+%5Bspeech+and+performance%5D"
-                      ]
-                    },
-                    "sort": [
-                      null
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb3360572",
-          "_score": 9.6600485,
+          "_score": 9.642332,
           "_source": {
             "extent": [
               "xxi, 396 pages ;"
@@ -6646,7 +6646,7 @@
             ]
           },
           "sort": [
-            9.6600485,
+            9.642332,
             "cb3360572"
           ],
           "inner_hits": {
@@ -6669,7 +6669,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb3360572",
                     "_nested": {
                       "field": "items",
@@ -6754,9 +6754,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b21889069",
-          "_score": 9.55983,
+          "_score": 9.544052,
           "_source": {
             "extent": [
               "1 online resource (1 sound file)."
@@ -7059,7 +7059,7 @@
             ]
           },
           "sort": [
-            9.55983,
+            9.544052,
             "b21889069"
           ],
           "inner_hits": {
@@ -7086,9 +7086,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "hb990085140950203941",
-          "_score": 9.174469,
+          "_score": 9.038696,
           "_source": {
             "extent": [
               "xiv, 160 p. ;"
@@ -7270,7 +7270,7 @@
             ]
           },
           "sort": [
-            9.174469,
+            9.038696,
             "hb990085140950203941"
           ],
           "inner_hits": {
@@ -7293,7 +7293,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "hb990085140950203941",
                     "_nested": {
                       "field": "items",
@@ -7384,9 +7384,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "hb990088488550203941",
-          "_score": 8.542542,
+          "_score": 8.416908,
           "_source": {
             "extent": [
               "xxxiii, 296 p. ;"
@@ -7562,7 +7562,7 @@
             ]
           },
           "sort": [
-            8.542542,
+            8.416908,
             "hb990088488550203941"
           ],
           "inner_hits": {
@@ -7585,7 +7585,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "hb990088488550203941",
                     "_nested": {
                       "field": "items",
@@ -7670,9 +7670,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b21890516",
-          "_score": 7.694966,
+          "_score": 7.6837106,
           "_source": {
             "extent": [
               "1 online resource (1 sound file)"
@@ -8119,7 +8119,7 @@
             ]
           },
           "sort": [
-            7.694966,
+            7.6837106,
             "b21890516"
           ],
           "inner_hits": {
@@ -8146,9 +8146,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb299666",
-          "_score": 6.7431097,
+          "_score": 6.7491417,
           "_source": {
             "extent": [
               "201 pages : illustrations ;"
@@ -8392,7 +8392,7 @@
             ]
           },
           "sort": [
-            6.7431097,
+            6.7491417,
             "cb299666"
           ],
           "inner_hits": {
@@ -8415,7 +8415,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb299666",
                     "_nested": {
                       "field": "items",
@@ -8506,9 +8506,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb11012105",
-          "_score": 5.0837727,
+          "_score": 5.1511173,
           "_source": {
             "extent": [
               "1 audio disc : analog, 33 1/3 rpm, stereo ;"
@@ -8708,7 +8708,7 @@
             ]
           },
           "sort": [
-            5.0837727,
+            5.1511173,
             "cb11012105"
           ],
           "inner_hits": {
@@ -8731,7 +8731,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb11012105",
                     "_nested": {
                       "field": "items",
@@ -8822,9 +8822,793 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
+          "_id": "b21903200",
+          "_score": 3.965453,
+          "_source": {
+            "extent": [
+              "1 online resource (1 sound file)"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "Contains material previously released 1955-2003.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Language",
+                "label": "Sung in French, German, Italian and Russian.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Source of Description",
+                "label": "Description based on hard copy version record.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Operas",
+              "Operas -- Excerpts"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "language": [
+              {
+                "id": "lang:mul",
+                "label": "Multiple languages"
+              }
+            ],
+            "numItemsTotal": [
+              0
+            ],
+            "createdYear": [
+              2006
+            ],
+            "dateEndString": [
+              "1955"
+            ],
+            "title": [
+              "100 best opera classics."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "2006"
+            ],
+            "idLccn": [
+              "GBAYC9000585",
+              "GBAYC9000587",
+              "GBAYC8401060",
+              "GBAYC8401079",
+              "DEC628600585",
+              "GBAYC9001019",
+              "GBAYC8805193",
+              "GBAYC9601618",
+              "GBAYC0001344",
+              "GBAYC9701116",
+              "GBAYC8905921",
+              "GBAYC9502658",
+              "GBAYC8804683",
+              "GBAYC0201550",
+              "GBAYC9704930",
+              "GBAYC9103775",
+              "GBAYC9302388",
+              "GBAYC8900427",
+              "GBAYC8704013",
+              "GBAYC0302254",
+              "GBAYC8903581",
+              "FRZ110200072",
+              "FRZ118306242",
+              "FRZ118201366",
+              "GBAYC0301121",
+              "FRZ118503335",
+              "FRZ110000085",
+              "GBAYC9704997",
+              "GBAYC9603021",
+              "FRZ116506252",
+              "FRZ110100171",
+              "DEA340703103",
+              "GBAYC0001193",
+              "GBAYC0001272",
+              "GBAYC9004965",
+              "GBAYC8804784",
+              "GBAYC8100412",
+              "DEC628600562",
+              "GBAYC9104344",
+              "FRZ118400035",
+              "GBAYC0001295",
+              "GBAYC9503506",
+              "GBAYC9701681",
+              "GBAYC0001373",
+              "GBAYC9602461",
+              "GBAYC9001881",
+              "GBAYC9401069",
+              "GBAYC8501583",
+              "GBAYC9701412",
+              "GBAYC8401258",
+              "FRZ116106176",
+              "GBAYC8700809",
+              "GBAYC0003709",
+              "GBAYC9701159",
+              "GBAYC0302226",
+              "GBAYC9402594",
+              "FRZ117806277",
+              "FRZ116106182",
+              "FRZ116401230",
+              "FRZ116105853",
+              "FRZ110000098",
+              "FRZ116806355",
+              "FRZ115901120",
+              "GBAYC9401453",
+              "GBAYC0101324",
+              "FRZ116106081",
+              "GBAYC8501416",
+              "GBAYC9402015",
+              "GBAYC8802512",
+              "GBAYC8600643",
+              "GBAYC0201426",
+              "GBAYC9001060",
+              "GBAYC8600596",
+              "GBAYC0300835",
+              "FRZ118901772",
+              "GBAYC9704313",
+              "FRZ110200604",
+              "GBAYC9502659",
+              "GBAYC8603110",
+              "GBAYC0201886",
+              "DEC629200551",
+              "GBAYC9900737",
+              "GBAYC9005484",
+              "FRZ118900350",
+              "FRZ115707569",
+              "FRZ116806347",
+              "FRZ118703093",
+              "FRZ116105851",
+              "GBAYC0301920",
+              "GBAYC9103774",
+              "GBAYC8800934",
+              "GBAYC8501246",
+              "GBAYC8901353",
+              "GBAYC8801134",
+              "GBAYC8000072",
+              "GBAYC9701686",
+              "GBAYC9602783",
+              "GBAYC8301047",
+              "GBAYC9701139"
+            ],
+            "numElectronicResources": [
+              1
+            ],
+            "contributorLiteral": [
+              "EMI (Firm)"
+            ],
+            "dateStartYear": [
+              2006
+            ],
+            "idOclc": [
+              "878384789"
+            ],
+            "identifierV2": [
+              {
+                "type": "nypl:Bnumber",
+                "value": "21903200"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "878384789"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9000585"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9000587"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8401060"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8401079"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "DEC628600585"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9001019"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8805193"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9601618"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0001344"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9701116"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8905921"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9502658"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8804683"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0201550"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9704930"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9103775"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9302388"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8900427"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8704013"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0302254"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8903581"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ110200072"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118306242"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118201366"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0301121"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118503335"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ110000085"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9704997"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9603021"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116506252"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ110100171"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "DEA340703103"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0001193"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0001272"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9004965"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8804784"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8100412"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "DEC628600562"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9104344"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118400035"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0001295"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9503506"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9701681"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0001373"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9602461"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9001881"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9401069"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8501583"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9701412"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8401258"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116106176"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8700809"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0003709"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9701159"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0302226"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9402594"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ117806277"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116106182"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116401230"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116105853"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ110000098"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116806355"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ115901120"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9401453"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0101324"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116106081"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8501416"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9402015"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8802512"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8600643"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0201426"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9001060"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8600596"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0300835"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118901772"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9704313"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ110200604"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9502659"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8603110"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0201886"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "DEC629200551"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9900737"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9005484"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118900350"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ115707569"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116806347"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ118703093"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "FRZ116105851"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC0301920"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9103774"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8800934"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8501246"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8901353"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8801134"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8000072"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9701686"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9602783"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC8301047"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "GBAYC9701139"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "0724358621150 EMI Classics"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)878384789"
+              }
+            ],
+            "dateEndYear": [
+              1955
+            ],
+            "updatedAt": 1711340707671,
+            "genreForm": [
+              "Streaming audio."
+            ],
+            "identifier": [
+              "urn:bnum:21903200",
+              "urn:oclc:878384789",
+              "urn:lccn:GBAYC9000585",
+              "urn:lccn:GBAYC9000587",
+              "urn:lccn:GBAYC8401060",
+              "urn:lccn:GBAYC8401079",
+              "urn:lccn:DEC628600585",
+              "urn:lccn:GBAYC9001019",
+              "urn:lccn:GBAYC8805193",
+              "urn:lccn:GBAYC9601618",
+              "urn:lccn:GBAYC0001344",
+              "urn:lccn:GBAYC9701116",
+              "urn:lccn:GBAYC8905921",
+              "urn:lccn:GBAYC9502658",
+              "urn:lccn:GBAYC8804683",
+              "urn:lccn:GBAYC0201550",
+              "urn:lccn:GBAYC9704930",
+              "urn:lccn:GBAYC9103775",
+              "urn:lccn:GBAYC9302388",
+              "urn:lccn:GBAYC8900427",
+              "urn:lccn:GBAYC8704013",
+              "urn:lccn:GBAYC0302254",
+              "urn:lccn:GBAYC8903581",
+              "urn:lccn:FRZ110200072",
+              "urn:lccn:FRZ118306242",
+              "urn:lccn:FRZ118201366",
+              "urn:lccn:GBAYC0301121",
+              "urn:lccn:FRZ118503335",
+              "urn:lccn:FRZ110000085",
+              "urn:lccn:GBAYC9704997",
+              "urn:lccn:GBAYC9603021",
+              "urn:lccn:FRZ116506252",
+              "urn:lccn:FRZ110100171",
+              "urn:lccn:DEA340703103",
+              "urn:lccn:GBAYC0001193",
+              "urn:lccn:GBAYC0001272",
+              "urn:lccn:GBAYC9004965",
+              "urn:lccn:GBAYC8804784",
+              "urn:lccn:GBAYC8100412",
+              "urn:lccn:DEC628600562",
+              "urn:lccn:GBAYC9104344",
+              "urn:lccn:FRZ118400035",
+              "urn:lccn:GBAYC0001295",
+              "urn:lccn:GBAYC9503506",
+              "urn:lccn:GBAYC9701681",
+              "urn:lccn:GBAYC0001373",
+              "urn:lccn:GBAYC9602461",
+              "urn:lccn:GBAYC9001881",
+              "urn:lccn:GBAYC9401069",
+              "urn:lccn:GBAYC8501583",
+              "urn:lccn:GBAYC9701412",
+              "urn:lccn:GBAYC8401258",
+              "urn:lccn:FRZ116106176",
+              "urn:lccn:GBAYC8700809",
+              "urn:lccn:GBAYC0003709",
+              "urn:lccn:GBAYC9701159",
+              "urn:lccn:GBAYC0302226",
+              "urn:lccn:GBAYC9402594",
+              "urn:lccn:FRZ117806277",
+              "urn:lccn:FRZ116106182",
+              "urn:lccn:FRZ116401230",
+              "urn:lccn:FRZ116105853",
+              "urn:lccn:FRZ110000098",
+              "urn:lccn:FRZ116806355",
+              "urn:lccn:FRZ115901120",
+              "urn:lccn:GBAYC9401453",
+              "urn:lccn:GBAYC0101324",
+              "urn:lccn:FRZ116106081",
+              "urn:lccn:GBAYC8501416",
+              "urn:lccn:GBAYC9402015",
+              "urn:lccn:GBAYC8802512",
+              "urn:lccn:GBAYC8600643",
+              "urn:lccn:GBAYC0201426",
+              "urn:lccn:GBAYC9001060",
+              "urn:lccn:GBAYC8600596",
+              "urn:lccn:GBAYC0300835",
+              "urn:lccn:FRZ118901772",
+              "urn:lccn:GBAYC9704313",
+              "urn:lccn:FRZ110200604",
+              "urn:lccn:GBAYC9502659",
+              "urn:lccn:GBAYC8603110",
+              "urn:lccn:GBAYC0201886",
+              "urn:lccn:DEC629200551",
+              "urn:lccn:GBAYC9900737",
+              "urn:lccn:GBAYC9005484",
+              "urn:lccn:FRZ118900350",
+              "urn:lccn:FRZ115707569",
+              "urn:lccn:FRZ116806347",
+              "urn:lccn:FRZ118703093",
+              "urn:lccn:FRZ116105851",
+              "urn:lccn:GBAYC0301920",
+              "urn:lccn:GBAYC9103774",
+              "urn:lccn:GBAYC8800934",
+              "urn:lccn:GBAYC8501246",
+              "urn:lccn:GBAYC8901353",
+              "urn:lccn:GBAYC8801134",
+              "urn:lccn:GBAYC8000072",
+              "urn:lccn:GBAYC9701686",
+              "urn:lccn:GBAYC9602783",
+              "urn:lccn:GBAYC8301047",
+              "urn:lccn:GBAYC9701139",
+              "urn:identifier:0724358621150 EMI Classics",
+              "urn:identifier:(OCoLC)878384789"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:aud",
+                "label": "Audio"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "2006"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Operas -- Excerpts."
+            ],
+            "titleDisplay": [
+              "100 best opera classics."
+            ],
+            "uri": "b21903200",
+            "electronicResources": [
+              {
+                "label": "Access Naxos Music Library",
+                "url": "https://nypl.naxosmusiclibrary.com/catalogue/item.asp?cid=0724358621150"
+              }
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "titleAlt": [
+              "Hundred best opera classics",
+              "One hundred best opera classics"
+            ],
+            "tableOfContents": [
+              "Le nozze di Figaro. Voi che sapete (2:50) ; Porgi amor (4:16) / Mozart -- Don Giovanni. Deh, vieni alla finestra (2:03) ; Batti, batti, o bel masetto (3:52) / Mozart -- Die Zauberflöte. Der hölle rache (2:56) ; O Isis und Osiris (3:12) / Mozart -- Cosí fan tutte. Temerari-- come scoglio / Mozart (5:51) -- Il Barbiere di Siviglia. La calunnia è un venticello / Rossini (4:53) -- Don Carlo. Nei giardin del bello / Verdi (4:56) -- Norma. Casta diva / Bellini (5:32) -- Aida. Se quel guerrier-- Celeste Aida / Verdi (4:41) -- La traviata. Tenesta la promessa-- Addio del passato / Verdi (5:43) -- Otello. Niun mi tema / Verdi (6:01) -- Madama Butterfly. Un bel di vendremo / Puccini (4:37) -- Tosca. E lucevan le stelle / Puccini (2:53) -- La Bohème. Si, mi chiamano Mimi / Puccini (4:52) -- Manon Lescaut. In quelle trine morbide / Puccini (2:17) -- Turandot. Signore, ascolta / Puccini (2:37) -- I Pagliacci. Recitar-- vesti la giubba / Leoncavallo (3:44) -- Fedora. Amor ti vieta di non amar / Giordano (1:46).",
+              "Faust. Le veau d'or est toujours debout / Gounod (2:03) -- Lakmé. Oú va la jeune hindoue? / Delibes (6:29) -- Roméo et Juliette. L'amour, l'amour-- ah! Lève-toi, soleil / Gounod (4:18) -- Manon. Allons! Il le faut-- Adieu notre petite table / Massenet (3:49) -- Werther. Toute mon âme est là-- pourquoi me réveiller / Massenet (2:36) -- La jolie fille de Perth. Quand la flamme de l'amour / Bizet (4:57) -- Carmen. L'amour est un oiseua rebelle / Bizet (4:35) -- Les Pècheurs de perles. À cette voix-- je crois entendre encore / Bizet (4:32) -- La damnation de Faust. Une puce gentille / Berlioz (1:24) -- Les Troyens. Je vais mourir-- Adieu, fière cité / Berlioz (6:00) -- Samson et Delilah. Mon coeur s'ouvre à ta voix / Saint-Saëns (5:17) -- Tannhäuser. Wie todesahnung-- O du mein holder Abendstern / Wagner (4:15) -- Der fliegende Holländer. Johohoe! Traft ihr das schiff im Meere an? / Wagner (8:12) -- Lohengrin. In fernem land / Wagner (4:42) -- Siegfried. Heil dir, Sonne! / Wagner (5:17) -- Tristan und Isolde. Mild und leise / Wagner (7:19).",
+              "Orfeo ed Euridice. Che farò senza Euridice? / Gluck (5:26) -- Die Zauberflöte. Der Vogelfänger bin ich ja / Mozart (2:36) -- Don Giovanni. Finch'han dal vino / Mozart (1:27) -- Le nozze di Figaro. E Susanna non vien!-- Dove sono / Mozart (6:27) -- Fidelio. Abscheulicher! / Beethoven (8:18) -- Guillaume Tell. Ne m'abandonne pas, espoir de la vengeance-- Asile héréditaire / Rossini (6:59) -- Il barbiere di siviglia. Largo al factotum / rossini (4:42) -- Don Carlo. Ella giammai m'amò! / Verdi (7:32) -- Rigoletto. La donna è mobile / Rossini (2:14) -- Il trovatore. Di quella pira / Rossini (2:02) -- Otello. Esultate! (2:24) ; Dio! mi potevi scagliar (4:39) / Rossini -- Tosca. Vissi d'arte, vissi d'amore / Puccini (3:00) -- Turandot. In questa reggia (5:58) ; Tanto amore (2:22) / Puccini -- Gianni Schicchi. O mio babbino caro / Puccini (2:40) -- L'amico Fritz. Ed anche beppe amo / Mascagni (3:16) -- Adriana Lecouvreur. Poveri fiori / Cilea (3:10) -- Andrea Chénier. Come un bel di di maggio / Giordano (3:04).",
+              "Faust. Les grande seigneurs-- Ah! Je ris de me voir si belle / Gounod (5:50) -- Le Jongleur de Notre-Dame. Marie, avec l'enfant Jésus / Massenet (5:30) -- Mirielle. Heureux petit berger / Massenet (2:05) -- Mignon. Connais-tu le pays (5:39) ; Elle ne croyait pas dans sa candeur (3:31) / Thomas -- Carmen. Votre toast, je peux vous le rendre-- Toréadore / Bizet (4:55) -- Les contes d'Hoffmann. Les oiseaux dans la charmille / Offenbach (5:47) -- La damnation de Faust. Maintenant, chantons-- Devant la maison de celui qui t'adore / Berlioz (2:16) -- Louise. Depuis le jour / Charpentier (5:34) -- Der Rosenkavalier. Da geht er hin / Richard Strauss (5:22) -- Lohengrin. Einsam in trüben Tagen / Wagner (6:02) -- Tannhäuser. Dich, teure Halle / Wagner (4:44) -- Die Walküre. Leb wohl, du kühnes, herrliches Kind (15:41) ; Hojotoho hojotoho! (5:56) / Wagner.",
+              "Le nozze di Figaro. Non più andrai / Mozart (3:38) -- Don Giovanni. Là ci darem la mano / Mozart (3:14) -- Die Zauberflöte. Duo: pa-pa-pa / Mozart (2:22) -- Così fan tutte. Soava sia il vento / Mozart (3:02) -- Norma. Mira, o Norma / Bellini (7:28) -- Lucia di Lammermoor. Il dolce suono / Donizetti (16:43) -- Don Pasquale. Com'è gentil / Donizetti (3:50) -- Il Barbiere di Siviglia. Una voce poco fa / Rossini (6:18) -- La traviata. Libiamo ne' lieti calici / Verdi (2:51) -- Rigoletto. Gualtier malde!-- Como nome / Verdi (6:41) -- Aida. Ritorna vincitor / Verdi (6:24) -- Otello. Ave Maria / Verdi (5:11) -- Turandot. Nessum dorma / Puccini (2:49) -- La Bohème. Che gelida manina / Puccini (4:27) -- La Wally. Ebben? Ne andrò lantana / Catalani (4:20).",
+              "Le postillon de Lonjumeau. Mes amis, écoutez l'histoire / Adam (3:45) -- La muette de portici. Mieux vaut mourir-- Amour sacré de la patrie / Auber (5:46) -- Roméo et Juliette. Ah! je veux vivre dans ce rève / Gounod (3:50) -- Le roi d'Ys. Puisqu'on ne peut fléchir-- Vainement, ma bien-aimée / Lalo (3:28) -- Manon. Suis-je gentille ainsi?-- Je marche sur tous les chemins / Massenet (3:03) -- Les contes d'Hoffman. Belle nuit, ô nuit d'amour / Offenbach (4:19) -- Carmen. Le fleur que tu m'avais jetée / Bizet (4:26) -- Les pêcheurs de perles. C'est toi!-- Au fond du temple saint / Bizet (7:27) -- Werther. Werther, Werther, qui m'aurait dit-- Ces lettres! / Massenet (7:27) -- Lakmé. Viens, Malika / Delibes (5:52) -- Thaïs. Ah! Je suis seule enfin-- Dis-moi que je suis belle / Massenet (6:41) -- Faust. Alerte, alerte!-- Anges purs, anges radieux / Gounod (2:30) -- Boris Godunov. Boris's farewell / Mussorgsky (5:58) -- Oberon. Schreckensschwurl / Weber (2:12) -- Die Meistersinger von Nürnberg. Die \"selige Morgentraum-Deutweise\"-- Selig, wie die Sonne / Wagner (5:31) -- Siegfried. Was au besten er kann-- Nothung! Nothung! / Wagner (5:53)."
+            ]
+          },
+          "sort": [
+            3.965453,
+            "b21903200"
+          ],
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 0,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": []
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-06-07",
           "_id": "b21903183",
-          "_score": 3.9634595,
+          "_score": 3.9592814,
           "_source": {
             "extent": [
               "1 online resource (1 sound file)"
@@ -9588,7 +10372,7 @@
             ]
           },
           "sort": [
-            3.9634595,
+            3.9592814,
             "b21903183"
           ],
           "inner_hits": {
@@ -9615,793 +10399,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
-          "_id": "b21903200",
-          "_score": 3.9634595,
-          "_source": {
-            "extent": [
-              "1 online resource (1 sound file)"
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "Contains material previously released 1955-2003.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Language",
-                "label": "Sung in French, German, Italian and Russian.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Source of Description",
-                "label": "Description based on hard copy version record.",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "subjectLiteral_exploded": [
-              "Operas",
-              "Operas -- Excerpts"
-            ],
-            "numItemDatesParsed": [
-              0
-            ],
-            "language": [
-              {
-                "id": "lang:mul",
-                "label": "Multiple languages"
-              }
-            ],
-            "numItemsTotal": [
-              0
-            ],
-            "createdYear": [
-              2006
-            ],
-            "dateEndString": [
-              "1955"
-            ],
-            "title": [
-              "100 best opera classics."
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "numItemVolumesParsed": [
-              0
-            ],
-            "createdString": [
-              "2006"
-            ],
-            "idLccn": [
-              "GBAYC9000585",
-              "GBAYC9000587",
-              "GBAYC8401060",
-              "GBAYC8401079",
-              "DEC628600585",
-              "GBAYC9001019",
-              "GBAYC8805193",
-              "GBAYC9601618",
-              "GBAYC0001344",
-              "GBAYC9701116",
-              "GBAYC8905921",
-              "GBAYC9502658",
-              "GBAYC8804683",
-              "GBAYC0201550",
-              "GBAYC9704930",
-              "GBAYC9103775",
-              "GBAYC9302388",
-              "GBAYC8900427",
-              "GBAYC8704013",
-              "GBAYC0302254",
-              "GBAYC8903581",
-              "FRZ110200072",
-              "FRZ118306242",
-              "FRZ118201366",
-              "GBAYC0301121",
-              "FRZ118503335",
-              "FRZ110000085",
-              "GBAYC9704997",
-              "GBAYC9603021",
-              "FRZ116506252",
-              "FRZ110100171",
-              "DEA340703103",
-              "GBAYC0001193",
-              "GBAYC0001272",
-              "GBAYC9004965",
-              "GBAYC8804784",
-              "GBAYC8100412",
-              "DEC628600562",
-              "GBAYC9104344",
-              "FRZ118400035",
-              "GBAYC0001295",
-              "GBAYC9503506",
-              "GBAYC9701681",
-              "GBAYC0001373",
-              "GBAYC9602461",
-              "GBAYC9001881",
-              "GBAYC9401069",
-              "GBAYC8501583",
-              "GBAYC9701412",
-              "GBAYC8401258",
-              "FRZ116106176",
-              "GBAYC8700809",
-              "GBAYC0003709",
-              "GBAYC9701159",
-              "GBAYC0302226",
-              "GBAYC9402594",
-              "FRZ117806277",
-              "FRZ116106182",
-              "FRZ116401230",
-              "FRZ116105853",
-              "FRZ110000098",
-              "FRZ116806355",
-              "FRZ115901120",
-              "GBAYC9401453",
-              "GBAYC0101324",
-              "FRZ116106081",
-              "GBAYC8501416",
-              "GBAYC9402015",
-              "GBAYC8802512",
-              "GBAYC8600643",
-              "GBAYC0201426",
-              "GBAYC9001060",
-              "GBAYC8600596",
-              "GBAYC0300835",
-              "FRZ118901772",
-              "GBAYC9704313",
-              "FRZ110200604",
-              "GBAYC9502659",
-              "GBAYC8603110",
-              "GBAYC0201886",
-              "DEC629200551",
-              "GBAYC9900737",
-              "GBAYC9005484",
-              "FRZ118900350",
-              "FRZ115707569",
-              "FRZ116806347",
-              "FRZ118703093",
-              "FRZ116105851",
-              "GBAYC0301920",
-              "GBAYC9103774",
-              "GBAYC8800934",
-              "GBAYC8501246",
-              "GBAYC8901353",
-              "GBAYC8801134",
-              "GBAYC8000072",
-              "GBAYC9701686",
-              "GBAYC9602783",
-              "GBAYC8301047",
-              "GBAYC9701139"
-            ],
-            "numElectronicResources": [
-              1
-            ],
-            "contributorLiteral": [
-              "EMI (Firm)"
-            ],
-            "dateStartYear": [
-              2006
-            ],
-            "idOclc": [
-              "878384789"
-            ],
-            "identifierV2": [
-              {
-                "type": "nypl:Bnumber",
-                "value": "21903200"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "878384789"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9000585"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9000587"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8401060"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8401079"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "DEC628600585"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9001019"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8805193"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9601618"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0001344"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9701116"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8905921"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9502658"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8804683"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0201550"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9704930"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9103775"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9302388"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8900427"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8704013"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0302254"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8903581"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ110200072"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118306242"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118201366"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0301121"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118503335"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ110000085"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9704997"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9603021"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116506252"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ110100171"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "DEA340703103"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0001193"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0001272"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9004965"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8804784"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8100412"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "DEC628600562"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9104344"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118400035"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0001295"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9503506"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9701681"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0001373"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9602461"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9001881"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9401069"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8501583"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9701412"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8401258"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116106176"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8700809"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0003709"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9701159"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0302226"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9402594"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ117806277"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116106182"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116401230"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116105853"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ110000098"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116806355"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ115901120"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9401453"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0101324"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116106081"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8501416"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9402015"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8802512"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8600643"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0201426"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9001060"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8600596"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0300835"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118901772"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9704313"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ110200604"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9502659"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8603110"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0201886"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "DEC629200551"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9900737"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9005484"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118900350"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ115707569"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116806347"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ118703093"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "FRZ116105851"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC0301920"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9103774"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8800934"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8501246"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8901353"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8801134"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8000072"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9701686"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9602783"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC8301047"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "GBAYC9701139"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "0724358621150 EMI Classics"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(OCoLC)878384789"
-              }
-            ],
-            "dateEndYear": [
-              1955
-            ],
-            "updatedAt": 1711340707671,
-            "genreForm": [
-              "Streaming audio."
-            ],
-            "identifier": [
-              "urn:bnum:21903200",
-              "urn:oclc:878384789",
-              "urn:lccn:GBAYC9000585",
-              "urn:lccn:GBAYC9000587",
-              "urn:lccn:GBAYC8401060",
-              "urn:lccn:GBAYC8401079",
-              "urn:lccn:DEC628600585",
-              "urn:lccn:GBAYC9001019",
-              "urn:lccn:GBAYC8805193",
-              "urn:lccn:GBAYC9601618",
-              "urn:lccn:GBAYC0001344",
-              "urn:lccn:GBAYC9701116",
-              "urn:lccn:GBAYC8905921",
-              "urn:lccn:GBAYC9502658",
-              "urn:lccn:GBAYC8804683",
-              "urn:lccn:GBAYC0201550",
-              "urn:lccn:GBAYC9704930",
-              "urn:lccn:GBAYC9103775",
-              "urn:lccn:GBAYC9302388",
-              "urn:lccn:GBAYC8900427",
-              "urn:lccn:GBAYC8704013",
-              "urn:lccn:GBAYC0302254",
-              "urn:lccn:GBAYC8903581",
-              "urn:lccn:FRZ110200072",
-              "urn:lccn:FRZ118306242",
-              "urn:lccn:FRZ118201366",
-              "urn:lccn:GBAYC0301121",
-              "urn:lccn:FRZ118503335",
-              "urn:lccn:FRZ110000085",
-              "urn:lccn:GBAYC9704997",
-              "urn:lccn:GBAYC9603021",
-              "urn:lccn:FRZ116506252",
-              "urn:lccn:FRZ110100171",
-              "urn:lccn:DEA340703103",
-              "urn:lccn:GBAYC0001193",
-              "urn:lccn:GBAYC0001272",
-              "urn:lccn:GBAYC9004965",
-              "urn:lccn:GBAYC8804784",
-              "urn:lccn:GBAYC8100412",
-              "urn:lccn:DEC628600562",
-              "urn:lccn:GBAYC9104344",
-              "urn:lccn:FRZ118400035",
-              "urn:lccn:GBAYC0001295",
-              "urn:lccn:GBAYC9503506",
-              "urn:lccn:GBAYC9701681",
-              "urn:lccn:GBAYC0001373",
-              "urn:lccn:GBAYC9602461",
-              "urn:lccn:GBAYC9001881",
-              "urn:lccn:GBAYC9401069",
-              "urn:lccn:GBAYC8501583",
-              "urn:lccn:GBAYC9701412",
-              "urn:lccn:GBAYC8401258",
-              "urn:lccn:FRZ116106176",
-              "urn:lccn:GBAYC8700809",
-              "urn:lccn:GBAYC0003709",
-              "urn:lccn:GBAYC9701159",
-              "urn:lccn:GBAYC0302226",
-              "urn:lccn:GBAYC9402594",
-              "urn:lccn:FRZ117806277",
-              "urn:lccn:FRZ116106182",
-              "urn:lccn:FRZ116401230",
-              "urn:lccn:FRZ116105853",
-              "urn:lccn:FRZ110000098",
-              "urn:lccn:FRZ116806355",
-              "urn:lccn:FRZ115901120",
-              "urn:lccn:GBAYC9401453",
-              "urn:lccn:GBAYC0101324",
-              "urn:lccn:FRZ116106081",
-              "urn:lccn:GBAYC8501416",
-              "urn:lccn:GBAYC9402015",
-              "urn:lccn:GBAYC8802512",
-              "urn:lccn:GBAYC8600643",
-              "urn:lccn:GBAYC0201426",
-              "urn:lccn:GBAYC9001060",
-              "urn:lccn:GBAYC8600596",
-              "urn:lccn:GBAYC0300835",
-              "urn:lccn:FRZ118901772",
-              "urn:lccn:GBAYC9704313",
-              "urn:lccn:FRZ110200604",
-              "urn:lccn:GBAYC9502659",
-              "urn:lccn:GBAYC8603110",
-              "urn:lccn:GBAYC0201886",
-              "urn:lccn:DEC629200551",
-              "urn:lccn:GBAYC9900737",
-              "urn:lccn:GBAYC9005484",
-              "urn:lccn:FRZ118900350",
-              "urn:lccn:FRZ115707569",
-              "urn:lccn:FRZ116806347",
-              "urn:lccn:FRZ118703093",
-              "urn:lccn:FRZ116105851",
-              "urn:lccn:GBAYC0301920",
-              "urn:lccn:GBAYC9103774",
-              "urn:lccn:GBAYC8800934",
-              "urn:lccn:GBAYC8501246",
-              "urn:lccn:GBAYC8901353",
-              "urn:lccn:GBAYC8801134",
-              "urn:lccn:GBAYC8000072",
-              "urn:lccn:GBAYC9701686",
-              "urn:lccn:GBAYC9602783",
-              "urn:lccn:GBAYC8301047",
-              "urn:lccn:GBAYC9701139",
-              "urn:identifier:0724358621150 EMI Classics",
-              "urn:identifier:(OCoLC)878384789"
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:aud",
-                "label": "Audio"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "2006"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Operas -- Excerpts."
-            ],
-            "titleDisplay": [
-              "100 best opera classics."
-            ],
-            "uri": "b21903200",
-            "electronicResources": [
-              {
-                "label": "Access Naxos Music Library",
-                "url": "https://nypl.naxosmusiclibrary.com/catalogue/item.asp?cid=0724358621150"
-              }
-            ],
-            "issuance": [
-              {
-                "id": "urn:biblevel:m",
-                "label": "monograph/item"
-              }
-            ],
-            "titleAlt": [
-              "Hundred best opera classics",
-              "One hundred best opera classics"
-            ],
-            "tableOfContents": [
-              "Le nozze di Figaro. Voi che sapete (2:50) ; Porgi amor (4:16) / Mozart -- Don Giovanni. Deh, vieni alla finestra (2:03) ; Batti, batti, o bel masetto (3:52) / Mozart -- Die Zauberflöte. Der hölle rache (2:56) ; O Isis und Osiris (3:12) / Mozart -- Cosí fan tutte. Temerari-- come scoglio / Mozart (5:51) -- Il Barbiere di Siviglia. La calunnia è un venticello / Rossini (4:53) -- Don Carlo. Nei giardin del bello / Verdi (4:56) -- Norma. Casta diva / Bellini (5:32) -- Aida. Se quel guerrier-- Celeste Aida / Verdi (4:41) -- La traviata. Tenesta la promessa-- Addio del passato / Verdi (5:43) -- Otello. Niun mi tema / Verdi (6:01) -- Madama Butterfly. Un bel di vendremo / Puccini (4:37) -- Tosca. E lucevan le stelle / Puccini (2:53) -- La Bohème. Si, mi chiamano Mimi / Puccini (4:52) -- Manon Lescaut. In quelle trine morbide / Puccini (2:17) -- Turandot. Signore, ascolta / Puccini (2:37) -- I Pagliacci. Recitar-- vesti la giubba / Leoncavallo (3:44) -- Fedora. Amor ti vieta di non amar / Giordano (1:46).",
-              "Faust. Le veau d'or est toujours debout / Gounod (2:03) -- Lakmé. Oú va la jeune hindoue? / Delibes (6:29) -- Roméo et Juliette. L'amour, l'amour-- ah! Lève-toi, soleil / Gounod (4:18) -- Manon. Allons! Il le faut-- Adieu notre petite table / Massenet (3:49) -- Werther. Toute mon âme est là-- pourquoi me réveiller / Massenet (2:36) -- La jolie fille de Perth. Quand la flamme de l'amour / Bizet (4:57) -- Carmen. L'amour est un oiseua rebelle / Bizet (4:35) -- Les Pècheurs de perles. À cette voix-- je crois entendre encore / Bizet (4:32) -- La damnation de Faust. Une puce gentille / Berlioz (1:24) -- Les Troyens. Je vais mourir-- Adieu, fière cité / Berlioz (6:00) -- Samson et Delilah. Mon coeur s'ouvre à ta voix / Saint-Saëns (5:17) -- Tannhäuser. Wie todesahnung-- O du mein holder Abendstern / Wagner (4:15) -- Der fliegende Holländer. Johohoe! Traft ihr das schiff im Meere an? / Wagner (8:12) -- Lohengrin. In fernem land / Wagner (4:42) -- Siegfried. Heil dir, Sonne! / Wagner (5:17) -- Tristan und Isolde. Mild und leise / Wagner (7:19).",
-              "Orfeo ed Euridice. Che farò senza Euridice? / Gluck (5:26) -- Die Zauberflöte. Der Vogelfänger bin ich ja / Mozart (2:36) -- Don Giovanni. Finch'han dal vino / Mozart (1:27) -- Le nozze di Figaro. E Susanna non vien!-- Dove sono / Mozart (6:27) -- Fidelio. Abscheulicher! / Beethoven (8:18) -- Guillaume Tell. Ne m'abandonne pas, espoir de la vengeance-- Asile héréditaire / Rossini (6:59) -- Il barbiere di siviglia. Largo al factotum / rossini (4:42) -- Don Carlo. Ella giammai m'amò! / Verdi (7:32) -- Rigoletto. La donna è mobile / Rossini (2:14) -- Il trovatore. Di quella pira / Rossini (2:02) -- Otello. Esultate! (2:24) ; Dio! mi potevi scagliar (4:39) / Rossini -- Tosca. Vissi d'arte, vissi d'amore / Puccini (3:00) -- Turandot. In questa reggia (5:58) ; Tanto amore (2:22) / Puccini -- Gianni Schicchi. O mio babbino caro / Puccini (2:40) -- L'amico Fritz. Ed anche beppe amo / Mascagni (3:16) -- Adriana Lecouvreur. Poveri fiori / Cilea (3:10) -- Andrea Chénier. Come un bel di di maggio / Giordano (3:04).",
-              "Faust. Les grande seigneurs-- Ah! Je ris de me voir si belle / Gounod (5:50) -- Le Jongleur de Notre-Dame. Marie, avec l'enfant Jésus / Massenet (5:30) -- Mirielle. Heureux petit berger / Massenet (2:05) -- Mignon. Connais-tu le pays (5:39) ; Elle ne croyait pas dans sa candeur (3:31) / Thomas -- Carmen. Votre toast, je peux vous le rendre-- Toréadore / Bizet (4:55) -- Les contes d'Hoffmann. Les oiseaux dans la charmille / Offenbach (5:47) -- La damnation de Faust. Maintenant, chantons-- Devant la maison de celui qui t'adore / Berlioz (2:16) -- Louise. Depuis le jour / Charpentier (5:34) -- Der Rosenkavalier. Da geht er hin / Richard Strauss (5:22) -- Lohengrin. Einsam in trüben Tagen / Wagner (6:02) -- Tannhäuser. Dich, teure Halle / Wagner (4:44) -- Die Walküre. Leb wohl, du kühnes, herrliches Kind (15:41) ; Hojotoho hojotoho! (5:56) / Wagner.",
-              "Le nozze di Figaro. Non più andrai / Mozart (3:38) -- Don Giovanni. Là ci darem la mano / Mozart (3:14) -- Die Zauberflöte. Duo: pa-pa-pa / Mozart (2:22) -- Così fan tutte. Soava sia il vento / Mozart (3:02) -- Norma. Mira, o Norma / Bellini (7:28) -- Lucia di Lammermoor. Il dolce suono / Donizetti (16:43) -- Don Pasquale. Com'è gentil / Donizetti (3:50) -- Il Barbiere di Siviglia. Una voce poco fa / Rossini (6:18) -- La traviata. Libiamo ne' lieti calici / Verdi (2:51) -- Rigoletto. Gualtier malde!-- Como nome / Verdi (6:41) -- Aida. Ritorna vincitor / Verdi (6:24) -- Otello. Ave Maria / Verdi (5:11) -- Turandot. Nessum dorma / Puccini (2:49) -- La Bohème. Che gelida manina / Puccini (4:27) -- La Wally. Ebben? Ne andrò lantana / Catalani (4:20).",
-              "Le postillon de Lonjumeau. Mes amis, écoutez l'histoire / Adam (3:45) -- La muette de portici. Mieux vaut mourir-- Amour sacré de la patrie / Auber (5:46) -- Roméo et Juliette. Ah! je veux vivre dans ce rève / Gounod (3:50) -- Le roi d'Ys. Puisqu'on ne peut fléchir-- Vainement, ma bien-aimée / Lalo (3:28) -- Manon. Suis-je gentille ainsi?-- Je marche sur tous les chemins / Massenet (3:03) -- Les contes d'Hoffman. Belle nuit, ô nuit d'amour / Offenbach (4:19) -- Carmen. Le fleur que tu m'avais jetée / Bizet (4:26) -- Les pêcheurs de perles. C'est toi!-- Au fond du temple saint / Bizet (7:27) -- Werther. Werther, Werther, qui m'aurait dit-- Ces lettres! / Massenet (7:27) -- Lakmé. Viens, Malika / Delibes (5:52) -- Thaïs. Ah! Je suis seule enfin-- Dis-moi que je suis belle / Massenet (6:41) -- Faust. Alerte, alerte!-- Anges purs, anges radieux / Gounod (2:30) -- Boris Godunov. Boris's farewell / Mussorgsky (5:58) -- Oberon. Schreckensschwurl / Weber (2:12) -- Die Meistersinger von Nürnberg. Die \"selige Morgentraum-Deutweise\"-- Selig, wie die Sonne / Wagner (5:31) -- Siegfried. Was au besten er kann-- Nothung! Nothung! / Wagner (5:53)."
-            ]
-          },
-          "sort": [
-            3.9634595,
-            "b21903200"
-          ],
-          "inner_hits": {
-            "electronicResources": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": []
-              }
-            }
-          }
-        },
-        {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b10685709",
-          "_score": 3.5643363,
+          "_score": 3.55205,
           "_source": {
             "extent": [
               "volumes <1-12> : illustrations ;"
@@ -10885,7 +10885,7 @@
             ]
           },
           "sort": [
-            3.5643363,
+            3.55205,
             "b10685709"
           ],
           "inner_hits": {
@@ -10908,7 +10908,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10685709",
                     "_nested": {
                       "field": "items",
@@ -11004,7 +11004,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10685709",
                     "_nested": {
                       "field": "items",
@@ -11103,7 +11103,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10685709",
                     "_nested": {
                       "field": "items",
@@ -11207,9 +11207,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb13231291",
-          "_score": 3.0591125,
+          "_score": 3.0999508,
           "_source": {
             "extent": [
               "1 audio disc ;"
@@ -11431,7 +11431,7 @@
             ]
           },
           "sort": [
-            3.0591125,
+            3.0999508,
             "cb13231291"
           ],
           "inner_hits": {
@@ -11454,7 +11454,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb13231291",
                     "_nested": {
                       "field": "items",
@@ -11545,9 +11545,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb10481947",
-          "_score": 2.6869106,
+          "_score": 2.6523838,
           "_source": {
             "extent": [
               "1 audio disc : analog, 33 1/3 rpm ;"
@@ -11764,7 +11764,7 @@
             ]
           },
           "sort": [
-            2.6869106,
+            2.6523838,
             "cb10481947"
           ],
           "inner_hits": {
@@ -11787,7 +11787,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb10481947",
                     "_nested": {
                       "field": "items",
@@ -11878,9 +11878,9 @@
           }
         },
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "cb8273736",
-          "_score": 1.9566326,
+          "_score": 1.9596634,
           "_source": {
             "extent": [
               "2 audio discs : digital, stereo ;"
@@ -12084,7 +12084,7 @@
             ]
           },
           "sort": [
-            1.9566326,
+            1.9596634,
             "cb8273736"
           ],
           "inner_hits": {
@@ -12107,7 +12107,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "cb8273736",
                     "_nested": {
                       "field": "items",
