@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 102,
+    "took": 55,
     "timed_out": false,
     "_shards": {
-      "total": 1,
-      "successful": 1,
+      "total": 2,
+      "successful": 2,
       "skipped": 0,
       "failed": 0
     },
@@ -16,9 +16,9 @@
       "max_score": null,
       "hits": [
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b12423567",
-          "_score": 178.41748,
+          "_score": 180.47517,
           "_source": {
             "extent": [
               "202 p."
@@ -147,7 +147,7 @@
             ]
           },
           "sort": [
-            178.41748,
+            180.47517,
             "b12423567"
           ],
           "inner_hits": {
@@ -170,7 +170,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b12423567",
                     "_nested": {
                       "field": "items",

@@ -1,0 +1,128 @@
+{
+  "body": {
+    "took": 30,
+    "timed_out": false,
+    "_shards": {
+      "total": 2,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 1,
+      "failures": [
+        {
+          "shard": 1,
+          "index": "resources-2024-06-07",
+          "node": "7OSO4dk6QhK97ci6yH2vWg",
+          "reason": {
+            "type": "script_exception",
+            "reason": "runtime error",
+            "script_stack": [
+              "doc['items.idBarcode'].value == null || params.unavailableRecapBarcodes.contains(doc['items.idBarcode'].values[0])",
+              "                                                                                                       ^---- HERE"
+            ],
+            "script": "doc['items.idBarcode'].value == null || params.unavailableRecapBarcodes.contains(doc['items.idBarcode'].values[0])",
+            "lang": "painless",
+            "position": {
+              "offset": 103,
+              "start": 0,
+              "end": 114
+            },
+            "caused_by": {
+              "type": "illegal_argument_exception",
+              "reason": "Illegal list shortcut value [values]."
+            }
+          }
+        }
+      ]
+    },
+    "hits": {
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 15.702286,
+      "hits": []
+    },
+    "aggregations": {
+      "item_location": {
+        "doc_count": 824,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "loc:mal82||Schwarzman Building - Main Reading Room 315",
+              "doc_count": 575
+            },
+            {
+              "key": "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108",
+              "doc_count": 117
+            },
+            {
+              "key": "loc:rc2ma||Offsite",
+              "doc_count": 66
+            },
+            {
+              "key": "loc:rcma2||Offsite",
+              "doc_count": 66
+            }
+          ]
+        }
+      },
+      "item_format": {
+        "doc_count": 824,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "Text",
+              "doc_count": 707
+            },
+            {
+              "key": "AUG. 23, 2021-CURRENT",
+              "doc_count": 93
+            },
+            {
+              "key": "FEB. 15/22, 2021 - AUG. 16, 2021",
+              "doc_count": 24
+            }
+          ]
+        }
+      },
+      "item_status": {
+        "doc_count": 824,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "status:a||Available",
+              "doc_count": 766
+            },
+            {
+              "key": "status:i||At bindery",
+              "doc_count": 41
+            },
+            {
+              "key": "status:na||Not available",
+              "doc_count": 9
+            },
+            {
+              "key": "status:co||Loaned",
+              "doc_count": 5
+            },
+            {
+              "key": "status:t||In transit",
+              "doc_count": 2
+            },
+            {
+              "key": "status:m||Missing",
+              "doc_count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "statusCode": 200
+}

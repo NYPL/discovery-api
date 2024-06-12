@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 11,
+    "took": 8,
     "timed_out": false,
     "_shards": {
-      "total": 1,
-      "successful": 1,
+      "total": 2,
+      "successful": 2,
       "skipped": 0,
       "failed": 0
     },
@@ -13,12 +13,12 @@
         "value": 1,
         "relation": "eq"
       },
-      "max_score": 16.395695,
+      "max_score": 15.702286,
       "hits": [
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b10022734",
-          "_score": 16.395695,
+          "_score": 15.702286,
           "_source": {
             "extent": [
               "xiv, 381 p., [16] leaves of plates : ill. ;"
@@ -206,7 +206,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10022734",
                     "_nested": {
                       "field": "items",
@@ -299,7 +299,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10022734",
                     "_nested": {
                       "field": "items",
@@ -392,7 +392,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b10022734",
                     "_nested": {
                       "field": "items",

@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 9,
+    "took": 19,
     "timed_out": false,
     "_shards": {
-      "total": 1,
-      "successful": 1,
+      "total": 2,
+      "successful": 2,
       "skipped": 0,
       "failed": 0
     },
@@ -16,9 +16,9 @@
       "max_score": null,
       "hits": [
         {
-          "_index": "resources-2024-06-05",
+          "_index": "resources-2024-06-07",
           "_id": "b22144813",
-          "_score": 35.46037,
+          "_score": 34.073437,
           "_source": {
             "extent": [
               "1234, [1] pages, x leaves : illustrations ;",
@@ -736,7 +736,7 @@
             ]
           },
           "sort": [
-            35.46037,
+            34.073437,
             "b22144813"
           ],
           "inner_hits": {
@@ -759,7 +759,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b22144813",
                     "_nested": {
                       "field": "items",
@@ -864,7 +864,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-05",
+                    "_index": "resources-2024-06-07",
                     "_id": "b22144813",
                     "_nested": {
                       "field": "items",
