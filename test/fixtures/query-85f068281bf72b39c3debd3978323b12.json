@@ -1,24 +1,21 @@
 {
   "body": {
-    "took": 25,
+    "took": 277,
     "timed_out": false,
     "_shards": {
-      "total": 2,
-      "successful": 2,
-      "skipped": 0,
+      "total": 3,
+      "successful": 3,
       "failed": 0
     },
     "hits": {
-      "total": {
-        "value": 1,
-        "relation": "eq"
-      },
+      "total": 1,
       "max_score": null,
       "hits": [
         {
-          "_index": "resources-2024-06-07",
+          "_index": "resources-2018-04-09",
+          "_type": "resource",
           "_id": "b22144813",
-          "_score": 26.280298,
+          "_score": 17.58589,
           "_source": {
             "extent": [
               "1234, [1] pages, x leaves : illustrations ;",
@@ -736,31 +733,23 @@
             ]
           },
           "sort": [
-            26.280298,
+            17.58589,
             "b22144813"
           ],
           "inner_hits": {
             "electronicResources": {
               "hits": {
-                "total": {
-                  "value": 0,
-                  "relation": "eq"
-                },
+                "total": 0,
                 "max_score": null,
                 "hits": []
               }
             },
             "items": {
               "hits": {
-                "total": {
-                  "value": 2,
-                  "relation": "eq"
-                },
+                "total": 2,
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-07",
-                    "_id": "b22144813",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -864,8 +853,6 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-07",
-                    "_id": "b22144813",
                     "_nested": {
                       "field": "items",
                       "offset": 1
