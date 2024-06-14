@@ -1,0 +1,39 @@
+{
+  "body": {
+    "took": 2,
+    "timed_out": false,
+    "_shards": {
+      "total": 2,
+      "successful": 2,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": []
+    },
+    "aggregations": {
+      "statuses": {
+        "doc_count": 4,
+        "nonrecap_statuses": {
+          "doc_count": 1,
+          "nonrecap_status_buckets": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "status:a||Available",
+                "doc_count": 1
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "statusCode": 200
+}
