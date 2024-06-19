@@ -11,7 +11,7 @@ const sampleItems = {
     ],
     holdingLocation: [
       {
-        id: 'loc:scff3',
+        id: 'loc:scff2',
         prefLabel: 'Schomburg Center - Research & Reference - Desk'
       }
     ],
@@ -46,7 +46,7 @@ const sampleItems = {
     uri: 'i12227153',
     holdingLocation: [
       {
-        id: 'loc:scff1',
+        id: 'loc:scf',
         label: 'Schomburg Center - Research & Reference'
       }
     ],
@@ -528,6 +528,26 @@ describe('Delivery-locations-resolver', function () {
           holdingLocation: [{ id: 'loc:rcpm2' }]
         })
       ).to.equal(true)
+    })
+  })
+  describe('getRecapDeliveryInfo', function () {
+    it('returns empty deliveryLocation and eddRequestable false based on holding location when missing recapCustomerCode', function () {
+      const resolved = DeliveryLocationsResolver.getRecapDeliveryInfo({
+        holdingLocation: [{ id: 'loc:rccd8' }],
+        uri: 'i14747243'
+      })
+      expect(resolved.deliveryLocation.length).to.equal(0)
+      expect(resolved.eddRequestable).to.equal(false)
+    })
+
+    it('returns empty string delivery location and eddRequestable true based on holding location when missing recapCustomerCode', function () {
+      const resolved = DeliveryLocationsResolver.getRecapDeliveryInfo({
+        holdingLocation: [{ id: 'loc:rcpm2' }],
+        uri: 'i14747243'
+      })
+      expect(resolved.deliveryLocation.length).to.equal(1)
+      expect(resolved.deliveryLocation[0]).to.equal('')
+      expect(resolved.eddRequestable).to.equal(true)
     })
   })
 })
