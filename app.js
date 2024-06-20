@@ -52,6 +52,8 @@ app.init = async () => {
   app.get('/api/v0.1/discovery/swagger', function (req, res) {
     res.send(swaggerDocs)
   })
+
+  return app
 }
 
 app.start = async () => {

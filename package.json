@@ -16,6 +16,9 @@
     "axios": "^0.27.2",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
+    "chalk": "^4.1.2",
+    "csv-parse": "^5.5.6",
+    "fast-csv": "^5.0.1",
     "md5": "^2.2.1",
     "minimist": "^1.2.5",
     "mocha": "^10.3.0",
@@ -23,7 +26,9 @@
     "request-promise": "^4.1.1",
     "should": "^7.0.2",
     "sinon": "^17.0.1",
-    "standard": "^17.0.1"
+    "standard": "^17.0.1",
+    "supertest": "^7.0.0",
+    "table": "^6.8.2"
   },
   "scripts": {
     "test": "./node_modules/.bin/standard --env mocha && NODE_ENV=test ./node_modules/.bin/mocha test --exit",
