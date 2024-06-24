@@ -206,3 +206,4 @@ There is currently one feature flag in this app, which is 'no-on-site-edd'. When
 NB: numAvailable and numItem*Parsed counts do not **exclude** the e-item, but these items are not indexed with statuses, volumes, or date ranges, and are therefore not actually included in this count.
 
 NB: As the table above indicates, there is a mismatch between what the front end and API regard as "electronic items". As far as the API is concerned, there is only at most ONE electronic item, which can have many electronic locator values. `numElectronicResources` counts these locator values, but the other item count values treat all the electronic resources as a single item.
+
