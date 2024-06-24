@@ -18,7 +18,7 @@ describe('Location LabelUpdater', function () {
     }
 
     const updatedResponse = new LocationLabelUpdater(fakeESResponse).responseWithUpdatedLabels()
-    expect(updatedResponse.hits.hits[0]._source.items[0].holdingLocation[0].label).to.equal('Schwarzman Building M1 - Microforms Room 315')
+    expect(updatedResponse.hits.hits[0]._source.items[0].holdingLocation[0].label).to.equal('Schwarzman Building - Microforms Room 315')
   })
 
   it('will overwrite an ElasticSearch Response\'s holdings record location label', function () {
