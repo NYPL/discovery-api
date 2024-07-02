@@ -80,7 +80,8 @@ describe('Test Resources responses', function () {
         // Note: When updating fixtures, the following value may change. The
         // most important thing is that it appears to filter out items from the
         // 800+ item bib:
-        expect(doc.numItemsMatched).to.be.lessThan(20)
+        console.log('num items matched: ', doc.numItemsMatched)
+        expect(doc.numItemsMatched).to.be.lessThan(80)
         done()
       })
     })

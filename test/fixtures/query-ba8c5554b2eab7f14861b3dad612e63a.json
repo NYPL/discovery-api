@@ -1,0 +1,329 @@
+{
+  "body": {
+    "took": 12,
+    "timed_out": false,
+    "_shards": {
+      "total": 2,
+      "successful": 2,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": 15.702808,
+      "hits": [
+        {
+          "_index": "resources-2024-06-13",
+          "_id": "b14332438",
+          "_score": 15.702808,
+          "_source": {
+            "extent": [
+              "4 v."
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "America",
+              "America -- Discovery and exploration",
+              "America -- History",
+              "Virginia",
+              "Virginia -- History",
+              "Virginia -- History -- Colonial period, ca. 1600-1775",
+              "New England",
+              "New England -- History",
+              "New England -- History -- Colonial period, ca. 1600-1775"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "A. Strahan"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1800
+            ],
+            "title": [
+              "The history of America ..."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*KF 1800 (Robertson, W. History of America)"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1800"
+            ],
+            "creatorLiteral": [
+              "Robertson, William, 1721-1793."
+            ],
+            "numElectronicResources": [
+              4
+            ],
+            "contributorLiteral": [
+              "Robertson, William, 1753-1835."
+            ],
+            "dateStartYear": [
+              1800
+            ],
+            "creatorModifiedName": "William Robertson",
+            "idOclc": [
+              "7127252"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*KF 1800 (Robertson, W. History of America)"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "14332438"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "7127252"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)R220000327"
+              }
+            ],
+            "updatedAt": 1712865473006,
+            "publicationStatement": [
+              "London, A. Strahan, 1800."
+            ],
+            "identifier": [
+              "urn:shelfmark:*KF 1800 (Robertson, W. History of America)",
+              "urn:bnum:14332438",
+              "urn:oclc:7127252",
+              "urn:identifier:(WaOLN)R220000327"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1800"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "America -- Discovery and exploration.",
+              "America -- History.",
+              "Virginia -- History -- Colonial period, ca. 1600-1775.",
+              "New England -- History -- Colonial period, ca. 1600-1775."
+            ],
+            "titleDisplay": [
+              "The history of America ..."
+            ],
+            "uri": "b14332438",
+            "electronicResources": [
+              {
+                "label": "Full text available via HathiTrust - v.1",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750922"
+              },
+              {
+                "label": "Full text available via HathiTrust - v.2",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750930"
+              },
+              {
+                "label": "Full text available via HathiTrust - v.3",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750948"
+              },
+              {
+                "label": "Full text available via HathiTrust - v.4",
+                "url": "http://hdl.handle.net/2027/mdp.39015016750955"
+              }
+            ],
+            "placeOfPublication": [
+              "London"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "8vo."
+            ]
+          },
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-06-13",
+                    "_id": "b14332438",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:4||Restricted use"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1108",
+                          "label": "Rare Book Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*KF 1800 (Robertson, W. History of America)"
+                      ],
+                      "physicalLocation": [
+                        "*KF 1800 (Robertson, W. History of America)"
+                      ],
+                      "shelfMark_sort": "a*KF 1800 (Robertson, W. History of America)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:2||book non-circ"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:4",
+                          "label": "Restricted use"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "aeonUrl": [
+                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Author=Robertson%2C+William%2C+1721-1793.&CallNumber=*KF+1800+%28Robertson%2C+W.+History+of+America%29&Date=1800&Form=30&Genre=book+non-circ&ItemEdition=The+ninth+edition&ItemInfo1=Restricted+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db14332438&ItemISxN=i169831863&ItemPlace=London&ItemPublisher=A.+Strahan%2C+1800.&Location=Schwarzman+Rare+Book+Division&ReferenceNumber=b14332438x&Site=SASRB&Title=The+history+of+America+...&Transaction.CustomFields.Custom651=New+England+History+Colonial+period%2C+ca.+1600-1775."
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "*KF 1800 (Robertson, W. History of America)"
+                      ],
+                      "uri": "i16983186",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "*KF 1800 (Robertson, W. History of America)"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:marr2||Schwarzman Building - Rare Book Collection Room 328"
+                      ],
+                      "owner_packed": [
+                        "orgs:1108||Rare Book Division"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:2",
+                          "label": "book non-circ"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:marr2",
+                          "label": "Schwarzman Building - Rare Book Collection Room 328"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "aggregations": {
+      "item_location": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "loc:marr2||Schwarzman Building - Rare Book Collection Room 328",
+              "doc_count": 1
+            }
+          ]
+        }
+      },
+      "item_format": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "Text",
+              "doc_count": 1
+            }
+          ]
+        }
+      },
+      "item_status": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "status:a||Available",
+              "doc_count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "statusCode": 200
+}

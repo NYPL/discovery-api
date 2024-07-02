@@ -1,0 +1,255 @@
+{
+  "body": {
+    "took": 2150,
+    "timed_out": false,
+    "_shards": {
+      "total": 2,
+      "successful": 2,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": [
+        {
+          "_index": "resources-2024-06-13",
+          "_id": "b12709113",
+          "_score": 773.8635,
+          "_source": {
+            "extent": [
+              "iv, 350 p. : ill., port. ;"
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Washington County (Neb.)",
+              "Washington County (Neb.) -- History"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "Magic city printing co."
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1937
+            ],
+            "title": [
+              "A history of Washington county, Nebraska"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1937"
+            ],
+            "creatorLiteral": [
+              "Shrader, Forrest B."
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1937
+            ],
+            "creatorModifiedName": "Forrest Shrader",
+            "idOclc": [
+              "9566258"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "12709113"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "9566258"
+              }
+            ],
+            "updatedAt": 1711220358338,
+            "publicationStatement": [
+              "[Omaha, : Magic city printing co., 1937]"
+            ],
+            "identifier": [
+              "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+              "urn:bnum:12709113",
+              "urn:oclc:9566258"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1937"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Washington County (Neb.) -- History."
+            ],
+            "titleDisplay": [
+              "A history of Washington county, Nebraska / by Forrest B. Shrader."
+            ],
+            "uri": "b12709113",
+            "placeOfPublication": [
+              "[Omaha,"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "24 cm."
+            ]
+          },
+          "sort": [
+            773.8635,
+            "b12709113"
+          ],
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-06-13",
+                    "_id": "b12709113",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                        "urn:barcode:33433099509238"
+                      ],
+                      "m2CustomerCode": [
+                        "XA"
+                      ],
+                      "physicalLocation": [
+                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                      ],
+                      "shelfMark_sort": "aIWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:55||book, limited circ, MaRLI"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                      ],
+                      "uri": "i16202472",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433099509238"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                      ],
+                      "idBarcode": [
+                        "33433099509238"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mag92",
+                          "label": "Schwarzman Building M2 - Milstein Division Room 121"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "statusCode": 200
+}
