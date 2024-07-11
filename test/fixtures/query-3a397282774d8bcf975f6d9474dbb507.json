@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 52,
+    "took": 47,
     "timed_out": false,
     "_shards": {
-      "total": 2,
-      "successful": 2,
+      "total": 1,
+      "successful": 1,
       "skipped": 0,
       "failed": 0
     },
@@ -13,12 +13,12 @@
         "value": 1,
         "relation": "eq"
       },
-      "max_score": 15.702286,
+      "max_score": 16.576277,
       "hits": [
         {
-          "_index": "resources-2024-06-13",
+          "_index": "resources-2024-07-08",
           "_id": "b10833141",
-          "_score": 15.702286,
+          "_score": 16.576277,
           "_source": {
             "extent": [
               "volumes : illustrations ;"
@@ -1369,341 +1369,6 @@
             ]
           },
           "inner_hits": {
-            "allItems": {
-              "hits": {
-                "total": {
-                  "value": 824,
-                  "relation": "eq"
-                },
-                "max_score": 0,
-                "hits": [
-                  {
-                    "_index": "resources-2024-06-13",
-                    "_id": "b10833141",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": 0,
-                    "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1101",
-                          "label": "General Research Division"
-                        }
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
-                        "urn:barcode:33433136780354"
-                      ],
-                      "physicalLocation": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (May 10-July 26, 2021)",
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021",
-                          "lte": "2021"
-                        }
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
-                      ],
-                      "uri": "i40904678",
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433136780354"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                      ],
-                      "enumerationChronology": [
-                        "v. 97 (May 10-July 26, 2021)"
-                      ],
-                      "idBarcode": [
-                        "33433136780354"
-                      ],
-                      "owner_packed": [
-                        "orgs:1101||General Research Division"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mal82",
-                          "label": "Schwarzman Building - Main Reading Room 315"
-                        }
-                      ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "_index": "resources-2024-06-13",
-                    "_id": "b10833141",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 1
-                    },
-                    "_score": 0,
-                    "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1101",
-                          "label": "General Research Division"
-                        }
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
-                        "urn:barcode:33433136780347"
-                      ],
-                      "physicalLocation": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Feb 15-May 3, 2021)",
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021",
-                          "lte": "2021"
-                        }
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
-                      ],
-                      "uri": "i40904674",
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433136780347"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                      ],
-                      "enumerationChronology": [
-                        "v. 97 (Feb 15-May 3, 2021)"
-                      ],
-                      "idBarcode": [
-                        "33433136780347"
-                      ],
-                      "owner_packed": [
-                        "orgs:1101||General Research Division"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mal82",
-                          "label": "Schwarzman Building - Main Reading Room 315"
-                        }
-                      ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "_index": "resources-2024-06-13",
-                    "_id": "b10833141",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 2
-                    },
-                    "_score": 0,
-                    "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1101",
-                          "label": "General Research Division"
-                        }
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
-                        "urn:barcode:33433136780362"
-                      ],
-                      "physicalLocation": [
-                        "*DA+ (New Yorker)"
-                      ],
-                      "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Aug. 2-Oct 25, 2021)",
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "2021",
-                          "lte": "2021"
-                        }
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "enumerationChronology_sort": [
-                        "        97-2021"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "shelfMark": [
-                        "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
-                      ],
-                      "uri": "i40904679",
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433136780362"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                      ],
-                      "enumerationChronology": [
-                        "v. 97 (Aug. 2-Oct 25, 2021)"
-                      ],
-                      "idBarcode": [
-                        "33433136780362"
-                      ],
-                      "owner_packed": [
-                        "orgs:1101||General Research Division"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mal82",
-                          "label": "Schwarzman Building - Main Reading Room 315"
-                        }
-                      ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ],
-                      "volumeRange": [
-                        {
-                          "gte": 97,
-                          "lte": 97
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
             "items": {
               "hits": {
                 "total": {
@@ -1713,7 +1378,7 @@
                 "max_score": null,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -1792,7 +1457,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -1871,7 +1536,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -1950,7 +1615,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2029,7 +1694,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2108,7 +1773,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2187,7 +1852,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2266,7 +1931,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2345,7 +2010,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2424,7 +2089,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2532,7 +2197,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2640,7 +2305,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2748,7 +2413,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2856,7 +2521,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -2964,7 +2629,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3072,7 +2737,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3180,7 +2845,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3288,7 +2953,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3396,7 +3061,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3504,7 +3169,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3612,7 +3277,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3720,7 +3385,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3828,7 +3493,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -3936,7 +3601,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4044,7 +3709,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4152,7 +3817,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4260,7 +3925,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4368,7 +4033,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4476,7 +4141,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4584,7 +4249,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4692,7 +4357,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4800,7 +4465,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -4908,7 +4573,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5016,7 +4681,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5124,7 +4789,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5232,7 +4897,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5340,7 +5005,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5448,7 +5113,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5556,7 +5221,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5664,7 +5329,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5772,7 +5437,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5880,7 +5545,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -5988,7 +5653,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6096,7 +5761,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6204,7 +5869,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6312,7 +5977,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6420,7 +6085,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6528,7 +6193,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6636,7 +6301,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6744,7 +6409,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6852,7 +6517,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -6960,7 +6625,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7068,7 +6733,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7176,7 +6841,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7284,7 +6949,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7392,7 +7057,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7500,7 +7165,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7608,7 +7273,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7716,7 +7381,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7824,7 +7489,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -7932,7 +7597,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8040,7 +7705,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8148,7 +7813,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8256,7 +7921,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8364,7 +8029,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8472,7 +8137,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8580,7 +8245,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8688,7 +8353,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8796,7 +8461,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -8904,7 +8569,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -9012,7 +8677,7 @@
                     ]
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b10833141",
                     "_nested": {
                       "field": "items",
@@ -9118,6 +8783,341 @@
                     "sort": [
                       "          -1946"
                     ]
+                  }
+                ]
+              }
+            },
+            "allItems": {
+              "hits": {
+                "total": {
+                  "value": 824,
+                  "relation": "eq"
+                },
+                "max_score": 0,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": 0,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1101",
+                          "label": "General Research Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
+                        "urn:barcode:33433136780354"
+                      ],
+                      "physicalLocation": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (May 10-July 26, 2021)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2021",
+                          "lte": "2021"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        97-2021"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
+                      ],
+                      "uri": "i40904678",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433136780354"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                      ],
+                      "enumerationChronology": [
+                        "v. 97 (May 10-July 26, 2021)"
+                      ],
+                      "idBarcode": [
+                        "33433136780354"
+                      ],
+                      "owner_packed": [
+                        "orgs:1101||General Research Division"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mal82",
+                          "label": "Schwarzman Building - Main Reading Room 315"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 97,
+                          "lte": 97
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": 0,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1101",
+                          "label": "General Research Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
+                        "urn:barcode:33433136780347"
+                      ],
+                      "physicalLocation": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Feb 15-May 3, 2021)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2021",
+                          "lte": "2021"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        97-2021"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
+                      ],
+                      "uri": "i40904674",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433136780347"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                      ],
+                      "enumerationChronology": [
+                        "v. 97 (Feb 15-May 3, 2021)"
+                      ],
+                      "idBarcode": [
+                        "33433136780347"
+                      ],
+                      "owner_packed": [
+                        "orgs:1101||General Research Division"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mal82",
+                          "label": "Schwarzman Building - Main Reading Room 315"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 97,
+                          "lte": 97
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b10833141",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 2
+                    },
+                    "_score": 0,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1101",
+                          "label": "General Research Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
+                        "urn:barcode:33433136780362"
+                      ],
+                      "physicalLocation": [
+                        "*DA+ (New Yorker)"
+                      ],
+                      "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Aug. 2-Oct 25, 2021)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2021",
+                          "lte": "2021"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        97-2021"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
+                      ],
+                      "uri": "i40904679",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433136780362"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                      ],
+                      "enumerationChronology": [
+                        "v. 97 (Aug. 2-Oct 25, 2021)"
+                      ],
+                      "idBarcode": [
+                        "33433136780362"
+                      ],
+                      "owner_packed": [
+                        "orgs:1101||General Research Division"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mal82",
+                          "label": "Schwarzman Building - Main Reading Room 315"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 97,
+                          "lte": 97
+                        }
+                      ]
+                    }
                   }
                 ]
               }

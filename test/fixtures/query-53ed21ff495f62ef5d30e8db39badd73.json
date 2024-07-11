@@ -1,0 +1,1334 @@
+{
+  "body": {
+    "took": 8832,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 2,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": [
+        {
+          "_index": "resources-2024-07-08",
+          "_id": "b11826883",
+          "_score": 810.7246,
+          "_source": {
+            "extent": [
+              "v. : ill. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Indexed In",
+                "label": "Applied science & technology index",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Indexed In",
+                "label": "Art index",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Indexed In",
+                "label": "R]pertoire international de la littérature de l'art",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Indexed In",
+                "label": "Art and archaeology technical abstracts",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Indexed In",
+                "label": "Artbibliographies modern",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Indexed In",
+                "label": "Avery index to architectural periodicals",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Indexes/Finding Aids",
+                "label": "Vols. 1 (1965)-10 (1974). 1 v.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "serialPublicationDates": [
+              "Vol. 1 (1965)-"
+            ],
+            "subjectLiteral_exploded": [
+              "Furniture",
+              "Furniture -- England",
+              "Furniture -- England -- History",
+              "Furniture -- England -- History -- Periodicals"
+            ],
+            "numItemDatesParsed": [
+              70
+            ],
+            "publisherLiteral": [
+              "The Society"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              70
+            ],
+            "createdYear": [
+              1965
+            ],
+            "dateEndString": [
+              "9999"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "title": [
+              "Furniture history : the journal of the Furniture History Society."
+            ],
+            "shelfMark": [
+              "JQL 08-18"
+            ],
+            "numItemVolumesParsed": [
+              70
+            ],
+            "createdString": [
+              "1965"
+            ],
+            "idLccn": [
+              "66053650 //r89"
+            ],
+            "idIssn": [
+              "0016-3058"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "contributorLiteral": [
+              "Furniture History Society (London, England)"
+            ],
+            "dateStartYear": [
+              1965
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "JQL 08-18"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "11826883"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "1570335"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "66053650 //r89"
+              },
+              {
+                "type": "bf:Issn",
+                "value": "0016-3058"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "0280126"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp1832956"
+              }
+            ],
+            "idOclc": [
+              "1570335"
+            ],
+            "dateEndYear": [
+              9999
+            ],
+            "holdings": [
+              {
+                "checkInBoxes": [
+                  {
+                    "coverage": "No. 30 (1994)",
+                    "position": 1,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 31 (1995)",
+                    "position": 2,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 32 (1996)",
+                    "position": 3,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 33 (1997)",
+                    "position": 4,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 34 (1998)",
+                    "position": 5,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 35 (1999)",
+                    "position": 6,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 26-35 (1990 - 1999)",
+                    "position": 7,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 36 (2000)",
+                    "position": 8,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 37 (2001)",
+                    "position": 9,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 38 (2002)",
+                    "position": 10,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 39 (2003)",
+                    "position": 11,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 40 (2004)",
+                    "position": 12,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 41 (2005)",
+                    "position": 13,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 42 (2006)",
+                    "position": 14,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 43 (2007)",
+                    "position": 15,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 44 (2008)",
+                    "position": 16,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 45 (2009)",
+                    "position": 17,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 46 (2010)",
+                    "position": 18,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 47 (2011)",
+                    "position": 19,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 48 (2012)",
+                    "position": 20,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 36-45 (2000 - 2009)",
+                    "position": 21,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 49 (2013)",
+                    "position": 22,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 50 (2014)",
+                    "position": 23,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 51 (2015)",
+                    "position": 24,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 52 (2016)",
+                    "position": 25,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "No. 53 (2017)",
+                    "position": 26,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "No. 54 (2018)",
+                    "position": 27,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "No. 55 (2019)",
+                    "position": 28,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 56 (2020)",
+                    "position": 29,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Arrived"
+                  },
+                  {
+                    "coverage": "No. 57 (2021)",
+                    "position": 30,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Expected"
+                  },
+                  {
+                    "coverage": "No. 58 (2022)",
+                    "position": 31,
+                    "type": "nypl:CheckInBox",
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "status": "Expected"
+                  }
+                ],
+                "holdingStatement": [
+                  "1(1965)-44(2008)-",
+                  "v. 3636 (2000) - v. 45 (2000); v. 44 (2008); v. 45 (2009); v. 46 (2010); v. 47 (2011); v. 48 (2012); v. 49 (2013); v. 50 (2014); v. 55 (2019)"
+                ],
+                "identifier": [
+                  {
+                    "type": "bf:shelfMark",
+                    "value": "JQL 08-18"
+                  }
+                ],
+                "physicalLocation": [
+                  "JQL 08-18"
+                ],
+                "location": [
+                  {
+                    "code": "loc:mab",
+                    "label": "Schwarzman Building - Art & Architecture Room 300"
+                  }
+                ],
+                "shelfMark": [
+                  "JQL 08-18"
+                ],
+                "uri": "h1066822"
+              }
+            ],
+            "updatedAt": 1714487263214,
+            "publicationStatement": [
+              "[London] : The Society"
+            ],
+            "identifier": [
+              "urn:shelfmark:JQL 08-18",
+              "urn:bnum:11826883",
+              "urn:oclc:1570335",
+              "urn:lccn:66053650 //r89",
+              "urn:issn:0016-3058",
+              "urn:identifier:0280126",
+              "urn:identifier:(WaOLN)nyp1832956"
+            ],
+            "numCheckinCardItems": [
+              31
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1965"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Furniture -- England -- History -- Periodicals."
+            ],
+            "titleDisplay": [
+              "Furniture history : the journal of the Furniture History Society."
+            ],
+            "uri": "b11826883",
+            "lccClassification": [
+              "NK2528 .F8"
+            ],
+            "placeOfPublication": [
+              "[London]"
+            ],
+            "titleAlt": [
+              "Furnit. hist.",
+              "Furniture history"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:s",
+                "label": "serial"
+              }
+            ],
+            "dimensions": [
+              "25 cm."
+            ]
+          },
+          "sort": [
+            810.7246,
+            "b11826883"
+          ],
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 70,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11826883",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2023",
+                          "lte": "2023"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "JQL 08-18 v. 59 (2023)"
+                      ],
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "JQL 08-18 v. 59 (2023)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433076530082"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 59 (2023)"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "recapCustomerCode": [
+                        "NA"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 59,
+                          "lte": 59
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-18 v. 59 (2023)",
+                        "urn:barcode:33433076530082"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-18"
+                      ],
+                      "shelfMark_sort": "aJQL 08-18 v. 000059 (2023)",
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        59-2023"
+                      ],
+                      "uri": "i40673104",
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433076530082"
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      "        59-2023"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11826883",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 69
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "shelfMark_sort": "aJQL 08-000018",
+                      "dateRange": [
+                        {
+                          "gte": "2022-01-01",
+                          "lte": "2022-01-01"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:na||Not available"
+                      ],
+                      "volumeRaw": [
+                        "No. 58"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        58-2022-01-01"
+                      ],
+                      "type": [
+                        "nypl:CheckinCardItem"
+                      ],
+                      "shelfMark": [
+                        "JQL 08-18"
+                      ],
+                      "uri": "i-h1066822-0",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "JQL 08-18"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mab||Schwarzman Building - Art & Architecture Room 300"
+                      ],
+                      "enumerationChronology": [
+                        "No. 58 (2022)"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mab",
+                          "label": "Schwarzman Building - Art & Architecture Room 300"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:na",
+                          "label": "Not available"
+                        }
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 58,
+                          "lte": 58
+                        }
+                      ]
+                    },
+                    "sort": [
+                      "        58-2022-01-01"
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11826883",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "2022",
+                          "lte": "2022"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "JQL 08-18 v. 58 (2022)"
+                      ],
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "JQL 08-18 v. 58 (2022)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433076543143"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 58 (2022)"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcmb2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "recapCustomerCode": [
+                        "NA"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 58,
+                          "lte": 58
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1110",
+                          "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:JQL 08-18 v. 58 (2022)",
+                        "urn:barcode:33433076543143"
+                      ],
+                      "physicalLocation": [
+                        "JQL 08-18"
+                      ],
+                      "shelfMark_sort": "aJQL 08-18 v. 000058 (2022)",
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        58-2022"
+                      ],
+                      "uri": "i39962833",
+                      "holdingLocation_packed": [
+                        "loc:rcmb2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433076543143"
+                      ],
+                      "owner_packed": [
+                        "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      "        58-2022"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-07-08",
+          "_id": "b11064010",
+          "_score": 802.5538,
+          "_source": {
+            "extent": [
+              "343 p. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "\"Appeared originally in the New Yorker in slightly different form\"--T.p. verso. Title of New Yorker version: Annals of crime : in cold blood.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Access",
+                "label": "Berg, Manuscripts, and Rare Book Collection copies are restricted access;",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Hickock, Richard Eugene, 1931-1965",
+              "Smith, Perry Edward, 1928-1965",
+              "Murder",
+              "Murder -- Kansas",
+              "Murder -- Kansas -- Case studies"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "Random House"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              5
+            ],
+            "createdYear": [
+              1966
+            ],
+            "dateEndString": [
+              "1965"
+            ],
+            "title": [
+              "In cold blood : a true account of a multiple murder and its consequences"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*KLC 86-100"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1966"
+            ],
+            "creatorLiteral": [
+              "Capote, Truman, 1924-1984."
+            ],
+            "idLccn": [
+              "65011257 //r78"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1966
+            ],
+            "creatorModifiedName": "Truman Capote",
+            "idOclc": [
+              "264953",
+              "NYPG86-B97981"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*KLC 86-100"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "11064010"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "264953"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG86-B97981"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "65011257 //r78"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp1071353"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)264953"
+              }
+            ],
+            "popularity": 23,
+            "dateEndYear": [
+              1965
+            ],
+            "updatedAt": 1712853765832,
+            "publicationStatement": [
+              "New York : Random House, [1966], c1965."
+            ],
+            "identifier": [
+              "urn:shelfmark:*KLC 86-100",
+              "urn:bnum:11064010",
+              "urn:oclc:264953",
+              "urn:oclc:NYPG86-B97981",
+              "urn:lccn:65011257 //r78",
+              "urn:identifier:(WaOLN)nyp1071353",
+              "urn:identifier:(OCoLC)264953"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1966"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Hickock, Richard Eugene, 1931-1965.",
+              "Smith, Perry Edward, 1928-1965.",
+              "Murder -- Kansas -- Case studies."
+            ],
+            "titleDisplay": [
+              "In cold blood : a true account of a multiple murder and its consequences / Truman Capote."
+            ],
+            "uri": "b11064010",
+            "lccClassification": [
+              "HV6533.K3 C3"
+            ],
+            "placeOfPublication": [
+              "New York"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "22 cm."
+            ]
+          },
+          "sort": [
+            802.5538,
+            "b11064010"
+          ],
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 5,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11064010",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:p||Permit needed"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1107",
+                          "label": "Manuscripts and Archives Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:MSS DIV IGIC FIC C18"
+                      ],
+                      "physicalLocation": [
+                        "MSS DIV IGIC FIC C18"
+                      ],
+                      "shelfMark_sort": "aMSS DIV IGIC FIC C000018",
+                      "catalogItemType_packed": [
+                        "catalogItemType:2||book non-circ"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:p",
+                          "label": "Permit needed"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "MSS DIV IGIC FIC C18"
+                      ],
+                      "uri": "i10218016",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "MSS DIV IGIC FIC C18"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:maor2||Schwarzman Building - Manuscripts & Archives Room 328"
+                      ],
+                      "owner_packed": [
+                        "orgs:1107||Manuscripts and Archives Division"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:2",
+                          "label": "book non-circ"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:maor2",
+                          "label": "Schwarzman Building - Manuscripts & Archives Room 328"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11064010",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1101",
+                          "label": "General Research Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:D-16 7123",
+                        "urn:barcode:33433080109774"
+                      ],
+                      "physicalLocation": [
+                        "D-16 7123"
+                      ],
+                      "shelfMark_sort": "aD-16 007123",
+                      "catalogItemType_packed": [
+                        "catalogItemType:55||book, limited circ, MaRLI"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "D-16 7123"
+                      ],
+                      "uri": "i10218017",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "D-16 7123"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433080109774"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                      ],
+                      "idBarcode": [
+                        "33433080109774"
+                      ],
+                      "owner_packed": [
+                        "orgs:1101||General Research Division"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mal82",
+                          "label": "Schwarzman Building - Main Reading Room 315"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11064010",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 2
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:p||Permit needed"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1104",
+                          "label": "Henry W. and Albert A. Berg Collection of English and American Literature"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:Berg Coll Capote I53 1965",
+                        "urn:barcode:33433084924343"
+                      ],
+                      "physicalLocation": [
+                        "Berg Coll Capote I53 1965"
+                      ],
+                      "shelfMark_sort": "aBerg Coll Capote I53 001965",
+                      "catalogItemType_packed": [
+                        "catalogItemType:2||book non-circ"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:p",
+                          "label": "Permit needed"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "aeonUrl": [
+                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Author=Capote%2C+Truman%2C+1924-1984.&CallNumber=Berg+Coll+Capote+I53+1965&Date=1966&Form=30&Genre=book+non-circ&ItemInfo1=Permit+needed&ItemInfo2=Berg%2C+Manuscripts%2C+and+Rare+Book+Collection+copies+are+restricted+access%3B&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db11064010&ItemISxN=i249643133&ItemNumber=33433084924343&ItemPlace=New+York&ItemPublisher=Random+House%2C+%5B1966%5D%2C+c1965.&Location=Schwarzman+Berg+Collection&ReferenceNumber=b11064010x&Site=SASBG&Title=In+cold+blood+%3A+a+true+account+of+a+multiple+murder+and+its+consequences"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "Berg Coll Capote I53 1965"
+                      ],
+                      "uri": "i24964313",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "Berg Coll Capote I53 1965"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433084924343"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:maee2||Schwarzman Building - Berg Collection Room 320"
+                      ],
+                      "idBarcode": [
+                        "33433084924343"
+                      ],
+                      "owner_packed": [
+                        "orgs:1104||Henry W. and Albert A. Berg Collection of English and American Literature"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:2",
+                          "label": "book non-circ"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:maee2",
+                          "label": "Schwarzman Building - Berg Collection Room 320"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "statusCode": 200
+}

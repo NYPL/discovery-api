@@ -1,10 +1,10 @@
 {
   "body": {
-    "took": 9,
+    "took": 8,
     "timed_out": false,
     "_shards": {
-      "total": 2,
-      "successful": 2,
+      "total": 1,
+      "successful": 1,
       "skipped": 0,
       "failed": 0
     },
@@ -13,12 +13,12 @@
         "value": 1,
         "relation": "eq"
       },
-      "max_score": 15.702286,
+      "max_score": 16.576277,
       "hits": [
         {
-          "_index": "resources-2024-06-13",
+          "_index": "resources-2024-07-08",
           "_id": "b14937001",
-          "_score": 15.702286,
+          "_score": 16.576277,
           "_source": {
             "note": [
               {
@@ -522,6 +522,116 @@
             ]
           },
           "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b14937001",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 3
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860",
+                        "urn:barcode:33433097964930"
+                      ],
+                      "m2CustomerCode": [
+                        "XA"
+                      ],
+                      "physicalLocation": [
+                        "*DF+ (Morgenblatt für gebildete Leser)"
+                      ],
+                      "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. 001860",
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "1860",
+                          "lte": "1860"
+                        }
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "enumerationChronology_sort": [
+                        "          -1860"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
+                      ],
+                      "uri": "i28543800",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433097964930"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                      ],
+                      "enumerationChronology": [
+                        "Jahrg. 1860"
+                      ],
+                      "idBarcode": [
+                        "33433097964930"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mal92",
+                          "label": "Schwarzman Building M2 - General Research Room 315"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      "          -1860"
+                    ]
+                  }
+                ]
+              }
+            },
             "allItems": {
               "hits": {
                 "total": {
@@ -531,7 +641,7 @@
                 "max_score": 0,
                 "hits": [
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b14937001",
                     "_nested": {
                       "field": "items",
@@ -636,7 +746,7 @@
                     }
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b14937001",
                     "_nested": {
                       "field": "items",
@@ -741,7 +851,7 @@
                     }
                   },
                   {
-                    "_index": "resources-2024-06-13",
+                    "_index": "resources-2024-07-08",
                     "_id": "b14937001",
                     "_nested": {
                       "field": "items",
@@ -844,116 +954,6 @@
                         }
                       ]
                     }
-                  }
-                ]
-              }
-            },
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 1,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-06-13",
-                    "_id": "b14937001",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 3
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:1||Use in library"
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860",
-                        "urn:barcode:33433097964930"
-                      ],
-                      "m2CustomerCode": [
-                        "XA"
-                      ],
-                      "physicalLocation": [
-                        "*DF+ (Morgenblatt für gebildete Leser)"
-                      ],
-                      "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. 001860",
-                      "catalogItemType_packed": [
-                        "catalogItemType:3||serial"
-                      ],
-                      "dateRange": [
-                        {
-                          "gte": "1860",
-                          "lte": "1860"
-                        }
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:1",
-                          "label": "Use in library"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "enumerationChronology_sort": [
-                        "          -1860"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "shelfMark": [
-                        "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
-                      ],
-                      "uri": "i28543800",
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433097964930"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:mal92||Schwarzman Building M2 - General Research Room 315"
-                      ],
-                      "enumerationChronology": [
-                        "Jahrg. 1860"
-                      ],
-                      "idBarcode": [
-                        "33433097964930"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:3",
-                          "label": "serial"
-                        }
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:mal92",
-                          "label": "Schwarzman Building M2 - General Research Room 315"
-                        }
-                      ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ]
-                    },
-                    "sort": [
-                      "          -1860"
-                    ]
                   }
                 ]
               }

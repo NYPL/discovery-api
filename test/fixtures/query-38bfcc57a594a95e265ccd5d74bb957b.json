@@ -1,0 +1,777 @@
+{
+  "body": {
+    "took": 8855,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 2,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": [
+        {
+          "_index": "resources-2024-07-08",
+          "_id": "b13565153",
+          "_score": 813.52966,
+          "_source": {
+            "extent": [
+              "430 p. : ill. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "Title on spine: Ladies companion to the flower garden.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Ladies' companion to the flower-garden (p. [97]-340), has half- title page.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Note",
+                "label": "Monthly calendar of work to be done in the flower-garden: p. [425]-430.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Gardening",
+              "Flower gardening"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "John Wiley"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1854
+            ],
+            "dateEndString": [
+              "1853"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "title": [
+              "Gardening for ladies : and, Companion to the flower-garden"
+            ],
+            "shelfMark": [
+              "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1854"
+            ],
+            "creatorLiteral": [
+              "Loudon, Mrs. (Jane), 1807-1858."
+            ],
+            "numElectronicResources": [
+              1
+            ],
+            "contributorLiteral": [
+              "Downing, A. J. (Andrew Jackson), 1815-1852."
+            ],
+            "dateStartYear": [
+              1854
+            ],
+            "creatorModifiedName": "Mrs Loudon",
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "13565153"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "31237346"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp3539974"
+              }
+            ],
+            "idOclc": [
+              "31237346"
+            ],
+            "dateEndYear": [
+              1853
+            ],
+            "updatedAt": 1711584773313,
+            "publicationStatement": [
+              "New York : John Wiley, 1854, c1853."
+            ],
+            "identifier": [
+              "urn:shelfmark:VQG (Loudon, J. W. Gardening for ladies. 1854)",
+              "urn:bnum:13565153",
+              "urn:oclc:31237346",
+              "urn:identifier:(WaOLN)nyp3539974"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1854"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Gardening.",
+              "Flower gardening."
+            ],
+            "titleDisplay": [
+              "Gardening for ladies : and, Companion to the flower-garden / by Mrs. Loudon."
+            ],
+            "uri": "b13565153",
+            "electronicResources": [
+              {
+                "label": "Full text available via HathiTrust",
+                "url": "http://babel.hathitrust.org/cgi/pt?id=nyp.33433006564110"
+              }
+            ],
+            "placeOfPublication": [
+              "New York"
+            ],
+            "titleAlt": [
+              "Companion to the flower-garden.",
+              "Ladies' companion to the flower garden."
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "20 cm."
+            ]
+          },
+          "sort": [
+            813.52966,
+            "b13565153"
+          ],
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b13565153",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:VQG (Loudon, J. W. Gardening for ladies. 1854)",
+                        "urn:barcode:33433006564110"
+                      ],
+                      "physicalLocation": [
+                        "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                      ],
+                      "shelfMark_sort": "aVQG (Loudon, J. W. Gardening for ladies. 1854)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:32||google project, book"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                      ],
+                      "uri": "i10708577",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433006564110"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rcma2||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433006564110"
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:32",
+                          "label": "google project, book"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rcma2",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "recapCustomerCode": [
+                        "NL"
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "_index": "resources-2024-07-08",
+          "_id": "b11064010",
+          "_score": 802.5538,
+          "_source": {
+            "extent": [
+              "343 p. ;"
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "\"Appeared originally in the New Yorker in slightly different form\"--T.p. verso. Title of New Yorker version: Annals of crime : in cold blood.",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Access",
+                "label": "Berg, Manuscripts, and Rare Book Collection copies are restricted access;",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Hickock, Richard Eugene, 1931-1965",
+              "Smith, Perry Edward, 1928-1965",
+              "Murder",
+              "Murder -- Kansas",
+              "Murder -- Kansas -- Case studies"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "Random House"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              5
+            ],
+            "createdYear": [
+              1966
+            ],
+            "dateEndString": [
+              "1965"
+            ],
+            "title": [
+              "In cold blood : a true account of a multiple murder and its consequences"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*KLC 86-100"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1966"
+            ],
+            "creatorLiteral": [
+              "Capote, Truman, 1924-1984."
+            ],
+            "idLccn": [
+              "65011257 //r78"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1966
+            ],
+            "creatorModifiedName": "Truman Capote",
+            "idOclc": [
+              "264953",
+              "NYPG86-B97981"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*KLC 86-100"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "11064010"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "264953"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG86-B97981"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "65011257 //r78"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp1071353"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)264953"
+              }
+            ],
+            "popularity": 23,
+            "dateEndYear": [
+              1965
+            ],
+            "updatedAt": 1712853765832,
+            "publicationStatement": [
+              "New York : Random House, [1966], c1965."
+            ],
+            "identifier": [
+              "urn:shelfmark:*KLC 86-100",
+              "urn:bnum:11064010",
+              "urn:oclc:264953",
+              "urn:oclc:NYPG86-B97981",
+              "urn:lccn:65011257 //r78",
+              "urn:identifier:(WaOLN)nyp1071353",
+              "urn:identifier:(OCoLC)264953"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1966"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Hickock, Richard Eugene, 1931-1965.",
+              "Smith, Perry Edward, 1928-1965.",
+              "Murder -- Kansas -- Case studies."
+            ],
+            "titleDisplay": [
+              "In cold blood : a true account of a multiple murder and its consequences / Truman Capote."
+            ],
+            "uri": "b11064010",
+            "lccClassification": [
+              "HV6533.K3 C3"
+            ],
+            "placeOfPublication": [
+              "New York"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "22 cm."
+            ]
+          },
+          "sort": [
+            802.5538,
+            "b11064010"
+          ],
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 5,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11064010",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:p||Permit needed"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1107",
+                          "label": "Manuscripts and Archives Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:MSS DIV IGIC FIC C18"
+                      ],
+                      "physicalLocation": [
+                        "MSS DIV IGIC FIC C18"
+                      ],
+                      "shelfMark_sort": "aMSS DIV IGIC FIC C000018",
+                      "catalogItemType_packed": [
+                        "catalogItemType:2||book non-circ"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:p",
+                          "label": "Permit needed"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "MSS DIV IGIC FIC C18"
+                      ],
+                      "uri": "i10218016",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "MSS DIV IGIC FIC C18"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:maor2||Schwarzman Building - Manuscripts & Archives Room 328"
+                      ],
+                      "owner_packed": [
+                        "orgs:1107||Manuscripts and Archives Division"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:2",
+                          "label": "book non-circ"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:maor2",
+                          "label": "Schwarzman Building - Manuscripts & Archives Room 328"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11064010",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 1
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1101",
+                          "label": "General Research Division"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:D-16 7123",
+                        "urn:barcode:33433080109774"
+                      ],
+                      "physicalLocation": [
+                        "D-16 7123"
+                      ],
+                      "shelfMark_sort": "aD-16 007123",
+                      "catalogItemType_packed": [
+                        "catalogItemType:55||book, limited circ, MaRLI"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "D-16 7123"
+                      ],
+                      "uri": "i10218017",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "D-16 7123"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433080109774"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                      ],
+                      "idBarcode": [
+                        "33433080109774"
+                      ],
+                      "owner_packed": [
+                        "orgs:1101||General Research Division"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:mal82",
+                          "label": "Schwarzman Building - Main Reading Room 315"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  },
+                  {
+                    "_index": "resources-2024-07-08",
+                    "_id": "b11064010",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 2
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:p||Permit needed"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1104",
+                          "label": "Henry W. and Albert A. Berg Collection of English and American Literature"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:Berg Coll Capote I53 1965",
+                        "urn:barcode:33433084924343"
+                      ],
+                      "physicalLocation": [
+                        "Berg Coll Capote I53 1965"
+                      ],
+                      "shelfMark_sort": "aBerg Coll Capote I53 001965",
+                      "catalogItemType_packed": [
+                        "catalogItemType:2||book non-circ"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:p",
+                          "label": "Permit needed"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "aeonUrl": [
+                        "https://specialcollections.nypl.org/aeon/Aeon.dll?Action=10&Author=Capote%2C+Truman%2C+1924-1984.&CallNumber=Berg+Coll+Capote+I53+1965&Date=1966&Form=30&Genre=book+non-circ&ItemInfo1=Permit+needed&ItemInfo2=Berg%2C+Manuscripts%2C+and+Rare+Book+Collection+copies+are+restricted+access%3B&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db11064010&ItemISxN=i249643133&ItemNumber=33433084924343&ItemPlace=New+York&ItemPublisher=Random+House%2C+%5B1966%5D%2C+c1965.&Location=Schwarzman+Berg+Collection&ReferenceNumber=b11064010x&Site=SASBG&Title=In+cold+blood+%3A+a+true+account+of+a+multiple+murder+and+its+consequences"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "Berg Coll Capote I53 1965"
+                      ],
+                      "uri": "i24964313",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "Berg Coll Capote I53 1965"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433084924343"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:maee2||Schwarzman Building - Berg Collection Room 320"
+                      ],
+                      "idBarcode": [
+                        "33433084924343"
+                      ],
+                      "owner_packed": [
+                        "orgs:1104||Henry W. and Albert A. Berg Collection of English and American Literature"
+                      ],
+                      "requestable": [
+                        false
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:2",
+                          "label": "book non-circ"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:maee2",
+                          "label": "Schwarzman Building - Berg Collection Room 320"
+                        }
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "statusCode": 200
+}
