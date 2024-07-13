@@ -745,7 +745,7 @@ describe('Test Resources responses', function () {
       '"Publisher no. -- 028 02  "',
       '"Report number. -- 027"'
     ].forEach((num) => {
-      it(`should match b12082323 by "Standard Numbers": "${num}"`, function (done) {
+      it(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
         request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err
 
