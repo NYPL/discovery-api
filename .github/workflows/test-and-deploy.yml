@@ -81,3 +81,6 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:production-latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:production-latest
+      - name: Force ECS Update
+        run: |
+          aws ecs update-service --cluster discovery-api-production --service discovery-api-production --force-new-deployment
