@@ -5,6 +5,7 @@ const loadConfig = require('./lib/load-config')
 const { preflightCheck } = require('./lib/preflight_check')
 
 const swaggerDocs = require('./swagger.v1.1.x.json')
+
 const pjson = require('./package.json')
 
 const app = express()

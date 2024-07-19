@@ -18,6 +18,8 @@ const { parse: csvParse } = require('csv-parse/sync')
 const request = require('supertest')
 const tableFormat = require('table')
 const chalk = require('chalk')
+const { setCredentials: setKmsCredentials } = require('../lib/kms-helper')
+const { fromIni } = require('@aws-sdk/credential-providers')
 
 const app = require('../app')
 
@@ -25,10 +27,14 @@ const argv = require('minimist')(process.argv.slice(2), {
   default: {
     offset: 0,
     limit: Infinity,
-    rows: null
+    rows: null,
+    profile: 'nypl-digital-dev'
   },
   string: ['rows']
 })
+
+// Use creds from local profile:
+setKmsCredentials(fromIni({ profile: argv.profile }))
 
 const PORT = 3333
 

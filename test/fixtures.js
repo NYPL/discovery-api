@@ -93,6 +93,8 @@ function enableEsFixtures () {
 
   // If tests are run with `UPDATE_FIXTURES=[all|if-missing] npm test`, rebuild fixtures:
   if (process.env.UPDATE_FIXTURES) {
+    process.env.LOCAL = 'true'
+
     // Create a reference to the original search function:
     const originalEsSearch = app.esClient.search.bind(app.esClient)
 
