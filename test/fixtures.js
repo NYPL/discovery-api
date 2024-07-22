@@ -283,7 +283,11 @@ function enableDataApiFixtures (pathToFixtureMap) {
     const requestPath = new url.URL(requestOptions.uri).pathname.replace('/api/v0.1/', '')
     if (pathToFixtureMap[requestPath]) {
       const content = fs.readFileSync(path.join('./test/fixtures/', pathToFixtureMap[requestPath]), 'utf8')
-      return Promise.resolve(JSON.parse(content))
+      // The data-api-client uses `fetch`, so emulate a Response object:
+      return Promise.resolve({
+        json: () => Promise.resolve(JSON.parse(content)),
+        body: content
+      })
     }
 
     throw new Error('No fixture for ' + requestPath)
