@@ -58,6 +58,13 @@ This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.c
 1. Confirm app deploys to QA and run appropriate testing
 1. Merge `main` > `production`
 
+### Deploying
+
+App deploys through [GH Actions](./.github/workflows/test-and-deploy.yml) to ECS when updates are made to deployment branches:
+ - `qa`: discovery-api-qa.nypl.org
+ - `qa2`: discovery-api-qa2.nypl.org
+ - `production`: discovery-api-production.nypl.org
+
 ## Testing
 
 Run all tests:
