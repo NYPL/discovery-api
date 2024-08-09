@@ -1,11 +1,11 @@
 const sinon = require('sinon')
-const ScsbRestClient = require('@nypl/scsb-rest-client')
+const scsbRestClient = require('@nypl/scsb-rest-client')
 const scsbClient = require('../lib/scsb-client')
 
 describe('scsb-client', () => {
   describe('getItemsAvailabilityForBnum', () => {
     beforeEach(() => {
-      sinon.stub(ScsbRestClient.prototype, 'scsbQuery')
+      sinon.stub(scsbRestClient, 'scsbQuery')
         .callsFake((path, body) => {
           return Promise.resolve([
             {
@@ -17,18 +17,18 @@ describe('scsb-client', () => {
     })
 
     afterEach(() => {
-      ScsbRestClient.prototype.scsbQuery.restore()
+      scsbRestClient.scsbQuery.restore()
     })
 
     it('returns barcode-status map for NYPL bnum', () => {
       return scsbClient.getItemsAvailabilityForBnum('b123')
         .then((resp) => {
           // Verify SCSB API hit once:
-          expect(ScsbRestClient.prototype.scsbQuery.callCount).to.equal(1)
+          expect(scsbRestClient.scsbQuery.callCount).to.equal(1)
           // Verify SCSB bibAvailabilityStatus query performed
-          expect(ScsbRestClient.prototype.scsbQuery.firstCall.args[0])
+          expect(scsbRestClient.scsbQuery.firstCall.args[0])
             .to.equal('/sharedCollection/bibAvailabilityStatus')
-          expect(ScsbRestClient.prototype.scsbQuery.firstCall.args[1])
+          expect(scsbRestClient.scsbQuery.firstCall.args[1])
             .to.deep.equal({
               institutionId: 'NYPL',
               // Verify payload has NYPL padded bnum:
@@ -49,11 +49,11 @@ describe('scsb-client', () => {
       return scsbClient.getItemsAvailabilityForBnum('hb123')
         .then((resp) => {
           // Verify SCSB API hit once:
-          expect(ScsbRestClient.prototype.scsbQuery.callCount).to.equal(1)
+          expect(scsbRestClient.scsbQuery.callCount).to.equal(1)
           // Verify SCSB bibAvailabilityStatus query performed
-          expect(ScsbRestClient.prototype.scsbQuery.firstCall.args[0])
+          expect(scsbRestClient.scsbQuery.firstCall.args[0])
             .to.equal('/sharedCollection/bibAvailabilityStatus')
-          expect(ScsbRestClient.prototype.scsbQuery.firstCall.args[1])
+          expect(scsbRestClient.scsbQuery.firstCall.args[1])
             .to.deep.equal({
               institutionId: 'HL',
               // Verify payload has original HL bnum:

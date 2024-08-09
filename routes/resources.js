@@ -1,25 +1,23 @@
-var gatherParams = require('../lib/util').gatherParams
+const gatherParams = require('../lib/util').gatherParams
 
-const config = require('config')
-
-const VER = config.get('major_version')
+const VER = '0.1'
 
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
-    app.baseUrl = `http${req.secure ? 's' : ''}://${req.headers.host}/api/v${VER}/discovery`
+    app.baseUrl = `http${req.secure ? 's' : ''}://${req.get('host')}/api/v${VER}/discovery`
     next()
   })
 
-  var standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject', 'isbn', 'issn', 'lccn', 'oclc', 'merge_checkin_card_items', 'include_item_aggregations']
+  const standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject', 'isbn', 'issn', 'lccn', 'oclc', 'merge_checkin_card_items', 'include_item_aggregations']
 
   const respond = (res, _resp, params) => {
-    var contentType = 'application/ld+json'
+    let contentType = 'application/ld+json'
     if (params.ext === 'ntriples') contentType = 'text/plain'
 
-    var resp = _resp
+    let resp = _resp
     if (contentType !== 'text/plain') resp = JSON.stringify(_resp, null, 2)
 
     res.type(contentType)
@@ -28,7 +26,7 @@ module.exports = function (app) {
   }
 
   const handleError = (res, error, params) => {
-    var statusCode = 500
+    let statusCode = 500
     switch (error.name) {
       case 'InvalidParameterError':
         statusCode = 422
@@ -46,7 +44,7 @@ module.exports = function (app) {
   }
 
   app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
-    var params = gatherParams(req, standardParams)
+    const params = gatherParams(req, standardParams)
 
     return app.resources.search(params, { baseUrl: app.baseUrl }, req)
       .then((resp) => respond(res, resp, params))
@@ -54,7 +52,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res) {
-    var params = gatherParams(req, standardParams)
+    const params = gatherParams(req, standardParams)
 
     return app.resources.aggregations(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
@@ -62,7 +60,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
-    var params = Object.assign({}, gatherParams(req, standardParams), req.params)
+    const params = Object.assign({}, gatherParams(req, standardParams), req.params)
 
     return app.resources.aggregation(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
@@ -76,9 +74,9 @@ module.exports = function (app) {
    *   /api/v${VER}/request/deliveryLocationsByBarcode?barcodes[]=12345&barcodes[]=45678&barcodes=[]=78910
    */
   app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res) {
-    var params = gatherParams(req, ['barcodes', 'patronId'])
+    const params = gatherParams(req, ['barcodes', 'patronId'])
 
-    var handler = app.resources.deliveryLocationsByBarcode
+    const handler = app.resources.deliveryLocationsByBarcode
 
     return handler(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
@@ -91,8 +89,8 @@ module.exports = function (app) {
    *
    *  e.g. discovery/resources/b1234-i9876
    */
-  app.get(`/api/v${VER}/discovery/resources/:uri\-:itemUri([a-z]?i[0-9]+)`, function (req, res) {
-    var params = { uri: req.params.uri, itemUri: req.params.itemUri }
+  app.get(`/api/v${VER}/discovery/resources/:uri-:itemUri([a-z]?i[0-9]+)`, function (req, res) {
+    const params = { uri: req.params.uri, itemUri: req.params.itemUri }
 
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
       .then((responseBody) => respond(res, responseBody, params))
@@ -105,8 +103,8 @@ module.exports = function (app) {
    *
    * e.g. discovery/resources/b1234
    */
-  app.get(`/api/v${VER}/discovery/resources/:uri\.:ext?`, function (req, res) {
-    var gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations'])
+  app.get(`/api/v${VER}/discovery/resources/:uri.:ext?`, function (req, res) {
+    const gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations'])
     const params = Object.assign({}, req.query, { uri: req.params.uri })
 
     if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size

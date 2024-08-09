@@ -1,22 +1,24 @@
-var DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
+const sinon = require('sinon')
 
-var sampleItems = {
+const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
+
+const sampleItems = {
   onsiteOnlySchomburg:
   {
     '@id': 'res:i11982421',
     '@type': [
       'bf:Item'
     ],
-    'holdingLocation': [
+    holdingLocation: [
       {
-        'id': 'loc:scff2',
-        'prefLabel': 'Schomburg Center - Research & Reference - Desk'
+        id: 'loc:scff2',
+        prefLabel: 'Schomburg Center - Research & Reference - Desk'
       }
     ],
-    'idBarcode': [
+    idBarcode: [
       '33433036951154'
     ],
-    'identifier': [
+    identifier: [
       {
         '@type': 'bf:ShelfMark',
         '@value': 'Sc Micro F-1843'
@@ -26,84 +28,84 @@ var sampleItems = {
         '@value': '33433036951154'
       }
     ],
-    'specRequestable': false,
-    'status': [
+    specRequestable: false,
+    status: [
       {
         '@id': 'status:a',
-        'prefLabel': 'Available'
+        prefLabel: 'Available'
       }
     ],
-    'uri': 'i11982421'
+    uri: 'i11982421'
   },
   onsiteNypl: {
-    'identifier': [
+    identifier: [
       'urn:bnum:b11995345',
       'urn:bnum:b11995322',
       'urn:barcode:33433036864449'
     ],
-    'uri': 'i12227153',
-    'holdingLocation': [
+    uri: 'i12227153',
+    holdingLocation: [
       {
-        'id': 'loc:scf',
-        'label': 'Schomburg Center - Research & Reference'
+        id: 'loc:scf',
+        label: 'Schomburg Center - Research & Reference'
       }
     ],
-    'accessMessage': [
-      { 'label': 'Use in library', 'id': 'accessMessage:1' }
+    accessMessage: [
+      { label: 'Use in library', id: 'accessMessage:1' }
     ],
-    'catalogItemType': [
-      { 'label': 'book, limited circ, MaRLI', 'id': 'catalogItemType:55' }
+    catalogItemType: [
+      { label: 'book, limited circ, MaRLI', id: 'catalogItemType:55' }
     ],
-    'status': [
-      { 'label': 'Available ', 'id': 'status:a' }
+    status: [
+      { label: 'Available ', id: 'status:a' }
     ]
   },
   offsiteNypl: {
-    'identifier': [
+    identifier: [
       'urn:bnum:pb176961',
       'urn:bnum:b11995345',
       'urn:barcode:33433047331719'
     ],
-    'uri': 'i14211097',
-    'holdingLocation': [
+    uri: 'i14211097',
+    holdingLocation: [
       {
-        'id': 'loc:rcpm2',
-        'label': 'OFFSITE - Request in Advance for use at Performing Arts'
+        id: 'loc:rcpm2',
+        label: 'OFFSITE - Request in Advance for use at Performing Arts'
       }
     ]
   },
   pul: {
-    'identifier': [
+    identifier: [
       'urn:bnum:pb176961',
       'urn:barcode:32101062243553'
     ],
-    'uri': 'pi189241'
+    uri: 'pi189241'
   },
   cul: {
-    'identifier': [
+    identifier: [
       'urn:bnum:cb1014551',
       'urn:barcode:CU56521537'
     ],
-    'uri': 'ci9876'
+    uri: 'ci9876'
   },
   offsiteNyplDeliverableToScholarRooms: {
-    'identifier': [
+    identifier: [
       'urn:bnum:b11995155',
       'urn:barcode:33433011759648'
     ],
-    'holdingLocation': [
+    holdingLocation: [
       {
-        'id': 'loc:rcpm2',
-        'label': 'OFFSITE - Request in Advance for use at Performing Arts'
+        id: 'loc:rcpm2',
+        label: 'OFFSITE - Request in Advance for use at Performing Arts'
       }
     ],
-    'uri': 'i10483065'
+    uri: 'i10483065'
   },
   fakeNYPLMapDivisionItem: {
-    'identifier': [
+    identifier: [
       'urn:barcode:made-up-barcode-that-recap-says-belongs-to-ND'
     ],
-    'uri': 'i7654'
+    uri: 'i7654'
   }
 }
 
@@ -127,10 +129,10 @@ function takeThisPartyPartiallyOffline () {
   DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
     const stubbedLookups = {
       'recap-barcode-for-pj': 'PJ',
-      '33433047331719': 'NP',
-      '32101062243553': 'PA',
-      'CU56521537': 'CU',
-      '33433011759648': 'NA',
+      33433047331719: 'NP',
+      32101062243553: 'PA',
+      CU56521537: 'CU',
+      33433011759648: 'NA',
       // Let's pretend this is a valid NYPL Map Division item barcode
       // and let's further pretend that HTC API tells us it's recap customer code is ND
       'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
@@ -149,20 +151,43 @@ function takeThisPartyPartiallyOffline () {
 describe('Delivery-locations-resolver', function () {
   before(takeThisPartyPartiallyOffline)
 
-  it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', function () {
-    return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], 'mala').then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+  describe('SC delivery locations', () => {
+    before(() => {
+      // Override NYPL-Core lookup for scff3 to make it requestable:
+      sinon.stub(DeliveryLocationsResolver, 'nyplCoreLocation').callsFake(() => {
+        return {
+          sierraDeliveryLocations: [
+            {
+              code: 'sc',
+              label: 'Schomburg Center - Research and Reference Division',
+              locationsApiSlug: 'schomburg',
+              deliveryLocationTypes: ['Research']
+            }
+          ],
+          requestable: true
+        }
+      })
+    })
 
-      // Confirm the known scholar rooms are not included:
-      scholarRooms.forEach((scholarRoom) => {
-        expect(items[0].deliveryLocation).to.not.include(scholarRoom)
+    after(() => {
+      DeliveryLocationsResolver.nyplCoreLocation.restore()
+    })
+
+    it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', function () {
+      return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], 'mala').then((items) => {
+        expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
+
+        // Confirm the known scholar rooms are not included:
+        scholarRooms.forEach((scholarRoom) => {
+          expect(items[0].deliveryLocation).to.not.include(scholarRoom)
+        })
       })
     })
   })
 
   it('will return empty delivery locations for an unrequestable onsite location code', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
-      expect(items[0].deliveryLocation).to.be.empty
+      expect(items[0].deliveryLocation).to.have.lengthOf(0)
     })
   })
 
@@ -174,7 +199,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will ammend the deliveryLocation property for an offsite NYPL item', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNypl]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
   })
 
@@ -186,7 +211,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will ammend the deliveryLocation property for a PUL item', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.pul]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
   })
 
@@ -210,7 +235,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will hide "Scholar" deliveryLocation for non-scholars', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm the known scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
@@ -238,13 +263,13 @@ describe('Delivery-locations-resolver', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([offsiteItemInNonRequestableLocation])
       .then((items) => {
         expect(items[0].deliveryLocation).to.be.a('array')
-        expect(items[0].deliveryLocation).to.be.empty
+        expect(items[0].deliveryLocation).to.have.lengthOf(0)
       })
   })
 
   it('will reveal specific scholar room deliveryLocation when specified', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms], 'mal17').then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm the non specified scholar rooms are not included:
       scholarRooms.forEach((scholarRoom) => {
@@ -257,7 +282,7 @@ describe('Delivery-locations-resolver', function () {
 
   it('will hide "Scholar" deliveryLocations for scholars with no specific scholar room', function () {
     return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms]).then((items) => {
-      expect(items[0].deliveryLocation).to.not.be.empty
+      expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
       // Confirm that all scholar rooms are included:
       scholarRooms.forEach((scholarRoom) => {
@@ -271,26 +296,26 @@ describe('Delivery-locations-resolver', function () {
 
     beforeEach(function () {
       item = {
-        'identifier': [
+        identifier: [
           'urn:bnum:b11995345',
           'urn:bnum:b11995322',
           'urn:barcode:33433036864449'
         ],
-        'uri': 'i12227153',
-        'holdingLocation': [
+        uri: 'i12227153',
+        holdingLocation: [
           {
-            'id': 'loc:scff2',
-            'label': 'Schomburg Center - Research & Reference'
+            id: 'loc:scff2',
+            label: 'Schomburg Center - Research & Reference'
           }
         ],
-        'accessMessage': [
-          { 'label': 'Use in library', 'id': 'accessMessage:1' }
+        accessMessage: [
+          { label: 'Use in library', id: 'accessMessage:1' }
         ],
-        'catalogItemType': [
-          { 'label': 'book, limited circ, MaRLI', 'id': 'catalogItemType:55' }
+        catalogItemType: [
+          { label: 'book, limited circ, MaRLI', id: 'catalogItemType:55' }
         ],
-        'status': [
-          { 'label': 'Available ', 'id': 'status:a' }
+        status: [
+          { label: 'Available ', id: 'status:a' }
         ]
       }
     })
@@ -353,19 +378,22 @@ describe('Delivery-locations-resolver', function () {
 
   describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
     before(takeThisPartyPartiallyOffline)
+
     const requestableM2Location = 'map92'
     const requestableM1Location = 'map82'
     const nonrequestableM2Location = 'ccj92'
     const unrequestableM2CustomerCode = 'EM'
+
     it('will return delivery locations for an requestable M1 item', function () {
       const items = [{
         uri: 'b123',
         holdingLocation: [{ id: requestableM1Location }]
       }]
       return DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability(items).then((items) => {
-        expect(items[0].deliveryLocation).to.not.be.empty
+        expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
       })
     })
+
     it('returns delivery locations for requestable M2 items', () => {
       const items = [{
         uri: 'b123',
@@ -396,7 +424,7 @@ describe('Delivery-locations-resolver', function () {
       return DeliveryLocationsResolver
         .attachDeliveryLocationsAndEddRequestability(items)
         .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty
+          expect(items[0].deliveryLocation).to.have.lengthOf(0)
         })
     })
 
@@ -409,7 +437,7 @@ describe('Delivery-locations-resolver', function () {
       return DeliveryLocationsResolver
         .attachDeliveryLocationsAndEddRequestability(items)
         .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty
+          expect(items[0].deliveryLocation).to.have.lengthOf(0)
         })
     })
 
@@ -480,7 +508,7 @@ describe('Delivery-locations-resolver', function () {
       }
       expect(DeliveryLocationsResolver.attachDeliveryLocationsAndEddRequestability([item])
         .then((items) => {
-          expect(items[0].deliveryLocation).to.be.empty
+          expect(items[0].deliveryLocation).to.deep.equal([])
         }))
     })
   })

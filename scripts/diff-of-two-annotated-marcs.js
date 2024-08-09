@@ -14,14 +14,14 @@ const localFields = fields(local)
 const diff = {}
 
 remoteFields.forEach((field) => {
-  diff[field.label] = {remote: field.values, local: []}
+  diff[field.label] = { remote: field.values, local: [] }
 })
 
 localFields.forEach((field) => {
   if (diff[field.label]) {
-    diff[field.label]['local'] = field.values
+    diff[field.label].local = field.values
   } else {
-    diff[field.label] = {remote: [], local: field.values}
+    diff[field.label] = { remote: [], local: field.values }
   }
 })
 
@@ -31,7 +31,7 @@ Object.keys(diff).forEach((key) => {
 
 const result = {}
 Object.keys(diff).forEach((key) => {
-  if (diff[key]['local'].length !== 0 || diff[key]['remote'].length !== 0) {
+  if (diff[key].local.length !== 0 || diff[key].remote.length !== 0) {
     result[key] = diff[key]
   }
 })

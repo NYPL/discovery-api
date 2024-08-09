@@ -16,33 +16,33 @@ describe('Resource Serializer', () => {
         {
           '@type': 'nypl:Aggregation',
           '@id': 'res:location',
-          'id': 'location',
-          'field': 'location',
-          'values': [
+          id: 'location',
+          field: 'location',
+          values: [
             {
-              'value': 'loc:maf92',
-              'count': 1,
-              'label': 'Schwarzman Building M2 - Dorot Jewish Division Room 111'
+              value: 'loc:maf92',
+              count: 1,
+              label: 'Schwarzman Building M2 - Dorot Jewish Division Room 111'
             }
           ]
         },
         {
           '@type': 'nypl:Aggregation',
           '@id': 'res:format',
-          'id': 'format',
-          'field': 'format',
-          'values': []
+          id: 'format',
+          field: 'format',
+          values: []
         },
         {
           '@type': 'nypl:Aggregation',
           '@id': 'res:status',
-          'id': 'status',
-          'field': 'status',
-          'values': [
+          id: 'status',
+          field: 'status',
+          values: [
             {
-              'value': 'status:a',
-              'count': 1,
-              'label': 'Available'
+              value: 'status:a',
+              count: 1,
+              label: 'Available'
             }
           ]
         }

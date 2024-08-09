@@ -44,7 +44,7 @@ describe('Annotated Marc Rules', function () {
   describe('building annotated marc rules', function () {
     it('should apply bib index rule to marc rule', function () {
       // Test rule *without bib index rule applied:
-      let rule = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules('b|s|8..|-6|Series||b|').pop()
+      const rule = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules('b|s|8..|-6|Series||b|').pop()
       expect(rule).to.be.a('object')
       expect(rule.label).to.equal('Series')
       expect(rule.marcIndicatorRegExp).to.be.a('RegExp')
@@ -54,11 +54,13 @@ describe('Annotated Marc Rules', function () {
 
   describe('bib parsing', function () {
     it('identifies varfields', function () {
-      const sampleBib = { varFields: [
+      const sampleBib = {
+        varFields: [
           { fieldTag: 'a', marcTag: 362, ind1: '', ind2: 1 },
           { fieldTag: 'a', marcTag: 361, ind1: 2, ind2: 4 },
           { fieldTag: 'a', marcTag: 360, ind1: '', ind2: '' }
-      ] }
+        ]
+      }
       // Match 362, any indicators:
       const rule1 = AnnotatedMarcSerializer.parseWebpubToAnnotatedMarcRules('b|a|362|-06|Publication Date||b|').pop()
       const matching = AnnotatedMarcSerializer.matchingMarcFields(sampleBib, rule1)
@@ -492,10 +494,12 @@ describe('Annotated Marc Rules', function () {
     })
 
     it('should place field tags in correct order when given a bib', function () {
-      const sampleBib = { varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
-        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
-        { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] }
-      ] }
+      const sampleBib = {
+        varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
+          { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
+          { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] }
+        ]
+      }
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.an('object')
       expect(serialized.bib.fields).to.be.an('array')
@@ -506,12 +510,14 @@ describe('Annotated Marc Rules', function () {
     })
 
     it('should place MARC tags in correct order within a field tag when given a bib', function () {
-      const sampleBib = { varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
-        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
-        { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] },
-        { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'a' }] },
-        { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'pretty' }] }
-      ] }
+      const sampleBib = {
+        varFields: [{ fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'anyone' }] },
+          { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'lived' }] },
+          { fieldTag: 'p', marcTag: '260', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'in' }] },
+          { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'a' }] },
+          { fieldTag: 't', marcTag: '130', indx1: '', ind2: '', subfields: [{ tag: 'a', content: 'pretty' }] }
+        ]
+      }
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.an('object')
       expect(serialized.bib.fields).to.be.an('array')
@@ -521,10 +527,12 @@ describe('Annotated Marc Rules', function () {
     })
 
     it('should place parallel fields next to the fields they parallel', function () {
-      const sampleBib = { varFields: [{ fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
-        { fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'town' }] },
-        { fieldTag: 'y', marcTag: '880', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'with' }, { tag: '6', content: '880-01' }] }
-      ] }
+      const sampleBib = {
+        varFields: [{ fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }] },
+          { fieldTag: 't', marcTag: '130', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'town' }] },
+          { fieldTag: 'y', marcTag: '880', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'with' }, { tag: '6', content: '880-01' }] }
+        ]
+      }
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.an('object')
       expect(serialized.bib.fields).to.be.an('array')
@@ -540,13 +548,17 @@ describe('Annotated Marc Rules', function () {
         varFields: [
           {
             fieldTag: 'u',
-            marcTag: '246', ind1: '1', ind2: '5',
+            marcTag: '246',
+            ind1: '1',
+            ind2: '5',
             subfields: [{ tag: 'a', content: 'how' }, { tag: '6', content: '880-01' }]
           },
           // This one is a 246, but won't match the current pattern of ^24615:
           {
             fieldTag: 'u',
-            marcTag: '246', ind1: '3', ind2: ' ',
+            marcTag: '246',
+            ind1: '3',
+            ind2: ' ',
             subfields: [{ tag: 'a', content: 'town' }]
           }
         ]
@@ -565,9 +577,11 @@ describe('Annotated Marc Rules', function () {
 
   describe('Relator Mappings', function () {
     it('should replace designated codes in designated fields', function () {
-      const sampleBib = { varFields: [{ fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'Cramer, Richard' }, { tag: '4', content: 'aut -- 700 1b' }] },
-        { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'up' }, { tag: '4', content: 'cos so' }] }
-      ] }
+      const sampleBib = {
+        varFields: [{ fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [{ tag: 'a', content: 'Cramer, Richard' }, { tag: '4', content: 'aut -- 700 1b' }] },
+          { fieldTag: 'a', marcTag: '100', ind1: '', ind2: '', subfields: [{ tag: 'a', content: 'up' }, { tag: '4', content: 'cos so' }] }
+        ]
+      }
 
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.an('object')
@@ -583,7 +597,11 @@ describe('Annotated Marc Rules', function () {
       const sampleBib = {
         varFields: [
           {
-            fieldTag: 'b', marcTag: '700', ind1: '1', ind2: '', subfields: [
+            fieldTag: 'b',
+            marcTag: '700',
+            ind1: '1',
+            ind2: '',
+            subfields: [
               { tag: 'a', content: 'Cramer, Richard' },
               { tag: '4', content: 'aut' },
               { tag: '4', content: 'prt' }
@@ -603,11 +621,13 @@ describe('Annotated Marc Rules', function () {
 
   describe('"Connect to:" labels', function () {
     it('should extract label from $z, $y, or $3', function () {
-      const sampleBib = { varFields: [
-        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#0' }, { tag: 'z', content: 'Label 1' } ] },
-        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#1' }, { tag: 'y', content: 'Label 2' }, { tag: '3', content: 'This additional lable is ignored because we found $y first' } ] },
-        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'a', content: 'Ignore tag' }, { tag: 'u', content: 'http://example.com#2' }, { tag: '3', content: 'Label 3' } ] }
-      ] }
+      const sampleBib = {
+        varFields: [
+          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'u', content: 'http://example.com#0' }, { tag: 'z', content: 'Label 1' }] },
+          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'u', content: 'http://example.com#1' }, { tag: 'y', content: 'Label 2' }, { tag: '3', content: 'This additional lable is ignored because we found $y first' }] },
+          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'a', content: 'Ignore tag' }, { tag: 'u', content: 'http://example.com#2' }, { tag: '3', content: 'Label 3' }] }
+        ]
+      }
 
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.a('object')
@@ -622,9 +642,11 @@ describe('Annotated Marc Rules', function () {
     })
 
     it('should use default label when none specified', function () {
-      const sampleBib = { varFields: [
-        { fieldTag: 'y', marcTag: '856', subfields: [ { tag: 'u', content: 'http://example.com#0' } ] }
-      ] }
+      const sampleBib = {
+        varFields: [
+          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'u', content: 'http://example.com#0' }] }
+        ]
+      }
 
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.a('object')
@@ -639,11 +661,13 @@ describe('Annotated Marc Rules', function () {
 
   describe('Subject delimiters', function () {
     it('should use -- delimiters', function () {
-      const sampleBib = { varFields: [
-        { fieldTag: 'd', marcTag: '600', subfields: [ { tag: 'a', content: 'Artist, Starving,' }, { tag: 'd', content: '1900-1999' }, { tag: 'v', content: 'Autobiography.' } ] },
-        { fieldTag: 'd', marcTag: '611', subfields: [ { tag: 'a', content: 'Stonecutters\' Annual Picnic' }, { tag: 'n', content: '(12th :' }, { tag: 'd', content: '1995 :' }, { tag: 'c', content: 'Springfield)' }, { tag: 'x', content: 'History' }, { tag: 'v', content: 'Drama.' } ] },
-        { fieldTag: 'd', marcTag: '651', subfields: [ { tag: 'a', content: 'New York (N.Y.)' }, { tag: 'y', content: '21st century' }, { tag: 'x', content: 'Diaries.' } ] }
-      ] }
+      const sampleBib = {
+        varFields: [
+          { fieldTag: 'd', marcTag: '600', subfields: [{ tag: 'a', content: 'Artist, Starving,' }, { tag: 'd', content: '1900-1999' }, { tag: 'v', content: 'Autobiography.' }] },
+          { fieldTag: 'd', marcTag: '611', subfields: [{ tag: 'a', content: 'Stonecutters\' Annual Picnic' }, { tag: 'n', content: '(12th :' }, { tag: 'd', content: '1995 :' }, { tag: 'c', content: 'Springfield)' }, { tag: 'x', content: 'History' }, { tag: 'v', content: 'Drama.' }] },
+          { fieldTag: 'd', marcTag: '651', subfields: [{ tag: 'a', content: 'New York (N.Y.)' }, { tag: 'y', content: '21st century' }, { tag: 'x', content: 'Diaries.' }] }
+        ]
+      }
 
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.a('object')
@@ -658,7 +682,7 @@ describe('Annotated Marc Rules', function () {
   })
 
   describe('Annotated marc endpoint', function () {
-    let app = {}
+    const app = {}
 
     before(function () {
       // Get a minimal instance of app (just controller code):
@@ -703,9 +727,11 @@ describe('Annotated Marc Rules', function () {
 
   describe('Creator/Contributor Characteristics', function () {
     it('should extract Creator/Contributor Characteristics from 386', function () {
-      const sampleBib = { varFields: [
-        { fieldTag: 'r', marcTag: '386', subfields: [ { tag: 'a', content: 'Creator/Contributor Characteristics content' }, { tag: '6', content: 'ignore' } ] }
-      ] }
+      const sampleBib = {
+        varFields: [
+          { fieldTag: 'r', marcTag: '386', subfields: [{ tag: 'a', content: 'Creator/Contributor Characteristics content' }, { tag: '6', content: 'ignore' }] }
+        ]
+      }
 
       const serialized = AnnotatedMarcSerializer.serialize(sampleBib)
       expect(serialized.bib).to.be.a('object')

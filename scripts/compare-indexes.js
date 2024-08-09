@@ -118,7 +118,7 @@ mapDelayed(apps, 500, (app, ind) => {
   .then((apps) => {
     console.log('___________________________________________')
     console.log('Result:')
-    ; apps.forEach((app, ind) => {
+    apps.forEach((app, ind) => {
       console.log(` App ${ind + 1}. ${app.index} (port ${app.port}): ${app.response.totalResults} results`)
     })
     const diff = {

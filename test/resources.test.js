@@ -7,7 +7,7 @@ const errors = require('../lib/errors')
 const fixtures = require('./fixtures')
 
 describe('Resources query', function () {
-  let resourcesPrivMethods = {}
+  const resourcesPrivMethods = {}
   let app
 
   before(function () {
@@ -42,7 +42,7 @@ describe('Resources query', function () {
         resourcesPrivMethods
           .parseSearchParams({ merge_checkin_card_items: 'false' })
           .merge_checkin_card_items
-        ).to.equal(false)
+      ).to.equal(false)
     })
   })
 
@@ -93,7 +93,7 @@ describe('Resources query', function () {
       expect(body.bool.must).to.be.a('array')
       expect(body.bool.must[0]).to.be.a('object')
       expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.query).to.equal('subjectLiteral:\"hot potatoes\"')
+      expect(body.bool.must[0].query_string.query).to.equal('subjectLiteral:"hot potatoes"')
     })
 
     it('escapes colon if field not recognized', function () {
@@ -104,7 +104,7 @@ describe('Resources query', function () {
       expect(body.bool.must).to.be.a('array')
       expect(body.bool.must[0]).to.be.a('object')
       expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.query).to.equal('fladeedle\\:\"hot potatoes\"')
+      expect(body.bool.must[0].query_string.query).to.equal('fladeedle\\:"hot potatoes"')
     })
 
     it('uses "query string query" if plain keyword query used', function () {
@@ -356,7 +356,7 @@ describe('Resources query', function () {
       fixtures.disableScsbFixtures()
 
       sinon.stub(scsbClient, 'getItemsAvailabilityForBnum')
-        .callsFake(() => Promise.reject())
+        .callsFake(() => Promise.reject(new Error()))
       sinon.stub(scsbClient, 'getItemsAvailabilityForBarcodes')
         .callsFake(() => Promise.resolve([]))
     })
@@ -405,23 +405,23 @@ describe('Resources query', function () {
           expect(nestedFilters)
             .to.deep.equal([
               {
-                'range': {
+                range: {
                   'items.volumeRange': {
-                    'gte': 1,
-                    'lte': 2
+                    gte: 1,
+                    lte: 2
                   }
                 }
               },
               {
-                'range': {
+                range: {
                   'items.dateRange': {
-                    'gte': 3,
-                    'lte': 4
+                    gte: 3,
+                    lte: 4
                   }
                 }
               },
               {
-                'terms': {
+                terms: {
                   'items.formatLiteral': [
                     'text',
                     'microfilm'
@@ -429,7 +429,7 @@ describe('Resources query', function () {
                 }
               },
               {
-                'terms': {
+                terms: {
                   'items.holdingLocation.id': [
                     'SASB',
                     'LPA'
@@ -437,7 +437,7 @@ describe('Resources query', function () {
                 }
               },
               {
-                'terms': {
+                terms: {
                   'items.status.id': [
                     'here',
                     'there'
@@ -476,7 +476,7 @@ describe('Resources query', function () {
 
     it('should return filters for volume in case there is a volume', () => {
       expect(resourcesPrivMethods.itemsFilterContext({ query: { volume: [1, 2] } }))
-       .to.deep.equal({ filter: [{ range: { 'items.volumeRange': { gte: 1, lte: 2 } } }] })
+        .to.deep.equal({ filter: [{ range: { 'items.volumeRange': { gte: 1, lte: 2 } } }] })
     })
 
     it('should return filters for date in case there is a date', () => {
@@ -674,7 +674,7 @@ describe('Resources query', function () {
                               { exists: { field: 'items.electronicLocator' } }
                             ],
                             filter: [
-                              { range: { 'items.volumeRange': { 'gte': 1, 'lte': 2 } } },
+                              { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
                             ]
                           }
