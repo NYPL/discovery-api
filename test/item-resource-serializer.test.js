@@ -22,12 +22,12 @@ describe('ItemResourceSerializer', () => {
       const doc = ItemResourceSerializer.serialize(item)
       expect(doc).to.be.a('object')
       expect(doc['@id']).to.eq('res:i22566485')
-      expect(doc['identifier']).to.be.a('array')
-      expect(doc['identifier'][0]).to.eq('urn:barcode:33433058338470')
-      expect(doc['identifier'][1]).to.eq('urn:SierraNypl:22566485')
-      expect(doc['idNyplSourceId']).to.be.a('object')
-      expect(doc['idNyplSourceId']['@type']).to.eq('SierraNypl')
-      expect(doc['idNyplSourceId']['@value']).to.eq('22566485')
+      expect(doc.identifier).to.be.a('array')
+      expect(doc.identifier[0]).to.eq('urn:barcode:33433058338470')
+      expect(doc.identifier[1]).to.eq('urn:SierraNypl:22566485')
+      expect(doc.idNyplSourceId).to.be.a('object')
+      expect(doc.idNyplSourceId['@type']).to.eq('SierraNypl')
+      expect(doc.idNyplSourceId['@value']).to.eq('22566485')
     })
 
     it('adds entity form of CUL source identifier', () => {
@@ -38,11 +38,11 @@ describe('ItemResourceSerializer', () => {
 
       expect(doc).to.be.a('object')
       expect(doc['@id']).to.eq('res:ci98765')
-      expect(doc['identifier']).to.be.a('array')
-      expect(doc['identifier'][0]).to.eq('urn:RecapCul:98765')
-      expect(doc['idNyplSourceId']).to.be.a('object')
-      expect(doc['idNyplSourceId']['@type']).to.eq('RecapCul')
-      expect(doc['idNyplSourceId']['@value']).to.eq('98765')
+      expect(doc.identifier).to.be.a('array')
+      expect(doc.identifier[0]).to.eq('urn:RecapCul:98765')
+      expect(doc.idNyplSourceId).to.be.a('object')
+      expect(doc.idNyplSourceId['@type']).to.eq('RecapCul')
+      expect(doc.idNyplSourceId['@value']).to.eq('98765')
     })
 
     it('adds entity form of HL source identifier', () => {
@@ -53,11 +53,11 @@ describe('ItemResourceSerializer', () => {
 
       expect(doc).to.be.a('object')
       expect(doc['@id']).to.eq('res:hi9876543210')
-      expect(doc['identifier']).to.be.a('array')
-      expect(doc['identifier'][0]).to.eq('urn:RecapHl:9876543210')
-      expect(doc['idNyplSourceId']).to.be.a('object')
-      expect(doc['idNyplSourceId']['@type']).to.eq('RecapHl')
-      expect(doc['idNyplSourceId']['@value']).to.eq('9876543210')
+      expect(doc.identifier).to.be.a('array')
+      expect(doc.identifier[0]).to.eq('urn:RecapHl:9876543210')
+      expect(doc.idNyplSourceId).to.be.a('object')
+      expect(doc.idNyplSourceId['@type']).to.eq('RecapHl')
+      expect(doc.idNyplSourceId['@value']).to.eq('9876543210')
     })
   })
 

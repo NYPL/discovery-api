@@ -14,7 +14,7 @@ describe('Parallel Fields Extractor', () => {
     it('adds each of the items in that array to the bibs as parallel<FieldName>', () => {
       const parallelsExtracted = parallelFieldsExtractor(parallelFieldsBib).hits.hits[0]._source
       expect(Object.keys(parallelsExtracted).length).to.equal(4)
-      expect(parallelsExtracted).to.deep.equal({ 'parallelPublicationStatement': ['Москва : Вагриус, 2006.'], 'parallelTableOfContents': ['Черный маг -- Копыто инженера -- Вечер страшной субботы -- Великий канцлер -- Фантастический роман -- Золотое Копье -- Князь тьмы -- Мастер и Маргарита (полная рукописная редакция) -- Мастер и Маргарита (окончательная редакция).'], 'parallelNote': ['\"Литературно-художественное издание\"--Colophon.'], 'parallelPlaceOfPublication': ['Москва :'] })
+      expect(parallelsExtracted).to.deep.equal({ parallelPublicationStatement: ['Москва : Вагриус, 2006.'], parallelTableOfContents: ['Черный маг -- Копыто инженера -- Вечер страшной субботы -- Великий канцлер -- Фантастический роман -- Золотое Копье -- Князь тьмы -- Мастер и Маргарита (полная рукописная редакция) -- Мастер и Маргарита (окончательная редакция).'], parallelNote: ['"Литературно-художественное издание"--Colophon.'], parallelPlaceOfPublication: ['Москва :'] })
     })
 
     it('adds parallel field values to the property array on the index indicated', () => {
