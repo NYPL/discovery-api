@@ -331,6 +331,19 @@ describe('Resources query', function () {
     })
   })
 
+  describe('findByUri all items', () => {
+    after(() => app.esClient.search.restore())
+    it('overrides items_size and items_from', async () => {
+      const esSearchStub =
+        sinon.stub(app.esClient, 'search')
+          .callsFake(async (body) => ({ body: { hits: { hits: [{ _source: { items: [{ uri: 'spaghetti' }] } }] } } }))
+      await app.resources.findByUri({ uri: 'b1234', all_items: 'true' })
+      const searchBody = esSearchStub.getCall(0).args[0]
+      expect(searchBody.item_size).to.equal(undefined)
+      expect(searchBody)
+    })
+  })
+
   describe('findByUri es connection error', () => {
     before(() => {
       sinon.stub(app.esClient, 'search').callsFake((req) => {
@@ -593,7 +606,7 @@ describe('Resources query', function () {
                           }
                         }
                       },
-                      { match_all: { } }
+                      { match_all: {} }
                     ]
                   }
                 }
@@ -644,7 +657,7 @@ describe('Resources query', function () {
                           }
                         }
                       },
-                      { match_all: { } }
+                      { match_all: {} }
                     ]
                   }
                 }
@@ -700,7 +713,7 @@ describe('Resources query', function () {
                         }
                       }
                     },
-                    { match_all: { } },
+                    { match_all: {} },
                     {
                       nested: {
                         inner_hits: { name: 'allItems' },
