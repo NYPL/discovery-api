@@ -332,7 +332,7 @@ describe('Resources query', function () {
   })
 
   describe('findByUri all items', () => {
-    after(() => app.esClient.search.restore())
+    after(() => { app.esClient.search.restore() })
     it('overrides items_size and items_from', async () => {
       const esSearchStub =
         sinon.stub(app.esClient, 'search')
@@ -340,7 +340,39 @@ describe('Resources query', function () {
       await app.resources.findByUri({ uri: 'b1234', all_items: 'true' })
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(searchBody.item_size).to.equal(undefined)
-      expect(searchBody)
+      expect(searchBody.items_from).to.equal(undefined)
+      console.dir(searchBody, { depth: null })
+      expect(searchBody).to.deep.equal({
+        _source: {
+          excludes: ['uris', '*_packed', '*_sort', 'items.*_packed', 'contentsTitle']
+        },
+        size: 1,
+        query: {
+          bool: {
+            must: [{ term: { uri: 'b1234' } }]
+          }
+        },
+        aggregations: {
+          item_location: {
+            nested: { path: 'items' },
+            aggs: {
+              _nested: { terms: { size: 100, field: 'items.holdingLocation_packed' } }
+            }
+          },
+          item_status: {
+            nested: { path: 'items' },
+            aggs: {
+              _nested: { terms: { size: 100, field: 'items.status_packed' } }
+            }
+          },
+          item_format: {
+            nested: { path: 'items' },
+            aggs: {
+              _nested: { terms: { size: 100, field: 'items.formatLiteral' } }
+            }
+          }
+        }
+      })
     })
   })
 
