@@ -22,6 +22,36 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
+  describe('GET all_bibs', () => {
+    it('returns bib with electronic resources filtered from items', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b15109087?all_items=true'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        const electronicLocatorItemsFiltered = doc.items.filter((item) => item.electronicLocator).length === 0
+        expect(electronicLocatorItemsFiltered).to.equal(true)
+        expect(doc.electronicResources.length).to.equal(368)
+        done()
+      })
+    })
+    it('returns bib with items sorted by date', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?all_items=true'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        const firstTenItems = doc.items.slice(0, 10)
+        const isCheckinCardItem = (item) => item.uri.includes('i-h')
+        // the unspoken setup of the following expectation is that checkin cards
+        // are not returned from ES at the beginning of the items array, but
+        // should end up sorted there by the response massager.
+        expect(firstTenItems.every(isCheckinCardItem))
+        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 35 (Oct. 28, 2024)')
+        const lastIndex = doc.items.length - 1
+        expect(doc.items[lastIndex].enumerationChronology[0]).to.equal('Aug. 9-Oct. 25 (1930)')
+        done()
+      })
+    })
+  })
   describe('GET electronicResources', () => {
     it('returns e resources array and count without aeon links', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14332438'
@@ -50,7 +80,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(704)
+        expect(doc.numItemsMatched).to.equal(707)
         done()
       })
     })
@@ -59,7 +89,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.equal(572)
+        expect(doc.numItemsMatched).to.equal(575)
         done()
       })
     })
@@ -500,7 +530,7 @@ describe('Test Resources responses', function () {
     })
 
     describe('Filter by holdingLocation', function () {
-      ; ['loc:rc2ma', 'loc:mal92'].forEach((holdingLocationId) => {
+      ;['loc:rc2ma', 'loc:mal92'].forEach((holdingLocationId) => {
         it('returns only bibs with items in holdingLocation ' + holdingLocationId, function (done) {
           // Fetch all results:
           request.get(`${searchAllUrl}&filters[holdingLocation]=${holdingLocationId}`, function (err, response, body) {
@@ -705,13 +735,13 @@ describe('Test Resources responses', function () {
         done()
       })
     })
-
-    ; [
+    let standardNumbers = [
       'b22144813',
       'Danacode', // Should match `identifierV2[@type=bf:Lccn].value`
       '"ISBN -- 020"',
       '44455533322211'
-    ].forEach((num) => {
+    ]
+    standardNumbers.forEach((num) => {
       it(`should match b22144813 by "Standard Numbers": "${num}"`, function (done) {
         request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err
@@ -730,8 +760,7 @@ describe('Test Resources responses', function () {
         })
       })
     })
-
-    ; [
+    standardNumbers = [
       'b22144813',
       '"Q-TAG (852 8b q tag.  Staff call in bib.)"', // Should match `identifierV2[@type=bf:ShelfMark].value`
       '"ISSN -- 022"', // Should match `identifierV2[@type=bf:Issn].value`
@@ -743,7 +772,8 @@ describe('Test Resources responses', function () {
       '"Standard number (old RLIN, etc.) -- 035"',
       '"Publisher no. -- 028 02  "',
       '"Report number. -- 027"'
-    ].forEach((num) => {
+    ]
+    standardNumbers.forEach((num) => {
       it(`should match b12082323 by "Standard Numbers": "${num}"`, function (done) {
         request.get(searchAllUrl + num, function (err, response, body) {
           if (err) throw err

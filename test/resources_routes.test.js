@@ -18,7 +18,25 @@ describe('resources routes', function () {
     app.resources.findByUri.restore()
   })
 
-  describe('bib id with item filters', function () {
+  describe('bib id with item filters', () => {
+    it('can accept "all_items=true"', async () => {
+      const params = {
+        uri: 'b1234', all_items: 'true'
+      }
+      const query = 'item_date=1-2&item_volume=3-4&item_format=text,microfilm&item_location=SASB,LPA&item_status=here&all_items=true'
+      const expectedParams = {
+        uri: params.uri,
+        item_date: '1-2',
+        item_volume: '3-4',
+        item_format: 'text,microfilm',
+        item_location: 'SASB,LPA',
+        item_status: 'here',
+        all_items: 'true'
+      }
+      await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/${params.uri}?${query}`)
+      sinon.assert.calledWith(findByUriStub, expectedParams)
+    })
+
     it('passes filters to handler', function () {
       const params = {
         uri: 'b1234'
