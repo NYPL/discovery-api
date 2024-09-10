@@ -11,7 +11,28 @@ module.exports = function (app) {
     next()
   })
 
-  const standardParams = ['page', 'per_page', 'q', 'filters', 'expandContext', 'ext', 'field', 'sort', 'sort_direction', 'search_scope', 'items_size', 'items_from', 'contributor', 'title', 'subject', 'isbn', 'issn', 'lccn', 'oclc', 'merge_checkin_card_items', 'include_item_aggregations']
+  const standardParams = ['page',
+    'per_page',
+    'q',
+    'filters',
+    'expandContext',
+    'ext',
+    'field',
+    'sort',
+    'sort_direction',
+    'search_scope',
+    'all_items',
+    'items_size',
+    'items_from',
+    'contributor',
+    'title',
+    'subject',
+    'isbn',
+    'issn',
+    'lccn',
+    'oclc',
+    'merge_checkin_card_items',
+    'include_item_aggregations']
 
   const respond = (res, _resp, params) => {
     let contentType = 'application/ld+json'
@@ -104,7 +125,7 @@ module.exports = function (app) {
    * e.g. discovery/resources/b1234
    */
   app.get(`/api/v${VER}/discovery/resources/:uri.:ext?`, function (req, res) {
-    const gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations'])
+    const gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations', 'all_items'])
     const params = Object.assign({}, req.query, { uri: req.params.uri })
 
     if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
