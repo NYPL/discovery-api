@@ -23,6 +23,17 @@ describe('Test Resources responses', function () {
   })
 
   describe('GET all_bibs', () => {
+    it('returns bib with electronic resources filtered from items', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b15109087?all_items=true'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        const electronicLocatorItemsFiltered = doc.items.filter((item) => item.electronicLocator).length === 0
+        expect(electronicLocatorItemsFiltered).to.equal(true)
+        expect(doc.electronicResources.length).to.equal(368)
+        done()
+      })
+    })
     it('returns bib with items sorted by date', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?all_items=true'
       request.get(url, (err, res, body) => {
