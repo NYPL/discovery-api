@@ -337,14 +337,14 @@ describe('Resources query', function () {
       const esSearchStub =
         sinon.stub(app.esClient, 'search')
           .callsFake(async (body) => ({ body: { hits: { hits: [{ _source: { items: [{ uri: 'spaghetti' }] } }] } } }))
-      await app.resources.findByUri({ uri: 'b1234', all_items: 'true' })
+      await app.resources.findByUri({ uri: 'b1234', all_items: 'true' }, {}, { query: { all_items: 'true' } })
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(searchBody.item_size).to.equal(undefined)
       expect(searchBody.items_from).to.equal(undefined)
-      console.dir(searchBody, { depth: null })
       expect(searchBody).to.deep.equal({
         _source: {
-          excludes: ['uris', '*_packed', '*_sort', 'items.*_packed', 'contentsTitle']
+          // note absence of "*_sort"
+          excludes: ['uris', '*_packed', 'items.*_packed', 'contentsTitle']
         },
         size: 1,
         query: {
