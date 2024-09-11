@@ -1,8 +1,24 @@
 const { expect } = require('chai')
+const mangledEnumerationChronologyItems = require('./fixtures/mangled_enumerationChronology_items.json')
 
 const util = require('../lib/util')
 
 describe('Util', function () {
+  describe.only('sortOnPropWithUndefinedLast', () => {
+    it('sorts undefined last', () => {
+      const sortedItemEnums = mangledEnumerationChronologyItems
+        .sort(util.sortOnPropWithUndefinedLast('enumerationChronology_sort'))
+        .map((item) => item.enumerationChronology)
+      expect(sortedItemEnums).to.deep.equal([
+        ['Sept. 1-24, 1957'],
+        ['Sept. 1-15, 1979'],
+        ['Feb 8 2002 - Feb 14 2002'],
+        ['Feb 7 2007 - Feb 13 2007'],
+        ['Feb. 1-14, 19828'],
+        ['Aug 1 216 - Aug 10 216']
+      ])
+    })
+  })
   describe('backslashes', function () {
     it('escapes specials', function () {
       const result = util.backslashes('?', 2)
