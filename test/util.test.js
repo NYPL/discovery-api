@@ -4,7 +4,7 @@ const mangledEnumerationChronologyItems = require('./fixtures/mangled_enumeratio
 const util = require('../lib/util')
 
 describe('Util', function () {
-  describe.only('sortOnPropWithUndefinedLast', () => {
+  describe('sortOnPropWithUndefinedLast', () => {
     it('sorts undefined last', () => {
       const sortedItemEnums = mangledEnumerationChronologyItems
         .sort(util.sortOnPropWithUndefinedLast('enumerationChronology_sort'))
