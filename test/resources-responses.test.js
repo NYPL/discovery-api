@@ -52,7 +52,7 @@ describe('Test Resources responses', function () {
         done()
       })
     })
-    it.only('returns bib with items sorted by date', (done) => {
+    it('returns bib with items sorted by date', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?all_items=true'
       request.get(url, (err, res, body) => {
         if (err) throw err
@@ -63,7 +63,7 @@ describe('Test Resources responses', function () {
         // are not returned from ES at the beginning of the items array, but
         // should end up sorted there by the response massager.
         expect(firstTenItems.every(isCheckinCardItem))
-        expect(doc.items[0].enumerationChronology[0]).to.equal('v. 97 (May 10-July 26, 2021)')
+        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 35 (Oct. 28, 2024)')
         const lastIndex = doc.items.length - 1
         expect(doc.items[lastIndex].enumerationChronology[0]).to.equal('Aug. 9-Oct. 25 (1930)')
         done()
