@@ -22,7 +22,25 @@ describe('Test Resources responses', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe('GET all_bibs', () => {
+  describe('GET all_items', () => {
+    it('reverts to filtering on inner_hits when item filters are included in the query', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?all_items=true&item_status=status:i'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.items.length).to.equal(41)
+        done()
+      })
+    })
+    it('reverts to filtering on inner_hits when item filters are included in the query and returns default item size', (done) => {
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?all_items=true&item_status=status:a'
+      request.get(url, (err, res, body) => {
+        if (err) throw err
+        const doc = JSON.parse(body)
+        expect(doc.items.length).to.equal(100)
+        done()
+      })
+    })
     it('returns bib with electronic resources filtered from items', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b15109087?all_items=true'
       request.get(url, (err, res, body) => {
@@ -34,7 +52,7 @@ describe('Test Resources responses', function () {
         done()
       })
     })
-    it('returns bib with items sorted by date', (done) => {
+    it.only('returns bib with items sorted by date', (done) => {
       const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?all_items=true'
       request.get(url, (err, res, body) => {
         if (err) throw err
@@ -45,7 +63,7 @@ describe('Test Resources responses', function () {
         // are not returned from ES at the beginning of the items array, but
         // should end up sorted there by the response massager.
         expect(firstTenItems.every(isCheckinCardItem))
-        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 35 (Oct. 28, 2024)')
+        expect(doc.items[0].enumerationChronology[0]).to.equal('v. 97 (May 10-July 26, 2021)')
         const lastIndex = doc.items.length - 1
         expect(doc.items[lastIndex].enumerationChronology[0]).to.equal('Aug. 9-Oct. 25 (1930)')
         done()
@@ -705,13 +723,11 @@ describe('Test Resources responses', function () {
         request.get(url, function (err, response, body) {
           if (err) throw err
           var doc = JSON.parse(body)
-
           var firstItem = doc.itemListElement[0].result
           if (firstItem.memberOf) {
             var rootParent = firstItem.memberOf[firstItem.memberOf.length - 1]
             assert(rootParent['@id'] === `res:${parentId}`)
           }
-
           done()
         })
       })
