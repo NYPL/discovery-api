@@ -1,0 +1,281 @@
+{
+  "body": {
+    "took": 7,
+    "timed_out": false,
+    "_shards": {
+      "total": 3,
+      "successful": 3,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": 15.522883,
+      "hits": [
+        {
+          "_index": "resources-2018-04-09",
+          "_type": "resource",
+          "_id": "cb4032259",
+          "_score": 15.522883,
+          "_source": {
+            "extent": [
+              "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ;"
+            ],
+            "note": [
+              {
+                "noteType": "Bibliography",
+                "label": "Bibliographical footnotes.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "recap-cul"
+            ],
+            "subjectLiteral_exploded": [
+              "Diet",
+              "Diet -- Great Britain",
+              "Food consumption",
+              "Food consumption -- Great Britain"
+            ],
+            "publisherLiteral": [
+              "Nelson,"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "createdYear": [
+              1966
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "title": [
+              "Plenty and want ; a social history of diet in England from 1815 to the present day."
+            ],
+            "creatorLiteral": [
+              "Burnett, John, 1925-2006."
+            ],
+            "createdString": [
+              "1966"
+            ],
+            "idLccn": [
+              "   66070181 "
+            ],
+            "dateStartYear": [
+              1966
+            ],
+            "identifierV2": [
+              {
+                "type": "nypl:Bnumber",
+                "value": "4032259"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "   66070181 "
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(OCoLC)ocm01650294"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(NNC)4032259"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "4032259"
+              }
+            ],
+            "updatedAt": 1631229286701,
+            "publicationStatement": [
+              "[London] : Nelson, 1966."
+            ],
+            "identifier": [
+              "urn:bnum:4032259",
+              "urn:lccn:   66070181 ",
+              "urn:undefined:(OCoLC)ocm01650294",
+              "urn:undefined:(NNC)4032259",
+              "urn:undefined:4032259"
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:undefined",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1966"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:undefined",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Diet -- Great Britain.",
+              "Food consumption -- Great Britain."
+            ],
+            "titleDisplay": [
+              "Plenty and want ; a social history of diet in England from 1815 to the present day."
+            ],
+            "uri": "cb4032259",
+            "lccClassification": [
+              "TX360.G7 B8"
+            ],
+            "numItems": [
+              1
+            ],
+            "numAvailable": [
+              1
+            ],
+            "placeOfPublication": [
+              "[London] :"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "23 cm"
+            ]
+          },
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": 0,
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": 1,
+                "max_score": null,
+                "hits": [
+                  {
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "uri": "ci4087955",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:0002",
+                          "label": "Columbia University Libraries"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:0002||Columbia University Libraries"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:1",
+                          "label": "non-circ"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:1||non-circ"
+                      ],
+                      "shelfMark": [
+                        "TX360.G79 B93 1966"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "TX360.G79 B93 1966",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "HS65164695"
+                        }
+                      ],
+                      "physicalLocation": [
+                        "TX360.G79 B93 1966"
+                      ],
+                      "identifier": [
+                        "urn:barcode:HS65164695"
+                      ],
+                      "idBarcode": [
+                        "HS65164695"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "shelfMark_sort": "aTX360.G79 B93 001966"
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "aggregations": {
+      "item_location": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": []
+        }
+      },
+      "item_format": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": []
+        }
+      },
+      "item_status": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "status:a||Available",
+              "doc_count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "statusCode": 200
+}

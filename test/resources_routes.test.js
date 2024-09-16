@@ -21,7 +21,7 @@ describe('resources routes', function () {
   describe('bib id with item filters', () => {
     it('can accept "all_items=true"', async () => {
       const params = {
-        uri: 'b1234', all_items: 'true'
+        uri: 'b1234'
       }
       const query = 'item_date=1-2&item_volume=3-4&item_format=text,microfilm&item_location=SASB,LPA&item_status=here&all_items=true'
       const expectedParams = {

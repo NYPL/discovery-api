@@ -336,8 +336,8 @@ describe('Resources query', function () {
     it('overrides items_size and items_from', async () => {
       const esSearchStub =
         sinon.stub(app.esClient, 'search')
-          .callsFake(async (body) => ({ body: { hits: { hits: [{ _source: { items: [{ uri: 'spaghetti' }] } }] } } }))
-      await app.resources.findByUri({ uri: 'b1234', all_items: 'true' }, {}, { query: { all_items: 'true' } })
+          .callsFake(async (body) => ({ body: { hits: { hits: [{ _source: { items: [{ uri: 'spaghetti', status: [{ label: 'spaghetti', id: 'status:pasta' }] }] } }] } } }))
+      await app.resources.findByUri({ uri: 'b1234', all_items: 'true' }, {}, { query: { all_items: 'true' }, params: {} })
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(searchBody.item_size).to.equal(undefined)
       expect(searchBody.items_from).to.equal(undefined)
