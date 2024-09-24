@@ -114,6 +114,12 @@
             "description": "Specify starting index for retrieved items",
             "default": 0
           },
+          {"name": "all_items",
+           "type": "boolean",
+           "in": "query",
+           "description": "When true, fetches all items for a bib. Overrides items_from and items_size",
+           "default": false
+          },
           {
             "name": "contributor",
             "type": "string",
