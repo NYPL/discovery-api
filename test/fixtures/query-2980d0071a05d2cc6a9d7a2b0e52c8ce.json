@@ -1,0 +1,298 @@
+{
+  "body": {
+    "took": 6,
+    "timed_out": false,
+    "_shards": {
+      "total": 3,
+      "successful": 3,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": 15.57904,
+      "hits": [
+        {
+          "_index": "resources-2018-04-09",
+          "_type": "resource",
+          "_id": "b10022950",
+          "_score": 15.57904,
+          "_source": {
+            "extent": [
+              "224 p. ;"
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Christianity and other religions",
+              "Christianity and other religions -- Judaism"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "[D. Kirshenbaum]"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1974
+            ],
+            "title": [
+              "Religion--love or hate?"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "*PGZ 81-1452"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1974"
+            ],
+            "creatorLiteral": [
+              "Kirshenbaum, D. (David), 1902-"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1974
+            ],
+            "idOclc": [
+              "NYPG25881442-B"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "*PGZ 81-1452"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "10022950"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG25881442-B"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp0023028"
+              }
+            ],
+            "updatedAt": 1711072100364,
+            "publicationStatement": [
+              "New York : [D. Kirshenbaum], 1974."
+            ],
+            "identifier": [
+              "urn:shelfmark:*PGZ 81-1452",
+              "urn:bnum:10022950",
+              "urn:oclc:NYPG25881442-B",
+              "urn:identifier:(WaOLN)nyp0023028"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1974"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Christianity and other religions -- Judaism."
+            ],
+            "titleDisplay": [
+              "Religion--love or hate? / by David Kirshenbaum."
+            ],
+            "uri": "b10022950",
+            "placeOfPublication": [
+              "New York"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "titleAlt": [
+              "Love or hate."
+            ],
+            "dimensions": [
+              "24 cm."
+            ]
+          },
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": 0,
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "items": {
+              "hits": {
+                "total": 1,
+                "max_score": null,
+                "hits": [
+                  {
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:1||Use in library"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:2",
+                          "label": "book non-circ"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:2||book non-circ"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:maf92",
+                          "label": "Schwarzman Building M2 - Dorot Jewish Division Room 111"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division Room 111"
+                      ],
+                      "idBarcode": [
+                        "33433103848853"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:*PGZ 81-1452",
+                        "urn:barcode:33433103848853"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "*PGZ 81-1452",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433103848853",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "m2CustomerCode": [
+                        "XH"
+                      ],
+                      "physicalLocation": [
+                        "*PGZ 81-1452"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "*PGZ 81-1452"
+                      ],
+                      "shelfMark_sort": "a*PGZ 81-001452",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "uri": "i14749981"
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "aggregations": {
+      "item_location": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "loc:maf92||Schwarzman Building M2 - Dorot Jewish Division Room 111",
+              "doc_count": 1
+            }
+          ]
+        }
+      },
+      "item_format": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "Text",
+              "doc_count": 1
+            }
+          ]
+        }
+      },
+      "item_status": {
+        "doc_count": 1,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "status:a||Available",
+              "doc_count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "statusCode": 200
+}

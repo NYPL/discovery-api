@@ -1,0 +1,701 @@
+{
+  "body": {
+    "took": 18,
+    "timed_out": false,
+    "_shards": {
+      "total": 3,
+      "successful": 3,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": 15.052035,
+      "hits": [
+        {
+          "_index": "resources-2018-04-09",
+          "_type": "resource",
+          "_id": "b11984689",
+          "_score": 15.052035,
+          "_source": {
+            "extent": [
+              "v. ill."
+            ],
+            "note": [
+              {
+                "noteType": "Note",
+                "label": "\"Established 1900.\"",
+                "type": "bf:Note"
+              },
+              {
+                "noteType": "Numbering",
+                "label": "Most issues lack subtitle.",
+                "type": "bf:Note"
+              }
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "serialPublicationDates": [
+              "v. 42, no. 1-v. 62, no. 7; Jan. 1942-July 1962."
+            ],
+            "subjectLiteral_exploded": [
+              "Woodwork",
+              "Woodwork -- Periodicals"
+            ],
+            "numItemDatesParsed": [
+              19
+            ],
+            "publisherLiteral": [
+              "Southam-Maclean Publications [etc.]"
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              19
+            ],
+            "createdYear": [
+              1942
+            ],
+            "dateEndString": [
+              "1962"
+            ],
+            "title": [
+              "Canadian woodworker; millwork, furniture, plywood."
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "VMA (Canadian woodworker)"
+            ],
+            "numItemVolumesParsed": [
+              19
+            ],
+            "createdString": [
+              "1942"
+            ],
+            "idLccn": [
+              "cn 76300447"
+            ],
+            "idIssn": [
+              "0316-9669"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "dateStartYear": [
+              1942
+            ],
+            "idOclc": [
+              "NYPG94-S11794"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "VMA (Canadian woodworker)"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "11984689"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "NYPG94-S11794"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "cn 76300447"
+              },
+              {
+                "type": "bf:Issn",
+                "value": "0316-9669"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp1974025"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "RCON-STC"
+              }
+            ],
+            "popularity": 19,
+            "dateEndYear": [
+              1962
+            ],
+            "updatedAt": 1722404919828,
+            "publicationStatement": [
+              "Don Mills, Ont. [etc.] Southam-Maclean Publications [etc.]"
+            ],
+            "identifier": [
+              "urn:shelfmark:VMA (Canadian woodworker)",
+              "urn:bnum:11984689",
+              "urn:oclc:NYPG94-S11794",
+              "urn:lccn:cn 76300447",
+              "urn:issn:0316-9669",
+              "urn:identifier:(WaOLN)nyp1974025",
+              "urn:identifier:RCON-STC"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1942"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Woodwork -- Periodicals."
+            ],
+            "titleDisplay": [
+              "Canadian woodworker; millwork, furniture, plywood."
+            ],
+            "uri": "b11984689",
+            "placeOfPublication": [
+              "Don Mills, Ont. [etc.]"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:s",
+                "label": "serial"
+              }
+            ],
+            "titleAlt": [
+              "Canadian woodworker (1942)",
+              "Canadian woodworker and furniture manufacturer Jan.-Mar. 1942"
+            ],
+            "dimensions": [
+              "29 cm."
+            ]
+          },
+          "inner_hits": {
+            "electronicResources": {
+              "hits": {
+                "total": 0,
+                "max_score": null,
+                "hits": []
+              }
+            },
+            "allItems": {
+              "hits": {
+                "total": 19,
+                "max_score": 1,
+                "hits": [
+                  {
+                    "_nested": {
+                      "field": "items",
+                      "offset": 18
+                    },
+                    "_score": 1,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "1944",
+                          "lte": "1944"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 44 (1944)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        44-1944"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rc2ma",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rc2ma||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433102812199"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 44 (1944)",
+                        "urn:barcode:33433102812199"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "VMA (Canadian woodworker) v. 44 (1944)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433102812199",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
+                      ],
+                      "physicalLocation": [
+                        "VMA (Canadian woodworker)"
+                      ],
+                      "recapCustomerCode": [
+                        "JS"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "VMA (Canadian woodworker) v. 44 (1944)"
+                      ],
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000044 (1944)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 44,
+                          "lte": 44
+                        }
+                      ],
+                      "uri": "i29976055"
+                    }
+                  },
+                  {
+                    "_nested": {
+                      "field": "items",
+                      "offset": 17
+                    },
+                    "_score": 1,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "1945",
+                          "lte": "1945"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 45 (1945)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        45-1945"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rc2ma",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rc2ma||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433102812025"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 45 (1945)",
+                        "urn:barcode:33433102812025"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "VMA (Canadian woodworker) v. 45 (1945)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433102812025",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
+                      ],
+                      "physicalLocation": [
+                        "VMA (Canadian woodworker)"
+                      ],
+                      "recapCustomerCode": [
+                        "JS"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "VMA (Canadian woodworker) v. 45 (1945)"
+                      ],
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000045 (1945)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 45,
+                          "lte": 45
+                        }
+                      ],
+                      "uri": "i29976057"
+                    }
+                  },
+                  {
+                    "_nested": {
+                      "field": "items",
+                      "offset": 16
+                    },
+                    "_score": 1,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "1946",
+                          "lte": "1946"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 46 (1946)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        46-1946"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rc2ma",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rc2ma||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433102812173"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 46 (1946)",
+                        "urn:barcode:33433102812173"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "VMA (Canadian woodworker) v. 46 (1946)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433102812173",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
+                      ],
+                      "physicalLocation": [
+                        "VMA (Canadian woodworker)"
+                      ],
+                      "recapCustomerCode": [
+                        "JS"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "VMA (Canadian woodworker) v. 46 (1946)"
+                      ],
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000046 (1946)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 46,
+                          "lte": 46
+                        }
+                      ],
+                      "uri": "i29976059"
+                    }
+                  }
+                ]
+              }
+            },
+            "items": {
+              "hits": {
+                "total": 1,
+                "max_score": null,
+                "hits": [
+                  {
+                    "_nested": {
+                      "field": "items",
+                      "offset": 18
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:3",
+                          "label": "serial"
+                        }
+                      ],
+                      "catalogItemType_packed": [
+                        "catalogItemType:3||serial"
+                      ],
+                      "dateRange": [
+                        {
+                          "gte": "1944",
+                          "lte": "1944"
+                        }
+                      ],
+                      "enumerationChronology": [
+                        "v. 44 (1944)"
+                      ],
+                      "enumerationChronology_sort": [
+                        "        44-1944"
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rc2ma",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rc2ma||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433102812199"
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:VMA (Canadian woodworker) v. 44 (1944)",
+                        "urn:barcode:33433102812199"
+                      ],
+                      "identifierV2": [
+                        {
+                          "value": "VMA (Canadian woodworker) v. 44 (1944)",
+                          "type": "bf:ShelfMark"
+                        },
+                        {
+                          "value": "33433102812199",
+                          "type": "bf:Barcode"
+                        }
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
+                      ],
+                      "physicalLocation": [
+                        "VMA (Canadian woodworker)"
+                      ],
+                      "recapCustomerCode": [
+                        "JS"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "shelfMark": [
+                        "VMA (Canadian woodworker) v. 44 (1944)"
+                      ],
+                      "shelfMark_sort": "aVMA (Canadian woodworker) v. 000044 (1944)",
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "volumeRange": [
+                        {
+                          "gte": 44,
+                          "lte": 44
+                        }
+                      ],
+                      "uri": "i29976055"
+                    },
+                    "sort": [
+                      "        44-1944"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "aggregations": {
+      "item_location": {
+        "doc_count": 19,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "loc:rc2ma||Offsite",
+              "doc_count": 19
+            }
+          ]
+        }
+      },
+      "item_format": {
+        "doc_count": 19,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "Text",
+              "doc_count": 19
+            }
+          ]
+        }
+      },
+      "item_status": {
+        "doc_count": 19,
+        "_nested": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "status:a||Available",
+              "doc_count": 19
+            }
+          ]
+        }
+      }
+    }
+  },
+  "statusCode": 200
+}
