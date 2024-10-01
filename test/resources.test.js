@@ -195,10 +195,12 @@ describe('Resources query', function () {
       expect(body).to.be.a('object')
       expect(body.query).to.be.a('object')
       expect(body.query.bool).to.be.a('object')
-      expect(body.query.bool.filter).to.be.a('array')
-      expect(body.query.bool.filter[0]).to.be.a('object')
-      expect(body.query.bool.filter[0].term).to.be.a('object')
-      expect(body.query.bool.filter[0].term.subjectLiteral_exploded).to.equal('United States -- History')
+      expect(body.query.bool.filter).to.be.a('object')
+      expect(body.query.bool.filter.bool).to.be.a('object')
+      expect(body.query.bool.filter.bool.must).to.be.a('array')
+      expect(body.query.bool.filter.bool.must[0]).to.be.a('object')
+      expect(body.query.bool.filter.bool.must[0].term).to.be.a('object')
+      expect(body.query.bool.filter.bool.must[0].term.subjectLiteral_exploded).to.equal('United States -- History')
     })
 
     describe('nyplSource filtering', function () {
