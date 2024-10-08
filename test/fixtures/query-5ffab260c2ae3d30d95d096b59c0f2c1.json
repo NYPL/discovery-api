@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 1352,
+    "took": 1709,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -18,7 +18,7 @@
         {
           "_index": "resources-2024-07-11",
           "_id": "b22144813",
-          "_score": 162.00125,
+          "_score": 16.393803,
           "_source": {
             "extent": [
               "1234, [1] pages, x leaves : illustrations ;",
@@ -737,12 +737,11 @@
             ]
           },
           "sort": [
-            162.00125,
+            16.393803,
             "b22144813"
           ],
           "matched_queries": [
-            "nypl-owned",
-            "term uri"
+            "nypl-owned"
           ],
           "inner_hits": {
             "items": {

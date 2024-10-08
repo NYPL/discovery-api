@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 1720,
+    "took": 1196,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -18,7 +18,7 @@
         {
           "_index": "resources-2024-07-11",
           "_id": "b22144813",
-          "_score": 26.393803,
+          "_score": 16.393803,
           "_source": {
             "extent": [
               "1234, [1] pages, x leaves : illustrations ;",
@@ -737,12 +737,11 @@
             ]
           },
           "sort": [
-            26.393803,
+            16.393803,
             "b22144813"
           ],
           "matched_queries": [
-            "nypl-owned",
-            "prefix idLccn"
+            "nypl-owned"
           ],
           "inner_hits": {
             "items": {
