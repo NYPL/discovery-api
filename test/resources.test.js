@@ -195,12 +195,10 @@ describe('Resources query', function () {
       expect(body).to.be.a('object')
       expect(body.query).to.be.a('object')
       expect(body.query.bool).to.be.a('object')
-      expect(body.query.bool.filter).to.be.a('object')
-      expect(body.query.bool.filter.bool).to.be.a('object')
-      expect(body.query.bool.filter.bool.must).to.be.a('array')
-      expect(body.query.bool.filter.bool.must[0]).to.be.a('object')
-      expect(body.query.bool.filter.bool.must[0].term).to.be.a('object')
-      expect(body.query.bool.filter.bool.must[0].term.subjectLiteral_exploded).to.equal('United States -- History')
+      expect(body.query.bool.filter).to.be.a('array')
+      expect(body.query.bool.filter[0]).to.be.a('object')
+      expect(body.query.bool.filter[0].term).to.be.a('object')
+      expect(body.query.bool.filter[0].term.subjectLiteral_exploded).to.equal('United States -- History')
     })
 
     describe('nyplSource filtering', function () {
@@ -332,6 +330,51 @@ describe('Resources query', function () {
     it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
+    })
+  })
+
+  describe('findByUri all items', () => {
+    after(() => { app.esClient.search.restore() })
+    it('overrides items_size and items_from', async () => {
+      const esSearchStub =
+        sinon.stub(app.esClient, 'search')
+          .callsFake(async (body) => ({ body: { hits: { hits: [{ _source: { items: [{ uri: 'spaghetti', status: [{ label: 'spaghetti', id: 'status:pasta' }] }] } }] } } }))
+      await app.resources.findByUri({ uri: 'b1234', all_items: 'true' }, {}, { query: { all_items: 'true' }, params: {} })
+      const searchBody = esSearchStub.getCall(0).args[0]
+      expect(searchBody.item_size).to.equal(undefined)
+      expect(searchBody.items_from).to.equal(undefined)
+      expect(searchBody).to.deep.equal({
+        _source: {
+          // note absence of "*_sort"
+          excludes: ['uris', '*_packed', 'items.*_packed', 'contentsTitle']
+        },
+        size: 1,
+        query: {
+          bool: {
+            must: [{ term: { uri: 'b1234' } }]
+          }
+        },
+        aggregations: {
+          item_location: {
+            nested: { path: 'items' },
+            aggs: {
+              _nested: { terms: { size: 100, field: 'items.holdingLocation_packed' } }
+            }
+          },
+          item_status: {
+            nested: { path: 'items' },
+            aggs: {
+              _nested: { terms: { size: 100, field: 'items.status_packed' } }
+            }
+          },
+          item_format: {
+            nested: { path: 'items' },
+            aggs: {
+              _nested: { terms: { size: 100, field: 'items.formatLiteral' } }
+            }
+          }
+        }
+      })
     })
   })
 
@@ -584,7 +627,7 @@ describe('Resources query', function () {
                           }
                         }
                       },
-                      { match_all: { } }
+                      { match_all: {} }
                     ]
                   }
                 }
@@ -621,7 +664,7 @@ describe('Resources query', function () {
                           }
                         }
                       },
-                      { match_all: { } }
+                      { match_all: {} }
                     ]
                   }
                 }
@@ -664,7 +707,7 @@ describe('Resources query', function () {
                         }
                       }
                     },
-                    { match_all: { } },
+                    { match_all: {} },
                     {
                       nested: {
                         inner_hits: { name: 'allItems' },
