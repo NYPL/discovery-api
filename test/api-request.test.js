@@ -6,7 +6,7 @@ describe('ApiRequest', function () {
   it('empty params', () => {
     const request = ApiRequest.fromParams({ })
     expect(request.hasKeyword()).to.eq(false)
-    expect(request.advancedSearchParams()).to.deep.eq([])
+    expect(request.advancedSearchParamsThatAreAlsoScopes()).to.deep.eq([])
     expect(request.hasScope('keyword')).to.eq(false)
     expect(request.queryIsFullyQuoted()).to.eq(false)
   })
@@ -44,11 +44,11 @@ describe('ApiRequest', function () {
     expect(request.querySansQuotes()).to.eq('"toast" and jam')
   })
 
-  it('advancedSearchParams', () => {
+  it('advancedSearchParamsThatAreAlsoScopes', () => {
     let request = ApiRequest.fromParams({ q: '"toast"' })
-    expect(request.advancedSearchParams()).to.deep.eq([])
+    expect(request.advancedSearchParamsThatAreAlsoScopes()).to.deep.eq([])
 
     request = ApiRequest.fromParams({ title: '"toast"', foo: 'bar' })
-    expect(request.advancedSearchParams()).to.deep.eq(['title'])
+    expect(request.advancedSearchParamsThatAreAlsoScopes()).to.deep.eq(['title'])
   })
 })
