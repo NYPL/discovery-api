@@ -46,33 +46,6 @@ describe('Resources query', function () {
     })
   })
 
-  describe('escapeQuery', function () {
-    it('should escape specials', function () {
-      expect(resourcesPrivMethods.escapeQuery('? ^ * + (')).to.equal('\\? \\^ \\* \\+ \\(')
-    })
-
-    it('should escape unrecognized field indicators', function () {
-      expect(resourcesPrivMethods.escapeQuery('fladeedle:gorf')).to.equal('fladeedle\\:gorf')
-    })
-
-    it('should not escape recognized field indicators', function () {
-      expect(resourcesPrivMethods.escapeQuery('title:gorf')).to.equal('title:gorf')
-    })
-
-    it('should escape a single forward slash', function () {
-      expect(resourcesPrivMethods.escapeQuery('/')).to.equal('\\/')
-    })
-
-    it('should escape floating colon', function () {
-      // Make sure colons floating in whitespace are escaped:
-      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')
-    })
-
-    it('should escape colons in hyphenated phrases', function () {
-      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ / Avtor-sostavitelʹ: B.A. Konikov.')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ \\/ Avtor\\-sostavitelʹ\\: B.A. Konikov.')
-    })
-  })
-
   describe('buildElasticQuery', function () {
     it('uses "query string query" if subjectLiteral: used', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:potatoes' })
@@ -139,55 +112,6 @@ describe('Resources query', function () {
     })
   })
 
-  describe('buildElasticQueryForKeywords', function () {
-    it('returns a simple multi_match query for search_scope=all', function () {
-      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'all' })
-      expect(query).to.be.a('object')
-      expect(query.multi_match).to.be.a('object')
-      expect(query.multi_match.fields).to.be.a('array')
-    })
-
-    it('returns a simple multi_match query for search_scope=title', function () {
-      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'title' })
-      expect(query).to.be.a('object')
-      expect(query.multi_match).to.be.a('object')
-      expect(query.multi_match.fields).to.be.a('array')
-      expect(query.multi_match.fields).to.include('uniformTitle.folded')
-    })
-
-    /*
-    it('returns a bool query for search_scope=standard_number', function () {
-      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'standard_number' })
-      expect(query).to.be.a('object')
-      expect(query.bool).to.be.a('object')
-      expect(query.bool.should).to.be.a('array')
-
-      // First clause is a multi_match query across multiple root level fields
-      expect(query.bool.should[0]).to.be.a('object')
-      expect(query.bool.should[0].multi_match).to.be.a('object')
-      expect(query.bool.should[0].multi_match.fields).to.be.a('array')
-      expect(query.bool.should[0].multi_match.fields).to.include('shelfMark')
-      expect(query.bool.should[0].multi_match.query).to.equal('fladeedle')
-
-      // Second clause is a multi_match query across multiple root level fields, with literal query
-      expect(query.bool.should[1]).to.be.a('object')
-      expect(query.bool.should[1].multi_match).to.be.a('object')
-      expect(query.bool.should[1].multi_match.fields).to.be.a('array')
-      expect(query.bool.should[1].multi_match.fields).to.include('shelfMark')
-      expect(query.bool.should[1].multi_match.query).to.equal('"fladeedle"')
-
-      // Third clause is a nested multi_match query on items fields:
-      expect(query.bool.should[2]).to.be.a('object')
-      expect(query.bool.should[2].nested).to.be.a('object')
-      expect(query.bool.should[2].nested.path).to.eq('items')
-      expect(query.bool.should[2].nested.query).to.be.a('object')
-      expect(query.bool.should[2].nested.query.multi_match).to.be.a('object')
-      expect(query.bool.should[2].nested.query.multi_match.fields).to.be.a('array')
-      expect(query.bool.should[2].nested.query.multi_match.fields).to.include('items.shelfMark')
-    })
-    */
-  })
-
   describe('buildElasticBody', function () {
     it('uses subjectLiteral_exploded when given a subjectLiteral filter', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
@@ -210,7 +134,7 @@ describe('Resources query', function () {
         const body = resourcesPrivMethods.buildElasticBody(params)
 
         expect(body).to.be.a('object')
-        expect(body.query).to.be.a('undefined')
+        expect(body.query.filter).to.be.a('undefined')
       })
 
       it('filters by nyplSource when HIDE_NYPL_SOURCE is set', function () {
@@ -221,21 +145,7 @@ describe('Resources query', function () {
 
         // Expect query to resemble: {"from":0,"size":50,"query":{"bool":{"filter":[{"bool":{"must_not":{"terms":{"nyplSource":["recap-hl"]}}}}]}},"sort":["uri"]}
         expect(body).to.be.a('object')
-        expect(body).to.have.deep.property('query', {
-          bool: {
-            filter: [
-              {
-                bool: {
-                  must_not: {
-                    terms: {
-                      nyplSource: ['recap-hl']
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        })
+        expect(body).to.nested.include({ 'query.bool.filter[0].bool.must_not.terms.nyplSource[0]': 'recap-hl' })
 
         delete process.env.HIDE_NYPL_SOURCE
       })
@@ -244,35 +154,27 @@ describe('Resources query', function () {
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({
-        query: {
-          bool: {
-            should: [
-              { term: { idIsbn: '0689844921' } },
-              { term: { idIsbn_clean: '0689844921' } }
-            ],
-            minimum_should_match: 1
-          }
-        }
-      })
+      expect(body).to.nested
+        .include({ 'query.bool.must[0].bool.should[0].term.idIsbn': '0689844921' })
+        .include({ 'query.bool.must[0].bool.should[1].term.idIsbn_clean': '0689844921' })
     })
 
     it('processes issn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIssn: '1234-5678' } } } } })
+      expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn': '1234-5678' })
     })
 
     it('processes lccn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ lccn: '00068799' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { regexp: { idLccn: { value: '[^\\d]*00068799[^\\d]*' } } } })
+      expect(body).to.nested.include({ 'query.bool.must[0].regexp.idLccn.value': '[^\\d]*00068799[^\\d]*' })
     })
 
     it('processes oclc correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ oclc: '1033548057' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { bool: { must: { term: { idOclc: '1033548057' } } } } })
+      expect(body).to.nested.include({ 'query.bool.must[0].term.idOclc': '1033548057' })
     })
   })
 

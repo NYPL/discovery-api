@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const ElasticQuery = require('../lib/elastic-query')
+const ElasticQuery = require('../lib/elasticsearch/elastic-query')
 
 describe('ElasticQuery', function () {
   it('addShould', () => {

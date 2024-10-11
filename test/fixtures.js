@@ -26,7 +26,7 @@ function esClientSearchViaFixtures (properties) {
   const path = esFixturePath(properties)
   usedFixturePaths[path] = true
 
-  if (process.env.DEBUG_FIXTURES) console.log(`Using ES fixture ${path}`)
+  if (process.env.DEBUG_FIXTURES) console.log(`Using ES fixture ${path} for `, JSON.stringify(properties, null, 2))
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8', (err, content) => {
       if (err) {

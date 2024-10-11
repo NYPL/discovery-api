@@ -1,6 +1,6 @@
 const express = require('express')
 
-const esClient = require('./lib/es-client')
+const esClient = require('./lib/elasticsearch/client')
 const loadConfig = require('./lib/load-config')
 const { preflightCheck } = require('./lib/preflight_check')
 
