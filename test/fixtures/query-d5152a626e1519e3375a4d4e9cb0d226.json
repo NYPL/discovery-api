@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 8,
+    "took": 4,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -739,9 +739,6 @@
           "sort": [
             11,
             "b22144813"
-          ],
-          "matched_queries": [
-            "prefix identifierV2.value"
           ],
           "inner_hits": {
             "items": {

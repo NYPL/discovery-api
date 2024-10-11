@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 7,
+    "took": 6,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -18,7 +18,7 @@
         {
           "_index": "resources-2024-07-11",
           "_id": "b22144813",
-          "_score": 11,
+          "_score": 21,
           "_source": {
             "extent": [
               "1234, [1] pages, x leaves : illustrations ;",
@@ -737,11 +737,8 @@
             ]
           },
           "sort": [
-            11,
+            21,
             "b22144813"
-          ],
-          "matched_queries": [
-            "prefix identifierV2.value"
           ],
           "inner_hits": {
             "items": {

@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 63,
+    "took": 5,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -17,91 +17,87 @@
       "hits": [
         {
           "_index": "resources-2024-07-11",
-          "_id": "b12423567",
+          "_id": "b12709113",
           "_score": 833.6136,
           "_source": {
             "extent": [
-              "202 p."
+              "iv, 350 p. : ill., port. ;"
             ],
             "nyplSource": [
               "sierra-nypl"
             ],
             "subjectLiteral_exploded": [
-              "Campanella, Tommaso, 1568-1639"
+              "Washington County (Neb.)",
+              "Washington County (Neb.) -- History"
             ],
             "numItemDatesParsed": [
               0
             ],
             "publisherLiteral": [
-              "S. Neaulme"
+              "Magic city printing co."
             ],
             "language": [
               {
-                "id": "lang:lat",
-                "label": "Latin"
+                "id": "lang:eng",
+                "label": "English"
               }
             ],
             "numItemsTotal": [
               1
             ],
             "createdYear": [
-              1741
+              1937
             ],
             "title": [
-              "Vita Th. Campanellae."
+              "A history of Washington county, Nebraska"
             ],
             "type": [
               "nypl:Item"
             ],
             "shelfMark": [
-              "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+              "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
             ],
             "numItemVolumesParsed": [
               0
             ],
             "createdString": [
-              "1741"
+              "1937"
             ],
             "creatorLiteral": [
-              "Cyprian, Ernst Salomon, 1673-1745."
+              "Shrader, Forrest B."
             ],
             "numElectronicResources": [
               0
             ],
             "dateStartYear": [
-              1741
+              1937
             ],
-            "creatorModifiedName": "Ernst Cyprian",
+            "creatorModifiedName": "Forrest Shrader",
             "idOclc": [
-              "34529242"
+              "9566258"
             ],
             "identifierV2": [
               {
                 "type": "bf:ShelfMark",
-                "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
               },
               {
                 "type": "nypl:Bnumber",
-                "value": "12423567"
+                "value": "12709113"
               },
               {
                 "type": "nypl:Oclc",
-                "value": "34529242"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)nyp2408048"
+                "value": "9566258"
               }
             ],
-            "updatedAt": 1711326027341,
+            "updatedAt": 1711220358338,
             "publicationStatement": [
-              "Trajecti ad Rhenum, S. Neaulme, 1741."
+              "[Omaha, : Magic city printing co., 1937]"
             ],
             "identifier": [
-              "urn:shelfmark:AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)",
-              "urn:bnum:12423567",
-              "urn:oclc:34529242",
-              "urn:identifier:(WaOLN)nyp2408048"
+              "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+              "urn:bnum:12709113",
+              "urn:oclc:9566258"
             ],
             "numCheckinCardItems": [
               0
@@ -119,7 +115,7 @@
               }
             ],
             "dateString": [
-              "1741"
+              "1937"
             ],
             "mediaType": [
               {
@@ -128,14 +124,14 @@
               }
             ],
             "subjectLiteral": [
-              "Campanella, Tommaso, 1568-1639."
+              "Washington County (Neb.) -- History."
             ],
             "titleDisplay": [
-              "Vita Th. Campanellae. Autore Ern. Sal. Cypriano. Accedunt hac secunda editione appendices IV. doctorum virorum de Campanellae vita, philosophia & libris schediasmata complectentes."
+              "A history of Washington county, Nebraska / by Forrest B. Shrader."
             ],
-            "uri": "b12423567",
+            "uri": "b12709113",
             "placeOfPublication": [
-              "Trajecti ad Rhenum"
+              "[Omaha,"
             ],
             "issuance": [
               {
@@ -144,16 +140,12 @@
               }
             ],
             "dimensions": [
-              "16 cm."
+              "24 cm."
             ]
           },
           "sort": [
             833.6136,
-            "b12423567"
-          ],
-          "matched_queries": [
-            "prefix identifierV2.value",
-            "prefix shelfMark.raw"
+            "b12709113"
           ],
           "inner_hits": {
             "items": {
@@ -166,7 +158,7 @@
                 "hits": [
                   {
                     "_index": "resources-2024-07-11",
-                    "_id": "b12423567",
+                    "_id": "b12709113",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -174,26 +166,26 @@
                     "_score": null,
                     "_source": {
                       "accessMessage_packed": [
-                        "accessMessage:u||Supervised use"
+                        "accessMessage:1||Use in library"
                       ],
                       "identifier": [
-                        "urn:shelfmark:AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)",
-                        "urn:barcode:33433104031624"
+                        "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                        "urn:barcode:33433099509238"
                       ],
                       "m2CustomerCode": [
                         "XA"
                       ],
                       "physicalLocation": [
-                        "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       ],
-                      "shelfMark_sort": "aAN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)",
+                      "shelfMark_sort": "aIWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
                       "catalogItemType_packed": [
-                        "catalogItemType:2||book non-circ"
+                        "catalogItemType:55||book, limited circ, MaRLI"
                       ],
                       "accessMessage": [
                         {
-                          "id": "accessMessage:u",
-                          "label": "Supervised use"
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
                         }
                       ],
                       "status_packed": [
@@ -203,32 +195,32 @@
                         "bf:Item"
                       ],
                       "shelfMark": [
-                        "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       ],
-                      "uri": "i16020288",
+                      "uri": "i16202472",
                       "identifierV2": [
                         {
                           "type": "bf:ShelfMark",
-                          "value": "AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)"
+                          "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                         },
                         {
                           "type": "bf:Barcode",
-                          "value": "33433104031624"
+                          "value": "33433099509238"
                         }
                       ],
                       "holdingLocation_packed": [
-                        "loc:mal92||Schwarzman Building M2 - General Research Room 315"
+                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
                       ],
                       "idBarcode": [
-                        "33433104031624"
+                        "33433099509238"
                       ],
                       "requestable": [
                         true
                       ],
                       "catalogItemType": [
                         {
-                          "id": "catalogItemType:2",
-                          "label": "book non-circ"
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
                         }
                       ],
                       "formatLiteral": [
@@ -236,8 +228,8 @@
                       ],
                       "holdingLocation": [
                         {
-                          "id": "loc:mal92",
-                          "label": "Schwarzman Building M2 - General Research Room 315"
+                          "id": "loc:mag92",
+                          "label": "Schwarzman Building M2 - Milstein Division Room 121"
                         }
                       ],
                       "status": [

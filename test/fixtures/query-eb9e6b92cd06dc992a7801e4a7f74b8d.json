@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 21,
+    "took": 18,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -190,10 +190,6 @@
           "sort": [
             536.016,
             "cb1808514"
-          ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -472,11 +468,6 @@
           "sort": [
             509.76538,
             "b10981311"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -764,11 +755,6 @@
             508.07278,
             "b11294632"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -1023,11 +1009,6 @@
           "sort": [
             452.51852,
             "b13111567"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -1408,11 +1389,6 @@
             393.8682,
             "b18106748"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -1652,11 +1628,6 @@
           "sort": [
             391.10846,
             "b12382054"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -1942,11 +1913,6 @@
           "sort": [
             390.62976,
             "b10861042"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -2325,11 +2291,6 @@
             348.65753,
             "hb990084815100203941"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -2588,11 +2549,6 @@
             313.34534,
             "cb1677200"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -2816,9 +2772,6 @@
           "sort": [
             41.282616,
             "hb990060887580203941"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -3083,9 +3036,6 @@
           "sort": [
             33.641586,
             "hb990093581870203941"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -3371,10 +3321,6 @@
           "sort": [
             20.750334,
             "b11487687"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -3761,10 +3707,6 @@
             17.508217,
             "b17948355"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -4096,10 +4038,6 @@
             16.200977,
             "b22159817"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -4375,10 +4313,6 @@
           "sort": [
             16.17397,
             "b15994132"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -4662,10 +4596,6 @@
           "sort": [
             15.669971,
             "b15557108"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -5059,10 +4989,6 @@
           "sort": [
             15.552334,
             "b16645835"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -5475,10 +5401,6 @@
             15.324522,
             "b21889069"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -5715,10 +5637,6 @@
           "sort": [
             14.563528,
             "b21977011"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -6591,10 +6509,6 @@
             9.724907,
             "b21903183"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -7369,10 +7283,6 @@
             9.7059765,
             "b21903200"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -7600,9 +7510,6 @@
           "sort": [
             9.69463,
             "cb3360572"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -7880,9 +7787,6 @@
           "sort": [
             8.467016,
             "hb990088488550203941"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -8469,10 +8373,6 @@
             7.287669,
             "b10685709"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -9031,9 +8931,6 @@
             6.7489405,
             "cb299666"
           ],
-          "matched_queries": [
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -9339,9 +9236,6 @@
           "sort": [
             5.178694,
             "cb11012105"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -9671,9 +9565,6 @@
             3.116293,
             "cb13231291"
           ],
-          "matched_queries": [
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -9997,9 +9888,6 @@
             2.6456795,
             "cb10481947"
           ],
-          "matched_queries": [
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -10309,9 +10197,6 @@
           "sort": [
             1.9672642,
             "cb8273736"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -10697,9 +10582,6 @@
           "sort": [
             0.6001911,
             "cb7580605"
-          ],
-          "matched_queries": [
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {

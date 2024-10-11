@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 7,
+    "took": 9,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -166,10 +166,6 @@
           "sort": [
             23,
             "b13627363"
-          ],
-          "matched_queries": [
-            "prefix identifierV2.value",
-            "prefix shelfMark.raw"
           ],
           "inner_hits": {
             "items": {

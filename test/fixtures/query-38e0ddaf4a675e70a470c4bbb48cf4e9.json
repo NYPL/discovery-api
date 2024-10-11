@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 6,
+    "took": 8,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -18,7 +18,7 @@
         {
           "_index": "resources-2024-07-11",
           "_id": "b22144813",
-          "_score": 21,
+          "_score": 35.5129,
           "_source": {
             "extent": [
               "1234, [1] pages, x leaves : illustrations ;",
@@ -737,12 +737,8 @@
             ]
           },
           "sort": [
-            21,
+            35.5129,
             "b22144813"
-          ],
-          "matched_queries": [
-            "prefix identifierV2.value",
-            "prefix idIsbn"
           ],
           "inner_hits": {
             "items": {
