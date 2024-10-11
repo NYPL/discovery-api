@@ -28,7 +28,6 @@ describe('ElasticQueryBuilder', () => {
     it('generates an appropriate empty search', () => {
       const request = new ApiRequest({ q: '' })
       const inst = ElasticQueryBuilder.forApiRequest(request)
-      console.log(JSON.stringify(inst.query.toJson(), null, 2))
 
       expect(inst).to.be.a('object')
       expect(inst.query).to.be.a('object')
@@ -116,7 +115,6 @@ describe('ElasticQueryBuilder', () => {
     it('generates a "callnumber" query', () => {
       const request = new ApiRequest({ q: 'toast', search_scope: 'callnumber' })
       const inst = ElasticQueryBuilder.forApiRequest(request)
-      console.log(JSON.stringify(inst.query.toJson(), null, 2))
 
       // Expect multiple term/prefix matches on identifier fields:
       expect(inst.query.toJson()).to.nested
@@ -127,6 +125,17 @@ describe('ElasticQueryBuilder', () => {
       expect(inst.query.toJson().bool.should)
         .to.be.a('array')
         .have.lengthOf.at.least(2).at.most(3)
+    })
+  })
+
+  describe('user filters', () => {
+    it('applies user filters to query', () => {
+      const request = new ApiRequest({ q: 'toast', filters: { buildingLocation: 'ma' } })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect the top level bool to now have a `filter` prop with the user filter:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.filter[0].term.buildingLocationIds': 'ma' })
     })
   })
 })
