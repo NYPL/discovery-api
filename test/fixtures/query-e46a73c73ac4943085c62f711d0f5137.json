@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 22,
+    "took": 316,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -200,14 +200,6 @@
           "sort": [
             3846.9688,
             "b20970375"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term title.keywordLowercased",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "term title.keywordLowercasedStripped",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -444,13 +436,6 @@
           "sort": [
             3765.0447,
             "pb2847934"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term title.keywordLowercased",
-            "match_phrase title.folded",
-            "term title.keywordLowercasedStripped",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -718,13 +703,6 @@
           "sort": [
             3653.5134,
             "pb9928479343506421"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term title.keywordLowercased",
-            "match_phrase title.folded",
-            "term title.keywordLowercasedStripped",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -1001,12 +979,6 @@
             604.9607,
             "b11518415"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -1256,11 +1228,6 @@
           "sort": [
             544.44305,
             "pb6955197"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -1527,12 +1494,6 @@
           "sort": [
             543.88324,
             "b15868157"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -1812,11 +1773,6 @@
           "sort": [
             539.412,
             "b11124847"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -2101,10 +2057,6 @@
             536.016,
             "cb1808514"
           ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -2371,12 +2323,6 @@
           "sort": [
             533.7074,
             "b18806309"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -2663,11 +2609,6 @@
           "sort": [
             525.10767,
             "hb990099650640203941"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -2966,11 +2907,6 @@
             523.82556,
             "pb9969551973506421"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -3211,11 +3147,6 @@
           "sort": [
             514.92004,
             "b12227432"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -3496,11 +3427,6 @@
             513.503,
             "b22244189"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -3780,11 +3706,6 @@
             513.503,
             "b22839633"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -3949,11 +3870,6 @@
           "sort": [
             512.31824,
             "b16579957"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -4246,11 +4162,6 @@
             509.76538,
             "b10981311"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -4537,11 +4448,6 @@
           "sort": [
             509.76538,
             "b21766784"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -4963,11 +4869,6 @@
             509.76538,
             "b21897112"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -5156,11 +5057,6 @@
           "sort": [
             508.07278,
             "b11294632"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -5456,11 +5352,6 @@
             507.1503,
             "b22227752"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -5726,10 +5617,6 @@
             494.44305,
             "pb5714692"
           ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -5963,11 +5850,6 @@
           "sort": [
             492.33575,
             "hb990094818300203941"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -6255,11 +6137,6 @@
             487.9371,
             "b22904468"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -6518,11 +6395,6 @@
           "sort": [
             487.56525,
             "b12004445"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -6807,11 +6679,6 @@
             487.45587,
             "b22462271"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -7088,11 +6955,6 @@
             483.70743,
             "b18437590"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -7357,12 +7219,6 @@
             481.64728,
             "b20569949"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -7528,10 +7384,6 @@
           "sort": [
             478.7981,
             "hb990083677330203941"
-          ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -7811,12 +7663,6 @@
           "sort": [
             461.35995,
             "b13701585"
-          ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -8128,11 +7974,6 @@
             460.5382,
             "cb2127025"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -8384,11 +8225,6 @@
           "sort": [
             456.22333,
             "b12082817"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -8649,11 +8485,6 @@
           "sort": [
             453.95895,
             "b18012067"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -9049,11 +8880,6 @@
             453.95895,
             "b19838551"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -9341,11 +9167,6 @@
             453.95895,
             "b22185434"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -9630,11 +9451,6 @@
             453.92123,
             "hb990092192200203941"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -9868,10 +9684,6 @@
           "sort": [
             453.62738,
             "pb1162495"
-          ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -10117,11 +9929,6 @@
           "sort": [
             453.441,
             "b17794539"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -10396,11 +10203,6 @@
             452.96228,
             "b17133475"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -10664,11 +10466,6 @@
           "sort": [
             452.51852,
             "b13111567"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -11029,11 +10826,6 @@
             452.0683,
             "pb1794568"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -11329,10 +11121,6 @@
             447.56516,
             "cb11446537"
           ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -11600,11 +11388,6 @@
           "sort": [
             446.7666,
             "b11880207"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -11888,11 +11671,6 @@
             442.27206,
             "b22226823"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -12173,11 +11951,6 @@
           "sort": [
             441.4234,
             "b22202337"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -12465,11 +12238,6 @@
             433.5406,
             "b18036289"
           ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -12741,11 +12509,6 @@
           "sort": [
             430.4639,
             "b15767926"
-          ],
-          "matched_queries": [
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -13038,10 +12801,6 @@
             427.13397,
             "pb9921391513506421"
           ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -13284,10 +13043,6 @@
           "sort": [
             425.15027,
             "hb990088521070203941"
-          ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {
@@ -13550,12 +13305,6 @@
             424.65564,
             "b15543258"
           ],
-          "matched_queries": [
-            "prefix title.keywordLowercasedStripped",
-            "term nyplSource",
-            "match_phrase title.folded",
-            "bib multi_match"
-          ],
           "inner_hits": {
             "items": {
               "hits": {
@@ -13769,10 +13518,6 @@
           "sort": [
             424.0701,
             "pb2139151"
-          ],
-          "matched_queries": [
-            "match_phrase title.folded",
-            "bib multi_match"
           ],
           "inner_hits": {
             "items": {

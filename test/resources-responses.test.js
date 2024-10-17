@@ -815,7 +815,8 @@ describe('Test Resources responses', function () {
       b11826883: 'JQL 08-18',
       b13627363: 'VPS (Rice, E. Cats, cats, & cats)',
       b12423567: 'AN (Campanella) (Cyprian, E. S. Vita Th. Campanellae)',
-      pb1717: 'SF445.5 .C378',
+      // TODO: Temporarily disable until shelfmark.keywordLowercased is in production index:
+      // pb1717: 'SF445.5 .C378',
       b13565153: 'VQG (Loudon, J. W. Gardening for ladies. 1854)',
       b12709113: 'IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)'
     }

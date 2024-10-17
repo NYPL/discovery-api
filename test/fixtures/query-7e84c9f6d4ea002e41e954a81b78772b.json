@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 63,
+    "took": 4,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -18,7 +18,7 @@
         {
           "_index": "resources-2024-07-11",
           "_id": "b12423567",
-          "_score": 833.6136,
+          "_score": 1607.4841,
           "_source": {
             "extent": [
               "202 p."
@@ -148,12 +148,8 @@
             ]
           },
           "sort": [
-            833.6136,
+            1607.4841,
             "b12423567"
-          ],
-          "matched_queries": [
-            "prefix identifierV2.value",
-            "prefix shelfMark.raw"
           ],
           "inner_hits": {
             "items": {

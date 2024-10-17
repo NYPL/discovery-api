@@ -31,6 +31,10 @@ describe('ApiRequest', function () {
     request = ApiRequest.fromParams({ q: '"toast"' })
     expect(request.queryIsFullyQuoted()).to.eq(true)
 
+    // Test smart-quotes, the great scorge
+    request = ApiRequest.fromParams({ q: '“toast“' })
+    expect(request.queryIsFullyQuoted()).to.eq(true)
+
     request = ApiRequest.fromParams({ q: '"toast" and jam' })
     expect(request.queryIsFullyQuoted()).to.eq(false)
   })
