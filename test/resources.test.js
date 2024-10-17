@@ -475,29 +475,19 @@ describe('Resources query', function () {
   })
 
   describe('itemsQueryContext', () => {
-    it('should ignore check in card items when merge_checkin_card_items is not set', () => {
+    it('should exclude check in card items when options.merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
         .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
-    it('should ignore check in card items when merge_checkin_card_items is falsey', () => {
+    it('should exclude check in card items when merge_checkin_card_items is falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
         .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
-    it('should include check in card items when merge_checkin_card_items is truthy', () => {
+    it('should use match_all for items when merge_checkin_card_items is truthy', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
         .to.deep.equal({ must: { match_all: {} } })
-    })
-
-    it('should include check in card items but exclude electronic resources when merge_checkin_card_items is truthy and removeElectronicResourcesFromItemsArray is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true, merge_checkin_card_items: true }))
-        .to.deep.equal({ must: { match_all: {} } })
-    })
-
-    it('should ignore electronic resources when removeElectronicResourcesFromItemsArray is set', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true }))
-        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
   })
 

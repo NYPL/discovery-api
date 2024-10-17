@@ -33,6 +33,10 @@ describe('ES utils', () => {
       expect(esUtils.prefixMatch('prop', 'val', 101)).to.nested
         .include({ 'prefix.prop.value': 'val' })
         .include({ 'prefix.prop.boost': 101 })
+      // Default boost of 1:
+      expect(esUtils.prefixMatch('prop', 'val')).to.nested
+        .include({ 'prefix.prop.value': 'val' })
+        .include({ 'prefix.prop.boost': 1 })
     })
   })
 
@@ -41,6 +45,10 @@ describe('ES utils', () => {
       expect(esUtils.termMatch('prop', 'val', 101)).to.nested
         .include({ 'term.prop.value': 'val' })
         .include({ 'term.prop.boost': 101 })
+      // Default boost of 1:
+      expect(esUtils.termMatch('prop', 'val')).to.nested
+        .include({ 'term.prop.value': 'val' })
+        .include({ 'term.prop.boost': 1 })
     })
   })
 
@@ -49,6 +57,10 @@ describe('ES utils', () => {
       expect(esUtils.phraseMatch('prop', 'val', 101)).to.nested
         .include({ 'match_phrase.prop.query': 'val' })
         .include({ 'match_phrase.prop.boost': 101 })
+      // Default boost of 1:
+      expect(esUtils.phraseMatch('prop', 'val')).to.nested
+        .include({ 'match_phrase.prop.query': 'val' })
+        .include({ 'match_phrase.prop.boost': 1 })
     })
   })
 })
