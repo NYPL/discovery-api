@@ -107,7 +107,7 @@ describe('ElasticQueryBuilder', () => {
       // Expect boosting on several identifier fields:
       expect(inst.query.toJson().bool.should)
         .to.be.a('array')
-        .have.lengthOf.at.least(9).at.most(11)
+        .have.lengthOf.at.least(15).at.most(16)
     })
   })
 
@@ -118,13 +118,13 @@ describe('ElasticQueryBuilder', () => {
 
       // Expect multiple term/prefix matches on identifier fields:
       expect(inst.query.toJson()).to.nested
-        .include({ 'bool.must[0].bool.should[0].prefix.shelfMark\\.raw.value': 'toast' })
-        .include({ 'bool.must[0].bool.should[1].nested.query.prefix.items\\.shelfMark\\.raw.value': 'toast' })
+        .include({ 'bool.must[0].bool.should[0].prefix.shelfMark\\.keywordLowercased.value': 'toast' })
+        .include({ 'bool.must[0].bool.should[1].nested.query.prefix.items\\.shelfMark\\.keywordLowercased.value': 'toast' })
 
       // Expect boosting on several identifier fields:
       expect(inst.query.toJson().bool.should)
         .to.be.a('array')
-        .have.lengthOf.at.least(2).at.most(3)
+        .have.lengthOf.at.least(4).at.most(5)
     })
   })
 

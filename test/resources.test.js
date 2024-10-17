@@ -155,14 +155,13 @@ describe('Resources query', function () {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
       expect(body).to.nested
-        .include({ 'query.bool.must[0].bool.should[0].term.idIsbn': '0689844921' })
-        .include({ 'query.bool.must[0].bool.should[1].term.idIsbn_clean': '0689844921' })
+        .include({ 'query.bool.must[0].term.idIsbn\\.clean': '0689844921' })
     })
 
     it('processes issn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn': '1234-5678' })
+      expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn\\.clean': '1234-5678' })
     })
 
     it('processes lccn correctly', () => {

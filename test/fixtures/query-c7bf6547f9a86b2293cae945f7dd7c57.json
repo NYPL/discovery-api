@@ -1,6 +1,6 @@
 {
   "body": {
-    "took": 6,
+    "took": 4,
     "timed_out": false,
     "_shards": {
       "total": 2,
@@ -17,41 +17,24 @@
       "hits": [
         {
           "_index": "resources-2024-07-11",
-          "_id": "b13565153",
-          "_score": 834.0157,
+          "_id": "b12709113",
+          "_score": 1607.4841,
           "_source": {
             "extent": [
-              "430 p. : ill. ;"
-            ],
-            "note": [
-              {
-                "noteType": "Note",
-                "label": "Title on spine: Ladies companion to the flower garden.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Ladies' companion to the flower-garden (p. [97]-340), has half- title page.",
-                "type": "bf:Note"
-              },
-              {
-                "noteType": "Note",
-                "label": "Monthly calendar of work to be done in the flower-garden: p. [425]-430.",
-                "type": "bf:Note"
-              }
+              "iv, 350 p. : ill., port. ;"
             ],
             "nyplSource": [
               "sierra-nypl"
             ],
             "subjectLiteral_exploded": [
-              "Gardening",
-              "Flower gardening"
+              "Washington County (Neb.)",
+              "Washington County (Neb.) -- History"
             ],
             "numItemDatesParsed": [
               0
             ],
             "publisherLiteral": [
-              "John Wiley"
+              "Magic city printing co."
             ],
             "language": [
               {
@@ -63,72 +46,58 @@
               1
             ],
             "createdYear": [
-              1854
+              1937
             ],
-            "dateEndString": [
-              "1853"
+            "title": [
+              "A history of Washington county, Nebraska"
             ],
             "type": [
               "nypl:Item"
             ],
-            "title": [
-              "Gardening for ladies : and, Companion to the flower-garden"
-            ],
             "shelfMark": [
-              "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+              "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
             ],
             "numItemVolumesParsed": [
               0
             ],
             "createdString": [
-              "1854"
+              "1937"
             ],
             "creatorLiteral": [
-              "Loudon, Mrs. (Jane), 1807-1858."
+              "Shrader, Forrest B."
             ],
             "numElectronicResources": [
-              1
-            ],
-            "contributorLiteral": [
-              "Downing, A. J. (Andrew Jackson), 1815-1852."
+              0
             ],
             "dateStartYear": [
-              1854
+              1937
             ],
-            "creatorModifiedName": "Mrs Loudon",
+            "creatorModifiedName": "Forrest Shrader",
+            "idOclc": [
+              "9566258"
+            ],
             "identifierV2": [
               {
                 "type": "bf:ShelfMark",
-                "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
               },
               {
                 "type": "nypl:Bnumber",
-                "value": "13565153"
+                "value": "12709113"
               },
               {
                 "type": "nypl:Oclc",
-                "value": "31237346"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)nyp3539974"
+                "value": "9566258"
               }
             ],
-            "idOclc": [
-              "31237346"
-            ],
-            "dateEndYear": [
-              1853
-            ],
-            "updatedAt": 1711584773313,
+            "updatedAt": 1711220358338,
             "publicationStatement": [
-              "New York : John Wiley, 1854, c1853."
+              "[Omaha, : Magic city printing co., 1937]"
             ],
             "identifier": [
-              "urn:shelfmark:VQG (Loudon, J. W. Gardening for ladies. 1854)",
-              "urn:bnum:13565153",
-              "urn:oclc:31237346",
-              "urn:identifier:(WaOLN)nyp3539974"
+              "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+              "urn:bnum:12709113",
+              "urn:oclc:9566258"
             ],
             "numCheckinCardItems": [
               0
@@ -146,7 +115,7 @@
               }
             ],
             "dateString": [
-              "1854"
+              "1937"
             ],
             "mediaType": [
               {
@@ -155,25 +124,14 @@
               }
             ],
             "subjectLiteral": [
-              "Gardening.",
-              "Flower gardening."
+              "Washington County (Neb.) -- History."
             ],
             "titleDisplay": [
-              "Gardening for ladies : and, Companion to the flower-garden / by Mrs. Loudon."
+              "A history of Washington county, Nebraska / by Forrest B. Shrader."
             ],
-            "uri": "b13565153",
-            "electronicResources": [
-              {
-                "label": "Full text available via HathiTrust",
-                "url": "http://babel.hathitrust.org/cgi/pt?id=nyp.33433006564110"
-              }
-            ],
+            "uri": "b12709113",
             "placeOfPublication": [
-              "New York"
-            ],
-            "titleAlt": [
-              "Companion to the flower-garden.",
-              "Ladies' companion to the flower garden."
+              "[Omaha,"
             ],
             "issuance": [
               {
@@ -182,12 +140,12 @@
               }
             ],
             "dimensions": [
-              "20 cm."
+              "24 cm."
             ]
           },
           "sort": [
-            834.0157,
-            "b13565153"
+            1607.4841,
+            "b12709113"
           ],
           "inner_hits": {
             "items": {
@@ -200,7 +158,7 @@
                 "hits": [
                   {
                     "_index": "resources-2024-07-11",
-                    "_id": "b13565153",
+                    "_id": "b12709113",
                     "_nested": {
                       "field": "items",
                       "offset": 0
@@ -208,29 +166,26 @@
                     "_score": null,
                     "_source": {
                       "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1000",
-                          "label": "Stephen A. Schwarzman Building"
-                        }
+                        "accessMessage:1||Use in library"
                       ],
                       "identifier": [
-                        "urn:shelfmark:VQG (Loudon, J. W. Gardening for ladies. 1854)",
-                        "urn:barcode:33433006564110"
+                        "urn:shelfmark:IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
+                        "urn:barcode:33433099509238"
+                      ],
+                      "m2CustomerCode": [
+                        "XA"
                       ],
                       "physicalLocation": [
-                        "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       ],
-                      "shelfMark_sort": "aVQG (Loudon, J. W. Gardening for ladies. 1854)",
+                      "shelfMark_sort": "aIWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)",
                       "catalogItemType_packed": [
-                        "catalogItemType:32||google project, book"
+                        "catalogItemType:55||book, limited circ, MaRLI"
                       ],
                       "accessMessage": [
                         {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
+                          "id": "accessMessage:1",
+                          "label": "Use in library"
                         }
                       ],
                       "status_packed": [
@@ -240,35 +195,32 @@
                         "bf:Item"
                       ],
                       "shelfMark": [
-                        "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                        "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                       ],
-                      "uri": "i10708577",
+                      "uri": "i16202472",
                       "identifierV2": [
                         {
                           "type": "bf:ShelfMark",
-                          "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                          "value": "IWD (Washington co.) (Shrader, F. B. History of Washington county, Nebraska)"
                         },
                         {
                           "type": "bf:Barcode",
-                          "value": "33433006564110"
+                          "value": "33433099509238"
                         }
                       ],
                       "holdingLocation_packed": [
-                        "loc:rcma2||Offsite"
+                        "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
                       ],
                       "idBarcode": [
-                        "33433006564110"
-                      ],
-                      "owner_packed": [
-                        "orgs:1000||Stephen A. Schwarzman Building"
+                        "33433099509238"
                       ],
                       "requestable": [
                         true
                       ],
                       "catalogItemType": [
                         {
-                          "id": "catalogItemType:32",
-                          "label": "google project, book"
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
                         }
                       ],
                       "formatLiteral": [
@@ -276,12 +228,9 @@
                       ],
                       "holdingLocation": [
                         {
-                          "id": "loc:rcma2",
-                          "label": "Offsite"
+                          "id": "loc:mag92",
+                          "label": "Schwarzman Building M2 - Milstein Division Room 121"
                         }
-                      ],
-                      "recapCustomerCode": [
-                        "NL"
                       ],
                       "status": [
                         {
