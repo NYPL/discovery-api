@@ -57,10 +57,10 @@ describe('ES utils', () => {
       expect(esUtils.phraseMatch('prop', 'val', 101)).to.nested
         .include({ 'match_phrase.prop.query': 'val' })
         .include({ 'match_phrase.prop.boost': 101 })
-      // Default boost of 1:
+      // Default boost of 0:
       expect(esUtils.phraseMatch('prop', 'val')).to.nested
         .include({ 'match_phrase.prop.query': 'val' })
-        .include({ 'match_phrase.prop.boost': 1 })
+        .include({ 'match_phrase.prop.boost': 0 })
     })
   })
 })
