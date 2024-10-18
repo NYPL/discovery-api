@@ -31,7 +31,7 @@ describe('Resources query', function () {
       expect(params.search_scope).to.equal('all')
       expect(params.page).to.equal(1)
       expect(params.per_page).to.equal(50)
-      expect(params.sort).to.equal(undefined)
+      expect(params.sort).to.equal('relevance')
       expect(params.filters).to.equal(undefined)
       expect(params.merge_checkin_card_items).to.equal(true)
       expect(params.include_item_aggregations).to.equal(true)
@@ -46,33 +46,6 @@ describe('Resources query', function () {
     })
   })
 
-  describe('escapeQuery', function () {
-    it('should escape specials', function () {
-      expect(resourcesPrivMethods.escapeQuery('? ^ * + (')).to.equal('\\? \\^ \\* \\+ \\(')
-    })
-
-    it('should escape unrecognized field indicators', function () {
-      expect(resourcesPrivMethods.escapeQuery('fladeedle:gorf')).to.equal('fladeedle\\:gorf')
-    })
-
-    it('should not escape recognized field indicators', function () {
-      expect(resourcesPrivMethods.escapeQuery('title:gorf')).to.equal('title:gorf')
-    })
-
-    it('should escape a single forward slash', function () {
-      expect(resourcesPrivMethods.escapeQuery('/')).to.equal('\\/')
-    })
-
-    it('should escape floating colon', function () {
-      // Make sure colons floating in whitespace are escaped:
-      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡')
-    })
-
-    it('should escape colons in hyphenated phrases', function () {
-      expect(resourcesPrivMethods.escapeQuery('Arkheologii︠a︡ Omska : illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ / Avtor-sostavitelʹ: B.A. Konikov.')).to.equal('Arkheologii︠a︡ Omska \\: illi︠u︡strirovannai︠a︡ ėnt︠s︡iklopedii︠a︡ \\/ Avtor\\-sostavitelʹ\\: B.A. Konikov.')
-    })
-  })
-
   describe('buildElasticQuery', function () {
     it('uses "query string query" if subjectLiteral: used', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:potatoes' })
@@ -81,8 +54,8 @@ describe('Resources query', function () {
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
       expect(body.bool.must[0]).to.be.a('object')
-      expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.query).to.equal('subjectLiteral:potatoes')
+      expect(body.bool.must[0].multi_match).to.be.a('object')
+      expect(body.bool.must[0].multi_match.query).to.equal('subjectLiteral:potatoes')
     })
 
     it('uses "query string query" if subjectLiteral: quoted phrase used', function () {
@@ -92,8 +65,8 @@ describe('Resources query', function () {
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
       expect(body.bool.must[0]).to.be.a('object')
-      expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.query).to.equal('subjectLiteral:"hot potatoes"')
+      expect(body.bool.must[0].multi_match).to.be.a('object')
+      expect(body.bool.must[0].multi_match.query).to.equal('subjectLiteral:"hot potatoes"')
     })
 
     it('escapes colon if field not recognized', function () {
@@ -103,8 +76,8 @@ describe('Resources query', function () {
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
       expect(body.bool.must[0]).to.be.a('object')
-      expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.query).to.equal('fladeedle\\:"hot potatoes"')
+      expect(body.bool.must[0].multi_match).to.be.a('object')
+      expect(body.bool.must[0].multi_match.query).to.equal('fladeedle\\:"hot potatoes"')
     })
 
     it('uses "query string query" if plain keyword query used', function () {
@@ -114,8 +87,8 @@ describe('Resources query', function () {
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
       expect(body.bool.must[0]).to.be.a('object')
-      expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.query).to.equal('potatoes')
+      expect(body.bool.must[0].multi_match).to.be.a('object')
+      expect(body.bool.must[0].multi_match.query).to.equal('potatoes')
     })
 
     it('accepts advanced search parameters', function () {
@@ -124,65 +97,18 @@ describe('Resources query', function () {
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
-      expect(body.bool.must[0].query_string).to.be.a('object')
-      expect(body.bool.must[0].query_string.fields).to.be.a('array')
-      expect(body.bool.must[0].query_string.fields[0]).to.equal('title^5')
-      expect(body.bool.must[0].query_string.query).to.equal('Raven')
-      expect(body.bool.must[1].query_string).to.be.a('object')
-      expect(body.bool.must[1].query_string.fields).to.be.a('array')
-      expect(body.bool.must[1].query_string.fields[0]).to.equal('subjectLiteral^2')
-      expect(body.bool.must[1].query_string.query).to.equal('ravens')
-      expect(body.bool.must[2].query_string).to.be.a('object')
-      expect(body.bool.must[2].query_string.fields).to.be.a('array')
-      expect(body.bool.must[2].query_string.fields[0]).to.equal('creatorLiteral^4')
-      expect(body.bool.must[2].query_string.query).to.equal('Poe')
-    })
-  })
-
-  describe('buildElasticQueryForKeywords', function () {
-    it('returns a simple query_string query for search_scope=all', function () {
-      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'all' })
-      expect(query).to.be.a('object')
-      expect(query.query_string).to.be.a('object')
-      expect(query.query_string.fields).to.be.a('array')
-    })
-
-    it('returns a simple query_string query for search_scope=title', function () {
-      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'title' })
-      expect(query).to.be.a('object')
-      expect(query.query_string).to.be.a('object')
-      expect(query.query_string.fields).to.be.a('array')
-      expect(query.query_string.fields).to.include('uniformTitle.folded')
-    })
-
-    it('returns a bool query for search_scope=standard_number', function () {
-      const query = resourcesPrivMethods.buildElasticQueryForKeywords({ q: 'fladeedle', search_scope: 'standard_number' })
-      expect(query).to.be.a('object')
-      expect(query.bool).to.be.a('object')
-      expect(query.bool.should).to.be.a('array')
-
-      // First clause is a query_string query across multiple root level fields
-      expect(query.bool.should[0]).to.be.a('object')
-      expect(query.bool.should[0].query_string).to.be.a('object')
-      expect(query.bool.should[0].query_string.fields).to.be.a('array')
-      expect(query.bool.should[0].query_string.fields).to.include('shelfMark')
-      expect(query.bool.should[0].query_string.query).to.equal('fladeedle')
-
-      // Second clause is a query_string query across multiple root level fields, with literal query
-      expect(query.bool.should[1]).to.be.a('object')
-      expect(query.bool.should[1].query_string).to.be.a('object')
-      expect(query.bool.should[1].query_string.fields).to.be.a('array')
-      expect(query.bool.should[1].query_string.fields).to.include('shelfMark')
-      expect(query.bool.should[1].query_string.query).to.equal('"fladeedle"')
-
-      // Third clause is a nested query_string query on items fields:
-      expect(query.bool.should[2]).to.be.a('object')
-      expect(query.bool.should[2].nested).to.be.a('object')
-      expect(query.bool.should[2].nested.path).to.eq('items')
-      expect(query.bool.should[2].nested.query).to.be.a('object')
-      expect(query.bool.should[2].nested.query.query_string).to.be.a('object')
-      expect(query.bool.should[2].nested.query.query_string.fields).to.be.a('array')
-      expect(query.bool.should[2].nested.query.query_string.fields).to.include('items.shelfMark')
+      expect(body.bool.must[0].multi_match).to.be.a('object')
+      expect(body.bool.must[0].multi_match.fields).to.be.a('array')
+      expect(body.bool.must[0].multi_match.fields[0]).to.equal('title^5')
+      expect(body.bool.must[0].multi_match.query).to.equal('Raven')
+      expect(body.bool.must[1].multi_match).to.be.a('object')
+      expect(body.bool.must[1].multi_match.fields).to.be.a('array')
+      expect(body.bool.must[1].multi_match.fields[0]).to.equal('subjectLiteral^2')
+      expect(body.bool.must[1].multi_match.query).to.equal('ravens')
+      expect(body.bool.must[2].multi_match).to.be.a('object')
+      expect(body.bool.must[2].multi_match.fields).to.be.a('array')
+      expect(body.bool.must[2].multi_match.fields[0]).to.equal('creatorLiteral^4')
+      expect(body.bool.must[2].multi_match.query).to.equal('Poe')
     })
   })
 
@@ -208,7 +134,7 @@ describe('Resources query', function () {
         const body = resourcesPrivMethods.buildElasticBody(params)
 
         expect(body).to.be.a('object')
-        expect(body.query).to.be.a('undefined')
+        expect(body.query.filter).to.be.a('undefined')
       })
 
       it('filters by nyplSource when HIDE_NYPL_SOURCE is set', function () {
@@ -219,21 +145,7 @@ describe('Resources query', function () {
 
         // Expect query to resemble: {"from":0,"size":50,"query":{"bool":{"filter":[{"bool":{"must_not":{"terms":{"nyplSource":["recap-hl"]}}}}]}},"sort":["uri"]}
         expect(body).to.be.a('object')
-        expect(body).to.have.deep.property('query', {
-          bool: {
-            filter: [
-              {
-                bool: {
-                  must_not: {
-                    terms: {
-                      nyplSource: ['recap-hl']
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        })
+        expect(body).to.nested.include({ 'query.bool.filter[0].bool.must_not.terms.nyplSource[0]': 'recap-hl' })
 
         delete process.env.HIDE_NYPL_SOURCE
       })
@@ -242,35 +154,26 @@ describe('Resources query', function () {
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({
-        query: {
-          bool: {
-            should: [
-              { term: { idIsbn: '0689844921' } },
-              { term: { idIsbn_clean: '0689844921' } }
-            ],
-            minimum_should_match: 1
-          }
-        }
-      })
+      expect(body).to.nested
+        .include({ 'query.bool.must[0].term.idIsbn\\.clean': '0689844921' })
     })
 
     it('processes issn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { bool: { must: { term: { idIssn: '1234-5678' } } } } })
+      expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn\\.clean': '1234-5678' })
     })
 
     it('processes lccn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ lccn: '00068799' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { regexp: { idLccn: { value: '[^\\d]*00068799[^\\d]*' } } } })
+      expect(body).to.nested.include({ 'query.bool.must[0].regexp.idLccn.value': '[^\\d]*00068799[^\\d]*' })
     })
 
     it('processes oclc correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ oclc: '1033548057' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.deep.equal({ query: { bool: { must: { term: { idOclc: '1033548057' } } } } })
+      expect(body).to.nested.include({ 'query.bool.must[0].term.idOclc': '1033548057' })
     })
   })
 
@@ -316,7 +219,7 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri 404', () => {
+  describe('findByUri 4xx', () => {
     before(() => {
       fixtures.enableEsFixtures()
     })
@@ -328,6 +231,11 @@ describe('Resources query', function () {
     it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
+    })
+
+    it('handles invalid bib uri with 400', () => {
+      const call = () => app.resources.findByUri({ uri: 'asdf' })
+      return expect(call).to.throw(errors.InvalidParameterError, 'Invalid bnum: asdf')
     })
   })
 
@@ -344,7 +252,15 @@ describe('Resources query', function () {
       expect(searchBody).to.deep.equal({
         _source: {
           // note absence of "*_sort"
-          excludes: ['uris', '*_packed', 'items.*_packed', 'contentsTitle']
+          excludes: [
+            'uris',
+            '*_packed',
+            'items.*_packed',
+            'contentsTitle',
+            'suppressed',
+            '*WithoutDates',
+            '*Normalized'
+          ]
         },
         size: 1,
         query: {
@@ -571,29 +487,19 @@ describe('Resources query', function () {
   })
 
   describe('itemsQueryContext', () => {
-    it('should ignore check in card items when merge_checkin_card_items is not set', () => {
+    it('should exclude check in card items when options.merge_checkin_card_items is not set', () => {
       expect(resourcesPrivMethods.itemsQueryContext({}))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
-    it('should ignore check in card items when merge_checkin_card_items is falsey', () => {
+    it('should exclude check in card items when merge_checkin_card_items is falsey', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
-    it('should include check in card items when merge_checkin_card_items is truthy', () => {
+    it('should use match_all for items when merge_checkin_card_items is truthy', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }] })
-    })
-
-    it('should include check in card items but exclude electronic resources when merge_checkin_card_items is truthy and removeElectronicResourcesFromItemsArray is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true, merge_checkin_card_items: true }))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }] })
-    })
-
-    it('should ignore electronic resources when removeElectronicResourcesFromItemsArray is set', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ removeElectronicResourcesFromItemsArray: true }))
-        .to.deep.equal({ must_not: [{ exists: { field: 'items.electronicLocator' } }, { term: { 'items.type': 'nypl:CheckinCardItem' } }] })
+        .to.deep.equal({ must: { match_all: {} } })
     })
   })
 
@@ -612,9 +518,9 @@ describe('Resources query', function () {
                           path: 'items',
                           query: {
                             bool: {
-                              must_not: [
-                                { exists: { field: 'items.electronicLocator' } }
-                              ]
+                              must: {
+                                match_all: {}
+                              }
                             }
                           },
                           inner_hits: {
@@ -622,19 +528,6 @@ describe('Resources query', function () {
                             size: 1,
                             from: 2,
                             name: 'items'
-                          }
-                        }
-                      },
-                      {
-                        nested: {
-                          inner_hits: {
-                            name: 'electronicResources'
-                          },
-                          path: 'items',
-                          query: {
-                            exists: {
-                              field: 'items.electronicLocator'
-                            }
                           }
                         }
                       },
@@ -663,7 +556,6 @@ describe('Resources query', function () {
                           query: {
                             bool: {
                               must_not: [
-                                { exists: { field: 'items.electronicLocator' } },
                                 { term: { 'items.type': 'nypl:CheckinCardItem' } }
                               ]
                             }
@@ -673,19 +565,6 @@ describe('Resources query', function () {
                             size: 1,
                             from: 2,
                             name: 'items'
-                          }
-                        }
-                      },
-                      {
-                        nested: {
-                          inner_hits: {
-                            name: 'electronicResources'
-                          },
-                          path: 'items',
-                          query: {
-                            exists: {
-                              field: 'items.electronicLocator'
-                            }
                           }
                         }
                       },
@@ -715,9 +594,9 @@ describe('Resources query', function () {
                         path: 'items',
                         query: {
                           bool: {
-                            must_not: [
-                              { exists: { field: 'items.electronicLocator' } }
-                            ],
+                            must: {
+                              match_all: {}
+                            },
                             filter: [
                               { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
                               { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
@@ -729,19 +608,6 @@ describe('Resources query', function () {
                           size: 1,
                           from: 2,
                           name: 'items'
-                        }
-                      }
-                    },
-                    {
-                      nested: {
-                        inner_hits: {
-                          name: 'electronicResources'
-                        },
-                        path: 'items',
-                        query: {
-                          exists: {
-                            field: 'items.electronicLocator'
-                          }
                         }
                       }
                     },

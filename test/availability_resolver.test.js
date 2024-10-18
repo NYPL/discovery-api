@@ -7,7 +7,7 @@ const recapScsbQueryMatch = require('./fixtures/recap-scsb-query-match')
 const recapScsbQueryMismatch = require('./fixtures/recap-scsb-query-mismatch')
 const logger = require('../lib/logger')
 const scsbClient = require('../lib/scsb-client')
-const esClient = require('../lib/es-client')
+const esClient = require('../lib/elasticsearch/client')
 
 const itemAvailabilityResponse = [
   {
