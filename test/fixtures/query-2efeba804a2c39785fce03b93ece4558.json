@@ -1,0 +1,284 @@
+{
+  "body": {
+    "took": 11,
+    "timed_out": false,
+    "_shards": {
+      "total": 2,
+      "successful": 2,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": {
+        "value": 1,
+        "relation": "eq"
+      },
+      "max_score": null,
+      "hits": [
+        {
+          "_index": "resources-2024-07-11",
+          "_id": "b13627363",
+          "_score": 6,
+          "_source": {
+            "extent": [
+              "128 p. illus."
+            ],
+            "nyplSource": [
+              "sierra-nypl"
+            ],
+            "subjectLiteral_exploded": [
+              "Cats",
+              "Cats -- Pictorial works"
+            ],
+            "numItemDatesParsed": [
+              0
+            ],
+            "publisherLiteral": [
+              "Creative age press, inc."
+            ],
+            "language": [
+              {
+                "id": "lang:eng",
+                "label": "English"
+              }
+            ],
+            "numItemsTotal": [
+              1
+            ],
+            "createdYear": [
+              1947
+            ],
+            "title": [
+              "Cats, cats, & cats"
+            ],
+            "type": [
+              "nypl:Item"
+            ],
+            "shelfMark": [
+              "VPS (Rice, E. Cats, cats, & cats)"
+            ],
+            "numItemVolumesParsed": [
+              0
+            ],
+            "createdString": [
+              "1947"
+            ],
+            "creatorLiteral": [
+              "Rice, Edward, 1917-"
+            ],
+            "idLccn": [
+              "agr47000211"
+            ],
+            "numElectronicResources": [
+              0
+            ],
+            "contributorLiteral": [
+              "Gleason, Jean, 1917-"
+            ],
+            "dateStartYear": [
+              1947
+            ],
+            "creatorModifiedName": "Edward Rice",
+            "idOclc": [
+              "1303934"
+            ],
+            "identifierV2": [
+              {
+                "type": "bf:ShelfMark",
+                "value": "VPS (Rice, E. Cats, cats, & cats)"
+              },
+              {
+                "type": "nypl:Bnumber",
+                "value": "13627363"
+              },
+              {
+                "type": "nypl:Oclc",
+                "value": "1303934"
+              },
+              {
+                "type": "bf:Lccn",
+                "value": "agr47000211"
+              },
+              {
+                "type": "bf:Identifier",
+                "value": "(WaOLN)nyp3600714"
+              }
+            ],
+            "updatedAt": 1711615235963,
+            "publicationStatement": [
+              "New York, Creative age press, inc. [c1947]"
+            ],
+            "identifier": [
+              "urn:shelfmark:VPS (Rice, E. Cats, cats, & cats)",
+              "urn:bnum:13627363",
+              "urn:oclc:1303934",
+              "urn:lccn:agr47000211",
+              "urn:identifier:(WaOLN)nyp3600714"
+            ],
+            "numCheckinCardItems": [
+              0
+            ],
+            "materialType": [
+              {
+                "id": "resourcetypes:txt",
+                "label": "Text"
+              }
+            ],
+            "carrierType": [
+              {
+                "id": "carriertypes:nc",
+                "label": "volume"
+              }
+            ],
+            "dateString": [
+              "1947"
+            ],
+            "mediaType": [
+              {
+                "id": "mediatypes:n",
+                "label": "unmediated"
+              }
+            ],
+            "subjectLiteral": [
+              "Cats.",
+              "Cats -- Pictorial works."
+            ],
+            "titleDisplay": [
+              "Cats, cats, & cats, by Edward Rice and Jean Gleason."
+            ],
+            "uri": "b13627363",
+            "lccClassification": [
+              "SF447 .R5"
+            ],
+            "placeOfPublication": [
+              "New York"
+            ],
+            "issuance": [
+              {
+                "id": "urn:biblevel:m",
+                "label": "monograph/item"
+              }
+            ],
+            "dimensions": [
+              "25 cm."
+            ]
+          },
+          "sort": [
+            6,
+            "b13627363"
+          ],
+          "inner_hits": {
+            "items": {
+              "hits": {
+                "total": {
+                  "value": 1,
+                  "relation": "eq"
+                },
+                "max_score": null,
+                "hits": [
+                  {
+                    "_index": "resources-2024-07-11",
+                    "_id": "b13627363",
+                    "_nested": {
+                      "field": "items",
+                      "offset": 0
+                    },
+                    "_score": null,
+                    "_source": {
+                      "accessMessage_packed": [
+                        "accessMessage:2||Request in advance"
+                      ],
+                      "owner": [
+                        {
+                          "id": "orgs:1000",
+                          "label": "Stephen A. Schwarzman Building"
+                        }
+                      ],
+                      "identifier": [
+                        "urn:shelfmark:VPS (Rice, E. Cats, cats, & cats)",
+                        "urn:barcode:33433006598316"
+                      ],
+                      "physicalLocation": [
+                        "VPS (Rice, E. Cats, cats, & cats)"
+                      ],
+                      "shelfMark_sort": "aVPS (Rice, E. Cats, cats, & cats)",
+                      "catalogItemType_packed": [
+                        "catalogItemType:55||book, limited circ, MaRLI"
+                      ],
+                      "accessMessage": [
+                        {
+                          "id": "accessMessage:2",
+                          "label": "Request in advance"
+                        }
+                      ],
+                      "status_packed": [
+                        "status:a||Available"
+                      ],
+                      "type": [
+                        "bf:Item"
+                      ],
+                      "shelfMark": [
+                        "VPS (Rice, E. Cats, cats, & cats)"
+                      ],
+                      "uri": "i10754478",
+                      "identifierV2": [
+                        {
+                          "type": "bf:ShelfMark",
+                          "value": "VPS (Rice, E. Cats, cats, & cats)"
+                        },
+                        {
+                          "type": "bf:Barcode",
+                          "value": "33433006598316"
+                        }
+                      ],
+                      "holdingLocation_packed": [
+                        "loc:rc2ma||Offsite"
+                      ],
+                      "idBarcode": [
+                        "33433006598316"
+                      ],
+                      "owner_packed": [
+                        "orgs:1000||Stephen A. Schwarzman Building"
+                      ],
+                      "requestable": [
+                        true
+                      ],
+                      "catalogItemType": [
+                        {
+                          "id": "catalogItemType:55",
+                          "label": "book, limited circ, MaRLI"
+                        }
+                      ],
+                      "formatLiteral": [
+                        "Text"
+                      ],
+                      "holdingLocation": [
+                        {
+                          "id": "loc:rc2ma",
+                          "label": "Offsite"
+                        }
+                      ],
+                      "recapCustomerCode": [
+                        "NL"
+                      ],
+                      "status": [
+                        {
+                          "id": "status:a",
+                          "label": "Available"
+                        }
+                      ]
+                    },
+                    "sort": [
+                      null
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "statusCode": 200
+}

@@ -155,14 +155,13 @@ describe('Resources query', function () {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
       const body = resourcesPrivMethods.buildElasticBody(params)
       expect(body).to.nested
-        .include({ 'query.bool.must[0].bool.should[0].term.idIsbn': '0689844921' })
-        .include({ 'query.bool.must[0].bool.should[1].term.idIsbn_clean': '0689844921' })
+        .include({ 'query.bool.must[0].term.idIsbn\\.clean': '0689844921' })
     })
 
     it('processes issn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
       const body = resourcesPrivMethods.buildElasticBody(params)
-      expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn': '1234-5678' })
+      expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn\\.clean': '1234-5678' })
     })
 
     it('processes lccn correctly', () => {
@@ -220,7 +219,7 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri 404', () => {
+  describe('findByUri 4xx', () => {
     before(() => {
       fixtures.enableEsFixtures()
     })
@@ -232,6 +231,11 @@ describe('Resources query', function () {
     it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
+    })
+
+    it('handles invalid bib uri with 400', () => {
+      const call = () => app.resources.findByUri({ uri: 'asdf' })
+      return expect(call).to.throw(errors.InvalidParameterError, 'Invalid bnum: asdf')
     })
   })
 
@@ -248,7 +252,15 @@ describe('Resources query', function () {
       expect(searchBody).to.deep.equal({
         _source: {
           // note absence of "*_sort"
-          excludes: ['uris', '*_packed', 'items.*_packed', 'contentsTitle']
+          excludes: [
+            'uris',
+            '*_packed',
+            'items.*_packed',
+            'contentsTitle',
+            'suppressed',
+            '*WithoutDates',
+            '*Normalized'
+          ]
         },
         size: 1,
         query: {

@@ -29,7 +29,8 @@
     "sinon": "^17.0.1",
     "standard": "^17.0.1",
     "supertest": "^7.0.0",
-    "table": "^6.8.2"
+    "table": "^6.8.2",
+    "yaml": "^2.6.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/standard --env mocha && NODE_ENV=test ./node_modules/.bin/mocha test --exit",
@@ -58,7 +59,7 @@
       "/logs-to-tsv/*"
     ]
   },
-  "version": "1.1.3",
+  "version": "1.1.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/NYPL/discovery-api.git"
