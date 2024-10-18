@@ -1,33 +1,29 @@
 {
   "body": {
-    "took": 1,
+    "took": 8,
     "timed_out": false,
     "_shards": {
-      "total": 1,
-      "successful": 1,
-      "skipped": 0,
+      "total": 3,
+      "successful": 3,
       "failed": 0
     },
     "hits": {
-      "total": {
-        "value": 1,
-        "relation": "eq"
-      },
-      "max_score": null,
+      "total": 1,
+      "max_score": 0,
       "hits": []
     },
     "aggregations": {
       "statuses": {
-        "doc_count": 824,
+        "doc_count": 848,
         "nonrecap_statuses": {
-          "doc_count": 692,
+          "doc_count": 716,
           "nonrecap_status_buckets": {
             "doc_count_error_upper_bound": 0,
             "sum_other_doc_count": 0,
             "buckets": [
               {
                 "key": "status:a||Available",
-                "doc_count": 635
+                "doc_count": 659
               },
               {
                 "key": "status:i||At bindery",
@@ -35,11 +31,11 @@
               },
               {
                 "key": "status:na||Not available",
-                "doc_count": 9
+                "doc_count": 11
               },
               {
                 "key": "status:co||Loaned",
-                "doc_count": 5
+                "doc_count": 3
               },
               {
                 "key": "status:m||Missing",

@@ -63,7 +63,7 @@ describe('Test Resources responses', function () {
         // are not returned from ES at the beginning of the items array, but
         // should end up sorted there by the response massager.
         expect(firstTenItems.every(isCheckinCardItem))
-        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 35 (Oct. 28, 2024)')
+        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 44 (Dec. 30, 2024)')
         const lastIndex = doc.items.length - 1
         expect(doc.items[lastIndex].enumerationChronology[0]).to.equal('Aug. 9-Oct. 25 (1930)')
         done()
@@ -128,7 +128,6 @@ describe('Test Resources responses', function () {
         // Note: When updating fixtures, the following value may change. The
         // most important thing is that it appears to filter out items from the
         // 800+ item bib:
-        console.log('num items matched: ', doc.numItemsMatched)
         expect(doc.numItemsMatched).to.be.lessThan(80)
         done()
       })
