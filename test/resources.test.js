@@ -219,7 +219,7 @@ describe('Resources query', function () {
     })
   })
 
-  describe('findByUri 404', () => {
+  describe('findByUri 4xx', () => {
     before(() => {
       fixtures.enableEsFixtures()
     })
@@ -231,6 +231,11 @@ describe('Resources query', function () {
     it('handles bib 404 by rejecting with NotFoundError', () => {
       const call = () => app.resources.findByUri({ uri: 'b123' })
       return expect(call()).to.be.rejectedWith(errors.NotFoundError)
+    })
+
+    it('handles invalid bib uri with 400', () => {
+      const call = () => app.resources.findByUri({ uri: 'asdf' })
+      return expect(call).to.throw(errors.InvalidParameterError, 'Invalid bnum: asdf')
     })
   })
 
@@ -247,7 +252,15 @@ describe('Resources query', function () {
       expect(searchBody).to.deep.equal({
         _source: {
           // note absence of "*_sort"
-          excludes: ['uris', '*_packed', 'items.*_packed', 'contentsTitle']
+          excludes: [
+            'uris',
+            '*_packed',
+            'items.*_packed',
+            'contentsTitle',
+            'suppressed',
+            '*WithoutDates',
+            '*Normalized'
+          ]
         },
         size: 1,
         query: {
