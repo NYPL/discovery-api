@@ -23,7 +23,7 @@
           "discovery"
         ],
         "summary": "Search resources (bibs and items)",
-        "description": "Match by keyword\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> `/resources?filters[property1]=value1&filters[property2]=value2`\n\nWhere `property*` is one of: \n\n> 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL/discovery-api/blob/main/README.md)\n",
+        "description": "Match by keyword\n> `/resources?q=war peace`\n\nFilters are applied using a `filters` param that expects this syntax on the query string:\n\n> `/resources?filters[property1]=value1&filters[property2]=value2`\n\nWhere `property*` is one of: \n\n> 'owner', 'buildingLocation', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.\n\nSee [the app README for more examples](https://github.com/NYPL/discovery-api/blob/main/README.md)\n",
         "parameters": [
           {
             "name": "q",
@@ -85,6 +85,7 @@
             "enum": [
               "all",
               "title",
+              "journal_title",
               "contributor",
               "subject",
               "series",
@@ -96,29 +97,9 @@
           {
             "name": "filters[*]",
             "in": "query",
-            "description": "Specify a hash of filters to apply, where key is: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "description": "Specify a hash of filters to apply, where key is: 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
             "required": false,
             "type": "string"
-          },
-          {
-            "name": "items_size",
-            "in": "query",
-            "description": "Specify many items to return",
-            "default": 100,
-            "type": "number"
-          },
-          {
-            "name": "items_from",
-            "type": "number",
-            "in": "query",
-            "description": "Specify starting index for retrieved items",
-            "default": 0
-          },
-          {"name": "all_items",
-           "type": "boolean",
-           "in": "query",
-           "description": "When true, fetches all items for a bib. Overrides items_from and items_size",
-           "default": false
           },
           {
             "name": "contributor",
@@ -209,6 +190,45 @@
             "description": "ID",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "items_size",
+            "in": "query",
+            "description": "Specify many items to return",
+            "default": 100,
+            "type": "number"
+          },
+          {
+            "name": "items_from",
+            "type": "number",
+            "in": "query",
+            "description": "Specify starting index for retrieved items",
+            "default": 0
+          },
+          {
+            "name": "all_items",
+            "type": "boolean",
+            "in": "query",
+            "description": "When true, fetches all items for a bib. Overrides items_from and items_size",
+            "default": false
+          },
+          {
+            "name": "item_location",
+            "type": "string",
+            "in": "query",
+            "description": "Filter on item location"
+          },
+          {
+            "name": "item_status",
+            "type": "string",
+            "in": "query",
+            "description": "Filter on item status"
+          },
+          {
+            "name": "item_format",
+            "type": "string",
+            "in": "query",
+            "description": "Filter on item format"
           }
         ],
         "tags": [
@@ -268,6 +288,7 @@
             "enum": [
               "all",
               "title",
+              "journal_title",
               "contributor",
               "subject",
               "series",
@@ -278,7 +299,7 @@
           {
             "name": "filters[*]",
             "in": "query",
-            "description": "Specify a hash of filters to apply, where key is: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "description": "Specify a hash of filters to apply, where key is: 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
             "required": false,
             "type": "string"
           }

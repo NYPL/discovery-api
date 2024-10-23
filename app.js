@@ -1,10 +1,11 @@
 const express = require('express')
 
-const esClient = require('./lib/es-client')
+const esClient = require('./lib/elasticsearch/client')
 const loadConfig = require('./lib/load-config')
 const { preflightCheck } = require('./lib/preflight_check')
 
 const swaggerDocs = require('./swagger.v1.1.x.json')
+
 const pjson = require('./package.json')
 
 const app = express()
@@ -52,6 +53,8 @@ app.init = async () => {
   app.get('/api/v0.1/discovery/swagger', function (req, res) {
     res.send(swaggerDocs)
   })
+
+  return app
 }
 
 app.start = async () => {
