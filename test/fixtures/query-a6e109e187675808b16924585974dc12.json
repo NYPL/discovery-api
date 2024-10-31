@@ -1,21 +1,18 @@
 {
-  "body": {
-    "took": 9,
-    "timed_out": false,
-    "_shards": {
-      "total": 2,
-      "successful": 2,
-      "skipped": 0,
-      "failed": 0
-    },
-    "hits": {
-      "total": {
-        "value": 0,
-        "relation": "eq"
-      },
-      "max_score": null,
-      "hits": []
-    }
+  "took": 40,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
   },
-  "statusCode": 200
+  "hits": {
+    "total": {
+      "value": 0,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": []
+  }
 }

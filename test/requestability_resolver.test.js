@@ -13,6 +13,7 @@ describe('RequestabilityResolver', () => {
       const resp = RequestabilityResolver.fixItemRequestability(noBarcode)
       expect(resp.hits.hits[0]._source.items.every((item) => item.physRequestable === false)).to.equal(true)
     })
+
     it('will set requestable to false for an item not found in ReCAP', function () {
       const indexedButNotAvailableInSCSBURI = 'i22566485'
 

@@ -1,0 +1,2821 @@
+{
+  "took": 96,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 2,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "resources-2024-10-22",
+        "_id": "b11481799",
+        "_score": 16,
+        "_source": {
+          "extent": [
+            "1 score (volumes) : facsimiles ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Includes prefatory material and critical commentaries in German with English translations; many volumes include separate facsimile supplements.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Serie VIII, Bd. 6 (Thematic catalog) classified separately in LC under: ML134.S4 A28 2003",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Publisher's numbers: BSS 46846/<60298>; RSA 1001/<1069>.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Plate numbers: 46 830/<46 860>.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "German and Latin words.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Music",
+            "Vocal music",
+            "Vocal music -- Scores",
+            "Instrumental music",
+            "Instrumental music -- Scores"
+          ],
+          "numItemDatesParsed": [
+            2
+          ],
+          "publisherLiteral": [
+            "Schott"
+          ],
+          "language": [
+            {
+              "id": "lang:ger",
+              "label": "German"
+            }
+          ],
+          "numItemsTotal": [
+            100
+          ],
+          "createdYear": [
+            1991
+          ],
+          "dateEndString": [
+            "9999"
+          ],
+          "title": [
+            "Neue Ausgabe sämtlicher Werke"
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [
+            "JMN 91-37"
+          ],
+          "numItemVolumesParsed": [
+            63
+          ],
+          "createdString": [
+            "1991"
+          ],
+          "creatorLiteral": [
+            "Schumann, Robert, 1810-1856"
+          ],
+          "idLccn": [
+            "92752426",
+            "9790001217842",
+            "9790001217859",
+            "9790001155878",
+            "9790001155892",
+            "9790001197540",
+            "9790001155922",
+            "M001128513",
+            "9790001155946",
+            "9790001206839",
+            "9790001155960",
+            "9790001155977",
+            "9790001155984",
+            "9790001156004",
+            "9790001208253",
+            "M001113175",
+            "9790001147767",
+            "M001156110",
+            "9790001217781",
+            "9790001217798",
+            "9790001216029",
+            "9790001216036",
+            "9790001156158",
+            "9790001157025",
+            "9790001156196",
+            "9790001156202",
+            "9790001213479",
+            "9790001213486",
+            "9790001193474",
+            "9790001156233",
+            "9790001174213",
+            "M001133609",
+            "9790001138673",
+            "M001131667",
+            "M001133623"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Mayeda, Akio",
+            "Niemöller, Klaus Wolfgang",
+            "Paganini, Nicolò, 1782-1840.",
+            "Robert-Schumann-Gesellschaft Düsseldorf, issuing body",
+            "Robert-Schumann-Haus Zwickau, issuing body"
+          ],
+          "addedAuthorTitle": [
+            "Caprices"
+          ],
+          "dateStartYear": [
+            1991
+          ],
+          "idOclc": [
+            "25551434"
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JMN 91-37"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "11481799"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795730802"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795730819"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794866"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794862"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794699"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794692"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795793388"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795793386"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794804"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794803"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794897"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794897"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794668"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794668"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794545"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794544"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795793210"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795793211"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794521"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794528"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783759794895"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3759794890"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795794576"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795794579"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795711030"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795711037"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795716547"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795716543"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795711023"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795711029"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0001156195"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9780001156197"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795730767"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795700829"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795700825"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795718091"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795718090"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795730758"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795730759"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795730765"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795798871"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795786922"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795786924"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795786939"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795786932"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795726348"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795726344"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9783795726386"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795726387"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9790001217798"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795730805"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795730813"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "3795798876"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "25551434"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "92752426"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001217842"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001217859"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155878"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155892"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001197540"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155922"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "M001128513"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155946"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001206839"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155960"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155977"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001155984"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001156004"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001208253"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "M001113175"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001147767"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "M001156110"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001217781"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001217798"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001216029"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001216036"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001156158"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001157025"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001156196"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001156202"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001213479"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001213486"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001193474"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001156233"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001174213"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "M001133609"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001138673"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "M001131667"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "M001133623"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "9790001155997"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "9790001157010"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 830 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 831 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 832 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 833 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 835 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 836 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 840 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 841 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 843 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 845 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 847 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 848 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "46 855 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46846 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46849 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46853 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46855 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46860 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46861 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46863 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 46865 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 57214 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 57254 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 57384 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 57691 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 57692 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 59158 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 59159 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 59160 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 59493 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 59591 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 60136 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1001-10 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1001-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1002 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1003 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1007-10 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1007-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1011 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1015 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1016 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1017 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1018 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1019 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1020 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1021-10 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1021-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1032-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1037-10 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1037-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1038-10 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1038-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1039 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1043-10 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1043-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1044 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1045 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1046-10--RSA 1046-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1048 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1057-10--RSA 1057-20 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1058 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1065 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "RSA 1069 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 60294 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 60295 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 60297 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "BSS 60298 Schott"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)25551434"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)24261548 (OCoLC)24555199 (OCoLC)25341179 (OCoLC)921918725 (OCoLC)923345847 (OCoLC)974752377 (OCoLC)976558002 (OCoLC)987010083 (OCoLC)1045748175 (OCoLC)1057109311 (OCoLC)1066804977 (OCoLC)1109464156 (OCoLC)1180843906 (OCoLC)1225693248 (OCoLC)1229937286"
+            }
+          ],
+          "uniformTitle": [
+            "Works. 1991"
+          ],
+          "popularity": 2,
+          "dateEndYear": [
+            9999
+          ],
+          "holdings": [
+            {
+              "checkInBoxes": [
+                {
+                  "coverage": "1:1:1.1",
+                  "position": 1,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "1:1:1.2",
+                  "position": 2,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "1:1:2",
+                  "position": 3,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "1:1:4",
+                  "position": 4,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "1:1:6",
+                  "position": 5,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 1 No. 2",
+                  "position": 6,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "1:3: ",
+                  "position": 7,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "3:1:4",
+                  "position": 8,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "2:1:3",
+                  "position": 9,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 2 No. 3",
+                  "position": 10,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "3:1:1/2",
+                  "position": 11,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "3:1:2",
+                  "position": 12,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "3:1:5",
+                  "position": 13,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 3 No. 3",
+                  "position": 14,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "4:3:1/2",
+                  "position": 15,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 5 No. 3.1",
+                  "position": 16,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 5 No. 3.2",
+                  "position": 17,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 1.1",
+                  "position": 18,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 1.2",
+                  "position": 19,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "6:6:1",
+                  "position": 20,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "6:6:1",
+                  "position": 21,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 2 (2017)",
+                  "position": 22,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Arrived"
+                },
+                {
+                  "coverage": "Vol. 6 No. 2",
+                  "position": 23,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 7",
+                  "position": 24,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 8",
+                  "position": 25,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "6:6:2",
+                  "position": 26,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 9.1",
+                  "position": 27,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 6 No. 9.2",
+                  "position": 28,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "7:1:2",
+                  "position": 29,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 7 No. 3",
+                  "position": 30,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "7:3:1 (2010)",
+                  "position": 31,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "7:3:2",
+                  "position": 32,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "7:3:3/2",
+                  "position": 33,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 8 No. 1",
+                  "position": 34,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 8 No. 2",
+                  "position": 35,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "Vol. 8 No. 6",
+                  "position": 36,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Bound"
+                },
+                {
+                  "coverage": "",
+                  "position": 37,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 38,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 39,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 40,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 41,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 42,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 43,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 44,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 45,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 46,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                },
+                {
+                  "coverage": "",
+                  "position": 47,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "JMN 91-37"
+                  ],
+                  "status": "Expected"
+                }
+              ],
+              "holdingStatement": [
+                "[Ser. 1] 1:2, 1:3- 1:6, 2:1-2:2, 3 [Ser. 2] 1:1, 2:3, 3 [Ser. 3] 1:1/2, 1:2- 1:5, 1:6/2, 2-3 [Ser. 4] 3:1/1, 3:1/2, 3:2- 3:3 [Ser. 5] 2, 3.1-3.2- [Ser. 6] 1.1-1.2, 2, 7, 8, 9:1- 9:2, 6:1, 6:2 [Ser. 7] 1:2, 3, 3:1- 3:2, 3:3/2, 3:5 [Ser. 8] 2-"
+              ],
+              "identifier": [
+                {
+                  "type": "bf:shelfMark",
+                  "value": "JMN 91-37"
+                }
+              ],
+              "physicalLocation": [
+                "JMN 91-37"
+              ],
+              "location": [
+                {
+                  "code": "loc:pam",
+                  "label": "Performing Arts Research Collections - Music"
+                }
+              ],
+              "shelfMark": [
+                "JMN 91-37"
+              ],
+              "uri": "h1061152"
+            }
+          ],
+          "updatedAt": 1729001768022,
+          "publicationStatement": [
+            "Mainz ; New York : Schott, 1991-<2023>"
+          ],
+          "genreForm": [
+            "Scores.",
+            "Art music.",
+            "Music.",
+            "Vocal music.",
+            "Instrumental music."
+          ],
+          "idIsbn": [
+            "9783795730802",
+            "9783795730819",
+            "9783795794866",
+            "3795794862",
+            "9783795794699",
+            "3795794692",
+            "9783795793388",
+            "3795793386",
+            "9783795794804",
+            "3795794803",
+            "9783795794897",
+            "3795794897",
+            "9783795794668",
+            "3795794668",
+            "9783795794545",
+            "3795794544",
+            "9783795793210",
+            "3795793211",
+            "9783795794521",
+            "3795794528",
+            "9783759794895",
+            "3759794890",
+            "9783795794576",
+            "3795794579",
+            "9783795711030",
+            "3795711037",
+            "9783795716547",
+            "3795716543",
+            "9783795711023",
+            "3795711029",
+            "0001156195",
+            "9780001156197",
+            "3795730767",
+            "9783795700829",
+            "3795700825",
+            "9783795718091",
+            "3795718090",
+            "9783795730758",
+            "3795730759",
+            "9783795730765",
+            "9783795798871",
+            "9783795786922",
+            "3795786924",
+            "9783795786939",
+            "3795786932",
+            "9783795726348",
+            "3795726344",
+            "9783795726386",
+            "3795726387",
+            "9790001217798",
+            "3795730805",
+            "3795730813",
+            "3795798876"
+          ],
+          "identifier": [
+            "urn:shelfmark:JMN 91-37",
+            "urn:bnum:11481799",
+            "urn:isbn:9783795730802",
+            "urn:isbn:9783795730819",
+            "urn:isbn:9783795794866",
+            "urn:isbn:3795794862",
+            "urn:isbn:9783795794699",
+            "urn:isbn:3795794692",
+            "urn:isbn:9783795793388",
+            "urn:isbn:3795793386",
+            "urn:isbn:9783795794804",
+            "urn:isbn:3795794803",
+            "urn:isbn:9783795794897",
+            "urn:isbn:3795794897",
+            "urn:isbn:9783795794668",
+            "urn:isbn:3795794668",
+            "urn:isbn:9783795794545",
+            "urn:isbn:3795794544",
+            "urn:isbn:9783795793210",
+            "urn:isbn:3795793211",
+            "urn:isbn:9783795794521",
+            "urn:isbn:3795794528",
+            "urn:isbn:9783759794895",
+            "urn:isbn:3759794890",
+            "urn:isbn:9783795794576",
+            "urn:isbn:3795794579",
+            "urn:isbn:9783795711030",
+            "urn:isbn:3795711037",
+            "urn:isbn:9783795716547",
+            "urn:isbn:3795716543",
+            "urn:isbn:9783795711023",
+            "urn:isbn:3795711029",
+            "urn:isbn:0001156195",
+            "urn:isbn:9780001156197",
+            "urn:isbn:3795730767",
+            "urn:isbn:9783795700829",
+            "urn:isbn:3795700825",
+            "urn:isbn:9783795718091",
+            "urn:isbn:3795718090",
+            "urn:isbn:9783795730758",
+            "urn:isbn:3795730759",
+            "urn:isbn:9783795730765",
+            "urn:isbn:9783795798871",
+            "urn:isbn:9783795786922",
+            "urn:isbn:3795786924",
+            "urn:isbn:9783795786939",
+            "urn:isbn:3795786932",
+            "urn:isbn:9783795726348",
+            "urn:isbn:3795726344",
+            "urn:isbn:9783795726386",
+            "urn:isbn:3795726387",
+            "urn:isbn:9790001217798",
+            "urn:isbn:3795730805",
+            "urn:isbn:3795730813",
+            "urn:isbn:3795798876",
+            "urn:oclc:25551434",
+            "urn:lccn:92752426",
+            "urn:lccn:9790001217842",
+            "urn:lccn:9790001217859",
+            "urn:lccn:9790001155878",
+            "urn:lccn:9790001155892",
+            "urn:lccn:9790001197540",
+            "urn:lccn:9790001155922",
+            "urn:lccn:M001128513",
+            "urn:lccn:9790001155946",
+            "urn:lccn:9790001206839",
+            "urn:lccn:9790001155960",
+            "urn:lccn:9790001155977",
+            "urn:lccn:9790001155984",
+            "urn:lccn:9790001156004",
+            "urn:lccn:9790001208253",
+            "urn:lccn:M001113175",
+            "urn:lccn:9790001147767",
+            "urn:lccn:M001156110",
+            "urn:lccn:9790001217781",
+            "urn:lccn:9790001217798",
+            "urn:lccn:9790001216029",
+            "urn:lccn:9790001216036",
+            "urn:lccn:9790001156158",
+            "urn:lccn:9790001157025",
+            "urn:lccn:9790001156196",
+            "urn:lccn:9790001156202",
+            "urn:lccn:9790001213479",
+            "urn:lccn:9790001213486",
+            "urn:lccn:9790001193474",
+            "urn:lccn:9790001156233",
+            "urn:lccn:9790001174213",
+            "urn:lccn:M001133609",
+            "urn:lccn:9790001138673",
+            "urn:lccn:M001131667",
+            "urn:lccn:M001133623",
+            "urn:identifier:9790001155997",
+            "urn:identifier:9790001157010",
+            "urn:identifier:46 830 Schott",
+            "urn:identifier:46 831 Schott",
+            "urn:identifier:46 832 Schott",
+            "urn:identifier:46 833 Schott",
+            "urn:identifier:46 835 Schott",
+            "urn:identifier:46 836 Schott",
+            "urn:identifier:46 840 Schott",
+            "urn:identifier:46 841 Schott",
+            "urn:identifier:46 843 Schott",
+            "urn:identifier:46 845 Schott",
+            "urn:identifier:46 847 Schott",
+            "urn:identifier:46 848 Schott",
+            "urn:identifier:46 855 Schott",
+            "urn:identifier:BSS 46846 Schott",
+            "urn:identifier:BSS 46849 Schott",
+            "urn:identifier:BSS 46853 Schott",
+            "urn:identifier:BSS 46855 Schott",
+            "urn:identifier:BSS 46860 Schott",
+            "urn:identifier:BSS 46861 Schott",
+            "urn:identifier:BSS 46863 Schott",
+            "urn:identifier:BSS 46865 Schott",
+            "urn:identifier:BSS 57214 Schott",
+            "urn:identifier:BSS 57254 Schott",
+            "urn:identifier:BSS 57384 Schott",
+            "urn:identifier:BSS 57691 Schott",
+            "urn:identifier:BSS 57692 Schott",
+            "urn:identifier:BSS 59158 Schott",
+            "urn:identifier:BSS 59159 Schott",
+            "urn:identifier:BSS 59160 Schott",
+            "urn:identifier:BSS 59493 Schott",
+            "urn:identifier:BSS 59591 Schott",
+            "urn:identifier:BSS 60136 Schott",
+            "urn:identifier:RSA 1001-10 Schott",
+            "urn:identifier:RSA 1001-20 Schott",
+            "urn:identifier:RSA 1002 Schott",
+            "urn:identifier:RSA 1003 Schott",
+            "urn:identifier:RSA 1007-10 Schott",
+            "urn:identifier:RSA 1007-20 Schott",
+            "urn:identifier:RSA 1011 Schott",
+            "urn:identifier:RSA 1015 Schott",
+            "urn:identifier:RSA 1016 Schott",
+            "urn:identifier:RSA 1017 Schott",
+            "urn:identifier:RSA 1018 Schott",
+            "urn:identifier:RSA 1019 Schott",
+            "urn:identifier:RSA 1020 Schott",
+            "urn:identifier:RSA 1021-10 Schott",
+            "urn:identifier:RSA 1021-20 Schott",
+            "urn:identifier:RSA 1032-20 Schott",
+            "urn:identifier:RSA 1037-10 Schott",
+            "urn:identifier:RSA 1037-20 Schott",
+            "urn:identifier:RSA 1038-10 Schott",
+            "urn:identifier:RSA 1038-20 Schott",
+            "urn:identifier:RSA 1039 Schott",
+            "urn:identifier:RSA 1043-10 Schott",
+            "urn:identifier:RSA 1043-20 Schott",
+            "urn:identifier:RSA 1044 Schott",
+            "urn:identifier:RSA 1045 Schott",
+            "urn:identifier:RSA 1046-10--RSA 1046-20 Schott",
+            "urn:identifier:RSA 1048 Schott",
+            "urn:identifier:RSA 1057-10--RSA 1057-20 Schott",
+            "urn:identifier:RSA 1058 Schott",
+            "urn:identifier:RSA 1065 Schott",
+            "urn:identifier:RSA 1069 Schott",
+            "urn:identifier:BSS 60294 Schott",
+            "urn:identifier:BSS 60295 Schott",
+            "urn:identifier:BSS 60297 Schott",
+            "urn:identifier:BSS 60298 Schott",
+            "urn:identifier:(OCoLC)25551434",
+            "urn:identifier:(OCoLC)24261548 (OCoLC)24555199 (OCoLC)25341179 (OCoLC)921918725 (OCoLC)923345847 (OCoLC)974752377 (OCoLC)976558002 (OCoLC)987010083 (OCoLC)1045748175 (OCoLC)1057109311 (OCoLC)1066804977 (OCoLC)1109464156 (OCoLC)1180843906 (OCoLC)1225693248 (OCoLC)1229937286"
+          ],
+          "numCheckinCardItems": [
+            47
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:not",
+              "label": "Notated music"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1991"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Music.",
+            "Vocal music -- Scores.",
+            "Instrumental music -- Scores."
+          ],
+          "titleDisplay": [
+            "Neue Ausgabe sämtlicher Werke / Robert Schumann ; herausgegeben von der Robert-Schumann-Gesellschaft Düsseldorf durch Akio Mayeda und Klaus Wolfgang Niemöller in Verbindung mit dem Robert-Schumann-Haus Zwickau."
+          ],
+          "uri": "b11481799",
+          "lccClassification": [
+            "M3 .S3927 1991"
+          ],
+          "placeOfPublication": [
+            "Mainz ; New York"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "titleAlt": [
+            "Works. 1991",
+            "New edition of the complete works"
+          ],
+          "tableOfContents": [
+            "Serie I. Orchesterwerke. Werkgruppe 1, Symphonien. Bd. 1.1 Symphony no. 1, op. 38. Music and documents ; Bd. 1.2 Symphony no. 1, op. 38. Critical notes  / edited by Timo Evers ; Bd. 2.2 Symphonie, op. 61 / herausgegeben von Ingeborg Maass und Ute Scholz ; Bd. 3.3 Symphonie, op. 97 / herausgegeben von Linda Correll Roesner ; Bd. 4 Symphony no. 4, op. 120 / herausgegeben von Ute Scholz ; Bd. 5 Ouverture, Scherzo und Finale, op. 52 / herausgegeben von Sonja Gerlach unter Mitarbeit von Matthias Wendt -- Werkgruppe 2, Konzerte. Bd. 1 Klavierkonzert a-Moll, op. 54 / herausgegeben von Bernhard R. Appel -- Werkgruppe 3, Ouvertüren. Ouverture zur Braut von Messina con Fr. Bd. Schiller, op. 100 ; Fest-Ouverture mit Gesang über das Rheinweinlied, op. 123 ; Ouverture zu Shakespeare's Julius Cäsar, op. 128 ; Ouverture zu Goethe's Hermann und Dorothea, op. 136 / herausgegeben von Armin Koch --",
+            "Serie II. Kammermusik. Werkgruppe 1, Werke für Streicher. Bd. 1 Drei Quartette für zwei Violinen, Bratsche und Violoncello, op. 41. Quartett a-Moll, op. 41, no. 1 ; Quartett F-Dur, op. 41, no. 2 ; Quartett A-Dur, op. 41, no. 3 / herausgegeben von Hans Kohlhase -- Werkgruppe 2, Werke für Streicher und Klavier. Bd. 3. Sonate für Pianoforte und Violine, op. 105 ; Sonate für Violine und Pianoforte, op. 121 ; dt F.A.E. Sonate ; Violinsonate, WoO 2 / herausgegeben von Ute Bär -- Werkgruppe 3, Werke für verschiedene Instrumente und Klavier. Andante con Variazioni, op. 46 Anhang ; Adagio und Allegro, op. 70 ; Fantasiestücke, op. 73 ; Drei Romanzen, op. 94 ; Fünf Stücke im Volkston, op. 102 ; Märchenbilder, op. 113 ; Märchenerzählungen, op. 132 ; Fünf Romanzen, Anhang E7 (vernichtet) --",
+            "Serie III. Klavier und Orgelwerke. Werkgruppe 1, Werke für Klavier zu zwei Händen. Bd. 1, part 2. Impromptus sur une romance de Clara Wieck : pour le pianoforte, op. 5 ; Impromptus über ein Thema von Clara Wieck : für das Piano Forte, op. 5 ; Davidsbündlertänze : für das Pianoforte, op. 6 (1838 and 1850) [with Faksimile-Beiheft] ; Bd. 2 Toccata, op. 7 ; Allegro, op. 8 ; Carnaval, op. 9 ; VI études de concert, op. 10 ; Grande sonate, op. 11 ; Fantasiestücke, op. 12 [with Faksimile-Beiheft] ; Bd. 2, suppl. 24 capricci per violino solo op. 1 (Nr. 12, 6, 10, 4, 2, 3) / Nicolò Paganini ; Bd. 3 XII études symphoniques pour le piano-forte, op. 13 ; Études en forme de variations pour le pianoforte, op. 13 ; Concert sans orchestre pour le piano-forte, op. 14 / herausgegeben von Damien Ehrhardt und Michael Beiche ; Bd. 4 Kinderszenen, op. 15 ; Kreisleriana, op. 16 ; Fantasie, op. 17 ; Arabaske, op. 18 und Blumenstück, op. 19 ; Humoreske, op. 20 ; Novelletten, op. 21 / herausgegeben von Michael Beiche, Roe-Min Kok, Sezi Seskir ; Bd. 5 Sonate Nr. 2 für das Pianoforte, op. 22 ; Anhang: Sonate pour le Pianoforte mit Presto (op. 22 Anhang) ; Nachtstücke, op. 23 ; Faschingsschwank aus Wien, op. 26 ; Drei Romanzen, op. 28 ; Scherzo, Gigue, Romanze und Fughette, op. 32 ; 43 Clavierstücke für die Jugend (Album für die Jugend), op. 68 ; Anhang: Nicht in die Originalausgabe von op. 68 aufgenommene Stücke und Fragmente / herausgegeben von Michael Beiche ; Bd. 6 part 1. Vier Fugen, op. 72 ; Vier Märsche, op. 76 ; Waldscenen, op. 82 ; Bunte Blätter, op. 99 ; Drei Fantasiestücke, op. 111 ; Drei Clavier-Sonaten für die Jugend, op. 118 ; Albumblätter, op. 124 ; Sieben Clavierstücke in Fughettenform, op. 126 ; Gesänge der Frühe, op. 133 ; Thema mit Variationen ; Anhang F39 [with Faksimile-Beiheft] / Timo Evers, Michael Beiche ; Bd. 6, part 2. Kritischer Bericht --",
+            "Serie III (continued). Werkgruppe  2, Werke für Klavier zu vier Händen bzw. für zwei Klaviere. VIII Polonaises pour le pianoforte à quatre mains, Anh. G1 ; Andante und Variationen für zwei Pianofortes, op. 46 ; Bilder aus Osten. 6 Impromptus für das Pianoforte zu vier Händen, op. 66 ; 12 vierhändige Klavier-Stücke für kleine und grosse Kinder, op. 85. Geburtstagmarsch ; Bärentanz ; Gartenmelodie ; Beim Kränzewinden ; Kroatenmarsch ; Trauer ; Turniermarsch ; Reigen ; Am Springbrunnen ; Verstecken's ; Gespenstermärchen ; Abendlied ; Ball-Scenen. 9 charakteristische Tonstücke für das Piano zu vier Händen, op. 109. Préambule ; Polonaise ; Walzer ; Ungarisch ; Française ; Mazurka ; Ecossaise ; Walzer ; Promenade ; Kinderball. Sechs leichte Tanzstücke zu vier Händen für das Pianoforte, op. 130. Polonaise ; Walzer ; Menuett ; Ecossaise ; Française ; Ringelreihe ; Variationen zu vier Händen über ein Themas von Prinz Louis Ferdinand von Preussen, Anh. G2 ; Klaviersatzfragment zu vier Händen, D-Dur, 3/4 (um 1830) ; Capriccio pour le pianoforte à quatre mains (um 1830), Anh. G3 ; Klaviersatzfragment zu vier Händen, C-Dur, 3/4 (um 1832) ; Allegretto, Klaviersatzfragment zu vier Händen, E-Dur, 3/4 (um 1845?) ; Klaviersatz zu vier Händen, C-Dur, 2/4 (um 1849?), op. 85, Anh. / herausgegeben von Joachim Draheim und Bernard R. Appel --",
+            "Serie III (continued). Werkgruppe 3, Werke für Pedalflügel oder Orgel. Studien für den Pedal-Flügel op. 56 ; Skizzen für den Pedal-Flügel op. 58 ; Sechs Fugen über den Namen BACH für Orgel oder Pianoforte mit Pedal op. 60 / herausgegeben von Arnfried Edler -- Werkgruppe 4. Kinderszenen, op. 15 ; Kreisleriana, op. 16 ; Fantasie, op. 17 ; Arabeske, op. 18 ; Blumenstück, op. 19 ; Humoreske, op. 20 ; Novelletten, op. 21 --",
+            "Serie IV. Bühnen- und Chorwerke mit Orchester. Werkgruppe 3, Geistliche Werke. Bd. 1, part 1 Le psaume cent cinquantième / herausgegeben von Matthias Wendt ; Verzweifle nicht im Schmerzensthal, op. 93 / herausgegeben von Brigitte Kohnz und Matthias Wendt ; Bd. 2 Missa sacra, op. 147 / herausgegeben von Bernhard R. Appel ; Bd. 3 Requiem, op. 148 / herausgegeben von Bernhard R. Appel --",
+            "Serie V. Chorwerke. Bd. 2, Werke für Frauenchor. Romanzen für Frauenstimmen, op. 69 und op. 91. op. 69 Tamburinschlägerin ; Waldmädchen ; Klosterfräulein ; Soldatenbraut ; Meerfey ; Die Capelle. op. 91 ; Rosmarien ; Jäger Wohlgemuth ; Der Wasserman ; Das verlassene Mägdlein ; Der Bleicherin Nachtlied ; In Meeres Mitten / herausgegeben von Irmgard Knechtges-Obrecht unter Mitarbeit von Matthias Wendt ; Bd. 3, part 1. Noten. Fünf Lieder op. 55 ; Vier Gesänge op. 59 ; Romanzen und Balladen opp.67, 75, 145, 146 ; Beim Abschied zu singen op. 84 ; Vier doppelchörige Gesänge op. 141 ; Patriotisches Lied WoO 5 ; Sofeggien Anhang L1 ; Glockenthürmers Töchterlein Anhang L3 ; \"Wenn zweie auseinandergehen\" Anhang L4 ; Bd. 3, part 2. Kritischer Bericht --",
+            "Serie VI. Lieder und Gesänge für Solostimmen. Bd. 1, part 1. Liederkreis von H. Heine, op. 24 / herausgegeben von Tirza Cremer ; Myrthen. Liederkreis von Göthe, Rückert, Byron, Th. Moore, Heine, Burns & J. Mosen, op. 25 / herausgegeben von Christina Thomas ; Drei Gedichte von Emanuel Geibel, op. 30 / herausgegeben von Tina Evers und Christina Thomas ; 3 Balladen von Béranger und Chamisso, op. 31 ; [Bd. 1, pt. 1a. Faksimile-Beiheft] / herausgegeben von Isabell Tentler ; Bd. 1, part 2. Kritischer Bericht ;̣ Bd. 2 Zwölf Gedichte von Justinus Kerner, op. 35 / herausgegeben von Tirza Cremer und Armin Koch ; Sechs Gedichte aus dem Liederbuch, op. 36 / herausgegeben von Armin Koch ; Liederkreis von Joseph Freiherr von Eichendorff, op. 39, Ausgabe 1842, Neue Ausgabe 150 / herausgegeben von David Ferres und Armin Koch ; Fünf Lieder, op. 40 / herausgegeben von Tirza Cremer, Yvonne Wasserloos und Armin Koch ; Bd. 6, part 1. Die Lieder Mignon's des Harfners und Philinen's op. 98a ; Sieben Lieder von Elisabeth Kulmann zur Erinnerung an die Dichterin, op. 104 ; Sechs Gesänge, op. 107 ; Vier Husarenlieder von Nicolaus Lenau, op. 117 ; Drei Gedichte aus den Waldliedern von Gustav Pfarrius, op. 119 ; Fünf heitere Gesänge, op. 125 ; Lieder und Gesänge, op. 127 und op. 127 Anhang ; Gedichte der Königin Maria Stuart, op. 155 ; Vier Gesänge, op. 142 ; Soldatenlied, WoO 6 ; Zwei Lenau-Lieder, Anhang M11 ; Deklamation mit Begleitung des Pianoforte. Schön Hedwig, op. 106 ; Ballade vom Haideknaben, op. 122/1 ; Die Flüchtlinge, op. 122/2 / herausgegeben von Kazuko Ozawa und Matthias Wendt ; Bd. 6, part 2. Kritischer Bericht ; Bd. 7 Zwei Jugendlieder, Anhang M1 ; Elf Jugendlieder, Anhang M2 / herausgegeben von Joachm Draheim und Armin Koch -- Bd. 8, 3 Gedichte von Emanuel Geibel für mehrstimmigen Gesang mit Begleitung des Pianoforte op. 29 ; Vier Duette für Sopran und Tenor mit Begleitung des Pianoforte op. 34 ; Drei zweistimmige Lieder mit Belgeitung drs Pianforte op. 43 ; Vier Duette für Sopran und Tenor mit Begleitung des Pianoforte op. 78 ; Mädchenlieder von Elisabeth Kulmann für Sopran-Stimmen (oder Sopran und Alt) mit Begleitung des Pianoforte op. 103 ; Drei Lieder für drei Frauenstimmen mit Begleitung des Pianoforte op. 114 Sommerruh WoO 7 / herausgegeben von Birgit Spörl und Armin Koch --",
+            "Serie VI (continued) Bd. 9, part 1. Music. Spanisches Liederspiel, op. 74 ; Spanische Liebeslieder, op. 138 ; Twelve poems from F. Rückert's Liebesfrühling von Robert und Clara Schumann, op. 37/12 ; Minnespiel aus F. Rückert's Liebesfrühling, op. 101 ; Bei Schenkung eines Flügels. Die Orange und Myrthe hier, Anh. M15 / herausgegeben von Thomas Synofzik ; Bd. 9, part 2. Kritischer Bericht --",
+            "Serie VII. Klavierauszüge, Bearbeitungen, Studien und Skizzen. Werkgruppe 1, Klavierauszüge eigener Werke. Bd. 2 Ouvertüren -- Werkgruppe 3, Studien und Skizzen. Bd. 2 Studien und Skizzen. Studien- und Skizzenbuch III / herausgegeben von Matthias Wendt unter Mitarbeit von Kazuko Ozawa ; Bd. 4 Dresdener Skizzenheft / herausgegeben von Reinhold Dusella und Matthias Wendt ; Taschennotizbuch / herausgegeben von Bernhard R. Appel, Kazuko Ozawa-Müller und Matthias Wendt ; Bd. 5 Studien zur Kontrapunktlehre / herausgegeben von Hellmut Federhofer und Gerd Nauhaus.",
+            "Serie VIII. Supplemente. Bd. 1 Eine Lebenschronik in Bildern und Dokumenten ; Bd. 2 Literarische Vorlagen der ein- und mehrstimmigen Lieder, Gesänge und Deklamationen / herausgegeben von Helmut Schanze unter Mitarbeit von Krischan Schulte ; Bd. 6 Thematisch-bibliographisches Werkverzeichnis / von Margit L. McCorkle."
+          ],
+          "dimensions": [
+            "28-33 cm"
+          ],
+          "idIsbn_clean": [
+            "9783795730802",
+            "9783795730819",
+            "9783795794866",
+            "3795794862",
+            "9783795794699",
+            "3795794692",
+            "9783795793388",
+            "3795793386",
+            "9783795794804",
+            "3795794803",
+            "9783795794897",
+            "3795794897",
+            "9783795794668",
+            "3795794668",
+            "9783795794545",
+            "3795794544",
+            "9783795793210",
+            "3795793211",
+            "9783795794521",
+            "3795794528",
+            "9783759794895",
+            "3759794890",
+            "9783795794576",
+            "3795794579",
+            "9783795711030",
+            "3795711037",
+            "9783795716547",
+            "3795716543",
+            "9783795711023",
+            "3795711029",
+            "0001156195",
+            "9780001156197",
+            "3795730767",
+            "9783795700829",
+            "3795700825",
+            "9783795718091",
+            "3795718090",
+            "9783795730758",
+            "3795730759",
+            "9783795730765",
+            "9783795798871",
+            "9783795786922",
+            "3795786924",
+            "9783795786939",
+            "3795786932",
+            "9783795726348",
+            "3795726344",
+            "9783795726386",
+            "3795726387",
+            "9790001217798",
+            "3795730805",
+            "3795730813",
+            "3795798876"
+          ]
+        },
+        "sort": [
+          16,
+          "b11481799"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 100,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b11481799",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 17
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:7",
+                        "label": "printed music, non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:7||printed music, non-circ"
+                    ],
+                    "enumerationChronology": [
+                      "Ser. 6, Bd. 8"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         8-"
+                    ],
+                    "formatLiteral": [
+                      "Notated music"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pam32",
+                        "label": "Performing Arts Research Collections - Music"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pam32||Performing Arts Research Collections - Music"
+                    ],
+                    "idBarcode": [
+                      "33433137408989"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:JMN 91-37 Ser. 6, Bd. 8",
+                      "urn:barcode:33433137408989"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "JMN 91-37 Ser. 6, Bd. 8",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433137408989",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "physicalLocation": [
+                      "JMN 91-37"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "shelfMark": [
+                      "JMN 91-37 Ser. 6, Bd. 8"
+                    ],
+                    "shelfMark_sort": "aJMN 91-37 Ser. 6, Bd. 000008",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "volumeRange": [
+                      {
+                        "gte": 8,
+                        "lte": 8
+                      }
+                    ],
+                    "uri": "i40842752"
+                  },
+                  "sort": [
+                    "         8-"
+                  ]
+                },
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b11481799",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 57
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "enumerationChronology": [
+                      "Vol. 8 No. 6"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         8-"
+                    ],
+                    "formatLiteral": [
+                      "Notated music"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pam",
+                        "label": "Performing Arts Research Collections - Music"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pam||Performing Arts Research Collections - Music"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "JMN 91-37",
+                        "type": "bf:ShelfMark"
+                      }
+                    ],
+                    "shelfMark": [
+                      "JMN 91-37"
+                    ],
+                    "shelfMark_sort": "aJMN 91-000037",
+                    "status": [
+                      {
+                        "id": "status:na",
+                        "label": "Not available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:na||Not available"
+                    ],
+                    "type": [
+                      "nypl:CheckinCardItem"
+                    ],
+                    "uri": "i-h1061152-41",
+                    "volumeRange": [
+                      {
+                        "gte": 8,
+                        "lte": 8
+                      }
+                    ],
+                    "volumeRaw": [
+                      "Vol. 8 No. 6"
+                    ]
+                  },
+                  "sort": [
+                    "         8-"
+                  ]
+                },
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b11481799",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 70
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "enumerationChronology": [
+                      "Vol. 8 No. 2"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         8-"
+                    ],
+                    "formatLiteral": [
+                      "Notated music"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pam",
+                        "label": "Performing Arts Research Collections - Music"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pam||Performing Arts Research Collections - Music"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "JMN 91-37",
+                        "type": "bf:ShelfMark"
+                      }
+                    ],
+                    "shelfMark": [
+                      "JMN 91-37"
+                    ],
+                    "shelfMark_sort": "aJMN 91-000037",
+                    "status": [
+                      {
+                        "id": "status:na",
+                        "label": "Not available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:na||Not available"
+                    ],
+                    "type": [
+                      "nypl:CheckinCardItem"
+                    ],
+                    "uri": "i-h1061152-28",
+                    "volumeRange": [
+                      {
+                        "gte": 8,
+                        "lte": 8
+                      }
+                    ],
+                    "volumeRaw": [
+                      "Vol. 8 No. 2"
+                    ]
+                  },
+                  "sort": [
+                    "         8-"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2024-10-22",
+        "_id": "b22144813",
+        "_score": 16,
+        "_source": {
+          "extent": [
+            "1234, [1] pages, x leaves : illustrations ;",
+            "1234, [1] p., x leaves : ill. ;",
+            "Third description instance : More 3rd instance ;"
+          ],
+          "partOf": [
+            "In: -- 773 0b"
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "serialPublicationDates": [
+            "Publication Date  (unformated) -- 362 1b"
+          ],
+          "publisherLiteral": [
+            "Specious Publ. [prev.pub.-- 260.2b]",
+            "CopyCat pub. co. -- 260 bb"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "createdYear": [
+            201
+          ],
+          "parallelTitle": [
+            "‏כותר שאינו באותיות לטינית = зглавие руссий."
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [
+            "Q-TAG (852 8b q tag.  Staff call in bib.)"
+          ],
+          "idLccn": [
+            "LCCN -- 010",
+            "9790001138673",
+            "ISMN",
+            "Danacode",
+            "UPC",
+            "EAN"
+          ],
+          "idIssn": [
+            "ISSN -- 022"
+          ],
+          "seriesStatement": [
+            "440 Series ; v. number -- 440 b0",
+            "490 Series ; v. number  -- 490 0b",
+            "Author, of series. CMA Test Records. -- 800 1b",
+            "CMA (Cat). CMA Test Records -- 810 2b "
+          ],
+          "addedAuthorTitle": [
+            "Cataloging test record. 700 1b with $t"
+          ],
+          "dateStartYear": [
+            201
+          ],
+          "parallelCreatorLiteral": [
+            "‏גלוגר,מרים פ."
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "Q-TAG (852 8b q tag.  Staff call in bib.)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "22144813"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0123456789"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9780123456786 (qualifier)"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "ISBN -- 020"
+            },
+            {
+              "type": "bf:Isbn",
+              "identifierStatus": "canceled/invalid",
+              "value": "ISBN -- 020 $z"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "LCCN -- 010"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "9790001138673"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "ISMN"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "Danacode"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "UPC"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "EAN"
+            },
+            {
+              "type": "bf:Issn",
+              "value": "ISSN -- 022"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Report number. -- 027"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Publisher no. -- 028 02  "
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Standard number (old RLIN, etc.) -- 035"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "Sudoc no.  -- 086"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "GPO Item number. -- 074"
+            }
+          ],
+          "formerTitle": [
+            "Former title -- 247 00"
+          ],
+          "updatedAt": 1729184272121,
+          "publicationStatement": [
+            "[s.l.] : Specious Publ. [prev.pub.-- 260.2b], 2001. ",
+            "Long Island CIty, N.Y. : CopyCat pub. co. -- 260 bb, 2011.",
+            "Production -- 264 b0 (RDA) ",
+            "Publisher -- 264 b1 (RDA)",
+            "Distributor -- 264 b2 (RDA)",
+            "Manufacturer -- 264 b3 (RDA)",
+            "Copyright Date -- 264 b4 (RDA)",
+            "Earlier Publisher -- 264 21 (RDA)",
+            "Earlier Distributor -- 264 22 (RDA)",
+            "Earlier Manufacturer -- 264 23 (RDA)",
+            "Earlier Copyright Date -- 264 24 (RDA)",
+            "Latest Publisher -- 264 31 (RDA)",
+            "Latest Distributor -- 264 32 (RDA)",
+            "Latest Manufacturer -- 264 33 (RDA)",
+            "Latest Copyright Date -- 264 34 (RDA)"
+          ],
+          "identifier": [
+            "urn:shelfmark:Q-TAG (852 8b q tag.  Staff call in bib.)",
+            "urn:bnum:22144813",
+            "urn:isbn:0123456789",
+            "urn:isbn:9780123456786 (qualifier)",
+            "urn:isbn:ISBN -- 020",
+            "urn:isbn:ISBN -- 020 $z",
+            "urn:lccn:LCCN -- 010",
+            "urn:lccn:9790001138673",
+            "urn:lccn:ISMN",
+            "urn:lccn:Danacode",
+            "urn:lccn:UPC",
+            "urn:lccn:EAN",
+            "urn:issn:ISSN -- 022",
+            "urn:identifier:Report number. -- 027",
+            "urn:identifier:Publisher no. -- 028 02  ",
+            "urn:identifier:Standard number (old RLIN, etc.) -- 035",
+            "urn:identifier:Sudoc no.  -- 086",
+            "urn:identifier:GPO Item number. -- 074"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Starving artist -- 600 00.",
+            "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Corporate body subject. --  610 20",
+            "Secret Society of Catalogers -- Periodicals. -- 610 20 $v",
+            "testing x as first subfield -- testing v as second subfield. -- 610 10 $x$v only.",
+            "Conference subject entry. --  611 20",
+            "Stonecutters' Annual Picnic 1995 : Springfield) -- 611 20 $n, $d, $c",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Uniform title.",
+            "Life is a common square. -- Criticism. -- 630 00 $l, $x",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Textile industry testing datetesting -- 650 b0 $z, $x -- India -- History",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y -- testing z",
+            "New York (N.Y.) -- 21st century -- Diaries. -- 651 b0 $y, $x",
+            "Undiscovered country. -- 651 b0",
+            "testing 4 testing a testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Indexed term -- 653"
+          ],
+          "titleAlt": [
+            "Abrev. title -- 210 ",
+            "Key title --  222 ",
+            "T tagged 240 Uniform title -- t240",
+            "Portion of title  \\\\DO NOT DISPLAY\\\\ --  246 10",
+            "Parallel title \\\\DO NOT DISPLAY\\\\ -- 246 11",
+            "Portion of title 246 30",
+            "Parallel title 246 31",
+            "Distinctive title 246 12",
+            "Other title 246 13",
+            "Cover title 246 14",
+            "Cover title 246 04",
+            "Added title page title 246 15",
+            "Running title 246 17",
+            "Caption title 246 16",
+            "Spine title 246 18",
+            "No type of title specified 246 3 blank",
+            "246 1 blank",
+            "Zaglavie Russiĭi",
+            "Added title -- 740 0b"
+          ],
+          "tableOfContents": [
+            "Complete table of contents.   -- 505 0b",
+            "1. Incomplete table of contents. -- First instance.-- 505 1b",
+            "2. Incomplete table of contents -- Second  instance. 505 1b",
+            "3. Incomplete table of contents -- Third instance entered out of order. 505 1b",
+            "Title subfield $t and author subfield $r and miscellaneous subfield $g in enahnced contents field 505 10."
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Ordinary note. -- 500",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "²³¹",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "¯¯¯\\⠀⠀⠀⠀⠀⠀⠀⠀/¯¯¯",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "⠀⠀⠀\\___(  ツ   )___",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "With",
+              "label": "Bound with note. -- 501",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Thesis",
+              "label": "Thesis -- (degree) note.  -- 502",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references (p. [1235]). -- 504",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Access",
+              "label": "Access -- 506 blank,any",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Access",
+              "label": "Restricted Access -- 506 1,any",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Scale",
+              "label": "Scale (graphic) -- 507",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Credits",
+              "label": "Credits (Creation/production credits note) -- 508",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Performer",
+              "label": "Cast --511 1b",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Type of Report",
+              "label": "Type of Report. -- 513",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Data Quality",
+              "label": "Data quality -- 514",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Numbering",
+              "label": "Completely irregular. -- 515",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "File Type",
+              "label": "File type. -- 516",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Event",
+              "label": "Event. -- 518",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Audience",
+              "label": "Audience: Rated for Catalogers and Metadata Junkies only -- 521",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Audience",
+              "label": "Audience (2): Test of 2nd 521 field.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Coverage",
+              "label": "Coverage -- 522",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Cite As",
+              "label": "Cite as: The Mega-MARC test record. -- 524",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Supplement",
+              "label": "Supplement -- 525",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Study Program",
+              "label": "Study program -- 526 8b ",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Additional Formats",
+              "label": "Other test records available. -- 530",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Microfilm.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Original Location",
+              "label": "Original location in SASB -- 535",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Funding",
+              "label": "Funding -- 536",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "System Details",
+              "label": "System Details  -- 538",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Terms of Use",
+              "label": "Use as test record  -- 540",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Source",
+              "label": "Source display-- 5411b",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Source",
+              "label": "Source \\\\DO NOT DISPLAY\\\\ -- 541 bb $a",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Location of Other Archival Materials",
+              "label": "Location of Other Archival Materials -- 544",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Biography",
+              "label": "Biography -- 545",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Biography",
+              "label": "Biography -- 5451 Administrative history",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In English and non-roman scripts. -- 546",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Former Title",
+              "label": "Former title (complexity note) -- 547",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Issued By",
+              "label": "Issued by CCO -- 550",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Indexes/Finding Aids",
+              "label": "Indexes -- 555 bb",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Documentation",
+              "label": "Documentation (information about, note) -- 556",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Provenance",
+              "label": "Provenance display --5611b",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Provenance",
+              "label": "Provenance \\\\DO NOT DISPLAY\\\\ -- 561 bb",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Copy/Version",
+              "label": "Copy/Version (identification note) -- 562",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Binding",
+              "label": "Binding  -- 563",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Linking Entry",
+              "label": "Complemented by Linking entry: Bogus title -- 580",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Linking Entry",
+              "label": "Linking Entry (complexity note) -- 580",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Publications",
+              "label": "Publications (about described material note) -- 581",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Processing Action",
+              "label": "Processing Action display --583 1b",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Processing Action",
+              "label": "Processing Action \\\\DO NOT DISPLAY\\\\ -- 583 bb",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Exhibitions",
+              "label": "Exhibitions -- 585",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Awards",
+              "label": "Awards -- 586",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Source of Description",
+              "label": "Latest issue consulted: 1900/1901. -- 588 1b",
+              "type": "bf:Note"
+            }
+          ],
+          "subjectLiteral_exploded": [
+            "Starving artist",
+            "Starving artist -- 600 00",
+            "Artist, Starving, 1900-1999",
+            "Artist, Starving, 1900-1999 -- Autobiography.",
+            "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v",
+            "testing 4 testing a testing b testing c testing d testing e testing g",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing b testing c testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Corporate body subject.",
+            "Corporate body subject. --  610 20",
+            "Secret Society of Catalogers",
+            "Secret Society of Catalogers -- Periodicals.",
+            "Secret Society of Catalogers -- Periodicals. -- 610 20 $v",
+            "testing x as first subfield",
+            "testing x as first subfield -- testing v as second subfield.",
+            "testing x as first subfield -- testing v as second subfield. -- 610 10 $x$v only",
+            "Conference subject entry.",
+            "Conference subject entry. --  611 20",
+            "Stonecutters' Annual Picnic 1995 : Springfield)",
+            "Stonecutters' Annual Picnic 1995 : Springfield) -- 611 20 $n, $d, $c",
+            "testing 4 testing a testing c testing d testing e testing g",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing c testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Uniform title",
+            "Life is a common square.",
+            "Life is a common square. -- Criticism.",
+            "Life is a common square. -- Criticism. -- 630 00 $l, $x",
+            "testing 4 testing a testing d testing e testing g",
+            "testing 4 testing a testing d testing e testing g -- testing v",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing d testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Textile industry testing datetesting",
+            "Textile industry testing datetesting -- 650 b0 $z, $x",
+            "Textile industry testing datetesting -- 650 b0 $z, $x -- India",
+            "Textile industry testing datetesting -- 650 b0 $z, $x -- India -- History",
+            "testing 4 testing a testing b testing c testing d testing e",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y -- testing z",
+            "New York (N.Y.)",
+            "New York (N.Y.) -- 21st century",
+            "New York (N.Y.) -- 21st century -- Diaries.",
+            "New York (N.Y.) -- 21st century -- Diaries. -- 651 b0 $y, $x",
+            "Undiscovered country.",
+            "Undiscovered country. -- 651 b0",
+            "testing 4 testing a testing e testing g",
+            "testing 4 testing a testing e testing g -- testing v",
+            "testing 4 testing a testing e testing g -- testing v -- testing x",
+            "testing 4 testing a testing e testing g -- testing v -- testing x -- testing y",
+            "testing 4 testing a testing e testing g -- testing v -- testing x -- testing y -- testing z",
+            "Indexed term",
+            "Indexed term -- 653"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "description": [
+            "This record was originally created as a test record in CATNYP.  It was greatly expanded in ILS-STAFF to test the public display of various MARC fields. -- 520 (first)",
+            "Use this record to test CATALOG, OPAC, ENCORE, and BIBLIOCOMMONS display of MARC fields -- 520 (second)"
+          ],
+          "numItemsTotal": [
+            2
+          ],
+          "dateEndString": [
+            "2011"
+          ],
+          "title": [
+            "Life is a strange circle (updated 20180627) --245 10 $a, Maintenance test record-- 245 $b"
+          ],
+          "numItemVolumesParsed": [
+            1
+          ],
+          "createdString": [
+            "201"
+          ],
+          "creatorLiteral": [
+            "Gloger, Miriam",
+            "BookOps. Cataloging. --110 2b ab",
+            "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)"
+          ],
+          "numElectronicResources": [
+            4
+          ],
+          "contributorLiteral": [
+            "Cramer, Richard, 1948-.",
+            "Cramer, Richard, 1948-",
+            "Bayer, Jeffrey",
+            "Bayer, Jeffrey",
+            "New York Public Library Database Management Group. -- 710 2b",
+            "Conference added author.  711 2b",
+            "Added entry (uncontrolled name) -- 7201",
+            "Cramer, Richard, 1948- fmo",
+            "Virtual collection -- 791 2b"
+          ],
+          "donor": [
+            "Donor / Sponsor --  799 bb"
+          ],
+          "uniformTitle": [
+            "T tagged 240 Uniform title -- t240",
+            "Added title -- 730 0b",
+            "CMA Test Records -- 830 b0"
+          ],
+          "popularity": 1,
+          "dateEndYear": [
+            2011
+          ],
+          "parallelTitleAlt": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "зглавие руссий"
+          ],
+          "genreForm": [
+            "Genre heading.",
+            "Blank pages and looks – Someplace – 1990.",
+            "testing a – testing b – testing c – testing v – testing x – testing y – testing z"
+          ],
+          "idIsbn": [
+            "0123456789",
+            "9780123456786 (qualifier)",
+            "ISBN -- 020"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "201"
+          ],
+          "titleDisplay": [
+            "Life is a strange circle (updated 20180627) --245 10 $a, Test record --$k current April 19, 2013 --$f, Testing period --$g [Virtual-- 245 $h] (245-- $n) Titles, includes RDA specific fields -- 245 $p : Maintenance test record-- 245 $b,  Version--$s / CMA division -- 245 $c."
+          ],
+          "uri": "b22144813",
+          "electronicResources": [
+            {
+              "label": "856 40",
+              "url": "http://blogs.nypl.org/rcramer/"
+            },
+            {
+              "label": "Yizkor Book  (NYPL resource) 856 41",
+              "url": "http://yizkor.nypl.org/index.php?id=2936"
+            },
+            {
+              "url": "http://www.ThereIsNoLabelSubfieldInThis856-40-fulltext.com/"
+            },
+            {
+              "url": "http://www.ThereIsNoLabelSubfieldInThis856-41-fulltext.com/"
+            }
+          ],
+          "parallelTitleDisplay": [
+            "‏כותר שאינו באותיות לטינית = зглавие руссий."
+          ],
+          "placeOfPublication": [
+            "[s.l.]",
+            "Long Island CIty, N.Y.",
+            "Production -- 264 b0 (RDA) ",
+            "Publisher -- 264 b1 (RDA)",
+            "Distributor -- 264 b2 (RDA)",
+            "Manufacturer -- 264 b3 (RDA)",
+            "Copyright Date -- 264 b4 (RDA)",
+            "Earlier Publisher -- 264 21 (RDA)",
+            "Earlier Distributor -- 264 22 (RDA)",
+            "Earlier Manufacturer -- 264 23 (RDA)",
+            "Earlier Copyright Date -- 264 24 (RDA)",
+            "Latest Publisher -- 264 31 (RDA)",
+            "Latest Distributor -- 264 32 (RDA)",
+            "Latest Manufacturer -- 264 33 (RDA)",
+            "Latest Copyright Date -- 264 34 (RDA)"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "supplementaryContent": [
+            {
+              "label": "Contents",
+              "url": "http://www.ilibri.casalini.it/toc/07260245.pdf"
+            },
+            {
+              "url": "http://www.ThereIsNoLabelSubfieldInThis856-42-supplementary.com/"
+            },
+            {
+              "url": "http://www.ThereIsNoLabelSubfieldInThis856-4b-supplementary.com/"
+            }
+          ],
+          "dimensions": [
+            "26 cm +",
+            "26 cm. +",
+            "More 3rd instance -- 300 (3rd instance)"
+          ],
+          "idIsbn_clean": [
+            "0123456789",
+            "9780123456786",
+            "020"
+          ]
+        },
+        "sort": [
+          16,
+          "b22144813"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 2,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b22144813",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "enumerationChronology": [
+                      "v.1"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         1-"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mall1",
+                        "label": "Schwarzman Building - Main Reading Room 315 - Reference"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mall1||Schwarzman Building - Main Reading Room 315 - Reference"
+                    ],
+                    "idBarcode": [
+                      "3333333333"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1",
+                      "urn:barcode:3333333333"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "3333333333",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1101",
+                        "label": "General Research Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1101||General Research Division"
+                    ],
+                    "physicalLocation": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "shelfMark": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1"
+                    ],
+                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER v.000001",
+                    "status": [
+                      {
+                        "id": "status:k",
+                        "label": "Check with staff"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:k||Check with staff"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "volumeRange": [
+                      {
+                        "gte": 1,
+                        "lte": 1
+                      }
+                    ],
+                    "uri": "i37857771"
+                  },
+                  "sort": [
+                    "         1-"
+                  ]
+                },
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b22144813",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "enumerationChronology": [
+                      "nothing"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rcmf2",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rcmf2||Offsite"
+                    ],
+                    "idBarcode": [
+                      "44455533322211"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing",
+                      "urn:barcode:44455533322211"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "44455533322211",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1103",
+                        "label": "Dorot Jewish Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1103||Dorot Jewish Division"
+                    ],
+                    "physicalLocation": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing"
+                    ],
+                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER nothing",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i37857772"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

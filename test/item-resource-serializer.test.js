@@ -12,14 +12,14 @@ describe('ItemResourceSerializer', () => {
   })
 
   describe('serialize', () => {
-    it('adds entity form of NYPL source identifier', () => {
-      const item = ItemResourceSerializer.addSourceIdentifier({
+    it('adds entity form of NYPL source identifier', async () => {
+      const item = await ItemResourceSerializer.addSourceIdentifier({
         uri: 'i22566485',
         identifier: [
           'urn:barcode:33433058338470'
         ]
       })
-      const doc = ItemResourceSerializer.serialize(item)
+      const doc = await ItemResourceSerializer.serialize(item)
       expect(doc).to.be.a('object')
       expect(doc['@id']).to.eq('res:i22566485')
       expect(doc.identifier).to.be.a('array')
@@ -30,11 +30,11 @@ describe('ItemResourceSerializer', () => {
       expect(doc.idNyplSourceId['@value']).to.eq('22566485')
     })
 
-    it('adds entity form of CUL source identifier', () => {
-      const item = ItemResourceSerializer.addSourceIdentifier({
+    it('adds entity form of CUL source identifier', async () => {
+      const item = await ItemResourceSerializer.addSourceIdentifier({
         uri: 'ci98765'
       })
-      const doc = ItemResourceSerializer.serialize(item)
+      const doc = await ItemResourceSerializer.serialize(item)
 
       expect(doc).to.be.a('object')
       expect(doc['@id']).to.eq('res:ci98765')
@@ -45,11 +45,11 @@ describe('ItemResourceSerializer', () => {
       expect(doc.idNyplSourceId['@value']).to.eq('98765')
     })
 
-    it('adds entity form of HL source identifier', () => {
-      const item = ItemResourceSerializer.addSourceIdentifier({
+    it('adds entity form of HL source identifier', async () => {
+      const item = await ItemResourceSerializer.addSourceIdentifier({
         uri: 'hi9876543210'
       })
-      const doc = ItemResourceSerializer.serialize(item)
+      const doc = await ItemResourceSerializer.serialize(item)
 
       expect(doc).to.be.a('object')
       expect(doc['@id']).to.eq('res:hi9876543210')
@@ -62,37 +62,37 @@ describe('ItemResourceSerializer', () => {
   })
 
   describe('addSourceIdentifier', () => {
-    it('adds source identifier for NYPL', () => {
+    it('adds source identifier for NYPL', async () => {
       const item = { uri: 'i1234' }
 
-      const itemWithSourceIds = ItemResourceSerializer.addSourceIdentifier(item)
+      const itemWithSourceIds = await ItemResourceSerializer.addSourceIdentifier(item)
       expect(itemWithSourceIds).to.be.a('object')
       expect(itemWithSourceIds.identifier).to.be.a('array')
       expect(itemWithSourceIds.identifier[0]).to.eq('urn:SierraNypl:1234')
     })
 
-    it('adds source identifier for CUL', () => {
+    it('adds source identifier for CUL', async () => {
       const item = { uri: 'ci1234' }
 
-      const itemWithSourceIds = ItemResourceSerializer.addSourceIdentifier(item)
+      const itemWithSourceIds = await ItemResourceSerializer.addSourceIdentifier(item)
       expect(itemWithSourceIds).to.be.a('object')
       expect(itemWithSourceIds.identifier).to.be.a('array')
       expect(itemWithSourceIds.identifier[0]).to.eq('urn:RecapCul:1234')
     })
 
-    it('adds source identifier for PUL', () => {
+    it('adds source identifier for PUL', async () => {
       const item = { uri: 'pi1234' }
 
-      const itemWithSourceIds = ItemResourceSerializer.addSourceIdentifier(item)
+      const itemWithSourceIds = await ItemResourceSerializer.addSourceIdentifier(item)
       expect(itemWithSourceIds).to.be.a('object')
       expect(itemWithSourceIds.identifier).to.be.a('array')
       expect(itemWithSourceIds.identifier[0]).to.eq('urn:RecapPul:1234')
     })
 
-    it('adds source identifier for HL', () => {
+    it('adds source identifier for HL', async () => {
       const item = { uri: 'hi1234' }
 
-      const itemWithSourceIds = ItemResourceSerializer.addSourceIdentifier(item)
+      const itemWithSourceIds = await ItemResourceSerializer.addSourceIdentifier(item)
       expect(itemWithSourceIds).to.be.a('object')
       expect(itemWithSourceIds.identifier).to.be.a('array')
       expect(itemWithSourceIds.identifier[0]).to.eq('urn:RecapHl:1234')
