@@ -1,300 +1,284 @@
 {
-  "body": {
-    "took": 568,
-    "timed_out": false,
-    "_shards": {
-      "total": 2,
-      "successful": 2,
-      "skipped": 0,
-      "failed": 0
+  "took": 602,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
     },
-    "hits": {
-      "total": {
-        "value": 10000,
-        "relation": "gte"
-      },
-      "max_score": null,
-      "hits": [
-        {
-          "_index": "resources-2024-07-11",
-          "_id": "b10000116",
-          "_score": 0,
-          "_source": {
-            "extent": [
-              "8, 733p., [1] leaf of plates : ill. ;"
-            ],
-            "note": [
-              {
-                "noteType": "Language",
-                "label": "In Tamil.",
-                "type": "bf:Note"
-              }
-            ],
-            "nyplSource": [
-              "sierra-nypl"
-            ],
-            "subjectLiteral_exploded": [
-              "Cuntarar.",
-              "Cuntarar. -- Indexes",
-              "Hindu hymns, Tamil",
-              "Hindu hymns, Tamil -- Indexes"
-            ],
-            "numItemDatesParsed": [
-              0
-            ],
-            "publisherLiteral": [
-              "Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam"
-            ],
-            "language": [
-              {
-                "id": "lang:tam",
-                "label": "Tamil"
-              }
-            ],
-            "numItemsTotal": [
-              1
-            ],
-            "createdYear": [
-              1963
-            ],
-            "title": [
-              "Tēvāra oḷineṟi, Cuntarar"
-            ],
-            "type": [
-              "nypl:Item"
-            ],
-            "shelfMark": [
-              "*OLB 82-5123"
-            ],
-            "numItemVolumesParsed": [
-              0
-            ],
-            "createdString": [
-              "1963"
-            ],
-            "creatorLiteral": [
-              "Ceṅkalvarāya Piḷḷai, Va. Cu., 1883-1971."
-            ],
-            "idLccn": [
-              "75901411"
-            ],
-            "numElectronicResources": [
-              0
-            ],
-            "seriesStatement": [
-              "Kaḻaka veḷiyīṭu; 1139"
-            ],
-            "contributorLiteral": [
-              "Cuntarar."
-            ],
-            "dateStartYear": [
-              1963
-            ],
-            "idOclc": [
-              "NYPG001000064-B"
-            ],
-            "identifierV2": [
-              {
-                "type": "bf:ShelfMark",
-                "value": "*OLB 82-5123"
-              },
-              {
-                "type": "nypl:Bnumber",
-                "value": "10000116"
-              },
-              {
-                "type": "nypl:Oclc",
-                "value": "NYPG001000064-B"
-              },
-              {
-                "type": "bf:Lccn",
-                "value": "75901411"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "NNSZ00100064"
-              },
-              {
-                "type": "bf:Identifier",
-                "value": "(WaOLN)nyp0200115"
-              }
-            ],
-            "updatedAt": 1711606516370,
-            "publicationStatement": [
-              "Tirunelvēli : Tirunelvēlit Teṉṉintiya Caivacittānta Nūṟpatippuk Kaḻakam, 1963."
-            ],
-            "identifier": [
-              "urn:shelfmark:*OLB 82-5123",
-              "urn:bnum:10000116",
-              "urn:oclc:NYPG001000064-B",
-              "urn:lccn:75901411",
-              "urn:identifier:NNSZ00100064",
-              "urn:identifier:(WaOLN)nyp0200115"
-            ],
-            "numCheckinCardItems": [
-              0
-            ],
-            "materialType": [
-              {
-                "id": "resourcetypes:txt",
-                "label": "Text"
-              }
-            ],
-            "carrierType": [
-              {
-                "id": "carriertypes:nc",
-                "label": "volume"
-              }
-            ],
-            "dateString": [
-              "1963"
-            ],
-            "mediaType": [
-              {
-                "id": "mediatypes:n",
-                "label": "unmediated"
-              }
-            ],
-            "subjectLiteral": [
-              "Cuntarar. -- Indexes.",
-              "Hindu hymns, Tamil -- Indexes."
-            ],
-            "titleDisplay": [
-              "Tēvāra oḷineṟi, Cuntarar / Va. Cu. Ceṅkalvarāya Piḷḷai eḻutiyatu."
-            ],
-            "uri": "b10000116",
-            "lccClassification": [
-              "BL1226.3.C862 C47"
-            ],
-            "placeOfPublication": [
-              "Tirunelvēli"
-            ],
-            "issuance": [
-              {
-                "id": "urn:biblevel:m",
-                "label": "monograph/item"
-              }
-            ],
-            "dimensions": [
-              "19 cm."
-            ]
-          },
-          "sort": [
-            0,
-            "b10000116"
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "resources-2024-10-22",
+        "_id": "b10000103",
+        "_score": 0,
+        "_source": {
+          "extent": [
+            "11, 602 p.: port.;"
           ],
-          "inner_hits": {
-            "items": {
-              "hits": {
-                "total": {
-                  "value": 1,
-                  "relation": "eq"
-                },
-                "max_score": null,
-                "hits": [
-                  {
-                    "_index": "resources-2024-07-11",
-                    "_id": "b10000116",
-                    "_nested": {
-                      "field": "items",
-                      "offset": 0
-                    },
-                    "_score": null,
-                    "_source": {
-                      "accessMessage_packed": [
-                        "accessMessage:2||Request in advance"
-                      ],
-                      "owner": [
-                        {
-                          "id": "orgs:1000",
-                          "label": "Stephen A. Schwarzman Building"
-                        }
-                      ],
-                      "identifier": [
-                        "urn:shelfmark:*OLB 82-5123",
-                        "urn:barcode:33433001839004"
-                      ],
-                      "physicalLocation": [
-                        "*OLB 82-5123"
-                      ],
-                      "shelfMark_sort": "a*OLB 82-005123",
-                      "catalogItemType_packed": [
-                        "catalogItemType:55||book, limited circ, MaRLI"
-                      ],
-                      "accessMessage": [
-                        {
-                          "id": "accessMessage:2",
-                          "label": "Request in advance"
-                        }
-                      ],
-                      "status_packed": [
-                        "status:a||Available"
-                      ],
-                      "type": [
-                        "bf:Item"
-                      ],
-                      "shelfMark": [
-                        "*OLB 82-5123"
-                      ],
-                      "uri": "i10000051",
-                      "identifierV2": [
-                        {
-                          "type": "bf:ShelfMark",
-                          "value": "*OLB 82-5123"
-                        },
-                        {
-                          "type": "bf:Barcode",
-                          "value": "33433001839004"
-                        }
-                      ],
-                      "holdingLocation_packed": [
-                        "loc:rc2ma||Offsite"
-                      ],
-                      "idBarcode": [
-                        "33433001839004"
-                      ],
-                      "owner_packed": [
-                        "orgs:1000||Stephen A. Schwarzman Building"
-                      ],
-                      "requestable": [
-                        true
-                      ],
-                      "catalogItemType": [
-                        {
-                          "id": "catalogItemType:55",
-                          "label": "book, limited circ, MaRLI"
-                        }
-                      ],
-                      "formatLiteral": [
-                        "Text"
-                      ],
-                      "holdingLocation": [
-                        {
-                          "id": "loc:rc2ma",
-                          "label": "Offsite"
-                        }
-                      ],
-                      "recapCustomerCode": [
-                        "NA"
-                      ],
-                      "status": [
-                        {
-                          "id": "status:a",
-                          "label": "Available"
-                        }
-                      ]
-                    },
-                    "sort": [
-                      null
-                    ]
-                  }
-                ]
-              }
+          "note": [
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ"
+          ],
+          "language": [
+            {
+              "id": "lang:ara",
+              "label": "Arabic"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "createdYear": [
+            1967
+          ],
+          "title": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [
+            "*OFA 82-5137"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1967"
+          ],
+          "creatorLiteral": [
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979."
+          ],
+          "idLccn": [
+            "75960366"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "seriesStatement": [
+            "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1"
+          ],
+          "dateStartYear": [
+            1967
+          ],
+          "idOclc": [
+            "NYPG001000051-B"
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*OFA 82-5137"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10000103"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG001000051-B"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "75960366"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00100051"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0200102"
+            }
+          ],
+          "updatedAt": 1711284909373,
+          "publicationStatement": [
+            "[al-Jazāʼir]: al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1967."
+          ],
+          "identifier": [
+            "urn:shelfmark:*OFA 82-5137",
+            "urn:bnum:10000103",
+            "urn:oclc:NYPG001000051-B",
+            "urn:lccn:75960366",
+            "urn:identifier:NNSZ00100051",
+            "urn:identifier:(WaOLN)nyp0200102"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1967"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "titleDisplay": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
+          "uri": "b10000103",
+          "lccClassification": [
+            "PJ7842.H2937 A17 1967"
+          ],
+          "placeOfPublication": [
+            "[al-Jazāʼir]"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "24 cm."
+          ]
+        },
+        "sort": [
+          0,
+          "b10000103"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b10000103",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:55",
+                        "label": "book, limited circ, MaRLI"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "idBarcode": [
+                      "33433002000671"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*OFA 82-5137",
+                      "urn:barcode:33433002000671"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*OFA 82-5137",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433002000671",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "physicalLocation": [
+                      "*OFA 82-5137"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*OFA 82-5137"
+                    ],
+                    "shelfMark_sort": "a*OFA 82-005137",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i10000042"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
             }
           }
         }
-      ]
-    }
-  },
-  "statusCode": 200
+      }
+    ]
+  }
 }

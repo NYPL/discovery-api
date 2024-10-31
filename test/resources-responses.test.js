@@ -753,7 +753,7 @@ describe('Test Resources responses', function () {
     })
     let standardNumbers = [
       'b22144813',
-      'Danacode', // Should match `identifierV2[@type=bf:Lccn].value`
+      '9790001138673', // Should match `identifierV2[@type=bf:Lccn].value`
       '"ISBN -- 020"',
       '44455533322211'
     ]
