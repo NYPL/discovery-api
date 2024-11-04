@@ -1,6 +1,9 @@
 const { expect } = require('chai')
 
-const { ResourceSerializer } = require('../lib/jsonld_serializers')
+const {
+  ResourceSerializer,
+  ItemResultsSerializer
+} = require('../lib/jsonld_serializers')
 
 describe('JSONLD Serializers', () => {
   describe('ResourceSerializer', () => {
@@ -66,6 +69,52 @@ describe('JSONLD Serializers', () => {
           expect(serialized.hasItemDates).to.equal(false)
         })
       )
+    })
+  })
+
+  describe('ItemResultsSerializer', () => {
+    const esItems = [
+      {
+        accessMessage: [{ id: 'accessMessage:2', label: 'Request in advance' }],
+        catalogItemType: [{ id: 'catalogItemType:55', label: 'book, limited circ, MaRLI' }],
+        holdingLocation: [{ id: 'loc:rc2ma', label: 'Offsite' }],
+        identifier: [
+          'urn:bnum:b10807029',
+          'urn:shelfmark:JLE 83-2799',
+          'urn:barcode:33433056867710'
+        ],
+        status: [{ id: 'status:a', label: 'Available' }],
+        type: ['bf:Item'],
+        uri: 'i12606717',
+        recapCustomerCode: ['NA'],
+        eddRequestable: true,
+        deliveryLocation: [
+          {
+            id: 'loc:mal23',
+            label: 'Schwarzman Building - Scholar Room 223',
+            sortPosition: 0
+          },
+          {
+            id: 'loc:mal',
+            label: 'Schwarzman Building - Main Reading Room 315',
+            sortPosition: 1
+          },
+          {
+            id: 'loc:mab',
+            label: 'Schwarzman Building - Art & Architecture Room 300',
+            sortPosition: 2
+          }
+        ]
+      }
+    ]
+
+    it('serializes delivery-lcoations-by-barcode response', async () => {
+      const serialized = await ItemResultsSerializer.serialize(esItems)
+      expect(serialized).to.nested.include({
+        'itemListElement[0].@id': 'res:i12606717',
+        'itemListElement[0].deliveryLocation[0].@id': 'loc:mal23',
+        'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Scholar Room 223'
+      })
     })
   })
 })
