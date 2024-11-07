@@ -229,22 +229,23 @@ describe('Resources query', function () {
     })
 
     it('handles bib 404 by rejecting with NotFoundError', () => {
-      const call = () => app.resources.findByUri({ uri: 'b123' })
-      return expect(call()).to.be.rejectedWith(errors.NotFoundError)
+      const call = app.resources.findByUri({ uri: 'b123' })
+      return expect(call).to.be.rejectedWith(errors.NotFoundError)
     })
 
     it('handles invalid bib uri with 400', () => {
-      const call = () => app.resources.findByUri({ uri: 'asdf' })
-      return expect(call).to.throw(errors.InvalidParameterError, 'Invalid bnum: asdf')
+      const call = app.resources.findByUri({ uri: 'asdf' })
+      return expect(call).to.be.rejectedWith(errors.InvalidParameterError, 'Invalid bnum: asdf')
     })
   })
 
   describe('findByUri all items', () => {
     after(() => { app.esClient.search.restore() })
+
     it('overrides items_size and items_from', async () => {
       const esSearchStub =
         sinon.stub(app.esClient, 'search')
-          .callsFake(async (body) => ({ body: { hits: { hits: [{ _source: { items: [{ uri: 'spaghetti', status: [{ label: 'spaghetti', id: 'status:pasta' }] }] } }] } } }))
+          .callsFake(async (body) => ({ hits: { hits: [{ _source: { items: [{ uri: 'spaghetti', status: [{ label: 'spaghetti', id: 'status:pasta' }] }] } }] } }))
       await app.resources.findByUri({ uri: 'b1234', all_items: 'true' }, {}, { query: { all_items: 'true' }, params: {} })
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(searchBody.item_size).to.equal(undefined)
