@@ -323,21 +323,27 @@ describe('Response with updated availability', function () {
       esClient.search.restore()
     })
 
-    it('preserves Available statuses for items that are also available in ReCAP', () => {
+    it('preserves Available statuses for items that are also available in ReCAP', async () => {
+      // Start with an availability resolver wrapping a ES response for a bib
+      // with 4 items, where the item-agg shows 2 are RC and all 4 are indexed
+      // as Available..
       const availabilityResolver = new AvailabilityResolver(
         require('./fixtures/es-response-b1234-recap-statuses.json')
       )
 
+      // Emulate SCSB reporting that there are two Available items for this bib:
       const recapBarcodesByStatus = {
         Available: ['barcode1', 'barcode2']
       }
-      return availabilityResolver.responseWithUpdatedAvailability({ recapBarcodesByStatus })
-        .then((modifiedResponse) => {
-          const buckets = modifiedResponse.aggregations.item_status._nested.buckets
-          expect(buckets).to.deep.equal([
-            { key: 'status:a||Available', doc_count: 4 }
-          ])
-        })
+      await availabilityResolver._fixItemStatusAggregation({ recapBarcodesByStatus })
+      const modifiedResponse = availabilityResolver.elasticSearchResponse
+      const buckets = modifiedResponse.aggregations.item_status._nested.buckets
+      // Because there are 2 offsite items, and our mocked scsb status response
+      // shows two Available items, we expect the final status agg to show 4
+      // Available
+      expect(buckets).to.deep.equal([
+        { key: 'status:a||Available', doc_count: 4 }
+      ])
     })
 
     it('incorporates Not Available statuses for items that are not available in ReCAP', () => {
