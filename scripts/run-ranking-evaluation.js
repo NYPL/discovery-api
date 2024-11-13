@@ -1,11 +1,17 @@
 /**
+* This script runs a series of rank-eval calls against the configured index to
+* produce a bunch of numbers from 0 to 1 that represent relevancy performance
+# across a number of metics. We collect these numbers in a spreadsheet to track
+* relevancy performance over time.
+*
 * Usage:
 *   nvm use; ENV=qa node scripts/run-ranking-evaluation.js; pbcopy < out.csv
 *
 *   .. Then, paste the row into the next position in this spreadsheet:
 *   https://docs.google.com/spreadsheets/d/12uDDxi3bInneZwmUQwEiYYkHheNkqW0WT5jxWvix4BE/edit?pli=1&gid=1424571383#gid=1424571383
 *
-*   After pasting, copy col C from the previous row into the newly pasted row (because the forumla uses relative references).
+*   After pasting, copy col C from the previous row into the newly pasted row
+*   (because the forumla uses relative references).
 *
 */
 const fs = require('fs')
