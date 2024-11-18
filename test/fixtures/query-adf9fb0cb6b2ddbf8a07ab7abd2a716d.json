@@ -1,5 +1,5 @@
 {
-  "took": 52,
+  "took": 67,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -17,7 +17,7 @@
       {
         "_index": "resources-2024-10-22",
         "_id": "b11826883",
-        "_score": 1969.9161,
+        "_score": 1985.5239,
         "_source": {
           "extent": [
             "v. : ill. ;"
@@ -89,14 +89,18 @@
           "createdYear": [
             1965
           ],
+          "buildingLocationIds": [
+            "rc",
+            "ma"
+          ],
           "dateEndString": [
             "9999"
           ],
-          "title": [
-            "Furniture history : the journal of the Furniture History Society."
-          ],
           "type": [
             "nypl:Item"
+          ],
+          "title": [
+            "Furniture history : the journal of the Furniture History Society."
           ],
           "shelfMark": [
             "JQL 08-18"
@@ -121,9 +125,6 @@
           ],
           "dateStartYear": [
             1965
-          ],
-          "idOclc": [
-            "1570335"
           ],
           "identifierV2": [
             {
@@ -154,6 +155,9 @@
               "type": "bf:Identifier",
               "value": "(WaOLN)nyp1832956"
             }
+          ],
+          "idOclc": [
+            "1570335"
           ],
           "popularity": 62,
           "dateEndYear": [
@@ -517,22 +521,22 @@
           "placeOfPublication": [
             "[London]"
           ],
+          "titleAlt": [
+            "Furnit. hist.",
+            "Furniture history"
+          ],
           "issuance": [
             {
               "id": "urn:biblevel:s",
               "label": "serial"
             }
           ],
-          "titleAlt": [
-            "Furnit. hist.",
-            "Furniture history"
-          ],
           "dimensions": [
             "25 cm."
           ]
         },
         "sort": [
-          1969.9161,
+          1985.5239,
           "b11826883"
         ],
         "inner_hits": {
@@ -553,20 +557,8 @@
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:3||serial"
@@ -577,11 +569,36 @@
                         "lte": "2023"
                       }
                     ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "JQL 08-18 v. 59 (2023)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "JQL 08-18 v. 59 (2023)"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433076530082"
+                      }
+                    ],
                     "enumerationChronology": [
                       "v. 59 (2023)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        59-2023"
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
                     ],
                     "formatLiteral": [
                       "Text"
@@ -592,24 +609,13 @@
                         "label": "Offsite"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:rcmb2||Offsite"
+                    "recapCustomerCode": [
+                      "NA"
                     ],
-                    "idBarcode": [
-                      "33433076530082"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:JQL 08-18 v. 59 (2023)",
-                      "urn:barcode:33433076530082"
-                    ],
-                    "identifierV2": [
+                    "volumeRange": [
                       {
-                        "value": "JQL 08-18 v. 59 (2023)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433076530082",
-                        "type": "bf:Barcode"
+                        "gte": 59,
+                        "lte": 59
                       }
                     ],
                     "owner": [
@@ -618,41 +624,39 @@
                         "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
                       }
                     ],
-                    "owner_packed": [
-                      "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                    "identifier": [
+                      "urn:shelfmark:JQL 08-18 v. 59 (2023)",
+                      "urn:barcode:33433076530082"
                     ],
                     "physicalLocation": [
                       "JQL 08-18"
                     ],
-                    "recapCustomerCode": [
-                      "NA"
+                    "shelfMark_sort": "aJQL 08-18 v. 000059 (2023)",
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "enumerationChronology_sort": [
+                      "        59-2023"
+                    ],
+                    "uri": "i40673104",
+                    "holdingLocation_packed": [
+                      "loc:rcmb2||Offsite"
+                    ],
+                    "idBarcode": [
+                      "33433076530082"
+                    ],
+                    "owner_packed": [
+                      "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
                     ],
                     "requestable": [
                       true
                     ],
-                    "shelfMark": [
-                      "JQL 08-18 v. 59 (2023)"
-                    ],
-                    "shelfMark_sort": "aJQL 08-18 v. 000059 (2023)",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "volumeRange": [
-                      {
-                        "gte": 59,
-                        "lte": 59
-                      }
-                    ],
-                    "uri": "i40673104"
+                    ]
                   },
                   "sort": [
                     "        59-2023"
@@ -667,26 +671,49 @@
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "shelfMark_sort": "aJQL 08-000018",
                     "dateRange": [
                       {
                         "gte": "2022-01-01",
                         "lte": "2022-01-01"
                       }
                     ],
-                    "enumerationChronology": [
-                      "No. 58 (2022)"
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:na||Not available"
+                    ],
+                    "volumeRaw": [
+                      "No. 58"
                     ],
                     "enumerationChronology_sort": [
                       "        58-2022-01-01"
+                    ],
+                    "type": [
+                      "nypl:CheckinCardItem"
+                    ],
+                    "shelfMark": [
+                      "JQL 08-18"
+                    ],
+                    "uri": "i-h1066822-0",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "JQL 08-18"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mab||Schwarzman Building - Art & Architecture Room 300"
+                    ],
+                    "enumerationChronology": [
+                      "No. 58 (2022)"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -697,40 +724,17 @@
                         "label": "Schwarzman Building - Art & Architecture Room 300"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:mab||Schwarzman Building - Art & Architecture Room 300"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "JQL 08-18",
-                        "type": "bf:ShelfMark"
-                      }
-                    ],
-                    "shelfMark": [
-                      "JQL 08-18"
-                    ],
-                    "shelfMark_sort": "aJQL 08-000018",
                     "status": [
                       {
                         "id": "status:na",
                         "label": "Not available"
                       }
                     ],
-                    "status_packed": [
-                      "status:na||Not available"
-                    ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "uri": "i-h1066822-0",
                     "volumeRange": [
                       {
                         "gte": 58,
                         "lte": 58
                       }
-                    ],
-                    "volumeRaw": [
-                      "No. 58"
                     ]
                   },
                   "sort": [
@@ -746,20 +750,8 @@
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:3||serial"
@@ -770,11 +762,36 @@
                         "lte": "2022"
                       }
                     ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "JQL 08-18 v. 58 (2022)"
+                    ],
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "JQL 08-18 v. 58 (2022)"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433076543143"
+                      }
+                    ],
                     "enumerationChronology": [
                       "v. 58 (2022)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        58-2022"
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
                     ],
                     "formatLiteral": [
                       "Text"
@@ -785,24 +802,13 @@
                         "label": "Offsite"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:rcmb2||Offsite"
+                    "recapCustomerCode": [
+                      "NA"
                     ],
-                    "idBarcode": [
-                      "33433076543143"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:JQL 08-18 v. 58 (2022)",
-                      "urn:barcode:33433076543143"
-                    ],
-                    "identifierV2": [
+                    "volumeRange": [
                       {
-                        "value": "JQL 08-18 v. 58 (2022)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433076543143",
-                        "type": "bf:Barcode"
+                        "gte": 58,
+                        "lte": 58
                       }
                     ],
                     "owner": [
@@ -811,41 +817,39 @@
                         "label": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
                       }
                     ],
-                    "owner_packed": [
-                      "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
+                    "identifier": [
+                      "urn:shelfmark:JQL 08-18 v. 58 (2022)",
+                      "urn:barcode:33433076543143"
                     ],
                     "physicalLocation": [
                       "JQL 08-18"
                     ],
-                    "recapCustomerCode": [
-                      "NA"
+                    "shelfMark_sort": "aJQL 08-18 v. 000058 (2022)",
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "enumerationChronology_sort": [
+                      "        58-2022"
+                    ],
+                    "uri": "i39962833",
+                    "holdingLocation_packed": [
+                      "loc:rcmb2||Offsite"
+                    ],
+                    "idBarcode": [
+                      "33433076543143"
+                    ],
+                    "owner_packed": [
+                      "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection"
                     ],
                     "requestable": [
                       true
                     ],
-                    "shelfMark": [
-                      "JQL 08-18 v. 58 (2022)"
-                    ],
-                    "shelfMark_sort": "aJQL 08-18 v. 000058 (2022)",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "volumeRange": [
-                      {
-                        "gte": 58,
-                        "lte": 58
-                      }
-                    ],
-                    "uri": "i39962833"
+                    ]
                   },
                   "sort": [
                     "        58-2022"

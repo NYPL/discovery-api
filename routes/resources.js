@@ -1,5 +1,3 @@
-const gatherParams = require('../lib/util').gatherParams
-
 const VER = '0.1'
 
 module.exports = function (app) {
@@ -10,29 +8,6 @@ module.exports = function (app) {
     app.baseUrl = `http${req.secure ? 's' : ''}://${req.get('host')}/api/v${VER}/discovery`
     next()
   })
-
-  const standardParams = ['page',
-    'per_page',
-    'q',
-    'filters',
-    'expandContext',
-    'ext',
-    'field',
-    'sort',
-    'sort_direction',
-    'search_scope',
-    'all_items',
-    'items_size',
-    'items_from',
-    'contributor',
-    'title',
-    'subject',
-    'isbn',
-    'issn',
-    'lccn',
-    'oclc',
-    'merge_checkin_card_items',
-    'include_item_aggregations']
 
   const respond = (res, _resp, params) => {
     let contentType = 'application/ld+json'
@@ -65,7 +40,7 @@ module.exports = function (app) {
   }
 
   app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
-    const params = gatherParams(req, standardParams)
+    const params = req.query
 
     return app.resources.search(params, { baseUrl: app.baseUrl }, req)
       .then((resp) => respond(res, resp, params))
@@ -73,7 +48,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res) {
-    const params = gatherParams(req, standardParams)
+    const params = req.query
 
     return app.resources.aggregations(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
@@ -81,7 +56,7 @@ module.exports = function (app) {
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
-    const params = Object.assign({}, gatherParams(req, standardParams), req.params)
+    const params = req.query
 
     return app.resources.aggregation(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
@@ -95,11 +70,11 @@ module.exports = function (app) {
    *   /api/v${VER}/request/deliveryLocationsByBarcode?barcodes[]=12345&barcodes[]=45678&barcodes=[]=78910
    */
   app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res) {
-    const params = gatherParams(req, ['barcodes', 'patronId'])
+    const params = req.query
 
     const handler = app.resources.deliveryLocationsByBarcode
 
-    return handler(params, { baseUrl: app.baseUrl })
+    return handler(req.query.params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })
@@ -125,7 +100,7 @@ module.exports = function (app) {
    * e.g. discovery/resources/b1234
    */
   app.get(`/api/v${VER}/discovery/resources/:uri.:ext?`, function (req, res) {
-    const gatheredParams = gatherParams(req, ['uri', 'items_size', 'items_from', 'merge_checkin_card_items', 'include_item_aggregations', 'all_items'])
+    const gatheredParams = req.query
     const params = Object.assign({}, req.query, { uri: req.params.uri })
 
     if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
