@@ -156,6 +156,28 @@ describe('ElasticQueryBuilder', () => {
       })
     })
 
+    describe('standard_number=', () => {
+      it('applies standard_number clauses to query', () => {
+        const request = new ApiRequest({ standard_number: 'toast' })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        expect(inst.query.toJson()).to.nested
+          .include({
+            // Match on bib identifiers:
+            'bool.must[0].bool.must[0].bool.should[0].prefix.identifierV2\\.value.value': 'toast'
+          })
+          .include({
+            // Match on bib id:
+            'bool.must[0].bool.must[0].bool.should[1].term.uri.value': 'toast' // ,
+          })
+          .include({
+            // Match on item barcode:
+            'bool.must[0].bool.must[0].bool.should[2].nested.path': 'items',
+            'bool.must[0].bool.must[0].bool.should[2].nested.query.term.items\\.idBarcode.value': 'toast'
+          })
+      })
+    })
+
     describe('title=', () => {
       it('applies title clauses to query', () => {
         const request = new ApiRequest({ title: 'toast' })

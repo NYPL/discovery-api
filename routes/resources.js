@@ -100,11 +100,10 @@ module.exports = function (app) {
    * e.g. discovery/resources/b1234
    */
   app.get(`/api/v${VER}/discovery/resources/:uri.:ext?`, function (req, res) {
-    const gatheredParams = req.query
     const params = Object.assign({}, req.query, { uri: req.params.uri })
 
-    if (Number.isInteger(parseInt(gatheredParams.items_size))) params.items_size = gatheredParams.items_size
-    if (Number.isInteger(parseInt(gatheredParams.items_from))) params.items_from = gatheredParams.items_from
+    if (Number.isInteger(parseInt(req.query.items_size))) params.items_size = req.query.items_size
+    if (Number.isInteger(parseInt(req.query.items_from))) params.items_from = req.query.items_from
 
     let handler = app.resources.findByUri
 
