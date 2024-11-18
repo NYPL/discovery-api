@@ -183,7 +183,6 @@ describe('ElasticQueryBuilder', () => {
         const request = new ApiRequest({ title: 'toast' })
         const inst = ElasticQueryBuilder.forApiRequest(request)
 
-        // console.log('ES: ', JSON.stringify(inst.query.toJson(), null, 2))
         const query = inst.query.toJson()
 
         // Assert there's a multi-match:
@@ -244,7 +243,6 @@ describe('ElasticQueryBuilder', () => {
         })
         const inst = ElasticQueryBuilder.forApiRequest(request)
 
-        console.log('ES: ', JSON.stringify(inst.query.toJson(), null, 2))
         const query = inst.query.toJson()
 
         // Assert there's a multi-match:
