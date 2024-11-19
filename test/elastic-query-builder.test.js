@@ -235,7 +235,7 @@ describe('ElasticQueryBuilder', () => {
     })
 
     describe('multiple adv search params', () => {
-      it('applies contributor clauses to query', () => {
+      it('applies multiple param clauses to query', () => {
         const request = new ApiRequest({
           title: 'title value',
           contributor: 'contributor value',
@@ -279,6 +279,74 @@ describe('ElasticQueryBuilder', () => {
               boost: 100
             }
           }
+        })
+      })
+    })
+
+    describe('adv search params with filters', () => {
+      it('applies param and filter clauses to query', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: 2020,
+            dateBefore: 2021,
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Assert there's a multi-match:
+        expect(query).to.nested
+          .include({
+            // Multi-match on title fields:
+            'bool.must[0].bool.must[0].multi_match.fields[0]': 'title^5',
+            'bool.must[0].bool.must[0].multi_match.query': 'title value',
+
+            // Multi-match on creator/contrib fields:
+            'bool.must[1].bool.must[0].multi_match.fields[0]': 'creatorLiteral^4',
+            'bool.must[1].bool.must[0].multi_match.query': 'contributor value'
+          })
+
+        // Assert there's at least one of the title boosting clauses:
+        const titleShoulds = query.bool.must[0].bool.should
+        const prefixMatch = titleShoulds.find((should) => should.prefix)
+        expect(prefixMatch).to.deep.equal({
+          prefix: {
+            'title.keywordLowercasedStripped': {
+              value: 'title value',
+              boost: 50
+            }
+          }
+        })
+
+        // Assert there's at least one of the creator boosting clauses:
+        const creatorShoulds = query.bool.must[1].bool.should
+        const creatorPrefixMatch = creatorShoulds.find((should) => should.prefix)
+        expect(creatorPrefixMatch).to.deep.equal({
+          prefix: {
+            'creatorLiteralNormalized.keywordLowercased': {
+              value: 'contributor value',
+              boost: 100
+            }
+          }
+        })
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          // Match filers[dateBefore]:
+          'bool.filter[0].bool.must[0].bool.should[0].range.dateStartYear.lte': 2021,
+          'bool.filter[0].bool.must[0].bool.should[1].range.dateEndYear.lte': 2021,
+          // Match filters[dateAfter]:
+          'bool.filter[0].bool.must[1].bool.should[0].range.dateStartYear.gte': 2020,
+          'bool.filter[0].bool.must[1].bool.should[1].range.dateEndYear.gte': 2020
+        })
+
+        expect(query).to.nested.include({
+          // Match filters[materialType]:
+          'bool.filter[1].bool.should[0].term.materialType\\.id': 'resourcetypes:aud'
         })
       })
     })
