@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.120329,
+    "max_score": 15.226543,
     "hits": [
       {
         "_index": "resources-2024-10-22",
         "_id": "b18932917",
-        "_score": 15.120329,
+        "_score": 15.226543,
         "_source": {
           "extent": [
             "52 linear ft., 127 boxes"
@@ -213,11 +213,11 @@
               "value": "(OCoLC)715462601"
             }
           ],
-          "popularity": 949,
+          "popularity": 950,
           "dateEndYear": [
             1970
           ],
-          "updatedAt": 1729786681798,
+          "updatedAt": 1731077764757,
           "identifier": [
             "urn:shelfmark:Sc MG 162",
             "urn:bnum:18932917",
@@ -8163,12 +8163,12 @@
                     "shelfMark_sort": "aSc MG 162 box 000042",
                     "status": [
                       {
-                        "id": "status:t",
-                        "label": "In transit"
+                        "id": "status:a",
+                        "label": "Available"
                       }
                     ],
                     "status_packed": [
-                      "status:t||In transit"
+                      "status:a||Available"
                     ],
                     "type": [
                       "bf:Item"
@@ -9395,11 +9395,11 @@
         "buckets": [
           {
             "key": "status:a||Available",
-            "doc_count": 120
+            "doc_count": 121
           },
           {
             "key": "status:t||In transit",
-            "doc_count": 7
+            "doc_count": 6
           },
           {
             "key": "status:co||Loaned",

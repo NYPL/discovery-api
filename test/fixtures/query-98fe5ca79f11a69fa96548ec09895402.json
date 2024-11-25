@@ -1,5 +1,5 @@
 {
-  "took": 21,
+  "took": 23,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.120333,
+    "max_score": 14.890072,
     "hits": [
       {
         "_index": "resources-2024-10-22",
         "_id": "b10833141",
-        "_score": 15.120333,
+        "_score": 14.890072,
         "_source": {
           "extent": [
             "volumes : illustrations ;"
@@ -167,7 +167,7 @@
               "value": "(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305"
             }
           ],
-          "popularity": 1039,
+          "popularity": 1042,
           "uniformTitle": [
             "New Yorker (New York, N.Y. : 1925)"
           ],
@@ -1405,7 +1405,7 @@
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Expected"
+                  "status": "Arrived"
                 },
                 {
                   "coverage": "Vol. 100 No. 37 (Nov. 11, 2024)",
@@ -1414,7 +1414,7 @@
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Expected"
+                  "status": "Arrived"
                 },
                 {
                   "coverage": "Vol. 100 No. 38 (Nov. 18, 2024)",
@@ -1423,7 +1423,7 @@
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Expected"
+                  "status": "Arrived"
                 },
                 {
                   "coverage": "Vol. 100 No. 39 (Nov. 25, 2024)",
@@ -1482,7 +1482,7 @@
               ],
               "holdingStatement": [
                 "[Bound vols.] 1(1925)-June, Sept.1951-68:9(1992), 68:11(1992)-69:4(1993), 69:6(1993)-72:25(1996), 72:27(1996)-75:25(1999), 75:27(1999)-76:45(2001), 77:1(2001)-77:27(2001), 77:29(2001)-81:15(2005), 81:18(2005)-83:13(2007), 83:17(2007)-85:22(2009), 85:24(2009)-86:11(2010), 86:13(2010)-88:12(2012), 88:14(2012)-88:20(2012), 88:39(2012)-90:38(2014), 91:5(2015), 91:9(2015), 91:14(2015)-92:36(2016), 92:38(2016)-97(2021)--",
-                "v. 99, no. 37 (2023-11-13); v. 99, no. 48 (2024-02-05); v. 100, no. 2 (2024-02-26)"
+                "v. 99, no. 37 (2023-11-13); v. 99, no. 48 (2024-02-05); v. 100, no. 2 (2024-02-26); v. 100, no. 38 (2024-11-18)"
               ],
               "identifier": [
                 {
@@ -1511,7 +1511,7 @@
               "uri": "h1144777"
             }
           ],
-          "updatedAt": 1729702613931,
+          "updatedAt": 1731688335474,
           "publicationStatement": [
             "New York : F-R Pub. Corp., 1925-",
             "[New York] : D. Carey",
@@ -1589,341 +1589,6 @@
           ]
         },
         "inner_hits": {
-          "allItems": {
-            "hits": {
-              "total": {
-                "value": 848,
-                "relation": "eq"
-              },
-              "max_score": 0,
-              "hits": [
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 0
-                  },
-                  "_score": 0,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021",
-                        "lte": "2021"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "v. 97 (May 10-July 26, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021"
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mal82",
-                        "label": "Schwarzman Building - Main Reading Room 315"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                    ],
-                    "idBarcode": [
-                      "33433136780354"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
-                      "urn:barcode:33433136780354"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433136780354",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (May 10-July 26, 2021)",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i40904678",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ]
-                  }
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 1
-                  },
-                  "_score": 0,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021",
-                        "lte": "2021"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "v. 97 (Feb 15-May 3, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021"
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mal82",
-                        "label": "Schwarzman Building - Main Reading Room 315"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                    ],
-                    "idBarcode": [
-                      "33433136780347"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
-                      "urn:barcode:33433136780347"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433136780347",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Feb 15-May 3, 2021)",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i40904674",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ]
-                  }
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 2
-                  },
-                  "_score": 0,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021",
-                        "lte": "2021"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "v. 97 (Aug. 2-Oct 25, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021"
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mal82",
-                        "label": "Schwarzman Building - Main Reading Room 315"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                    ],
-                    "idBarcode": [
-                      "33433136780362"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
-                      "urn:barcode:33433136780362"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433136780362",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Aug. 2-Oct 25, 2021)",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i40904679",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
           "items": {
             "hits": {
               "total": {
@@ -13028,6 +12693,341 @@
                 }
               ]
             }
+          },
+          "allItems": {
+            "hits": {
+              "total": {
+                "value": 848,
+                "relation": "eq"
+              },
+              "max_score": 0,
+              "hits": [
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b10833141",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": 0,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "2021",
+                        "lte": "2021"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "v. 97 (May 10-July 26, 2021)"
+                    ],
+                    "enumerationChronology_sort": [
+                      "        97-2021"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal82",
+                        "label": "Schwarzman Building - Main Reading Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                    ],
+                    "idBarcode": [
+                      "33433136780354"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
+                      "urn:barcode:33433136780354"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433136780354",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1101",
+                        "label": "General Research Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1101||General Research Division"
+                    ],
+                    "physicalLocation": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
+                    ],
+                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (May 10-July 26, 2021)",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i40904678",
+                    "volumeRange": [
+                      {
+                        "gte": 97,
+                        "lte": 97
+                      }
+                    ]
+                  }
+                },
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b10833141",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": 0,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "2021",
+                        "lte": "2021"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "v. 97 (Feb 15-May 3, 2021)"
+                    ],
+                    "enumerationChronology_sort": [
+                      "        97-2021"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal82",
+                        "label": "Schwarzman Building - Main Reading Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                    ],
+                    "idBarcode": [
+                      "33433136780347"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
+                      "urn:barcode:33433136780347"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433136780347",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1101",
+                        "label": "General Research Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1101||General Research Division"
+                    ],
+                    "physicalLocation": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
+                    ],
+                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Feb 15-May 3, 2021)",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i40904674",
+                    "volumeRange": [
+                      {
+                        "gte": 97,
+                        "lte": 97
+                      }
+                    ]
+                  }
+                },
+                {
+                  "_index": "resources-2024-10-22",
+                  "_id": "b10833141",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": 0,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "2021",
+                        "lte": "2021"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "v. 97 (Aug. 2-Oct 25, 2021)"
+                    ],
+                    "enumerationChronology_sort": [
+                      "        97-2021"
+                    ],
+                    "formatLiteral": [
+                      "Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal82",
+                        "label": "Schwarzman Building - Main Reading Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
+                    ],
+                    "idBarcode": [
+                      "33433136780362"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
+                      "urn:barcode:33433136780362"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433136780362",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1101",
+                        "label": "General Research Division"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1101||General Research Division"
+                    ],
+                    "physicalLocation": [
+                      "*DA+ (New Yorker)"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
+                    ],
+                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Aug. 2-Oct 25, 2021)",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i40904679",
+                    "volumeRange": [
+                      {
+                        "gte": 97,
+                        "lte": 97
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
           }
         }
       }
@@ -13096,18 +13096,22 @@
           },
           {
             "key": "status:co||Loaned",
-            "doc_count": 11
+            "doc_count": 12
           },
           {
             "key": "status:na||Not available",
-            "doc_count": 10
+            "doc_count": 7
+          },
+          {
+            "key": "status:t||In transit",
+            "doc_count": 2
           },
           {
             "key": "status:m||Missing",
             "doc_count": 1
           },
           {
-            "key": "status:t||In transit",
+            "key": "status:oh||On Holdshelf",
             "doc_count": 1
           }
         ]

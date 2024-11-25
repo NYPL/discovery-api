@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.631159,
+    "max_score": 15.782547,
     "hits": [
       {
         "_index": "resources-2024-10-22",
         "_id": "b10015541",
-        "_score": 15.631159,
+        "_score": 15.782547,
         "_source": {
           "extent": [
             "v. : ill. ;"
@@ -62,6 +62,9 @@
           ],
           "dateEndString": [
             "9999"
+          ],
+          "buildingLocationIds": [
+            "ma"
           ],
           "title": [
             "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s"
@@ -196,29 +199,69 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:APV (Pritchett) 87-2820 v. 2",
+                      "urn:barcode:33433065651741"
+                    ],
+                    "m2CustomerCode": [
+                      "XA"
+                    ],
+                    "physicalLocation": [
+                      "APV (Pritchett) 87-2820"
+                    ],
+                    "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000002",
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:1",
                         "label": "Use in library"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         2-"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "APV (Pritchett) 87-2820 v. 2"
+                    ],
+                    "uri": "i14747616",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "APV (Pritchett) 87-2820 v. 2"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433065651741"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                    ],
+                    "enumerationChronology": [
+                      "v. 2"
+                    ],
+                    "idBarcode": [
+                      "33433065651741"
+                    ],
+                    "requestable": [
+                      true
                     ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
                         "label": "book, limited circ, MaRLI"
                       }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "enumerationChronology": [
-                      "v. 2"
-                    ],
-                    "enumerationChronology_sort": [
-                      "         2-"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -229,58 +272,18 @@
                         "label": "Schwarzman Building M2 - Milstein Division Room 121"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
-                    ],
-                    "idBarcode": [
-                      "33433065651741"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:APV (Pritchett) 87-2820 v. 2",
-                      "urn:barcode:33433065651741"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "APV (Pritchett) 87-2820 v. 2",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433065651741",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "m2CustomerCode": [
-                      "XA"
-                    ],
-                    "physicalLocation": [
-                      "APV (Pritchett) 87-2820"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "APV (Pritchett) 87-2820 v. 2"
-                    ],
-                    "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000002",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
                     ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
                     "volumeRange": [
                       {
                         "gte": 2,
                         "lte": 2
                       }
-                    ],
-                    "uri": "i14747616"
+                    ]
                   },
                   "sort": [
                     "         2-"
@@ -295,29 +298,69 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:APV (Pritchett) 87-2820 v. 1",
+                      "urn:barcode:33433060936147"
+                    ],
+                    "m2CustomerCode": [
+                      "XA"
+                    ],
+                    "physicalLocation": [
+                      "APV (Pritchett) 87-2820"
+                    ],
+                    "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000001",
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:1",
                         "label": "Use in library"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         1-"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "APV (Pritchett) 87-2820 v. 1"
+                    ],
+                    "uri": "i35838326",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "APV (Pritchett) 87-2820 v. 1"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433060936147"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
+                    ],
+                    "enumerationChronology": [
+                      "v. 1"
+                    ],
+                    "idBarcode": [
+                      "33433060936147"
+                    ],
+                    "requestable": [
+                      true
                     ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
                         "label": "book, limited circ, MaRLI"
                       }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
-                    ],
-                    "enumerationChronology": [
-                      "v. 1"
-                    ],
-                    "enumerationChronology_sort": [
-                      "         1-"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -328,58 +371,18 @@
                         "label": "Schwarzman Building M2 - Milstein Division Room 121"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:mag92||Schwarzman Building M2 - Milstein Division Room 121"
-                    ],
-                    "idBarcode": [
-                      "33433060936147"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:APV (Pritchett) 87-2820 v. 1",
-                      "urn:barcode:33433060936147"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "APV (Pritchett) 87-2820 v. 1",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433060936147",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "m2CustomerCode": [
-                      "XA"
-                    ],
-                    "physicalLocation": [
-                      "APV (Pritchett) 87-2820"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "APV (Pritchett) 87-2820 v. 1"
-                    ],
-                    "shelfMark_sort": "aAPV (Pritchett) 87-2820 v. 000001",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
                     ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
                     "volumeRange": [
                       {
                         "gte": 1,
                         "lte": 1
                       }
-                    ],
-                    "uri": "i35838326"
+                    ]
                   },
                   "sort": [
                     "         1-"

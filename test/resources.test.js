@@ -94,21 +94,18 @@ describe('Resources query', function () {
     it('accepts advanced search parameters', function () {
       const params = resourcesPrivMethods.parseSearchParams({ contributor: 'Poe', title: 'Raven', subject: 'ravens' })
       const body = resourcesPrivMethods.buildElasticQuery(params)
-      expect(body).to.be.a('object')
-      expect(body.bool).to.be.a('object')
-      expect(body.bool.must).to.be.a('array')
-      expect(body.bool.must[0].multi_match).to.be.a('object')
-      expect(body.bool.must[0].multi_match.fields).to.be.a('array')
-      expect(body.bool.must[0].multi_match.fields[0]).to.equal('title^5')
-      expect(body.bool.must[0].multi_match.query).to.equal('Raven')
-      expect(body.bool.must[1].multi_match).to.be.a('object')
-      expect(body.bool.must[1].multi_match.fields).to.be.a('array')
-      expect(body.bool.must[1].multi_match.fields[0]).to.equal('subjectLiteral^2')
-      expect(body.bool.must[1].multi_match.query).to.equal('ravens')
-      expect(body.bool.must[2].multi_match).to.be.a('object')
-      expect(body.bool.must[2].multi_match.fields).to.be.a('array')
-      expect(body.bool.must[2].multi_match.fields[0]).to.equal('creatorLiteral^4')
-      expect(body.bool.must[2].multi_match.query).to.equal('Poe')
+
+      expect(body).to.nested.include({
+        // Expect a title match on Raven:
+        'bool.must[0].bool.must[0].multi_match.fields[0]': 'title^5',
+        'bool.must[0].bool.must[0].multi_match.query': 'Raven',
+        // Expect a subject match on 'ravens'
+        'bool.must[1].bool.must[0].multi_match.fields[0]': 'subjectLiteral^2',
+        'bool.must[1].bool.must[0].multi_match.query': 'ravens',
+        // Expect a creator match on Poe:
+        'bool.must[2].bool.must[0].multi_match.fields[0]': 'creatorLiteral^4',
+        'bool.must[2].bool.must[0].multi_match.query': 'Poe'
+      })
     })
   })
 

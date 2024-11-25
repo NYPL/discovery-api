@@ -1,5 +1,5 @@
 {
-  "took": 54,
+  "took": 11,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -17,7 +17,7 @@
       {
         "_index": "resources-2024-10-22",
         "_id": "b13565153",
-        "_score": 2430.3875,
+        "_score": 2446.6453,
         "_source": {
           "extent": [
             "430 p. : ill. ;"
@@ -66,6 +66,9 @@
           ],
           "dateEndString": [
             "1853"
+          ],
+          "buildingLocationIds": [
+            "rc"
           ],
           "title": [
             "Gardening for ladies : and, Companion to the flower-garden"
@@ -184,7 +187,7 @@
           ]
         },
         "sort": [
-          2430.3875,
+          2446.6453,
           "b13565153"
         ],
         "inner_hits": {
@@ -205,23 +208,69 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:VQG (Loudon, J. W. Gardening for ladies. 1854)",
+                      "urn:barcode:33433006564110"
+                    ],
+                    "physicalLocation": [
+                      "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                    ],
+                    "shelfMark_sort": "aVQG (Loudon, J. W. Gardening for ladies. 1854)",
+                    "catalogItemType_packed": [
+                      "catalogItemType:32||google project, book"
+                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:2",
                         "label": "Request in advance"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                    ],
+                    "uri": "i10708577",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433006564110"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rcma2||Offsite"
+                    ],
+                    "idBarcode": [
+                      "33433006564110"
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "requestable": [
+                      true
                     ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:32",
                         "label": "google project, book"
                       }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:32||google project, book"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -232,61 +281,15 @@
                         "label": "Offsite"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:rcma2||Offsite"
-                    ],
-                    "idBarcode": [
-                      "33433006564110"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:VQG (Loudon, J. W. Gardening for ladies. 1854)",
-                      "urn:barcode:33433006564110"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "VQG (Loudon, J. W. Gardening for ladies. 1854)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433006564110",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "physicalLocation": [
-                      "VQG (Loudon, J. W. Gardening for ladies. 1854)"
-                    ],
                     "recapCustomerCode": [
                       "NL"
                     ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "VQG (Loudon, J. W. Gardening for ladies. 1854)"
-                    ],
-                    "shelfMark_sort": "aVQG (Loudon, J. W. Gardening for ladies. 1854)",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i10708577"
+                    ]
                   },
                   "sort": [
                     null
