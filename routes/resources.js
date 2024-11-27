@@ -74,7 +74,7 @@ module.exports = function (app) {
 
     const handler = app.resources.deliveryLocationsByBarcode
 
-    return handler(req.query.params, { baseUrl: app.baseUrl })
+    return handler(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
       .catch((error) => handleError(res, error, params))
   })

@@ -124,32 +124,34 @@ const scholarRooms = [
   }
 ]
 
-function takeThisPartyPartiallyOffline () {
-  // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
-  DeliveryLocationsResolver.__recapCustomerCodesByBarcodes = (barcodes) => {
-    const stubbedLookups = {
-      'recap-barcode-for-pj': 'PJ',
-      33433047331719: 'NP',
-      32101062243553: 'PA',
-      CU56521537: 'CU',
-      33433011759648: 'NA',
-      // Let's pretend this is a valid NYPL Map Division item barcode
-      // and let's further pretend that HTC API tells us it's recap customer code is ND
-      'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
-    }
-
-    // Return hash containing only requested barcodes:
-    return Promise.resolve(
-      barcodes.reduce((h, barcode) => {
-        h[barcode] = stubbedLookups[barcode]
-        return h
-      }, {})
-    )
-  }
-}
-
 describe('Delivery-locations-resolver', function () {
-  before(takeThisPartyPartiallyOffline)
+  before(() => {
+    // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
+    sinon.stub(DeliveryLocationsResolver, '__recapCustomerCodesByBarcodes').callsFake((barcodes) => {
+      const stubbedLookups = {
+        'recap-barcode-for-pj': 'PJ',
+        33433047331719: 'NP',
+        32101062243553: 'PA',
+        CU56521537: 'CU',
+        33433011759648: 'NA',
+        // Let's pretend this is a valid NYPL Map Division item barcode
+        // and let's further pretend that HTC API tells us it's recap customer code is ND
+        'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
+      }
+
+      // Return hash containing only requested barcodes:
+      return Promise.resolve(
+        barcodes.reduce((h, barcode) => {
+          h[barcode] = stubbedLookups[barcode]
+          return h
+        }, {})
+      )
+    })
+  })
+
+  after(() => {
+    DeliveryLocationsResolver.__recapCustomerCodesByBarcodes.restore()
+  })
 
   describe('SC delivery locations', () => {
     before(() => {
@@ -377,8 +379,6 @@ describe('Delivery-locations-resolver', function () {
   })
 
   describe('attachDeliveryLocationsAndEddRequestability - romcom', () => {
-    before(takeThisPartyPartiallyOffline)
-
     const requestableM2Location = 'map92'
     const requestableM1Location = 'map82'
     const nonrequestableM2Location = 'ccj92'
