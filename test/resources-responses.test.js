@@ -842,4 +842,24 @@ describe('Test Resources responses', function () {
       })
     })
   })
+
+  describe('deliveryLocationsByBarcode', () => {
+    it('empty search returns status code 200', async () => {
+      const url = `${global.TEST_BASE_URL}/api/v0.1/request/deliveryLocationsByBarcode?barcodes=33433128201161`
+
+      return request.get(url, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+        expect(response.statusCode).to.eq(200)
+
+        const result = JSON.parse(body)
+        console.log('Got result: ', result)
+        expect(result).to.nested.include({
+          'itemListElement[0].deliveryLocation[0].@id': 'loc:mal',
+          'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Main Reading Room 315'
+        })
+      })
+    })
+  })
 })
