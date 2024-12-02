@@ -2,6 +2,11 @@ const { expect } = require('chai')
 const { ResourceSerializer } = require('../lib/jsonld_serializers')
 const esResponse = require('./fixtures/item-filter-aggregations.json')
 describe('Resource Serializer', () => {
+  describe('formatRecordType', () => {
+    it('should format properly', () => {
+      expect(ResourceSerializer.getFormattedRecordType('a')).to.deep.equal({ '@id': 'recordType:a', prefLabel: 'Book/Text' })
+    })
+  })
   describe('.formatItemFilterAggregations()', () => {
     let aggregationsFormatted
     before(() => {
