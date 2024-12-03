@@ -549,6 +549,31 @@ describe('Test Resources responses', function () {
       })
     })
 
+    describe('Filter by recordType', function () {
+      it('returns only items with recordType a', (done) => {
+        const recordType = 'a'
+        request.get(`${searchAllUrl}&filters[recordType]=a`, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          // Ensure we received results
+          expect(doc.totalResults).to.be.above(1)
+
+          // Ensure each result...
+          doc.itemListElement.forEach((element) => {
+            // .. has some items that ...
+            const itemsWithRecordType = element.result.items.filter((item) => {
+              if (!item.recordType) return false
+              // .. have holding locations that match the filtered location.
+              return item.recordType.filter((recType) => recType['@id'] === recordType).length > 0
+            })
+            // For the result to match, only one item needs to match:
+            expect(itemsWithRecordType.length).to.be.above(0)
+          })
+          done()
+        })
+      })
+    })
+
     describe('Filter by holdingLocation', function () {
       ;['loc:rc2ma', 'loc:mal92'].forEach((holdingLocationId) => {
         it('returns only bibs with items in holdingLocation ' + holdingLocationId, function (done) {
