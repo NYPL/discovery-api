@@ -552,25 +552,20 @@ describe('Test Resources responses', function () {
     describe('Filter by recordType', function () {
       it('returns only items with recordType a', (done) => {
         const recordType = 'a'
-        request.get(`${searchAllUrl}&filters[recordType]=a`, (err, res, body) => {
+        request.get(`${searchAllUrl}&filters[recordType]=${recordType}`, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
           // Ensure we received results
           expect(doc.totalResults).to.be.above(1)
-
           // Ensure each result...
-          doc.itemListElement.forEach((element) => {
+          const allItemsHaveRecordType = doc.itemListElement.every((element) => {
             // .. has some items that ...
-            const itemsWithRecordType = element.result.items.filter((item) => {
-              if (!item.recordType) return false
-              // .. have holding locations that match the filtered location.
-              return item.recordType.filter((recType) => recType['@id'] === recordType).length > 0
-            })
-            // For the result to match, only one item needs to match:
-            expect(itemsWithRecordType.length).to.be.above(0)
+            return element.recordType?.[0]['@id'] === 'recordType:' + recordType
           })
-          done()
+          // For the result to match, only one item needs to match:
+          expect(allItemsHaveRecordType)
         })
+        done()
       })
     })
 
