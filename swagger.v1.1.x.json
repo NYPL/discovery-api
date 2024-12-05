@@ -97,7 +97,7 @@
           {
             "name": "filters[*]",
             "in": "query",
-            "description": "Specify a hash of filters to apply, where key is: 'recordType','buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "description": "Specify a hash of filters to apply, where key is: 'recordType', 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
             "required": false,
             "type": "string"
           },
