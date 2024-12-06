@@ -128,11 +128,10 @@ describe('ElasticQueryBuilder', () => {
     })
   })
 
-  describe.only('user filters', () => {
+  describe('user filters', () => {
     it('applies user filters to query', () => {
       const request = new ApiRequest({ q: 'toast', filters: { buildingLocation: 'ma' } })
       const inst = ElasticQueryBuilder.forApiRequest(request)
-      console.dir(inst.query.toJson(), { depth: null })
       // Expect the top level bool to now have a `filter` prop with the user filter:
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.filter[0].term.buildingLocationIds': 'ma' })

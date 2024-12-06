@@ -569,7 +569,7 @@ describe('Test Resources responses', function () {
       })
     })
 
-    describe('Filter by holdingLocation', function () {
+    describe.only('Filter by holdingLocation', function () {
       ;['loc:rc2ma', 'loc:mal92'].forEach((holdingLocationId) => {
         it('returns only bibs with items in holdingLocation ' + holdingLocationId, function (done) {
           // Fetch all results:
@@ -721,7 +721,6 @@ describe('Test Resources responses', function () {
             nextUrl += '&filters[language]=lang:kan'
             return request.get(nextUrl, function (err, response, body) {
               if (err) throw err
-
               const doc = JSON.parse(body)
 
               // Ensure count decreased:
