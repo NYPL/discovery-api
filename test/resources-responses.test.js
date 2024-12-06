@@ -266,6 +266,8 @@ describe('Test Resources responses', function () {
 
         assert(doc.itemAggregations)
 
+        assert.deepEqual(doc.recordType, { '@id': 'a', prefLabel: 'Book/Text' })
+
         done()
       })
     })
@@ -544,6 +546,26 @@ describe('Test Resources responses', function () {
           assert.equal(doc.itemListElement[0].result['@id'], item101['@id'])
           done()
         })
+      })
+    })
+
+    describe('Filter by recordType', function () {
+      it('returns only items with recordType a', (done) => {
+        const recordType = 'a'
+        request.get(`${searchAllUrl}&filters[recordType]=${recordType}`, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          // Ensure we received results
+          expect(doc.totalResults).to.be.above(1)
+          // Ensure each result...
+          const allItemsHaveRecordType = doc.itemListElement.every((element) => {
+            // .. has some items that ...
+            return element.recordType?.[0]['@id'] === 'recordType:' + recordType
+          })
+          // For the result to match, only one item needs to match:
+          expect(allItemsHaveRecordType)
+        })
+        done()
       })
     })
 
