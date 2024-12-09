@@ -248,7 +248,8 @@ function enableScsbFixtures () {
     }
   })
 
-  sinon.stub(scsbClient, 'recapCustomerCodeByBarcode').callsFake(() => Promise.resolve('NC'))
+  // Let's hardcode recapCustomerCode-lookups to return NA, a common location
+  sinon.stub(scsbClient, 'recapCustomerCodeByBarcode').callsFake(() => Promise.resolve('NA'))
 }
 
 /**

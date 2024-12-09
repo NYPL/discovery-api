@@ -266,6 +266,8 @@ describe('Test Resources responses', function () {
 
         assert(doc.itemAggregations)
 
+        assert.deepEqual(doc.recordType, { '@id': 'a', prefLabel: 'Book/Text' })
+
         done()
       })
     })
@@ -544,6 +546,26 @@ describe('Test Resources responses', function () {
           assert.equal(doc.itemListElement[0].result['@id'], item101['@id'])
           done()
         })
+      })
+    })
+
+    describe('Filter by recordType', function () {
+      it('returns only items with recordType a', (done) => {
+        const recordType = 'a'
+        request.get(`${searchAllUrl}&filters[recordType]=${recordType}`, (err, res, body) => {
+          if (err) throw err
+          const doc = JSON.parse(body)
+          // Ensure we received results
+          expect(doc.totalResults).to.be.above(1)
+          // Ensure each result...
+          const allItemsHaveRecordType = doc.itemListElement.every((element) => {
+            // .. has some items that ...
+            return element.recordType?.[0]['@id'] === 'recordType:' + recordType
+          })
+          // For the result to match, only one item needs to match:
+          expect(allItemsHaveRecordType)
+        })
+        done()
       })
     })
 
@@ -838,6 +860,26 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement.some((el) => el.result['@id'] === `res:${bnum}`))
 
           done()
+        })
+      })
+    })
+  })
+
+  describe('deliveryLocationsByBarcode', () => {
+    it('empty search returns status code 200', async () => {
+      const url = `${global.TEST_BASE_URL}/api/v0.1/request/deliveryLocationsByBarcode?barcodes=33433128201161`
+
+      return request.get(url, function (err, response, body) {
+        if (err) throw err
+
+        assert.equal(200, response.statusCode)
+        expect(response.statusCode).to.eq(200)
+
+        const result = JSON.parse(body)
+        console.log('Got result: ', result)
+        expect(result).to.nested.include({
+          'itemListElement[0].deliveryLocation[0].@id': 'loc:mal',
+          'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Main Reading Room 315'
         })
       })
     })

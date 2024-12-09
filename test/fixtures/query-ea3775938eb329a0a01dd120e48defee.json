@@ -1,5 +1,5 @@
 {
-  "took": 602,
+  "took": 692,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -49,6 +49,9 @@
           ],
           "createdYear": [
             1967
+          ],
+          "buildingLocationIds": [
+            "rc"
           ],
           "title": [
             "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
@@ -187,23 +190,69 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*OFA 82-5137",
+                      "urn:barcode:33433002000671"
+                    ],
+                    "physicalLocation": [
+                      "*OFA 82-5137"
+                    ],
+                    "shelfMark_sort": "a*OFA 82-005137",
+                    "catalogItemType_packed": [
+                      "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:2",
                         "label": "Request in advance"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*OFA 82-5137"
+                    ],
+                    "uri": "i10000042",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*OFA 82-5137"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433002000671"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "idBarcode": [
+                      "33433002000671"
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "requestable": [
+                      true
                     ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
                         "label": "book, limited circ, MaRLI"
                       }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:55||book, limited circ, MaRLI"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -214,61 +263,15 @@
                         "label": "Offsite"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "idBarcode": [
-                      "33433002000671"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*OFA 82-5137",
-                      "urn:barcode:33433002000671"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*OFA 82-5137",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433002000671",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "physicalLocation": [
-                      "*OFA 82-5137"
-                    ],
                     "recapCustomerCode": [
                       "NA"
                     ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "*OFA 82-5137"
-                    ],
-                    "shelfMark_sort": "a*OFA 82-005137",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i10000042"
+                    ]
                   },
                   "sort": [
                     null

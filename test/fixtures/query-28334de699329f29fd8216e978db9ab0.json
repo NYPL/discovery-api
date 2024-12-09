@@ -1,5 +1,5 @@
 {
-  "took": 60,
+  "took": 102,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -17,7 +17,7 @@
       {
         "_index": "resources-2024-10-22",
         "_id": "b22144813",
-        "_score": 713.7199,
+        "_score": 719.38715,
         "_source": {
           "extent": [
             "1234, [1] pages, x leaves : illustrations ;",
@@ -45,6 +45,10 @@
           ],
           "createdYear": [
             201
+          ],
+          "buildingLocationIds": [
+            "ma",
+            "rc"
           ],
           "parallelTitle": [
             "‏כותר שאינו באותיות לטינית = зглавие руссий."
@@ -739,7 +743,7 @@
           ]
         },
         "sort": [
-          713.7199,
+          719.38715,
           "b22144813"
         ],
         "inner_hits": {
@@ -760,29 +764,75 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1101",
+                        "label": "General Research Division"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1",
+                      "urn:barcode:3333333333"
+                    ],
+                    "physicalLocation": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                    ],
+                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER v.000001",
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:1",
                         "label": "Use in library"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
+                    "status_packed": [
+                      "status:k||Check with staff"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         1-"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1"
+                    ],
+                    "uri": "i37857771",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "3333333333"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mall1||Schwarzman Building - Main Reading Room 315 - Reference"
+                    ],
+                    "enumerationChronology": [
+                      "v.1"
+                    ],
+                    "idBarcode": [
+                      "3333333333"
+                    ],
+                    "owner_packed": [
+                      "orgs:1101||General Research Division"
+                    ],
+                    "requestable": [
+                      false
                     ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
                         "label": "book non-circ"
                       }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:2||book non-circ"
-                    ],
-                    "enumerationChronology": [
-                      "v.1"
-                    ],
-                    "enumerationChronology_sort": [
-                      "         1-"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -793,64 +843,18 @@
                         "label": "Schwarzman Building - Main Reading Room 315 - Reference"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:mall1||Schwarzman Building - Main Reading Room 315 - Reference"
-                    ],
-                    "idBarcode": [
-                      "3333333333"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1",
-                      "urn:barcode:3333333333"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "3333333333",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
-                    ],
-                    "requestable": [
-                      false
-                    ],
-                    "shelfMark": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER v.1"
-                    ],
-                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER v.000001",
                     "status": [
                       {
                         "id": "status:k",
                         "label": "Check with staff"
                       }
                     ],
-                    "status_packed": [
-                      "status:k||Check with staff"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
                     "volumeRange": [
                       {
                         "gte": 1,
                         "lte": 1
                       }
-                    ],
-                    "uri": "i37857771"
+                    ]
                   },
                   "sort": [
                     "         1-"
@@ -865,26 +869,72 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1103",
+                        "label": "Dorot Jewish Division"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing",
+                      "urn:barcode:44455533322211"
+                    ],
+                    "physicalLocation": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                    ],
+                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER nothing",
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:2",
                         "label": "Request in advance"
                       }
                     ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing"
+                    ],
+                    "uri": "i37857772",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "44455533322211"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rcmf2||Offsite"
+                    ],
+                    "enumerationChronology": [
+                      "nothing"
+                    ],
+                    "idBarcode": [
+                      "44455533322211"
+                    ],
+                    "owner_packed": [
+                      "orgs:1103||Dorot Jewish Division"
+                    ],
+                    "requestable": [
+                      true
                     ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:3",
                         "label": "serial"
                       }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "enumerationChronology": [
-                      "nothing"
                     ],
                     "formatLiteral": [
                       "Text"
@@ -895,58 +945,12 @@
                         "label": "Offsite"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:rcmf2||Offsite"
-                    ],
-                    "idBarcode": [
-                      "44455533322211"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing",
-                      "urn:barcode:44455533322211"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "44455533322211",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1103",
-                        "label": "Dorot Jewish Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1103||Dorot Jewish Division"
-                    ],
-                    "physicalLocation": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER nothing"
-                    ],
-                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER nothing",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i37857772"
+                    ]
                   },
                   "sort": [
                     null
