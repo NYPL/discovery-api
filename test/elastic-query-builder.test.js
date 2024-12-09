@@ -4,9 +4,38 @@ const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder'
 const ApiRequest = require('../lib/api-request')
 
 describe('ElasticQueryBuilder', () => {
-  describe.only('buildSimpleMatchFilters', () => {
+  describe('buildClause', () => {
+    it('can handle multiple fields', () => {
+      expect(ElasticQueryBuilder.prototype.buildClause('value', ['field', 'parallelField']))
+        .to.deep.equal({
+          bool:
+          {
+            should: [
+              { term: { field: 'value' } },
+              { term: { parallelField: 'value' } }]
+          }
+        })
+    })
+    it('can handle packed fields', () => {
+      expect(ElasticQueryBuilder.prototype.buildClause('not packed value', ['field_packed']))
+        .to.deep.equal({
+          bool: {
+            should: [
+              { term: { 'field.id': 'not packed value' } },
+              { term: { 'field.label': 'not packed value' } }
+            ]
+          }
+        })
+    })
+    it('can handle the simple case', () => {
+      expect(ElasticQueryBuilder.prototype.buildClause('value', ['field']))
+        .to.deep.equal({ term: { field: 'value' } })
+    })
+  })
+  describe('buildSimpleMatchFilters', () => {
     const mockQueryBuilderFactory = (request) => ({
       request,
+      buildMultiFieldClause: ElasticQueryBuilder.prototype.buildMultiFieldClause,
       buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
       buildClause: ElasticQueryBuilder.prototype.buildClause,
       buildPackedFieldClause: ElasticQueryBuilder.prototype.buildPackedFieldClause
@@ -26,25 +55,21 @@ describe('ElasticQueryBuilder', () => {
         }
       ])
     })
-    // it('can handle (multiple) single value, single match field filters, strings', () => {
-    //   const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
-    //   const mockQueryBuilder = {
-    //     request,
-    //     buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
-    //     buildClause: ElasticQueryBuilder.prototype.buildClause
-    //   }
-    //   const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
-    //   expect(simpleMatchFilters).to.deep.equal([
-    //     {
-    //       path: undefined,
-    //       clause: { term: { buildingLocationIds: 'toast' } }
-    //     },
-    //     {
-    //       path: undefined,
-    //       clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
-    //     }
-    //   ])
-    // })
+    it('can handle (multiple) single value, single match field filters, strings', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: { term: { buildingLocationIds: 'toast' } }
+        },
+        {
+          path: undefined,
+          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+        }
+      ])
+    })
     it('can handle multiple values', () => {
       const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
