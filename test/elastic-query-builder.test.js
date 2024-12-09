@@ -4,6 +4,16 @@ const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder'
 const ApiRequest = require('../lib/api-request')
 
 describe('ElasticQueryBuilder', () => {
+  describe.only('buildSimpleMatchFilters', () => {
+    it('can handle (multiple) single value, single match field filters', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: 'toast', lanuage: 'spanish' } })
+      const mockQueryBuilder = {
+        request,
+        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters
+      }
+      console.log(mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'language']))
+    })
+  })
   describe('search_scope all', () => {
     it('generates an "all" query', () => {
       const request = new ApiRequest({ q: 'toast' })
