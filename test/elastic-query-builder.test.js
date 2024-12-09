@@ -4,6 +4,123 @@ const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder'
 const ApiRequest = require('../lib/api-request')
 
 describe('ElasticQueryBuilder', () => {
+  describe('buildClause', () => {
+    it('can handle multiple fields', () => {
+      expect(ElasticQueryBuilder.prototype.buildClause('value', ['field', 'parallelField']))
+        .to.deep.equal({
+          bool:
+          {
+            should: [
+              { term: { field: 'value' } },
+              { term: { parallelField: 'value' } }]
+          }
+        })
+    })
+    it('can handle packed fields', () => {
+      expect(ElasticQueryBuilder.prototype.buildClause('not packed value', ['field_packed']))
+        .to.deep.equal({
+          bool: {
+            should: [
+              { term: { 'field.id': 'not packed value' } },
+              { term: { 'field.label': 'not packed value' } }
+            ]
+          }
+        })
+    })
+    it('can handle the simple case', () => {
+      expect(ElasticQueryBuilder.prototype.buildClause('value', ['field']))
+        .to.deep.equal({ term: { field: 'value' } })
+    })
+  })
+  describe('buildSimpleMatchFilters', () => {
+    const mockQueryBuilderFactory = (request) => ({
+      request,
+      buildMultiFieldClause: ElasticQueryBuilder.prototype.buildMultiFieldClause,
+      buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
+      buildClause: ElasticQueryBuilder.prototype.buildClause,
+      buildPackedFieldClause: ElasticQueryBuilder.prototype.buildPackedFieldClause
+    })
+    it('can handle (multiple) single value, single match field filters, as arrays', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: { term: { buildingLocationIds: 'toast' } }
+        },
+        {
+          path: undefined,
+          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+        }
+      ])
+    })
+    it('can handle (multiple) single value, single match field filters, strings', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: { term: { buildingLocationIds: 'toast' } }
+        },
+        {
+          path: undefined,
+          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+        }
+      ])
+    })
+    it('can handle multiple values', () => {
+      const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: {
+            bool: {
+              should: [
+                { term: { subjectLiteral_exploded: 'spaghetti' } },
+                { term: { subjectLiteral_exploded: 'meatballs' } }
+              ]
+            }
+          }
+        }
+      ])
+    })
+    it('can handle packed values', () => {
+      const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['language'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: {
+            bool: {
+              should: [
+                {
+                  bool: {
+                    should: [
+                      { term: { 'language.id': 'spanish' } },
+                      { term: { 'language.label': 'spanish' } }
+                    ]
+                  }
+                },
+                {
+                  bool: {
+                    should: [
+                      { term: { 'language.id': 'finnish' } },
+                      { term: { 'language.label': 'finnish' } }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ])
+    })
+  })
   describe('search_scope all', () => {
     it('generates an "all" query', () => {
       const request = new ApiRequest({ q: 'toast' })
