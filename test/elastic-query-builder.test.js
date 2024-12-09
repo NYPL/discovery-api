@@ -5,13 +5,15 @@ const ApiRequest = require('../lib/api-request')
 
 describe('ElasticQueryBuilder', () => {
   describe.only('buildSimpleMatchFilters', () => {
+    const mockQueryBuilderFactory = (request) => ({
+      request,
+      buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
+      buildClause: ElasticQueryBuilder.prototype.buildClause,
+      buildPackedFieldClause: ElasticQueryBuilder.prototype.buildPackedFieldClause
+    })
     it('can handle (multiple) single value, single match field filters, as arrays', () => {
       const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
-      const mockQueryBuilder = {
-        request,
-        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
-        buildClause: ElasticQueryBuilder.prototype.buildClause
-      }
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
       expect(simpleMatchFilters).to.deep.equal([
         {
@@ -45,11 +47,7 @@ describe('ElasticQueryBuilder', () => {
     // })
     it('can handle multiple values', () => {
       const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
-      const mockQueryBuilder = {
-        request,
-        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
-        buildClause: ElasticQueryBuilder.prototype.buildClause
-      }
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['subjectLiteral'])
       expect(simpleMatchFilters).to.deep.equal([
         {
@@ -67,11 +65,7 @@ describe('ElasticQueryBuilder', () => {
     })
     it('can handle packed values', () => {
       const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
-      const mockQueryBuilder = {
-        request,
-        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
-        buildClause: ElasticQueryBuilder.prototype.buildClause
-      }
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['language'])
       expect(simpleMatchFilters).to.deep.equal([
         {
