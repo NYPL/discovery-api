@@ -5,13 +5,101 @@ const ApiRequest = require('../lib/api-request')
 
 describe('ElasticQueryBuilder', () => {
   describe.only('buildSimpleMatchFilters', () => {
-    it('can handle (multiple) single value, single match field filters', () => {
-      const request = new ApiRequest({ filters: { buildingLocation: 'toast', lanuage: 'spanish' } })
+    it('can handle (multiple) single value, single match field filters, as arrays', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
       const mockQueryBuilder = {
         request,
-        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters
+        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
+        buildClause: ElasticQueryBuilder.prototype.buildClause
       }
-      console.log(mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'language']))
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: { term: { buildingLocationIds: 'toast' } }
+        },
+        {
+          path: undefined,
+          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+        }
+      ])
+    })
+    // it('can handle (multiple) single value, single match field filters, strings', () => {
+    //   const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
+    //   const mockQueryBuilder = {
+    //     request,
+    //     buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
+    //     buildClause: ElasticQueryBuilder.prototype.buildClause
+    //   }
+    //   const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['buildingLocation', 'subjectLiteral'])
+    //   expect(simpleMatchFilters).to.deep.equal([
+    //     {
+    //       path: undefined,
+    //       clause: { term: { buildingLocationIds: 'toast' } }
+    //     },
+    //     {
+    //       path: undefined,
+    //       clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+    //     }
+    //   ])
+    // })
+    it('can handle multiple values', () => {
+      const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
+      const mockQueryBuilder = {
+        request,
+        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
+        buildClause: ElasticQueryBuilder.prototype.buildClause
+      }
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: {
+            bool: {
+              should: [
+                { term: { subjectLiteral_exploded: 'spaghetti' } },
+                { term: { subjectLiteral_exploded: 'meatballs' } }
+              ]
+            }
+          }
+        }
+      ])
+    })
+    it('can handle packed values', () => {
+      const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
+      const mockQueryBuilder = {
+        request,
+        buildSimpleMatchFilters: ElasticQueryBuilder.prototype.buildSimpleMatchFilters,
+        buildClause: ElasticQueryBuilder.prototype.buildClause
+      }
+      const simpleMatchFilters = mockQueryBuilder.buildSimpleMatchFilters(['language'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: {
+            bool: {
+              should: [
+                {
+                  bool: {
+                    should: [
+                      { term: { 'language.id': 'spanish' } },
+                      { term: { 'language.label': 'spanish' } }
+                    ]
+                  }
+                },
+                {
+                  bool: {
+                    should: [
+                      { term: { 'language.id': 'finnish' } },
+                      { term: { 'language.label': 'finnish' } }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ])
     })
   })
   describe('search_scope all', () => {
