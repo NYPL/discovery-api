@@ -26,8 +26,7 @@ describe('ElasticQueryBuilder', () => {
       request,
       buildMultiFieldClause: ElasticQueryBuilder.prototype.buildMultiFieldClause,
       buildMatchOperatorFilterQueries: ElasticQueryBuilder.prototype.buildMatchOperatorFilterQueries,
-      buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause,
-      buildPackedFieldClause: ElasticQueryBuilder.prototype.buildPackedFieldClause
+      buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause
     })
     it('can handle (multiple) single value, single match field filters, as arrays', () => {
       const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
