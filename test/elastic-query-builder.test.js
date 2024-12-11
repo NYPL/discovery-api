@@ -4,6 +4,111 @@ const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder'
 const ApiRequest = require('../lib/api-request')
 
 describe('ElasticQueryBuilder', () => {
+  describe('buildFilterClause', () => {
+    it('can handle multiple fields', () => {
+      expect(ElasticQueryBuilder.prototype.buildFilterClause('value', ['field', 'parallelField']))
+        .to.deep.equal({
+          bool:
+          {
+            should: [
+              { term: { field: 'value' } },
+              { term: { parallelField: 'value' } }]
+          }
+        })
+    })
+    it('can handle the simple case', () => {
+      expect(ElasticQueryBuilder.prototype.buildFilterClause('value', ['field']))
+        .to.deep.equal({ term: { field: 'value' } })
+    })
+  })
+  describe('buildMatchOperatorFilterQueries', () => {
+    const mockQueryBuilderFactory = (request) => ({
+      request,
+      buildMultiFieldClause: ElasticQueryBuilder.prototype.buildMultiFieldClause,
+      buildMatchOperatorFilterQueries: ElasticQueryBuilder.prototype.buildMatchOperatorFilterQueries,
+      buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause
+    })
+    it('can handle (multiple) single value, single match field filters, as arrays', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: { term: { buildingLocationIds: 'toast' } }
+        },
+        {
+          path: undefined,
+          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+        }
+      ])
+    })
+    it('can handle (multiple) single value, single match field filters, strings', () => {
+      const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: { term: { buildingLocationIds: 'toast' } }
+        },
+        {
+          path: undefined,
+          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+        }
+      ])
+    })
+    it('can handle multiple values', () => {
+      const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['subjectLiteral'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: {
+            bool: {
+              should: [
+                { term: { subjectLiteral_exploded: 'spaghetti' } },
+                { term: { subjectLiteral_exploded: 'meatballs' } }
+              ]
+            }
+          }
+        }
+      ])
+    })
+    it('can handle packed values', () => {
+      const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
+      const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['language'])
+      expect(simpleMatchFilters).to.deep.equal([
+        {
+          path: undefined,
+          clause: {
+            bool: {
+              should: [
+                {
+                  bool: {
+                    should: [
+                      { term: { 'language.id': 'spanish' } },
+                      { term: { 'language.label': 'spanish' } }
+                    ]
+                  }
+                },
+                {
+                  bool: {
+                    should: [
+                      { term: { 'language.id': 'finnish' } },
+                      { term: { 'language.label': 'finnish' } }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ])
+    })
+  })
   describe('search_scope all', () => {
     it('generates an "all" query', () => {
       const request = new ApiRequest({ q: 'toast' })
