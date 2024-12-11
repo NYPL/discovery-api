@@ -2,6 +2,7 @@ const { expect } = require('chai')
 const mangledEnumerationChronologyItems = require('./fixtures/mangled_enumerationChronology_items.json')
 
 const util = require('../lib/util')
+const { FILTER_CONFIG } = require('../lib/elasticsearch/config')
 
 describe('Util', function () {
   describe('sortOnPropWithUndefinedLast', () => {
@@ -131,15 +132,7 @@ describe('Util', function () {
     }
 
     const spec = {
-      filters: {
-        type: 'hash',
-        fields: {
-          subjectLiteral: {
-            type: 'string',
-            field: 'subjectLiteral_exploded'
-          }
-        }
-      }
+      filters: { type: 'hash', fields: FILTER_CONFIG }
     }
 
     const outgoing = util.parseParams(incoming, spec)
@@ -154,16 +147,7 @@ describe('Util', function () {
     }
 
     const spec = {
-      filters: {
-        type: 'hash',
-        fields: {
-          subjectLiteral: {
-            type: 'string',
-            field: 'subjectLiteral_exploded',
-            repeatable: true
-          }
-        }
-      }
+      filters: { type: 'hash', fields: FILTER_CONFIG }
     }
 
     const outgoing = util.parseParams(incoming, spec)
