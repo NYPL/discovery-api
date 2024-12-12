@@ -65,19 +65,14 @@ describe('Util', function () {
         filters: {
           subjectLiteral: 'cats',
           contributorLiteral: ['Contrib 1', 'Contrib 2'],
-          date: '2012',
+          dateAfter: '2012',
           badNumeric: 'blah'
         }
       }
       const spec = {
         filters: {
           type: 'hash',
-          fields: {
-            subjectLiteral: { type: 'string' },
-            contributorLiteral: { type: 'string' },
-            date: { type: 'int' },
-            badNumeric: { type: 'int' }
-          }
+          fields: { ...FILTER_CONFIG, badNumeric: { type: 'int' } }
         }
       }
       const outgoing = util.parseParams(incoming, spec)
@@ -88,8 +83,8 @@ describe('Util', function () {
       expect(outgoing.filters.subjectLiteral).to.be.a('string')
       expect(outgoing.filters.subjectLiteral).to.equal('cats')
 
-      expect(outgoing.filters.date).to.be.a('number')
-      expect(outgoing.filters.date).to.equal(2012)
+      expect(outgoing.filters.dateAfter).to.be.a('number')
+      expect(outgoing.filters.dateAfter).to.equal(2012)
 
       expect(outgoing.filters.badNumeric).to.be.a('undefined')
     })
