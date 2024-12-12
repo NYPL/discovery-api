@@ -1,8 +1,9 @@
 const { expect } = require('chai')
 
 const {
-  ResourceSerializer,
-  ItemResultsSerializer
+  AggregationsSerializer,
+  ItemResultsSerializer,
+  ResourceSerializer
 } = require('../lib/jsonld_serializers')
 
 describe('JSONLD Serializers', () => {
@@ -70,6 +71,26 @@ describe('JSONLD Serializers', () => {
         })
       )
     })
+
+    describe('recordType', () => {
+      it('adds label to recordType', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          recordTypeId: 'a'
+        })
+        expect(serialized.recordType).to.deep.equal({
+          '@id': 'a',
+          prefLabel: 'Book/Text'
+        })
+      })
+
+      it('removes invalid recordType', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          recordTypeId: '!'
+        })
+
+        expect(serialized.recordType).to.be.a('null')
+      })
+    })
   })
 
   describe('ItemResultsSerializer', () => {
@@ -115,6 +136,41 @@ describe('JSONLD Serializers', () => {
         'itemListElement[0].deliveryLocation[0].@id': 'loc:mal23',
         'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Scholar Room 223'
       })
+    })
+  })
+
+  describe('AggregationsSerializer', () => {
+    const esResponse = require('./fixtures/es-aggregations-response.json')
+    // Perform flattening of nested aggregations, same as lib/resources.js
+    // does (inline, unfortunately):
+    const transformedEsResponse = Object.assign(
+      {},
+      esResponse,
+      {
+        aggregations: Object.entries(esResponse.aggregations)
+          .reduce((transformed, [field, obj]) => {
+            transformed[field] = obj._nested ? obj._nested : obj
+            return transformed
+          }, {})
+      }
+    )
+
+    it('formats recordType agg', async () => {
+      const serialized = await AggregationsSerializer.serialize(transformedEsResponse)
+
+      const recordTypeAgg = serialized.itemListElement
+        .find((agg) => agg.id === 'recordType')
+      expect(recordTypeAgg).to.be.a('object')
+
+      expect(recordTypeAgg).to.nested.include({
+        'values[0].value': 'a',
+        'values[0].count': 2324674,
+        'values[0].label': 'Book/Text'
+      })
+
+      const bucketsWithoutLabels = recordTypeAgg.values
+        .filter((val) => !val.label)
+      expect(bucketsWithoutLabels).to.have.lengthOf(0)
     })
   })
 })
