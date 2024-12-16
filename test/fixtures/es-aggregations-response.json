@@ -1,0 +1,1553 @@
+{
+  "took": 73764,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "owner": {
+      "doc_count": 24808580,
+      "_nested": {
+        "doc_count_error_upper_bound": 38,
+        "sum_other_doc_count": 265549,
+        "buckets": [
+          {
+            "key": "orgs:1000||Stephen A. Schwarzman Building",
+            "doc_count": 5506023
+          },
+          {
+            "key": "orgs:0002||Columbia University Libraries",
+            "doc_count": 5035821
+          },
+          {
+            "key": "orgs:0003||Princeton University Library",
+            "doc_count": 4241085
+          },
+          {
+            "key": "orgs:0004||Harvard Library",
+            "doc_count": 3733561
+          },
+          {
+            "key": "orgs:1101||General Research Division",
+            "doc_count": 1249974
+          },
+          {
+            "key": "orgs:1002||New York Public Library for the Performing Arts, Dorothy and Lewis B. Cullman Center",
+            "doc_count": 351570
+          },
+          {
+            "key": "orgs:1114||Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division",
+            "doc_count": 337988
+          },
+          {
+            "key": "orgs:1110||The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Art & Architecture Collection",
+            "doc_count": 225592
+          },
+          {
+            "key": "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy",
+            "doc_count": 207725
+          },
+          {
+            "key": "orgs:1103||Dorot Jewish Division",
+            "doc_count": 165908
+          }
+        ]
+      }
+    },
+    "contributorLiteral": {
+      "doc_count_error_upper_bound": 1704,
+      "sum_other_doc_count": 13693662,
+      "buckets": [
+        {
+          "key": "Gale (Firm)",
+          "doc_count": 68319
+        },
+        {
+          "key": "New York Genealogical and Biographical Society Collection.",
+          "doc_count": 31115
+        },
+        {
+          "key": "United States. National Aeronautics and Space Administration.",
+          "doc_count": 18820
+        },
+        {
+          "key": "Ford Collection.",
+          "doc_count": 17313
+        },
+        {
+          "key": "Geological Survey (U.S.)",
+          "doc_count": 11255
+        },
+        {
+          "key": "EBSCOhost",
+          "doc_count": 9004
+        },
+        {
+          "key": "New York Public Library for the Performing Arts. Billy Rose Theatre Division. com",
+          "doc_count": 8592
+        },
+        {
+          "key": "Educational Resources Information Center (U.S.)",
+          "doc_count": 8319
+        },
+        {
+          "key": "Mozart, Wolfgang Amadeus, 1756-1791.",
+          "doc_count": 8180
+        },
+        {
+          "key": "Bach, Johann Sebastian, 1685-1750.",
+          "doc_count": 8136
+        },
+        {
+          "key": "John Shaw Billings Memorial Collection.",
+          "doc_count": 7320
+        },
+        {
+          "key": "Schiff Collection.",
+          "doc_count": 6415
+        },
+        {
+          "key": "Beethoven, Ludwig van, 1770-1827.",
+          "doc_count": 6180
+        },
+        {
+          "key": "Schomburg Children's Collection.",
+          "doc_count": 5768
+        },
+        {
+          "key": "American Council of Learned Societies.",
+          "doc_count": 5271
+        },
+        {
+          "key": "DHCA.",
+          "doc_count": 5134
+        },
+        {
+          "key": "Schubert, Franz, 1797-1828.",
+          "doc_count": 5074
+        },
+        {
+          "key": "Project Muse.",
+          "doc_count": 4992
+        },
+        {
+          "key": "Tchaikovsky, Peter Ilich, 1840-1893.",
+          "doc_count": 4948
+        },
+        {
+          "key": "Brahms, Johannes, 1833-1897.",
+          "doc_count": 4927
+        },
+        {
+          "key": "Verdi, Giuseppe, 1813-1901.",
+          "doc_count": 4819
+        },
+        {
+          "key": "Datamonitor (Firm)",
+          "doc_count": 4816
+        },
+        {
+          "key": "Children's Room Collection.",
+          "doc_count": 4802
+        },
+        {
+          "key": "Schumann, Robert, 1810-1856.",
+          "doc_count": 4686
+        },
+        {
+          "key": "Organisation for Economic Co-operation and Development.",
+          "doc_count": 4501
+        },
+        {
+          "key": "United States. Bureau of the Census.",
+          "doc_count": 4495
+        },
+        {
+          "key": "Society of Photo-optical Instrumentation Engineers.",
+          "doc_count": 4438
+        },
+        {
+          "key": "Drexel Collection.",
+          "doc_count": 4413
+        },
+        {
+          "key": "Debussy, Claude, 1862-1918.",
+          "doc_count": 4402
+        },
+        {
+          "key": "Langley Research Center.",
+          "doc_count": 4155
+        },
+        {
+          "key": "Rodgers and Hammerstein Archives of Recorded Sound.",
+          "doc_count": 4064
+        },
+        {
+          "key": "World Health Organization.",
+          "doc_count": 4013
+        },
+        {
+          "key": "New York Public Library. Milstein Division of U.S. History, Local History & Genealogy.",
+          "doc_count": 3991
+        },
+        {
+          "key": "Geological Survey (U.S.), issuing body.",
+          "doc_count": 3911
+        },
+        {
+          "key": "Ravel, Maurice, 1875-1937.",
+          "doc_count": 3804
+        },
+        {
+          "key": "Shakespeare, William, 1564-1616.",
+          "doc_count": 3640
+        },
+        {
+          "key": "Handel, George Frideric, 1685-1759.",
+          "doc_count": 3544
+        },
+        {
+          "key": "Liszt, Franz, 1811-1886.",
+          "doc_count": 3535
+        },
+        {
+          "key": "Mendelssohn-Bartholdy, Felix, 1809-1847.",
+          "doc_count": 3487
+        },
+        {
+          "key": "National Institute of Standards and Technology (U.S.)",
+          "doc_count": 3255
+        },
+        {
+          "key": "Chopin, Frédéric, 1810-1849.",
+          "doc_count": 3232
+        },
+        {
+          "key": "ebrary, Inc.",
+          "doc_count": 3179
+        },
+        {
+          "key": "Aeroflex Foundation. Sponsor.",
+          "doc_count": 3164
+        },
+        {
+          "key": "Harvard University. Graduate School of Education. Thesis.",
+          "doc_count": 3141
+        },
+        {
+          "key": "Wagner, Richard, 1813-1883.",
+          "doc_count": 3100
+        },
+        {
+          "key": "Professor Edward A. Allworth Central Asian Collection.",
+          "doc_count": 3045
+        },
+        {
+          "key": "United States. Federal Emergency Management Agency.",
+          "doc_count": 2948
+        },
+        {
+          "key": "Owen, Walter E., 1896-1963.",
+          "doc_count": 2927
+        },
+        {
+          "key": "United States. Department of the Army.",
+          "doc_count": 2913
+        },
+        {
+          "key": "Rossini, Gioacchino, 1792-1868.",
+          "doc_count": 2900
+        }
+      ]
+    },
+    "recordType": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "a",
+          "doc_count": 2324674
+        },
+        {
+          "key": "c",
+          "doc_count": 91579
+        },
+        {
+          "key": "k",
+          "doc_count": 47469
+        },
+        {
+          "key": "j",
+          "doc_count": 16543
+        },
+        {
+          "key": "g",
+          "doc_count": 12035
+        },
+        {
+          "key": "e",
+          "doc_count": 7940
+        },
+        {
+          "key": "d",
+          "doc_count": 5897
+        },
+        {
+          "key": "t",
+          "doc_count": 3193
+        },
+        {
+          "key": "b",
+          "doc_count": 2380
+        },
+        {
+          "key": "i",
+          "doc_count": 2305
+        },
+        {
+          "key": "p",
+          "doc_count": 925
+        },
+        {
+          "key": "|",
+          "doc_count": 178
+        },
+        {
+          "key": "m",
+          "doc_count": 83
+        },
+        {
+          "key": " ",
+          "doc_count": 33
+        },
+        {
+          "key": "r",
+          "doc_count": 25
+        },
+        {
+          "key": "o",
+          "doc_count": 7
+        },
+        {
+          "key": "n",
+          "doc_count": 5
+        },
+        {
+          "key": "z",
+          "doc_count": 5
+        },
+        {
+          "key": "f",
+          "doc_count": 3
+        },
+        {
+          "key": "s",
+          "doc_count": 1
+        },
+        {
+          "key": "}",
+          "doc_count": 1
+        }
+      ]
+    },
+    "materialType": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "resourcetypes:txt||Text",
+          "doc_count": 18344922
+        },
+        {
+          "key": "resourcetypes:aud||Audio",
+          "doc_count": 409594
+        },
+        {
+          "key": "resourcetypes:not||Notated music",
+          "doc_count": 253840
+        },
+        {
+          "key": "resourcetypes:img||Still image",
+          "doc_count": 71888
+        },
+        {
+          "key": "resourcetypes:mov||Moving image",
+          "doc_count": 64584
+        },
+        {
+          "key": "resourcetypes:car||Cartographic",
+          "doc_count": 53656
+        },
+        {
+          "key": "resourcetypes:mix||Mixed material",
+          "doc_count": 21144
+        },
+        {
+          "key": "resourcetypes:mul||Multimedia",
+          "doc_count": 3340
+        },
+        {
+          "key": "resourcetypes:art||Artifact",
+          "doc_count": 205
+        }
+      ]
+    },
+    "issuance": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "urn:biblevel:m||monograph/item",
+          "doc_count": 18312856
+        },
+        {
+          "key": "urn:biblevel:s||serial",
+          "doc_count": 660658
+        },
+        {
+          "key": "urn:biblevel:a||monograph component part",
+          "doc_count": 97388
+        },
+        {
+          "key": "urn:biblevel:c||collection",
+          "doc_count": 68646
+        },
+        {
+          "key": "urn:biblevel:b||serial component part",
+          "doc_count": 39663
+        },
+        {
+          "key": "urn:biblevel:d||subunit",
+          "doc_count": 29802
+        },
+        {
+          "key": "urn:biblevel:2||",
+          "doc_count": 9944
+        },
+        {
+          "key": "urn:biblevel:p||",
+          "doc_count": 7745
+        },
+        {
+          "key": "urn:biblevel:i||integrating resource",
+          "doc_count": 2104
+        },
+        {
+          "key": "urn:biblevel:|||",
+          "doc_count": 181
+        },
+        {
+          "key": "urn:biblevel:0||",
+          "doc_count": 40
+        },
+        {
+          "key": "urn:biblevel:M||",
+          "doc_count": 26
+        },
+        {
+          "key": "urn:biblevel:n||",
+          "doc_count": 3
+        },
+        {
+          "key": "urn:biblevel:g||",
+          "doc_count": 2
+        },
+        {
+          "key": "urn:biblevel:1||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:I||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:K||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:h||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:k||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:o||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:v||",
+          "doc_count": 1
+        },
+        {
+          "key": "urn:biblevel:z||",
+          "doc_count": 1
+        }
+      ]
+    },
+    "publisher": {
+      "doc_count_error_upper_bound": 7229,
+      "sum_other_doc_count": 16810023,
+      "buckets": [
+        {
+          "key": "Oxford University Press",
+          "doc_count": 70376
+        },
+        {
+          "key": "[s.n.]",
+          "doc_count": 68944
+        },
+        {
+          "key": "[publisher not identified]",
+          "doc_count": 58832
+        },
+        {
+          "key": "s.n.",
+          "doc_count": 53396
+        },
+        {
+          "key": "Cambridge University Press",
+          "doc_count": 39241
+        },
+        {
+          "key": "U.S. G.P.O.",
+          "doc_count": 37110
+        },
+        {
+          "key": "Routledge",
+          "doc_count": 32878
+        },
+        {
+          "key": "Macmillan",
+          "doc_count": 32276
+        },
+        {
+          "key": "s.n.]",
+          "doc_count": 30637
+        },
+        {
+          "key": "L'Harmattan",
+          "doc_count": 26380
+        },
+        {
+          "key": "Springer",
+          "doc_count": 25372
+        },
+        {
+          "key": "Wiley",
+          "doc_count": 25232
+        },
+        {
+          "key": "McGraw-Hill",
+          "doc_count": 23538
+        },
+        {
+          "key": "U.S. Govt. Print. Off.",
+          "doc_count": 21151
+        },
+        {
+          "key": "Gallimard",
+          "doc_count": 21034
+        },
+        {
+          "key": "[s.n.],",
+          "doc_count": 19700
+        },
+        {
+          "key": "Palgrave Macmillan",
+          "doc_count": 19437
+        },
+        {
+          "key": "Princeton University Press",
+          "doc_count": 18220
+        },
+        {
+          "key": "P. Lang",
+          "doc_count": 18075
+        },
+        {
+          "key": "Prentice-Hall",
+          "doc_count": 17356
+        },
+        {
+          "key": "Springer-Verlag",
+          "doc_count": 16766
+        },
+        {
+          "key": "s.n.,",
+          "doc_count": 16711
+        },
+        {
+          "key": "University of California Press",
+          "doc_count": 16661
+        },
+        {
+          "key": "U. S. Govt. Print. Off.",
+          "doc_count": 16269
+        },
+        {
+          "key": "Doubleday",
+          "doc_count": 15065
+        },
+        {
+          "key": "U.S. G.P.O. : For sale by the U.S. G.P.O., Supt. of Docs., Congressional Sales Office",
+          "doc_count": 15040
+        },
+        {
+          "key": "Harmattan",
+          "doc_count": 14922
+        },
+        {
+          "key": "U.S. Govt. Print. Off.,",
+          "doc_count": 14917
+        },
+        {
+          "key": "Presses universitaires de France",
+          "doc_count": 14808
+        },
+        {
+          "key": "U.S. Government Publishing Office",
+          "doc_count": 14785
+        },
+        {
+          "key": "St. Martin's Press",
+          "doc_count": 14290
+        },
+        {
+          "key": "Praeger",
+          "doc_count": 14171
+        },
+        {
+          "key": "Oxford University Press,",
+          "doc_count": 14146
+        },
+        {
+          "key": "University of Chicago Press",
+          "doc_count": 13939
+        },
+        {
+          "key": "U.S. G.P.O. : For sale by the Supt. of Docs., U.S. G.P.O.,",
+          "doc_count": 13796
+        },
+        {
+          "key": "Yale University Press",
+          "doc_count": 13369
+        },
+        {
+          "key": "Harvard University Press",
+          "doc_count": 13000
+        },
+        {
+          "key": "Brill",
+          "doc_count": 12701
+        },
+        {
+          "key": "Greenwood Press",
+          "doc_count": 12541
+        },
+        {
+          "key": "Columbia University Press",
+          "doc_count": 12439
+        },
+        {
+          "key": "Random House",
+          "doc_count": 12285
+        },
+        {
+          "key": "Harper & Row",
+          "doc_count": 12133
+        },
+        {
+          "key": "s.n.],",
+          "doc_count": 11677
+        },
+        {
+          "key": "Decca",
+          "doc_count": 11672
+        },
+        {
+          "key": "Academic Press",
+          "doc_count": 11657
+        },
+        {
+          "key": "Columbia",
+          "doc_count": 11489
+        },
+        {
+          "key": "Little, Brown",
+          "doc_count": 11291
+        },
+        {
+          "key": "Harper",
+          "doc_count": 10893
+        },
+        {
+          "key": "Nauka",
+          "doc_count": 10638
+        },
+        {
+          "key": "Duncker & Humblot",
+          "doc_count": 10586
+        }
+      ]
+    },
+    "buildingLocation": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "rc",
+          "doc_count": 11007652
+        },
+        {
+          "key": "ma",
+          "doc_count": 3302067
+        },
+        {
+          "key": "pa",
+          "doc_count": 530236
+        },
+        {
+          "key": "sc",
+          "doc_count": 265687
+        }
+      ]
+    },
+    "mediaType": {
+      "doc_count_error_upper_bound": 2,
+      "sum_other_doc_count": 275,
+      "buckets": [
+        {
+          "key": "mediatypes:n||unmediated",
+          "doc_count": 18172380
+        },
+        {
+          "key": "mediatypes:undefined||unmediated",
+          "doc_count": 952557
+        },
+        {
+          "key": "mediatypes:s||audio",
+          "doc_count": 84517
+        },
+        {
+          "key": "mediatypes:h||microform",
+          "doc_count": 28009
+        },
+        {
+          "key": "mediatypes:undefined||microform",
+          "doc_count": 9117
+        },
+        {
+          "key": "mediatypes:c||computer",
+          "doc_count": 6247
+        },
+        {
+          "key": "mediatypes:v||video",
+          "doc_count": 5575
+        },
+        {
+          "key": "mediatypes:undefined||audio",
+          "doc_count": 4804
+        },
+        {
+          "key": "mediatypes:undefined||computer",
+          "doc_count": 1299
+        },
+        {
+          "key": "mediatypes:rdamedia||unmediated",
+          "doc_count": 588
+        },
+        {
+          "key": "mediatypes:n||sans médiation",
+          "doc_count": 494
+        },
+        {
+          "key": "mediatypes:undefined||video",
+          "doc_count": 482
+        },
+        {
+          "key": "mediatypes:z||unspecified",
+          "doc_count": 293
+        },
+        {
+          "key": "mediatypes:n||sin mediación",
+          "doc_count": 280
+        },
+        {
+          "key": "mediatypes:n||ohne Hilfsmittel zu benutzen",
+          "doc_count": 201
+        },
+        {
+          "key": "mediatypes:n||",
+          "doc_count": 95
+        },
+        {
+          "key": "mediatypes:n||un mediated",
+          "doc_count": 78
+        },
+        {
+          "key": "mediatypes:n2rdamedia||unmediated",
+          "doc_count": 72
+        },
+        {
+          "key": "mediatypes:c||unmediated",
+          "doc_count": 70
+        },
+        {
+          "key": "mediatypes:n||unmedi ated",
+          "doc_count": 65
+        },
+        {
+          "key": "mediatypes:n||unmediate d",
+          "doc_count": 64
+        },
+        {
+          "key": "mediatypes:n||unmed iated",
+          "doc_count": 63
+        },
+        {
+          "key": "mediatypes:n||zonder medium",
+          "doc_count": 62
+        },
+        {
+          "key": "mediatypes:n||unmedia ted",
+          "doc_count": 61
+        },
+        {
+          "key": "mediatypes:n||unme diated",
+          "doc_count": 59
+        },
+        {
+          "key": "mediatypes:n||unm ediated",
+          "doc_count": 55
+        },
+        {
+          "key": "mediatypes:n||sans médiation",
+          "doc_count": 53
+        },
+        {
+          "key": "mediatypes:n||computer",
+          "doc_count": 51
+        },
+        {
+          "key": "mediatypes:undefined||sin mediación",
+          "doc_count": 50
+        },
+        {
+          "key": "mediatypes:n||unmediat ed",
+          "doc_count": 49
+        },
+        {
+          "key": "mediatypes:n||u nmediated",
+          "doc_count": 43
+        },
+        {
+          "key": "mediatypes:g||projected",
+          "doc_count": 28
+        },
+        {
+          "key": "mediatypes:nc||volume",
+          "doc_count": 28
+        },
+        {
+          "key": "mediatypes:undefined||volume",
+          "doc_count": 26
+        },
+        {
+          "key": "mediatypes:undefined||still image",
+          "doc_count": 21
+        },
+        {
+          "key": "mediatypes:undefined||rdamedia",
+          "doc_count": 19
+        },
+        {
+          "key": "mediatypes:undefined||sin mediación",
+          "doc_count": 16
+        },
+        {
+          "key": "mediatypes:undefined||unmediated:",
+          "doc_count": 16
+        },
+        {
+          "key": "mediatypes:sti||still image",
+          "doc_count": 15
+        },
+        {
+          "key": "mediatypes:nc||unmediated",
+          "doc_count": 13
+        },
+        {
+          "key": "mediatypes:n||Bez urządzenia pośredniczącego",
+          "doc_count": 13
+        },
+        {
+          "key": "mediatypes:n||audio",
+          "doc_count": 11
+        },
+        {
+          "key": "mediatypes:undefined||unmediate",
+          "doc_count": 10
+        },
+        {
+          "key": "mediatypes:n||omedierad",
+          "doc_count": 8
+        },
+        {
+          "key": "mediatypes:undefined||unmediat ed",
+          "doc_count": 8
+        },
+        {
+          "key": "mediatypes:h||unmediated",
+          "doc_count": 7
+        },
+        {
+          "key": "mediatypes:n||bez média",
+          "doc_count": 7
+        },
+        {
+          "key": "mediatypes:n||sense mediació",
+          "doc_count": 7
+        },
+        {
+          "key": "mediatypes:undefined||no mediado",
+          "doc_count": 7
+        },
+        {
+          "key": "mediatypes:undefined||sans médiation",
+          "doc_count": 7
+        }
+      ]
+    },
+    "language": {
+      "doc_count_error_upper_bound": 2296,
+      "sum_other_doc_count": 258916,
+      "buckets": [
+        {
+          "key": "lang:eng||English",
+          "doc_count": 8375008
+        },
+        {
+          "key": "lang:ger||German",
+          "doc_count": 1859658
+        },
+        {
+          "key": "lang:fre||French",
+          "doc_count": 1475293
+        },
+        {
+          "key": "lang:spa||Spanish",
+          "doc_count": 1256440
+        },
+        {
+          "key": "lang:ita||Italian",
+          "doc_count": 844920
+        },
+        {
+          "key": "lang:rus||Russian",
+          "doc_count": 763395
+        },
+        {
+          "key": "lang:ara||Arabic",
+          "doc_count": 479464
+        },
+        {
+          "key": "lang:chi||Chinese",
+          "doc_count": 465919
+        },
+        {
+          "key": "lang:por||Portuguese",
+          "doc_count": 292131
+        },
+        {
+          "key": "lang:jpn||Japanese",
+          "doc_count": 288867
+        },
+        {
+          "key": "lang:heb||Hebrew",
+          "doc_count": 287867
+        },
+        {
+          "key": "lang:zxx||No linguistic content",
+          "doc_count": 271662
+        },
+        {
+          "key": "lang:pol||Polish",
+          "doc_count": 216210
+        },
+        {
+          "key": "lang:dut||Dutch",
+          "doc_count": 181288
+        },
+        {
+          "key": "lang:tur||Turkish",
+          "doc_count": 148493
+        },
+        {
+          "key": "lang:kor||Korean",
+          "doc_count": 143145
+        },
+        {
+          "key": "lang:per||Persian",
+          "doc_count": 116964
+        },
+        {
+          "key": "lang:swe||Swedish",
+          "doc_count": 95083
+        },
+        {
+          "key": "lang:ukr||Ukrainian",
+          "doc_count": 94565
+        },
+        {
+          "key": "lang:lat||Latin",
+          "doc_count": 94201
+        },
+        {
+          "key": "lang:gre||Greek, Modern (1453- )",
+          "doc_count": 80099
+        },
+        {
+          "key": "lang:cze||Czech",
+          "doc_count": 79488
+        },
+        {
+          "key": "lang:|||||",
+          "doc_count": 69835
+        },
+        {
+          "key": "lang:dan||Danish",
+          "doc_count": 64074
+        },
+        {
+          "key": "lang:hun||Hungarian",
+          "doc_count": 58029
+        },
+        {
+          "key": "lang:hin||Hindi",
+          "doc_count": 48231
+        },
+        {
+          "key": "lang:bul||Bulgarian",
+          "doc_count": 46773
+        },
+        {
+          "key": "lang:cat||Catalan",
+          "doc_count": 43044
+        },
+        {
+          "key": "lang:urd||Urdu",
+          "doc_count": 41975
+        },
+        {
+          "key": "lang:nor||Norwegian",
+          "doc_count": 39341
+        },
+        {
+          "key": "lang:rum||Romanian",
+          "doc_count": 39330
+        },
+        {
+          "key": "lang:fin||Finnish",
+          "doc_count": 36705
+        },
+        {
+          "key": "lang:hrv||Croatian",
+          "doc_count": 36293
+        },
+        {
+          "key": "lang:srp||Serbian",
+          "doc_count": 32966
+        },
+        {
+          "key": "lang:ben||Bengali",
+          "doc_count": 26799
+        },
+        {
+          "key": "lang:yid||Yiddish",
+          "doc_count": 24706
+        },
+        {
+          "key": "lang:arm||Armenian",
+          "doc_count": 24175
+        },
+        {
+          "key": "lang:und||Undetermined",
+          "doc_count": 24107
+        },
+        {
+          "key": "lang:tam||Tamil",
+          "doc_count": 23976
+        },
+        {
+          "key": "lang:mul||Multiple languages",
+          "doc_count": 22788
+        },
+        {
+          "key": "lang:slo||Slovak",
+          "doc_count": 18554
+        },
+        {
+          "key": "lang:lav||Latvian",
+          "doc_count": 18172
+        },
+        {
+          "key": "lang:san||Sanskrit",
+          "doc_count": 16067
+        },
+        {
+          "key": "lang:tib||Tibetan",
+          "doc_count": 14810
+        },
+        {
+          "key": "lang:ind||Indonesian",
+          "doc_count": 14444
+        },
+        {
+          "key": "lang:bel||Belarusian",
+          "doc_count": 13856
+        },
+        {
+          "key": "lang:slv||Slovenian",
+          "doc_count": 11250
+        },
+        {
+          "key": "lang:lit||Lithuanian",
+          "doc_count": 11071
+        },
+        {
+          "key": "lang:geo||Georgian",
+          "doc_count": 10959
+        },
+        {
+          "key": "lang:ota||Turkish, Ottoman",
+          "doc_count": 10189
+        }
+      ]
+    },
+    "subjectLiteral": {
+      "doc_count_error_upper_bound": 10032,
+      "sum_other_doc_count": 45366417,
+      "buckets": [
+        {
+          "key": "1900-1999",
+          "doc_count": 150836
+        },
+        {
+          "key": "United States.",
+          "doc_count": 80841
+        },
+        {
+          "key": "2000-2099",
+          "doc_count": 59043
+        },
+        {
+          "key": "Politics and government.",
+          "doc_count": 54463
+        },
+        {
+          "key": "Piano music.",
+          "doc_count": 43479
+        },
+        {
+          "key": "China.",
+          "doc_count": 39019
+        },
+        {
+          "key": "1800-1899",
+          "doc_count": 34592
+        },
+        {
+          "key": "United States",
+          "doc_count": 33253
+        },
+        {
+          "key": "Politics and government",
+          "doc_count": 30808
+        },
+        {
+          "key": "1939-1945",
+          "doc_count": 29809
+        },
+        {
+          "key": "Manners and customs.",
+          "doc_count": 29482
+        },
+        {
+          "key": "Symphonies.",
+          "doc_count": 26755
+        },
+        {
+          "key": "Bible. -- Commentaries.",
+          "doc_count": 24490
+        },
+        {
+          "key": "Economic history.",
+          "doc_count": 23683
+        },
+        {
+          "key": "Soviet Union.",
+          "doc_count": 22988
+        },
+        {
+          "key": "Diplomatic relations.",
+          "doc_count": 22840
+        },
+        {
+          "key": "Germany.",
+          "doc_count": 22577
+        },
+        {
+          "key": "Bible. -- Criticism, interpretation, etc.",
+          "doc_count": 22437
+        },
+        {
+          "key": "Japan.",
+          "doc_count": 21487
+        },
+        {
+          "key": "Philosophy.",
+          "doc_count": 21416
+        },
+        {
+          "key": "Russia (Federation)",
+          "doc_count": 20868
+        },
+        {
+          "key": "Photography, Artistic.",
+          "doc_count": 20178
+        },
+        {
+          "key": "Operas -- Excerpts.",
+          "doc_count": 19994
+        },
+        {
+          "key": "Orchestral music.",
+          "doc_count": 19959
+        },
+        {
+          "key": "Travel.",
+          "doc_count": 19527
+        },
+        {
+          "key": "Economics.",
+          "doc_count": 19431
+        },
+        {
+          "key": "Turkey.",
+          "doc_count": 19039
+        },
+        {
+          "key": "Antiquities.",
+          "doc_count": 19031
+        },
+        {
+          "key": "Operas.",
+          "doc_count": 18993
+        },
+        {
+          "key": "Political science.",
+          "doc_count": 18580
+        },
+        {
+          "key": "Civilization.",
+          "doc_count": 18528
+        },
+        {
+          "key": "International relations.",
+          "doc_count": 17965
+        },
+        {
+          "key": "Great Britain.",
+          "doc_count": 17697
+        },
+        {
+          "key": "Social conditions.",
+          "doc_count": 17388
+        },
+        {
+          "key": "Musicians -- Portraits.",
+          "doc_count": 16393
+        },
+        {
+          "key": "Economic policy.",
+          "doc_count": 16220
+        },
+        {
+          "key": "Brazil.",
+          "doc_count": 16132
+        },
+        {
+          "key": "Ethics.",
+          "doc_count": 15428
+        },
+        {
+          "key": "India.",
+          "doc_count": 15180
+        },
+        {
+          "key": "Korea (South)",
+          "doc_count": 14996
+        },
+        {
+          "key": "Sonatas (Piano)",
+          "doc_count": 14760
+        },
+        {
+          "key": "Democracy.",
+          "doc_count": 14255
+        },
+        {
+          "key": "France.",
+          "doc_count": 14226
+        },
+        {
+          "key": "Socialism.",
+          "doc_count": 14096
+        },
+        {
+          "key": "France -- History -- Revolution, 1789-1799.",
+          "doc_count": 14083
+        },
+        {
+          "key": "Organ music.",
+          "doc_count": 13987
+        },
+        {
+          "key": "Bible.",
+          "doc_count": 13811
+        },
+        {
+          "key": "1800-1999",
+          "doc_count": 13541
+        },
+        {
+          "key": "1900-2099",
+          "doc_count": 13530
+        },
+        {
+          "key": "Russia.",
+          "doc_count": 13472
+        }
+      ]
+    },
+    "creatorLiteral": {
+      "doc_count_error_upper_bound": 1002,
+      "sum_other_doc_count": 15160276,
+      "buckets": [
+        {
+          "key": "United States. General Accounting Office.",
+          "doc_count": 7598
+        },
+        {
+          "key": "Mozart, Wolfgang Amadeus, 1756-1791.",
+          "doc_count": 7482
+        },
+        {
+          "key": "Beethoven, Ludwig van, 1770-1827.",
+          "doc_count": 7103
+        },
+        {
+          "key": "Bach, Johann Sebastian, 1685-1750.",
+          "doc_count": 6718
+        },
+        {
+          "key": "Shakespeare, William, 1564-1616.",
+          "doc_count": 5356
+        },
+        {
+          "key": "Geological Survey (U.S.)",
+          "doc_count": 4503
+        },
+        {
+          "key": "Organisation for Economic Co-operation and Development.",
+          "doc_count": 4221
+        },
+        {
+          "key": "Handel, George Frideric, 1685-1759.",
+          "doc_count": 3674
+        },
+        {
+          "key": "Haydn, Joseph, 1732-1809.",
+          "doc_count": 3465
+        },
+        {
+          "key": "Beethoven, Ludwig van, 1770-1827",
+          "doc_count": 3423
+        },
+        {
+          "key": "Schubert, Franz, 1797-1828.",
+          "doc_count": 3402
+        },
+        {
+          "key": "Mozart, Wolfgang Amadeus, 1756-1791",
+          "doc_count": 3349
+        },
+        {
+          "key": "Bach, Johann Sebastian, 1685-1750",
+          "doc_count": 3281
+        },
+        {
+          "key": "Brahms, Johannes, 1833-1897.",
+          "doc_count": 3172
+        },
+        {
+          "key": "Shakespeare, William, 1564-1616",
+          "doc_count": 3158
+        },
+        {
+          "key": "Verdi, Giuseppe, 1813-1901.",
+          "doc_count": 3145
+        },
+        {
+          "key": "United States.",
+          "doc_count": 3028
+        },
+        {
+          "key": "Wagner, Richard, 1813-1883.",
+          "doc_count": 3014
+        },
+        {
+          "key": "Tchaikovsky, Peter Ilich, 1840-1893.",
+          "doc_count": 2726
+        },
+        {
+          "key": "United States. Congress. House. Committee on Rules.",
+          "doc_count": 2487
+        },
+        {
+          "key": "Schumann, Robert, 1810-1856.",
+          "doc_count": 2206
+        },
+        {
+          "key": "United States. Bureau of the Census.",
+          "doc_count": 2180
+        },
+        {
+          "key": "Mendelssohn-Bartholdy, Felix, 1809-1847.",
+          "doc_count": 1993
+        },
+        {
+          "key": "Vivaldi, Antonio, 1678-1741.",
+          "doc_count": 1958
+        },
+        {
+          "key": "Liszt, Franz, 1811-1886.",
+          "doc_count": 1953
+        },
+        {
+          "key": "United States. Congress. House. Committee on the Judiciary.",
+          "doc_count": 1926
+        },
+        {
+          "key": "United States. Congress. Senate. Committee on Energy and Natural Resources.",
+          "doc_count": 1911
+        },
+        {
+          "key": "Goethe, Johann Wolfgang von, 1749-1832.",
+          "doc_count": 1848
+        },
+        {
+          "key": "Telemann, Georg Philipp, 1681-1767.",
+          "doc_count": 1810
+        },
+        {
+          "key": "United States. Congress. Senate. Committee on Foreign Relations.",
+          "doc_count": 1802
+        },
+        {
+          "key": "Strauss, Richard, 1864-1949.",
+          "doc_count": 1798
+        },
+        {
+          "key": "Rossini, Gioacchino, 1792-1868.",
+          "doc_count": 1742
+        },
+        {
+          "key": "United States. Congress. Senate. Committee on the Judiciary.",
+          "doc_count": 1699
+        },
+        {
+          "key": "Scott, Walter, 1771-1832.",
+          "doc_count": 1661
+        },
+        {
+          "key": "Chopin, Frédéric, 1810-1849.",
+          "doc_count": 1627
+        },
+        {
+          "key": "Voltaire, 1694-1778.",
+          "doc_count": 1584
+        },
+        {
+          "key": "Prokofiev, Sergey, 1891-1953.",
+          "doc_count": 1550
+        },
+        {
+          "key": "Great Britain.",
+          "doc_count": 1542
+        },
+        {
+          "key": "United States. Congress. Senate. Committee on Finance.",
+          "doc_count": 1476
+        },
+        {
+          "key": "Stravinsky, Igor, 1882-1971.",
+          "doc_count": 1471
+        },
+        {
+          "key": "Group, International Crisis.",
+          "doc_count": 1463
+        },
+        {
+          "key": "Brahms, Johannes, 1833-1897",
+          "doc_count": 1445
+        },
+        {
+          "key": "United States. Congress. House. Committee on Natural Resources, author.",
+          "doc_count": 1441
+        },
+        {
+          "key": "Schubert, Franz, 1797-1828",
+          "doc_count": 1435
+        },
+        {
+          "key": "Debussy, Claude, 1862-1918.",
+          "doc_count": 1427
+        },
+        {
+          "key": "Donizetti, Gaetano, 1797-1848.",
+          "doc_count": 1426
+        },
+        {
+          "key": "United States. Congress. House. Committee on Appropriations.",
+          "doc_count": 1410
+        },
+        {
+          "key": "Great Britain. Parliament.",
+          "doc_count": 1408
+        },
+        {
+          "key": "Puccini, Giacomo, 1858-1924.",
+          "doc_count": 1388
+        },
+        {
+          "key": "Defoe, Daniel, 1661?-1731.",
+          "doc_count": 1363
+        }
+      ]
+    }
+  }
+}
