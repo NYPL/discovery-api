@@ -13,6 +13,10 @@ module.exports = () => {
         {
           _id: 'b10980129',
           _source: {
+            supplementaryContent: [{
+              label: 'Finding aid',
+              url: 'spaghetti.com'
+            }],
             numItems: [
               4
             ],
@@ -34,7 +38,6 @@ module.exports = () => {
             level: 'debug',
             items: [
               {
-                aeonUrl: 'fakeaeonurl.nypl.org',
                 uri: 'i22566485',
                 identifier: [
                   'urn:barcode:33433058338470'
@@ -174,7 +177,7 @@ module.exports = () => {
                 holdingLocation: [
                   {
                     label: 'Schomburg Center - Research & Reference',
-                    id: 'loc:scff2'
+                    id: 'loc:mao82'
                   }
                 ],
                 status_packed: [
