@@ -181,7 +181,6 @@ describe('RequestabilityResolver', () => {
 
       const items = response.hits.hits[0]._source.items
       const specRequestableItem = items.find((item) => item.uri === 'i10283665777')
-      console.log(specRequestableItem)
       expect(specRequestableItem.specRequestable).to.equal(true)
     })
 
