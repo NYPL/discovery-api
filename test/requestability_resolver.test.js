@@ -1,13 +1,17 @@
 const RequestabilityResolver = require('../lib/requestability_resolver')
 const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
-const specRequestableElasticSearchResponse = require('./fixtures/specRequestable-es-response')
+const specRequestableElasticSearchResponse = require('./fixtures/specRequestable/specRequestable-es-response.js')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
+const findingAidElasticSearchResponse = require('./fixtures/specRequestable/findingAid-es-response.js')
 const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
 const noRecapResponse = require('./fixtures/no_recap_response')
 
 describe('RequestabilityResolver', () => {
   describe('fixItemRequestability', function () {
-    const NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()
+    let NyplResponse
+    before(() => {
+      NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()
+    })
     it('sets physRequestable false for items with no barcodes', () => {
       const noBarcode = noBarcodeResponse()
       const resp = RequestabilityResolver.fixItemRequestability(noBarcode)
@@ -172,10 +176,25 @@ describe('RequestabilityResolver', () => {
       expect(specRequestableItem.specRequestable).to.equal(true)
     })
 
-    it('marks items as not specRequestable when there is no aeonURL present', function () {
+    it('marks items as specRequestable when there is a special collectionAccessType designation', function () {
       const response = RequestabilityResolver.fixItemRequestability(specRequestableElasticSearchResponse())
 
       const items = response.hits.hits[0]._source.items
+      const specRequestableItem = items.find((item) => item.uri === 'i10283665777')
+      expect(specRequestableItem.specRequestable).to.equal(true)
+    })
+
+    it('marks items as specRequestable when there is a finding aid on the parent bib', function () {
+      const response = RequestabilityResolver.fixItemRequestability(findingAidElasticSearchResponse())
+
+      const items = response.hits.hits[0]._source.items
+      expect(items.every((item) => item.specRequestable)).to.equal(true)
+    })
+
+    it('leaves item as specRequestable false when there is no finding aid, aeon url, or special holding location', () => {
+      const response = RequestabilityResolver.fixItemRequestability(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
+      const items = response.hits.hits[0]._source.items
+
       const specRequestableItem = items.find((item) => item.uri === 'i10283665')
       expect(specRequestableItem.specRequestable).to.equal(false)
     })
