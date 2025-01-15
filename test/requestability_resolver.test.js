@@ -207,13 +207,8 @@ describe('RequestabilityResolver', () => {
   })
 
   describe('Missing recapCustomerCode', function () {
-    let response
-    let resolved
-    before(() => {
-      response = noRecapResponse.fakeElasticSearchResponseNyplItem()
-      resolved = RequestabilityResolver.fixItemRequestability(response)
-    })
-
+    const response = noRecapResponse.fakeElasticSearchResponseNyplItem()
+    const resolved = RequestabilityResolver.fixItemRequestability(response)
     it('marks edd and physical requestability correctly', function () {
       const items = resolved.hits.hits[0]._source.items
       const firstItem = items.find((item) => {
