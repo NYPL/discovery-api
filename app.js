@@ -20,6 +20,7 @@ const app = express()
 app.set('trust proxy', 'loopback')
 
 app.init = async () => {
+  console.log('heeeeere')
   await loadConfig.loadConfig()
   await loadNyplCoreData()
   preflightCheck()
