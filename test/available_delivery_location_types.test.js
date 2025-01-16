@@ -1,7 +1,8 @@
 const fixtures = require('./fixtures')
-const AvailableDeliveryLocationTypes = require('../lib/available_delivery_location_types.js')
 
 describe('AvailableDeliveryLocationTypes', function () {
+  const AvailableDeliveryLocationTypes = require('../lib/available_delivery_location_types.js')
+
   before(function () {
     // Reroute these (and only these) api paths to local fixtures:
     fixtures.enableDataApiFixtures({

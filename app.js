@@ -3,7 +3,6 @@ const express = require('express')
 const esClient = require('./lib/elasticsearch/client')
 const loadConfig = require('./lib/load-config')
 const { preflightCheck } = require('./lib/preflight_check')
-const { loadNyplCoreData } = require('./lib/load_nypl_core')
 
 const swaggerDocs = require('./swagger.v1.1.x.json')
 
@@ -21,7 +20,7 @@ app.set('trust proxy', 'loopback')
 
 app.init = async () => {
   await loadConfig.loadConfig()
-  await loadNyplCoreData()
+
   preflightCheck()
 
   // Load logger after running above to ensure we respect LOG_LEVEL if set

@@ -174,7 +174,7 @@ module.exports = () => {
                 holdingLocation: [
                   {
                     label: 'Schomburg Center - Research & Reference',
-                    id: 'loc:mao82'
+                    id: 'loc:scff2'
                   }
                 ],
                 status_packed: [
