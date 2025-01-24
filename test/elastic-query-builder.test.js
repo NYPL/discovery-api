@@ -218,7 +218,8 @@ describe('ElasticQueryBuilder', () => {
 
   describe('search_scope callnumber', () => {
     it('generates a "callnumber" query', () => {
-      const request = new ApiRequest({ q: 'toast', search_scope: 'callnumber' })
+      // including leading and trailing whitespace to validate that query is trimmed
+      const request = new ApiRequest({ q: ' toast   ', search_scope: 'callnumber' })
       const inst = ElasticQueryBuilder.forApiRequest(request)
 
       // Expect multiple term/prefix matches on identifier fields:
