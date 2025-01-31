@@ -373,6 +373,14 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
+        expect(query.bool.should[1]).to.deep.equal({
+          term: {
+            'parallelSubjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
       })
     })
 
