@@ -347,9 +347,9 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        expect(query.bool.must[0].bool.must[0].bool.should.length).to.equal(2)
-        expect(query.bool.must[0].bool.must[0].bool.should[0])
-        expect(query.bool.must[0].bool.must[0].bool.should[0]).to.deep.equal({
+        expect(query.bool.must[0].bool.should.length).to.equal(2)
+        expect(query.bool.must[0].bool.should[0])
+        expect(query.bool.must[0].bool.should[0]).to.deep.equal({
           prefix: {
             'subjectLiteral.raw': {
               value: 'toast',
@@ -357,7 +357,7 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
-        expect(query.bool.must[0].bool.must[0].bool.should[1]).to.deep.equal({
+        expect(query.bool.must[0].bool.should[1]).to.deep.equal({
           prefix: {
             'parallelSubjectLiteral.raw': {
               value: 'toast',
@@ -365,7 +365,7 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
-        expect(query.bool.must[0].bool.should[0]).to.deep.equal({
+        expect(query.bool.should[0]).to.deep.equal({
           term: {
             'subjectLiteral.raw': {
               value: 'toast',
