@@ -340,6 +340,50 @@ describe('ElasticQueryBuilder', () => {
       })
     })
 
+    describe('subject_prefix=', () => {
+      it('applies subject_prefix clauses to query', () => {
+        const request = new ApiRequest({ subject_prefix: 'toast' })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        expect(query.bool.must[0].bool.should.length).to.equal(2)
+        expect(query.bool.must[0].bool.should[0])
+        expect(query.bool.must[0].bool.should[0]).to.deep.equal({
+          prefix: {
+            'subjectLiteral.raw': {
+              value: 'toast',
+              boost: 1
+            }
+          }
+        })
+        expect(query.bool.must[0].bool.should[1]).to.deep.equal({
+          prefix: {
+            'parallelSubjectLiteral.raw': {
+              value: 'toast',
+              boost: 1
+            }
+          }
+        })
+        expect(query.bool.should[0]).to.deep.equal({
+          term: {
+            'subjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
+        expect(query.bool.should[1]).to.deep.equal({
+          term: {
+            'parallelSubjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
+      })
+    })
+
     describe('multiple adv search params', () => {
       it('applies multiple param clauses to query', () => {
         const request = new ApiRequest({
