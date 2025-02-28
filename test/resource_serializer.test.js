@@ -4,7 +4,7 @@ const esResponse = require('./fixtures/item-filter-aggregations.json')
 describe('Resource Serializer', () => {
   describe('formatformat', () => {
     it('should format properly', () => {
-      expect(ResourceSerializer.getFormattedformat('a')).to.deep.equal({ '@id': 'a', prefLabel: 'Book/Text' })
+      expect(ResourceSerializer.getFormattedFormat('a')).to.deep.equal({ '@id': 'a', prefLabel: 'Book/Text' })
     })
   })
   describe('.formatItemFilterAggregations()', () => {
