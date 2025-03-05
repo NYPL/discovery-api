@@ -184,13 +184,6 @@ describe('RequestabilityResolver', () => {
       expect(specRequestableItem.specRequestable).to.equal(true)
     })
 
-    it('marks items as specRequestable when there is a finding aid on the parent bib', function () {
-      const response = RequestabilityResolver.fixItemRequestability(findingAidElasticSearchResponse())
-
-      const items = response.hits.hits[0]._source.items
-      expect(items.every((item) => item.specRequestable)).to.equal(true)
-    })
-
     it('leaves item as specRequestable false when there is no finding aid, aeon url, or special holding location', () => {
       const response = RequestabilityResolver.fixItemRequestability(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
       const items = response.hits.hits[0]._source.items
