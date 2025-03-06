@@ -2,7 +2,6 @@ const RequestabilityResolver = require('../lib/requestability_resolver')
 const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable/specRequestable-es-response.js')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
-const findingAidElasticSearchResponse = require('./fixtures/specRequestable/findingAid-es-response.js')
 const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
 const noRecapResponse = require('./fixtures/no_recap_response')
 
@@ -228,16 +227,16 @@ describe('RequestabilityResolver', () => {
 
     it('marks edd and physical requestability correctly', function () {
       const items = resolved.hits.hits[0]._source.items
-      const firstItem = items.find((item) => {
+      const requestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836649'
       })
-      const secondItem = items.find((item) => {
+      const nonRequestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836659'
       })
-      expect(firstItem.physRequestable).to.equal(true)
-      expect(firstItem.eddRequestable).to.equal(true)
-      expect(secondItem.physRequestable).to.equal(false)
-      expect(secondItem.eddRequestable).to.equal(false)
+      expect(requestableLocationNoRecapCode.physRequestable).to.equal(true)
+      expect(requestableLocationNoRecapCode.eddRequestable).to.equal(true)
+      expect(nonRequestableLocationNoRecapCode.physRequestable).to.equal(false)
+      expect(nonRequestableLocationNoRecapCode.eddRequestable).to.equal(false)
     })
   })
 })
