@@ -305,7 +305,7 @@ exports.fakeElasticSearchResponseNyplItem = () => {
                 holdingLocation: [
                   {
                     label: 'OFFSITE - Request in Advance',
-                    id: 'loc:dya0f'
+                    id: 'loc:rcpt8'
                   }
                 ],
                 status_packed: [
