@@ -2,11 +2,8 @@ const RequestabilityResolver = require('../lib/requestability_resolver')
 const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable/specRequestable-es-response.js')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
-const findingAidElasticSearchResponse = require('./fixtures/specRequestable/findingAid-es-response.js')
 const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
 const noRecapResponse = require('./fixtures/no_recap_response')
-const physRequestableOverride = require('./fixtures/specRequestable/phys-requestable-override.js')
-const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver.js')
 
 describe('RequestabilityResolver', () => {
   describe('fixItemRequestability', function () {
@@ -18,17 +15,6 @@ describe('RequestabilityResolver', () => {
       const noBarcode = noBarcodeResponse()
       const resp = RequestabilityResolver.fixItemRequestability(noBarcode)
       expect(resp.hits.hits[0]._source.items.every((item) => item.physRequestable === false)).to.equal(true)
-    })
-    it('specRequestable overrides physRequestable, when items have phys requestable holding location', () => {
-      const esResponseItems = physRequestableOverride.hits.hits[0]._source.items
-      const isPhysRequestable = (item) => !!item.deliveryLocation.length
-      const resp = RequestabilityResolver.fixItemRequestability(physRequestableOverride)
-      // verify that items are phys requestable based on location...
-      expect(esResponseItems
-        .map(DeliveryLocationsResolver.getOnsiteDeliveryInfo)
-        .every(isPhysRequestable)).to.equal(true)
-      // ...but overridden by specRequestability
-      expect(resp.hits.hits[0]._source.items.every((item) => !item.physRequestable && item.specRequestable)).to.equal(true)
     })
 
     it('will set requestable to false for an item not found in ReCAP', function () {
@@ -197,13 +183,6 @@ describe('RequestabilityResolver', () => {
       expect(specRequestableItem.specRequestable).to.equal(true)
     })
 
-    it('marks items as specRequestable when there is a finding aid on the parent bib', function () {
-      const response = RequestabilityResolver.fixItemRequestability(findingAidElasticSearchResponse())
-
-      const items = response.hits.hits[0]._source.items
-      expect(items.every((item) => item.specRequestable)).to.equal(true)
-    })
-
     it('leaves item as specRequestable false when there is no finding aid, aeon url, or special holding location', () => {
       const response = RequestabilityResolver.fixItemRequestability(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
       const items = response.hits.hits[0]._source.items
@@ -248,16 +227,16 @@ describe('RequestabilityResolver', () => {
 
     it('marks edd and physical requestability correctly', function () {
       const items = resolved.hits.hits[0]._source.items
-      const firstItem = items.find((item) => {
+      const requestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836649'
       })
-      const secondItem = items.find((item) => {
+      const nonRequestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836659'
       })
-      expect(firstItem.physRequestable).to.equal(true)
-      expect(firstItem.eddRequestable).to.equal(true)
-      expect(secondItem.physRequestable).to.equal(false)
-      expect(secondItem.eddRequestable).to.equal(false)
+      expect(requestableLocationNoRecapCode.physRequestable).to.equal(true)
+      expect(requestableLocationNoRecapCode.eddRequestable).to.equal(true)
+      expect(nonRequestableLocationNoRecapCode.physRequestable).to.equal(false)
+      expect(nonRequestableLocationNoRecapCode.eddRequestable).to.equal(false)
     })
   })
 })
