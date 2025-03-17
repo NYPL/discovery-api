@@ -77,10 +77,10 @@ describe('JSONLD Serializers', () => {
         const serialized = await ResourceSerializer.serialize({
           formatId: 'a'
         })
-        expect(serialized.format).to.deep.equal({
+        expect(serialized.format).to.deep.equal([{
           '@id': 'a',
           prefLabel: 'Book/Text'
-        })
+        }])
       })
 
       it('removes invalid format', async () => {
