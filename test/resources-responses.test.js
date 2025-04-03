@@ -266,7 +266,7 @@ describe('Test Resources responses', function () {
 
         assert(doc.itemAggregations)
 
-        assert.deepEqual(doc.recordType, { '@id': 'a', prefLabel: 'Book/Text' })
+        assert.deepEqual(doc.format, [{ '@id': 'a', prefLabel: 'Book/Text' }])
 
         done()
       })
@@ -549,21 +549,21 @@ describe('Test Resources responses', function () {
       })
     })
 
-    describe('Filter by recordType', function () {
-      it('returns only items with recordType a', (done) => {
-        const recordType = 'a'
-        request.get(`${searchAllUrl}&filters[recordType]=${recordType}`, (err, res, body) => {
+    describe('Filter by format', function () {
+      it('returns only items with format a', (done) => {
+        const format = 'a'
+        request.get(`${searchAllUrl}&filters[format]=${format}`, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
           // Ensure we received results
           expect(doc.totalResults).to.be.above(1)
           // Ensure each result...
-          const allItemsHaveRecordType = doc.itemListElement.every((element) => {
+          const allItemsHaveformat = doc.itemListElement.every((element) => {
             // .. has some items that ...
-            return element.recordType?.[0]['@id'] === 'recordType:' + recordType
+            return element.format?.[0]['@id'] === 'format:' + format
           })
           // For the result to match, only one item needs to match:
-          expect(allItemsHaveRecordType)
+          expect(allItemsHaveformat)
         })
         done()
       })

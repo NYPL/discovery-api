@@ -72,23 +72,23 @@ describe('JSONLD Serializers', () => {
       )
     })
 
-    describe('recordType', () => {
-      it('adds label to recordType', async () => {
+    describe('format', () => {
+      it('adds label to format', async () => {
         const serialized = await ResourceSerializer.serialize({
-          recordTypeId: 'a'
+          formatId: 'a'
         })
-        expect(serialized.recordType).to.deep.equal({
+        expect(serialized.format).to.deep.equal([{
           '@id': 'a',
           prefLabel: 'Book/Text'
-        })
+        }])
       })
 
-      it('removes invalid recordType', async () => {
+      it('removes invalid format', async () => {
         const serialized = await ResourceSerializer.serialize({
-          recordTypeId: '!'
+          formatId: '!'
         })
 
-        expect(serialized.recordType).to.be.a('null')
+        expect(serialized.format).to.be.a('null')
       })
     })
   })
@@ -155,20 +155,20 @@ describe('JSONLD Serializers', () => {
       }
     )
 
-    it('formats recordType agg', async () => {
+    it('formats format agg', async () => {
       const serialized = await AggregationsSerializer.serialize(transformedEsResponse)
 
-      const recordTypeAgg = serialized.itemListElement
-        .find((agg) => agg.id === 'recordType')
-      expect(recordTypeAgg).to.be.a('object')
+      const formatAgg = serialized.itemListElement
+        .find((agg) => agg.id === 'format')
+      expect(formatAgg).to.be.a('object')
 
-      expect(recordTypeAgg).to.nested.include({
+      expect(formatAgg).to.nested.include({
         'values[0].value': 'a',
         'values[0].count': 2324674,
         'values[0].label': 'Book/Text'
       })
 
-      const bucketsWithoutLabels = recordTypeAgg.values
+      const bucketsWithoutLabels = formatAgg.values
         .filter((val) => !val.label)
       expect(bucketsWithoutLabels).to.have.lengthOf(0)
     })
