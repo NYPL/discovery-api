@@ -8,7 +8,8 @@
 *   To build and view a report using the currently checked out code:
 *     node scripts/run-ranking-evaluation.js --open
 *
-*   To register the current commit as an official commit for later reports:
+*   To register the current commit in the versioned manifest file, indicating
+*   it's a significant checkpoint and should appear in future reports:
 *     node scripts/run-ranking-evaluation.js --add
 *
 *   To re-run all registered commits against the current target queries (i.e. when target queries change):
@@ -134,7 +135,9 @@ const runTargets = async (targets, index = 0, responses = []) => {
 /**
 * Record run in manifest for future reports:
 **/
-const recordRun = (run) => {
+const recordRun = (run, addToCommitsFile = false) => {
+  console.log(`Saving ${run.commit} (${run.description}) to manifest`)
+
   const manifestPath = './data/rank-evaluation-run-manifest.json'
   const runManifestRaw = fs.existsSync(manifestPath)
     ? fs.readFileSync(manifestPath)
@@ -150,7 +153,9 @@ const recordRun = (run) => {
     fs.writeFileSync(manifestPath, JSON.stringify(runManifest, null, 2))
 
     // Register this commit:
-    fs.eppendFileSync('./data/rank-evaluation-run-commits.csv', `${run.commit},"${run.description}"`)
+    if (addToCommitsFile) {
+      fs.appendFileSync('./data/rank-evaluation-run-commits.csv', `${run.commit},"${run.description}"`)
+    }
   } else {
     console.log(`Manifest already exists for ${run.commit}`)
   }
@@ -163,6 +168,9 @@ buildEsQueryFn = _priv.buildElasticQuery
 
 const runTargetsOnCommits = async (targets, commits, index = 0) => {
   const commit = commits[index]
+
+  console.log('___________________________________________________________________')
+  console.log(`${index + 1} of ${commits.length}: ${commit.commit} (${commit.description})`)
 
   const baseDir = '/tmp/discovery-api'
 
@@ -196,7 +204,6 @@ const runTargetsOnCommits = async (targets, commits, index = 0) => {
   console.log('Running targets...')
   // execSync('node ./scripts/run-ranking-evaluation-copy-2.js')
   const responses = await runTargets(targets)
-  console.log('Got responses: ', responses.map((r) => r.response.metric_score))
   recordRun({
     date: new Date().toISOString(),
     commit: commit.commit,
@@ -214,6 +221,8 @@ const runTargetsOnCommits = async (targets, commits, index = 0) => {
 * builds a HTML report showing evaluations over time.
 **/
 const buildFullReport = (manifest) => {
+  // Take the array of runs and turn it into an array of "tests" (representing a
+  // single search target), collecting results over time
   const tests = manifest.reduce((tests, run) => {
     run.responses.forEach(({ target, response }, ind) => {
       const testId = [target.search, target.scope, target.metric, target.metric_at, ...target.relevant].join('|')
@@ -248,6 +257,7 @@ const buildFullReport = (manifest) => {
       const prodUrl = `https://www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
 
       return [
+        '<hr/>',
         `<h2>${title}</h2>`,
         test.target.notes ? `<p>${test.target.notes}</p>` : '',
         `Search: <a href="${qaUrl}" target="_blank">QA</a> | <a href="${prodUrl}" target="_blank">Prod</a>`, // | <a href="${gitUrl}">Git diff</a>`,
@@ -271,7 +281,7 @@ const buildFullReport = (manifest) => {
         ...test.target.relevant
           .map((bibid) => `<li><a href="https://qa-www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a></li>`),
         '</ul>',
-        '<h3>Search versions</h3>',
+        '<h3>App versions</h3>',
         '<ul>',
         ...test.results.map((result, ind) => {
           const detail = result.details.report.metric_details[test.target.metric]
@@ -283,7 +293,8 @@ const buildFullReport = (manifest) => {
               .sort((i1, i2) => i1 < i2 ? -1 : 1)
               .map((bibid) => `<a href="https://qa-www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a>`)
               .join(', ')
-          return `<li>V${ind} (${result.description}): score ${result.metric_score}<ul><li>${desc}</li></ul></li>`
+          const commitUrl = `https://github.com/NYPL/discovery-api/tree/${result.commit}`
+          return `<li><a href="${commitUrl}">V${ind}</a> (${result.description}): score ${result.metric_score.toFixed(2)}<ul><li>${desc}</li></ul></li>`
         }),
         '</ul>'
       ].join('\n')
@@ -306,6 +317,8 @@ const buildFullReport = (manifest) => {
 * Main function. Based on argv options, runs app specified rank-eval queries and reports results.
 **/
 const run = async () => {
+  // Use production config, unless otherwise specified:
+  process.env.ENV = process.env.ENV || 'production'
   await loadConfig()
 
   // Load search targets:
@@ -322,34 +335,39 @@ const run = async () => {
     targets = targets.filter((_, i) => rows.includes(i))
   }
 
+  let manifest
+
   // Rebuild all manifests:
   if (argv.rebuildAll) {
+    fs.writeFileSync('./data/rank-evaluation-run-manifest.json', '[]')
+
     const raw = fs.readFileSync('./data/rank-evaluation-run-commits.csv', 'utf8')
     const commits = csvParse(raw, {
       columns: true,
       skip_empty_lines: true
     })
 
-    runTargetsOnCommits(targets, commits)
+    await runTargetsOnCommits(targets, commits)
+    manifest = require('../data/rank-evaluation-run-manifest.json')
 
-    return
-  }
+  // Run rank eval for current code:
+  } else {
+    manifest = require('../data/rank-evaluation-run-manifest.json')
 
-  const manifest = require('../data/rank-evaluation-run-manifest.json')
+    // Run rank-eval for current code for all target queries:
+    const responses = await runTargets(targets)
+    const currentRun = {
+      date: new Date().toISOString(),
+      commit: currentCommit(),
+      description: argv.description,
+      responses
+    }
+    manifest.push(currentRun)
 
-  // Run rank-eval for current code for all target queries:
-  const responses = await runTargets(targets)
-  const currentRun = {
-    date: new Date().toISOString(),
-    commit: currentCommit(),
-    description: argv.description,
-    responses
-  }
-  manifest.push(currentRun)
-
-  // Save run permanently into manifest?
-  if (argv.add) {
-    recordRun(currentRun)
+    // Save run permanently into manifest?
+    if (argv.add) {
+      recordRun(currentRun, true)
+    }
   }
 
   // Rebuild report (out.html):
