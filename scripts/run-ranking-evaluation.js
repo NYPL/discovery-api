@@ -55,7 +55,7 @@ const argv = require('minimist')(process.argv.slice(2), {
     description: '[Current commit]'
   },
   string: ['rows'],
-  boolean: ['outputHeader', 'verbose', 'rebuildAll']
+  boolean: ['outputHeader', 'verbose', 'rebuildAll', 'skipRun']
 })
 
 require('dotenv').config({ path: argv.envfile || '.env' })
@@ -202,7 +202,6 @@ const runTargetsOnCommits = async (targets, commits, index = 0) => {
   buildEsQueryFn = _priv.buildElasticQuery
 
   console.log('Running targets...')
-  // execSync('node ./scripts/run-ranking-evaluation-copy-2.js')
   const responses = await runTargets(targets)
   recordRun({
     date: new Date().toISOString(),
@@ -224,12 +223,16 @@ const buildFullReport = (manifest) => {
   // Take the array of runs and turn it into an array of "tests" (representing a
   // single search target), collecting results over time
   const tests = manifest.reduce((tests, run) => {
-    run.responses.forEach(({ target, response }, ind) => {
+    run.responses.forEach(({ target, query, response }, ind) => {
       const testId = [target.search, target.scope, target.metric, target.metric_at, ...target.relevant].join('|')
+        .replaceAll(/'/g, '-apos-')
+        .replaceAll(/"/g, '-quot-')
+        .replaceAll(/ /g, '_')
       if (!tests.find((t) => t.id === testId)) {
         tests.push({
           id: testId,
           target,
+          query,
           results: []
         })
       }
@@ -239,78 +242,134 @@ const buildFullReport = (manifest) => {
     return tests
   }, [])
 
-  const html = [
+  const html = reportHtml(tests)
+  fs.writeFileSync('./out.html', html)
+}
+
+const reportHtml = (tests) => {
+  const mermaidOptions = {
+    theme: 'base',
+    themeVariables: {
+      xyChart: {
+        plotColorPalette: '#006166,#00838a'
+      }
+    }
+  }
+  return [
     '<!doctype html> <html lang="en">',
-    '<head><style type="text/css">body { font-family: sans-serif; }</style></head>',
+    '<head><style type="text/css">',
+    '  body { font-family: sans-serif; }',
+    '  textarea { display:inline-block; height:1px !important; width:1px !important; opacity:0 }',
+    '  a.copy-to-clipboard::before { content: "\\01F4CB "; }',
+    '  a.copy-to-clipboard:active::before { content: "\\2705 "; }',
+    '</style>',
+    '<script type="text/javascript">',
+    `
+    function copyQueryToClipboard (queryId) {
+        const textarea = document.getElementById(queryId)
+        textarea.select()
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        } catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return prompt("Copy to clipboard: Ctrl+C, Enter", text);
+        }
+    }
+    `,
+    '</script>',
+    '</head>',
     '<body>',
     '<h1>RC Search Targets Over Time</h1>',
-    ...tests.map((test) => {
-      const xs = Object.keys(test.results).map((ind) => `V${ind}`)
-      const ys = test.results.map((result) => result.metric_score) // Object.values(test.results)
-      const title = `${test.target.scope} "${test.target.search}": ${test.target.metric}@${test.target.metric_at}`
-
-      const searchScope = {
-        keyword: 'all',
-        'journal title': 'journal_title'
-      }[test.target.scope] || test.target.scope
-      const qaUrl = `https://qa-www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
-      const prodUrl = `https://www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
-
-      return [
-        '<hr/>',
-        `<h2>${title}</h2>`,
-        test.target.notes ? `<p>${test.target.notes}</p>` : '',
-        `Search: <a href="${qaUrl}" target="_blank">QA</a> | <a href="${prodUrl}" target="_blank">Prod</a>`, // | <a href="${gitUrl}">Git diff</a>`,
-        '<pre class="mermaid"">',
-        '---',
-        'config:',
-        '    xyChart:',
-        '        width: 900',
-        '        height: 150',
-        '        yAxis:',
-        '            showLabel: false',
-        '---',
-        'xychart-beta',
-        `  x-axis [${xs.join(', ')}]`,
-        '  y-axis "Performance" 0 --> 1',
-        `  line [${ys.join(', ')}]`,
-        `  bar [${ys.join(', ')}]`,
-        '</pre>',
-        '<h3>Target records</h3>',
-        '<ul>',
-        ...test.target.relevant
-          .map((bibid) => `<li><a href="https://qa-www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a></li>`),
-        '</ul>',
-        '<h3>App versions</h3>',
-        '<ul>',
-        ...test.results.map((result, ind) => {
-          const detail = result.details.report.metric_details[test.target.metric]
-          const desc = `Found ${detail.relevant_docs_retrieved} of ${test.target.relevant.length}` +
-            ': ' +
-            result.details.report.hits
-              .filter((hit) => hit.rating)
-              .map((hit) => hit.hit._id)
-              .sort((i1, i2) => i1 < i2 ? -1 : 1)
-              .map((bibid) => `<a href="https://qa-www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a>`)
-              .join(', ')
-          const commitUrl = `https://github.com/NYPL/discovery-api/tree/${result.commit}`
-          return `<li><a href="${commitUrl}">V${ind}</a> (${result.description}): score ${result.metric_score.toFixed(2)}<ul><li>${desc}</li></ul></li>`
-        }),
-        '</ul>'
-      ].join('\n')
-    }),
+    ...tests.map(reportHtmlForTest),
     '<script type="module">',
     'import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"',
-    'mermaid.initialize({',
-    "  'theme': 'forest',",
-    "  'themeVariables': {",
-    '  }',
-    '})',
+    'mermaid.initialize(',
+    JSON.stringify(mermaidOptions),
+    ')',
     '</script>',
     '</body></html>'
   ]
     .join('\n')
-  fs.writeFileSync('./out.html', html)
+}
+
+const reportHtmlForTest = (test, testIndex) => {
+  const title = `${test.target.scope} "${test.target.search}": ${test.target.metric}@${test.target.metric_at}`
+
+  const searchScope = {
+    keyword: 'all',
+    'journal title': 'journal_title'
+  }[test.target.scope] || test.target.scope
+  const qaUrl = `https://qa-www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
+  const prodUrl = `https://www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
+
+  return [
+    `<h2>${testIndex + 1}. ${title}</h2>`,
+    test.target.notes ? `<p>${test.target.notes}</p>` : '',
+    `Search: <a href="${qaUrl}" target="_blank">QA</a> | <a href="${prodUrl}" target="_blank">Prod</a>`, // | <a href="${gitUrl}">Git diff</a>`,
+    '<h3>Target records</h3>',
+    '<ul>',
+    ...test.target.relevant
+      .map((bibid) => `<li><a href="https://www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a></li>`),
+    '</ul>',
+    '<h3>App versions</h3>',
+    reportHtmlForTestChart(test),
+    '<ul>',
+    ...test.results.map((result, ind) => reportHtmlForTestResult(test, result, ind)),
+    '</ul>'
+  ].join('\n')
+}
+
+const reportHtmlForTestChart = (test) => {
+  const xs = Object.keys(test.results).map((ind) => `V${ind}`)
+  const ys = test.results.map((result) => result.metric_score)
+
+  return [
+    '<pre class="mermaid"">',
+    '---',
+    'config:',
+    '    xyChart:',
+    '        width: 900',
+    '        height: 150',
+    '        yAxis:',
+    '            showLabel: false',
+    '---',
+    'xychart-beta',
+    `  x-axis [${xs.join(', ')}]`,
+    '  y-axis "Performance" 0 --> 1',
+    `  line [${ys.join(', ')}]`,
+    `  bar [${ys.join(', ')}]`,
+    '</pre>'
+  ].join('\n')
+}
+
+const reportHtmlForTestResult = (test, result, ind) => {
+  const detail = result.details.report.metric_details[test.target.metric]
+  const desc = `Found ${detail.relevant_docs_retrieved} of ${test.target.relevant.length}` +
+    ': ' +
+    result.details.report.hits
+      .filter((hit) => hit.rating)
+      .map((hit) => hit.hit._id)
+      .sort((i1, i2) => i1 < i2 ? -1 : 1)
+      .map((bibid) => `<a href="https://www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a>`)
+      .join(', ')
+  let changeUrl = false
+  if (ind > 0) {
+    const previousCommit = test.results[ind - 1].commit
+    changeUrl = `https://github.com/NYPL/discovery-api/compare/${previousCommit}...${result.commit}`
+  }
+  const queryId = `query-${test.id}-${ind}`
+  return [
+    '<li>',
+    `<textarea id="${queryId}">${JSON.stringify(test.query, null, 2)}</textarea>`,
+    changeUrl ? `<a href="${changeUrl}" target="_blank">` : '',
+    `V${ind}`,
+    changeUrl ? '</a>' : '',
+    // FIXME: This isn't ready for prime time:
+    // ` (<a href="javascript:void(copyQueryToClipboard('${queryId}'))" title="Copy query to clipboard" class="copy-to-clipboard">ES query</a>) `,
+    ` (${result.description}):`,
+    ` | <em>score ${result.metric_score.toFixed(2)}</em>`,
+    `<ul><li>${desc}</li></ul></li>`
+  ].join('')
 }
 
 /**
@@ -351,7 +410,7 @@ const run = async () => {
     manifest = require('../data/rank-evaluation-run-manifest.json')
 
   // Run rank eval for current code:
-  } else {
+  } else if (!argv.skipRun) {
     manifest = require('../data/rank-evaluation-run-manifest.json')
 
     // Run rank-eval for current code for all target queries:
@@ -371,7 +430,7 @@ const run = async () => {
   }
 
   // Rebuild report (out.html):
-  buildFullReport(manifest)
+  buildFullReport(manifest || require('../data/rank-evaluation-run-manifest.json'))
 
   // If --open flag used, open report:
   if (argv.open) {
