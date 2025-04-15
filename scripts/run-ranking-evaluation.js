@@ -5,19 +5,22 @@
 * relevancy performance over time.
 *
 * Usage:
-*   nvm use; ENV=qa node scripts/run-ranking-evaluation.js; pbcopy < out.csv
+*   To build and view a report using the currently checked out code:
+*     node scripts/run-ranking-evaluation.js --open
 *
-*   .. Then, paste the row into the next position in this spreadsheet:
-*   https://docs.google.com/spreadsheets/d/12uDDxi3bInneZwmUQwEiYYkHheNkqW0WT5jxWvix4BE/edit?pli=1&gid=1424571383#gid=1424571383
+*   To register the current commit in the versioned manifest file, indicating
+*   it's a significant checkpoint and should appear in future reports:
+*     node scripts/run-ranking-evaluation.js --add
 *
-*   After pasting, copy col C from the previous row into the newly pasted row
-*   (because the forumla uses relative references).
-*
+*   To re-run all registered commits against the current target queries (i.e. when target queries change):
+*     node scripts/run-ranking-evaluation.js --rebuildAll
 */
 const fs = require('fs')
 const YAML = require('yaml')
 const { fromIni } = require('@aws-sdk/credential-providers')
-const { stringify } = require('csv-stringify/sync')
+const dotenv = require('dotenv')
+const { parse: csvParse } = require('csv-parse/sync')
+const { execSync } = require('child_process')
 
 const { setCredentials: setKmsCredentials } = require('../lib/kms-helper')
 const { loadConfig } = require('../lib/load-config')
@@ -47,10 +50,12 @@ const argv = require('minimist')(process.argv.slice(2), {
     profile: 'nypl-digital-dev',
     envfile: './config/qa.env',
     outfile: 'out.csv',
-    verbose: false
+    verbose: false,
+    rebuildAll: false,
+    description: '[Current commit]'
   },
   string: ['rows'],
-  boolean: ['outputHeader', 'verbose']
+  boolean: ['outputHeader', 'verbose', 'rebuildAll', 'skipRun']
 })
 
 require('dotenv').config({ path: argv.envfile || '.env' })
@@ -67,7 +72,7 @@ const rankEvaluationCall = (target) => {
     keyword: 'all',
     'journal title': 'title'
   }[target.scope] || target.scope
-  const query = resourcesPriv.buildElasticQuery({ q: target.search, search_scope: searchScope })
+  const query = buildEsQueryFn({ q: target.search, search_scope: searchScope })
   if (target.scope === 'journal title') {
     query.bool.filter = [{ term: { 'issuance.id': 'urn:biblevel:s' } }]
   }
@@ -128,11 +133,254 @@ const runTargets = async (targets, index = 0, responses = []) => {
 }
 
 /**
+* Record run in manifest for future reports:
+**/
+const recordRun = (run, addToCommitsFile = false) => {
+  console.log(`Saving ${run.commit} (${run.description}) to manifest`)
+
+  const manifestPath = './data/rank-evaluation-run-manifest.json'
+  const runManifestRaw = fs.existsSync(manifestPath)
+    ? fs.readFileSync(manifestPath)
+    : '[]'
+  const runManifest = JSON.parse(runManifestRaw)
+
+  const exists = runManifest
+    .find((run) => run.commit === currentCommit())
+  if (!exists) {
+    runManifest.push(run)
+
+    // Save run in updated manifest:
+    fs.writeFileSync(manifestPath, JSON.stringify(runManifest, null, 2))
+
+    // Register this commit:
+    if (addToCommitsFile) {
+      fs.appendFileSync('./data/rank-evaluation-run-commits.csv', `${run.commit},"${run.description}"`)
+    }
+  } else {
+    console.log(`Manifest already exists for ${run.commit}`)
+  }
+}
+
+const _priv = {}
+let buildEsQueryFn = null
+require('../lib/resources')({}, _priv)
+buildEsQueryFn = _priv.buildElasticQuery
+
+const runTargetsOnCommits = async (targets, commits, index = 0) => {
+  const commit = commits[index]
+
+  console.log('___________________________________________________________________')
+  console.log(`${index + 1} of ${commits.length}: ${commit.commit} (${commit.description})`)
+
+  const baseDir = '/tmp/discovery-api'
+
+  let cmds = []
+  if (!fs.existsSync(baseDir)) {
+    cmds.push(`git clone git@github.com:NYPL/discovery-api.git ${baseDir}`)
+  }
+  console.log(`Checking out ${commit.commit}`)
+  cmds = cmds.concat([
+    `cd ${baseDir}; git checkout ${commit.commit}`,
+    `cd ${baseDir}; npm i`
+  ])
+  cmds.forEach((cmd) => {
+    console.log(`Calling: ${cmd}`)
+    execSync(cmd)
+  })
+
+  // Clear require cache:
+  Object.keys(require.cache).forEach((key) => { delete require.cache[key] })
+
+  dotenv.config({ path: `${baseDir}/config/qa.env`, override: true })
+  // Override oldest qa config:
+  if (index === 0) {
+    process.env.RESOURCES_INDEX = 'resources-2018-04-09'
+  }
+
+  const _priv = {}
+  require(`${baseDir}/lib/resources`)({}, _priv)
+  buildEsQueryFn = _priv.buildElasticQuery
+
+  console.log('Running targets...')
+  const responses = await runTargets(targets)
+  recordRun({
+    date: new Date().toISOString(),
+    commit: commit.commit,
+    description: commit.description,
+    responses
+  })
+
+  if (commits.length > index + 1) {
+    return runTargetsOnCommits(targets, commits, index + 1)
+  }
+}
+
+/**
+* Given the data in the rank-evaluation-run-manifest
+* builds a HTML report showing evaluations over time.
+**/
+const buildFullReport = (manifest) => {
+  // Take the array of runs and turn it into an array of "tests" (representing a
+  // single search target), collecting results over time
+  const tests = manifest.reduce((tests, run) => {
+    run.responses.forEach(({ target, query, response }, ind) => {
+      const testId = [target.search, target.scope, target.metric, target.metric_at, ...target.relevant].join('|')
+        .replaceAll(/'/g, '-apos-')
+        .replaceAll(/"/g, '-quot-')
+        .replaceAll(/ /g, '_')
+      if (!tests.find((t) => t.id === testId)) {
+        tests.push({
+          id: testId,
+          target,
+          query,
+          results: []
+        })
+      }
+      const test = tests.find((t) => t.id === testId)
+      test.results.push(Object.assign({}, response, { commit: run.commit, description: run.description }))
+    })
+    return tests
+  }, [])
+
+  const html = reportHtml(tests)
+  fs.writeFileSync('./out.html', html)
+}
+
+const reportHtml = (tests) => {
+  const mermaidOptions = {
+    theme: 'base',
+    themeVariables: {
+      xyChart: {
+        plotColorPalette: '#006166,#00838a'
+      }
+    }
+  }
+  return [
+    '<!doctype html> <html lang="en">',
+    '<head><style type="text/css">',
+    '  body { font-family: sans-serif; }',
+    '  textarea { display:inline-block; height:1px !important; width:1px !important; opacity:0 }',
+    '  a.copy-to-clipboard::before { content: "\\01F4CB "; }',
+    '  a.copy-to-clipboard:active::before { content: "\\2705 "; }',
+    '</style>',
+    '<script type="text/javascript">',
+    `
+    function copyQueryToClipboard (queryId) {
+        const textarea = document.getElementById(queryId)
+        textarea.select()
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        } catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return prompt("Copy to clipboard: Ctrl+C, Enter", text);
+        }
+    }
+    `,
+    '</script>',
+    '</head>',
+    '<body>',
+    '<h1>RC Search Targets Over Time</h1>',
+    ...tests.map(reportHtmlForTest),
+    '<script type="module">',
+    'import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"',
+    'mermaid.initialize(',
+    JSON.stringify(mermaidOptions),
+    ')',
+    '</script>',
+    '</body></html>'
+  ]
+    .join('\n')
+}
+
+const reportHtmlForTest = (test, testIndex) => {
+  const title = `${test.target.scope} "${test.target.search}": ${test.target.metric}@${test.target.metric_at}`
+
+  const searchScope = {
+    keyword: 'all',
+    'journal title': 'journal_title'
+  }[test.target.scope] || test.target.scope
+  const qaUrl = `https://qa-www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
+  const prodUrl = `https://www.nypl.org/research/research-catalog/search?q=${test.target.search}&search_scope=${searchScope}`
+
+  return [
+    `<h2>${testIndex + 1}. ${title}</h2>`,
+    test.target.notes ? `<p>${test.target.notes}</p>` : '',
+    `Search: <a href="${qaUrl}" target="_blank">QA</a> | <a href="${prodUrl}" target="_blank">Prod</a>`, // | <a href="${gitUrl}">Git diff</a>`,
+    '<h3>Target records</h3>',
+    '<ul>',
+    ...test.target.relevant
+      .map((bibid) => `<li><a href="https://www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a></li>`),
+    '</ul>',
+    '<h3>App versions</h3>',
+    reportHtmlForTestChart(test),
+    '<ul>',
+    ...test.results.map((result, ind) => reportHtmlForTestResult(test, result, ind)),
+    '</ul>'
+  ].join('\n')
+}
+
+const reportHtmlForTestChart = (test) => {
+  const xs = Object.keys(test.results).map((ind) => `V${ind}`)
+  const ys = test.results.map((result) => result.metric_score)
+
+  return [
+    '<pre class="mermaid"">',
+    '---',
+    'config:',
+    '    xyChart:',
+    '        width: 900',
+    '        height: 150',
+    '        yAxis:',
+    '            showLabel: false',
+    '---',
+    'xychart-beta',
+    `  x-axis [${xs.join(', ')}]`,
+    '  y-axis "Performance" 0 --> 1',
+    `  line [${ys.join(', ')}]`,
+    `  bar [${ys.join(', ')}]`,
+    '</pre>'
+  ].join('\n')
+}
+
+const reportHtmlForTestResult = (test, result, ind) => {
+  const detail = result.details.report.metric_details[test.target.metric]
+  const desc = `Found ${detail.relevant_docs_retrieved} of ${test.target.relevant.length}` +
+    ': ' +
+    result.details.report.hits
+      .filter((hit) => hit.rating)
+      .map((hit) => hit.hit._id)
+      .sort((i1, i2) => i1 < i2 ? -1 : 1)
+      .map((bibid) => `<a href="https://www.nypl.org/research/research-catalog/bib/${bibid}">${bibid}</a>`)
+      .join(', ')
+  let changeUrl = false
+  if (ind > 0) {
+    const previousCommit = test.results[ind - 1].commit
+    changeUrl = `https://github.com/NYPL/discovery-api/compare/${previousCommit}...${result.commit}`
+  }
+  const queryId = `query-${test.id}-${ind}`
+  return [
+    '<li>',
+    `<textarea id="${queryId}">${JSON.stringify(test.query, null, 2)}</textarea>`,
+    changeUrl ? `<a href="${changeUrl}" target="_blank">` : '',
+    `V${ind}`,
+    changeUrl ? '</a>' : '',
+    // FIXME: This isn't ready for prime time:
+    // ` (<a href="javascript:void(copyQueryToClipboard('${queryId}'))" title="Copy query to clipboard" class="copy-to-clipboard">ES query</a>) `,
+    ` (${result.description}):`,
+    ` | <em>score ${result.metric_score.toFixed(2)}</em>`,
+    `<ul><li>${desc}</li></ul></li>`
+  ].join('')
+}
+
+/**
 * Main function. Based on argv options, runs app specified rank-eval queries and reports results.
 **/
 const run = async () => {
+  // Use production config, unless otherwise specified:
+  process.env.ENV = process.env.ENV || 'production'
   await loadConfig()
 
+  // Load search targets:
   const content = fs.readFileSync(argv.input, 'utf8')
   let targets = YAML.parseAllDocuments(content)
     .map((t) => t.toJS())
@@ -146,56 +394,47 @@ const run = async () => {
     targets = targets.filter((_, i) => rows.includes(i))
   }
 
-  const responses = await runTargets(targets)
+  let manifest
 
-  if (argv.verbose) {
-    responses.forEach(({ target, query, response }) => {
-      console.info('_________________________________________________________________')
+  // Rebuild all manifests:
+  if (argv.rebuildAll) {
+    fs.writeFileSync('./data/rank-evaluation-run-manifest.json', '[]')
 
-      const result = {
-        score: (response.body || response).details.report.metric_score
-      }
-
-      console.info(`Result: of ${target.metric}@${target.metric_at} test of "${target.search}" ${target.scope} query: ${result.score}`)
+    const raw = fs.readFileSync('./data/rank-evaluation-run-commits.csv', 'utf8')
+    const commits = csvParse(raw, {
+      columns: true,
+      skip_empty_lines: true
     })
+
+    await runTargetsOnCommits(targets, commits)
+    manifest = require('../data/rank-evaluation-run-manifest.json')
+
+  // Run rank eval for current code:
+  } else if (!argv.skipRun) {
+    manifest = require('../data/rank-evaluation-run-manifest.json')
+
+    // Run rank-eval for current code for all target queries:
+    const responses = await runTargets(targets)
+    const currentRun = {
+      date: new Date().toISOString(),
+      commit: currentCommit(),
+      description: argv.description,
+      responses
+    }
+    manifest.push(currentRun)
+
+    // Save run permanently into manifest?
+    if (argv.add) {
+      recordRun(currentRun, true)
+    }
   }
 
-  const asCsv = []
+  // Rebuild report (out.html):
+  buildFullReport(manifest || require('../data/rank-evaluation-run-manifest.json'))
 
-  // Optionally add header:
-  if (argv.outputHeader) {
-    asCsv.push(
-      ['Date', 'Commit', 'Changes'].concat(
-        targets.map((target, index) => {
-          return `${index}: ${target.metric}@${target.metric_at} test of "${target.search}" ${target.scope}`
-        })
-      )
-    )
-  }
-
-  const date = new Date().toISOString()
-  const commit = currentCommit()
-  asCsv.push(
-    [
-      date,
-      commit,
-      // Need to manually copy the formula from another row because the
-      // relative references aren't respsected when pasting a whole row in:
-      ''
-    ].concat(
-      responses.map(({ response }) => {
-        return (response.body || response).details.report.metric_score
-      })
-    )
-  )
-
-  const rows = stringify(asCsv, { delimiter: '\t' })
-  fs.writeFileSync(argv.outfile, rows)
-
-  console.info(rows)
-
-  if (argv.verbose) {
-    console.info(`Wrote results to ${argv.outfile}`)
+  // If --open flag used, open report:
+  if (argv.open) {
+    execSync('open out.html')
   }
 }
 
