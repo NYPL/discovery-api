@@ -14,6 +14,9 @@
 *
 *   To re-run all registered commits against the current target queries (i.e. when target queries change):
 *     node scripts/run-ranking-evaluation.js --rebuildAll
+*
+*   To just rebuild the report from existing manifest (and open it):
+*     node scripts/run-ranking-evaluation.js --skipRun --show
 */
 const fs = require('fs')
 const YAML = require('yaml')
@@ -42,8 +45,6 @@ require('../lib/resources')({}, resourcesPriv)
 
 const argv = require('minimist')(process.argv.slice(2), {
   default: {
-    offset: 0,
-    limit: Infinity,
     rows: null,
     outputHeader: false,
     input: './data/ES-ranking-targets.yaml',
@@ -51,8 +52,7 @@ const argv = require('minimist')(process.argv.slice(2), {
     envfile: './config/qa.env',
     outfile: 'out.csv',
     verbose: false,
-    rebuildAll: false,
-    description: '[Current commit]'
+    rebuildAll: false
   },
   string: ['rows'],
   boolean: ['outputHeader', 'verbose', 'rebuildAll', 'skipRun']
@@ -122,12 +122,15 @@ const runTargets = async (targets, index = 0, responses = []) => {
   const client = await esClient()
   const translatedQuery = v8Client ? query : { body: query }
   const payload = Object.assign({}, translatedQuery, { index: process.env.RESOURCES_INDEX })
-  const response = await await client.rankEval(payload)
+  const start = new Date()
+  const response = await client.rankEval(payload)
+  const elapsed = (new Date()) - start
 
   responses.push({
     response,
     target,
-    query
+    query,
+    elapsed
   })
   return runTargets(targets, index + 1, responses)
 }
@@ -157,14 +160,18 @@ const recordRun = (run, addToCommitsFile = false) => {
       fs.appendFileSync('./data/rank-evaluation-run-commits.csv', `${run.commit},"${run.description}"`)
     }
   } else {
-    console.log(`Manifest already exists for ${run.commit}`)
+    console.info(`Manifest already exists for ${run.commit}`)
   }
 }
 
-const _priv = {}
 let buildEsQueryFn = null
-require('../lib/resources')({}, _priv)
-buildEsQueryFn = _priv.buildElasticQuery
+
+const reloadbuildEsQueryFunction = (path) => {
+  console.info(`Updating ES query building function from ${path}`)
+  const _priv = {}
+  require(path)({}, _priv)
+  buildEsQueryFn = _priv.buildElasticQuery
+}
 
 const runTargetsOnCommits = async (targets, commits, index = 0) => {
   const commit = commits[index]
@@ -172,7 +179,7 @@ const runTargetsOnCommits = async (targets, commits, index = 0) => {
   console.log('___________________________________________________________________')
   console.log(`${index + 1} of ${commits.length}: ${commit.commit} (${commit.description})`)
 
-  const baseDir = '/tmp/discovery-api'
+  const baseDir = `/tmp/discovery-api-${index}`
 
   let cmds = []
   if (!fs.existsSync(baseDir)) {
@@ -184,7 +191,6 @@ const runTargetsOnCommits = async (targets, commits, index = 0) => {
     `cd ${baseDir}; npm i`
   ])
   cmds.forEach((cmd) => {
-    console.log(`Calling: ${cmd}`)
     execSync(cmd)
   })
 
@@ -197,11 +203,8 @@ const runTargetsOnCommits = async (targets, commits, index = 0) => {
     process.env.RESOURCES_INDEX = 'resources-2018-04-09'
   }
 
-  const _priv = {}
-  require(`${baseDir}/lib/resources`)({}, _priv)
-  buildEsQueryFn = _priv.buildElasticQuery
+  reloadbuildEsQueryFunction(`${baseDir}/lib/resources`)
 
-  console.log('Running targets...')
   const responses = await runTargets(targets)
   recordRun({
     date: new Date().toISOString(),
@@ -223,7 +226,7 @@ const buildFullReport = (manifest) => {
   // Take the array of runs and turn it into an array of "tests" (representing a
   // single search target), collecting results over time
   const tests = manifest.reduce((tests, run) => {
-    run.responses.forEach(({ target, query, response }, ind) => {
+    run.responses.forEach(({ target, query, response, elapsed }, ind) => {
       const testId = [target.search, target.scope, target.metric, target.metric_at, ...target.relevant].join('|')
         .replaceAll(/'/g, '-apos-')
         .replaceAll(/"/g, '-quot-')
@@ -237,7 +240,7 @@ const buildFullReport = (manifest) => {
         })
       }
       const test = tests.find((t) => t.id === testId)
-      test.results.push(Object.assign({}, response, { commit: run.commit, description: run.description }))
+      test.results.push(Object.assign({}, response, { commit: run.commit, description: run.description, elapsed }))
     })
     return tests
   }, [])
@@ -247,11 +250,15 @@ const buildFullReport = (manifest) => {
 }
 
 const reportHtml = (tests) => {
+  const colors = {
+    red: '#920711',
+    blue: '#00838a'
+  }
   const mermaidOptions = {
     theme: 'base',
     themeVariables: {
       xyChart: {
-        plotColorPalette: '#006166,#00838a'
+        plotColorPalette: Object.values(colors).join(',')
       }
     }
   }
@@ -262,6 +269,9 @@ const reportHtml = (tests) => {
     '  textarea { display:inline-block; height:1px !important; width:1px !important; opacity:0 }',
     '  a.copy-to-clipboard::before { content: "\\01F4CB "; }',
     '  a.copy-to-clipboard:active::before { content: "\\2705 "; }',
+    '  span.score, span.elapsed { display: inline-block; color: white; padding: 2px 7px; border-radius: 5px;, font-size: 0.85em; }',
+    `  span.score { background-color: ${colors.blue}; }`,
+    `  span.elapsed { background-color: ${colors.red}; }`,
     '</style>',
     '<script type="text/javascript">',
     `
@@ -280,6 +290,9 @@ const reportHtml = (tests) => {
     '</head>',
     '<body>',
     '<h1>RC Search Targets Over Time</h1>',
+    '<h2>0. Overall</h2>',
+    '<p>This shows average performance over all queries for each app version.',
+    reportHtmlForOverall(tests),
     ...tests.map(reportHtmlForTest),
     '<script type="module">',
     'import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"',
@@ -290,6 +303,53 @@ const reportHtml = (tests) => {
     '</body></html>'
   ]
     .join('\n')
+}
+
+const reportHtmlForOverall = (tests) => {
+  // Get collect scores for each run:
+  const scoresByRun = tests.reduce((all, test) => {
+    test.results.forEach((result, resultInd) => {
+      if (!all[resultInd]) all[resultInd] = { scores: [], elapsed: [] }
+      all[resultInd].description = result.description
+      all[resultInd].scores.push(result.metric_score)
+      all[resultInd].elapsed.push(result.elapsed)
+    })
+    return all
+  }, {})
+
+  Object.values(scoresByRun).forEach((run) => {
+    run.averageScore = run.scores.reduce((sum, score) => sum + score, 0) / run.scores.length
+    run.averageEllapsed = run.elapsed.reduce((sum, elapsed) => sum + elapsed, 0) / run.elapsed.length
+  })
+
+  const averageScores = Object.values(scoresByRun).map((score) => score.averageScore)
+
+  let averageEllapsed = Object.values(scoresByRun).map((score) => score.averageEllapsed)
+  const maxEllapsed = max(averageEllapsed)
+  averageEllapsed = averageEllapsed.map((avg) => avg / maxEllapsed)
+
+  const changeUrl = false
+  return [
+    chartHtmlForData(averageEllapsed, averageScores),
+    '<h3>App versions</h3>',
+    '<ul>',
+    Object.values(scoresByRun).map((scores, ind) => {
+      return [
+        '<li>',
+        changeUrl ? `<a href="${changeUrl}" target="_blank">` : '',
+        `V${ind}`,
+        changeUrl ? '</a>' : '',
+        ` (${scores.description}):`,
+        ` | <span class="score">average score ${scores.averageScore.toFixed(2)}</span>`,
+        ` | <span class="elapsed">average ${scores.averageEllapsed.toFixed(0)}ms elapsed</span>`
+      ].join('')
+    }),
+    '</ul>'
+  ].join('\n')
+}
+
+const max = (values) => {
+  return values.reduce((max, v) => Math.max(max, v), 0)
 }
 
 const reportHtmlForTest = (test, testIndex) => {
@@ -320,8 +380,16 @@ const reportHtmlForTest = (test, testIndex) => {
 }
 
 const reportHtmlForTestChart = (test) => {
-  const xs = Object.keys(test.results).map((ind) => `V${ind}`)
-  const ys = test.results.map((result) => result.metric_score)
+  const performanceYs = test.results.map((result) => result.metric_score)
+
+  const maxLatency = test.results.reduce((max, result) => Math.max(max, result.elapsed), 0)
+  const latencyYs = test.results.map((result) => result.elapsed / maxLatency)
+
+  return chartHtmlForData(latencyYs, performanceYs)
+}
+
+const chartHtmlForData = (dimension1, dimension2) => {
+  const xs = Object.keys(dimension1).map((ind) => `V${ind}`)
 
   return [
     '<pre class="mermaid"">',
@@ -336,8 +404,8 @@ const reportHtmlForTestChart = (test) => {
     'xychart-beta',
     `  x-axis [${xs.join(', ')}]`,
     '  y-axis "Performance" 0 --> 1',
-    `  line [${ys.join(', ')}]`,
-    `  bar [${ys.join(', ')}]`,
+    `  line [${dimension1.join(', ')}]`,
+    `  bar [${dimension2.join(', ')}]`,
     '</pre>'
   ].join('\n')
 }
@@ -367,7 +435,8 @@ const reportHtmlForTestResult = (test, result, ind) => {
     // FIXME: This isn't ready for prime time:
     // ` (<a href="javascript:void(copyQueryToClipboard('${queryId}'))" title="Copy query to clipboard" class="copy-to-clipboard">ES query</a>) `,
     ` (${result.description}):`,
-    ` | <em>score ${result.metric_score.toFixed(2)}</em>`,
+    ` | <span class="score">score ${result.metric_score.toFixed(2)}</span>`,
+    ` | <span class="elapsed">${result.elapsed}ms elapsed</span>`,
     `<ul><li>${desc}</li></ul></li>`
   ].join('')
 }
@@ -375,7 +444,7 @@ const reportHtmlForTestResult = (test, result, ind) => {
 /**
 * Main function. Based on argv options, runs app specified rank-eval queries and reports results.
 **/
-const run = async () => {
+const run = async (runCount = 0) => {
   // Use production config, unless otherwise specified:
   process.env.ENV = process.env.ENV || 'production'
   await loadConfig()
@@ -408,25 +477,41 @@ const run = async () => {
 
     await runTargetsOnCommits(targets, commits)
     manifest = require('../data/rank-evaluation-run-manifest.json')
+  }
 
   // Run rank eval for current code:
-  } else if (!argv.skipRun) {
+  if (!argv.skipRun) {
     manifest = require('../data/rank-evaluation-run-manifest.json')
+
+    // If we intend to save the current run, require a description:
+    if (argv.add && !argv.description) {
+      console.log('Specify --description DESC to give the commit a label in the manifest')
+      process.exit()
+    }
+
+    reloadbuildEsQueryFunction('../lib/resources')
 
     // Run rank-eval for current code for all target queries:
     const responses = await runTargets(targets)
     const currentRun = {
       date: new Date().toISOString(),
       commit: currentCommit(),
-      description: argv.description,
+      description: argv.description || '[Current commit]',
       responses
     }
     manifest.push(currentRun)
 
     // Save run permanently into manifest?
-    if (argv.add) {
+    if (argv.add && !(argv.rebuildTwice && runCount < 1)) {
       recordRun(currentRun, true)
     }
+  }
+
+  if (argv.rebuildTwice && runCount < 1) {
+    console.log('---------------------------------------------------------------')
+    console.log('Re-running everything')
+    console.log('---------------------------------------------------------------')
+    return run(runCount + 1)
   }
 
   // Rebuild report (out.html):
