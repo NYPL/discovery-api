@@ -21,7 +21,7 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     needs: tests
-    if: github.ref == 'refs/heads/qa'
+    if: github.ref == 'refs/heads/NOREF-aggs-with-filter-exclusion'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
