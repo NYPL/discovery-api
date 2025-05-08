@@ -348,6 +348,36 @@ relevant:
   - "b21586756"
   - "cb202556"
 reason: "initial target"
-
-
-
+---
+search: "\u0022Designation List\u0022"
+scope: "keyword"
+metric: "recall"
+metric_at: 100
+relevant:
+  - "b14300724"
+  - "b14991348"
+  - "b15346206"
+reason: "initial target"
+notes:
+ - Many relevant results for "Designation List", but let's assert we get a few highly rated ones
+---
+search: "Designation List"
+scope: "keyword"
+metric: "recall"
+metric_at: 100
+relevant:
+  - "b14300724"
+  - "b14991348"
+  - "b15346206"
+reason: "initial target"
+notes:
+ - As above, many relevant results for Designation List (unquoted)
+---
+search: Goldschmidt haggadah
+scope: "keyword"
+metric: "recall"
+metric_at: 20
+relevant:
+ - "b16341875"
+notes:
+ - We expect b16341875 to appear somewhere in the ~10 results

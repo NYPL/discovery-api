@@ -120,7 +120,7 @@ describe('ElasticQueryBuilder', () => {
 
       // Expect a multi_match on term:
       expect(inst.query.toJson()).to.nested
-        .include({ 'bool.must[0].multi_match.type': 'most_fields' })
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
         .include({ 'bool.must[0].multi_match.query': 'toast' })
         .include({ 'bool.must[0].multi_match.fields[0]': 'title^5' })
 
@@ -150,7 +150,7 @@ describe('ElasticQueryBuilder', () => {
 
       // Expect a multi_match on term:
       expect(inst.query.toJson()).to.nested
-        .include({ 'bool.must[0].multi_match.type': 'most_fields' })
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
         .include({ 'bool.must[0].multi_match.query': 'toast' })
         .include({ 'bool.must[0].multi_match.fields[0]': 'creatorLiteral^4' })
 
@@ -170,7 +170,7 @@ describe('ElasticQueryBuilder', () => {
 
       // Expect a multi_match on term:
       expect(inst.query.toJson()).to.nested
-        .include({ 'bool.must[0].multi_match.type': 'most_fields' })
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
         .include({ 'bool.must[0].multi_match.query': 'toast' })
         .include({ 'bool.must[0].multi_match.fields[0]': 'title^5' })
 
@@ -188,7 +188,7 @@ describe('ElasticQueryBuilder', () => {
 
       // Expect a multi_match on term:
       expect(inst.query.toJson()).to.nested
-        .include({ 'bool.must[0].multi_match.type': 'most_fields' })
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
         .include({ 'bool.must[0].multi_match.query': 'toast' })
         .include({ 'bool.must[0].multi_match.fields[0]': 'subjectLiteral^2' })
 
