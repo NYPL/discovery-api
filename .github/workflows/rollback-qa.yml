@@ -6,6 +6,9 @@ on:
 jobs:
   # Rollback job in case of failure (Revert qa to the previous task definition)
   rollback:
+    permissions:
+        id-token: write
+        contents: read
     name: Rollback to Previous Version
     runs-on: ubuntu-latest
     steps:
