@@ -34,7 +34,7 @@ jobs:
       - name: Pull and tag previous image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: sfr-front-end
+          ECR_REPOSITORY: discovery-api
         run: |
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:qa-previous
           docker tag $ECR_REGISTRY/$ECR_REPOSITORY:qa-previous $ECR_REGISTRY/$ECR_REPOSITORY:qa-latest
