@@ -270,7 +270,7 @@
           "discovery"
         ],
         "summary": "Resource Search Aggregations",
-        "description": "Fetch resources search aggregations.",
+        "description": "Fetch resources search aggregations for a given query. Note that aggregations are not \"self-filtered\" in order to aid conjunctive search. For example, the subjectLiteral aggregation is built without any subjectLiteral filters.",
         "parameters": [
           {
             "name": "q",
