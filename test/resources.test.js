@@ -172,6 +172,146 @@ describe('Resources query', function () {
       const body = resourcesPrivMethods.buildElasticBody(params)
       expect(body).to.nested.include({ 'query.bool.must[0].term.idOclc': '1033548057' })
     })
+
+    it('does not mutate params', () => {
+      const params = resourcesPrivMethods.parseSearchParams({
+        filters: {
+          subjectLiteral: ['S1'],
+          contributorLiteral: ['one', 'two']
+        }
+      })
+      const paramsSnapshot = JSON.stringify(params)
+
+      resourcesPrivMethods.buildElasticBody(params)
+      resourcesPrivMethods.buildElasticBody(params)
+      resourcesPrivMethods.buildElasticBody(params)
+
+      expect(JSON.stringify(params)).to.equal(paramsSnapshot)
+    })
+  })
+
+  describe('aggregationQueriesForParams', () => {
+    it('produces correct query when no filters', () => {
+      const params = resourcesPrivMethods.parseSearchParams({
+        q: 'toast'
+      })
+      const queries = resourcesPrivMethods.aggregationQueriesForParams(params)
+      expect(queries).to.be.a('array')
+      expect(queries).to.have.lengthOf(1)
+    })
+
+    it('produces correct query when one filter', () => {
+      const params = resourcesPrivMethods.parseSearchParams({
+        q: 'toast',
+        filters: {
+          subjectLiteral: ['S1']
+        }
+      })
+      const queries = resourcesPrivMethods.aggregationQueriesForParams(params)
+      expect(queries).to.be.a('array')
+      expect(queries).to.have.lengthOf(2)
+
+      // Expect one agg query for all the properties not involved in a filter:
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(9)
+      expect(queries[0].query.bool.filter).to.be.a('array')
+      expect(queries[0]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+
+      // Expect second agg query for subjectLiteral - w/out the filter:
+      expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
+      expect(queries[1]).to.nested.include({ 'aggregations.subjectLiteral.terms.field': 'subjectLiteral.raw' })
+      expect(queries[1].query.bool.filter).to.be.a('undefined')
+    })
+
+    it('produces correct query when two filters', () => {
+      const params = resourcesPrivMethods.parseSearchParams({
+        q: 'toast',
+        filters: {
+          subjectLiteral: ['S1'],
+          contributorLiteral: ['C1', 'C2']
+        }
+      })
+      const queries = resourcesPrivMethods.aggregationQueriesForParams(params)
+      expect(queries).to.be.a('array')
+      expect(queries).to.have.lengthOf(3)
+
+      // Expect first agg query to include all filters:
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(8)
+      expect(queries[0].query.bool.filter).to.be.a('array')
+      // Expect the subjectLiteral filter:
+      expect(queries[0]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      // .. And the contributorLiteral filters:
+      expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[0].bool.should[0].term.contributorLiteral\\.raw': 'C1' })
+      expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[1].bool.should[0].term.contributorLiteral\\.raw': 'C2' })
+
+      // Expect second aggregation for subjectLiteral:
+      expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
+      expect(queries[1]).to.nested.include({ 'aggregations.subjectLiteral.terms.field': 'subjectLiteral.raw' })
+      // Expect this agg to filter on the other active filter, contributorLiteral:
+      expect(queries[1]).to.nested.include({ 'query.bool.filter[0].bool.should[0].bool.should[0].term.contributorLiteral\\.raw': 'C1' })
+      expect(queries[1]).to.nested.include({ 'query.bool.filter[0].bool.should[1].bool.should[0].term.contributorLiteral\\.raw': 'C2' })
+      expect(queries[1].query.bool.filter).to.have.lengthOf(1)
+      expect(queries[1].query.bool.filter[0].bool.should).to.have.lengthOf(2)
+
+      // Expect last aggregation for contributorLiteral:
+      expect(Object.keys(queries[2].aggregations)).to.have.lengthOf(1)
+      expect(queries[2]).to.nested.include({ 'aggregations.contributorLiteral.terms.field': 'contributorLiteral.raw' })
+      // Expect this agg to filter on the other active filter, subjectLiteral:
+      expect(queries[2].query.bool.filter).to.have.lengthOf(1)
+
+      expect(queries[2]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+    })
+  })
+
+  describe('mergeAggregationsResponses', () => {
+    it('merges aggregations', () => {
+      const responses = [
+        {
+          hits: { total: { value: 13, relation: 'eq' }, hits: [] },
+          aggregations: {
+            agg1: {
+              buckets: [
+                { key: 'agg1 value1', doc_count: 10 },
+                { key: 'agg1 value2', doc_count: 9 }
+              ]
+            }
+          }
+        },
+        {
+          hits: { total: { value: 100, relation: 'eq' }, hits: [] },
+          aggregations: {
+            agg2: {
+              buckets: [
+                { key: 'agg2 value1', doc_count: 10 }
+              ]
+            }
+          }
+        },
+        {
+          hits: { total: { value: 1000, relation: 'eq' }, hits: [] },
+          aggregations: {
+            agg3: {
+              buckets: [
+                { key: 'agg3 value1', doc_count: 10 }
+              ]
+            },
+            agg4: {
+              buckets: [
+                { key: 'agg4 value1', doc_count: 10 }
+              ]
+            }
+          }
+        }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.nested.include({
+        'hits.total.value': 1000,
+        'aggregations.agg1.buckets[1].key': 'agg1 value2',
+        'aggregations.agg1.buckets[0].doc_count': 10,
+        'aggregations.agg2.buckets[0].key': 'agg2 value1',
+        'aggregations.agg3.buckets[0].key': 'agg3 value1',
+        'aggregations.agg4.buckets[0].key': 'agg4 value1'
+      })
+    })
   })
 
   describe('annotatedMarc endpoint', () => {
