@@ -6,6 +6,9 @@ on:
 jobs:
   # Rollback job in case of failure (Revert qa to the previous task definition)
   rollback:
+    permissions:
+        id-token: write
+        contents: read
     name: Rollback to Previous Version
     runs-on: ubuntu-latest
     steps:
@@ -19,10 +22,9 @@ jobs:
           cache: npm
 
       - name: Configure AWS credentials from qa account
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
           aws-region: us-east-1
 
       - name: Login to Amazon ECR
@@ -32,7 +34,7 @@ jobs:
       - name: Pull and tag previous image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: sfr-front-end
+          ECR_REPOSITORY: discovery-api
         run: |
           docker pull $ECR_REGISTRY/$ECR_REPOSITORY:qa-previous
           docker tag $ECR_REGISTRY/$ECR_REPOSITORY:qa-previous $ECR_REGISTRY/$ECR_REPOSITORY:qa-latest
