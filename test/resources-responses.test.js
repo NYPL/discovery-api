@@ -671,6 +671,8 @@ describe('Test Resources responses', function () {
         // Establish ALL count:
         let prevTotal = doc.totalResults
 
+        console.log('Chain first prevtotal ', prevTotal)
+
         // Next, add filter on the first date (objects whose start/end date range include 1984)
         nextUrl = `${nextUrl}&filters[dateAfter]=${dates[0]}`
         return request.get(nextUrl, function (err, response, body) {
