@@ -1,0 +1,45 @@
+name: Rollback qa2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  # Rollback job in case of failure (Revert qa to the previous task definition)
+  rollback:
+    permissions:
+        id-token: write
+        contents: read
+    name: Rollback to Previous Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+
+      - name: Configure AWS credentials from qa account
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
+          aws-region: us-east-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Pull and tag previous image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: discovery-api
+        run: |
+          docker pull $ECR_REGISTRY/$ECR_REPOSITORY:qa2-previous
+          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:qa2-previous $ECR_REGISTRY/$ECR_REPOSITORY:qa2-latest
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:qa2-latest
+
+      - name: Force ECS Update
+        run: |
+          aws ecs update-service --cluster discovery-api-qa2 --service discovery-api-qa2 --force-new-deployment
