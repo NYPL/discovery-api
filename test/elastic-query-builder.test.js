@@ -366,8 +366,6 @@ describe('ElasticQueryBuilder', () => {
           }
         })
 
-        console.log('Should: ', JSON.stringify(query.bool.should), null, 2)
-
         expect(query.bool.should[0]).to.deep.equal(
           {
             match_phrase: {
