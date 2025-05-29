@@ -365,7 +365,50 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
-        expect(query.bool.should[0]).to.deep.equal({
+
+        console.log('Should: ', JSON.stringify(query.bool.should), null, 2)
+
+        expect(query.bool.should[0]).to.deep.equal(
+          {
+            match_phrase: {
+              'subjectLiteral.raw': {
+                query: 'toast',
+                boost: 50
+              }
+            }
+          }
+        )
+
+        expect(query.bool.should[1]).to.deep.equal(
+          {
+            match_phrase: {
+              'parallelSubjectLiteral.raw': {
+                query: 'toast',
+                boost: 50
+              }
+            }
+          }
+        )
+
+        expect(query.bool.should[2]).to.deep.equal({
+          prefix: {
+            'subjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
+
+        expect(query.bool.should[3]).to.deep.equal({
+          prefix: {
+            'parallelSubjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
+
+        expect(query.bool.should[4]).to.deep.equal({
           term: {
             'subjectLiteral.raw': {
               value: 'toast',
@@ -373,7 +416,8 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
-        expect(query.bool.should[1]).to.deep.equal({
+
+        expect(query.bool.should[5]).to.deep.equal({
           term: {
             'parallelSubjectLiteral.raw': {
               value: 'toast',
