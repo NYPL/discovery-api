@@ -35,12 +35,12 @@ jobs:
       - name: Log in to ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-      - name: Back up previous image for rollback
-        env:
-          ECR_REPOSITORY: discovery-api
-        run: |
-          MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="qa-latest" --output json | jq --raw-output --join-output '.images[0].imageManifest')
-          aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "qa-previous" --image-manifest "$MANIFEST"
+      # - name: Back up previous image for rollback
+      #   env:
+      #     ECR_REPOSITORY: discovery-api
+      #   run: |
+      #     MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="qa-latest" --output json | jq --raw-output --join-output '.images[0].imageManifest')
+      #     aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "qa-previous" --image-manifest "$MANIFEST"
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
