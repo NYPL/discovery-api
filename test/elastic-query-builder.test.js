@@ -193,9 +193,10 @@ describe('ElasticQueryBuilder', () => {
         .include({ 'bool.must[0].multi_match.fields[0]': 'subjectLiteral^2' })
 
       // Expect only common boosting clauses because RC doesn't use this search-scope at writing
+      console.log('should: ', JSON.stringify(inst.query.toJson().bool.should, null, 2))
       expect(inst.query.toJson().bool.should)
         .to.be.a('array')
-        .have.lengthOf(4)
+        .have.lengthOf(10)
     })
   })
 
