@@ -195,7 +195,7 @@ describe('ElasticQueryBuilder', () => {
       // Expect only common boosting clauses because RC doesn't use this search-scope at writing
       expect(inst.query.toJson().bool.should)
         .to.be.a('array')
-        .have.lengthOf(4)
+        .have.lengthOf(10)
     })
   })
 
@@ -365,7 +365,48 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
-        expect(query.bool.should[0]).to.deep.equal({
+
+        expect(query.bool.should[0]).to.deep.equal(
+          {
+            match_phrase: {
+              'subjectLiteral.raw': {
+                query: 'toast',
+                boost: 50
+              }
+            }
+          }
+        )
+
+        expect(query.bool.should[1]).to.deep.equal(
+          {
+            match_phrase: {
+              'parallelSubjectLiteral.raw': {
+                query: 'toast',
+                boost: 50
+              }
+            }
+          }
+        )
+
+        expect(query.bool.should[2]).to.deep.equal({
+          prefix: {
+            'subjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
+
+        expect(query.bool.should[3]).to.deep.equal({
+          prefix: {
+            'parallelSubjectLiteral.raw': {
+              value: 'toast',
+              boost: 50
+            }
+          }
+        })
+
+        expect(query.bool.should[4]).to.deep.equal({
           term: {
             'subjectLiteral.raw': {
               value: 'toast',
@@ -373,7 +414,8 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
-        expect(query.bool.should[1]).to.deep.equal({
+
+        expect(query.bool.should[5]).to.deep.equal({
           term: {
             'parallelSubjectLiteral.raw': {
               value: 'toast',
