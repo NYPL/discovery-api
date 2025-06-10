@@ -347,8 +347,6 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        console.log('query: ', JSON.stringify(query, null, 2))
-
         expect(query.bool.must[0].bool.should.length).to.equal(2)
         expect(query.bool.must[0].bool.should[0])
         expect(query.bool.must[0].bool.should[0]).to.deep.equal({
