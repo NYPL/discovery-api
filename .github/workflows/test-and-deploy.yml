@@ -41,7 +41,7 @@ jobs:
         run: |
           MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="qa-latest" --output json | jq --raw-output --join-output '.images[0].imageManifest')
           PREVIOUS_MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="qa-previous" --output json | jq --raw-output --join-output '.images[0].imageManifest')
-          if [ "$MANIFEST" != "$PREVIOUS_MANIFEST" ]; then aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "qa-previous" --image-manifest "$MANIFEST"; done
+          if [ "$MANIFEST" != "$PREVIOUS_MANIFEST" ]; then aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "qa-previous" --image-manifest "$MANIFEST"; fi
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -81,7 +81,7 @@ jobs:
         run: |
           MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="qa2-latest" --output json | jq --raw-output --join-output '.images[0].imageManifest')
           PREVIOUS_MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="qa2-previous" --output json | jq --raw-output --join-output '.images[0].imageManifest')
-          if [ "$MANIFEST" != "$PREVIOUS_MANIFEST" ]; then aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "qa2-previous" --image-manifest "$MANIFEST"; done
+          if [ "$MANIFEST" != "$PREVIOUS_MANIFEST" ]; then aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "qa2-previous" --image-manifest "$MANIFEST"; fi
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -123,7 +123,7 @@ jobs:
         run: |
           MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="production-latest" --output json | jq --raw-output --join-output '.images[0].imageManifest')
           PREVIOUS_MANIFEST=$(aws ecr batch-get-image --repository-name $ECR_REPOSITORY --image-ids imageTag="production-previous" --output json | jq --raw-output --join-output '.images[0].imageManifest')
-          if [ "$MANIFEST" != "$PREVIOUS_MANIFEST" ]; then aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "production-previous" --image-manifest "$MANIFEST"; done
+          if [ "$MANIFEST" != "$PREVIOUS_MANIFEST" ]; then aws ecr put-image --repository-name $ECR_REPOSITORY --image-tag "production-previous" --image-manifest "$MANIFEST"; fi
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
