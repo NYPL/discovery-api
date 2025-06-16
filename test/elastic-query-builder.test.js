@@ -195,7 +195,7 @@ describe('ElasticQueryBuilder', () => {
       // Expect only common boosting clauses because RC doesn't use this search-scope at writing
       expect(inst.query.toJson().bool.should)
         .to.be.a('array')
-        .have.lengthOf(4)
+        .have.lengthOf(10)
     })
   })
 
@@ -365,6 +365,7 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
+
         expect(query.bool.should[0]).to.deep.equal({
           term: {
             'subjectLiteral.raw': {
@@ -373,6 +374,7 @@ describe('ElasticQueryBuilder', () => {
             }
           }
         })
+
         expect(query.bool.should[1]).to.deep.equal({
           term: {
             'parallelSubjectLiteral.raw': {
