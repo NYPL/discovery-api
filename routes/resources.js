@@ -63,6 +63,14 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
+  app.get(`/api/v${VER}/discovery/browse`, function (req, res) {
+    const params = req.query
+
+    return app.subjects.browse(params, { baseUrl: app.baseUrl }, req)
+      .then((resp) => respond(res, resp, params))
+      .catch((error) => handleError(res, error, params))
+  })
+
   /*
    * Return items with `deliveryLocation`s matching the supplied barcodes
    *

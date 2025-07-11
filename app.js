@@ -28,6 +28,7 @@ app.init = async () => {
   app.logger = require('./lib/logger')
 
   require('./lib/resources')(app)
+  require('./lib/subjects')(app)
 
   // routes
   require('./routes/resources')(app)
