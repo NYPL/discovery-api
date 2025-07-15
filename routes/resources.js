@@ -63,7 +63,7 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/browse`, function (req, res) {
+  app.get(`/api/v${VER}/discovery/browse/subjects`, function (req, res) {
     const params = req.query
 
     return app.subjects.browse(params, { baseUrl: app.baseUrl }, req)
