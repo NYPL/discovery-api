@@ -73,11 +73,21 @@ describe('ElasticQuerySubjectsBuilder', () => {
 
       const query = inst.query.toJson()
 
-      expect(query.bool.must[0].bool.should.length).to.equal(1)
+      expect(query.bool.must[0].bool.should.length).to.equal(2)
       expect(query.bool.must[0].bool.should[0])
       expect(query.bool.must[0].bool.should[0]).to.deep.equal({
         prefix: {
           'preferredTerm.keyword': {
+            value: 'toast',
+            boost: 1,
+            case_insensitive: true
+          }
+        }
+      })
+
+      expect(query.bool.must[0].bool.should[1]).to.deep.equal({
+        prefix: {
+          'variants.keyword': {
             value: 'toast',
             boost: 1,
             case_insensitive: true
