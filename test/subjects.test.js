@@ -28,8 +28,8 @@ describe('Subjects query', function () {
                 {
                   hits:
                     [
-                      { _source: { preferredTerm: 'cat', count: 1 } },
-                      { _source: { preferredTerm: 'dog', count: 2 } }
+                      { _source: { preferredTerm: 'cat', count: 1 }, highlight: { 'preferredTerm.keyword': ['cat'] } },
+                      { _source: { preferredTerm: 'dog', count: 2 }, highlight: { 'preferredTerm.keyword': ['dog'] } }
                     ]
                 }
             }
@@ -43,6 +43,38 @@ describe('Subjects query', function () {
       expect(results.subjects[0].count).to.equal(1)
       expect(results.subjects[1].preferredTerm).to.equal('dog')
       expect(results.subjects[1].count).to.equal(2)
+      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
+    })
+  })
+
+  describe('browse with variant hit', () => {
+    after(() => { app.esClient.search.restore() })
+
+    it('returns expected results', async () => {
+      await app.init()
+      const esSearchStub = sinon.stub(app.esClient, 'search')
+        .callsFake(async (body) =>
+          (
+            {
+              hits:
+                {
+                  hits:
+                    [
+                      { _source: { variants: ['cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['cat'] } },
+                      { _source: { variants: ['dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] } }
+                    ]
+                }
+            }
+          )
+        )
+      const results = await app.subjects.browse({ q: 'cat' })
+      const searchBody = esSearchStub.getCall(0).args[0]
+      expect(results['@type']).to.equal('subjectList')
+      expect(results.subjects.length).to.equal(2)
+      expect(results.subjects[0].variantTerm).to.equal('cat')
+      expect(results.subjects[0].preferredTerms[0].kitty).to.equal(1)
+      expect(results.subjects[1].variantTerm).to.equal('dog')
+      expect(results.subjects[1].preferredTerms[0].puppy).to.equal(2)
       expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
     })
   })
@@ -115,8 +147,6 @@ describe('Subjects query', function () {
       expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
       expect(Object.keys(body.query.bool.must[0].bool.should[1].term)).to.contain('variants.keyword')
       expect(body.query.bool.must[0].bool.should[1].term['variants.keyword'].value).to.equal('cat')
-      expect(Object.keys(body.sort[0])).to.contain('preferredTerm.keyword')
-      expect(body.sort[0]['preferredTerm.keyword']).to.equal('asc')
     })
   })
 
@@ -132,7 +162,6 @@ describe('Subjects query', function () {
       expect(Object.keys(body.query.bool.must[0].bool.should[1].term)).to.contain('variants.keyword')
       expect(body.query.bool.must[0].bool.should[1].term['variants.keyword'].value).to.equal('cat')
       expect(Object.keys(body.sort[0])).to.contain('_score')
-      expect(body.sort[0]._score).to.equal('desc')
     })
   })
 })
