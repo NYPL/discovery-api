@@ -110,7 +110,7 @@ describe('Resources query', function () {
   })
 
   describe('buildElasticBody', function () {
-    it('uses subjectLiteral_exploded when given a subjectLiteral filter', function () {
+    it('uses subjectLiteral.raw when given a subjectLiteral filter', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
       const body = resourcesPrivMethods.buildElasticBody(params)
       expect(body).to.be.a('object')
@@ -119,7 +119,7 @@ describe('Resources query', function () {
       expect(body.query.bool.filter).to.be.a('array')
       expect(body.query.bool.filter[0]).to.be.a('object')
       expect(body.query.bool.filter[0].term).to.be.a('object')
-      expect(body.query.bool.filter[0].term.subjectLiteral_exploded).to.equal('United States -- History')
+      expect(body.query.bool.filter[0].term['subjectLiteral.raw']).to.equal('United States -- History')
     })
 
     describe('nyplSource filtering', function () {
@@ -214,7 +214,7 @@ describe('Resources query', function () {
       // Expect one agg query for all the properties not involved in a filter:
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(9)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      expect(queries[0]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
 
       // Expect second agg query for subjectLiteral - w/out the filter:
       expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
@@ -238,7 +238,7 @@ describe('Resources query', function () {
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(8)
       expect(queries[0].query.bool.filter).to.be.a('array')
       // Expect the subjectLiteral filter:
-      expect(queries[0]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
       // .. And the contributorLiteral filters:
       expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[0].bool.should[0].term.contributorLiteral\\.raw': 'C1' })
       expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[1].bool.should[0].term.contributorLiteral\\.raw': 'C2' })
@@ -258,7 +258,7 @@ describe('Resources query', function () {
       // Expect this agg to filter on the other active filter, subjectLiteral:
       expect(queries[2].query.bool.filter).to.have.lengthOf(1)
 
-      expect(queries[2]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      expect(queries[2].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
     })
   })
 
