@@ -474,7 +474,7 @@
             "type": "string",
             "enum": [
               "relevance",
-              "preffedTerm",
+              "preferredTerm",
               "count"
             ]
           },
@@ -1035,6 +1035,12 @@
           "enum": [
             "subjectList"
           ]
+        },
+        "page": {
+          "type": "integer"
+        },
+        "perPage": {
+          "type": "integer"
         },
         "subjects": {
           "type": "array",
