@@ -17,7 +17,8 @@ describe('ElasticQuerySubjectsBuilder', () => {
         term: {
           'preferredTerm.keyword': {
             value: 'toast',
-            boost: 1
+            boost: 10,
+            case_insensitive: true
           }
         }
       })
@@ -26,7 +27,8 @@ describe('ElasticQuerySubjectsBuilder', () => {
         term: {
           'variants.keyword': {
             value: 'toast',
-            boost: 1
+            boost: 1,
+            case_insensitive: true
           }
         }
       })
@@ -46,7 +48,8 @@ describe('ElasticQuerySubjectsBuilder', () => {
         wildcard: {
           'preferredTerm.keyword': {
             value: '*toast*',
-            boost: 1
+            boost: 10,
+            case_insensitive: true
           }
         }
       })
@@ -55,7 +58,8 @@ describe('ElasticQuerySubjectsBuilder', () => {
         wildcard: {
           'variants.keyword': {
             value: '*toast*',
-            boost: 1
+            boost: 1,
+            case_insensitive: true
           }
         }
       })
@@ -75,7 +79,8 @@ describe('ElasticQuerySubjectsBuilder', () => {
         prefix: {
           'preferredTerm.keyword': {
             value: 'toast',
-            boost: 1
+            boost: 1,
+            case_insensitive: true
           }
         }
       })
@@ -84,7 +89,8 @@ describe('ElasticQuerySubjectsBuilder', () => {
         prefix: {
           'variants.keyword': {
             value: 'toast',
-            boost: 1
+            boost: 1,
+            case_insensitive: true
           }
         }
       })
