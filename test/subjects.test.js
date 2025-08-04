@@ -39,9 +39,11 @@ describe('Subjects query', function () {
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(results['@type']).to.equal('subjectList')
       expect(results.subjects.length).to.equal(2)
-      expect(results.subjects[0].preferredTerm).to.equal('cat')
+      expect(results.subjects[0].termLabel).to.equal('cat')
+      expect(results.subjects[0]['@type']).to.equal('preferredTerm')
       expect(results.subjects[0].count).to.equal(1)
-      expect(results.subjects[1].preferredTerm).to.equal('dog')
+      expect(results.subjects[1].termLabel).to.equal('dog')
+      expect(results.subjects[1]['@type']).to.equal('preferredTerm')
       expect(results.subjects[1].count).to.equal(2)
       expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
     })
@@ -60,8 +62,8 @@ describe('Subjects query', function () {
                 {
                   hits:
                     [
-                      { _source: { variants: ['cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['cat'] } },
-                      { _source: { variants: ['dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] } }
+                      { _source: { variants: ['cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['Cat'] }, sort: ['cat'] },
+                      { _source: { variants: ['dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['Dog'] }, sort: ['dog'] }
                     ]
                 }
             }
@@ -71,10 +73,14 @@ describe('Subjects query', function () {
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(results['@type']).to.equal('subjectList')
       expect(results.subjects.length).to.equal(2)
-      expect(results.subjects[0].variantTerm).to.equal('cat')
-      expect(results.subjects[0].preferredTerms[0].kitty).to.equal(1)
-      expect(results.subjects[1].variantTerm).to.equal('dog')
-      expect(results.subjects[1].preferredTerms[0].puppy).to.equal(2)
+      expect(results.subjects[0].termLabel).to.equal('Cat')
+      expect(results.subjects[0]['@type']).to.equal('variant')
+      expect(results.subjects[0].preferredTerms[0].label).to.equal('kitty')
+      expect(results.subjects[0].preferredTerms[0].count).to.equal(1)
+      expect(results.subjects[1].termLabel).to.equal('Dog')
+      expect(results.subjects[1]['@type']).to.equal('variant')
+      expect(results.subjects[1].preferredTerms[0].label).to.equal('puppy')
+      expect(results.subjects[1].preferredTerms[0].count).to.equal(2)
       expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
     })
   })
