@@ -432,6 +432,110 @@
         }
       }
     },
+    "/v0.1/discovery/subjects/browse": {
+      "get": {
+        "tags": [
+          "discovery"
+        ],
+        "summary": "List subjects and counts.",
+        "description": "Browse subjects starting by a prefex (can be a whole term or a letter)\n> `/discovery/browse/subjects?search_scope=starts_with&q=M`\n\nLook up exact subjects\n> `/discovery/browse/subjects?q=Manhattan`\n\nOr look up subjects containing a substring\n> `/discovery/browse/subjects?search_scope=has&q=Africa`",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Term to match for a whole-subject, prefix or substring search.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number to return",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "minimum": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of results to return",
+            "required": false,
+            "type": "integer",
+            "default": 50,
+            "maximum": 100,
+            "minimum": 1
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Specify how to order results (relevance, preferredTerm, count)",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "relevance",
+              "preferredTerm",
+              "count"
+            ]
+          },
+          {
+            "name": "sort_direction",
+            "in": "query",
+            "description": "Override the default direction for the current sort (asc, desc). Default depends on the field. (preferredTerm defaults to asc, count defaults to desc, relevance is fixed desc)",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          },
+          {
+            "name": "search_scope",
+            "in": "query",
+            "description": "Specify how to search across the subject index. `has` will search for substrings within a subject term. `starts_with` returns the list of subjects beginning with the query term.",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "has",
+              "starts_with"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An array of subjects",
+            "schema": {
+              "$ref": "#/definitions/SubjectsResponse"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/ResourceError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.querystring.q",
+            "method.request.querystring.search_scope",
+            "method.request.querystring.page",
+            "method.request.querystring.per_page",
+            "method.request.querystring.sort",
+            "method.request.querystring.sort_direction"
+          ]
+        }
+      }
+    },
     "/v0.1/request/deliveryLocationsByBarcode": {
       "get": {
         "summary": "Get items mapped to deliveryLocation(s) by barcode(s)",
@@ -909,6 +1013,82 @@
       }
     },
     "ResourceError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "string"
+        }
+      }
+    },
+    "SubjectsResponse": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "enum": [
+            "subjectList"
+          ]
+        },
+        "page": {
+          "type": "integer"
+        },
+        "perPage": {
+          "type": "integer"
+        },
+        "subjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subject"
+          }
+        }
+      }
+    },
+    "Subject": {
+      "type": "object",
+      "properties": {
+        "preferredTerm": {
+          "type": "string",
+          "description": "The main name of the subject."
+        },
+        "count": {
+          "type": "integer",
+          "description": "How many bibs with this subject are in the index."
+        },
+        "uri": {
+          "type": "string",
+          "description": "Identifier for the authority record corresponding to this subject."
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Alternate names for this subject."
+        },
+        "narrowerTerms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "More specific subjects related to this subject."
+        },
+        "broaderTerms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "More general subjects related to this subject."
+        }
+      }
+    },
+    "SubjectError": {
       "type": "object",
       "properties": {
         "code": {

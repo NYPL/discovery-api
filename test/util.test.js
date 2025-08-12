@@ -119,7 +119,7 @@ describe('Util', function () {
     })
   })
 
-  it('should strip a terminal period from a single subjectLiteral', () => {
+  it('should not strip a terminal period from a single subjectLiteral', () => {
     const incoming = {
       filters: {
         subjectLiteral: 'Cats.'
@@ -131,10 +131,10 @@ describe('Util', function () {
     }
 
     const outgoing = util.parseParams(incoming, spec)
-    expect(outgoing.filters.subjectLiteral).to.equal('Cats')
+    expect(outgoing.filters.subjectLiteral).to.equal('Cats.')
   })
 
-  it('should string a terminal period from each subjectLiteral in an array', () => {
+  it('should not strip a terminal period from each subjectLiteral in an array', () => {
     const incoming = {
       filters: {
         subjectLiteral: ['Cats.', 'Dogs.']
@@ -147,8 +147,8 @@ describe('Util', function () {
 
     const outgoing = util.parseParams(incoming, spec)
     expect(outgoing.filters.subjectLiteral.length).to.equal(2)
-    expect(outgoing.filters.subjectLiteral[0]).to.equal('Cats')
-    expect(outgoing.filters.subjectLiteral[1]).to.equal('Dogs')
+    expect(outgoing.filters.subjectLiteral[0]).to.equal('Cats.')
+    expect(outgoing.filters.subjectLiteral[1]).to.equal('Dogs.')
   })
 
   describe('parseParam', () => {
