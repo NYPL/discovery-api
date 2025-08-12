@@ -118,7 +118,7 @@ describe('Subjects query', function () {
       expect(params.search_scope).to.equal('')
       expect(params.page).to.equal(1)
       expect(params.per_page).to.equal(50)
-      expect(params.sort).to.equal('preferredTerm')
+      expect(params.sort).to.equal('termLabel')
     })
 
     it('parses params, using search_scope has', function () {
@@ -138,7 +138,7 @@ describe('Subjects query', function () {
       expect(params.search_scope).to.equal('starts_with')
       expect(params.page).to.equal(1)
       expect(params.per_page).to.equal(50)
-      expect(params.sort).to.equal('preferredTerm')
+      expect(params.sort).to.equal('termLabel')
     })
   })
 
