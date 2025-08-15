@@ -122,7 +122,7 @@ describe('ElasticQueryBuilder', () => {
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
         .include({ 'bool.must[0].multi_match.query': 'toast' })
-        .include({ 'bool.must[0].multi_match.fields[0]': 'title^5' })
+        .include({ 'bool.must[0].multi_match.fields[0]': 'title^20' })
 
       // Expect boosting on several fields:
       expect(inst.query.toJson().bool.should)
