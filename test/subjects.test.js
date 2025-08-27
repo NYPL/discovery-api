@@ -78,7 +78,7 @@ describe('Subjects query', function () {
           ]
         },
         sort: [
-          'spaghetti easterns'
+          12
         ],
         matched_queries: [
           'prefix variants.keyword'
@@ -112,8 +112,8 @@ describe('Subjects query', function () {
             {
               hits:
                 [
-                  { _source: { variants: ['Cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['cat'] }, sort: ['cat'] },
-                  { _source: { variants: ['Dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] }, sort: ['dog'] }
+                  { _source: { variants: ['Cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['cat'] }, sort: [12] },
+                  { _source: { variants: ['Dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] }, sort: [12] }
                 ]
             }
             }
