@@ -28,8 +28,8 @@ describe('Subjects query', function () {
             {
               hits:
                 [
-                  { _source: { preferredTerm: 'cat', count: 1 }, highlight: { 'preferredTerm.keyword': ['cat'] } },
-                  { _source: { preferredTerm: 'dog', count: 2 }, highlight: { 'preferredTerm.keyword': ['dog'] } }
+                  { _source: { preferredTerm: 'cat', count: 1, broaderTerms: ['Pets'] }, highlight: { 'preferredTerm.keyword': ['cat'] } },
+                  { _source: { preferredTerm: 'dog', count: 2, seeAlso: ['Scooby Doo'] }, highlight: { 'preferredTerm.keyword': ['dog'] } }
                 ]
             }
             }
@@ -46,12 +46,14 @@ describe('Subjects query', function () {
       expect(results.subjects[1]['@type']).to.equal('preferredTerm')
       expect(results.subjects[1].count).to.equal(2)
       expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
+      expect(results.subjects[0].broaderTerms).to.deep.equal([{ termLabel: 'Pets' }])
+      expect(results.subjects[1].seeAlso).to.deep.equal([{ termLabel: 'Scooby Doo' }])
     })
   })
 
   describe('browse with variant hit', () => {
     afterEach(() => { app.esClient.search.restore() })
-    it('returns properly cased variants', async () => {
+    it('returns properly cased variants and broader terms', async () => {
       const martialArtsHit = {
         _index: 'browse-qa-2025-08-08',
         _id: 'subject_Martial arts films',
@@ -78,7 +80,7 @@ describe('Subjects query', function () {
           ]
         },
         sort: [
-          'spaghetti easterns'
+          12
         ],
         matched_queries: [
           'prefix variants.keyword'
@@ -102,7 +104,7 @@ describe('Subjects query', function () {
       const results = await app.subjects.browse({ q: 'spaghetti' })
       expect(results.subjects[0].termLabel).to.equal('Spaghetti Easterns')
     })
-    it('returns expected results', async () => {
+    it('returns expected results when matching on variants', async () => {
       await app.init()
       const esSearchStub = sinon.stub(app.esClient, 'search')
         .callsFake(async (body) =>
@@ -112,8 +114,8 @@ describe('Subjects query', function () {
             {
               hits:
                 [
-                  { _source: { variants: ['Cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['cat'] }, sort: ['cat'] },
-                  { _source: { variants: ['Dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] }, sort: ['dog'] }
+                  { _source: { variants: ['Cat'], preferredTerm: 'kitty', count: 1, broaderTerms: ['Pets', 'Felines'] }, highlight: { 'variants.keyword': ['cat'] }, sort: [12] },
+                  { _source: { variants: ['Dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] }, sort: [12] }
                 ]
             }
             }
