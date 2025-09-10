@@ -15,21 +15,13 @@ describe('ElasticQuerySubjectsBuilder', () => {
       expect(query.bool.must[0].bool.should[0])
       expect(query.bool.must[0].bool.should[0]).to.deep.equal({
         term: {
-          'preferredTerm.keyword': {
-            value: 'toast',
-            boost: 10,
-            case_insensitive: true
-          }
+          'preferredTerm.keyword': 'toast'
         }
       })
 
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
         term: {
-          'variants.keyword': {
-            value: 'toast',
-            boost: 1,
-            case_insensitive: true
-          }
+          'variants.keyword': 'toast'
         }
       })
     })
@@ -45,21 +37,19 @@ describe('ElasticQuerySubjectsBuilder', () => {
       expect(query.bool.must[0].bool.should.length).to.equal(2)
       expect(query.bool.must[0].bool.should[0])
       expect(query.bool.must[0].bool.should[0]).to.deep.equal({
-        wildcard: {
-          'preferredTerm.keyword': {
-            value: '*toast*',
-            boost: 10,
-            case_insensitive: true
+        match: {
+          preferredTerm: {
+            query: 'toast',
+            operator: 'and'
           }
         }
       })
 
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
-        wildcard: {
-          'variants.keyword': {
-            value: '*toast*',
-            boost: 1,
-            case_insensitive: true
+        match: {
+          variants: {
+            query: 'toast',
+            operator: 'and'
           }
         }
       })
@@ -77,21 +67,13 @@ describe('ElasticQuerySubjectsBuilder', () => {
       expect(query.bool.must[0].bool.should[0])
       expect(query.bool.must[0].bool.should[0]).to.deep.equal({
         prefix: {
-          'preferredTerm.keyword': {
-            value: 'toast',
-            boost: 1,
-            case_insensitive: true
-          }
+          'preferredTerm.keyword': 'toast'
         }
       })
 
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
         prefix: {
-          'variants.keyword': {
-            value: 'toast',
-            boost: 1,
-            case_insensitive: true
-          }
+          'variants.keyword': 'toast'
         }
       })
     })
