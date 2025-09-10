@@ -28,8 +28,8 @@ describe('Subjects query', function () {
             {
               hits:
                 [
-                  { _source: { preferredTerm: 'cat', count: 1, broaderTerms: ['Pets'] }, highlight: { 'preferredTerm.keyword': ['cat'] } },
-                  { _source: { preferredTerm: 'dog', count: 2, seeAlso: ['Scooby Doo'] }, highlight: { 'preferredTerm.keyword': ['dog'] } }
+                  { _source: { preferredTerm: 'cat', count: 1, broaderTerms: ['Pets'] }, matched_queries: ['preferredTerm'] },
+                  { _source: { preferredTerm: 'dog', count: 2, seeAlso: ['Scooby Doo'] }, matched_queries: ['preferredTerm'] }
                 ]
             }
             }
@@ -45,7 +45,7 @@ describe('Subjects query', function () {
       expect(results.subjects[1].termLabel).to.equal('dog')
       expect(results.subjects[1]['@type']).to.equal('preferredTerm')
       expect(results.subjects[1].count).to.equal(2)
-      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword']).to.equal('cat')
+      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
       expect(results.subjects[0].broaderTerms).to.deep.equal([{ termLabel: 'Pets' }])
       expect(results.subjects[1].seeAlso).to.deep.equal([{ termLabel: 'Scooby Doo' }])
     })
@@ -74,17 +74,34 @@ describe('Subjects query', function () {
           source: 'authority',
           sourceId: 11890433
         },
-        highlight: {
-          'variants.keyword': [
-            'spaghetti easterns'
-          ]
-        },
         sort: [
           12
         ],
-        matched_queries: [
-          'prefix variants.keyword'
-        ]
+        inner_hits: {
+          variants: {
+            hits: {
+              total: {
+                value: 1,
+                relation: 'eq'
+              },
+              max_score: 2.725656,
+              hits: [
+                {
+                  _index: 'browse-qa-2025-09-09',
+                  _id: 'subject_Spagetti Easterns',
+                  _nested: {
+                    field: 'variants',
+                    offset: 1
+                  },
+                  _score: 2.725656,
+                  _source: {
+                    variant: 'Spaghetti Easterns'
+                  }
+                }
+              ]
+            }
+          }
+        }
       }
       await app.init()
       sinon.stub(app.esClient, 'search')
@@ -114,8 +131,39 @@ describe('Subjects query', function () {
             {
               hits:
                 [
-                  { _source: { variants: ['Cat'], preferredTerm: 'kitty', count: 1, broaderTerms: ['Pets', 'Felines'] }, highlight: { 'variants.keyword': ['cat'] }, sort: [12] },
-                  { _source: { variants: ['Dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['dog'] }, sort: [12] }
+                  {
+                    _source: {
+                      variants: ['Cat'],
+                      preferredTerm: 'kitty',
+                      count: 1,
+                      broaderTerms: ['Pets', 'Felines']
+                    },
+                    sort: [12],
+                    inner_hits: {
+                      variants: {
+                        hits: {
+                          total: {
+                            value: 1,
+                            relation: 'eq'
+                          },
+                          max_score: 2.725656,
+                          hits: [
+                            {
+                              _index: 'browse-qa-2025-09-09',
+                              _nested: {
+                                field: 'variants',
+                                offset: 1
+                              },
+                              _score: 2.725656,
+                              _source: {
+                                variant: 'Cat'
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
                 ]
             }
             }
@@ -124,16 +172,12 @@ describe('Subjects query', function () {
       const results = await app.subjects.browse({ q: 'cat' })
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(results['@type']).to.equal('subjectList')
-      expect(results.subjects.length).to.equal(2)
+      expect(results.subjects.length).to.equal(1)
       expect(results.subjects[0].termLabel).to.equal('Cat')
       expect(results.subjects[0]['@type']).to.equal('variant')
       expect(results.subjects[0].preferredTerms[0].termLabel).to.equal('kitty')
       expect(results.subjects[0].preferredTerms[0].count).to.equal(1)
-      expect(results.subjects[1].termLabel).to.equal('Dog')
-      expect(results.subjects[1]['@type']).to.equal('variant')
-      expect(results.subjects[1].preferredTerms[0].termLabel).to.equal('puppy')
-      expect(results.subjects[1].preferredTerms[0].count).to.equal(2)
-      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword']).to.equal('cat')
+      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
     })
   })
 
@@ -158,7 +202,7 @@ describe('Subjects query', function () {
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(results['@type']).to.equal('subjectList')
       expect(results.subjects.length).to.equal(0)
-      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword']).to.equal('cat')
+      expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
     })
   })
 
@@ -202,9 +246,9 @@ describe('Subjects query', function () {
       expect(body.from).to.equal(0)
       expect(body.size).to.equal(50)
       expect(Object.keys(body.query.bool.must[0].bool.should[0].term)).to.contain('preferredTerm.keyword')
-      expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword']).to.equal('cat')
-      expect(Object.keys(body.query.bool.must[0].bool.should[1].term)).to.contain('variants.keyword')
-      expect(body.query.bool.must[0].bool.should[1].term['variants.keyword']).to.equal('cat')
+      expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
+      expect(Object.keys(body.query.bool.must[0].bool.should[1].nested.query.term)).to.contain('variants.variant.keyword')
+      expect(body.query.bool.must[0].bool.should[1].nested.query.term['variants.variant.keyword']).to.equal('cat')
     })
   })
 
@@ -216,9 +260,9 @@ describe('Subjects query', function () {
       expect(body.from).to.equal(0)
       expect(body.size).to.equal(50)
       expect(Object.keys(body.query.bool.must[0].bool.should[0].term)).to.contain('preferredTerm.keyword')
-      expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword']).to.equal('cat')
-      expect(Object.keys(body.query.bool.must[0].bool.should[1].term)).to.contain('variants.keyword')
-      expect(body.query.bool.must[0].bool.should[1].term['variants.keyword']).to.equal('cat')
+      expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
+      expect(Object.keys(body.query.bool.must[0].bool.should[1].nested.query.term)).to.contain('variants.variant.keyword')
+      expect(body.query.bool.must[0].bool.should[1].nested.query.term['variants.variant.keyword']).to.equal('cat')
       expect(Object.keys(body.sort[0])).to.contain('_score')
     })
   })
