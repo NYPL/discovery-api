@@ -640,7 +640,8 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[0].values[0].label).to.equal('Label 1')
       expect(serialized.bib.fields[0].values[1].label).to.equal('Label 2')
       expect(serialized.bib.fields[0].values[2].label).to.equal('Label 3')
-      expect(serialized.bib.fields[0].values[3]).to.equal(undefined)
+      // field tag x should not be included
+      expect(serialized.bib.fields[0].values.length).to.equal(3)
     })
 
     it('should use default label when none specified', function () {
