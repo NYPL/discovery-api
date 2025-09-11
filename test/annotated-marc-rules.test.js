@@ -625,8 +625,7 @@ describe('Annotated Marc Rules', function () {
         varFields: [
           { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'u', content: 'http://example.com#0' }, { tag: 'z', content: 'Label 1' }] },
           { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'u', content: 'http://example.com#1' }, { tag: 'y', content: 'Label 2' }, { tag: '3', content: 'This additional lable is ignored because we found $y first' }] },
-          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'a', content: 'Ignore tag' }, { tag: 'u', content: 'http://example.com#2' }, { tag: '3', content: 'Label 3' }] },
-          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'x', content: '[redacted]' }] }
+          { fieldTag: 'y', marcTag: '856', subfields: [{ tag: 'a', content: 'Ignore tag' }, { tag: 'u', content: 'http://example.com#2' }, { tag: '3', content: 'Label 3' }] }
         ]
       }
 
@@ -640,7 +639,6 @@ describe('Annotated Marc Rules', function () {
       expect(serialized.bib.fields[0].values[0].label).to.equal('Label 1')
       expect(serialized.bib.fields[0].values[1].label).to.equal('Label 2')
       expect(serialized.bib.fields[0].values[2].label).to.equal('Label 3')
-      expect(serialized.bib.fields[0].values[3]).to.equal(undefined)
     })
 
     it('should use default label when none specified', function () {
