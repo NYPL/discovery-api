@@ -31,6 +31,10 @@ module.exports = function (app) {
         statusCode = 404
         app.logger.info(error.message)
         break
+      case 'IndexSearchError':
+        statusCode = 400
+        app.logger.warn(`Responding with 400: ${error.message}`)
+        break
       default:
         statusCode = 500
         app.logger.error('Resources#handleError:', error)
