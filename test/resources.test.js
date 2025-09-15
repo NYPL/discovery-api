@@ -772,4 +772,23 @@ describe('Resources query', function () {
       })
     })
   })
+
+  describe('search exception handling', () => {
+    describe('lexical error', () => {
+      before(() => {
+        sinon.stub(app.esClient, 'search').callsFake((req) => {
+          return Promise.reject(new errors.IndexSearchError('oh no'))
+        })
+      })
+
+      after(() => {
+        app.esClient.search.restore()
+      })
+
+      it('handles lexical error by raising IndexSearchError', () => {
+        const call = () => app.resources.search({})
+        return expect(call()).to.be.rejectedWith(errors.IndexSearchError)
+      })
+    })
+  })
 })

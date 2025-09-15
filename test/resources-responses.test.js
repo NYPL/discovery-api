@@ -878,7 +878,6 @@ describe('Test Resources responses', function () {
         expect(response.statusCode).to.eq(200)
 
         const result = JSON.parse(body)
-        console.log('Got result: ', result)
         expect(result).to.nested.include({
           'itemListElement[0].deliveryLocation[0].@id': 'loc:mal',
           'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Main Reading Room 315'
