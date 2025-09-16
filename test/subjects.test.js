@@ -25,13 +25,13 @@ describe('Subjects query', function () {
           (
             {
               hits:
-                {
-                  hits:
-                    [
-                      { _source: { preferredTerm: 'cat', count: 1 }, highlight: { 'preferredTerm.keyword': ['cat'] } },
-                      { _source: { preferredTerm: 'dog', count: 2 }, highlight: { 'preferredTerm.keyword': ['dog'] } }
-                    ]
-                }
+            {
+              hits:
+                [
+                  { _source: { preferredTerm: 'cat', count: 1, broaderTerms: ['Pets'] }, matched_queries: ['preferredTerm'] },
+                  { _source: { preferredTerm: 'dog', count: 2, seeAlso: ['Scooby Doo'] }, matched_queries: ['preferredTerm'] }
+                ]
+            }
             }
           )
         )
@@ -46,41 +46,137 @@ describe('Subjects query', function () {
       expect(results.subjects[1]['@type']).to.equal('preferredTerm')
       expect(results.subjects[1].count).to.equal(2)
       expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
+      expect(results.subjects[0].broaderTerms).to.deep.equal([{ termLabel: 'Pets' }])
+      expect(results.subjects[1].seeAlso).to.deep.equal([{ termLabel: 'Scooby Doo' }])
     })
   })
 
   describe('browse with variant hit', () => {
-    after(() => { app.esClient.search.restore() })
-
-    it('returns expected results', async () => {
+    afterEach(() => { app.esClient.search.restore() })
+    it('returns properly cased variants and broader terms', async () => {
+      const martialArtsHit = {
+        _index: 'browse-qa-2025-08-08',
+        _id: 'subject_Martial arts films',
+        _score: null,
+        _source: {
+          termType: 'subject',
+          count: 2,
+          broaderTerms: [
+            'Action and adventure films'
+          ],
+          seeAlso: [
+          ],
+          variants: [
+            'Kung fu films',
+            'Spaghetti Easterns'
+          ],
+          preferredTerm: 'Martial arts films',
+          source: 'authority',
+          sourceId: 11890433
+        },
+        sort: [
+          12
+        ],
+        inner_hits: {
+          variants: {
+            hits: {
+              total: {
+                value: 1,
+                relation: 'eq'
+              },
+              max_score: 2.725656,
+              hits: [
+                {
+                  _index: 'browse-qa-2025-09-09',
+                  _id: 'subject_Spagetti Easterns',
+                  _nested: {
+                    field: 'variants',
+                    offset: 1
+                  },
+                  _score: 2.725656,
+                  _source: {
+                    variant: 'Spaghetti Easterns'
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+      await app.init()
+      sinon.stub(app.esClient, 'search')
+        .callsFake(async (body) =>
+          (
+            {
+              hits:
+            {
+              hits:
+                [
+                  martialArtsHit
+                ]
+            }
+            }
+          )
+        )
+      const results = await app.subjects.browse({ q: 'spaghetti' })
+      expect(results.subjects[0].termLabel).to.equal('Spaghetti Easterns')
+    })
+    it('returns expected results when matching on variants', async () => {
       await app.init()
       const esSearchStub = sinon.stub(app.esClient, 'search')
         .callsFake(async (body) =>
           (
             {
               hits:
-                {
-                  hits:
-                    [
-                      { _source: { variants: ['cat'], preferredTerm: 'kitty', count: 1 }, highlight: { 'variants.keyword': ['Cat'] }, sort: ['cat'] },
-                      { _source: { variants: ['dog'], preferredTerm: 'puppy', count: 2 }, highlight: { 'variants.keyword': ['Dog'] }, sort: ['dog'] }
-                    ]
-                }
+            {
+              hits:
+                [
+                  {
+                    _source: {
+                      variants: ['Cat'],
+                      preferredTerm: 'kitty',
+                      count: 1,
+                      broaderTerms: ['Pets', 'Felines']
+                    },
+                    sort: [12],
+                    inner_hits: {
+                      variants: {
+                        hits: {
+                          total: {
+                            value: 1,
+                            relation: 'eq'
+                          },
+                          max_score: 2.725656,
+                          hits: [
+                            {
+                              _index: 'browse-qa-2025-09-09',
+                              _nested: {
+                                field: 'variants',
+                                offset: 1
+                              },
+                              _score: 2.725656,
+                              _source: {
+                                variant: 'Cat'
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+            }
             }
           )
         )
       const results = await app.subjects.browse({ q: 'cat' })
       const searchBody = esSearchStub.getCall(0).args[0]
       expect(results['@type']).to.equal('subjectList')
-      expect(results.subjects.length).to.equal(2)
+      expect(results.subjects.length).to.equal(1)
       expect(results.subjects[0].termLabel).to.equal('Cat')
       expect(results.subjects[0]['@type']).to.equal('variant')
-      expect(results.subjects[0].preferredTerms[0].label).to.equal('kitty')
+      expect(results.subjects[0].preferredTerms[0].termLabel).to.equal('kitty')
       expect(results.subjects[0].preferredTerms[0].count).to.equal(1)
-      expect(results.subjects[1].termLabel).to.equal('Dog')
-      expect(results.subjects[1]['@type']).to.equal('variant')
-      expect(results.subjects[1].preferredTerms[0].label).to.equal('puppy')
-      expect(results.subjects[1].preferredTerms[0].count).to.equal(2)
       expect(searchBody.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
     })
   })
@@ -94,11 +190,11 @@ describe('Subjects query', function () {
           (
             {
               hits:
-                {
-                  hits:
-                    [
-                    ]
-                }
+            {
+              hits:
+                [
+                ]
+            }
             }
           )
         )
@@ -151,8 +247,8 @@ describe('Subjects query', function () {
       expect(body.size).to.equal(50)
       expect(Object.keys(body.query.bool.must[0].bool.should[0].term)).to.contain('preferredTerm.keyword')
       expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
-      expect(Object.keys(body.query.bool.must[0].bool.should[1].term)).to.contain('variants.keyword')
-      expect(body.query.bool.must[0].bool.should[1].term['variants.keyword'].value).to.equal('cat')
+      expect(Object.keys(body.query.bool.must[0].bool.should[1].nested.query.term)).to.contain('variants.variant.keyword')
+      expect(body.query.bool.must[0].bool.should[1].nested.query.term['variants.variant.keyword']).to.equal('cat')
     })
   })
 
@@ -165,8 +261,8 @@ describe('Subjects query', function () {
       expect(body.size).to.equal(50)
       expect(Object.keys(body.query.bool.must[0].bool.should[0].term)).to.contain('preferredTerm.keyword')
       expect(body.query.bool.must[0].bool.should[0].term['preferredTerm.keyword'].value).to.equal('cat')
-      expect(Object.keys(body.query.bool.must[0].bool.should[1].term)).to.contain('variants.keyword')
-      expect(body.query.bool.must[0].bool.should[1].term['variants.keyword'].value).to.equal('cat')
+      expect(Object.keys(body.query.bool.must[0].bool.should[1].nested.query.term)).to.contain('variants.variant.keyword')
+      expect(body.query.bool.must[0].bool.should[1].nested.query.term['variants.variant.keyword']).to.equal('cat')
       expect(Object.keys(body.sort[0])).to.contain('_score')
     })
   })
