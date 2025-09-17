@@ -44,6 +44,27 @@ describe('Resources query', function () {
           .merge_checkin_card_items
       ).to.equal(false)
     })
+
+    it('applies overrideParams to extend config', function () {
+      const params = resourcesPrivMethods.parseSearchParams(
+        { per_page: '400' },
+        { per_page: { type: 'int', default: 50, range: [0, 1000] } }
+      )
+      expect(params.per_page).to.equal(400)
+    })
+
+    it('applies multiple overrides', function () {
+      const params = resourcesPrivMethods.parseSearchParams(
+        { per_page: '300', items_size: '150' },
+        {
+          per_page: { type: 'int', default: 50, range: [0, 1000] },
+          items_size: { type: 'int', default: 100, range: [0, 500] }
+        }
+      )
+
+      expect(params.per_page).to.equal(300)
+      expect(params.items_size).to.equal(150)
+    })
   })
 
   describe('buildElasticQuery', function () {
