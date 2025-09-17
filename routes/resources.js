@@ -59,8 +59,8 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/resources/aggregation/:field`, function (req, res) {
-    const params = req.query
+  app.get(`/api/v${VER}/discovery/resources/aggregations/:field`, function (req, res) {
+    const params = Object.assign({}, req.query, req.params)
 
     return app.resources.aggregation(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
