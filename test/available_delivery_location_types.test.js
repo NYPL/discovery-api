@@ -7,7 +7,8 @@ describe('AvailableDeliveryLocationTypes', function () {
     fixtures.enableDataApiFixtures({
       'patrons/branch-patron-id': 'patron-research.json',
       'patrons/scholar-patron-id': 'patron-scholar.json',
-      'patrons/unrecognizable-ptype-patron-id': 'patron-unrecognizable-type.json'
+      'patrons/unrecognizable-ptype-patron-id': 'patron-unrecognizable-type.json',
+      'patrons/bad-response-patron-id': 'patron-bad-response.json'
     })
   })
 
@@ -29,7 +30,12 @@ describe('AvailableDeliveryLocationTypes', function () {
 
   it('returns no scholar room code for unrecognizable ptype', function () {
     return AvailableDeliveryLocationTypes.getScholarRoomByPatronId('unrecognizable-ptype-patron-id').then((deliveryLocationTypes) => {
-      expect(deliveryLocationTypes).to.eql(undefined)
+      expect(deliveryLocationTypes).to.eql(null)
     })
+  })
+
+  it('returns no scholar room if patron lookup failed ', async () => {
+    const types = await AvailableDeliveryLocationTypes.getScholarRoomByPatronId('bad-response-patron-id')
+    expect(types).to.eql(null)
   })
 })
