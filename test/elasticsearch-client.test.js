@@ -57,7 +57,16 @@ describe('Elasticsearch Client', () => {
       error.body = {
         error: {
           type: 'search_phase_execution_exception',
-          caused_by: { type: 'token_mgr_error' }
+          failed_shards: [
+            {
+              reason: {
+                type: 'query_shard_exception',
+                caused_by: {
+                  type: 'parse_exception'
+                }
+              }
+            }
+          ]
         }
       }
 

@@ -333,6 +333,40 @@ describe('Resources query', function () {
         'aggregations.agg4.buckets[0].key': 'agg4 value1'
       })
     })
+
+    it('skips over invalid aggregations', () => {
+      const responses = [
+        {
+          hits: { total: { value: 1000, relation: 'eq' }, hits: [] },
+          aggregations: {
+            agg1: {
+              buckets: [
+                { key: 'agg1 value1', doc_count: 10 },
+                { key: 'agg1 value2', doc_count: 9 }
+              ]
+            }
+          }
+        },
+        {
+          error: 'some error'
+        }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.nested.include({
+        'hits.total.value': 1000,
+        'aggregations.agg1.buckets[0].doc_count': 10,
+        'aggregations.agg1.buckets[1].key': 'agg1 value2'
+      })
+    })
+
+    it('returns empty object if no good agg responses found', () => {
+      const responses = [
+        { error: 'some error' },
+        { someother: 'response' }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.deep.equal({})
+    })
   })
 
   describe('annotatedMarc endpoint', () => {
