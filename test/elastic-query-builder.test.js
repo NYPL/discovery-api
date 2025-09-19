@@ -488,12 +488,10 @@ describe('ElasticQueryBuilder', () => {
 
         // Asset filter clauses:
         expect(query).to.nested.include({
-          // Match filers[dateBefore]:
-          'bool.filter[0].bool.must[0].bool.should[0].range.dateStartYear.lte': 2021,
-          'bool.filter[0].bool.must[0].bool.should[1].range.dateEndYear.lte': 2021,
-          // Match filters[dateAfter]:
-          'bool.filter[0].bool.must[1].bool.should[0].range.dateStartYear.gte': 2020,
-          'bool.filter[0].bool.must[1].bool.should[1].range.dateEndYear.gte': 2020
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-12-31T23:59:59',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
         })
 
         expect(query).to.nested.include({
