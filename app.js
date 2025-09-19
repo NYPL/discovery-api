@@ -29,6 +29,7 @@ app.init = async () => {
 
   require('./lib/resources')(app)
   require('./lib/subjects')(app)
+  require('./lib/vocabularies')(app)
 
   // routes
   require('./routes/resources')(app)

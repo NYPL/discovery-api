@@ -75,6 +75,14 @@ module.exports = function (app) {
       .catch((error) => handleError(res, error, params))
   })
 
+  app.get(`/api/v${VER}/discovery/vocabularies`, function (req, res) {
+    const params = Object.assign({}, req.query, req.params)
+
+    return app.vocabularies(params, { baseUrl: app.baseUrl })
+      .then((resp) => respond(res, resp, params))
+      .catch((error) => handleError(res, error, params))
+  })
+
   /*
    * Return items with `deliveryLocation`s matching the supplied barcodes
    *
