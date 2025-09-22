@@ -17,7 +17,7 @@ describe('Vocabularies', function () {
     sinon.restore()
   })
 
-  it('returns expected formats, languages, collections, and parent locations', async () => {
+  it('returns expected formats, languages, collections, and building locations', async () => {
     const mockLanguages = { values: [{ value: 'eng', label: 'English' }] }
     const mockFormats = {
       values: [
@@ -39,7 +39,7 @@ describe('Vocabularies', function () {
     expect(results.formats).to.be.an('array')
     expect(results.languages).to.deep.equal(mockLanguages.values)
     expect(results.collections).to.be.an('array')
-    expect(results.parentLocations).to.be.an('array')
+    expect(results.buildingLocations).to.be.an('array')
 
     // Check agg formats intersect with nyplCore formats
     results.formats.forEach(f => {
