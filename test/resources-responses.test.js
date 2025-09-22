@@ -267,7 +267,7 @@ describe('Test Resources responses', function () {
         assert(doc.itemAggregations)
 
         assert.deepEqual(doc.format, [{ '@id': 'a', prefLabel: 'Book/Text' }])
-        //
+
         // assert.deepEqual(doc.collection, [])
 
         done()
