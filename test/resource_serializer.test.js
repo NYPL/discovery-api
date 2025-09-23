@@ -12,7 +12,7 @@ describe('Resource Serializer', () => {
       const collectionEntity = ResourceSerializer.getFormattedCollection('mab')[0]
       expect(collectionEntity.prefLabel).to.equal('Art & Architecture Collection')
       expect(collectionEntity['@id']).to.equal('mab')
-      expect(collectionEntity.parentLocation).to.equal('Stephen A. Schwarzman Building (SASB)')
+      expect(collectionEntity.buildingLocationLabel).to.equal('Stephen A. Schwarzman Building (SASB)')
     })
   })
   describe('.formatItemFilterAggregations()', () => {
