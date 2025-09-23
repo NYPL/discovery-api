@@ -43,7 +43,7 @@ describe('ElasticQuerySubjectsBuilder', () => {
 
       const query = inst.query.toJson()
 
-      expect(query.bool.must[0].bool.should.length).to.equal(2)
+      expect(query.bool.must[0].bool.should.length).to.equal(3)
       expect(query.bool.must[0].bool.should[0])
       expect(query.bool.must[0].bool.should[0]).to.deep.equal({
         match: {
@@ -56,6 +56,12 @@ describe('ElasticQuerySubjectsBuilder', () => {
       })
 
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
+        prefix: {
+          preferredTerm: { value: 'toast', _name: 'preferredTermPrefix' }
+        }
+      })
+
+      expect(query.bool.must[0].bool.should[2]).to.deep.equal({
         nested: {
           inner_hits: {},
           path: 'variants',
