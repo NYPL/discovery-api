@@ -2,6 +2,23 @@ const { expect } = require('chai')
 const { ResourceSerializer } = require('../lib/jsonld_serializers')
 const esResponse = require('./fixtures/item-filter-aggregations.json')
 describe('Resource Serializer', () => {
+  describe('collectionIds', () => {
+    it('should attach collection entities', async () => {
+      const resource = await ResourceSerializer.serialize(require('./fixtures/collection-bib.json'))
+      expect(resource.collection).to.deep.equal([
+        {
+          '@id': 'mal',
+          buildingLocationLabel: 'Stephen A. Schwarzman Building (SASB)',
+          prefLabel: 'General Research Division'
+        },
+        {
+          '@id': 'bur',
+          buildingLocationLabel: 'Stavros Niarchos Foundation Library (SNFL)',
+          prefLabel: 'Yoseloff Business Center'
+        }
+      ])
+    })
+  })
   describe('formatformat', () => {
     it('should format properly', () => {
       expect(ResourceSerializer.getFormattedFormat('a')).to.deep.equal([{ '@id': 'a', prefLabel: 'Book/Text' }])
@@ -9,7 +26,7 @@ describe('Resource Serializer', () => {
   })
   describe('formatCollection', () => {
     it('should format collection entity', () => {
-      const collectionEntity = ResourceSerializer.getFormattedCollection('mab')[0]
+      const collectionEntity = ResourceSerializer.getFormattedCollections(['mab'])[0]
       expect(collectionEntity.prefLabel).to.equal('Art & Architecture Collection')
       expect(collectionEntity['@id']).to.equal('mab')
       expect(collectionEntity.buildingLocationLabel).to.equal('Stephen A. Schwarzman Building (SASB)')
