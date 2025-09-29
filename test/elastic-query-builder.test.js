@@ -245,7 +245,7 @@ describe('ElasticQueryBuilder', () => {
     })
 
     it('applies genre filter to query', () => {
-      const request = new ApiRequest({ q: 'toast', filters: { genre: 'Maps' } })
+      const request = new ApiRequest({ q: 'toast', filters: { genreForm: 'Maps' } })
       const inst = ElasticQueryBuilder.forApiRequest(request)
 
       // Expect the top level bool to now have a `filter` prop with the genreForm filter:
