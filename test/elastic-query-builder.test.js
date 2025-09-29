@@ -243,6 +243,15 @@ describe('ElasticQueryBuilder', () => {
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.filter[0].term.buildingLocationIds': 'ma' })
     })
+
+    it('applies genre filter to query', () => {
+      const request = new ApiRequest({ q: 'toast', filters: { genreForm: 'Maps' } })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect the top level bool to now have a `filter` prop with the genreForm filter:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.filter[0].term.genreForm\\.raw': 'Maps' })
+    })
   })
 
   describe('Advanced Search query params', () => {
