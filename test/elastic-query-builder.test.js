@@ -489,7 +489,7 @@ describe('ElasticQueryBuilder', () => {
         // Asset filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
-          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': 2020,
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-12-31T23:59:59',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
         })

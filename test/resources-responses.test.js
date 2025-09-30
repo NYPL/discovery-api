@@ -640,17 +640,15 @@ describe('Test Resources responses', function () {
 
               const doc = JSON.parse(body)
 
-              console.log('dates after ', dateAfter, doc.itemListElement.map(item => [item.result.dateStartYear, item.result.dateEndYear]))
-
               // Ensure bib dates follow dateAfter for each result
               doc.itemListElement.forEach((item) => {
-                const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
-                  .filter((d) => typeof d === 'number')
-                  // Ensure dates are ascending (some cataloging reverses them):
-                  .sort((a, b) => a - b)
-                // The bib's end date (or start date if it doesn't have an end date)
-                // should be >= dateAfter
-                expect(itemDates[itemDates.length - 1]).to.be.at.least(dateAfter)
+                const itemDate = item.result.dates
+                // Ensure dates are descending:
+                  .sort((a, b) => (b.range.lt || b.range.lte) - (a.range.lt || a.range.lte))
+                  .at(0)
+                  .range
+
+                expect(parseInt(itemDate.lt || itemDate.lte)).to.be.at.least(dateAfter)
               })
 
               return resolve()
