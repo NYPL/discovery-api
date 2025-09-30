@@ -640,6 +640,8 @@ describe('Test Resources responses', function () {
 
               const doc = JSON.parse(body)
 
+              console.log('dates after ', dateAfter, doc.itemListElement.map(item => [item.result.dateStartYear, item.result.dateEndYear]))
+
               // Ensure bib dates follow dateAfter for each result
               doc.itemListElement.forEach((item) => {
                 const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
