@@ -3,6 +3,8 @@ const fs = require('fs')
 const sinon = require('sinon')
 const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
+const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
+const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
 
@@ -233,7 +235,7 @@ describe('Resources query', function () {
       expect(queries).to.have.lengthOf(2)
 
       // Expect one agg query for all the properties not involved in a filter:
-      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(9)
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(numAggregations - 1)
       expect(queries[0].query.bool.filter).to.be.a('array')
       expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
 
@@ -254,9 +256,8 @@ describe('Resources query', function () {
       const queries = resourcesPrivMethods.aggregationQueriesForParams(params)
       expect(queries).to.be.a('array')
       expect(queries).to.have.lengthOf(3)
-
       // Expect first agg query to include all filters:
-      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(8)
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf(numAggregations - 2)
       expect(queries[0].query.bool.filter).to.be.a('array')
       // Expect the subjectLiteral filter:
       expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
