@@ -3,6 +3,8 @@ const fs = require('fs')
 const sinon = require('sinon')
 const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
+const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
+const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
 
@@ -233,7 +235,7 @@ describe('Resources query', function () {
       expect(queries).to.have.lengthOf(2)
 
       // Expect one agg query for all the properties not involved in a filter:
-      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(9)
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(numAggregations - 1)
       expect(queries[0].query.bool.filter).to.be.a('array')
       expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
 
@@ -254,9 +256,8 @@ describe('Resources query', function () {
       const queries = resourcesPrivMethods.aggregationQueriesForParams(params)
       expect(queries).to.be.a('array')
       expect(queries).to.have.lengthOf(3)
-
       // Expect first agg query to include all filters:
-      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(8)
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf(numAggregations - 2)
       expect(queries[0].query.bool.filter).to.be.a('array')
       // Expect the subjectLiteral filter:
       expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
@@ -332,6 +333,40 @@ describe('Resources query', function () {
         'aggregations.agg3.buckets[0].key': 'agg3 value1',
         'aggregations.agg4.buckets[0].key': 'agg4 value1'
       })
+    })
+
+    it('skips over invalid aggregations', () => {
+      const responses = [
+        {
+          hits: { total: { value: 1000, relation: 'eq' }, hits: [] },
+          aggregations: {
+            agg1: {
+              buckets: [
+                { key: 'agg1 value1', doc_count: 10 },
+                { key: 'agg1 value2', doc_count: 9 }
+              ]
+            }
+          }
+        },
+        {
+          error: 'some error'
+        }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.nested.include({
+        'hits.total.value': 1000,
+        'aggregations.agg1.buckets[0].doc_count': 10,
+        'aggregations.agg1.buckets[1].key': 'agg1 value2'
+      })
+    })
+
+    it('returns empty object if no good agg responses found', () => {
+      const responses = [
+        { error: 'some error' },
+        { someother: 'response' }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.deep.equal({})
     })
   })
 
