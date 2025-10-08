@@ -21,8 +21,8 @@ describe('Vocabularies', function () {
     const mockLanguages = { values: [{ value: 'eng', label: 'English' }] }
     const mockFormats = {
       values: [
-        { value: 'a', label: 'Book/Text', count: 100 },
-        { value: 'z', label: 'E-Book', count: 50 }
+        { value: 'a', label: 'Book/text', count: 100 },
+        { value: 'z', label: 'E-book', count: 50 }
       ]
     }
 
