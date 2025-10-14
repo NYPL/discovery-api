@@ -1,5 +1,6 @@
 const axios = require('axios')
 const sinon = require('sinon')
+const { InvalidParameterError, NotFoundError, IndexSearchError, IndexConnectionError } = require('../lib/errors')
 
 describe('resources routes', function () {
   let app
@@ -96,5 +97,66 @@ describe('resources routes', function () {
       }
       )
     })
+  })
+})
+
+describe('resources routes error handling', function () {
+  let app
+  let findByUriStub
+
+  before(function () {
+    app = require('../app')
+  })
+
+  beforeEach(function () {
+    findByUriStub = sinon.stub(app.resources, 'findByUri').callsFake(() => Promise.resolve({ response: 'ok' }))
+  })
+
+  afterEach(function () {
+    if (findByUriStub && findByUriStub.restore) findByUriStub.restore()
+  })
+
+  it('returns 422 for InvalidParameterError', async function () {
+    findByUriStub.callsFake(() => Promise.reject(new InvalidParameterError('Missing id')))
+
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b1234`)
+      .catch(e => e.response)
+
+    expect(response.status).to.equal(422)
+    expect(response.data).to.have.property('name', 'InvalidParameterError')
+    expect(response.data).to.have.property('error', 'Missing id')
+  })
+
+  it('returns 404 for NotFoundError', async function () {
+    findByUriStub.callsFake(() => Promise.reject(new NotFoundError('Not found')))
+
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b1234`)
+      .catch(e => e.response)
+
+    expect(response.status).to.equal(404)
+    expect(response.data).to.have.property('name', 'NotFoundError')
+    expect(response.data).to.have.property('error', 'Not found')
+  })
+
+  it('returns 400 for IndexSearchError', async function () {
+    findByUriStub.callsFake(() => Promise.reject(new IndexSearchError('Bad query')))
+
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b1234`)
+      .catch(e => e.response)
+
+    expect(response.status).to.equal(400)
+    expect(response.data).to.have.property('name', 'IndexSearchError')
+    expect(response.data).to.have.property('error', 'Bad query')
+  })
+
+  it('returns 500 for IndexConnectionError', async function () {
+    findByUriStub.callsFake(() => Promise.reject(new IndexConnectionError('ES down')))
+
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/b1234`)
+      .catch(e => e.response)
+
+    expect(response.status).to.equal(500) // sets 500 for IndexConnectionError by default
+    expect(response.data).to.have.property('name', 'IndexConnectionError')
+    expect(response.data).to.have.property('error', 'ES down')
   })
 })
