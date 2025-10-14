@@ -4,6 +4,7 @@ const esClient = require('./lib/elasticsearch/client')
 const loadConfig = require('./lib/load-config')
 const { preflightCheck } = require('./lib/preflight_check')
 const { loadNyplCoreData } = require('./lib/load_nypl_core')
+const handleError = require('./lib/handle-error')
 
 const swaggerDocs = require('./swagger.v1.1.x.json')
 
@@ -55,6 +56,10 @@ app.init = async () => {
 
   app.get('/api/v0.1/discovery/swagger', function (req, res) {
     res.send(swaggerDocs)
+  })
+
+  app.use((err, req, res, next) => {
+    handleError(err, req, res, next, app.logger)
   })
 
   return app
