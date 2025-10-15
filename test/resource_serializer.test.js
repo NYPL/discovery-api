@@ -21,7 +21,7 @@ describe('Resource Serializer', () => {
   })
   describe('format format', () => {
     it('should format properly', () => {
-      expect(ResourceSerializer.getFormattedFormat('a')).to.deep.equal([{ '@id': 'a', prefLabel: 'Book/Text' }])
+      expect(ResourceSerializer.getFormattedFormat('a')).to.deep.equal([{ '@id': 'a', prefLabel: 'Book/text' }])
     })
   })
   describe('formatCollection', () => {
