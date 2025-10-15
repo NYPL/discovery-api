@@ -21,43 +21,66 @@ module.exports = function (app) {
     return true
   }
 
-  app.get(`/api/v${VER}/discovery/resources$`, function (req, res, next) {
+  const handleError = (res, error, params) => {
+    let statusCode = 500
+    switch (error.name) {
+      case 'InvalidParameterError':
+        statusCode = 422
+        break
+      case 'NotFoundError':
+        statusCode = 404
+        app.logger.info(error.message)
+        break
+      case 'IndexSearchError':
+        statusCode = 400
+        app.logger.warn(`Responding with 400: ${error.message}`)
+        break
+      default:
+        statusCode = 500
+        app.logger.error('Resources#handleError:', error)
+    }
+    res.status(statusCode).send({ status: statusCode, name: error.name, error: error.message ? error.message : error })
+    return false
+  }
+
+  app.get(`/api/v${VER}/discovery/resources$`, function (req, res) {
     const params = req.query
+
     return app.resources.search(params, { baseUrl: app.baseUrl }, req)
       .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res) {
     const params = req.query
 
     return app.resources.aggregations(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/resources/aggregations/:field`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/resources/aggregations/:field`, function (req, res) {
     const params = Object.assign({}, req.query, req.params)
 
     return app.resources.aggregation(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/browse/subjects`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/browse/subjects`, function (req, res) {
     const params = req.query
 
     return app.subjects.browse(params, { baseUrl: app.baseUrl }, req)
       .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
-  app.get(`/api/v${VER}/discovery/vocabularies`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/vocabularies`, function (req, res) {
     const params = Object.assign({}, req.query, req.params)
 
     return app.vocabularies(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
   /*
@@ -66,14 +89,14 @@ module.exports = function (app) {
    * For example, to fetch Delivery Locations for item barcodes 12345, 45678, and 78910:
    *   /api/v${VER}/request/deliveryLocationsByBarcode?barcodes[]=12345&barcodes[]=45678&barcodes=[]=78910
    */
-  app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res, next) {
+  app.get(`/api/v${VER}/request/deliveryLocationsByBarcode`, function (req, res) {
     const params = req.query
 
     const handler = app.resources.deliveryLocationsByBarcode
 
     return handler(params, { baseUrl: app.baseUrl })
       .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
   /**
@@ -82,12 +105,12 @@ module.exports = function (app) {
    *
    *  e.g. discovery/resources/b1234-i9876
    */
-  app.get(`/api/v${VER}/discovery/resources/:uri-:itemUri([a-z]?i[0-9]+)`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/resources/:uri-:itemUri([a-z]?i[0-9]+)`, function (req, res) {
     const params = { uri: req.params.uri, itemUri: req.params.itemUri }
 
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
       .then((responseBody) => respond(res, responseBody, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 
   /**
@@ -96,7 +119,7 @@ module.exports = function (app) {
    *
    * e.g. discovery/resources/b1234
    */
-  app.get(`/api/v${VER}/discovery/resources/:uri.:ext?`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/resources/:uri.:ext?`, function (req, res) {
     const params = Object.assign({}, req.query, { uri: req.params.uri })
 
     if (Number.isInteger(parseInt(req.query.items_size))) params.items_size = req.query.items_size
@@ -110,6 +133,6 @@ module.exports = function (app) {
 
     return handler(params, { baseUrl: app.baseUrl }, req)
       .then((responseBody) => respond(res, responseBody, params))
-      .catch((error) => next(error))
+      .catch((error) => handleError(res, error, params))
   })
 }
