@@ -79,7 +79,7 @@ describe('JSONLD Serializers', () => {
         })
         expect(serialized.format).to.deep.equal([{
           '@id': 'a',
-          prefLabel: 'Book/Text'
+          prefLabel: 'Book/text'
         }])
       })
 
@@ -165,7 +165,7 @@ describe('JSONLD Serializers', () => {
       expect(formatAgg).to.nested.include({
         'values[0].value': 'a',
         'values[0].count': 2324674,
-        'values[0].label': 'Book/Text'
+        'values[0].label': 'Book/text'
       })
 
       const bucketsWithoutLabels = formatAgg.values

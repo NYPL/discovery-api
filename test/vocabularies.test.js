@@ -21,8 +21,8 @@ describe('Vocabularies', function () {
     const mockLanguages = { values: [{ value: 'eng', label: 'English' }] }
     const mockFormats = {
       values: [
-        { value: 'a', label: 'Book/Text', count: 100 },
-        { value: 'z', label: 'E-Book', count: 50 }
+        { value: 'a', label: 'Book/text', count: 100 },
+        { value: 'z', label: 'E-book', count: 50 }
       ]
     }
 
@@ -40,6 +40,7 @@ describe('Vocabularies', function () {
     expect(results.languages).to.deep.equal(mockLanguages.values)
     expect(results.collections).to.be.an('array')
     expect(results.buildingLocations).to.be.an('array')
+    expect(results.buildingLocations[0]).to.have.keys(['value', 'label', 'nickname'])
 
     // Check agg formats intersect with nyplCore formats
     results.formats.forEach(f => {
