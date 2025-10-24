@@ -1,4 +1,5 @@
 const express = require('express')
+const NyplSourceMapper = require('research-catalog-indexer/lib/utils/nypl-source-mapper')
 
 const esClient = require('./lib/elasticsearch/client')
 const loadConfig = require('./lib/load-config')
@@ -23,6 +24,7 @@ app.set('trust proxy', 'loopback')
 app.init = async () => {
   await loadConfig.loadConfig()
   await loadNyplCoreData()
+  await NyplSourceMapper.loadInstance()
   preflightCheck()
 
   // Load logger after running above to ensure we respect LOG_LEVEL if set
