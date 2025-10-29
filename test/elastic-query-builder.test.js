@@ -490,13 +490,128 @@ describe('ElasticQueryBuilder', () => {
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020',
-          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-12-31T23:59:59',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2022',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
         })
 
         expect(query).to.nested.include({
           // Match filters[materialType]:
           'bool.filter[1].bool.should[0].term.materialType\\.id': 'resourcetypes:aud'
+        })
+      })
+
+      it('allows dates with dashes', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020-12-31',
+            dateBefore: '2021',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2022',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows dates with slashes', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020/12/31',
+            dateBefore: '2021',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2022',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows YYYY/MM', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020/01',
+            dateBefore: '2021/10',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2021-11',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows YYYY/MM/DD', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020/01',
+            dateBefore: '2021/10/15',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-10-15T23:59:59',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows dateFrom/dateTo param', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateFrom: '2020/01',
+            dateTo: '2021/10/15',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-10-15T23:59:59',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
         })
       })
     })
