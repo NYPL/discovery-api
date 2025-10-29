@@ -685,8 +685,7 @@ describe('Test Resources responses', function () {
 
           // Ensure bib dates overlap dateAfter for each result
           doc.itemListElement.forEach((item) => {
-            const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
-              .filter((d) => typeof d === 'number')
+            const itemDates = item.result.dates.map(date => parseInt(date.range.lt || date.range.lte))
               // Ensure dates are ascending (some cataloging reverses them):
               .sort((a, b) => a - b)
             // The bib's end date (or start date if it doesn't have an end date)
@@ -706,15 +705,18 @@ describe('Test Resources responses', function () {
 
             // Ensure bib dates overlap date range
             doc.itemListElement.forEach((item) => {
-              const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
-                .filter((d) => typeof d === 'number')
+              const itemEndDates = item.result.dates.map(date => parseInt(date.range.lt || date.range.lte))
+                // Ensure dates are ascending (some cataloging reverses them):
+                .sort((a, b) => a - b)
+
+              const itemStartDates = item.result.dates.map(date => parseInt(date.range.gte))
                 // Ensure dates are ascending (some cataloging reverses them):
                 .sort((a, b) => a - b)
               // The bib's end date (or start date if it doesn't have an end date)
               // should be >= the start of the queried date range:
-              expect(itemDates[itemDates.length - 1]).to.be.at.least(dates[0])
+              expect(itemEndDates[itemEndDates.length - 1]).to.be.at.least(dates[0])
               // The bib's start date should be <= the end of the queried date range:
-              expect(itemDates[0]).to.be.at.most(dates[1])
+              expect(itemStartDates[0]).to.be.at.most(dates[1])
             })
 
             prevTotal = doc.totalResults
