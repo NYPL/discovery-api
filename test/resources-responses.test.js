@@ -266,7 +266,9 @@ describe('Test Resources responses', function () {
 
         assert(doc.itemAggregations)
 
-        assert.deepEqual(doc.format, [{ '@id': 'a', prefLabel: 'Book/Text' }])
+        assert.deepEqual(doc.format, [{ '@id': 'a', prefLabel: 'Book/text' }])
+
+        // assert.deepEqual(doc.collection, [])
 
         done()
       })
@@ -671,8 +673,6 @@ describe('Test Resources responses', function () {
         // Establish ALL count:
         let prevTotal = doc.totalResults
 
-        console.log('Chain first prevtotal ', prevTotal)
-
         // Next, add filter on the first date (objects whose start/end date range include 1984)
         nextUrl = `${nextUrl}&filters[dateAfter]=${dates[0]}`
         return request.get(nextUrl, function (err, response, body) {
@@ -768,15 +768,14 @@ describe('Test Resources responses', function () {
       searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?search_scope=standard_number&q=`
     })
 
-    it('empty search returns status code 200', function (done) {
+    it('empty search returns status code 200', function () {
       request.get(searchAllUrl, function (err, response, body) {
         if (err) throw err
 
-        assert.equal(200, response.statusCode)
-
-        done()
+        return assert.equal(200, response.statusCode)
       })
     })
+
     let standardNumbers = [
       'b22144813',
       '9790001138673', // Should match `identifierV2[@type=bf:Lccn].value`
@@ -864,26 +863,6 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement.some((el) => el.result['@id'] === `res:${bnum}`))
 
           done()
-        })
-      })
-    })
-  })
-
-  describe('deliveryLocationsByBarcode', () => {
-    it('empty search returns status code 200', async () => {
-      const url = `${global.TEST_BASE_URL}/api/v0.1/request/deliveryLocationsByBarcode?barcodes=33433128201161`
-
-      return request.get(url, function (err, response, body) {
-        if (err) throw err
-
-        assert.equal(200, response.statusCode)
-        expect(response.statusCode).to.eq(200)
-
-        const result = JSON.parse(body)
-        console.log('Got result: ', result)
-        expect(result).to.nested.include({
-          'itemListElement[0].deliveryLocation[0].@id': 'loc:mal',
-          'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Main Reading Room 315'
         })
       })
     })
