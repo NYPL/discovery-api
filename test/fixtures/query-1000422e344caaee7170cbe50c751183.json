@@ -1,0 +1,2836 @@
+{
+  "took": 840,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 9,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b18106748",
+        "_score": 534.18713,
+        "_source": {
+          "extent": [
+            "24 p. : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"A publication commemorating the bicentennial of the evacuation of the British from New York City on November 25, 1783, ...\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "The research and implementation of this project ... with the assistance of the Sons of the Revolution in the State of New York.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "\"Selected bibliography\": p. 24.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Source",
+              "label": "New York Genealogical and Biographical Society;",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Evacuation Day, New York, N.Y., 1783",
+            "Evacuation Day, New York, N.Y., 1783 -- Anniversaries, etc",
+            "New York (N.Y.)",
+            "New York (N.Y.) -- History",
+            "New York (N.Y.) -- History -- Revolution, 1775-1783"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Fraunces Tavern Museum"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "ma"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "A Toast to freedom : New York celebrates Evacuation Day."
+          ],
+          "shelfMark": [
+            "NYGB N.Y. L M314.43 F73"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Fraunces Tavern Museum",
+            "Sons of the American Revolution. New York State Society",
+            "New York Genealogical and Biographical Society Collection"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "donor": [
+            "Gift of the New York Genealogical and Biographical Society."
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "NYGB N.Y. L M314.43 F73"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "18106748"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "15527116"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)15527116"
+            }
+          ],
+          "idOclc": [
+            "15527116"
+          ],
+          "popularity": 4,
+          "updatedAt": 1755288263284,
+          "publicationStatement": [
+            "New York : Fraunces Tavern Museum, 1984."
+          ],
+          "identifier": [
+            "urn:shelfmark:NYGB N.Y. L M314.43 F73",
+            "urn:bnum:18106748",
+            "urn:oclc:15527116",
+            "urn:identifier:(OCoLC)15527116"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1985",
+                "gte": "1984"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Evacuation Day, New York, N.Y., 1783 -- Anniversaries, etc.",
+            "New York (N.Y.) -- History -- Revolution, 1775-1783."
+          ],
+          "titleDisplay": [
+            "A Toast to freedom : New York celebrates Evacuation Day."
+          ],
+          "uri": "b18106748",
+          "formatId": "a",
+          "recordTypeId": "a",
+          "placeOfPublication": [
+            "New York"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "28 cm."
+          ]
+        },
+        "sort": [
+          534.18713,
+          "b18106748"
+        ],
+        "matched_queries": [
+          "on-site"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b18106748",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:NYGB N.Y. L M314.43 F73",
+                      "urn:barcode:33433086370503"
+                    ],
+                    "m2CustomerCode": [
+                      "XA"
+                    ],
+                    "physicalLocation": [
+                      "NYGB N.Y. L M314.43 F73"
+                    ],
+                    "shelfMark_sort": "aNYGB N.Y. L M314.43 F000073",
+                    "catalogItemType_packed": [
+                      "catalogItemType:2||book non-circ"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "NYGB N.Y. L M314.43 F73"
+                    ],
+                    "uri": "i24199542",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "NYGB N.Y. L M314.43 F73"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433086370503"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag92||Schwarzman Building - Milstein Division Room 121"
+                    ],
+                    "idBarcode": [
+                      "33433086370503"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:2",
+                        "label": "book non-circ"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Book/Text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mag92",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b10861042",
+        "_score": 521.8738,
+        "_source": {
+          "extent": [
+            "24 p. : ill., ports. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"A publication commemorating the bicentennial of the evacuation of the British from New York City on November 25, 1783, at the end of the Revolutionary War.\"",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 24.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Reproduction",
+              "label": "Microfilm.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Evacuation Day, New York, N.Y., 1783",
+            "New York (N.Y.)",
+            "New York (N.Y.) -- History",
+            "New York (N.Y.) -- History -- Revolution, 1775-1783"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Fraunces Tavern Museum"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            2
+          ],
+          "buildingLocationIds": [
+            "ma"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "title": [
+            "A toast to freedom New York celebrates Evacuation Day."
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            2
+          ],
+          "shelfMark": [
+            "*ZI-437 no. 20"
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Fraunces Tavern Museum",
+            "Sons of the American Revolution. Empire State Society"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "idOclc": [
+            "NYPG84-B40685"
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ZI-437 no. 20"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10861042"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG84-B40685"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0868084"
+            }
+          ],
+          "popularity": 2,
+          "updatedAt": 1755225047530,
+          "publicationStatement": [
+            "New York : Fraunces Tavern Museum, 1984."
+          ],
+          "identifier": [
+            "urn:shelfmark:*ZI-437 no. 20",
+            "urn:bnum:10861042",
+            "urn:oclc:NYPG84-B40685",
+            "urn:identifier:(WaOLN)nyp0868084"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1985",
+                "gte": "1984"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Evacuation Day, New York, N.Y., 1783.",
+            "New York (N.Y.) -- History -- Revolution, 1775-1783."
+          ],
+          "titleDisplay": [
+            "A toast to freedom [microform] :  New York celebrates Evacuation Day."
+          ],
+          "uri": "b10861042",
+          "formatId": "h",
+          "recordTypeId": "a",
+          "placeOfPublication": [
+            "New York"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "28 cm."
+          ]
+        },
+        "sort": [
+          521.8738,
+          "b10861042"
+        ],
+        "matched_queries": [
+          "on-site"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 2,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b10861042",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1105",
+                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*ZI-437",
+                      "urn:barcode:33433110534520"
+                    ],
+                    "physicalLocation": [
+                      "*ZI-437"
+                    ],
+                    "shelfMark_sort": "a*ZI-000437",
+                    "catalogItemType_packed": [
+                      "catalogItemType:6||microfilm service copy"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         2-"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*ZI-437"
+                    ],
+                    "uri": "i31168756",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*ZI-437"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433110534520"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                    ],
+                    "enumerationChronology": [
+                      "r. 2"
+                    ],
+                    "idBarcode": [
+                      "33433110534520"
+                    ],
+                    "owner_packed": [
+                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:6",
+                        "label": "microfilm service copy"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Microform"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mag82",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "volumeRange": [
+                      {
+                        "gte": 2,
+                        "lte": 2
+                      }
+                    ]
+                  },
+                  "sort": [
+                    "         2-"
+                  ]
+                },
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b10861042",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 1
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1105",
+                        "label": "Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*ZI-437",
+                      "urn:barcode:33433110534512"
+                    ],
+                    "physicalLocation": [
+                      "*ZI-437"
+                    ],
+                    "shelfMark_sort": "a*ZI-000437",
+                    "catalogItemType_packed": [
+                      "catalogItemType:6||microfilm service copy"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "enumerationChronology_sort": [
+                      "         1-"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*ZI-437"
+                    ],
+                    "uri": "i24076491",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*ZI-437"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433110534512"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mag82||Schwarzman Building - Milstein Division Room 121"
+                    ],
+                    "enumerationChronology": [
+                      "r. 1"
+                    ],
+                    "idBarcode": [
+                      "33433110534512"
+                    ],
+                    "owner_packed": [
+                      "orgs:1105||Irma and Paul Milstein Division of United States History, Local History and Genealogy"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:6",
+                        "label": "microfilm service copy"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Microform"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mag82",
+                        "label": "Schwarzman Building - Milstein Division Room 121"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "volumeRange": [
+                      {
+                        "gte": 1,
+                        "lte": 1
+                      }
+                    ]
+                  },
+                  "sort": [
+                    "         1-"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "hb990002994230203941",
+        "_score": 303.09213,
+        "_source": {
+          "extent": [
+            "xi, 105 p., [1] folded leaf of plates : ill. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliography: p. 103-105.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Processing Action",
+              "label": "committed to retain",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "recap-hl"
+          ],
+          "subjectLiteral_exploded": [
+            "Fur trade",
+            "Fur trade -- Northwestern States",
+            "Fur trade -- Northwest, Canadian",
+            "Material culture",
+            "Material culture -- Northwestern States",
+            "Material culture -- Northwest, Canadian",
+            "Northwestern States",
+            "Northwestern States -- Antiquities",
+            "Northwest, Canadian",
+            "Northwest, Canadian -- Antiquities"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Wheeler Productions"
+          ],
+          "description": [
+            "Includes an introduction to the fur trade, many illustrations of artifacts, sections on fur trade accidents, food and drink, and a listing of fur trade sites in Canada and the United States."
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "rc"
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "A toast to the fur trade : a picture essay on its material culture / by Robert C. Wheeler ; illustrations by David Christofferson ; edited by Ardis Hillman Wheeler."
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "creatorLiteral": [
+            "Wheeler, Robert C., 1913-1986"
+          ],
+          "idLccn": [
+            "^^^84091414^"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Wheeler, Ardis Hillman"
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "nypl:Bnumber",
+              "value": "990002994230203941"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0961436212 (pbk.)"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0961436204 (hard)"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "12314723"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "SCSB-10060378"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "^^^84091414^"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)12272687 (OCoLC)12282112 (OCoLC)12282122 (OCoLC)12321773 (OCoLC)28021603 (OCoLC)1298901854"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)12314723"
+            }
+          ],
+          "idOclc": [
+            "12314723",
+            "SCSB-10060378"
+          ],
+          "popularity": 0,
+          "updatedAt": 1755828890481,
+          "publicationStatement": [
+            "St. Paul, MN : Wheeler Productions, c1985."
+          ],
+          "identifier": [
+            "urn:bnum:990002994230203941",
+            "urn:isbn:0961436212 (pbk.)",
+            "urn:isbn:0961436204 (hard)",
+            "urn:oclc:12314723",
+            "urn:oclc:SCSB-10060378",
+            "urn:lccn:^^^84091414^",
+            "urn:identifier:(OCoLC)12272687 (OCoLC)12282112 (OCoLC)12282122 (OCoLC)12321773 (OCoLC)28021603 (OCoLC)1298901854",
+            "urn:identifier:(OCoLC)12314723"
+          ],
+          "genreForm": [
+            "History"
+          ],
+          "idIsbn": [
+            "0961436212 (pbk.)",
+            "0961436204 (hard)"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1986",
+                "gte": "1985"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Fur trade -- Northwestern States.",
+            "Fur trade -- Northwest, Canadian",
+            "Material culture -- Northwestern States.",
+            "Material culture -- Northwest, Canadian.",
+            "Northwestern States -- Antiquities.",
+            "Northwest, Canadian -- Antiquities."
+          ],
+          "titleDisplay": [
+            "A toast to the fur trade : a picture essay on its material culture / by Robert C. Wheeler ; illustrations by David Christofferson ; edited by Ardis Hillman Wheeler."
+          ],
+          "uri": "hb990002994230203941",
+          "lccClassification": [
+            "F597 .W57 1985"
+          ],
+          "formatId": "a",
+          "recordTypeId": "a",
+          "placeOfPublication": [
+            "St. Paul, MN"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "28 cm."
+          ],
+          "idIsbn_clean": [
+            "0961436212",
+            "0961436204"
+          ]
+        },
+        "sort": [
+          303.09213,
+          "hb990002994230203941"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "hb990002994230203941",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:0004",
+                        "label": "Harvard Library"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:N.A.ARC. W 565 t",
+                      "urn:barcode:32044042656827"
+                    ],
+                    "physicalLocation": [
+                      "N.A.ARC. W 565 t"
+                    ],
+                    "shelfMark_sort": "aN.A.ARC. W 565 t",
+                    "catalogItemType_packed": [
+                      "catalogItemType:1||non-circ"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "N.A.ARC. W 565 t"
+                    ],
+                    "uri": "hi231754796330003941",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "N.A.ARC. W 565 t"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "32044042656827"
+                      }
+                    ],
+                    "idBarcode": [
+                      "32044042656827"
+                    ],
+                    "owner_packed": [
+                      "orgs:0004||Harvard Library"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Book/Text"
+                    ],
+                    "recapCustomerCode": [
+                      "TZ"
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b15994132",
+        "_score": 20.994675,
+        "_source": {
+          "extent": [
+            "1 videocassette (VHS, NTSC) (58 min.) : sd., col. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Title from original container.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Credits",
+              "label": "Camera: Caro Thompson.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Event",
+              "label": "Videotaped at Jacob's Pillow, Becket, Mass., June 23, Aug. 3 and other dates in summer 1984.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Morris dance",
+            "Break dancing"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "description": [
+            "This tape is a compilation of footage from special events during the 1984 season at Jacob's Pillow. The first segment includes footage from opening night festivities, including performances by the Pokingbrook Morris dancers and female garland dancers. The second segment records a brief presentation by Jacob's Pillow director Liz Thompson and dance patron Irene Hunter. Thompson speaks about the first appearance by the Martha Graham company at Jacob's Pillow and her own experience as a Graham dancer, and announces the naming of a building at Jacob's Pillow for Irene Hunter. Thompson proposes an audience toast to Hunter and Graham, and Hunter proposes a toast to Thompson. The third segment on the tape includes footage from outdoor daytime Gala festivities, including performances by two clowns making balloon sculptures, stilt-walkers, and breakdancers from the Rockwell Association. The fourth segment records a raffle held after a performance by the Hubbard Street Dance Company. The segment starts with the curtain calls following the performance; Marge Champion draws seat numbers and announces prizes for members of the audience. The last segment of the tape records breakdancing by a group of children and teenagers from Pittsfield."
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "pa"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Jacob's Pillow. special events."
+          ],
+          "shelfMark": [
+            "*MGZIA 4-4451"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Champion, Marge",
+            "Thompson, Caro",
+            "Jacob's Pillow Dance Festival"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "donor": [
+            "Gift of Jacob's Pillow Dance Festival."
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*MGZIA 4-4451"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "15994132"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPT04-F167"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)t280000016"
+            }
+          ],
+          "idOclc": [
+            "NYPT04-F167"
+          ],
+          "popularity": 0,
+          "updatedAt": 1755236924277,
+          "publicationStatement": [
+            "1984."
+          ],
+          "identifier": [
+            "urn:shelfmark:*MGZIA 4-4451",
+            "urn:bnum:15994132",
+            "urn:oclc:NYPT04-F167",
+            "urn:identifier:(WaOLN)t280000016"
+          ],
+          "genreForm": [
+            "Dance.",
+            "Video."
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:mov",
+              "label": "Moving image"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1985",
+                "gte": "1984"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Morris dance.",
+            "Break dancing."
+          ],
+          "titleDisplay": [
+            "Jacob's Pillow. 1984 [videorecording] : special events."
+          ],
+          "uri": "b15994132",
+          "formatId": "s",
+          "recordTypeId": "g",
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "tableOfContents": [
+            "June, 1984. Opening night: Morris dancers (11 min.) -- Audience toast (4 min.)",
+            "June 23, 1984. Gala festivities (19 min.)",
+            "Aug. 3, 1984. Hubbard Street raffle (8 min.)",
+            "[n.d.] Breakdancers from Pittsfield (16 min.)"
+          ],
+          "dimensions": [
+            "1/2 in."
+          ]
+        },
+        "sort": [
+          20.994675,
+          "b15994132"
+        ],
+        "matched_queries": [
+          "on-site"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b15994132",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*MGZIA 4-4451",
+                      "urn:barcode:33433064016748"
+                    ],
+                    "physicalLocation": [
+                      "*MGZIA 4-4451"
+                    ],
+                    "shelfMark_sort": "a*MGZIA 4-004451",
+                    "catalogItemType_packed": [
+                      "catalogItemType:24||archival video recording"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "aeonUrl": [
+                      "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=*MGZIA+4-4451&Date=1984&Form=30&Genre=archival+video+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db15994132&ItemISxN=i154045846&ItemNumber=33433064016748&ItemPublisher=1984.&Location=Performing+Arts+Dance+Division&ReferenceNumber=b159941325&Site=LPADNAMI&Title=Jacob%27s+Pillow.+special+events."
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*MGZIA 4-4451"
+                    ],
+                    "uri": "i15404584",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*MGZIA 4-4451"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433064016748"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pad22||Performing Arts Research Collections - Dance"
+                    ],
+                    "idBarcode": [
+                      "33433064016748"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:24",
+                        "label": "archival video recording"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "VHS"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pad22",
+                        "label": "Performing Arts Research Collections - Dance"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b14725291",
+        "_score": 19.659126,
+        "_source": {
+          "extent": [
+            "1 sound disc (50 min.) : digital ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Compact disc.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Program notes by Tony Thomas and Len Engel ([8] p. : ill.) inserted in container.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Motion picture music"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Varèse Sarabande"
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "pa"
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The Blue Max original motion picture soundtrack"
+          ],
+          "shelfMark": [
+            "*LDC 23438 (F)"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "creatorLiteral": [
+            "Goldsmith, Jerry"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*LDC 23438 (F)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "14725291"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "15721299"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "VCD 47238 Varèse Sarabande"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)M210000192"
+            }
+          ],
+          "idOclc": [
+            "15721299"
+          ],
+          "popularity": 0,
+          "uniformTitle": [
+            "Blue Max. Selections",
+            "Blue Max (Motion picture)"
+          ],
+          "updatedAt": 1755342524571,
+          "publicationStatement": [
+            "North Hollywood, Calif. : Varèse Sarabande, p1985."
+          ],
+          "identifier": [
+            "urn:shelfmark:*LDC 23438 (F)",
+            "urn:bnum:14725291",
+            "urn:oclc:15721299",
+            "urn:identifier:VCD 47238 Varèse Sarabande",
+            "urn:identifier:(WaOLN)M210000192"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:aud",
+              "label": "Audio"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1986",
+                "gte": "1985"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Motion picture music."
+          ],
+          "titleDisplay": [
+            "The Blue Max [sound recording] : original motion picture soundtrack / music composed and conducted by Jerry Goldsmith."
+          ],
+          "uri": "b14725291",
+          "formatId": "y",
+          "recordTypeId": "j",
+          "placeOfPublication": [
+            "North Hollywood, Calif."
+          ],
+          "titleAlt": [
+            "Blue Max."
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "tableOfContents": [
+            "Main title -- The new arrival -- First blood -- The first victory -- The victim -- A toast to Bruno -- The attack, parts I & II -- A lonely hero -- A small favor -- The lovers -- Finale, part I -- Prelude, part II -- The bridge -- Stachel's confession -- Retreat, parts I & II -- Stachel in Berlin, parts I & II -- Kaeti has a plan -- Stachel's last flight -- End title."
+          ],
+          "dimensions": [
+            "4 3/4 in."
+          ]
+        },
+        "sort": [
+          19.659126,
+          "b14725291"
+        ],
+        "matched_queries": [
+          "on-site"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b14725291",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*LDC 23438 (F)",
+                      "urn:barcode:33433047707090"
+                    ],
+                    "physicalLocation": [
+                      "*LDC 23438 (F)"
+                    ],
+                    "shelfMark_sort": "a*LDC 23438 (F)",
+                    "catalogItemType_packed": [
+                      "catalogItemType:12||musical sound recording"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*LDC 23438 (F)"
+                    ],
+                    "uri": "i14506177",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*LDC 23438 (F)"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433047707090"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pah32||Performing Arts Research Collections - Recorded Sound"
+                    ],
+                    "idBarcode": [
+                      "33433047707090"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:12",
+                        "label": "musical sound recording"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Music CD"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pah32",
+                        "label": "Performing Arts Research Collections - Recorded Sound"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b16739633",
+        "_score": 19.659126,
+        "_source": {
+          "extent": [
+            "1 sound disc (55 min.) : analog, 33 1/3 rpm, stereo. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Excerpts from the original soundtrack of the film by Francesco Rosi.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Digital recording.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Operas",
+            "Operas -- Excerpts",
+            "Motion picture music",
+            "Motion picture music -- Excerpts"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Erato ; RCA Records [distributor]"
+          ],
+          "language": [
+            {
+              "id": "lang:fre",
+              "label": "French"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "pa"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Carmen (excerpts)"
+          ],
+          "shelfMark": [
+            "*LSRX 15843"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "creatorLiteral": [
+            "Bizet, Georges, 1838-1875"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Migenes-Johnson, Julia",
+            "Domingo, Plácido, 1941-",
+            "Raimondi, Ruggero",
+            "Esham, Faith",
+            "Daniel, Susan",
+            "Watson, Lillian",
+            "Bogart, John-Paul",
+            "Le Roux, François",
+            "Maazel, Lorin, 1930-2014",
+            "Orchestre national de France"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*LSRX 15843"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "16739633"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "11575926"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "HBC1-5302 Erato"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)A110000037"
+            }
+          ],
+          "idOclc": [
+            "11575926"
+          ],
+          "popularity": 0,
+          "uniformTitle": [
+            "Carmen. Selections"
+          ],
+          "updatedAt": 1755203583863,
+          "publicationStatement": [
+            "[France] : Erato ; New York : RCA Records [distributor], c1984."
+          ],
+          "identifier": [
+            "urn:shelfmark:*LSRX 15843",
+            "urn:bnum:16739633",
+            "urn:oclc:11575926",
+            "urn:identifier:HBC1-5302 Erato",
+            "urn:identifier:(WaOLN)A110000037"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:aud",
+              "label": "Audio"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1985",
+                "gte": "1984"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Operas -- Excerpts.",
+            "Motion picture music -- Excerpts."
+          ],
+          "titleDisplay": [
+            "Carmen [sound recording] : (excerpts) / Georges Bizet."
+          ],
+          "uri": "b16739633",
+          "formatId": "j",
+          "recordTypeId": "j",
+          "placeOfPublication": [
+            "[France] : New York"
+          ],
+          "titleAlt": [
+            "Carmen."
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "tableOfContents": [
+            "Habanera : \"L'amour est un oiseau rebelle\" -- Duo : \"Parle-moi de ma mère\" -- Séguedille et duo : \"Près des remparts de Séville\" -- Chanson bohème : \"Les tringles des sistres tintaient\" -- Couplets : \"Votre toast, je peux vous le rendre\" -- \"La fleur que tu m'avais jetée\" -- Air : \"Je dis que rien ne m'épouvante\" -- Marche et chœur final : \"C'est toi?\" -- \"C'est moi!\""
+          ],
+          "dimensions": [
+            "12 in."
+          ]
+        },
+        "sort": [
+          19.659126,
+          "b16739633"
+        ],
+        "matched_queries": [
+          "on-site"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b16739633",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*LSRX 15843 [Disc]",
+                      "urn:barcode:33433067981898"
+                    ],
+                    "physicalLocation": [
+                      "*LSRX 15843 [Disc]"
+                    ],
+                    "shelfMark_sort": "a*LSRX 15843 [Disc]",
+                    "catalogItemType_packed": [
+                      "catalogItemType:12||musical sound recording"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "aeonUrl": [
+                      "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Bizet%2C+Georges%2C+1838-1875&CallNumber=*LSRX+15843+%5BDisc%5D&Date=1984&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16739633&ItemISxN=i174199776&ItemNumber=33433067981898&ItemPlace=%5BFrance%5D+%3A+New+York&ItemPublisher=Erato+%3B+RCA+Records+%5Bdistributor%5D%2C+c1984.&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b16739633x&Site=LPAMRAMI&Title=Carmen+%28excerpts%29"
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*LSRX 15843 [Disc]"
+                    ],
+                    "uri": "i17419977",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*LSRX 15843 [Disc]"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433067981898"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pah22||Performing Arts Research Collections - Recorded Sound"
+                    ],
+                    "idBarcode": [
+                      "33433067981898"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:12",
+                        "label": "musical sound recording"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Musical recording"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pah22",
+                        "label": "Performing Arts Research Collections - Recorded Sound"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b16319759",
+        "_score": 19.272837,
+        "_source": {
+          "extent": [
+            "1 sound disc : analog, 33 1/3 rpm, stereo. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Rhythm and blues music.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "All selections by Tony Hester except as indicated.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "\"All selections previously released as Volt singles\"--Container.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Program notes by Jack Sbarbori on container.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Rhythm and blues music"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Stax"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "pa"
+          ],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "The best of the Dramatics"
+          ],
+          "shelfMark": [
+            "*LSRX 17345 (C)"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "creatorLiteral": [
+            "Dramatics (Musical group) prf"
+          ],
+          "idLccn": [
+            "95785357"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Hester, Tony"
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*LSRX 17345 (C)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "16319759"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "13676631"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "95785357"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "MPS-8526 Stax"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)A280000022"
+            }
+          ],
+          "idOclc": [
+            "13676631"
+          ],
+          "popularity": 1,
+          "updatedAt": 1755201892872,
+          "publicationStatement": [
+            "Berkeley, Calif. : Stax, p1984."
+          ],
+          "identifier": [
+            "urn:shelfmark:*LSRX 17345 (C)",
+            "urn:bnum:16319759",
+            "urn:oclc:13676631",
+            "urn:lccn:95785357",
+            "urn:identifier:MPS-8526 Stax",
+            "urn:identifier:(WaOLN)A280000022"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:aud",
+              "label": "Audio"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1985",
+                "gte": "1984"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Rhythm and blues music."
+          ],
+          "titleDisplay": [
+            "The best of the Dramatics [sound recording]."
+          ],
+          "uri": "b16319759",
+          "formatId": "j",
+          "recordTypeId": "j",
+          "placeOfPublication": [
+            "Berkeley, Calif."
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "tableOfContents": [
+            "Whatcha see is whatcha get (3:32) -- Thankful for your love (4:25) -- Get up and get down (3:10) -- Fall in love lady love (3:34) -- And I panicked / Jimmy Roach (3:34) -- In the rain (5:08) -- Toast to the fool / Snyder-Davis (4:13) -- Hey you! Get off my mountain (3:28) -- Fell for you (3:12) -- The Devil is dope (3:38)."
+          ],
+          "dimensions": [
+            "12 in."
+          ]
+        },
+        "sort": [
+          19.272837,
+          "b16319759"
+        ],
+        "matched_queries": [
+          "on-site"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "b16319759",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*LSRX 17345 (C) [Disc]",
+                      "urn:barcode:33433035629520"
+                    ],
+                    "physicalLocation": [
+                      "*LSRX 17345 (C) [Disc]"
+                    ],
+                    "shelfMark_sort": "a*LSRX 17345 (C) [Disc]",
+                    "catalogItemType_packed": [
+                      "catalogItemType:12||musical sound recording"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "aeonUrl": [
+                      "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Dramatics+%28Musical+group%29+prf&CallNumber=*LSRX+17345+%28C%29+%5BDisc%5D&Date=1984&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16319759&ItemISxN=i156311252&ItemNumber=33433035629520&ItemPlace=Berkeley%2C+Calif.&ItemPublisher=Stax%2C+p1984.&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b163197593&Site=LPAMRAMI&Title=The+best+of+the+Dramatics"
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "*LSRX 17345 (C) [Disc]"
+                    ],
+                    "uri": "i15631125",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "*LSRX 17345 (C) [Disc]"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "33433035629520"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:pah22||Performing Arts Research Collections - Recorded Sound"
+                    ],
+                    "idBarcode": [
+                      "33433035629520"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:12",
+                        "label": "musical sound recording"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Musical recording"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:pah22",
+                        "label": "Performing Arts Research Collections - Recorded Sound"
+                      }
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "b21916755",
+        "_score": 16.755203,
+        "_source": {
+          "extent": [
+            "1 online resource (1 sound file)"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Opera excerpts.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Libretto by Henri Meilhac and Ludovic Halévy, based on the novel by Propser Mérimée.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "Sung in French.",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "subjectLiteral_exploded": [
+            "Operas",
+            "Operas -- Excerpts"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "Deutsche Grammophon"
+          ],
+          "language": [
+            {
+              "id": "lang:fre",
+              "label": "French"
+            }
+          ],
+          "numItemsTotal": [
+            0
+          ],
+          "buildingLocationIds": [],
+          "createdYear": [
+            1984
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Carmen : Querschnitt = highlights"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1984"
+          ],
+          "creatorLiteral": [
+            "Bizet, Georges, 1838-1875"
+          ],
+          "idLccn": [
+            "DEF058230702",
+            "DEF058230703",
+            "DEF058230706",
+            "DEF058230709",
+            "DEF058230711",
+            "DEF058230745",
+            "DEF058230746",
+            "DEF058230757",
+            "DEF058230721",
+            "DEF058230765",
+            "DEF058230723",
+            "DEF058230701",
+            "DEF058230705",
+            "DEF058230724",
+            "DEF058230712"
+          ],
+          "numElectronicResources": [
+            1
+          ],
+          "contributorLiteral": [
+            "Meilhac, Henri, 1831-1897",
+            "Halévy, Ludovic, 1834-1908",
+            "Ricciarelli, Katia",
+            "Baltsa, Agnes",
+            "Carreras, José",
+            "Dam, José van",
+            "Karajan, Herbert von",
+            "Mérimée, Prosper, 1803-1870",
+            "Opéra de Paris. Chœur, singer",
+            "Schöneberger Sängerknaben, singer",
+            "Berliner Philharmoniker, instrumentalist"
+          ],
+          "addedAuthorTitle": [
+            "Carmen."
+          ],
+          "dateStartYear": [
+            1984
+          ],
+          "identifierV2": [
+            {
+              "type": "nypl:Bnumber",
+              "value": "21916755"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "983830749"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230702"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230703"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230706"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230709"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230711"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230745"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230746"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230757"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230721"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230765"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230723"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230701"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230705"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230724"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "DEF058230712"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "00028941332226 Deutsche Grammophon"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)983830749"
+            }
+          ],
+          "idOclc": [
+            "983830749"
+          ],
+          "popularity": 0,
+          "uniformTitle": [
+            "Carmen. Selections"
+          ],
+          "updatedAt": 1755328869623,
+          "publicationStatement": [
+            "Hamburg : Deutsche Grammophon, [1984]"
+          ],
+          "identifier": [
+            "urn:bnum:21916755",
+            "urn:oclc:983830749",
+            "urn:lccn:DEF058230702",
+            "urn:lccn:DEF058230703",
+            "urn:lccn:DEF058230706",
+            "urn:lccn:DEF058230709",
+            "urn:lccn:DEF058230711",
+            "urn:lccn:DEF058230745",
+            "urn:lccn:DEF058230746",
+            "urn:lccn:DEF058230757",
+            "urn:lccn:DEF058230721",
+            "urn:lccn:DEF058230765",
+            "urn:lccn:DEF058230723",
+            "urn:lccn:DEF058230701",
+            "urn:lccn:DEF058230705",
+            "urn:lccn:DEF058230724",
+            "urn:lccn:DEF058230712",
+            "urn:identifier:00028941332226 Deutsche Grammophon",
+            "urn:identifier:(OCoLC)983830749"
+          ],
+          "genreForm": [
+            "Streaming audio."
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:aud",
+              "label": "Audio"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1984"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1985",
+                "gte": "1984"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Operas -- Excerpts."
+          ],
+          "titleDisplay": [
+            "Carmen : Querschnitt = highlights / Bizet."
+          ],
+          "uri": "b21916755",
+          "electronicResources": [
+            {
+              "label": "Access Naxos Music Library",
+              "url": "https://nypl.naxosmusiclibrary.com/catalogue/item.asp?cid=00028941332226"
+            }
+          ],
+          "formatId": "w",
+          "recordTypeId": "j",
+          "placeOfPublication": [
+            "Hamburg"
+          ],
+          "titleAlt": [
+            "Carmen."
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "tableOfContents": [
+            "Prélude, acte I (3:37) -- Sur la place (6:25) -- Avec la garde montante (2:28) -- L'amour est un oiseau rebelle (4:32) -- Dialogue: Monsieur le brigadier ; Parle-moi de ma mère (6:29) -- Près des remparts de Séville (4:49) -- Les tringles des sistres tintaient (4:59) -- Dialogue: Vous avez quelque chose à nous dire (1:21) -- Vivat! vivat le Toréro! (1:39) -- Votre toast, je peux vous le rendre (5:27) -- La fleur que tu m'avais jetée (4:22) -- En vain, pour éviter les réponses amères/Parlez encore, parlez, mes belles (3:08) -- A dos cuartos! (2:24) -- Musique de transition (:40) -- C'est toi!/C'est moi! (10:27)."
+          ]
+        },
+        "sort": [
+          16.755203,
+          "b21916755"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 0,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": []
+            }
+          }
+        }
+      },
+      {
+        "_index": "resources-2025-07-07",
+        "_id": "cb299666",
+        "_score": 4.845872,
+        "_source": {
+          "extent": [
+            "201 pages : illustrations ;"
+          ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"A Peregrine Smith book\"--Title page verso.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Rare Book copy: In original dust jacket.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references (pages 191-199).",
+              "type": "bf:Note"
+            }
+          ],
+          "nyplSource": [
+            "recap-cul"
+          ],
+          "subjectLiteral_exploded": [
+            "Folk poetry, American",
+            "Cowboys",
+            "Cowboys -- Poetry"
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "publisherLiteral": [
+            "G.M. Smith"
+          ],
+          "description": [
+            "This collection of poems was chosen from among 10,000 gathered from cowboy reciters, ranch poets and from a library of over 200 published works of cowboy verse. One third of the poems are classics that have proven their vitality by having lived in the hearts and minds of cowboys and ranchers for decades. The remaining two-thirds are new, created within the last few years."
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "buildingLocationIds": [
+            "rc"
+          ],
+          "createdYear": [
+            1985
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "title": [
+            "Cowboy poetry : a gathering"
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1985"
+          ],
+          "idLccn": [
+            "85010833"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Cannon, Hal, 1948-",
+            "Knudson, J. Scott"
+          ],
+          "dateStartYear": [
+            1985
+          ],
+          "identifierV2": [
+            {
+              "type": "nypl:Bnumber",
+              "value": "299666"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0879052082"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9780879052089"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "087905204X"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9780879052041"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "0879052112"
+            },
+            {
+              "type": "bf:Isbn",
+              "value": "9780879052119"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "ocm12107195"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "12107195"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "SCSB-2362365"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "85010833"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)ocm12107195"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)1003845379"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)12107195"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "299666"
+            }
+          ],
+          "idOclc": [
+            "ocm12107195",
+            "12107195",
+            "SCSB-2362365"
+          ],
+          "popularity": 0,
+          "updatedAt": 1755661507437,
+          "publicationStatement": [
+            "Salt Lake City : G.M. Smith, 1985."
+          ],
+          "identifier": [
+            "urn:bnum:299666",
+            "urn:isbn:0879052082",
+            "urn:isbn:9780879052089",
+            "urn:isbn:087905204X",
+            "urn:isbn:9780879052041",
+            "urn:isbn:0879052112",
+            "urn:isbn:9780879052119",
+            "urn:oclc:ocm12107195",
+            "urn:oclc:12107195",
+            "urn:oclc:SCSB-2362365",
+            "urn:lccn:85010833",
+            "urn:identifier:(OCoLC)ocm12107195",
+            "urn:identifier:(OCoLC)1003845379",
+            "urn:identifier:(OCoLC)12107195",
+            "urn:identifier:299666"
+          ],
+          "genreForm": [
+            "Cowboy poetry.",
+            "Poetry."
+          ],
+          "idIsbn": [
+            "0879052082",
+            "9780879052089",
+            "087905204X",
+            "9780879052041",
+            "0879052112",
+            "9780879052119"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1986",
+                "gte": "1985"
+              },
+              "raw": "?",
+              "tag": "s"
+            }
+          ],
+          "subjectLiteral": [
+            "Folk poetry, American.",
+            "Cowboys -- Poetry."
+          ],
+          "titleDisplay": [
+            "Cowboy poetry : a gathering / edited and with an introduction by Hal Cannon."
+          ],
+          "uri": "cb299666",
+          "lccClassification": [
+            "PS477.5.C67 C68 1985"
+          ],
+          "formatId": "a",
+          "recordTypeId": "a",
+          "placeOfPublication": [
+            "Salt Lake City"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "tableOfContents": [
+            "Cowboy's soliloquy / Allen McCanless -- Sierry Petes / Gail Gardner -- Duded wrangler / Gail Gardner -- Zebra dun / Anonymous -- Gol-darned wheel / Anonymous -- Rain on the range / S. Omar Barker -- Bear ropin' buckaroo / S. Omar Barker -- Jack Potter's courtin' / S. Omar Barker -- Cowboy's Christmas Ball / Larry Chittendon -- Alkali Pete hits town / T.J. McCoy -- Silver Jack / Anonymous -- Blizzard / Eugene Ware -- Windy Bill / Anonymous -- D-2 horse wrangler / D.J. O'Malley -- Cowboy's dance song / James Barton Adams -- That little blue roan / Bruce Kiskaddon -- When they've finished shipping cattle in the Fall / Bruce Kiskaddon -- Cowboy's dream / Bruce Kiskaddon -- Old night hawk / Bruce Kiskaddon -- Boomer Johnson / Henry Herbert Knibbs -- Murph and McClop / Anonymous -- Silver Bells and Golden Spurs / Anonymous -- Hell in Texas / Anonymous -- Strawberry Roan / Curley Fletcher -- Flyin' outlaw / Curley Fletcher -- Cowboy's prayer / Curley Fletcher -- Cowboy's prayer / Badger Clark -- \"Bueno,\" which in Spanish means good / Nyle A. Henderson -- How many cows? / Nyle A. Henderson -- Ol' Edgar Martin / Carlos Ashley -- To be a top hand / Georgie sicking -- Old Tuff / Georgie Sicking -- For Jeff / Jon Bowerman -- Tribute to Freckles and Tornado / Jon Bowerman -- Grey's River Roundup / Howard Norskog -- Book / Waddie Mitchell -- Throw-back / Waddie Mitchell -- One Red Rose / Ernie Fanning -- Vanishing Valley / Ernie Fanning -- Saturday Night in Woody / Jesse Smith -- Saddle tramp / Buck Wilkerson -- Kid solos / Bob Schild -- Two of a kind / Bob Schild -- Matching green ribbon / Jim Hofer -- Time to stay, a time to go / Baxter Black -- Big high and lonesome / Baxter Black -- Poets gathering, 1985 / Charles A. Kortes -- Greasin' the miles / Nick Johnson -- Dudes / Nick Johnson -- Bellerin' and bawlin' / Linda Ash -- Great Wanagan Creek flood / Bill Lowman -- So long / Ross Knox -- Easy chairs and saddle sores / Ross Knox -- Dying times / Ross Knox -- Old horse / Don Ian Smith -- Open range / Melvin L. Whipple -- Voices in the night / Melvin L. Whipple -- Chookaloski Mare / Lucky Whipple -- Buckin' horse ballet / Lucky Whipple -- Buckskin Flats / Gorden Eastman -- No imposter / Duane Reece -- Cows and logs / Harold Otto -- Range cow in winter / Vern Mortensen -- Young fellers / R.O. Munn -- Gathering cattle in the Deertracks Pasture / Drummond Hadley -- Old Cowman / Dick Gibford -- Cowboy's toast / Dick Gibford -- Last Buckaroo / Dick Gibford -- Glow / Bill Simpson -- Like it or not / Bill Simpson -- Cowboy's favorite / Barney Nelson -- Fill up those glasses, Bartender / Jim Bollers -- Early morning roundup / Owen Barton -- My Ol' Stetson / Owen Barton -- Going to the Shawnee Rodeo / Don Bell -- Reincarnation / Wallace McRae -- Lease hound / Wallace McRae -- Spring / Vess Quinlan."
+          ],
+          "dimensions": [
+            "18 cm"
+          ],
+          "idIsbn_clean": [
+            "0879052082",
+            "9780879052089",
+            "087905204X",
+            "9780879052041",
+            "0879052112",
+            "9780879052119"
+          ]
+        },
+        "sort": [
+          4.845872,
+          "cb299666"
+        ],
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-2025-07-07",
+                  "_id": "cb299666",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:0002",
+                        "label": "Columbia University Libraries"
+                      }
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:PS477.5.C67 C68 1985",
+                      "urn:barcode:CU71452699"
+                    ],
+                    "physicalLocation": [
+                      "PS477.5.C67 C68 1985"
+                    ],
+                    "shelfMark_sort": "aPS477.5.C67 C68 001985",
+                    "catalogItemType_packed": [
+                      "catalogItemType:1||non-circ"
+                    ],
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "shelfMark": [
+                      "PS477.5.C67 C68 1985"
+                    ],
+                    "uri": "ci4249477",
+                    "identifierV2": [
+                      {
+                        "type": "bf:ShelfMark",
+                        "value": "PS477.5.C67 C68 1985"
+                      },
+                      {
+                        "type": "bf:Barcode",
+                        "value": "CU71452699"
+                      }
+                    ],
+                    "idBarcode": [
+                      "CU71452699"
+                    ],
+                    "owner_packed": [
+                      "orgs:0002||Columbia University Libraries"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
+                      }
+                    ],
+                    "formatLiteral": [
+                      "Book/Text"
+                    ],
+                    "recapCustomerCode": [
+                      "CU"
+                    ],
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ]
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
