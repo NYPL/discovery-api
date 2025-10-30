@@ -24,7 +24,7 @@ before(async () => {
 
   if (process.env.UPDATE_FIXTURES) {
     // Specify the environment from which to initialize config:
-    process.env.ENV = 'production'
+    process.env.ENV = 'qa'
   }
 
   await app.init()
