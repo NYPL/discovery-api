@@ -101,7 +101,7 @@ describe('RequestabilityResolver', () => {
           accessMessage: [{ id: 'accessMessage:1' }],
           catalogItemType: [{ id: 'catalogItemType:2' }],
           status: [{ id: 'status:a' }],
-          holdingLocation: [{ id: 'loc:scff2' }],
+          holdingLocation: [{ id: 'loc:pam22' }],
           identifier: ['urn:barcode:33433058338470']
         }
         esResponse = { hits: { hits: [{ _source: { items: [item] } }] } }
