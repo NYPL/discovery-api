@@ -3,8 +3,11 @@ const { expect } = require('chai')
 const {
   AggregationsSerializer,
   ItemResultsSerializer,
+  ItemResourceSerializer,
   ResourceSerializer
 } = require('../lib/jsonld_serializers')
+
+const NyplSourceMapper = require('research-catalog-indexer/lib/utils/nypl-source-mapper')
 
 describe('JSONLD Serializers', () => {
   describe('ResourceSerializer', () => {
@@ -171,6 +174,23 @@ describe('JSONLD Serializers', () => {
       const bucketsWithoutLabels = formatAgg.values
         .filter((val) => !val.label)
       expect(bucketsWithoutLabels).to.have.lengthOf(0)
+    })
+
+    it('defaults to empty aggregations if missing', async () => {
+      const serialized = await AggregationsSerializer.serialize({ hits: { total: 0 } })
+      expect(serialized.itemListElement).to.deep.equal([])
+      expect(serialized.totalResults).to.equal(0)
+    })
+  })
+
+  describe('ItemResourceSerializer', async () => {
+    describe('addSourceIdentifier', async () => {
+      it('makes no change if item uri has unexpected format', async () => {
+        await NyplSourceMapper.loadInstance({})
+        const fakeItem = { uri: '1234' }
+        await ItemResourceSerializer.addSourceIdentifier(fakeItem)
+        expect(fakeItem).to.deep.equal({ uri: '1234', identifier: [] })
+      })
     })
   })
 })

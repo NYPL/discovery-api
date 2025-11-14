@@ -410,6 +410,13 @@ describe('Resources query', function () {
           expect(data.bib.id).to.eq('11055155')
         })
     })
+
+    it('Throws InvalidParameterError for unexpected uri format', async () => {
+      return app.resources.annotatedMarc({ uri: '1234' })
+        .catch((e) => {
+          expect(e.message).to.equal('Invalid bnum: 1234')
+        })
+    })
   })
 
   describe('findByUri 4xx', () => {
@@ -600,6 +607,24 @@ describe('Resources query', function () {
                 }
               }
             ])
+        })
+    })
+  })
+
+  describe('findByUri with unexpected uri format', async () => {
+    before(() => {
+      fixtures.enableEsFixtures()
+    })
+
+    after(() => {
+      fixtures.disableEsFixtures()
+    })
+
+    it('throws an InvalidParameterError', () => {
+      return app.resources.findByUri({ uri: '1234' })
+        .catch((e) => {
+          console.log('message: ', e.message)
+          expect(e.message).to.equal('Invalid bnum: 1234')
         })
     })
   })
