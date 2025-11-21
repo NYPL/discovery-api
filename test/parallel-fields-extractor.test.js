@@ -6,11 +6,6 @@ const indexFixture = require('./fixtures/parallel-fields-index.json')
 
 describe('Parallel Fields Extractor', () => {
   describe('When a bib has a parallel fields property', () => {
-    it('returns the elasticSearchResponse object', () => {
-      const response = parallelFieldsExtractor(parallelFieldsBib)
-      expect(response.hits.hits).to.be.an('array')
-    })
-
     it('adds each of the items in that array to the bibs as parallel<FieldName>', () => {
       const parallelsExtracted = parallelFieldsExtractor(parallelFieldsBib).hits.hits[0]._source
       expect(Object.keys(parallelsExtracted).length).to.equal(4)
@@ -26,6 +21,52 @@ describe('Parallel Fields Extractor', () => {
   describe('When a bib has no parallel fields property', () => {
     it('does not modify the elasticSearchResponse', () => {
       expect(parallelFieldsExtractor(elasticSearchResponseFixture)).to.equal(elasticSearchResponseFixture)
+    })
+  })
+
+  describe('parallelNote', () => {
+    it('normalizes different ways parallel note data is stored', () => {
+      const resp = {
+        hits: {
+          hits: [
+            {
+              _source: {
+                parallelNote: [
+                  null,
+                  {
+                    label: '',
+                    type: 'bf:Note',
+                    noteType: 'Note'
+                  },
+                  {
+                    label: 'Parallel note label',
+                    type: 'bf:Note',
+                    noteType: 'Note'
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+
+      const actual = parallelFieldsExtractor(resp)
+      expect(actual)
+        .to.deep.equal({
+          hits: {
+            hits: [
+              {
+                _source: {
+                  parallelNote: [
+                    null,
+                    null,
+                    'Parallel note label'
+                  ]
+                }
+              }
+            ]
+          }
+        })
     })
   })
 })
