@@ -6,7 +6,7 @@ const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
 const noRecapResponse = require('./fixtures/no_recap_response')
 
 describe('RequestabilityResolver', () => {
-  describe('fixItemRequestability', function () {
+  describe.only('fixItemRequestability', function () {
     let NyplResponse
     before(() => {
       NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()

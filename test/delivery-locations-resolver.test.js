@@ -1,6 +1,7 @@
 const sinon = require('sinon')
 
 const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
+const Location = require('../lib/models/Location')
 
 const sampleItems = {
   onsiteOnlySchomburg:
@@ -371,10 +372,10 @@ describe('Delivery-locations-resolver', function () {
   describe('deliveryLocationsByM2CustomerCode', () => {
     const unrequestableM2CustomerCode = 'EM'
     it('returns undefined for unrequestable code', () =>
-      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode(unrequestableM2CustomerCode)).to.equal(undefined)
+      expect(new Location({ m2CustomerCode: unrequestableM2CustomerCode }).deliveryLocationsByM2CustomerCode).to.equal(undefined)
     )
     it('return delivery location for requestable code', () => {
-      expect(DeliveryLocationsResolver.deliveryLocationsByM2CustomerCode('NH').length).to.not.equal(0)
+      expect(new Location({ m2CustomerCode: 'NH' }).deliveryLocationsByM2CustomerCode.length).to.not.equal(0)
     })
   })
 
