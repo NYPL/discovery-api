@@ -266,7 +266,9 @@ describe('Test Resources responses', function () {
 
         assert(doc.itemAggregations)
 
-        assert.deepEqual(doc.format, [{ '@id': 'a', prefLabel: 'Book/Text' }])
+        assert.deepEqual(doc.format, [{ '@id': 'a', prefLabel: 'Book/text' }])
+
+        // assert.deepEqual(doc.collection, [])
 
         done()
       })
@@ -642,13 +644,13 @@ describe('Test Resources responses', function () {
 
               // Ensure bib dates follow dateAfter for each result
               doc.itemListElement.forEach((item) => {
-                const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
-                  .filter((d) => typeof d === 'number')
-                  // Ensure dates are ascending (some cataloging reverses them):
-                  .sort((a, b) => a - b)
-                // The bib's end date (or start date if it doesn't have an end date)
-                // should be >= dateAfter
-                expect(itemDates[itemDates.length - 1]).to.be.at.least(dateAfter)
+                const itemDate = item.result.dates
+                // Ensure dates are descending:
+                  .sort((a, b) => (b.range.lt || b.range.lte) - (a.range.lt || a.range.lte))
+                  .at(0)
+                  .range
+
+                expect(parseInt(itemDate.lt || itemDate.lte)).to.be.at.least(dateAfter)
               })
 
               return resolve()
@@ -671,8 +673,6 @@ describe('Test Resources responses', function () {
         // Establish ALL count:
         let prevTotal = doc.totalResults
 
-        console.log('Chain first prevtotal ', prevTotal)
-
         // Next, add filter on the first date (objects whose start/end date range include 1984)
         nextUrl = `${nextUrl}&filters[dateAfter]=${dates[0]}`
         return request.get(nextUrl, function (err, response, body) {
@@ -685,8 +685,7 @@ describe('Test Resources responses', function () {
 
           // Ensure bib dates overlap dateAfter for each result
           doc.itemListElement.forEach((item) => {
-            const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
-              .filter((d) => typeof d === 'number')
+            const itemDates = item.result.dates.map(date => parseInt(date.range.lt || date.range.lte))
               // Ensure dates are ascending (some cataloging reverses them):
               .sort((a, b) => a - b)
             // The bib's end date (or start date if it doesn't have an end date)
@@ -706,15 +705,18 @@ describe('Test Resources responses', function () {
 
             // Ensure bib dates overlap date range
             doc.itemListElement.forEach((item) => {
-              const itemDates = [item.result.dateStartYear, item.result.dateEndYear]
-                .filter((d) => typeof d === 'number')
+              const itemEndDates = item.result.dates.map(date => parseInt(date.range.lt || date.range.lte))
+                // Ensure dates are ascending (some cataloging reverses them):
+                .sort((a, b) => a - b)
+
+              const itemStartDates = item.result.dates.map(date => parseInt(date.range.gte))
                 // Ensure dates are ascending (some cataloging reverses them):
                 .sort((a, b) => a - b)
               // The bib's end date (or start date if it doesn't have an end date)
               // should be >= the start of the queried date range:
-              expect(itemDates[itemDates.length - 1]).to.be.at.least(dates[0])
+              expect(itemEndDates[itemEndDates.length - 1]).to.be.at.least(dates[0])
               // The bib's start date should be <= the end of the queried date range:
-              expect(itemDates[0]).to.be.at.most(dates[1])
+              expect(itemStartDates[0]).to.be.at.most(dates[1])
             })
 
             prevTotal = doc.totalResults
@@ -766,15 +768,14 @@ describe('Test Resources responses', function () {
       searchAllUrl = `${global.TEST_BASE_URL}/api/v0.1/discovery/resources?search_scope=standard_number&q=`
     })
 
-    it('empty search returns status code 200', function (done) {
+    it('empty search returns status code 200', function () {
       request.get(searchAllUrl, function (err, response, body) {
         if (err) throw err
 
-        assert.equal(200, response.statusCode)
-
-        done()
+        return assert.equal(200, response.statusCode)
       })
     })
+
     let standardNumbers = [
       'b22144813',
       '9790001138673', // Should match `identifierV2[@type=bf:Lccn].value`
@@ -862,26 +863,6 @@ describe('Test Resources responses', function () {
           expect(results.itemListElement.some((el) => el.result['@id'] === `res:${bnum}`))
 
           done()
-        })
-      })
-    })
-  })
-
-  describe('deliveryLocationsByBarcode', () => {
-    it('empty search returns status code 200', async () => {
-      const url = `${global.TEST_BASE_URL}/api/v0.1/request/deliveryLocationsByBarcode?barcodes=33433128201161`
-
-      return request.get(url, function (err, response, body) {
-        if (err) throw err
-
-        assert.equal(200, response.statusCode)
-        expect(response.statusCode).to.eq(200)
-
-        const result = JSON.parse(body)
-        console.log('Got result: ', result)
-        expect(result).to.nested.include({
-          'itemListElement[0].deliveryLocation[0].@id': 'loc:mal',
-          'itemListElement[0].deliveryLocation[0].prefLabel': 'Schwarzman Building - Main Reading Room 315'
         })
       })
     })

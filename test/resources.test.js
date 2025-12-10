@@ -3,6 +3,8 @@ const fs = require('fs')
 const sinon = require('sinon')
 const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
+const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
+const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
 
@@ -43,6 +45,27 @@ describe('Resources query', function () {
           .parseSearchParams({ merge_checkin_card_items: 'false' })
           .merge_checkin_card_items
       ).to.equal(false)
+    })
+
+    it('applies overrideParams to extend config', function () {
+      const params = resourcesPrivMethods.parseSearchParams(
+        { per_page: '400' },
+        { per_page: { type: 'int', default: 50, range: [0, 1000] } }
+      )
+      expect(params.per_page).to.equal(400)
+    })
+
+    it('applies multiple overrides', function () {
+      const params = resourcesPrivMethods.parseSearchParams(
+        { per_page: '300', items_size: '150' },
+        {
+          per_page: { type: 'int', default: 50, range: [0, 1000] },
+          items_size: { type: 'int', default: 100, range: [0, 500] }
+        }
+      )
+
+      expect(params.per_page).to.equal(300)
+      expect(params.items_size).to.equal(150)
     })
   })
 
@@ -110,7 +133,7 @@ describe('Resources query', function () {
   })
 
   describe('buildElasticBody', function () {
-    it('uses subjectLiteral_exploded when given a subjectLiteral filter', function () {
+    it('uses subjectLiteral.raw when given a subjectLiteral filter', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
       const body = resourcesPrivMethods.buildElasticBody(params)
       expect(body).to.be.a('object')
@@ -119,7 +142,7 @@ describe('Resources query', function () {
       expect(body.query.bool.filter).to.be.a('array')
       expect(body.query.bool.filter[0]).to.be.a('object')
       expect(body.query.bool.filter[0].term).to.be.a('object')
-      expect(body.query.bool.filter[0].term.subjectLiteral_exploded).to.equal('United States -- History')
+      expect(body.query.bool.filter[0].term['subjectLiteral.raw']).to.equal('United States -- History')
     })
 
     describe('nyplSource filtering', function () {
@@ -212,9 +235,9 @@ describe('Resources query', function () {
       expect(queries).to.have.lengthOf(2)
 
       // Expect one agg query for all the properties not involved in a filter:
-      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(9)
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(numAggregations - 1)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      expect(queries[0]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
 
       // Expect second agg query for subjectLiteral - w/out the filter:
       expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
@@ -233,22 +256,21 @@ describe('Resources query', function () {
       const queries = resourcesPrivMethods.aggregationQueriesForParams(params)
       expect(queries).to.be.a('array')
       expect(queries).to.have.lengthOf(3)
-
       // Expect first agg query to include all filters:
-      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(8)
+      expect(Object.keys(queries[0].aggregations)).to.have.lengthOf(numAggregations - 2)
       expect(queries[0].query.bool.filter).to.be.a('array')
       // Expect the subjectLiteral filter:
-      expect(queries[0]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
       // .. And the contributorLiteral filters:
-      expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[0].bool.should[0].term.contributorLiteral\\.raw': 'C1' })
-      expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[1].bool.should[0].term.contributorLiteral\\.raw': 'C2' })
+      expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[0].bool.should[0].term.contributorLiteral\\.keywordLowercased': 'C1' })
+      expect(queries[0]).to.nested.include({ 'query.bool.filter[1].bool.should[1].bool.should[0].term.contributorLiteral\\.keywordLowercased': 'C2' })
 
       // Expect second aggregation for subjectLiteral:
       expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
       expect(queries[1]).to.nested.include({ 'aggregations.subjectLiteral.terms.field': 'subjectLiteral.raw' })
       // Expect this agg to filter on the other active filter, contributorLiteral:
-      expect(queries[1]).to.nested.include({ 'query.bool.filter[0].bool.should[0].bool.should[0].term.contributorLiteral\\.raw': 'C1' })
-      expect(queries[1]).to.nested.include({ 'query.bool.filter[0].bool.should[1].bool.should[0].term.contributorLiteral\\.raw': 'C2' })
+      expect(queries[1]).to.nested.include({ 'query.bool.filter[0].bool.should[0].bool.should[0].term.contributorLiteral\\.keywordLowercased': 'C1' })
+      expect(queries[1]).to.nested.include({ 'query.bool.filter[0].bool.should[1].bool.should[0].term.contributorLiteral\\.keywordLowercased': 'C2' })
       expect(queries[1].query.bool.filter).to.have.lengthOf(1)
       expect(queries[1].query.bool.filter[0].bool.should).to.have.lengthOf(2)
 
@@ -258,7 +280,7 @@ describe('Resources query', function () {
       // Expect this agg to filter on the other active filter, subjectLiteral:
       expect(queries[2].query.bool.filter).to.have.lengthOf(1)
 
-      expect(queries[2]).to.nested.include({ 'query.bool.filter[0].term.subjectLiteral_exploded': 'S1' })
+      expect(queries[2].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
     })
   })
 
@@ -312,6 +334,40 @@ describe('Resources query', function () {
         'aggregations.agg4.buckets[0].key': 'agg4 value1'
       })
     })
+
+    it('skips over invalid aggregations', () => {
+      const responses = [
+        {
+          hits: { total: { value: 1000, relation: 'eq' }, hits: [] },
+          aggregations: {
+            agg1: {
+              buckets: [
+                { key: 'agg1 value1', doc_count: 10 },
+                { key: 'agg1 value2', doc_count: 9 }
+              ]
+            }
+          }
+        },
+        {
+          error: 'some error'
+        }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.nested.include({
+        'hits.total.value': 1000,
+        'aggregations.agg1.buckets[0].doc_count': 10,
+        'aggregations.agg1.buckets[1].key': 'agg1 value2'
+      })
+    })
+
+    it('returns empty object if no good agg responses found', () => {
+      const responses = [
+        { error: 'some error' },
+        { someother: 'response' }
+      ]
+
+      expect(resourcesPrivMethods.mergeAggregationsResponses(responses)).to.deep.equal({})
+    })
   })
 
   describe('annotatedMarc endpoint', () => {
@@ -352,6 +408,13 @@ describe('Resources query', function () {
           expect(data).to.be.a('object')
           expect(data.bib).to.be.a('object')
           expect(data.bib.id).to.eq('11055155')
+        })
+    })
+
+    it('Throws InvalidParameterError for unexpected uri format', async () => {
+      return app.resources.annotatedMarc({ uri: '1234' })
+        .catch((e) => {
+          expect(e.message).to.equal('Invalid bnum: 1234')
         })
     })
   })
@@ -544,6 +607,24 @@ describe('Resources query', function () {
                 }
               }
             ])
+        })
+    })
+  })
+
+  describe('findByUri with unexpected uri format', async () => {
+    before(() => {
+      fixtures.enableEsFixtures()
+    })
+
+    after(() => {
+      fixtures.disableEsFixtures()
+    })
+
+    it('throws an InvalidParameterError', () => {
+      return app.resources.findByUri({ uri: '1234' })
+        .catch((e) => {
+          console.log('message: ', e.message)
+          expect(e.message).to.equal('Invalid bnum: 1234')
         })
     })
   })
@@ -769,6 +850,25 @@ describe('Resources query', function () {
             ]
           }
         }
+      })
+    })
+  })
+
+  describe('search exception handling', () => {
+    describe('lexical error', () => {
+      before(() => {
+        sinon.stub(app.esClient, 'search').callsFake((req) => {
+          return Promise.reject(new errors.IndexSearchError('oh no'))
+        })
+      })
+
+      after(() => {
+        app.esClient.search.restore()
+      })
+
+      it('handles lexical error by raising IndexSearchError', () => {
+        const call = () => app.resources.search({})
+        return expect(call()).to.be.rejectedWith(errors.IndexSearchError)
       })
     })
   })

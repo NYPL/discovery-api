@@ -39,7 +39,7 @@ describe('ElasticQueryBuilder', () => {
         },
         {
           path: undefined,
-          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+          clause: { term: { 'subjectLiteral.raw': 'spaghetti' } }
         }
       ])
     })
@@ -54,7 +54,7 @@ describe('ElasticQueryBuilder', () => {
         },
         {
           path: undefined,
-          clause: { term: { subjectLiteral_exploded: 'spaghetti' } }
+          clause: { term: { 'subjectLiteral.raw': 'spaghetti' } }
         }
       ])
     })
@@ -68,8 +68,8 @@ describe('ElasticQueryBuilder', () => {
           clause: {
             bool: {
               should: [
-                { term: { subjectLiteral_exploded: 'spaghetti' } },
-                { term: { subjectLiteral_exploded: 'meatballs' } }
+                { term: { 'subjectLiteral.raw': 'spaghetti' } },
+                { term: { 'subjectLiteral.raw': 'meatballs' } }
               ]
             }
           }
@@ -122,7 +122,7 @@ describe('ElasticQueryBuilder', () => {
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
         .include({ 'bool.must[0].multi_match.query': 'toast' })
-        .include({ 'bool.must[0].multi_match.fields[0]': 'title^5' })
+        .include({ 'bool.must[0].multi_match.fields[0]': 'title^20' })
 
       // Expect boosting on several fields:
       expect(inst.query.toJson().bool.should)
@@ -242,6 +242,15 @@ describe('ElasticQueryBuilder', () => {
       // Expect the top level bool to now have a `filter` prop with the user filter:
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.filter[0].term.buildingLocationIds': 'ma' })
+    })
+
+    it('applies genre filter to query', () => {
+      const request = new ApiRequest({ q: 'toast', filters: { genreForm: 'Maps' } })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect the top level bool to now have a `filter` prop with the genreForm filter:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.filter[0].term.genreForm\\.raw': 'Maps' })
     })
   })
 
@@ -488,17 +497,130 @@ describe('ElasticQueryBuilder', () => {
 
         // Asset filter clauses:
         expect(query).to.nested.include({
-          // Match filers[dateBefore]:
-          'bool.filter[0].bool.must[0].bool.should[0].range.dateStartYear.lte': 2021,
-          'bool.filter[0].bool.must[0].bool.should[1].range.dateEndYear.lte': 2021,
-          // Match filters[dateAfter]:
-          'bool.filter[0].bool.must[1].bool.should[0].range.dateStartYear.gte': 2020,
-          'bool.filter[0].bool.must[1].bool.should[1].range.dateEndYear.gte': 2020
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2022',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
         })
 
         expect(query).to.nested.include({
           // Match filters[materialType]:
           'bool.filter[1].bool.should[0].term.materialType\\.id': 'resourcetypes:aud'
+        })
+      })
+
+      it('allows dates with dashes', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020-12-31',
+            dateBefore: '2021',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2022',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows dates with slashes', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020/12/31',
+            dateBefore: '2021',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2022',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows YYYY/MM', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020/01',
+            dateBefore: '2021/10',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lt': '2021-11',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows YYYY/MM/DD', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateAfter: '2020/01',
+            dateBefore: '2021/10/15',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-10-15T23:59:59',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
+        })
+      })
+
+      it('allows dateFrom/dateTo param', () => {
+        const request = new ApiRequest({
+          title: 'title value',
+          contributor: 'contributor value',
+          filters: {
+            dateFrom: '2020/01',
+            dateTo: '2021/10/15',
+            materialType: ['resourcetypes:aud']
+          }
+        })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Asset filter clauses:
+        expect(query).to.nested.include({
+          'bool.filter[0].bool.should[0].nested.path': 'dates',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.lte': '2021-10-15T23:59:59',
+          'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.relation': 'intersects'
         })
       })
     })
