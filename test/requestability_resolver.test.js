@@ -6,7 +6,7 @@ const noBarcodeResponse = require('./fixtures/no_barcode_es_response')
 const noRecapResponse = require('./fixtures/no_recap_response')
 
 describe('RequestabilityResolver', () => {
-  describe.only('fixItemRequestability', function () {
+  describe('fixItemRequestability', function () {
     let NyplResponse
     before(() => {
       NyplResponse = elasticSearchResponse.fakeElasticSearchResponseNyplItem()
@@ -94,7 +94,6 @@ describe('RequestabilityResolver', () => {
 
     describe('On-site edd requestability', function () {
       let esResponse
-
       beforeEach(() => {
         const item = {
           uri: 'i10283665',
@@ -108,31 +107,32 @@ describe('RequestabilityResolver', () => {
       })
 
       it('an item that meets all on-site edd criteria is edd-requestable', function () {
-        let updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
-
-        // Access message '-' still eddRequestable:
+      })
+      it('an item with access message "-" still eddRequestable:', () => {
         esResponse.hits.hits[0]._source.items[0].accessMessage = [
           { id: 'accessMessage:-' }
         ]
-        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
+      })
 
-        // Access message '1' still eddRequestable:
+      it('Item with access message "1" still eddRequestable', () => {
         esResponse.hits.hits[0]._source.items[0].accessMessage = [
           { id: 'accessMessage:1' }
         ]
-        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
-
-        // Status 'na' still eddRequestable:
+      })
+      it('Item with status "na" still eddRequestable', () => {
         esResponse.hits.hits[0]._source.items[0].status = [
           { id: 'status:na' }
         ]
-        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
       })
@@ -220,21 +220,25 @@ describe('RequestabilityResolver', () => {
   describe('Missing recapCustomerCode', function () {
     let response
     let resolved
-    before(() => {
+    let items
+    beforeEach(() => {
       response = noRecapResponse.fakeElasticSearchResponseNyplItem()
       resolved = RequestabilityResolver.fixItemRequestability(response)
+      items = resolved.hits.hits[0]._source.items
     })
 
-    it('marks edd and physical requestability correctly', function () {
-      const items = resolved.hits.hits[0]._source.items
+    it('marks edd and physical requestability true for requestableLocationNoRecapCode', function () {
       const requestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836649'
       })
+
+      expect(requestableLocationNoRecapCode.physRequestable).to.equal(true)
+      expect(requestableLocationNoRecapCode.eddRequestable).to.equal(true)
+    })
+    it('marks edd and physical requestability false for nonrequestableLocationNoRecapCode', function () {
       const nonRequestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836659'
       })
-      expect(requestableLocationNoRecapCode.physRequestable).to.equal(true)
-      expect(requestableLocationNoRecapCode.eddRequestable).to.equal(true)
       expect(nonRequestableLocationNoRecapCode.physRequestable).to.equal(false)
       expect(nonRequestableLocationNoRecapCode.eddRequestable).to.equal(false)
     })
