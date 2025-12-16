@@ -25,6 +25,7 @@ before(async () => {
   if (process.env.UPDATE_FIXTURES) {
     // Specify the environment from which to initialize config:
     process.env.ENV = 'qa'
+    process.env.AWS_PROFILE = process.env.AWS_PROFILE || 'nypl-digital-dev'
   }
 
   await app.init()
