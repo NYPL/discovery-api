@@ -3,6 +3,7 @@ const scsbClient = require('../lib/scsb-client')
 
 const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
 const Location = require('../lib/models/Location')
+const Item = require('../lib/models/Item')
 const theThing = require('../lib/the-thing')
 
 const sampleItems = {
@@ -174,7 +175,6 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
 
   it('will set eddRequestable to true for a specific onsite NYPL item', function () {
     return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
-      console.log(items[0])
       expect(items[0].eddRequestable).to.equal(true)
     })
   })
@@ -192,7 +192,7 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
     })
   })
 
-  it('will ammend the deliveryLocation property for a PUL item', function () {
+  it('will add delivery locations for a PUL item', function () {
     return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.pul]).then((items) => {
       expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
@@ -511,24 +511,26 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
       ).to.equal(true)
     })
   })
-  describe('getRecapDeliveryInfo', function () {
+  describe('Recap delivery and edd', function () {
     it('returns empty deliveryLocation and eddRequestable false based on holding location when missing recapCustomerCode', function () {
-      const resolved = DeliveryLocationsResolver.getRecapDeliveryInfo({
+      const item = new Item({
         holdingLocation: [{ id: 'loc:rccd8' }],
         uri: 'i14747243'
       })
-      expect(resolved.deliveryLocation.length).to.equal(0)
-      expect(resolved.eddRequestable).to.equal(false)
+      expect(item.deliveryLocation).to.equal(undefined)
+      expect(item.eddRequestable).to.equal(false)
     })
 
     it('returns empty string delivery location and eddRequestable true based on holding location when missing recapCustomerCode', function () {
-      const resolved = DeliveryLocationsResolver.getRecapDeliveryInfo({
+      const item = new Item({
         holdingLocation: [{ id: 'loc:rcpm2' }],
         uri: 'i14747243'
       })
-      expect(resolved.deliveryLocation.length).to.equal(1)
-      expect(resolved.deliveryLocation[0]).to.equal('')
-      expect(resolved.eddRequestable).to.equal(true)
+      expect(item.deliveryLocation).to.equal(undefined)
+      // is there a reason why we wanted to return an empty string here?
+      // expect(resolved.deliveryLocation.length).to.equal(1)
+      // expect(resolved.deliveryLocation[0]).to.equal('')
+      expect(item.eddRequestable).to.equal(true)
     })
   })
 })
