@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+const scsbClient = require('../lib/scsb-client')
 
 const DeliveryLocationsResolver = require('../lib/delivery-locations-resolver')
 const Location = require('../lib/models/Location')
@@ -129,7 +130,7 @@ const scholarRooms = [
 describe('attachDeliveryLocationsAndEddRequestability', function () {
   before(() => {
     // Reroute HTC API requests mapping specific barcodes tested above to recap customer codes:
-    sinon.stub(theThing, '__recapCustomerCodesByBarcodes').callsFake((barcodes) => {
+    sinon.stub(scsbClient, 'recapCustomerCodeByBarcode').callsFake((barcode) => {
       const stubbedLookups = {
         'recap-barcode-for-pj': 'PJ',
         33433047331719: 'NP',
@@ -142,17 +143,17 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
       }
 
       // Return hash containing only requested barcodes:
-      return Promise.resolve(
-        barcodes.reduce((h, barcode) => {
-          h[barcode] = stubbedLookups[barcode]
-          return h
-        }, {})
+      return Promise.resolve(stubbedLookups[barcode]
+        // barcodes.reduce((h, barcode) => {
+        //   h[barcode] = stubbedLookups[barcode]
+        //   return h
+        // }, {})
       )
     })
   })
 
   after(() => {
-    theThing.__recapCustomerCodesByBarcodes.restore()
+    scsbClient.recapCustomerCodeByBarcode.restore()
   })
 
   it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', async function () {
@@ -178,8 +179,9 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
     })
   })
 
-  it.only('will ammend the deliveryLocation property for an offsite NYPL item', function () {
+  it('will amend the deliveryLocation property for an offsite NYPL item', function () {
     return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNypl]).then((items) => {
+      console.log(items[0].location)
       expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
   })
