@@ -165,7 +165,13 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
     })
   })
 
-  it('will set eddRequestable to true for a specific onsite NYPL item', function () {
+  it('will return empty delivery locations for an unrequestable onsite location code', function () {
+    return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
+      expect(items[0].deliveryLocation).to.have.lengthOf(0)
+    })
+  })
+
+  it.only('will set eddRequestable to true for a specific onsite NYPL item', function () {
     return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteNypl]).then((items) => {
       expect(items[0].eddRequestable).to.equal(true)
     })
