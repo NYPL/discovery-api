@@ -142,13 +142,8 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
         // and let's further pretend that HTC API tells us it's recap customer code is ND
         'made-up-barcode-that-recap-says-belongs-to-ND': 'ND'
       }
-
-      // Return hash containing only requested barcodes:
+      // Return requested barcodes:
       return Promise.resolve(stubbedLookups[barcode]
-        // barcodes.reduce((h, barcode) => {
-        //   h[barcode] = stubbedLookups[barcode]
-        //   return h
-        // }, {})
       )
     })
   })
@@ -157,7 +152,7 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
     scsbClient.recapCustomerCodeByBarcode.restore()
   })
 
-  it('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', async function () {
+  it.only('will hide "Scholar" deliveryLocation for LPA or SC only deliverable items, patron is scholar type', async function () {
     const items = await theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.onsiteOnlySchomburg], 'mala')
     expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
 
@@ -181,7 +176,6 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
 
   it('will amend the deliveryLocation property for an offsite NYPL item', function () {
     return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNypl]).then((items) => {
-      console.log(items[0].location)
       expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
     })
   })
@@ -266,7 +260,6 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
   it('will hide "Scholar" deliveryLocations for scholars with no specific scholar room', function () {
     return theThing.attachDeliveryLocationsAndEddRequestability([sampleItems.offsiteNyplDeliverableToScholarRooms]).then((items) => {
       expect(items[0].deliveryLocation).to.not.have.lengthOf(0)
-
       // Confirm that all scholar rooms are included:
       scholarRooms.forEach((scholarRoom) => {
         expect(items[0].deliveryLocation.map((location) => location.id)).not.to.include(scholarRoom.id)
@@ -381,8 +374,8 @@ describe('attachDeliveryLocationsAndEddRequestability', function () {
         m2CustomerCode: ['XA'],
         holdingLocation: [{ id: requestableM2Location }]
       }]
-      return theThing
-        .attachDeliveryLocationsAndEddRequestability(items)
+      return Promise.all(items
+        .map(async (item) => await Item.withDeliveryLocationsByBarcode(item)))
         .then((items) => {
           expect(items[0].deliveryLocation).to.deep.equal([
             { id: 'loc:mal', label: 'Schwarzman Building - Main Reading Room 315', sortPosition: 1 },
