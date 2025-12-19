@@ -93,16 +93,17 @@ describe('requestableBasedOnHoldingLocation', function () {
   // somewhat static, which has been generally true
   it('identifies a non-requestable location', function () {
     expect(
-      DeliveryLocationsResolver.requestableBasedOnHoldingLocation({
-        holdingLocation: [{ id: 'loc:rccd8' }]
-      })
+      new Location({
+        holdingLocation: 'rccd8'
+      }).requestable
     ).to.equal(false)
   })
   it('identifies a requestable location', function () {
+    const loc = new Location({
+      holdingLocation: 'rcpm2'
+    })
     expect(
-      DeliveryLocationsResolver.requestableBasedOnHoldingLocation({
-        holdingLocation: [{ id: 'loc:rcpm2' }]
-      })
+      loc.requestable
     ).to.equal(true)
   })
 })
