@@ -1,4 +1,4 @@
-const RequestabilityResolver = require('../lib/requestability_resolver')
+const fixItemRequestability = require('../lib/requestability_resolver')
 const elasticSearchResponse = require('./fixtures/elastic_search_response.js')
 const specRequestableElasticSearchResponse = require('./fixtures/specRequestable/specRequestable-es-response.js')
 const eddElasticSearchResponse = require('./fixtures/edd_elastic_search_response')
@@ -13,14 +13,14 @@ describe('RequestabilityResolver', () => {
     })
     it('sets physRequestable false for items with no barcodes', () => {
       const noBarcode = noBarcodeResponse()
-      const resp = RequestabilityResolver.fixItemRequestability(noBarcode)
+      const resp = fixItemRequestability(noBarcode)
       expect(resp.hits.hits[0]._source.items.every((item) => item.physRequestable === false)).to.equal(true)
     })
 
     it('will set requestable to false for an item not found in ReCAP', function () {
       const indexedButNotAvailableInSCSBURI = 'i22566485'
 
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
 
       // Find the modified item in the response:
       const theItem = response.hits.hits[0]._source.items.find((item) => item.uri === indexedButNotAvailableInSCSBURI)
@@ -29,7 +29,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks ReCAP items that are in requestable locations and have delivery locations as physRequestable', function () {
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
 
       const items = response.hits.hits[0]._source.items
 
@@ -41,7 +41,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks ReCAP items that are in unrequestable locations as not eddRequestable nor physRequestable', function () {
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
 
       const items = response.hits.hits[0]._source.items
 
@@ -53,7 +53,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks SCSB Available items (that are indexed as Not Available) as requestable', function () {
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
 
       const items = response.hits.hits[0]._source.items
 
@@ -66,7 +66,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks SCSB Not-Available items as requestable', function () {
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
 
       const items = response.hits.hits[0]._source.items
 
@@ -77,7 +77,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks on-site (loc:scff2) Available items as requestable', function () {
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
       const items = response.hits.hits[0]._source.items
 
       const availableItem = items.find((item) => item.uri === 'i10283665')
@@ -85,7 +85,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks on-site location with physRequestable false and eddRequestable', function () {
-      const response = RequestabilityResolver.fixItemRequestability(NyplResponse)
+      const response = fixItemRequestability(NyplResponse)
       const items = response.hits.hits[0]._source.items
 
       const notAvailableItem = items.find((item) => item.uri === 'i10283665777')
@@ -94,7 +94,6 @@ describe('RequestabilityResolver', () => {
 
     describe('On-site edd requestability', function () {
       let esResponse
-
       beforeEach(() => {
         const item = {
           uri: 'i10283665',
@@ -108,31 +107,32 @@ describe('RequestabilityResolver', () => {
       })
 
       it('an item that meets all on-site edd criteria is edd-requestable', function () {
-        let updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
-
-        // Access message '-' still eddRequestable:
+      })
+      it('an item with access message "-" still eddRequestable:', () => {
         esResponse.hits.hits[0]._source.items[0].accessMessage = [
           { id: 'accessMessage:-' }
         ]
-        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
+      })
 
-        // Access message '1' still eddRequestable:
+      it('Item with access message "1" still eddRequestable', () => {
         esResponse.hits.hits[0]._source.items[0].accessMessage = [
           { id: 'accessMessage:1' }
         ]
-        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
-
-        // Status 'na' still eddRequestable:
+      })
+      it('Item with status "na" still eddRequestable', () => {
         esResponse.hits.hits[0]._source.items[0].status = [
           { id: 'status:na' }
         ]
-        updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(true)
       })
@@ -141,7 +141,7 @@ describe('RequestabilityResolver', () => {
         esResponse.hits.hits[0]._source.items[0].accessMessage = [
           { id: 'accessMessage:b' }
         ]
-        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(false)
       })
@@ -150,7 +150,7 @@ describe('RequestabilityResolver', () => {
         esResponse.hits.hits[0]._source.items[0].catalogItemType = [
           { id: 'catalogItemType:13' }
         ]
-        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(false)
       })
@@ -159,7 +159,7 @@ describe('RequestabilityResolver', () => {
         esResponse.hits.hits[0]._source.items[0].status = [
           { id: 'status:o' }
         ]
-        const updatedItem = RequestabilityResolver.fixItemRequestability(esResponse)
+        const updatedItem = fixItemRequestability(esResponse)
           .hits.hits[0]._source.items[0]
         expect(updatedItem.eddRequestable).to.equal(false)
       })
@@ -168,7 +168,7 @@ describe('RequestabilityResolver', () => {
 
   describe('Special collections items', function () {
     it('marks items as specRequestable when there is an aeonURL present', function () {
-      const response = RequestabilityResolver.fixItemRequestability(specRequestableElasticSearchResponse())
+      const response = fixItemRequestability(specRequestableElasticSearchResponse())
 
       const items = response.hits.hits[0]._source.items
       const specRequestableItem = items.find((item) => item.uri === 'i22566485')
@@ -176,7 +176,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks items as specRequestable when there is a special collectionAccessType designation', function () {
-      const response = RequestabilityResolver.fixItemRequestability(specRequestableElasticSearchResponse())
+      const response = fixItemRequestability(specRequestableElasticSearchResponse())
 
       const items = response.hits.hits[0]._source.items
       const specRequestableItem = items.find((item) => item.uri === 'i10283665777')
@@ -184,7 +184,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('leaves item as specRequestable false when there is no finding aid, aeon url, or special holding location', () => {
-      const response = RequestabilityResolver.fixItemRequestability(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
+      const response = fixItemRequestability(elasticSearchResponse.fakeElasticSearchResponseNyplItem())
       const items = response.hits.hits[0]._source.items
 
       const specRequestableItem = items.find((item) => item.uri === 'i10283665')
@@ -195,7 +195,7 @@ describe('RequestabilityResolver', () => {
   describe('eddRequestable items', function () {
     const eddResponse = eddElasticSearchResponse()
     it('marks items eddRequestable:true when its reCAP code is listed as such in nypl-core', () => {
-      const response = RequestabilityResolver.fixItemRequestability(eddResponse)
+      const response = fixItemRequestability(eddResponse)
       const items = response.hits.hits[0]._source.items
 
       // A ReCAP item with customer code NA (eddRequestable = true)
@@ -206,7 +206,7 @@ describe('RequestabilityResolver', () => {
     })
 
     it('marks items eddRequestable:false when its reCAP code is listed as such in nypl-core', () => {
-      const response = RequestabilityResolver.fixItemRequestability(eddResponse)
+      const response = fixItemRequestability(eddResponse)
       const items = response.hits.hits[0]._source.items
 
       // A ReCAP item with customer code NC (eddRequestable = false)
@@ -220,21 +220,25 @@ describe('RequestabilityResolver', () => {
   describe('Missing recapCustomerCode', function () {
     let response
     let resolved
-    before(() => {
+    let items
+    beforeEach(() => {
       response = noRecapResponse.fakeElasticSearchResponseNyplItem()
-      resolved = RequestabilityResolver.fixItemRequestability(response)
+      resolved = fixItemRequestability(response)
+      items = resolved.hits.hits[0]._source.items
     })
 
-    it('marks edd and physical requestability correctly', function () {
-      const items = resolved.hits.hits[0]._source.items
+    it('marks edd and physical requestability true for requestableLocationNoRecapCode', function () {
       const requestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836649'
       })
+
+      expect(requestableLocationNoRecapCode.physRequestable).to.equal(true)
+      expect(requestableLocationNoRecapCode.eddRequestable).to.equal(true)
+    })
+    it('marks edd and physical requestability false for nonrequestableLocationNoRecapCode', function () {
       const nonRequestableLocationNoRecapCode = items.find((item) => {
         return item.uri === 'i102836659'
       })
-      expect(requestableLocationNoRecapCode.physRequestable).to.equal(true)
-      expect(requestableLocationNoRecapCode.eddRequestable).to.equal(true)
       expect(nonRequestableLocationNoRecapCode.physRequestable).to.equal(false)
       expect(nonRequestableLocationNoRecapCode.eddRequestable).to.equal(false)
     })
