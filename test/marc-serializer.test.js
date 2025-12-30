@@ -157,29 +157,27 @@ describe('MarcSerializer', () => {
 
     it('preserves leader field', () => {
       const leader = serialized.bib.varFields.find(f => f.fieldTag === '_')
-      expect(leader).to.exist()
       expect(leader.content).to.equal('00000cam  2200769Ia 4500')
     })
 
     it('preserves non-suppressed fields', () => {
       const field100 = serialized.bib.varFields.find(f => f.marcTag === '100')
-      expect(field100).to.exist()
       expect(field100.subfields.map(sf => sf.content)).to.include('Porter, Bertha,')
     })
 
     it('masks included subfields according to rules', () => {
       // Find the suppressed field 856
       const field856 = serialized.bib.varFields.find(f => f.marcTag === '856')
-      expect(field856).to.exist()
+      expect(field856).to.not.equal(undefined)
 
       // 856$u should be blanked
       const subfieldU = field856.subfields.find(s => s.tag === 'u')
-      expect(subfieldU).to.exist()
+      expect(subfieldU).to.not.equal(undefined)
       expect(subfieldU.content).to.satisfy(c => c === null || c === '')
 
       // 856$z should remain unchanged
       const subfieldZ = field856.subfields.find(s => s.tag === 'z')
-      expect(subfieldZ).to.exist()
+      expect(subfieldZ).to.not.equal(undefined)
       expect(subfieldZ.content).to.equal('This is ok')
     })
 
@@ -193,7 +191,7 @@ describe('MarcSerializer', () => {
     })
   })
 
-  describe('serialize with parallel 880 fields', () => {
+  describe('serialize with parallels', () => {
     let serialized
 
     before(() => {
@@ -205,11 +203,10 @@ describe('MarcSerializer', () => {
       const field856 = serialized.bib.varFields.find(
         (f) => f.marcTag === '856'
       )
-      expect(field856).to.exist()
 
       // 856$u should be blanked
       const subfieldU856 = field856.subfields.find((s) => s.tag === 'u')
-      expect(subfieldU856).to.exist()
+      expect(subfieldU856).to.not.equal(undefined)
       expect(subfieldU856.content).to.satisfy((c) => c === null || c === '')
 
       // 856$z should remain unchanged
@@ -220,11 +217,11 @@ describe('MarcSerializer', () => {
       const field880 = serialized.bib.varFields.find(
         (f) => f.marcTag === '880'
       )
-      expect(field880).to.exist()
+      expect(field880).to.not.equal(undefined)
 
       // 880$u (parallel to suppressed) should also be blanked
       const subfieldU880 = field880.subfields.find((s) => s.tag === 'u')
-      expect(subfieldU880).to.exist()
+      expect(subfieldU880).to.not.equal(undefined)
       expect(subfieldU880.content).to.satisfy((c) => c === null || c === '')
 
       // 880$z (parallel to ok) should remain unchanged
@@ -265,12 +262,12 @@ describe('MarcSerializer', () => {
   describe('isLeaderField', () => {
     it('correctly identifies leader field', () => {
       const leader = sampleBibNoParallels.varFields[0]
-      expect(MarcSerializer.isLeaderField(leader)).to.be.true()
+      expect(MarcSerializer.isLeaderField(leader)).to.equal(true)
     })
 
     it('returns false for non-leader fields', () => {
       const field100 = sampleBibNoParallels.varFields[1]
-      expect(MarcSerializer.isLeaderField(field100)).to.be.false()
+      expect(MarcSerializer.isLeaderField(field100)).to.equal(false)
     })
   })
 })
