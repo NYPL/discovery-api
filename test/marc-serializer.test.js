@@ -161,17 +161,17 @@ describe('MarcSerializer', () => {
     })
 
     it('preserves leader field', () => {
-      const leader = serialized.bib.varFields.find(f => f.fieldTag === '_')
+      const leader = serialized.bib.fields.find(f => f.fieldTag === '_')
       expect(leader.content).to.equal('00000cam  2200769Ia 4500')
     })
 
     it('preserves non-suppressed fields', () => {
-      const field100 = serialized.bib.varFields.find(f => f.marcTag === '100')
+      const field100 = serialized.bib.fields.find(f => f.marcTag === '100')
       expect(field100.subfields.map(sf => sf.content)).to.include('Porter, Bertha,')
     })
 
     it('blanks subfields marked for exclusion', () => {
-      const field856 = serialized.bib.varFields.find(f => f.marcTag === '856')
+      const field856 = serialized.bib.fields.find(f => f.marcTag === '856')
 
       const subfieldU = field856.subfields.find(s => s.tag === 'u')
       expect(subfieldU.content).to.equal('[redacted]')
@@ -181,7 +181,7 @@ describe('MarcSerializer', () => {
     })
 
     it('keeps surviving fields present', () => {
-      const tags = serialized.bib.varFields.map(f => f.marcTag)
+      const tags = serialized.bib.fields.map(f => f.marcTag)
       // Null is the leader, 700 is removed
       expect(tags).to.include.members([null, '100', '245', '856'])
     })
@@ -194,8 +194,8 @@ describe('MarcSerializer', () => {
     })
 
     it('blanks excluded subfields in main 856 and parallel 880', () => {
-      const field856 = serialized.bib.varFields.find(f => f.marcTag === '856')
-      const field880 = serialized.bib.varFields.find(f => f.marcTag === '880')
+      const field856 = serialized.bib.fields.find(f => f.marcTag === '856')
+      const field880 = serialized.bib.fields.find(f => f.marcTag === '880')
 
       // 856$u and 880$u should be redacted
       const subU856 = field856.subfields.find(s => s.tag === 'u')
@@ -225,16 +225,16 @@ describe('MarcSerializer', () => {
     })
   })
 
-  describe('varFields sort order', () => {
+  describe('fields sort order', () => {
     it('places leader first and sorts other fields numerically by marcTag', () => {
       const serialized = MarcSerializer.serialize(sampleBibWithParallels)
-      const varFields = serialized.bib.varFields
+      const fields = serialized.bib.fields
 
       // Leader should be first
-      expect(varFields[0].fieldTag).to.equal('_')
+      expect(fields[0].fieldTag).to.equal('_')
 
       // Remaining fields should be sorted ascending by marcTag
-      const marcTags = varFields.slice(1).map(f => parseInt(f.marcTag, 10))
+      const marcTags = fields.slice(1).map(f => parseInt(f.marcTag, 10))
       const sortedTags = [...marcTags].sort((a, b) => a - b)
       expect(marcTags).to.deep.equal(sortedTags)
     })
