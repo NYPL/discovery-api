@@ -38,7 +38,7 @@ describe('ElasticQuerySubjectsBuilder', () => {
 
   describe('search_scope="has"', () => {
     it('applies subject match clauses to query', () => {
-      const request = new ApiRequest({ q: 'toast', search_scope: 'has' })
+      const request = new ApiRequest({ q: 'toast bread', search_scope: 'has' })
       const inst = ElasticQuerySubjectsBuilder.forApiRequest(request)
 
       const query = inst.query.toJson()
@@ -49,23 +49,63 @@ describe('ElasticQuerySubjectsBuilder', () => {
         match: {
           preferredTerm: {
             _name: 'preferredTerm',
-            query: 'toast',
+            query: 'toast bread',
             operator: 'and'
           }
         }
       })
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
-        match_bool_prefix: {
-          preferredTerm: {
-            _name: 'preferredTermMatchBoolPrefix',
-            query: 'toast',
-            operator: 'and'
-          }
+        bool: {
+          _name: 'preferredTermMultiPrefix',
+          should: [
+            {
+              bool: {
+                must: [
+                  {
+                    prefix: {
+                      preferredTerm: {
+                        value: 'toast'
+                      }
+                    }
+                  },
+                  {
+                    match: {
+                      preferredTerm: {
+                        query: 'bread',
+                        operator: 'and'
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              bool: {
+                must: [
+                  {
+                    prefix: {
+                      preferredTerm: {
+                        value: 'bread'
+                      }
+                    }
+                  },
+                  {
+                    match: {
+                      preferredTerm: {
+                        query: 'toast',
+                        operator: 'and'
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       })
       expect(query.bool.must[0].bool.should[2]).to.deep.equal({
         prefix: {
-          preferredTerm: { value: 'toast', _name: 'preferredTermPrefix' }
+          preferredTerm: { value: 'toast bread', _name: 'preferredTermPrefix' }
         }
       })
 
@@ -76,7 +116,7 @@ describe('ElasticQuerySubjectsBuilder', () => {
           query: {
             match: {
               'variants.variant': {
-                query: 'toast',
+                query: 'toast bread',
                 operator: 'and'
               }
             }
