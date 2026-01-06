@@ -42,7 +42,7 @@ module.exports = {
     uri: 'i12227153',
     holdingLocation: [
       {
-        id: 'loc:scf',
+        id: 'loc:mal',
         label: 'Schomburg Center - Research & Reference'
       }
     ],

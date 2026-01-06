@@ -17,7 +17,7 @@ describe('requestability utils', () => {
         uri: 'i12227153',
         holdingLocation: [
           {
-            id: 'loc:scff2',
+            id: 'loc:mal',
             label: 'Schomburg Center - Research & Reference'
           }
         ],
@@ -61,7 +61,8 @@ describe('requestability utils', () => {
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(false)
     })
 
-    it('will return true for on-site Schomburg if it\'s not microfilm', function () {
+    // Schomburg is not accepting edd requests currently
+    it.skip('will return true for on-site Schomburg if it\'s not microfilm', function () {
       item.holdingLocation[0].id = 'loc:scff2'
       expect(DeliveryLocationsResolver.eddRequestableByOnSiteCriteria(item)).to.equal(true)
     })
