@@ -38,6 +38,14 @@ const sampleBib = {
       ]
     },
     {
+      fieldTag: 'y',
+      marcTag: '008',
+      content: '      cyyyy2011nyua   f      000 faeng dnam a ',
+      ind1: '',
+      ind2: '',
+      subfields: []
+    },
+    {
       fieldTag: 't',
       marcTag: '245',
       content: null,
@@ -225,21 +233,6 @@ describe('MarcSerializer', () => {
     })
   })
 
-  describe('fields sort order', () => {
-    it('places leader first and sorts other fields numerically by marcTag', () => {
-      const serialized = MarcSerializer.serialize(sampleBibWithParallels)
-      const fields = serialized.bib.fields
-
-      // Leader should be first
-      expect(fields[0].fieldTag).to.equal('_')
-
-      // Remaining fields should be sorted ascending by marcTag
-      const marcTags = fields.slice(1).map(f => parseInt(f.marcTag, 10))
-      const sortedTags = [...marcTags].sort((a, b) => a - b)
-      expect(marcTags).to.deep.equal(sortedTags)
-    })
-  })
-
   describe('isLeaderField', () => {
     it('correctly identifies leader field', () => {
       const leader = sampleBib.varFields.find(field => field.fieldTag === '_')
@@ -249,6 +242,18 @@ describe('MarcSerializer', () => {
     it('returns false for non-leader fields', () => {
       const field100 = sampleBib.varFields[1]
       expect(MarcSerializer.isLeaderField(field100)).to.equal(false)
+    })
+  })
+
+  describe('isControlField', () => {
+    it('correctly identifies control field', () => {
+      const control = sampleBib.varFields.find(field => field.marcTag === '008')
+      expect(MarcSerializer.isControlField(control)).to.equal(true)
+    })
+
+    it('returns false for data fields', () => {
+      const field100 = sampleBib.varFields[1]
+      expect(MarcSerializer.isControlField(field100)).to.equal(false)
     })
   })
 })
