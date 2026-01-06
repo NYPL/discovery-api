@@ -252,7 +252,7 @@ describe('MarcSerializer', () => {
     })
 
     it('returns false for data fields', () => {
-      const field100 = sampleBib.varFields[1]
+      const field100 = sampleBib.varFields[0]
       expect(MarcSerializer.isControlField(field100)).to.equal(false)
     })
   })
