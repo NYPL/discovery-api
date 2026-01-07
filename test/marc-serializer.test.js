@@ -178,11 +178,11 @@ describe('MarcSerializer', () => {
       expect(field100.subfields.map(sf => sf.content)).to.include('Porter, Bertha,')
     })
 
-    it('blanks subfields marked for exclusion', () => {
+    it('removes subfields marked for exclusion', () => {
       const field856 = serialized.bib.fields.find(f => f.marcTag === '856')
 
       const subfieldU = field856.subfields.find(s => s.tag === 'u')
-      expect(subfieldU.content).to.equal('[redacted]')
+      expect(subfieldU).to.equal(undefined)
 
       const subfieldZ = field856.subfields.find(s => s.tag === 'z')
       expect(subfieldZ.content).to.equal('This is ok')
@@ -201,16 +201,16 @@ describe('MarcSerializer', () => {
       serialized = MarcSerializer.serialize(sampleBibWithParallels)
     })
 
-    it('blanks excluded subfields in main 856 and parallel 880', () => {
+    it('removes excluded subfields in main 856 and parallel 880', () => {
       const field856 = serialized.bib.fields.find(f => f.marcTag === '856')
       const field880 = serialized.bib.fields.find(f => f.marcTag === '880')
 
-      // 856$u and 880$u should be redacted
+      // 856$u and 880$u should be removed
       const subU856 = field856.subfields.find(s => s.tag === 'u')
-      expect(subU856.content).to.equal('[redacted]')
+      expect(subU856).to.equal(undefined)
 
       const subU880 = field880.subfields.find(s => s.tag === 'u')
-      expect(subU880.content).to.equal('[redacted]')
+      expect(subU880).to.equal(undefined)
 
       // z subfields remain
       expect(field856.subfields.find(s => s.tag === 'z').content).to.equal('This is ok')
