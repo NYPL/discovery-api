@@ -466,7 +466,8 @@ describe('Resources query', function () {
         size: 1,
         query: {
           bool: {
-            must: [{ term: { uri: 'b1234' } }]
+            must: [{ term: { uri: 'b1234' } }],
+            filter: []
           }
         },
         aggregations: {
@@ -724,7 +725,7 @@ describe('Resources query', function () {
 
   describe('addInnerHits', () => {
     it('should include query for items', () => {
-      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2 }))
+      expect(resourcesPrivMethods.addInnerHits({ query: { bool: { filter: [] } } }, { size: 1, from: 2 }))
         .to.deep.equal({
           query: {
             bool: {
@@ -761,7 +762,7 @@ describe('Resources query', function () {
     })
 
     it('should exclude check in card items if explicitly set', () => {
-      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2, merge_checkin_card_items: false }))
+      expect(resourcesPrivMethods.addInnerHits({ query: { bool: { filter: [] } } }, { size: 1, from: 2, merge_checkin_card_items: false }))
         .to.deep.equal({
           query: {
             bool: {
@@ -799,7 +800,7 @@ describe('Resources query', function () {
 
     it('should include filters for items', () => {
       expect(resourcesPrivMethods.addInnerHits(
-        { query: { bool: {} } },
+        { query: { bool: { filter: [] } } },
         { size: 1, from: 2, query: { volume: [1, 2], location: ['SASB', 'LPA'], other: 'filter' } }
       )).to.deep.equal({
         query: {
