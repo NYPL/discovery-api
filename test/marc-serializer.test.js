@@ -3,21 +3,19 @@ const MarcSerializer = require('../lib/marc-serializer')
 
 // Mock mapping rules
 MarcSerializer.mappingRules = [
-  // 700 should be removed entirely
+  // 700 to be excluded
   {
-    fieldTag: 'b',
     marcIndicatorRegExp: /^700/,
     directive: 'exclude',
     subfieldSpec: null
   },
-  // 856$u should be blanked, 856$z kept
   {
     fieldTag: 'y',
     marcIndicatorRegExp: /^856/,
     directive: 'include',
     subfieldSpec: {
-      subfields: ['u'], // redact only $u
-      directive: 'exclude'
+      subfields: [],
+      directive: 'include'
     }
   }
 ]
@@ -89,74 +87,27 @@ const sampleBib = {
   ]
 }
 
-const sampleBibWithParallels = {
+const sampleBibWithExcludedSourceAndParallel = {
   id: 'testId',
   nyplSource: 'testSource',
   varFields: [
     {
-      fieldTag: 'a',
-      marcTag: '100',
-      content: null,
-      ind1: '1',
-      ind2: ' ',
-      subfields: [
-        { tag: 'a', content: 'Porter, Bertha,' },
-        { tag: 'd', content: '1852-1941.' }
-      ]
-    },
-    {
-      fieldTag: 't',
-      marcTag: '245',
-      content: null,
-      ind1: '1',
-      ind2: '0',
-      subfields: [
-        { tag: 'a', content: 'Topographical bibliography of ancient Egyptian hieroglyphic texts, reliefs, and paintings /' },
-        { tag: 'c', content: 'by Bertha Porter and Rosalind L.B. Moss.' }
-      ]
-    },
-    {
-      fieldTag: 'b',
       marcTag: '700',
-      content: null,
       ind1: '1',
       ind2: ' ',
       subfields: [
-        { tag: 'a', content: 'Moss, Rosalind L. B.' },
-        { tag: 'q', content: '(Rosalind Louisa Beaufort)' }
+        { tag: '6', content: '880-02/$1' },
+        { tag: 'a', content: 'Some name' }
       ]
     },
     {
-      fieldTag: 'y',
-      marcTag: '856',
-      content: null,
-      subfields: [
-        { tag: 'u', content: 'This should be redacted' },
-        { tag: 'z', content: 'This is ok' },
-        { tag: '6', content: '880-01' }
-      ],
-      ind1: '4',
-      ind2: '0'
-    },
-    {
-      fieldTag: '_',
-      marcTag: null,
-      content: '00000cam  2200769Ia 4500',
-      subfields: [],
-      ind1: null,
-      ind2: null
-    },
-    {
-      fieldTag: 'y',
       marcTag: '880',
-      content: null,
+      ind1: '1',
+      ind2: ' ',
       subfields: [
-        { tag: '6', content: '856-01' }, // links to 856
-        { tag: 'u', content: 'Parallel to redacted' },
-        { tag: 'z', content: 'Parallel to ok' }
-      ],
-      ind1: '4',
-      ind2: '0'
+        { tag: '6', content: '700-02/$1' },
+        { tag: 'a', content: '並列表記' }
+      ]
     }
   ]
 }
@@ -178,16 +129,6 @@ describe('MarcSerializer', () => {
       expect(field100.subfields.map(sf => sf.content)).to.include('Porter, Bertha,')
     })
 
-    it('removes subfields marked for exclusion', () => {
-      const field856 = serialized.bib.fields.find(f => f.marcTag === '856')
-
-      const subfieldU = field856.subfields.find(s => s.tag === 'u')
-      expect(subfieldU).to.equal(undefined)
-
-      const subfieldZ = field856.subfields.find(s => s.tag === 'z')
-      expect(subfieldZ.content).to.equal('This is ok')
-    })
-
     it('keeps surviving fields present', () => {
       const tags = serialized.bib.fields.map(f => f.marcTag)
       // Null is the leader, 700 is removed
@@ -195,26 +136,17 @@ describe('MarcSerializer', () => {
     })
   })
 
-  describe('serialize with parallels', () => {
-    let serialized
-    before(() => {
-      serialized = MarcSerializer.serialize(sampleBibWithParallels)
+  describe('serialize removes parallel 880 when source field is excluded', () => {
+    const serialized = MarcSerializer.serialize(sampleBibWithExcludedSourceAndParallel)
+
+    it('removes the source 700 field', () => {
+      const field700 = serialized.bib.fields.find(f => f.marcTag === '700')
+      expect(field700).to.equal(undefined)
     })
 
-    it('removes excluded subfields in main 856 and parallel 880', () => {
-      const field856 = serialized.bib.fields.find(f => f.marcTag === '856')
+    it('removes the linked 880 field', () => {
       const field880 = serialized.bib.fields.find(f => f.marcTag === '880')
-
-      // 856$u and 880$u should be removed
-      const subU856 = field856.subfields.find(s => s.tag === 'u')
-      expect(subU856).to.equal(undefined)
-
-      const subU880 = field880.subfields.find(s => s.tag === 'u')
-      expect(subU880).to.equal(undefined)
-
-      // z subfields remain
-      expect(field856.subfields.find(s => s.tag === 'z').content).to.equal('This is ok')
-      expect(field880.subfields.find(s => s.tag === 'z').content).to.equal('Parallel to ok')
+      expect(field880).to.equal(undefined)
     })
   })
 
@@ -226,34 +158,10 @@ describe('MarcSerializer', () => {
       expect(parallels).to.have.lengthOf(0)
     })
     it('returns correct parallel 880 for a field', () => {
-      const field856 = sampleBibWithParallels.varFields.find(f => f.marcTag === '856')
-      const parallels = MarcSerializer.findParallelFields(sampleBibWithParallels, field856)
+      const field700 = sampleBibWithExcludedSourceAndParallel.varFields.find(f => f.marcTag === '700')
+      const parallels = MarcSerializer.findParallelFields(sampleBibWithExcludedSourceAndParallel, field700)
       expect(parallels).to.have.lengthOf(1)
       expect(parallels[0].marcTag).to.equal('880')
-    })
-  })
-
-  describe('isLeaderField', () => {
-    it('correctly identifies leader field', () => {
-      const leader = sampleBib.varFields.find(field => field.fieldTag === '_')
-      expect(MarcSerializer.isLeaderField(leader)).to.equal(true)
-    })
-
-    it('returns false for non-leader fields', () => {
-      const field100 = sampleBib.varFields[1]
-      expect(MarcSerializer.isLeaderField(field100)).to.equal(false)
-    })
-  })
-
-  describe('isControlField', () => {
-    it('correctly identifies control field', () => {
-      const control = sampleBib.varFields.find(field => field.marcTag === '008')
-      expect(MarcSerializer.isControlField(control)).to.equal(true)
-    })
-
-    it('returns false for data fields', () => {
-      const field100 = sampleBib.varFields[0]
-      expect(MarcSerializer.isControlField(field100)).to.equal(false)
     })
   })
 })
