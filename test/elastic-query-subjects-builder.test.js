@@ -38,37 +38,31 @@ describe('ElasticQuerySubjectsBuilder', () => {
 
   describe('search_scope="has"', () => {
     it('applies subject match clauses to query', () => {
-      const request = new ApiRequest({ q: 'toast', search_scope: 'has' })
+      const request = new ApiRequest({ q: 'toast bread', search_scope: 'has' })
       const inst = ElasticQuerySubjectsBuilder.forApiRequest(request)
 
       const query = inst.query.toJson()
 
-      expect(query.bool.must[0].bool.should.length).to.equal(3)
+      expect(query.bool.must[0].bool.should.length).to.equal(2)
       expect(query.bool.must[0].bool.should[0])
       expect(query.bool.must[0].bool.should[0]).to.deep.equal({
         match: {
           preferredTerm: {
             _name: 'preferredTerm',
-            query: 'toast',
+            query: 'toast bread',
             operator: 'and'
           }
         }
       })
 
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
-        prefix: {
-          preferredTerm: { value: 'toast', _name: 'preferredTermPrefix' }
-        }
-      })
-
-      expect(query.bool.must[0].bool.should[2]).to.deep.equal({
         nested: {
           inner_hits: {},
           path: 'variants',
           query: {
             match: {
               'variants.variant': {
-                query: 'toast',
+                query: 'toast bread',
                 operator: 'and'
               }
             }
