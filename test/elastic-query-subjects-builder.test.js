@@ -57,47 +57,19 @@ describe('ElasticQuerySubjectsBuilder', () => {
       expect(query.bool.must[0].bool.should[1]).to.deep.equal({
         bool: {
           _name: 'preferredTermPrefix',
-          should: [
+          must: [
             {
-              bool: {
-                must: [
-                  {
-                    prefix: {
-                      preferredTerm: {
-                        value: 'toast'
-                      }
-                    }
-                  },
-                  {
-                    match: {
-                      preferredTerm: {
-                        query: 'bread',
-                        operator: 'and'
-                      }
-                    }
-                  }
-                ]
+              prefix: {
+                preferredTerm: {
+                  value: 'toast'
+                }
               }
             },
             {
-              bool: {
-                must: [
-                  {
-                    prefix: {
-                      preferredTerm: {
-                        value: 'bread'
-                      }
-                    }
-                  },
-                  {
-                    match: {
-                      preferredTerm: {
-                        query: 'toast',
-                        operator: 'and'
-                      }
-                    }
-                  }
-                ]
+              prefix: {
+                preferredTerm: {
+                  value: 'bread'
+                }
               }
             }
           ]
