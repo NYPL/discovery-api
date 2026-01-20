@@ -466,7 +466,8 @@ describe('Resources query', function () {
         size: 1,
         query: {
           bool: {
-            must: [{ term: { uri: 'b1234' } }]
+            must: [{ term: { uri: 'b1234' } }],
+            filter: []
           }
         },
         aggregations: {
@@ -719,138 +720,6 @@ describe('Resources query', function () {
     it('should use match_all for items when merge_checkin_card_items is truthy', () => {
       expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
         .to.deep.equal({ must: { match_all: {} } })
-    })
-  })
-
-  describe('addInnerHits', () => {
-    it('should include query for items', () => {
-      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2 }))
-        .to.deep.equal({
-          query: {
-            bool: {
-              filter: [
-                {
-                  bool: {
-                    should: [
-                      {
-                        nested: {
-                          path: 'items',
-                          query: {
-                            bool: {
-                              must: {
-                                match_all: {}
-                              }
-                            }
-                          },
-                          inner_hits: {
-                            sort: [{ 'items.enumerationChronology_sort': 'desc' }],
-                            size: 1,
-                            from: 2,
-                            name: 'items'
-                          }
-                        }
-                      },
-                      { match_all: {} }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        })
-    })
-
-    it('should exclude check in card items if explicitly set', () => {
-      expect(resourcesPrivMethods.addInnerHits({ query: { bool: {} } }, { size: 1, from: 2, merge_checkin_card_items: false }))
-        .to.deep.equal({
-          query: {
-            bool: {
-              filter: [
-                {
-                  bool: {
-                    should: [
-                      {
-                        nested: {
-                          path: 'items',
-                          query: {
-                            bool: {
-                              must_not: [
-                                { term: { 'items.type': 'nypl:CheckinCardItem' } }
-                              ]
-                            }
-                          },
-                          inner_hits: {
-                            sort: [{ 'items.enumerationChronology_sort': 'desc' }],
-                            size: 1,
-                            from: 2,
-                            name: 'items'
-                          }
-                        }
-                      },
-                      { match_all: {} }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        })
-    })
-
-    it('should include filters for items', () => {
-      expect(resourcesPrivMethods.addInnerHits(
-        { query: { bool: {} } },
-        { size: 1, from: 2, query: { volume: [1, 2], location: ['SASB', 'LPA'], other: 'filter' } }
-      )).to.deep.equal({
-        query: {
-          bool: {
-            filter: [
-              {
-                bool: {
-                  should: [
-                    {
-                      nested: {
-                        path: 'items',
-                        query: {
-                          bool: {
-                            must: {
-                              match_all: {}
-                            },
-                            filter: [
-                              { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
-                              { terms: { 'items.holdingLocation.id': ['SASB', 'LPA'] } }
-                            ]
-                          }
-                        },
-                        inner_hits: {
-                          sort: [{ 'items.enumerationChronology_sort': 'desc' }],
-                          size: 1,
-                          from: 2,
-                          name: 'items'
-                        }
-                      }
-                    },
-                    { match_all: {} },
-                    {
-                      nested: {
-                        inner_hits: { name: 'allItems' },
-                        path: 'items',
-                        query: {
-                          bool: {
-                            must_not: [
-                              { exists: { field: 'items.electronicLocator' } }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      })
     })
   })
 
