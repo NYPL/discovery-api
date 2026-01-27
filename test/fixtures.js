@@ -34,6 +34,9 @@ function esClientSearchViaFixtures (properties) {
         missingFixturePaths += 1
         return reject(err)
       }
+      if (!content) {
+        return reject(new Error('Emulated 404'))
+      }
       if (process.env.DEBUG_FIXTURES) {
         console.log('Using fixture size ' + content.length + 'b')
       }

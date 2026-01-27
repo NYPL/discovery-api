@@ -114,6 +114,8 @@ module.exports = function (app) {
 
     if (req.params.ext === 'annotated-marc') {
       handler = app.resources.annotatedMarc
+    } else if (req.params.ext === 'marc') {
+      handler = app.resources.marc
     }
 
     return handler(params, { baseUrl: app.baseUrl }, req)
