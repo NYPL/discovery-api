@@ -33,6 +33,7 @@ app.init = async () => {
 
   require('./lib/resources')(app)
   require('./lib/subjects')(app)
+  require('./lib/contributors')(app)
   require('./lib/vocabularies')(app)
 
   // routes
