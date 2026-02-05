@@ -44,19 +44,20 @@ const expectations = {
   // },
   nyplM2: {
     barcode: '33333069027734',
-    scholar: { includes: [sasb], excludes: [scholar, lpa, schomburg] },
+    scholar: { includes: [sasb, scholar], excludes: [lpa, schomburg] },
     general: { includes: [sasb], excludes: [scholar, lpa, schomburg] }
   }
 }
-const barcodeQueryParams = Object.values(expectations).map(expectation => `barcodes[]=${expectation.barcode}`).join('&')
 
-const patronIds = {
+const ptypes = {
   scholar: '5427701',
   general: '67427431'
 }
 
+const barcodeQueryParams = Object.values(expectations).map(expectation => `barcodes[]=${expectation.barcode}`).join('&')
+
 const checkLocationsForPtype = async (ptype = 'scholar') => {
-  const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?${barcodeQueryParams}&patronId=${patronIds[ptype]}`)
+  const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?${barcodeQueryParams}&patronId=${ptypes[ptype]}`)
   const problems = []
   const match = []
   Object.values(expectations).forEach((expectation, i) => {
@@ -69,7 +70,7 @@ const checkLocationsForPtype = async (ptype = 'scholar') => {
         })
       })
       .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
-    let totalMatch
+    let totalMatch = true
     const matchObject = { barcode: expectation.barcode, deliveryLocationIdsFromApi, expectedToInclude: expectation[ptype].includes, expectedToExclude: expectation[ptype].excludes }
     for (const expectedIncludedValue of expectation[ptype].includes) {
       const includedValueIncluded = deliveryLocationIdsFromApi.some((label) => label.includes(expectedIncludedValue))
@@ -92,13 +93,13 @@ const checkLocationsForPtype = async (ptype = 'scholar') => {
 }
 
 const theThing = async () => {
-  const [generalResults, scholarResults] = await Promise.all(['general', 'scholar'].map((checkLocationsForPtype)))
-  if (generalResults.problems.length) {
-    console.error('Error with general ptype delivery results, ', generalResults.problems)
-  } else console.log('Delivery locations successfully returned for general ptype', generalResults.match)
-  if (scholarResults.problems.length) {
-    console.error('Error with general ptype delivery results, ', scholarResults.problems)
-  } else console.log('Delivery locations successfully returned for scholar ptype ', scholarResults.match)
+  const results = await Promise.all(Object.keys(ptypes).map((checkLocationsForPtype)))
+  Object.keys(ptypes).forEach((ptype, i) => {
+    const resultsForPtype = results[i]
+    if (resultsForPtype.problems.length) {
+      console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
+    } else console.log(`Delivery locations successfully returned for ${ptype} ptype`, resultsForPtype.match)
+  })
 }
 
 theThing()
