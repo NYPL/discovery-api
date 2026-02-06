@@ -1,43 +1,36 @@
 require('dotenv').config('config/qa.env')
 const axios = require('axios')
 const { expectations, ptypes } = require('./delivery-locations-constants')
-const assert = require('assert')
 
-const barcodeQueryParams = Object.values(expectations).map(expectation => `barcodes[]=${expectation.barcode}`).join('&')
-
-const checkLocationsForPtype = async (ptype = 'scholar') => {
-  const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?${barcodeQueryParams}&patronId=${ptypes[ptype]}`)
+const checkLocationsForPtype = async (ptype) => {
   const problems = []
   const match = []
-  Object.values(expectations).forEach((expectation, i) => {
-    // per record
-    const deliveryLocationIdsFromApi = deliveryLocationsPerRecord
-      // find delivery location data by barcode match - api does not return in consistent order
-      .find((deliveryData) => {
-        return deliveryData.identifier.some((id) => {
-          return id.includes(expectation.barcode)
-        })
-      })
-      .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
+  await Promise.all(Object.values(expectations).map(async (expectation) => {
+    const deliveryLocationsFromApi = await getDeliveryLocations(expectation.barcode, ptypes[ptype])
     let totalMatch = true
-    const matchObject = { barcode: expectation.barcode, deliveryLocationIdsFromApi, expectedToInclude: expectation[ptype].includes, expectedToExclude: expectation[ptype].excludes }
-    for (const expectedIncludedValue of expectation[ptype].includes) {
-      const includedValueIncluded = deliveryLocationIdsFromApi.some((label) => label.includes(expectedIncludedValue))
-      if (!includedValueIncluded || i === 2) {
-        totalMatch = false
-        problems.push({ barcode: expectation.barcode, deliveryLocationIdsFromApi, expectedToInclude: expectedIncludedValue })
+    const registerProblem = (problem) => {
+      problems.push({ barcode: expectation.barcode, deliveryLocationsFromApi, ...problem })
+      totalMatch = false
+    }
+    const checkForValue = (expectedValue, action) => {
+      const includedValueIncluded = deliveryLocationsFromApi.some((label) => label.includes(expectedValue))
+      const match = action === 'include' ? includedValueIncluded : !includedValueIncluded
+      if (!match) {
+        registerProblem({ [`expectedTo${action}`]: expectedValue })
       }
     }
-    for (const expectedExcludedValue of expectation[ptype].excludes) {
-      const excludedValueExcluded = !deliveryLocationIdsFromApi.some((label) => label.includes(expectedExcludedValue))
-      if (!excludedValueExcluded) {
-        totalMatch = false
-        problems.push({ barcode: expectation.barcode, deliveryLocationIdsFromApi, expectedToExclude: expectedExcludedValue })
-      }
-    }
-    if (totalMatch) match.push(matchObject)
-  })
+    expectation[ptype].includes.forEach((expectedValue) => checkForValue(expectedValue, 'include'))
+    expectation[ptype].excludes.forEach((expectedValue) => checkForValue(expectedValue, 'exclude'))
+    if (totalMatch) match.push({ barcode: expectation.barcode, deliveryLocationsFromApi, expectedToInclude: expectation[ptype].includes, expectedToExclude: expectation[ptype].excludes })
+  }))
   return { match, problems }
+}
+
+const getDeliveryLocations = async (barcode, patronId) => {
+  const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+  // per record
+  return deliveryLocationsPerRecord[0]
+    .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
 }
 
 const theThing = async () => {
@@ -46,7 +39,7 @@ const theThing = async () => {
     const resultsForPtype = results[i]
     if (resultsForPtype.problems.length) {
       console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
-    }
+    } else console.log(`All delivery location checks for ${ptype} patron type successful`)
   })
 }
 
