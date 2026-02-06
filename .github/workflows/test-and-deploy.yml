@@ -81,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: 
       - tests
-      - inte
+      - integration-test-qa
     if: github.ref == 'refs/heads/qa2'
     steps:
       - name: Checkout repo
