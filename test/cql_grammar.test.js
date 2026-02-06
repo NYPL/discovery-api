@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const { cqlParser, simplify, rectifyTree } = require('../lib/elasticsearch/cql_grammar')
+const { cqlParser, simplify, parseWithRightCql } = require('../lib/elasticsearch/cql_grammar')
 
 
 function validateAtomicQuery(parsed, scope, relation, quotedTerm) {
@@ -28,31 +28,31 @@ function validateBooleanQuery(parsed, expected) {
 describe.only('CQL Grammar', function  () {
   describe('parsing queries', function () {
     it('parses atomic queries', function () {
-      validateAtomicQuery(cqlParser.getAST("title=\"hamlet\""), "title", "=", "\"hamlet\"")
-      validateAtomicQuery(cqlParser.getAST("author adj \"shakespeare\""), "author", "adj", "\"shakespeare\"")
-      validateAtomicQuery(cqlParser.getAST("keyword  any \"hamlet shakespeare\""), "keyword", "any", "\"hamlet shakespeare\"")
-      validateAtomicQuery(cqlParser.getAST("subject all \"hamlet shakespeare\""), "subject", "all", "\"hamlet shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("title=\"hamlet\""), "title", "=", "\"hamlet\"")
+      validateAtomicQuery(parseWithRightCql("author adj \"shakespeare\""), "author", "adj", "\"shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("keyword  any \"hamlet shakespeare\""), "keyword", "any", "\"hamlet shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("subject all \"hamlet shakespeare\""), "subject", "all", "\"hamlet shakespeare\"")
     })
 
     it('allows whitespace variants', function () {
-      validateAtomicQuery(cqlParser.getAST("title =\"hamlet\""), "title", "=", "\"hamlet\"")
-      validateAtomicQuery(cqlParser.getAST("title= \"hamlet\""), "title", "=", "\"hamlet\"")
-      validateAtomicQuery(cqlParser.getAST("title = \"hamlet\""), "title", "=", "\"hamlet\"")
-      validateAtomicQuery(cqlParser.getAST("title  = \"hamlet\""), "title", "=", "\"hamlet\"")
-      validateAtomicQuery(cqlParser.getAST("title  =  \"hamlet\""), "title", "=", "\"hamlet\"")
-      validateAtomicQuery(cqlParser.getAST("author adj \"shakespeare\""), "author", "adj", "\"shakespeare\"")
-      validateAtomicQuery(cqlParser.getAST("author  adj \"shakespeare\""), "author", "adj", "\"shakespeare\"")
-      validateAtomicQuery(cqlParser.getAST("author adj  \"shakespeare\""), "author", "adj", "\"shakespeare\"")
-      validateAtomicQuery(cqlParser.getAST("author  adj  \"shakespeare\""), "author", "adj", "\"shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("title =\"hamlet\""), "title", "=", "\"hamlet\"")
+      validateAtomicQuery(parseWithRightCql("title= \"hamlet\""), "title", "=", "\"hamlet\"")
+      validateAtomicQuery(parseWithRightCql("title = \"hamlet\""), "title", "=", "\"hamlet\"")
+      validateAtomicQuery(parseWithRightCql("title  = \"hamlet\""), "title", "=", "\"hamlet\"")
+      validateAtomicQuery(parseWithRightCql("title  =  \"hamlet\""), "title", "=", "\"hamlet\"")
+      validateAtomicQuery(parseWithRightCql("author adj \"shakespeare\""), "author", "adj", "\"shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("author  adj \"shakespeare\""), "author", "adj", "\"shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("author adj  \"shakespeare\""), "author", "adj", "\"shakespeare\"")
+      validateAtomicQuery(parseWithRightCql("author  adj  \"shakespeare\""), "author", "adj", "\"shakespeare\"")
     })
 
     it('correctly escapes escape characters', function () {
-      validateAtomicQuery(cqlParser.getAST("keyword=\"Notes on \\\"The Underground\\\"\""), "keyword", "=", "\"Notes on \\\"The Underground\\\"\"")
-      validateAtomicQuery(cqlParser.getAST("title=\"This title ends in a slash \\\\\""), "title", "=", "\"This title ends in a slash \\\\\"")
+      validateAtomicQuery(parseWithRightCql("keyword=\"Notes on \\\"The Underground\\\"\""), "keyword", "=", "\"Notes on \\\"The Underground\\\"\"")
+      validateAtomicQuery(parseWithRightCql("title=\"This title ends in a slash \\\\\""), "title", "=", "\"This title ends in a slash \\\\\"")
     })
 
     it('identifies words correctly', function () {
-      const parsed = cqlParser.getAST("keyword adj \"A multiword keyword\"")
+      const parsed = parseWithRightCql("keyword adj \"A multiword keyword\"")
       const words = []
       let nodes = [parsed]
       while (nodes.length) {
@@ -71,41 +71,44 @@ describe.only('CQL Grammar', function  () {
     })
 
     it('parses boolean queries', function () {
-      expect(simplify(cqlParser.getAST(
+      expect(simplify(parseWithRightCql(
         "title=\"dogs\" AND keyword=\"cats\""
       ))).to.deep.equal(
         [ [ 'title', '=', [ 'dogs' ] ], 'AND', [ 'keyword', '=', [ 'cats' ] ] ]
       )
 
-      expect(simplify(cqlParser.getAST(
+      expect(simplify(parseWithRightCql(
         "title=\"dogs\" AND keyword=\"cats\" OR author adj \"Bird\""
       ))).to.deep.equal(
         [
           [
-            "title", "=", ["dogs"]
-          ],
-          "AND",
-          [
+            [
+              "title", "=", ["dogs"]
+            ],
+            "AND",
             [
               "keyword", "=", ["cats"]
-            ],
+            ]
+          ],
             "OR",
             [
               "author", "adj", ["Bird"]
             ]
           ]
-        ]
       )
     })
 
     it('parses queries with parentheses', function () {
-      expect()
+      expect(simplify(parseWithRightCql(
+        "title=\"dogs\" AND (keyword=\"cats\" OR author adj \"Bird\")"
+      )))
         .to.deep.equal(
           [
-            [ [ 'title', '=', ['dogs'] ], 'AND', [ 'keyword', '=', ['cats'] ] ],
+            [ 'title', '=', ['dogs'] ], 'AND', [[ 'keyword', '=', ['cats'] ],
             'OR',
             [ 'author', 'adj', [ 'Bird' ] ]
           ]
+        ]
         )
     })
   })
