@@ -52,6 +52,14 @@ module.exports = function (app) {
       .catch((error) => next(error))
   })
 
+  app.get(`/api/v${VER}/discovery/browse/contributors`, function (req, res, next) {
+    const params = req.query
+
+    return app.contributors.browse(params, { baseUrl: app.baseUrl }, req)
+      .then((resp) => respond(res, resp, params))
+      .catch((error) => next(error))
+  })
+
   app.get(`/api/v${VER}/discovery/vocabularies`, function (req, res, next) {
     const params = Object.assign({}, req.query, req.params)
 
@@ -106,6 +114,8 @@ module.exports = function (app) {
 
     if (req.params.ext === 'annotated-marc') {
       handler = app.resources.annotatedMarc
+    } else if (req.params.ext === 'marc') {
+      handler = app.resources.marc
     }
 
     return handler(params, { baseUrl: app.baseUrl }, req)

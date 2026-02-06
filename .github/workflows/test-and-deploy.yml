@@ -15,12 +15,32 @@ jobs:
         run: npm ci
       - name: Unit Tests
         run: npm test
-  deploy-qa:
+  integration-test-qa:
     permissions:
       id-token: write
       contents: read
     runs-on: ubuntu-latest
     needs: tests
+    if: github.ref == 'refs/heads/qa'
+    steps: 
+      - uses: actions/checkout@v4
+      - name: Set Node version
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - name: Install dependencies
+        run: npm ci
+      - name: Start service
+        run: ENV=qa npm start &
+      - name: Run tests
+        run: npm run test-integration
+  deploy-qa:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    needs: 
+      - tests
     if: github.ref == 'refs/heads/qa'
     steps:
       - name: Checkout repo
@@ -31,7 +51,6 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
           aws-region: us-east-1
-
       - name: Log in to ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
@@ -60,7 +79,9 @@ jobs:
       id-token: write
       contents: read
     runs-on: ubuntu-latest
-    needs: tests
+    needs: 
+      - tests
+      - inte
     if: github.ref == 'refs/heads/qa2'
     steps:
       - name: Checkout repo
