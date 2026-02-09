@@ -33,7 +33,7 @@ jobs:
       - name: Start service
         run: ENV=qa npm start &
       - name: Run tests
-        run: npm run test-integration
+        run: node test/integration/delivery-locations-by-barcode.test.js
   deploy-qa:
     permissions:
       id-token: write
