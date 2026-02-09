@@ -23,6 +23,11 @@ jobs:
     needs: tests
     if: github.ref == 'refs/heads/qa2'
     steps: 
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
+          aws-region: us-east-1
       - uses: actions/checkout@v4
       - name: Set Node version
         uses: actions/setup-node@v4
