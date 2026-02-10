@@ -10,7 +10,10 @@ const {
   keywordQueryForBarcode,
   keywordQueryForShelfMark,
   keywordQueryForGeneralTerm,
-  identifierQuery
+  identifierQuery,
+  binaryBooleanQuery,
+  ternaryBooleanQuery,
+  queryWithParentheses
 } = require('./fixtures/cql_fixtures')
 
 describe.only('CQL Query Builder', function () {
@@ -83,4 +86,29 @@ describe.only('CQL Query Builder', function () {
         identifierQuery
       )
   })
+
+  it('Binary boolean query', function () {
+    expect(buildEsQuery("author = \"Shakespeare\" AND language = \"English\""))
+      .to.deep.equal(
+        binaryBooleanQuery
+      )
+  })
+
+  it('Ternary boolean query', function () {
+    expect(buildEsQuery("author = \"Shakespeare\" AND language = \"English\" OR genre = \"tragedy\""))
+      .to.deep.equal(
+        ternaryBooleanQuery
+      )
+  })
+
+  it('Boolean query with parentheses', function () {
+    expect(buildEsQuery("author = \"Shakespeare\" AND (language = \"English\" OR genre = \"tragedy\")"))
+      .to.deep.equal(
+        queryWithParentheses
+      )
+  })
+
+  it('Query with NOT')
+
+  it('Query with AND NOT')
 })

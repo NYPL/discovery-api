@@ -792,6 +792,515 @@ const identifierQuery = {
   }
 }
 
+const binaryBooleanQuery = {
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "Shakespeare",
+                        "fields": [
+                          "creatorLiteral",
+                          "creatorLiteral.folded",
+                          "contributorLiteral.folded",
+                          "parallelCreatorLiteral.folded",
+                          "parallelContributorLiteral.folded"
+                        ],
+                        "type": "phrase"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "items",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "Shakespeare",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "nested": {
+                  "path": "holdings",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "Shakespeare",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "English",
+                        "fields": [
+                          "language.id",
+                          "language.label"
+                        ],
+                        "type": "phrase"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "items",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "English",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "nested": {
+                  "path": "holdings",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "English",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+
+const ternaryBooleanQuery = {
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "bool": {
+            "must": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "multi_match": {
+                              "query": "Shakespeare",
+                              "fields": [
+                                "creatorLiteral",
+                                "creatorLiteral.folded",
+                                "contributorLiteral.folded",
+                                "parallelCreatorLiteral.folded",
+                                "parallelContributorLiteral.folded"
+                              ],
+                              "type": "phrase"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "items",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "Shakespeare",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "holdings",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "Shakespeare",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "multi_match": {
+                              "query": "English",
+                              "fields": [
+                                "language.id",
+                                "language.label"
+                              ],
+                              "type": "phrase"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "items",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "English",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "holdings",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "English",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "tragedy",
+                        "fields": [
+                          "genreForm.raw"
+                        ],
+                        "type": "phrase"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "items",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "tragedy",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "nested": {
+                  "path": "holdings",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "tragedy",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+
+const queryWithParentheses = {
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "Shakespeare",
+                        "fields": [
+                          "creatorLiteral",
+                          "creatorLiteral.folded",
+                          "contributorLiteral.folded",
+                          "parallelCreatorLiteral.folded",
+                          "parallelContributorLiteral.folded"
+                        ],
+                        "type": "phrase"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "items",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "Shakespeare",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "nested": {
+                  "path": "holdings",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "Shakespeare",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "multi_match": {
+                              "query": "English",
+                              "fields": [
+                                "language.id",
+                                "language.label"
+                              ],
+                              "type": "phrase"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "items",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "English",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "holdings",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "English",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "should": [
+                          {
+                            "multi_match": {
+                              "query": "tragedy",
+                              "fields": [
+                                "genreForm.raw"
+                              ],
+                              "type": "phrase"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "items",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "tragedy",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "nested": {
+                        "path": "holdings",
+                        "query": {
+                          "bool": {
+                            "should": [
+                              {
+                                "multi_match": {
+                                  "query": "tragedy",
+                                  "fields": [],
+                                  "type": "phrase"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
 
 module.exports =  {
   simpleAdjQuery,
@@ -802,5 +1311,8 @@ module.exports =  {
   keywordQueryForBarcode,
   keywordQueryForShelfMark,
   keywordQueryForGeneralTerm,
-  identifierQuery
+  identifierQuery,
+  binaryBooleanQuery,
+  ternaryBooleanQuery,
+  queryWithParentheses
 }
