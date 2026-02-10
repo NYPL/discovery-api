@@ -1,0 +1,33 @@
+on: [push]
+jobs:
+  integration-test:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
+          aws-region: us-east-1
+      - uses: actions/checkout@v4
+      - name: Set Node version
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - name: Install dependencies
+        run: npm ci
+      - name: Start service
+        run: ENV=qa npm start &
+      - name: Wait for server to be ready
+        run: |
+          for i in {1..15}; do
+            curl -sS http://localhost:8080/ > /dev/null && echo "Server is up!" && break
+            echo "Waiting for server..."
+            sleep 4
+          done
+      - name: Run tests
+        run: node test/integration/delivery-locations-by-barcode.test.js
