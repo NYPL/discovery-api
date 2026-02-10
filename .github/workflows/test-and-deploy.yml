@@ -26,7 +26,7 @@ jobs:
       id-token: write
       contents: read
     runs-on: ubuntu-latest
-    needs: integration-test
+    needs: test
     # Only run if it's one of our three deployment branches
     if: contains(fromJSON('["qa", "qa2", "production"]'), github.ref_name)
     steps:
