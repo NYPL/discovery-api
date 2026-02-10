@@ -25,7 +25,7 @@ function validateBooleanQuery(parsed, expected) {
 
 }
 
-describe.only('CQL Grammar', function  () {
+describe('CQL Grammar', function  () {
   describe('parsing queries', function () {
     it('parses atomic queries', function () {
       validateAtomicQuery(parseWithRightCql("title=\"hamlet\""), "title", "=", "\"hamlet\"")
