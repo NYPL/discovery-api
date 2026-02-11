@@ -1302,6 +1302,136 @@ const queryWithParentheses = {
   }
 }
 
+const negationQuery = {
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "Shakespeare",
+                        "fields": [
+                          "creatorLiteral",
+                          "creatorLiteral.folded",
+                          "contributorLiteral.folded",
+                          "parallelCreatorLiteral.folded",
+                          "parallelContributorLiteral.folded"
+                        ],
+                        "type": "phrase"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "items",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "Shakespeare",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "nested": {
+                  "path": "holdings",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "Shakespeare",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "bool": {
+            "should": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "English",
+                        "fields": [
+                          "language.id",
+                          "language.label"
+                        ],
+                        "type": "phrase"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "nested": {
+                  "path": "items",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "English",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "nested": {
+                  "path": "holdings",
+                  "query": {
+                    "bool": {
+                      "should": [
+                        {
+                          "multi_match": {
+                            "query": "English",
+                            "fields": [],
+                            "type": "phrase"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+
 module.exports =  {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -1314,5 +1444,6 @@ module.exports =  {
   identifierQuery,
   binaryBooleanQuery,
   ternaryBooleanQuery,
-  queryWithParentheses
+  queryWithParentheses,
+  negationQuery
 }

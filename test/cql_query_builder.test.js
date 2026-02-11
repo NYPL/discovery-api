@@ -13,7 +13,8 @@ const {
   identifierQuery,
   binaryBooleanQuery,
   ternaryBooleanQuery,
-  queryWithParentheses
+  queryWithParentheses,
+  negationQuery
 } = require('./fixtures/cql_fixtures')
 
 describe.only('CQL Query Builder', function () {
@@ -108,7 +109,17 @@ describe.only('CQL Query Builder', function () {
       )
   })
 
-  it('Query with NOT')
+  it('Query with NOT', function () {
+    expect(buildEsQuery("author = \"Shakespeare\" NOT language = \"English\""))
+      .to.deep.equal(
+        negationQuery
+      )
+  })
 
-  it('Query with AND NOT')
+  it('Query with AND NOT', function () {
+    expect(buildEsQuery("author = \"Shakespeare\" AND NOT language = \"English\""))
+      .to.deep.equal(
+        negationQuery
+      )
+  })
 })
