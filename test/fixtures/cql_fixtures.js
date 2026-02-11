@@ -1,48 +1,48 @@
 const simpleAdjQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "Hamlet",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'Hamlet',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "phrase"
+                  type: 'phrase'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet",
-                      "fields": [],
-                      "type": "phrase"
+                    multi_match: {
+                      query: 'Hamlet',
+                      fields: [],
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -51,16 +51,16 @@ const simpleAdjQuery = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet",
-                      "fields": [],
-                      "type": "phrase"
+                    multi_match: {
+                      query: 'Hamlet',
+                      fields: [],
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -74,50 +74,50 @@ const simpleAdjQuery = {
 }
 
 const prefixPhraseQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "The Tragedy of Hamlet, Prince of Denmark",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'The Tragedy of Hamlet, Prince of Denmark',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "phrase_prefix"
+                  type: 'phrase_prefix'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "The Tragedy of Hamlet, Prince of Denmark",
-                      "fields": [],
-                      "type": "phrase_prefix"
+                    multi_match: {
+                      query: 'The Tragedy of Hamlet, Prince of Denmark',
+                      fields: [],
+                      type: 'phrase_prefix'
                     }
                   }
                 ]
@@ -126,16 +126,16 @@ const prefixPhraseQuery = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "The Tragedy of Hamlet, Prince of Denmark",
-                      "fields": [],
-                      "type": "phrase_prefix"
+                    multi_match: {
+                      query: 'The Tragedy of Hamlet, Prince of Denmark',
+                      fields: [],
+                      type: 'phrase_prefix'
                     }
                   }
                 ]
@@ -149,52 +149,52 @@ const prefixPhraseQuery = {
 }
 
 const simpleAnyQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "Hamlet Othello",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'Hamlet Othello',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "cross_fields",
-                  "operator": "or"
+                  type: 'cross_fields',
+                  operator: 'or'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet Othello",
-                      "fields": [],
-                      "type": "cross_fields",
-                      "operator": "or"
+                    multi_match: {
+                      query: 'Hamlet Othello',
+                      fields: [],
+                      type: 'cross_fields',
+                      operator: 'or'
                     }
                   }
                 ]
@@ -203,17 +203,17 @@ const simpleAnyQuery = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet Othello",
-                      "fields": [],
-                      "type": "cross_fields",
-                      "operator": "or"
+                    multi_match: {
+                      query: 'Hamlet Othello',
+                      fields: [],
+                      type: 'cross_fields',
+                      operator: 'or'
                     }
                   }
                 ]
@@ -227,114 +227,114 @@ const simpleAnyQuery = {
 }
 
 const anyWithPrefixQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "Hamlet Othello",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'Hamlet Othello',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "cross_fields",
-                  "operator": "or"
+                  type: 'cross_fields',
+                  operator: 'or'
                 }
               },
               {
-                "multi_match": {
-                  "query": "Tragedy",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'Tragedy',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "phrase_prefix"
+                  type: 'phrase_prefix'
                 }
               },
               {
-                "multi_match": {
-                  "query": "Comedy",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'Comedy',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "phrase_prefix"
+                  type: 'phrase_prefix'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet Othello",
-                      "fields": [],
-                      "type": "cross_fields",
-                      "operator": "or"
+                    multi_match: {
+                      query: 'Hamlet Othello',
+                      fields: [],
+                      type: 'cross_fields',
+                      operator: 'or'
                     }
                   },
                   {
-                    "multi_match": {
-                      "query": "Tragedy",
-                      "fields": [],
-                      "type": "phrase_prefix"
+                    multi_match: {
+                      query: 'Tragedy',
+                      fields: [],
+                      type: 'phrase_prefix'
                     }
                   },
                   {
-                    "multi_match": {
-                      "query": "Comedy",
-                      "fields": [],
-                      "type": "phrase_prefix"
+                    multi_match: {
+                      query: 'Comedy',
+                      fields: [],
+                      type: 'phrase_prefix'
                     }
                   }
                 ]
@@ -343,31 +343,31 @@ const anyWithPrefixQuery = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet Othello",
-                      "fields": [],
-                      "type": "cross_fields",
-                      "operator": "or"
+                    multi_match: {
+                      query: 'Hamlet Othello',
+                      fields: [],
+                      type: 'cross_fields',
+                      operator: 'or'
                     }
                   },
                   {
-                    "multi_match": {
-                      "query": "Tragedy",
-                      "fields": [],
-                      "type": "phrase_prefix"
+                    multi_match: {
+                      query: 'Tragedy',
+                      fields: [],
+                      type: 'phrase_prefix'
                     }
                   },
                   {
-                    "multi_match": {
-                      "query": "Comedy",
-                      "fields": [],
-                      "type": "phrase_prefix"
+                    multi_match: {
+                      query: 'Comedy',
+                      fields: [],
+                      type: 'phrase_prefix'
                     }
                   }
                 ]
@@ -381,52 +381,52 @@ const anyWithPrefixQuery = {
 }
 
 const simpleAllQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "Hamlet Othello",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "titleAlt.folded",
-                    "uniformTitle.folded",
-                    "titleDisplay.folded",
-                    "seriesStatement.folded",
-                    "contentsTitle.folded",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle"
+                multi_match: {
+                  query: 'Hamlet Othello',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'titleAlt.folded',
+                    'uniformTitle.folded',
+                    'titleDisplay.folded',
+                    'seriesStatement.folded',
+                    'contentsTitle.folded',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle'
                   ],
-                  "type": "cross_fields",
-                  "operator": "and"
+                  type: 'cross_fields',
+                  operator: 'and'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet Othello",
-                      "fields": [],
-                      "type": "cross_fields",
-                      "operator": "and"
+                    multi_match: {
+                      query: 'Hamlet Othello',
+                      fields: [],
+                      type: 'cross_fields',
+                      operator: 'and'
                     }
                   }
                 ]
@@ -435,17 +435,17 @@ const simpleAllQuery = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet Othello",
-                      "fields": [],
-                      "type": "cross_fields",
-                      "operator": "and"
+                    multi_match: {
+                      query: 'Hamlet Othello',
+                      fields: [],
+                      type: 'cross_fields',
+                      operator: 'and'
                     }
                   }
                 ]
@@ -459,65 +459,65 @@ const simpleAllQuery = {
 }
 
 const keywordQueryForBarcode = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "123456",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "description.foldedStemmed",
-                    "subjectLiteral",
-                    "subjectLiteral.folded",
-                    "creatorLiteral",
-                    "creatorLiteral.folded",
-                    "contributorLiteral.folded",
-                    "note.label.foldedStemmed",
-                    "publisherLiteral.folded",
-                    "seriesStatement.folded",
-                    "titleAlt.folded",
-                    "titleDisplay.folded",
-                    "contentsTitle.folded",
-                    "tableOfContents.folded",
-                    "genreForm",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelPublisher",
-                    "parallelPublisherLiteral",
-                    "uniformTitle.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle",
-                    "placeOfPublication.folded"
+                multi_match: {
+                  query: '123456',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'description.foldedStemmed',
+                    'subjectLiteral',
+                    'subjectLiteral.folded',
+                    'creatorLiteral',
+                    'creatorLiteral.folded',
+                    'contributorLiteral.folded',
+                    'note.label.foldedStemmed',
+                    'publisherLiteral.folded',
+                    'seriesStatement.folded',
+                    'titleAlt.folded',
+                    'titleDisplay.folded',
+                    'contentsTitle.folded',
+                    'tableOfContents.folded',
+                    'genreForm',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelPublisher',
+                    'parallelPublisherLiteral',
+                    'uniformTitle.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle',
+                    'placeOfPublication.folded'
                   ],
-                  "type": "phrase"
+                  type: 'phrase'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "123456",
-                      "fields": [
-                        "items.idBarcode"
+                    multi_match: {
+                      query: '123456',
+                      fields: [
+                        'items.idBarcode'
                       ],
-                      "type": "phrase"
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -526,16 +526,16 @@ const keywordQueryForBarcode = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "123456",
-                      "fields": [],
-                      "type": "phrase"
+                    multi_match: {
+                      query: '123456',
+                      fields: [],
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -549,65 +549,65 @@ const keywordQueryForBarcode = {
 }
 
 const keywordQueryForShelfMark = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "B 12",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "description.foldedStemmed",
-                    "subjectLiteral",
-                    "subjectLiteral.folded",
-                    "creatorLiteral",
-                    "creatorLiteral.folded",
-                    "contributorLiteral.folded",
-                    "note.label.foldedStemmed",
-                    "publisherLiteral.folded",
-                    "seriesStatement.folded",
-                    "titleAlt.folded",
-                    "titleDisplay.folded",
-                    "contentsTitle.folded",
-                    "tableOfContents.folded",
-                    "genreForm",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelPublisher",
-                    "parallelPublisherLiteral",
-                    "uniformTitle.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle",
-                    "placeOfPublication.folded"
+                multi_match: {
+                  query: 'B 12',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'description.foldedStemmed',
+                    'subjectLiteral',
+                    'subjectLiteral.folded',
+                    'creatorLiteral',
+                    'creatorLiteral.folded',
+                    'contributorLiteral.folded',
+                    'note.label.foldedStemmed',
+                    'publisherLiteral.folded',
+                    'seriesStatement.folded',
+                    'titleAlt.folded',
+                    'titleDisplay.folded',
+                    'contentsTitle.folded',
+                    'tableOfContents.folded',
+                    'genreForm',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelPublisher',
+                    'parallelPublisherLiteral',
+                    'uniformTitle.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle',
+                    'placeOfPublication.folded'
                   ],
-                  "type": "phrase"
+                  type: 'phrase'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "B 12",
-                      "fields": [
-                        "items.shelfMark"
+                    multi_match: {
+                      query: 'B 12',
+                      fields: [
+                        'items.shelfMark'
                       ],
-                      "type": "phrase"
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -616,16 +616,16 @@ const keywordQueryForShelfMark = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "B 12",
-                      "fields": [],
-                      "type": "phrase"
+                    multi_match: {
+                      query: 'B 12',
+                      fields: [],
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -639,63 +639,63 @@ const keywordQueryForShelfMark = {
 }
 
 const keywordQueryForGeneralTerm = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "multi_match": {
-                  "query": "Hamlet",
-                  "fields": [
-                    "title",
-                    "title.folded",
-                    "description.foldedStemmed",
-                    "subjectLiteral",
-                    "subjectLiteral.folded",
-                    "creatorLiteral",
-                    "creatorLiteral.folded",
-                    "contributorLiteral.folded",
-                    "note.label.foldedStemmed",
-                    "publisherLiteral.folded",
-                    "seriesStatement.folded",
-                    "titleAlt.folded",
-                    "titleDisplay.folded",
-                    "contentsTitle.folded",
-                    "tableOfContents.folded",
-                    "genreForm",
-                    "donor.folded",
-                    "parallelTitle.folded",
-                    "parallelTitleDisplay.folded",
-                    "parallelTitleAlt.folded",
-                    "parallelSeriesStatement.folded",
-                    "parallelCreatorLiteral.folded",
-                    "parallelPublisher",
-                    "parallelPublisherLiteral",
-                    "uniformTitle.folded",
-                    "parallelUniformTitle",
-                    "formerTitle",
-                    "addedAuthorTitle",
-                    "placeOfPublication.folded"
+                multi_match: {
+                  query: 'Hamlet',
+                  fields: [
+                    'title',
+                    'title.folded',
+                    'description.foldedStemmed',
+                    'subjectLiteral',
+                    'subjectLiteral.folded',
+                    'creatorLiteral',
+                    'creatorLiteral.folded',
+                    'contributorLiteral.folded',
+                    'note.label.foldedStemmed',
+                    'publisherLiteral.folded',
+                    'seriesStatement.folded',
+                    'titleAlt.folded',
+                    'titleDisplay.folded',
+                    'contentsTitle.folded',
+                    'tableOfContents.folded',
+                    'genreForm',
+                    'donor.folded',
+                    'parallelTitle.folded',
+                    'parallelTitleDisplay.folded',
+                    'parallelTitleAlt.folded',
+                    'parallelSeriesStatement.folded',
+                    'parallelCreatorLiteral.folded',
+                    'parallelPublisher',
+                    'parallelPublisherLiteral',
+                    'uniformTitle.folded',
+                    'parallelUniformTitle',
+                    'formerTitle',
+                    'addedAuthorTitle',
+                    'placeOfPublication.folded'
                   ],
-                  "type": "phrase"
+                  type: 'phrase'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet",
-                      "fields": [],
-                      "type": "phrase"
+                    multi_match: {
+                      query: 'Hamlet',
+                      fields: [],
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -704,16 +704,16 @@ const keywordQueryForGeneralTerm = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: [
                   {
-                    "multi_match": {
-                      "query": "Hamlet",
-                      "fields": [],
-                      "type": "phrase"
+                    multi_match: {
+                      query: 'Hamlet',
+                      fields: [],
+                      type: 'phrase'
                     }
                   }
                 ]
@@ -727,49 +727,49 @@ const keywordQueryForGeneralTerm = {
 }
 
 const identifierQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "term": {
-                  "uri": "b1234"
+                term: {
+                  uri: 'b1234'
                 }
               },
               {
-                "term": {
-                  "idIsbn.clean": "b1234"
+                term: {
+                  'idIsbn.clean': 'b1234'
                 }
               },
               {
-                "term": {
-                  "idIssn.clean": "b1234"
+                term: {
+                  'idIssn.clean': 'b1234'
                 }
               },
               {
-                "prefix": {
-                  "identifierV2.value": "b1234"
+                prefix: {
+                  'identifierV2.value': 'b1234'
                 }
               }
             ]
           }
         },
         {
-          "nested": {
-            "path": "items",
-            "query": {
-              "bool": {
-                "should": [
+          nested: {
+            path: 'items',
+            query: {
+              bool: {
+                should: [
                   {
-                    "term": {
-                      "items.idBarcode": "b1234"
+                    term: {
+                      'items.idBarcode': 'b1234'
                     }
                   },
                   {
-                    "prefix": {
-                      "items.shelfMark.keywordLowercased": "b1234"
+                    prefix: {
+                      'items.shelfMark.keywordLowercased': 'b1234'
                     }
                   }
                 ]
@@ -778,11 +778,11 @@ const identifierQuery = {
           }
         },
         {
-          "nested": {
-            "path": "holdings",
-            "query": {
-              "bool": {
-                "should": []
+          nested: {
+            path: 'holdings',
+            query: {
+              bool: {
+                should: []
               }
             }
           }
@@ -793,42 +793,42 @@ const identifierQuery = {
 }
 
 const binaryBooleanQuery = {
-  "query": {
-    "bool": {
-      "must": [
+  query: {
+    bool: {
+      must: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "multi_match": {
-                        "query": "Shakespeare",
-                        "fields": [
-                          "creatorLiteral",
-                          "creatorLiteral.folded",
-                          "contributorLiteral.folded",
-                          "parallelCreatorLiteral.folded",
-                          "parallelContributorLiteral.folded"
+                      multi_match: {
+                        query: 'Shakespeare',
+                        fields: [
+                          'creatorLiteral',
+                          'creatorLiteral.folded',
+                          'contributorLiteral.folded',
+                          'parallelCreatorLiteral.folded',
+                          'parallelContributorLiteral.folded'
                         ],
-                        "type": "phrase"
+                        type: 'phrase'
                       }
                     }
                   ]
                 }
               },
               {
-                "nested": {
-                  "path": "items",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'items',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "Shakespeare",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'Shakespeare',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -837,16 +837,16 @@ const binaryBooleanQuery = {
                 }
               },
               {
-                "nested": {
-                  "path": "holdings",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'holdings',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "Shakespeare",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'Shakespeare',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -858,35 +858,35 @@ const binaryBooleanQuery = {
           }
         },
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "multi_match": {
-                        "query": "English",
-                        "fields": [
-                          "language.id",
-                          "language.label"
+                      multi_match: {
+                        query: 'English',
+                        fields: [
+                          'language.id',
+                          'language.label'
                         ],
-                        "type": "phrase"
+                        type: 'phrase'
                       }
                     }
                   ]
                 }
               },
               {
-                "nested": {
-                  "path": "items",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'items',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "English",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'English',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -895,16 +895,16 @@ const binaryBooleanQuery = {
                 }
               },
               {
-                "nested": {
-                  "path": "holdings",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'holdings',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "English",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'English',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -921,45 +921,45 @@ const binaryBooleanQuery = {
 }
 
 const ternaryBooleanQuery = {
-  "query": {
-    "bool": {
-      "should": [
+  query: {
+    bool: {
+      should: [
         {
-          "bool": {
-            "must": [
+          bool: {
+            must: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "bool": {
-                        "should": [
+                      bool: {
+                        should: [
                           {
-                            "multi_match": {
-                              "query": "Shakespeare",
-                              "fields": [
-                                "creatorLiteral",
-                                "creatorLiteral.folded",
-                                "contributorLiteral.folded",
-                                "parallelCreatorLiteral.folded",
-                                "parallelContributorLiteral.folded"
+                            multi_match: {
+                              query: 'Shakespeare',
+                              fields: [
+                                'creatorLiteral',
+                                'creatorLiteral.folded',
+                                'contributorLiteral.folded',
+                                'parallelCreatorLiteral.folded',
+                                'parallelContributorLiteral.folded'
                               ],
-                              "type": "phrase"
+                              type: 'phrase'
                             }
                           }
                         ]
                       }
                     },
                     {
-                      "nested": {
-                        "path": "items",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'items',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "Shakespeare",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'Shakespeare',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -968,16 +968,16 @@ const ternaryBooleanQuery = {
                       }
                     },
                     {
-                      "nested": {
-                        "path": "holdings",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'holdings',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "Shakespeare",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'Shakespeare',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -989,35 +989,35 @@ const ternaryBooleanQuery = {
                 }
               },
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "bool": {
-                        "should": [
+                      bool: {
+                        should: [
                           {
-                            "multi_match": {
-                              "query": "English",
-                              "fields": [
-                                "language.id",
-                                "language.label"
+                            multi_match: {
+                              query: 'English',
+                              fields: [
+                                'language.id',
+                                'language.label'
                               ],
-                              "type": "phrase"
+                              type: 'phrase'
                             }
                           }
                         ]
                       }
                     },
                     {
-                      "nested": {
-                        "path": "items",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'items',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "English",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'English',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -1026,16 +1026,16 @@ const ternaryBooleanQuery = {
                       }
                     },
                     {
-                      "nested": {
-                        "path": "holdings",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'holdings',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "English",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'English',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -1050,34 +1050,34 @@ const ternaryBooleanQuery = {
           }
         },
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "multi_match": {
-                        "query": "tragedy",
-                        "fields": [
-                          "genreForm.raw"
+                      multi_match: {
+                        query: 'tragedy',
+                        fields: [
+                          'genreForm.raw'
                         ],
-                        "type": "phrase"
+                        type: 'phrase'
                       }
                     }
                   ]
                 }
               },
               {
-                "nested": {
-                  "path": "items",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'items',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "tragedy",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'tragedy',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1086,16 +1086,16 @@ const ternaryBooleanQuery = {
                 }
               },
               {
-                "nested": {
-                  "path": "holdings",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'holdings',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "tragedy",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'tragedy',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1112,42 +1112,42 @@ const ternaryBooleanQuery = {
 }
 
 const queryWithParentheses = {
-  "query": {
-    "bool": {
-      "must": [
+  query: {
+    bool: {
+      must: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "multi_match": {
-                        "query": "Shakespeare",
-                        "fields": [
-                          "creatorLiteral",
-                          "creatorLiteral.folded",
-                          "contributorLiteral.folded",
-                          "parallelCreatorLiteral.folded",
-                          "parallelContributorLiteral.folded"
+                      multi_match: {
+                        query: 'Shakespeare',
+                        fields: [
+                          'creatorLiteral',
+                          'creatorLiteral.folded',
+                          'contributorLiteral.folded',
+                          'parallelCreatorLiteral.folded',
+                          'parallelContributorLiteral.folded'
                         ],
-                        "type": "phrase"
+                        type: 'phrase'
                       }
                     }
                   ]
                 }
               },
               {
-                "nested": {
-                  "path": "items",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'items',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "Shakespeare",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'Shakespeare',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1156,16 +1156,16 @@ const queryWithParentheses = {
                 }
               },
               {
-                "nested": {
-                  "path": "holdings",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'holdings',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "Shakespeare",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'Shakespeare',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1177,38 +1177,38 @@ const queryWithParentheses = {
           }
         },
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "bool": {
-                        "should": [
+                      bool: {
+                        should: [
                           {
-                            "multi_match": {
-                              "query": "English",
-                              "fields": [
-                                "language.id",
-                                "language.label"
+                            multi_match: {
+                              query: 'English',
+                              fields: [
+                                'language.id',
+                                'language.label'
                               ],
-                              "type": "phrase"
+                              type: 'phrase'
                             }
                           }
                         ]
                       }
                     },
                     {
-                      "nested": {
-                        "path": "items",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'items',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "English",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'English',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -1217,16 +1217,16 @@ const queryWithParentheses = {
                       }
                     },
                     {
-                      "nested": {
-                        "path": "holdings",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'holdings',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "English",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'English',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -1238,34 +1238,34 @@ const queryWithParentheses = {
                 }
               },
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "bool": {
-                        "should": [
+                      bool: {
+                        should: [
                           {
-                            "multi_match": {
-                              "query": "tragedy",
-                              "fields": [
-                                "genreForm.raw"
+                            multi_match: {
+                              query: 'tragedy',
+                              fields: [
+                                'genreForm.raw'
                               ],
-                              "type": "phrase"
+                              type: 'phrase'
                             }
                           }
                         ]
                       }
                     },
                     {
-                      "nested": {
-                        "path": "items",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'items',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "tragedy",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'tragedy',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -1274,16 +1274,16 @@ const queryWithParentheses = {
                       }
                     },
                     {
-                      "nested": {
-                        "path": "holdings",
-                        "query": {
-                          "bool": {
-                            "should": [
+                      nested: {
+                        path: 'holdings',
+                        query: {
+                          bool: {
+                            should: [
                               {
-                                "multi_match": {
-                                  "query": "tragedy",
-                                  "fields": [],
-                                  "type": "phrase"
+                                multi_match: {
+                                  query: 'tragedy',
+                                  fields: [],
+                                  type: 'phrase'
                                 }
                               }
                             ]
@@ -1303,42 +1303,42 @@ const queryWithParentheses = {
 }
 
 const negationQuery = {
-  "query": {
-    "bool": {
-      "must": [
+  query: {
+    bool: {
+      must: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "multi_match": {
-                        "query": "Shakespeare",
-                        "fields": [
-                          "creatorLiteral",
-                          "creatorLiteral.folded",
-                          "contributorLiteral.folded",
-                          "parallelCreatorLiteral.folded",
-                          "parallelContributorLiteral.folded"
+                      multi_match: {
+                        query: 'Shakespeare',
+                        fields: [
+                          'creatorLiteral',
+                          'creatorLiteral.folded',
+                          'contributorLiteral.folded',
+                          'parallelCreatorLiteral.folded',
+                          'parallelContributorLiteral.folded'
                         ],
-                        "type": "phrase"
+                        type: 'phrase'
                       }
                     }
                   ]
                 }
               },
               {
-                "nested": {
-                  "path": "items",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'items',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "Shakespeare",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'Shakespeare',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1347,16 +1347,16 @@ const negationQuery = {
                 }
               },
               {
-                "nested": {
-                  "path": "holdings",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'holdings',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "Shakespeare",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'Shakespeare',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1368,37 +1368,37 @@ const negationQuery = {
           }
         }
       ],
-      "must_not": [
+      must_not: [
         {
-          "bool": {
-            "should": [
+          bool: {
+            should: [
               {
-                "bool": {
-                  "should": [
+                bool: {
+                  should: [
                     {
-                      "multi_match": {
-                        "query": "English",
-                        "fields": [
-                          "language.id",
-                          "language.label"
+                      multi_match: {
+                        query: 'English',
+                        fields: [
+                          'language.id',
+                          'language.label'
                         ],
-                        "type": "phrase"
+                        type: 'phrase'
                       }
                     }
                   ]
                 }
               },
               {
-                "nested": {
-                  "path": "items",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'items',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "English",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'English',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1407,16 +1407,16 @@ const negationQuery = {
                 }
               },
               {
-                "nested": {
-                  "path": "holdings",
-                  "query": {
-                    "bool": {
-                      "should": [
+                nested: {
+                  path: 'holdings',
+                  query: {
+                    bool: {
+                      should: [
                         {
-                          "multi_match": {
-                            "query": "English",
-                            "fields": [],
-                            "type": "phrase"
+                          multi_match: {
+                            query: 'English',
+                            fields: [],
+                            type: 'phrase'
                           }
                         }
                       ]
@@ -1432,7 +1432,7 @@ const negationQuery = {
   }
 }
 
-module.exports =  {
+module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
   simpleAllQuery,
