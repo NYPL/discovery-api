@@ -70,6 +70,10 @@ app.init = async () => {
     handleError(err, req, res, next, app.logger)
   })
 
+  if (process.env.NODE_ENV !== 'test') {
+    await app.populate_vocabulary_labels()
+  }
+
   return app
 }
 
