@@ -5,6 +5,12 @@ const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
 const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
 const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
+const {
+  itemsFilterContext,
+  itemsQueryContext,
+  buildElasticQuery,
+  buildElasticBody
+} = require('../lib/elasticsearch/elastic-body-builder')
 
 const fixtures = require('./fixtures')
 
@@ -72,7 +78,7 @@ describe('Resources query', function () {
   describe('buildElasticQuery', function () {
     it('uses "query string query" if subjectLiteral: used', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:potatoes' })
-      const body = resourcesPrivMethods.buildElasticQuery(params)
+      const body = buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
@@ -83,7 +89,7 @@ describe('Resources query', function () {
 
     it('uses "query string query" if subjectLiteral: quoted phrase used', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: 'subjectLiteral:"hot potatoes"' })
-      const body = resourcesPrivMethods.buildElasticQuery(params)
+      const body = buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
@@ -94,7 +100,7 @@ describe('Resources query', function () {
 
     it('escapes colon if field not recognized', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: 'fladeedle:"hot potatoes"' })
-      const body = resourcesPrivMethods.buildElasticQuery(params)
+      const body = buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
@@ -105,7 +111,7 @@ describe('Resources query', function () {
 
     it('uses "query string query" if plain keyword query used', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: 'potatoes' })
-      const body = resourcesPrivMethods.buildElasticQuery(params)
+      const body = buildElasticQuery(params)
       expect(body).to.be.a('object')
       expect(body.bool).to.be.a('object')
       expect(body.bool.must).to.be.a('array')
@@ -116,7 +122,7 @@ describe('Resources query', function () {
 
     it('accepts advanced search parameters', function () {
       const params = resourcesPrivMethods.parseSearchParams({ contributor: 'Poe', title: 'Raven', subject: 'ravens' })
-      const body = resourcesPrivMethods.buildElasticQuery(params)
+      const body = buildElasticQuery(params)
 
       expect(body).to.nested.include({
         // Expect a title match on Raven:
@@ -135,7 +141,7 @@ describe('Resources query', function () {
   describe('buildElasticBody', function () {
     it('uses subjectLiteral.raw when given a subjectLiteral filter', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
-      const body = resourcesPrivMethods.buildElasticBody(params)
+      const body = buildElasticBody(params)
       expect(body).to.be.a('object')
       expect(body.query).to.be.a('object')
       expect(body.query.bool).to.be.a('object')
@@ -151,7 +157,7 @@ describe('Resources query', function () {
         expect(process.env.HIDE_NYPL_SOURCE).to.be.a('undefined')
 
         const params = resourcesPrivMethods.parseSearchParams({ q: '' })
-        const body = resourcesPrivMethods.buildElasticBody(params)
+        const body = buildElasticBody(params)
 
         expect(body).to.be.a('object')
         expect(body.query.filter).to.be.a('undefined')
@@ -161,7 +167,7 @@ describe('Resources query', function () {
         process.env.HIDE_NYPL_SOURCE = 'recap-hl'
 
         const params = resourcesPrivMethods.parseSearchParams({ q: '' })
-        const body = resourcesPrivMethods.buildElasticBody(params)
+        const body = buildElasticBody(params)
 
         // Expect query to resemble: {"from":0,"size":50,"query":{"bool":{"filter":[{"bool":{"must_not":{"terms":{"nyplSource":["recap-hl"]}}}}]}},"sort":["uri"]}
         expect(body).to.be.a('object')
@@ -173,26 +179,26 @@ describe('Resources query', function () {
 
     it('processes isbn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ isbn: '0689844921' })
-      const body = resourcesPrivMethods.buildElasticBody(params)
+      const body = buildElasticBody(params)
       expect(body).to.nested
         .include({ 'query.bool.must[0].term.idIsbn\\.clean': '0689844921' })
     })
 
     it('processes issn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ issn: '1234-5678' })
-      const body = resourcesPrivMethods.buildElasticBody(params)
+      const body = buildElasticBody(params)
       expect(body).to.nested.include({ 'query.bool.must[0].term.idIssn\\.clean': '1234-5678' })
     })
 
     it('processes lccn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ lccn: '00068799' })
-      const body = resourcesPrivMethods.buildElasticBody(params)
+      const body = buildElasticBody(params)
       expect(body).to.nested.include({ 'query.bool.must[0].regexp.idLccn.value': '[^\\d]*00068799[^\\d]*' })
     })
 
     it('processes oclc correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ oclc: '1033548057' })
-      const body = resourcesPrivMethods.buildElasticBody(params)
+      const body = buildElasticBody(params)
       expect(body).to.nested.include({ 'query.bool.must[0].term.idOclc': '1033548057' })
     })
 
@@ -205,9 +211,9 @@ describe('Resources query', function () {
       })
       const paramsSnapshot = JSON.stringify(params)
 
-      resourcesPrivMethods.buildElasticBody(params)
-      resourcesPrivMethods.buildElasticBody(params)
-      resourcesPrivMethods.buildElasticBody(params)
+      buildElasticBody(params)
+      buildElasticBody(params)
+      buildElasticBody(params)
 
       expect(JSON.stringify(params)).to.equal(paramsSnapshot)
     })
@@ -648,40 +654,40 @@ describe('Resources query', function () {
 
   describe('itemsFilterContext', () => {
     it('should return an empty object in case of no query', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({})).to.deep.equal({})
+      expect(itemsFilterContext({})).to.deep.equal({})
     })
 
     it('should return an empty object in case there are no filters', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: {} })).to.deep.equal({})
+      expect(itemsFilterContext({ query: {} })).to.deep.equal({})
     })
 
     it('should return filters for volume in case there is a volume', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { volume: [1, 2] } }))
+      expect(itemsFilterContext({ query: { volume: [1, 2] } }))
         .to.deep.equal({ filter: [{ range: { 'items.volumeRange': { gte: 1, lte: 2 } } }] })
     })
 
     it('should return filters for date in case there is a date', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { date: [1, 2] } }))
+      expect(itemsFilterContext({ query: { date: [1, 2] } }))
         .to.deep.equal({ filter: [{ range: { 'items.dateRange': { gte: 1, lte: 2 } } }] })
     })
 
     it('should return filters for format in case there is a format', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { format: ['text', 'microfilm', 'AV'] } }))
+      expect(itemsFilterContext({ query: { format: ['text', 'microfilm', 'AV'] } }))
         .to.deep.equal({ filter: [{ terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } }] })
     })
 
     it('should return filters for location in case there is a location', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] } }))
+      expect(itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] } }))
         .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
     })
 
     it('should return filters for status in case there is a status', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { status: ['Available', 'Unavailable', 'In Process'] } }))
+      expect(itemsFilterContext({ query: { status: ['Available', 'Unavailable', 'In Process'] } }))
         .to.deep.equal({ filter: [{ terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }] })
     })
 
     it('should combine all filters in case of multiple filters', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({
+      expect(itemsFilterContext({
         query: {
           volume: [1, 2],
           date: [3, 4],
@@ -701,24 +707,24 @@ describe('Resources query', function () {
     })
 
     it('should ignore all other parameters', () => {
-      expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] }, something: 'else' }))
+      expect(itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] }, something: 'else' }))
         .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
     })
   })
 
   describe('itemsQueryContext', () => {
     it('should exclude check in card items when options.merge_checkin_card_items is not set', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({}))
+      expect(itemsQueryContext({}))
         .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
     it('should exclude check in card items when merge_checkin_card_items is falsey', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: false }))
+      expect(itemsQueryContext({ merge_checkin_card_items: false }))
         .to.deep.equal({ must_not: [{ term: { 'items.type': 'nypl:CheckinCardItem' } }] })
     })
 
     it('should use match_all for items when merge_checkin_card_items is truthy', () => {
-      expect(resourcesPrivMethods.itemsQueryContext({ merge_checkin_card_items: true }))
+      expect(itemsQueryContext({ merge_checkin_card_items: true }))
         .to.deep.equal({ must: { match_all: {} } })
     })
   })
