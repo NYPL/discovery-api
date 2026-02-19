@@ -252,6 +252,14 @@ describe('ElasticQueryBuilder', () => {
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.filter[0].term.genreForm\\.raw': 'Maps' })
     })
+
+    it('supports contributor + role', () => {
+      const request = new ApiRequest({ q: '', role: 'performer.', filters: { contributorLiteral: 'Patinkin, Mandy' } })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.must[0].term.contributorRoleLiteral.value': 'Patinkin, Mandy||performer.' })
+    })
   })
 
   describe('Advanced Search query params', () => {
