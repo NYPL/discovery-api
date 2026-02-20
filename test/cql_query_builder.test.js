@@ -18,7 +18,7 @@ const {
 } = require('./fixtures/cql_fixtures')
 
 describe('CQL Query Builder', function () {
-  it('Simple = query', function () {
+  it.only('Simple = query', function () {
     expect(buildEsQuery('title="Hamlet"'))
       .to.deep.equal(
         simpleAdjQuery
