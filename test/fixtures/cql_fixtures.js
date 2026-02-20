@@ -1485,6 +1485,274 @@ const negationQuery = {
   }
 }
 
+const dateAfterQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    nested: {
+                      path: 'dates',
+                      query: { range: { 'dates.range': { gt: '1990' } } }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const dateBeforeQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    nested: {
+                      path: 'dates',
+                      query: { range: { 'dates.range': { lt: '1990' } } }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const dateBeforeOrOnQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    nested: {
+                      path: 'dates',
+                      query: { range: { 'dates.range': { lte: '1990' } } }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const dateAfterOrOnQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    nested: {
+                      path: 'dates',
+                      query: { range: { 'dates.range': { gte: '1990' } } }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const dateWithinQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    nested: {
+                      path: 'dates',
+                      query: {
+                        range: { 'dates.range': { gte: '1990', lte: '2000' } }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const dateEnclosesQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    nested: {
+                      path: 'dates',
+                      query: {
+                        range: { 'dates.range': { gt: '1990', lt: '2000' } }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const filterQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    multi_match: {
+                      query: 'Shakespeare',
+                      fields: [
+                        'creatorLiteral',
+                        'creatorLiteral.folded',
+                        'contributorLiteral.folded',
+                        'parallelCreatorLiteral.folded',
+                        'parallelContributorLiteral.folded'
+                      ],
+                      type: 'phrase'
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: {
+                path: 'items',
+                query: {
+                  bool: {
+                    should: [
+                      {
+                        multi_match: {
+                          query: 'Shakespeare',
+                          fields: [],
+                          type: 'phrase'
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              nested: {
+                path: 'holdings',
+                query: {
+                  bool: {
+                    should: [
+                      {
+                        multi_match: {
+                          query: 'Shakespeare',
+                          fields: [],
+                          type: 'phrase'
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    filter: [
+      {
+        bool: {
+          should: [
+            { term: { 'language.id': 'Klingon' } },
+            { term: { 'language.label': 'Klingon' } }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -1498,5 +1766,12 @@ module.exports = {
   binaryBooleanQuery,
   ternaryBooleanQuery,
   queryWithParentheses,
-  negationQuery
+  negationQuery,
+  dateBeforeQuery,
+  dateBeforeOrOnQuery,
+  dateAfterQuery,
+  dateAfterOrOnQuery,
+  dateWithinQuery,
+  dateEnclosesQuery,
+  filterQuery
 }

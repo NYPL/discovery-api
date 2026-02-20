@@ -1,6 +1,7 @@
 const { expect } = require('chai')
 
 const { buildEsQuery } = require('../lib/elasticsearch/cql_query_builder')
+const ApiRequest = require('../lib/api-request')
 const {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -14,7 +15,14 @@ const {
   binaryBooleanQuery,
   ternaryBooleanQuery,
   queryWithParentheses,
-  negationQuery
+  negationQuery,
+  dateBeforeQuery,
+  dateBeforeOrOnQuery,
+  dateAfterQuery,
+  dateAfterOrOnQuery,
+  dateWithinQuery,
+  dateEnclosesQuery,
+  filterQuery
 } = require('./fixtures/cql_fixtures')
 
 describe('CQL Query Builder', function () {
@@ -120,6 +128,56 @@ describe('CQL Query Builder', function () {
     expect(buildEsQuery('author = "Shakespeare" AND NOT language = "English"'))
       .to.deep.equal(
         negationQuery
+      )
+  })
+
+  it('Date after query', function () {
+    expect(buildEsQuery('date > "1990"'))
+      .to.deep.equal(
+        dateAfterQuery
+      )
+  })
+
+  it('Date after or on query', function () {
+    expect(buildEsQuery('date >= "1990"'))
+      .to.deep.equal(
+        dateAfterOrOnQuery
+      )
+  })
+
+  it('Date before query', function () {
+    expect(buildEsQuery('date < "1990"'))
+      .to.deep.equal(
+        dateBeforeQuery
+      )
+  })
+
+  it('Date dateBeforeOrOnQuery query', function () {
+    expect(buildEsQuery('date <= "1990"'))
+      .to.deep.equal(
+        dateBeforeOrOnQuery
+      )
+  })
+
+  it('Date within query', function () {
+    expect(buildEsQuery('date within "1990 2000"'))
+      .to.deep.equal(
+        dateWithinQuery
+      )
+  })
+
+  it('Date encloses query', function () {
+    expect(buildEsQuery('date encloses "1990 2000"'))
+      .to.deep.equal(
+        dateEnclosesQuery
+      )
+  })
+
+  it('Query with applied filters', function () {
+    const apiRequest = new ApiRequest({ filters: { language: ['Klingon'] }, search_scope: 'cql' })
+    expect(buildEsQuery('author="Shakespeare"', apiRequest))
+      .to.deep.equal(
+        filterQuery
       )
   })
 })
