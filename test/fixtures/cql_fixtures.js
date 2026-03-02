@@ -1362,6 +1362,51 @@ const filterQuery = {
   }
 }
 
+const exactMatchQuery = {
+  bool: {
+    should: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    term: {
+                      'creatorLiteral.keywordLowercased': 'William Shakespeare'
+                    }
+                  },
+                  {
+                    term: {
+                      'contributorLiteral.keywordLowercased': 'William Shakespeare'
+                    }
+                  },
+                  {
+                    term: {
+                      'parallelCreatorLiteral.raw': 'William Shakespeare'
+                    }
+                  },
+                  {
+                    term: {
+                      'parallelContributorLiteral.raw': 'William Shakespeare'
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: { path: 'items', query: { bool: { should: [] } } }
+            },
+            {
+              nested: { path: 'holdings', query: { bool: { should: [] } } }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -1383,5 +1428,6 @@ module.exports = {
   dateWithinQuery,
   dateEnclosesQuery,
   filterQuery,
-  multiAdjQuery
+  multiAdjQuery,
+  exactMatchQuery
 }

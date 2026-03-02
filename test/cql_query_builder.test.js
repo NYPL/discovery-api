@@ -23,7 +23,8 @@ const {
   dateWithinQuery,
   dateEnclosesQuery,
   filterQuery,
-  multiAdjQuery
+  multiAdjQuery,
+  exactMatchQuery
 } = require('./fixtures/cql_fixtures')
 
 describe('CQL Query Builder', function () {
@@ -186,6 +187,13 @@ describe('CQL Query Builder', function () {
     expect(buildEsQuery('author="Shakespeare"', apiRequest))
       .to.deep.equal(
         filterQuery
+      )
+  })
+
+  it('Exact match query', function () {
+    expect(buildEsQuery('author == "William Shakespeare"'))
+      .to.deep.equal(
+        exactMatchQuery
       )
   })
 })
