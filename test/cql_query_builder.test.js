@@ -22,7 +22,8 @@ const {
   dateAfterOrOnQuery,
   dateWithinQuery,
   dateEnclosesQuery,
-  filterQuery
+  filterQuery,
+  multiAdjQuery
 } = require('./fixtures/cql_fixtures')
 
 describe('CQL Query Builder', function () {
@@ -37,6 +38,13 @@ describe('CQL Query Builder', function () {
     expect(buildEsQuery('title adj "Hamlet"'))
       .to.deep.equal(
         simpleAdjQuery
+      )
+  })
+
+  it('Multi-word adj query', function () {
+    expect(buildEsQuery('title adj "Hamlet, Prince"'))
+      .to.deep.equal(
+        multiAdjQuery
       )
   })
 
