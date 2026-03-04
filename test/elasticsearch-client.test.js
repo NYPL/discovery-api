@@ -79,4 +79,45 @@ describe('Elasticsearch Client', () => {
       return expect(call).to.be.rejectedWith(Error)
     })
   })
+
+  describe('count', () => {
+    let esStub
+
+    beforeEach(() => {
+      esStub = sinon.stub(esClient, 'esClient')
+        .callsFake(() => {
+          return {
+            count: sinon.stub().resolves({ count: 42 })
+          }
+        })
+    })
+
+    afterEach(() => {
+      esStub.restore()
+    })
+
+    it('returns the count value from ES', async () => {
+      const body = { query: { match_all: {} } }
+      const result = await esClient.count(body, 'my-index')
+
+      expect(result).to.equal(42)
+    })
+
+    it('throws IndexConnectionError on 403', async () => {
+      esStub.restore()
+      sinon.stub(esClient, 'esClient').callsFake(() => {
+        return {
+          count: () => {
+            const err = new Error('Forbidden')
+            err.statusCode = 403
+            err.body = {}
+            return Promise.reject(err)
+          }
+        }
+      })
+
+      const call = esClient.count({ query: { match_all: {} } })
+      await expect(call).to.be.rejectedWith(errors.IndexConnectionError)
+    })
+  })
 })
