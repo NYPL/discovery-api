@@ -39,7 +39,7 @@ describe('ElasticQueryBuilder', () => {
         },
         {
           path: undefined,
-          clause: { term: { 'subjectLiteral.raw': 'spaghetti' } }
+          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
         }
       ])
     })
@@ -54,7 +54,7 @@ describe('ElasticQueryBuilder', () => {
         },
         {
           path: undefined,
-          clause: { term: { 'subjectLiteral.raw': 'spaghetti' } }
+          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
         }
       ])
     })
@@ -68,8 +68,8 @@ describe('ElasticQueryBuilder', () => {
           clause: {
             bool: {
               should: [
-                { term: { 'subjectLiteral.raw': 'spaghetti' } },
-                { term: { 'subjectLiteral.raw': 'meatballs' } }
+                { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } },
+                { terms: { 'subjectLiteral.raw': ['meatballs', 'meatballs.'] } }
               ]
             }
           }
