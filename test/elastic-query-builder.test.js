@@ -216,6 +216,20 @@ describe('ElasticQueryBuilder', () => {
     })
   })
 
+  describe('multiple id query', () => {
+    it('supports ids=x,y,z', () => {
+      const request = new ApiRequest({ q: '', ids: ['id_a', 'id_b'] })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect multiple term/prefix matches on identifier fields:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.must[0].bool.should[0].terms.identifierV2\\.value[0]': 'id_a' })
+        .include({ 'bool.must[0].bool.should[0].terms.identifierV2\\.value[1]': 'id_b' })
+        .include({ 'bool.must[0].bool.should[1].terms.uri[0]': 'id_a' })
+        .include({ 'bool.must[0].bool.should[1].terms.uri[1]': 'id_b' })
+    })
+  })
+
   describe('search_scope callnumber', () => {
     it('generates a "callnumber" query', () => {
       // including leading and trailing whitespace to validate that query is trimmed
