@@ -141,8 +141,9 @@ describe('Resources query', function () {
       expect(body.query.bool).to.be.a('object')
       expect(body.query.bool.filter).to.be.a('array')
       expect(body.query.bool.filter[0]).to.be.a('object')
-      expect(body.query.bool.filter[0].term).to.be.a('object')
-      expect(body.query.bool.filter[0].term['subjectLiteral.raw']).to.equal('United States -- History')
+      expect(body.query.bool.filter[0].terms).to.be.a('object')
+      expect(body.query.bool.filter[0].terms['subjectLiteral.raw'][0]).to.equal('United States -- History')
+      expect(body.query.bool.filter[0].terms['subjectLiteral.raw'][1]).to.equal('United States -- History.')
     })
 
     describe('nyplSource filtering', function () {
@@ -237,7 +238,7 @@ describe('Resources query', function () {
       // Expect one agg query for all the properties not involved in a filter:
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(numAggregations - 1)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      expect(queries[0].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
+      expect(queries[0].query.bool.filter[0].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
 
       // Expect second agg query for subjectLiteral - w/out the filter:
       expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
@@ -260,7 +261,7 @@ describe('Resources query', function () {
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf(numAggregations - 2)
       expect(queries[0].query.bool.filter).to.be.a('array')
       // Expect the subjectLiteral filter:
-      expect(queries[0].query.bool.filter[1].term['subjectLiteral.raw'] === 'S1')
+      expect(queries[0].query.bool.filter[1].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
       // .. And the collection filters:
       expect(queries[0]).to.nested.include({ 'query.bool.filter[0].bool.should[0].term.collectionIds': 'C1' })
       expect(queries[0]).to.nested.include({ 'query.bool.filter[0].bool.should[1].term.collectionIds': 'C2' })
@@ -270,8 +271,6 @@ describe('Resources query', function () {
       expect(queries[1]).to.nested.include({ 'aggregations.collection.terms.field': 'collectionIds' })
       // Expect this agg to filter on the other active filter, subjectLiteral:
       expect(queries[1].query.bool.filter).to.have.lengthOf(1)
-
-      expect(queries[1].query.bool.filter[0].term['subjectLiteral.raw'] === 'S1')
 
       // Expect last aggregation for subjectLiteral:
       expect(Object.keys(queries[2].aggregations)).to.have.lengthOf(1)
