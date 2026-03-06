@@ -1,13 +1,13 @@
 const { expect } = require('chai')
 
-const ElasticQuerySubjectsBuilder = require('../lib/elasticsearch/elastic-query-subjects-builder')
+const ElasticQueryBrowseBuilder = require('../lib/elasticsearch/elastic-query-browse-builder')
 const ApiRequest = require('../lib/api-request')
 
-describe('ElasticQuerySubjectsBuilder', () => {
+describe('ElasticQueryBrowseBuilder', () => {
   describe('search_scope=""', () => {
     it('applies subject term clauses to query', () => {
       const request = new ApiRequest({ q: 'toast' })
-      const inst = ElasticQuerySubjectsBuilder.forApiRequest(request)
+      const inst = ElasticQueryBrowseBuilder.forApiRequest(request)
 
       const query = inst.query.toJson()
 
@@ -39,7 +39,7 @@ describe('ElasticQuerySubjectsBuilder', () => {
   describe('search_scope="has"', () => {
     it('applies subject match clauses to query', () => {
       const request = new ApiRequest({ q: 'toast bread', search_scope: 'has' })
-      const inst = ElasticQuerySubjectsBuilder.forApiRequest(request)
+      const inst = ElasticQueryBrowseBuilder.forApiRequest(request)
 
       const query = inst.query.toJson()
 
@@ -75,7 +75,7 @@ describe('ElasticQuerySubjectsBuilder', () => {
   describe('search_scope="starts_with"', () => {
     it('applies subject_prefix clauses to query', () => {
       const request = new ApiRequest({ q: 'toast', search_scope: 'starts_with' })
-      const inst = ElasticQuerySubjectsBuilder.forApiRequest(request)
+      const inst = ElasticQueryBrowseBuilder.forApiRequest(request)
 
       const query = inst.query.toJson()
 
