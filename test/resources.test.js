@@ -212,6 +212,22 @@ describe('Resources query', function () {
 
       expect(JSON.stringify(params)).to.equal(paramsSnapshot)
     })
+
+    it('injects period matching for *Literal filters', () => {
+      const params = resourcesPrivMethods.parseSearchParams({
+        filters: {
+          subjectLiteral: ['S1'],
+          contributorLiteral: ['C1', 'C2']
+        }
+      })
+
+      const body = resourcesPrivMethods.buildElasticBody(params)
+
+      expect(body.query.bool.filter[0].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
+
+      expect(body.query.bool.filter[1].bool.should[0].bool.should[0].terms['contributorLiteral.keywordLowercased']).to.deep.equal(['C1', 'C1.'])
+      expect(body.query.bool.filter[1].bool.should[1].bool.should[0].terms['contributorLiteral.keywordLowercased']).to.deep.equal(['C2', 'C2.'])
+    })
   })
 
   describe('aggregationQueriesForParams', () => {
