@@ -1,0 +1,1120 @@
+{
+    "resources-2025-07-07": {
+        "mappings": {
+            "dynamic": "strict",
+            "properties": {
+                "addedAuthorTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "buildingLocationIds": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "carrierType": {
+                    "properties": {
+                        "id": {
+                            "type": "keyword"
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "carrierType_packed": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "collectionIds": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "contentsTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "contributions": {
+                    "type": "keyword"
+                },
+                "contributorLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "lowercase_normalizer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "contributorLiteralNormalized": {
+                    "type": "keyword",
+                    "fields": {
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "lowercase_normalizer"
+                        }
+                    }
+                },
+                "contributorLiteralWithoutDates": {
+                    "type": "keyword",
+                    "fields": {
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "lowercase_normalizer"
+                        }
+                    }
+                },
+                "contributorNameRoleTest": {
+                    "type": "keyword"
+                },
+                "contributor_sort": {
+                    "type": "keyword"
+                },
+                "contributors": {
+                    "properties": {
+                        "label": {
+                            "type": "keyword"
+                        },
+                        "name": {
+                            "type": "keyword"
+                        },
+                        "nameRole": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "contributorsPacked": {
+                    "type": "keyword"
+                },
+                "contributorsTest": {
+                    "properties": {
+                        "label": {
+                            "type": "keyword"
+                        },
+                        "name": {
+                            "type": "keyword"
+                        },
+                        "nameRole": {
+                            "type": "keyword"
+                        },
+                        "title": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "created": {
+                    "type": "date",
+                    "index": false
+                },
+                "createdDecade": {
+                    "type": "short"
+                },
+                "createdString": {
+                    "type": "keyword"
+                },
+                "createdYear": {
+                    "type": "short"
+                },
+                "creatorLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "lowercase_normalizer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "creatorLiteralNormalized": {
+                    "type": "keyword",
+                    "fields": {
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "lowercase_normalizer"
+                        }
+                    }
+                },
+                "creatorLiteralWithoutDates": {
+                    "type": "keyword",
+                    "fields": {
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "lowercase_normalizer"
+                        }
+                    }
+                },
+                "creator_sort": {
+                    "type": "keyword"
+                },
+                "dateEndDecade": {
+                    "type": "short"
+                },
+                "dateEndString": {
+                    "type": "keyword"
+                },
+                "dateEndYear": {
+                    "type": "short"
+                },
+                "dateStartDecade": {
+                    "type": "short"
+                },
+                "dateStartString": {
+                    "type": "keyword"
+                },
+                "dateStartYear": {
+                    "type": "short"
+                },
+                "dateString": {
+                    "type": "keyword"
+                },
+                "dates": {
+                    "type": "nested",
+                    "properties": {
+                        "range": {
+                            "type": "date_range"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        },
+                        "tag": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "depiction": {
+                    "type": "keyword"
+                },
+                "description": {
+                    "type": "text",
+                    "fields": {
+                        "foldedStemmed": {
+                            "type": "text",
+                            "analyzer": "folding_stemming_analyzer"
+                        }
+                    }
+                },
+                "dimensions": {
+                    "type": "keyword"
+                },
+                "donor": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "editionStatement": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "electronicResources": {
+                    "properties": {
+                        "label": {
+                            "type": "keyword"
+                        },
+                        "url": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "extent": {
+                    "type": "keyword"
+                },
+                "formatId": {
+                    "type": "keyword"
+                },
+                "formerTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "genreForm": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "holdings": {
+                    "type": "nested",
+                    "properties": {
+                        "checkInBoxes": {
+                            "type": "nested",
+                            "properties": {
+                                "copies": {
+                                    "type": "short"
+                                },
+                                "coverage": {
+                                    "type": "keyword"
+                                },
+                                "position": {
+                                    "type": "short"
+                                },
+                                "shelfMark": {
+                                    "type": "keyword",
+                                    "index": false
+                                },
+                                "status": {
+                                    "type": "keyword"
+                                },
+                                "type": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "format": {
+                            "type": "keyword"
+                        },
+                        "holdingStatement": {
+                            "type": "keyword"
+                        },
+                        "identifier": {
+                            "properties": {
+                                "identifierStatus": {
+                                    "type": "keyword"
+                                },
+                                "type": {
+                                    "type": "keyword"
+                                },
+                                "value": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "location": {
+                            "properties": {
+                                "code": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "notes": {
+                            "type": "keyword"
+                        },
+                        "physicalLocation": {
+                            "type": "keyword",
+                            "index": false
+                        },
+                        "shelfMark": {
+                            "type": "keyword"
+                        },
+                        "uri": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "idIsbn": {
+                    "type": "keyword",
+                    "fields": {
+                        "clean": {
+                            "type": "keyword",
+                            "ignore_above": 256,
+                            "normalizer": "identifier_normalizer"
+                        }
+                    }
+                },
+                "idIsbn_clean": {
+                    "type": "keyword"
+                },
+                "idIssn": {
+                    "type": "keyword",
+                    "fields": {
+                        "clean": {
+                            "type": "keyword",
+                            "ignore_above": 256,
+                            "normalizer": "identifier_normalizer"
+                        }
+                    }
+                },
+                "idLcc": {
+                    "type": "keyword"
+                },
+                "idLccSort": {
+                    "type": "keyword"
+                },
+                "idLccn": {
+                    "type": "keyword",
+                    "normalizer": "punctuation_and_lowercase_normalizer"
+                },
+                "idOclc": {
+                    "type": "keyword"
+                },
+                "idOwi": {
+                    "type": "keyword"
+                },
+                "identifier": {
+                    "type": "keyword"
+                },
+                "identifierV2": {
+                    "properties": {
+                        "identifierStatus": {
+                            "type": "keyword",
+                            "normalizer": "punctuation_and_lowercase_normalizer"
+                        },
+                        "type": {
+                            "type": "keyword"
+                        },
+                        "value": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "issuance": {
+                    "properties": {
+                        "id": {
+                            "type": "keyword"
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "issuance_packed": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "items": {
+                    "type": "nested",
+                    "properties": {
+                        "accessMessage": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "accessMessage_packed": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        },
+                        "aeonUrl": {
+                            "type": "keyword"
+                        },
+                        "catalogItemType": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "catalogItemType_packed": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        },
+                        "dateRange": {
+                            "type": "date_range",
+                            "format": "yyyy-MM-dd||yyyy-MM||yyyy"
+                        },
+                        "dateRaw": {
+                            "type": "text"
+                        },
+                        "deliveryLocation": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "deliveryLocation_packed": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        },
+                        "dueDate": {
+                            "type": "date"
+                        },
+                        "electronicLocator": {
+                            "properties": {
+                                "label": {
+                                    "type": "keyword",
+                                    "index": false
+                                },
+                                "url": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "enumerationChronology": {
+                            "type": "keyword"
+                        },
+                        "enumerationChronology_sort": {
+                            "type": "keyword"
+                        },
+                        "formatLiteral": {
+                            "type": "keyword"
+                        },
+                        "holdingLocation": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "holdingLocation_packed": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        },
+                        "idBarcode": {
+                            "type": "keyword"
+                        },
+                        "identifier": {
+                            "type": "keyword"
+                        },
+                        "identifierV2": {
+                            "properties": {
+                                "type": {
+                                    "type": "keyword"
+                                },
+                                "value": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "location": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "m2CustomerCode": {
+                            "type": "keyword"
+                        },
+                        "owner": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "owner_packed": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        },
+                        "physicalLocation": {
+                            "type": "keyword"
+                        },
+                        "recapCustomerCode": {
+                            "type": "keyword"
+                        },
+                        "requestable": {
+                            "type": "boolean"
+                        },
+                        "shelfMark": {
+                            "type": "text",
+                            "fields": {
+                                "keywordLowercased": {
+                                    "type": "keyword",
+                                    "normalizer": "shelfmark_normalizer"
+                                },
+                                "raw": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "shelfMark_sort": {
+                            "type": "keyword"
+                        },
+                        "status": {
+                            "properties": {
+                                "id": {
+                                    "type": "keyword"
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "status_packed": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        },
+                        "type": {
+                            "type": "keyword"
+                        },
+                        "uri": {
+                            "type": "keyword"
+                        },
+                        "volumeRange": {
+                            "type": "integer_range"
+                        },
+                        "volumeRaw": {
+                            "type": "text"
+                        }
+                    }
+                },
+                "language": {
+                    "properties": {
+                        "id": {
+                            "type": "keyword"
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "language_packed": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "lccClassification": {
+                    "type": "keyword"
+                },
+                "materialType": {
+                    "properties": {
+                        "id": {
+                            "type": "keyword"
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "materialType_packed": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "mediaType": {
+                    "properties": {
+                        "id": {
+                            "type": "keyword"
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "mediaType_packed": {
+                    "type": "keyword",
+                    "eager_global_ordinals": true
+                },
+                "note": {
+                    "properties": {
+                        "label": {
+                            "type": "text",
+                            "fields": {
+                                "foldedStemmed": {
+                                    "type": "text",
+                                    "analyzer": "folding_stemming_analyzer"
+                                }
+                            }
+                        },
+                        "noteType": {
+                            "type": "keyword"
+                        },
+                        "type": {
+                            "type": "keyword",
+                            "index": false
+                        }
+                    }
+                },
+                "numAvailable": {
+                    "type": "short"
+                },
+                "numCheckinCardItems": {
+                    "type": "short"
+                },
+                "numElectronicResources": {
+                    "type": "short"
+                },
+                "numItemDatesParsed": {
+                    "type": "short"
+                },
+                "numItemVolumesParsed": {
+                    "type": "short"
+                },
+                "numItems": {
+                    "type": "short"
+                },
+                "numItemsTotal": {
+                    "type": "short"
+                },
+                "nyplSource": {
+                    "type": "keyword"
+                },
+                "parallelAddedAuthorTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "parallelContributorLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "parallelCreatorLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "parallelDescription": {
+                    "type": "text",
+                    "fields": {
+                        "foldedStemmed": {
+                            "type": "text",
+                            "analyzer": "folding_stemming_analyzer"
+                        }
+                    }
+                },
+                "parallelDisplayField": {
+                    "properties": {
+                        "fieldName": {
+                            "type": "keyword"
+                        },
+                        "index": {
+                            "type": "short"
+                        },
+                        "value": {
+                            "type": "text"
+                        }
+                    }
+                },
+                "parallelEditionStatement": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "parallelNote": {
+                    "properties": {
+                        "label": {
+                            "type": "text",
+                            "fields": {
+                                "foldedStemmed": {
+                                    "type": "text",
+                                    "analyzer": "folding_stemming_analyzer"
+                                }
+                            }
+                        },
+                        "noteType": {
+                            "type": "keyword"
+                        },
+                        "type": {
+                            "type": "keyword",
+                            "index": false
+                        }
+                    }
+                },
+                "parallelPlaceOfPublication": {
+                    "type": "keyword",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelPublicationStatement": {
+                    "type": "keyword",
+                    "index": false
+                },
+                "parallelPublisher": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelPublisherLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelSeries": {
+                    "type": "keyword"
+                },
+                "parallelSeriesStatement": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "parallelSubjectLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelSummary": {
+                    "type": "text",
+                    "fields": {
+                        "foldedStemmed": {
+                            "type": "text",
+                            "analyzer": "folding_stemming_analyzer"
+                        }
+                    }
+                },
+                "parallelTableOfContents": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelTitleAlt": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "parallelTitleDisplay": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "parallelUniformTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "partOf": {
+                    "type": "keyword"
+                },
+                "physicalDescription": {
+                    "type": "keyword",
+                    "index": false
+                },
+                "placeOfPublication": {
+                    "type": "keyword",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "popularity": {
+                    "type": "short"
+                },
+                "publicDomain": {
+                    "type": "boolean"
+                },
+                "publicationStatement": {
+                    "type": "keyword",
+                    "index": false
+                },
+                "publisherLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "recordType": {
+                    "type": "keyword"
+                },
+                "recordTypeId": {
+                    "type": "keyword"
+                },
+                "serialPublicationDates": {
+                    "type": "keyword",
+                    "index": false
+                },
+                "series": {
+                    "type": "keyword"
+                },
+                "seriesStatement": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "shelfMark": {
+                    "type": "text",
+                    "fields": {
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "normalizer": "shelfmark_normalizer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "subjectLiteral": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword",
+                            "eager_global_ordinals": true
+                        }
+                    }
+                },
+                "subjectLiteral_exploded": {
+                    "type": "keyword"
+                },
+                "summary": {
+                    "type": "text",
+                    "fields": {
+                        "foldedStemmed": {
+                            "type": "text",
+                            "analyzer": "folding_stemming_analyzer"
+                        }
+                    }
+                },
+                "supplementaryContent": {
+                    "properties": {
+                        "label": {
+                            "type": "keyword",
+                            "index": false
+                        },
+                        "url": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "suppressed": {
+                    "type": "boolean"
+                },
+                "tableOfContents": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "title": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "foldedStemmed": {
+                            "type": "text",
+                            "analyzer": "folding_stemming_analyzer"
+                        },
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        },
+                        "keywordLowercased": {
+                            "type": "keyword",
+                            "ignore_above": 256,
+                            "normalizer": "lowercase_normalizer"
+                        },
+                        "keywordLowercasedStripped": {
+                            "type": "keyword",
+                            "ignore_above": 256,
+                            "normalizer": "punctuation_and_lowercase_normalizer"
+                        },
+                        "shingle": {
+                            "type": "text",
+                            "analyzer": "shingles_analyzer"
+                        }
+                    }
+                },
+                "titleAlt": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "titleDisplay": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        }
+                    }
+                },
+                "title_sort": {
+                    "type": "keyword"
+                },
+                "type": {
+                    "type": "keyword"
+                },
+                "uniformTitle": {
+                    "type": "text",
+                    "fields": {
+                        "folded": {
+                            "type": "text",
+                            "analyzer": "folding_analyzer"
+                        },
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "updatedAt": {
+                    "type": "date"
+                },
+                "uri": {
+                    "type": "keyword"
+                },
+                "uris": {
+                    "type": "keyword"
+                }
+            }
+        }
+    }
+}
