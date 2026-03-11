@@ -272,7 +272,7 @@ describe('ElasticQueryBuilder', () => {
       const inst = ElasticQueryBuilder.forApiRequest(request)
 
       expect(inst.query.toJson()).to.nested
-        .include({ 'bool.must[0].term.contributorRoleLiteral.value': 'Patinkin, Mandy||performer.' })
+        .include({ 'bool.must[0].term.browseableContributorRole_packed.value': 'Patinkin, Mandy||performer.' })
     })
   })
 
