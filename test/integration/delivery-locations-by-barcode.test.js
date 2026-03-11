@@ -51,8 +51,8 @@ const getDeliveryLocations = async (barcode, patronId) => {
 
 const theThing = async () => {
   try {
-    console.log('fetching http://localhost:8082/api/v0.1/discovery/resources/b10129700')
-    const spaghetti = await axios.get('http://localhost:8082/api/v0.1/discovery/resources/b10129700')
+    console.log('fetching')
+    const spaghetti = await axios.get('http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=33433119354979&patronId=5427701')
     console.log(spaghetti)
   } catch (e) {
     console.error(e)
