@@ -39,14 +39,23 @@ const getDeliveryLocations = async (barcode, patronId) => {
   }
 }
 
+// const theThing = async () => {
+//   const results = await Promise.allSettled(Object.keys(ptypes).map((checkLocationsForPtype)))
+//   Object.keys(ptypes).forEach((ptype, i) => {
+//     const resultsForPtype = results[i]
+//     if (resultsForPtype.problems.length) {
+//       console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
+//     } else console.log(`All delivery location checks for ${ptype} patron type successful`)
+//   })
+// }
+
 const theThing = async () => {
-  const results = await Promise.allSettled(Object.keys(ptypes).map((checkLocationsForPtype)))
-  Object.keys(ptypes).forEach((ptype, i) => {
-    const resultsForPtype = results[i]
-    if (resultsForPtype.problems.length) {
-      console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
-    } else console.log(`All delivery location checks for ${ptype} patron type successful`)
-  })
+  try {
+    const spaghetti = await axios.get('http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=33433119354979&patronId=5427701')
+    console.log(spaghetti)
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 theThing()
