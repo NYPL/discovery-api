@@ -27,10 +27,15 @@ const checkLocationsForPtype = async (ptype) => {
 }
 
 const getDeliveryLocations = async (barcode, patronId) => {
-  const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
-  // per record
-  return deliveryLocationsPerRecord[0]
-    .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
+  console.log('requesting')
+  try {
+    const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+    // per record
+    return deliveryLocationsPerRecord[0]
+      .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 const theThing = async () => {
