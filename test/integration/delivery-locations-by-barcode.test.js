@@ -30,6 +30,7 @@ const getDeliveryLocations = async (barcode, patronId) => {
   console.log('requesting', barcode, patronId)
   try {
     const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+    console.log('after get', barcode, patronId)
     // per record
     return deliveryLocationsPerRecord[0]
       .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
@@ -39,7 +40,7 @@ const getDeliveryLocations = async (barcode, patronId) => {
 }
 
 const theThing = async () => {
-  const results = await Promise.all(Object.keys(ptypes).map((checkLocationsForPtype)))
+  const results = await Promise.allSettled(Object.keys(ptypes).map((checkLocationsForPtype)))
   Object.keys(ptypes).forEach((ptype, i) => {
     const resultsForPtype = results[i]
     if (resultsForPtype.problems.length) {
