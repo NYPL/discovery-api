@@ -29,7 +29,7 @@ const checkLocationsForPtype = async (ptype) => {
 const getDeliveryLocations = async (barcode, patronId) => {
   console.log('requesting', barcode, patronId)
   try {
-    const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+    const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`${process.env === 'qa' ? 'qa-' : ''}https://platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
     console.log('after get', barcode, patronId)
     // per record
     return deliveryLocationsPerRecord[0]
@@ -39,24 +39,14 @@ const getDeliveryLocations = async (barcode, patronId) => {
   }
 }
 
-// const theThing = async () => {
-//   const results = await Promise.allSettled(Object.keys(ptypes).map((checkLocationsForPtype)))
-//   Object.keys(ptypes).forEach((ptype, i) => {
-//     const resultsForPtype = results[i]
-//     if (resultsForPtype.problems.length) {
-//       console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
-//     } else console.log(`All delivery location checks for ${ptype} patron type successful`)
-//   })
-// }
-
 const theThing = async () => {
-  try {
-    console.log('fetching')
-    const spaghetti = await axios.get('http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=33433119354979&patronId=5427701')
-    console.log(spaghetti)
-  } catch (e) {
-    console.error(e)
-  }
+  const results = await Promise.allSettled(Object.keys(ptypes).map((checkLocationsForPtype)))
+  Object.keys(ptypes).forEach((ptype, i) => {
+    const resultsForPtype = results[i]
+    if (resultsForPtype.problems.length) {
+      console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
+    } else console.log(`All delivery location checks for ${ptype} patron type successful`)
+  })
 }
 
 theThing()
