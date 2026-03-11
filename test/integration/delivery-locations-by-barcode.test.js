@@ -27,7 +27,7 @@ const checkLocationsForPtype = async (ptype) => {
 }
 
 const getDeliveryLocations = async (barcode, patronId) => {
-  console.log('requesting')
+  console.log('requesting', barcode, patronId)
   try {
     const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`http://localhost:8082/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
     // per record
