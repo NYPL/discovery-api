@@ -32,6 +32,7 @@ describe('Resource Serializer', () => {
       expect(collectionEntity.prefLabel).to.equal('Art & Architecture Collection')
       expect(collectionEntity['@id']).to.equal('mab')
       expect(collectionEntity.buildingLocationLabel).to.equal('Stephen A. Schwarzman Building (SASB)')
+      expect(collectionEntity.locationsPath).to.equal('locations/schwarzman/wallach-division/art-architecture-collection')
     })
   })
   describe('.formatItemFilterAggregations()', () => {
