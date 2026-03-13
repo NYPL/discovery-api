@@ -9,11 +9,13 @@ describe('Resource Serializer', () => {
         {
           '@id': 'mal',
           buildingLocationLabel: 'Stephen A. Schwarzman Building (SASB)',
+          locationsPath: 'locations/schwarzman/general-research-division',
           prefLabel: 'General Research Division'
         },
         {
           '@id': 'bur',
           buildingLocationLabel: 'Stavros Niarchos Foundation Library (SNFL)',
+          locationsPath: 'locations/snfl/yoseloff-business',
           prefLabel: 'Yoseloff Business Center'
         }
       ])

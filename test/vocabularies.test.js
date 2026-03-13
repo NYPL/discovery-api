@@ -57,6 +57,6 @@ describe('Vocabularies', function () {
 
     const results = await app.vocabularies({}, { baseUrl: app.baseUrl })
 
-    expect(results.collections[0]).to.have.keys(['value', 'label', 'holdingLocations'])
+    expect(results.collections[0]).to.have.keys(['value', 'label', 'holdingLocations', 'locationsPath'])
   })
 })
