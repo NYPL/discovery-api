@@ -9,11 +9,13 @@ describe('Resource Serializer', () => {
         {
           '@id': 'mal',
           buildingLocationLabel: 'Stephen A. Schwarzman Building (SASB)',
+          locationsPath: 'locations/schwarzman/general-research-division',
           prefLabel: 'General Research Division'
         },
         {
           '@id': 'bur',
           buildingLocationLabel: 'Stavros Niarchos Foundation Library (SNFL)',
+          locationsPath: 'locations/snfl/yoseloff-business',
           prefLabel: 'Yoseloff Business Center'
         }
       ])
@@ -30,6 +32,7 @@ describe('Resource Serializer', () => {
       expect(collectionEntity.prefLabel).to.equal('Art & Architecture Collection')
       expect(collectionEntity['@id']).to.equal('mab')
       expect(collectionEntity.buildingLocationLabel).to.equal('Stephen A. Schwarzman Building (SASB)')
+      expect(collectionEntity.locationsPath).to.equal('locations/schwarzman/wallach-division/art-architecture-collection')
     })
   })
   describe('.formatItemFilterAggregations()', () => {

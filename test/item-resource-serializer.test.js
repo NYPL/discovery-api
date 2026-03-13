@@ -60,7 +60,19 @@ describe('ItemResourceSerializer', () => {
       expect(doc.idNyplSourceId['@value']).to.eq('9876543210')
     })
   })
-
+  describe('getFormattedHoldingLocation', () => {
+    it('should return holding location with id, label, and collection access type', () => {
+      const locationEntity = ItemResourceSerializer.getFormattedHoldingLocation([
+        {
+          '@id': 'loc:maff1',
+          prefLabel: 'Schwarzman Building - Dorot Jewish Division Reference Room 111'
+        }
+      ])
+      expect(locationEntity[0].prefLabel).to.equal('Schwarzman Building - Dorot Jewish Division Reference Room 111')
+      expect(locationEntity[0]['@id']).to.equal('loc:maff1')
+      expect(locationEntity[0].collectionAccessType).to.equal('shelf')
+    })
+  })
   describe('addSourceIdentifier', () => {
     it('adds source identifier for NYPL', async () => {
       const item = { uri: 'i1234' }
