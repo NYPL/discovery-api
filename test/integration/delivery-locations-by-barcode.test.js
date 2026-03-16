@@ -1,4 +1,5 @@
 require('dotenv').config(`config/${process.env.ENV}.env`)
+console.log(process.env.ENV)
 const axios = require('axios')
 const { expectations, ptypes } = require('./delivery-locations-constants')
 
