@@ -1,4 +1,4 @@
-require('dotenv').config('config/qa.env')
+require('dotenv').config(`config/${process.env.ENV}.env`)
 const axios = require('axios')
 const { expectations, ptypes } = require('./delivery-locations-constants')
 
@@ -28,7 +28,7 @@ const checkLocationsForPtype = async (ptype) => {
 
 const getDeliveryLocations = async (barcode, patronId) => {
   try {
-    const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`${process.env === 'qa' ? 'qa-' : ''}https://platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+    const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`https://${process.env === 'qa' ? 'qa-' : ''}platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
     console.log('after get', barcode, patronId)
     // per record
     return deliveryLocationsPerRecord[0]

@@ -1,4 +1,7 @@
-on: [workflow_call]
+on:
+  pull_request:
+    branches:
+      - production
 
 jobs:
   integration-test:
@@ -8,4 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run tests
+        env: 
+          ENV: 'qa'
         run: node test/integration/delivery-locations-by-barcode.test.js
