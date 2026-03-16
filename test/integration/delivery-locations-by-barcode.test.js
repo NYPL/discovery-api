@@ -6,11 +6,11 @@ const checkLocationsForPtype = async (ptype) => {
   const problems = []
   const match = []
 
-  await Promise.all(Object.values(expectations).map(async (expectation, i) => {
+  await Promise.all(Object.entries(expectations).map(async ([holdingLocation, expectation], i) => {
     let deliveryLocationsFromApi
     let totalMatch = true
     const registerProblem = (problem) => {
-      problems.push({ barcode: expectation.barcode, deliveryLocationsFromApi, ...problem })
+      problems.push({ holdingLocation, barcode: expectation.barcode, deliveryLocationsFromApi, ...problem })
       totalMatch = false
     }
     try {
@@ -49,12 +49,14 @@ const getDeliveryLocations = async (barcode, patronId) => {
 const theThing = async () => {
   await loadConfig()
   const results = await Promise.all(Object.keys(ptypes).map((checkLocationsForPtype)))
-  Object.keys(ptypes).forEach((ptype, i) => {
+  const resultsHaveProblems = Object.keys(ptypes).some((ptype, i) => {
     const resultsForPtype = results[i]
     if (resultsForPtype.problems.length) {
       console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
+      return true
     } else console.log(`All delivery location checks for ${ptype} patron type successful`)
   })
+  if (resultsHaveProblems) throw new Error('Delivery location checks failed.')
 }
 
 theThing()
