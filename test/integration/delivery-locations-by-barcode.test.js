@@ -1,19 +1,25 @@
 require('dotenv').config(`config/${process.env.ENV}.env`)
-console.log(process.env.ENV)
-const axios = require('axios')
 const { expectations, ptypes } = require('./delivery-locations-constants')
-const NyplClient = require('@nypl/nypl-data-api-client')
+const { makeNyplDataApiClient } = require('../../lib/data-api-client')
 
 const checkLocationsForPtype = async (ptype) => {
   const problems = []
   const match = []
-  await Promise.all(Object.values(expectations).map(async (expectation) => {
-    const deliveryLocationsFromApi = await getDeliveryLocations(expectation.barcode, ptypes[ptype])
+
+  await Promise.all(Object.values(expectations).map(async (expectation, i) => {
+    let deliveryLocationsFromApi
     let totalMatch = true
     const registerProblem = (problem) => {
       problems.push({ barcode: expectation.barcode, deliveryLocationsFromApi, ...problem })
       totalMatch = false
     }
+    try {
+      deliveryLocationsFromApi = await getDeliveryLocations(expectation.barcode, ptypes[ptype])
+    } catch (e) {
+      registerProblem({ lookUpFailed: true })
+      return
+    }
+
     const checkForValue = (expectedValue, action) => {
       const includedValueIncluded = deliveryLocationsFromApi.some((label) => label.includes(expectedValue))
       const match = action === 'include' ? includedValueIncluded : !includedValueIncluded
@@ -31,10 +37,9 @@ const checkLocationsForPtype = async (ptype) => {
 const getDeliveryLocations = async (barcode, patronId) => {
   try {
     // const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`https://${process.env === 'qa' ? 'qa-' : ''}platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
-    const data = await NyplClient.get(`/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
-    console.dir(data, { depth: null })
+    const { itemListElement: itemData } = await makeNyplDataApiClient().get(`request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
     // per record
-    return data.itemListElement[0]
+    return itemData[0]
       .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
   } catch (e) {
     console.error(e)
@@ -42,7 +47,8 @@ const getDeliveryLocations = async (barcode, patronId) => {
 }
 
 const theThing = async () => {
-  const results = await Promise.allSettled(Object.keys(ptypes).map((checkLocationsForPtype)))
+  const results = await Promise.all(Object.keys(ptypes).map((checkLocationsForPtype)))
+  console.log(results)
   Object.keys(ptypes).forEach((ptype, i) => {
     const resultsForPtype = results[i]
     if (resultsForPtype.problems.length) {
