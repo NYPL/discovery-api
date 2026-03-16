@@ -54,7 +54,10 @@ const theThing = async () => {
     if (resultsForPtype.problems.length) {
       console.error(`Error with ${ptype} ptype delivery results, `, resultsForPtype.problems)
       return true
-    } else console.log(`All delivery location checks for ${ptype} patron type successful`)
+    } else {
+      console.log(`All delivery location checks for ${ptype} patron type successful`)
+      return false
+    }
   })
   if (resultsHaveProblems) throw new Error('Delivery location checks failed.')
 }
