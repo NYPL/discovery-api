@@ -1,3 +1,7 @@
+on:
+  push:
+    branches:
+      - production
 
 jobs:
   integration-test:
