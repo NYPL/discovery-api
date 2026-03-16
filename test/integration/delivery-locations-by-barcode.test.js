@@ -2,6 +2,7 @@ require('dotenv').config(`config/${process.env.ENV}.env`)
 console.log(process.env.ENV)
 const axios = require('axios')
 const { expectations, ptypes } = require('./delivery-locations-constants')
+const NyplClient = require('@nypl/nypl-data-api-client')
 
 const checkLocationsForPtype = async (ptype) => {
   const problems = []
@@ -29,10 +30,11 @@ const checkLocationsForPtype = async (ptype) => {
 
 const getDeliveryLocations = async (barcode, patronId) => {
   try {
-    const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`https://${process.env === 'qa' ? 'qa-' : ''}platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
-    console.log('after get', barcode, patronId)
+    // const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`https://${process.env === 'qa' ? 'qa-' : ''}platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+    const data = await NyplClient.get(`/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
+    console.dir(data, { depth: null })
     // per record
-    return deliveryLocationsPerRecord[0]
+    return data.itemListElement[0]
       .deliveryLocation.map(loc => loc.prefLabel.toLowerCase())
   } catch (e) {
     console.error(e)
