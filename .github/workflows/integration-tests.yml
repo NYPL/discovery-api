@@ -16,7 +16,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: npm install
-        run: npm i axios && npm i dotenv
+        run: npm i
       - name: Run integration tests
         env: 
           ENV: 'qa'
