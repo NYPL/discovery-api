@@ -36,7 +36,6 @@ const checkLocationsForPtype = async (ptype) => {
 
 const getDeliveryLocations = async (barcode, patronId) => {
   try {
-    // const { data: { itemListElement: deliveryLocationsPerRecord } } = await axios.get(`https://${process.env === 'qa' ? 'qa-' : ''}platform.nypl.org/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
     const { itemListElement: itemData } = await makeNyplDataApiClient().get(`request/deliveryLocationsByBarcode?barcodes[]=${barcode}&patronId=${patronId}`)
     // per record
     return itemData[0]
