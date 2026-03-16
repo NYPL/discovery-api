@@ -1,5 +1,4 @@
 require('dotenv').config({ path: `config/${process.env.ENV}.env`, quiet: false })
-console.log(process.env)
 const { expectations, ptypes } = require('./delivery-locations-constants')
 const { makeNyplDataApiClient } = require('../../lib/data-api-client')
 
