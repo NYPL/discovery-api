@@ -1,4 +1,4 @@
-require('dotenv').config({ path: `config/${process.env.ENV}.env`, quiet: false })
+const { loadConfig } = require('../../lib/load-config')
 const { expectations, ptypes } = require('./delivery-locations-constants')
 const { makeNyplDataApiClient } = require('../../lib/data-api-client')
 
@@ -47,8 +47,8 @@ const getDeliveryLocations = async (barcode, patronId) => {
 }
 
 const theThing = async () => {
+  await loadConfig()
   const results = await Promise.all(Object.keys(ptypes).map((checkLocationsForPtype)))
-  console.log(results)
   Object.keys(ptypes).forEach((ptype, i) => {
     const resultsForPtype = results[i]
     if (resultsForPtype.problems.length) {
