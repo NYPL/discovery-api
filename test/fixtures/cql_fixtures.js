@@ -33,12 +33,6 @@ const simpleAdjQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: { path: 'items', query: { bool: { should: [] } } }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -82,12 +76,6 @@ const multiAdjQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: { path: 'items', query: { bool: { should: [] } } }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -162,12 +150,6 @@ const prefixPhraseQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: { path: 'items', query: { bool: { should: [] } } }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -246,32 +228,6 @@ const simpleAnyQuery = {
                     }
                   }
                 ]
-              }
-            },
-            {
-              nested: {
-                path: 'items',
-                query: {
-                  bool: {
-                    should: [
-                      { bool: { should: [] } },
-                      { bool: { should: [] } }
-                    ]
-                  }
-                }
-              }
-            },
-            {
-              nested: {
-                path: 'holdings',
-                query: {
-                  bool: {
-                    should: [
-                      { bool: { should: [] } },
-                      { bool: { should: [] } }
-                    ]
-                  }
-                }
               }
             }
           ]
@@ -416,36 +372,6 @@ const anyWithPrefixQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: {
-                path: 'items',
-                query: {
-                  bool: {
-                    should: [
-                      { bool: { should: [] } },
-                      { bool: { should: [] } },
-                      { bool: { should: [] } },
-                      { bool: { should: [] } }
-                    ]
-                  }
-                }
-              }
-            },
-            {
-              nested: {
-                path: 'holdings',
-                query: {
-                  bool: {
-                    should: [
-                      { bool: { should: [] } },
-                      { bool: { should: [] } },
-                      { bool: { should: [] } },
-                      { bool: { should: [] } }
-                    ]
-                  }
-                }
-              }
             }
           ]
         }
@@ -525,32 +451,6 @@ const simpleAllQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: {
-                path: 'items',
-                query: {
-                  bool: {
-                    must: [
-                      { bool: { should: [] } },
-                      { bool: { should: [] } }
-                    ]
-                  }
-                }
-              }
-            },
-            {
-              nested: {
-                path: 'holdings',
-                query: {
-                  bool: {
-                    must: [
-                      { bool: { should: [] } },
-                      { bool: { should: [] } }
-                    ]
-                  }
-                }
-              }
             }
           ]
         }
@@ -617,9 +517,6 @@ const keywordQueryForBarcode = {
                   }
                 }
               }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -694,9 +591,6 @@ const keywordQueryForShelfMark = {
                   }
                 }
               }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -753,12 +647,6 @@ const keywordQueryForGeneralTerm = {
                   }
                 ]
               }
-            },
-            {
-              nested: { path: 'items', query: { bool: { should: [] } } }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -799,9 +687,6 @@ const identifierQuery = {
                   }
                 }
               }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -837,15 +722,6 @@ const binaryBooleanQuery = {
                         }
                       ]
                     }
-                  },
-                  {
-                    nested: { path: 'items', query: { bool: { should: [] } } }
-                  },
-                  {
-                    nested: {
-                      path: 'holdings',
-                      query: { bool: { should: [] } }
-                    }
                   }
                 ]
               }
@@ -859,15 +735,6 @@ const binaryBooleanQuery = {
                         { term: { 'language.id': 'English' } },
                         { term: { 'language.label': 'English' } }
                       ]
-                    }
-                  },
-                  {
-                    nested: { path: 'items', query: { bool: { should: [] } } }
-                  },
-                  {
-                    nested: {
-                      path: 'holdings',
-                      query: { bool: { should: [] } }
                     }
                   }
                 ]
@@ -910,18 +777,6 @@ const ternaryBooleanQuery = {
                               }
                             ]
                           }
-                        },
-                        {
-                          nested: {
-                            path: 'items',
-                            query: { bool: { should: [] } }
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'holdings',
-                            query: { bool: { should: [] } }
-                          }
                         }
                       ]
                     }
@@ -935,18 +790,6 @@ const ternaryBooleanQuery = {
                               { term: { 'language.id': 'English' } },
                               { term: { 'language.label': 'English' } }
                             ]
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'items',
-                            query: { bool: { should: [] } }
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'holdings',
-                            query: { bool: { should: [] } }
                           }
                         }
                       ]
@@ -969,15 +812,6 @@ const ternaryBooleanQuery = {
                           }
                         }
                       ]
-                    }
-                  },
-                  {
-                    nested: { path: 'items', query: { bool: { should: [] } } }
-                  },
-                  {
-                    nested: {
-                      path: 'holdings',
-                      query: { bool: { should: [] } }
                     }
                   }
                 ]
@@ -1017,15 +851,6 @@ const queryWithParentheses = {
                         }
                       ]
                     }
-                  },
-                  {
-                    nested: { path: 'items', query: { bool: { should: [] } } }
-                  },
-                  {
-                    nested: {
-                      path: 'holdings',
-                      query: { bool: { should: [] } }
-                    }
                   }
                 ]
               }
@@ -1042,18 +867,6 @@ const queryWithParentheses = {
                               { term: { 'language.id': 'English' } },
                               { term: { 'language.label': 'English' } }
                             ]
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'items',
-                            query: { bool: { should: [] } }
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'holdings',
-                            query: { bool: { should: [] } }
                           }
                         }
                       ]
@@ -1073,18 +886,6 @@ const queryWithParentheses = {
                                 }
                               }
                             ]
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'items',
-                            query: { bool: { should: [] } }
-                          }
-                        },
-                        {
-                          nested: {
-                            path: 'holdings',
-                            query: { bool: { should: [] } }
                           }
                         }
                       ]
@@ -1127,15 +928,6 @@ const negationQuery = {
                         }
                       ]
                     }
-                  },
-                  {
-                    nested: { path: 'items', query: { bool: { should: [] } } }
-                  },
-                  {
-                    nested: {
-                      path: 'holdings',
-                      query: { bool: { should: [] } }
-                    }
                   }
                 ]
               }
@@ -1151,15 +943,6 @@ const negationQuery = {
                         { term: { 'language.id': 'English' } },
                         { term: { 'language.label': 'English' } }
                       ]
-                    }
-                  },
-                  {
-                    nested: { path: 'items', query: { bool: { should: [] } } }
-                  },
-                  {
-                    nested: {
-                      path: 'holdings',
-                      query: { bool: { should: [] } }
                     }
                   }
                 ]
@@ -1185,9 +968,7 @@ const dateAfterQuery = {
                   query: { range: { 'dates.range': { gt: '1990' } } }
                 }
               }
-            ],
-            { nested: { path: 'items', query: null } },
-            { nested: { path: 'holdings', query: null } }
+            ]
           ]
         }
       }
@@ -1208,9 +989,7 @@ const dateBeforeQuery = {
                   query: { range: { 'dates.range': { lt: '1990' } } }
                 }
               }
-            ],
-            { nested: { path: 'items', query: null } },
-            { nested: { path: 'holdings', query: null } }
+            ]
           ]
         }
       }
@@ -1231,9 +1010,7 @@ const dateBeforeOrOnQuery = {
                   query: { range: { 'dates.range': { lte: '1990' } } }
                 }
               }
-            ],
-            { nested: { path: 'items', query: null } },
-            { nested: { path: 'holdings', query: null } }
+            ]
           ]
         }
       }
@@ -1254,9 +1031,7 @@ const dateAfterOrOnQuery = {
                   query: { range: { 'dates.range': { gte: '1990' } } }
                 }
               }
-            ],
-            { nested: { path: 'items', query: null } },
-            { nested: { path: 'holdings', query: null } }
+            ]
           ]
         }
       }
@@ -1279,9 +1054,7 @@ const dateWithinQuery = {
                   }
                 }
               }
-            ],
-            { nested: { path: 'items', query: null } },
-            { nested: { path: 'holdings', query: null } }
+            ]
           ]
         }
       }
@@ -1304,9 +1077,7 @@ const dateEnclosesQuery = {
                   }
                 }
               }
-            ],
-            { nested: { path: 'items', query: null } },
-            { nested: { path: 'holdings', query: null } }
+            ]
           ]
         }
       }
@@ -1338,12 +1109,6 @@ const filterQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: { path: 'items', query: { bool: { should: [] } } }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
@@ -1393,12 +1158,6 @@ const exactMatchQuery = {
                   }
                 ]
               }
-            },
-            {
-              nested: { path: 'items', query: { bool: { should: [] } } }
-            },
-            {
-              nested: { path: 'holdings', query: { bool: { should: [] } } }
             }
           ]
         }
