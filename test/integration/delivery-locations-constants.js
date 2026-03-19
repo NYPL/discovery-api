@@ -40,7 +40,7 @@ const expectations = {
   },
   nyplM1: {
     barcode: '33433084847221',
-    scholar: { includes: [sasb], excludes: [scholar, lpa, schomburg] },
+    scholar: { includes: [sasb, scholar], excludes: [lpa, schomburg] },
     general: { includes: [sasb], excludes: [scholar, lpa, schomburg] }
   },
   nyplM2: {
