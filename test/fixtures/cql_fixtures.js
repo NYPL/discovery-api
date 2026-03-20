@@ -961,14 +961,12 @@ const dateAfterQuery = {
       {
         bool: {
           should: [
-            [
-              {
-                nested: {
-                  path: 'dates',
-                  query: { range: { 'dates.range': { gt: '1990' } } }
-                }
+            {
+              nested: {
+                path: 'dates',
+                query: { range: { 'dates.range': { gt: '1990' } } }
               }
-            ]
+            }
           ]
         }
       }
@@ -982,14 +980,12 @@ const dateBeforeQuery = {
       {
         bool: {
           should: [
-            [
-              {
-                nested: {
-                  path: 'dates',
-                  query: { range: { 'dates.range': { lt: '1990' } } }
-                }
+            {
+              nested: {
+                path: 'dates',
+                query: { range: { 'dates.range': { lt: '1990' } } }
               }
-            ]
+            }
           ]
         }
       }
@@ -1003,14 +999,12 @@ const dateBeforeOrOnQuery = {
       {
         bool: {
           should: [
-            [
-              {
-                nested: {
-                  path: 'dates',
-                  query: { range: { 'dates.range': { lte: '1990' } } }
-                }
+            {
+              nested: {
+                path: 'dates',
+                query: { range: { 'dates.range': { lte: '1990' } } }
               }
-            ]
+            }
           ]
         }
       }
@@ -1024,14 +1018,12 @@ const dateAfterOrOnQuery = {
       {
         bool: {
           should: [
-            [
-              {
-                nested: {
-                  path: 'dates',
-                  query: { range: { 'dates.range': { gte: '1990' } } }
-                }
+            {
+              nested: {
+                path: 'dates',
+                query: { range: { 'dates.range': { gte: '1990' } } }
               }
-            ]
+            }
           ]
         }
       }
@@ -1045,16 +1037,14 @@ const dateWithinQuery = {
       {
         bool: {
           should: [
-            [
-              {
-                nested: {
-                  path: 'dates',
-                  query: {
-                    range: { 'dates.range': { gte: '1990', lte: '2000' } }
-                  }
+            {
+              nested: {
+                path: 'dates',
+                query: {
+                  range: { 'dates.range': { gte: '1990', lte: '2000' } }
                 }
               }
-            ]
+            }
           ]
         }
       }
@@ -1068,16 +1058,14 @@ const dateEnclosesQuery = {
       {
         bool: {
           should: [
-            [
-              {
-                nested: {
-                  path: 'dates',
-                  query: {
-                    range: { 'dates.range': { gt: '1990', lt: '2000' } }
-                  }
+            {
+              nested: {
+                path: 'dates',
+                query: {
+                  range: { 'dates.range': { gt: '1990', lt: '2000' } }
                 }
               }
-            ]
+            }
           ]
         }
       }
