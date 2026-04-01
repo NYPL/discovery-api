@@ -16,8 +16,8 @@ function validateAtomicQuery (parsed, scope, relation, quotedTerm) {
   const relationNode = atomicQuery.children.find(child => child.type === 'relation')
   const relationTerm = relationNode.children.find(child => child.type === 'relation_term')
   expect(relationTerm.text).to.equal(relation)
-  const quotedTermNode = atomicQuery.children.find(child => child.type === 'quoted_term')
-  expect(quotedTermNode.text).to.equal(quotedTerm)
+  const searchTermNode = atomicQuery.children.find(child => child.type === 'search_term')
+  expect(searchTermNode.text).to.equal(quotedTerm)
 }
 
 describe('CQL Grammar', function () {
