@@ -29,6 +29,16 @@ describe('CQL Grammar', function () {
       validateAtomicQuery(parseWithRightCql('subject all "hamlet shakespeare"'), 'subject', 'all', '"hamlet shakespeare"')
     })
 
+    it('parses single-word atomic queries without quotes', function () {
+      validateAtomicQuery(parseWithRightCql('title=hamlet'), 'title', '=', 'hamlet')
+    })
+
+    it('parses quoted queries containing special characters', function () {
+      validateAtomicQuery(parseWithRightCql('title="hamlet=prince"'), 'title', '=', '"hamlet=prince"')
+      validateAtomicQuery(parseWithRightCql('date > "1990 > 1980"'), 'date', '>', '"1990 > 1980"')
+      validateAtomicQuery(parseWithRightCql('author adj "shakespeare (william)"'), 'author', 'adj', '"shakespeare (william)"')
+    })
+
     it('allows whitespace variants', function () {
       validateAtomicQuery(parseWithRightCql('title ="hamlet"'), 'title', '=', '"hamlet"')
       validateAtomicQuery(parseWithRightCql('title= "hamlet"'), 'title', '=', '"hamlet"')
