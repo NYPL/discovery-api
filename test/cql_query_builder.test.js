@@ -224,4 +224,20 @@ describe('CQL Query Builder', function () {
         binaryBooleanQuery
       )
   })
+
+  describe('displayParsed', function () {
+    it('returns parsed AST array for valid queries', function () {
+      const result = new CqlQuery('title="Hamlet"').displayParsed()
+      expect(result).to.have.property('parsed')
+      expect(result).to.not.have.property('error')
+      expect(result.parsed).to.deep.equal(['title', '=', '"Hamlet"'])
+    })
+
+    it('returns error message for invalid queries', function () {
+      const result = new CqlQuery('title="Hamlet" AND').displayParsed()
+      expect(result).to.have.property('error')
+      expect(result).to.not.have.property('parsed')
+      expect(result.error).to.include('parsing error')
+    })
+  })
 })
