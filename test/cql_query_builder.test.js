@@ -233,11 +233,33 @@ describe('CQL Query Builder', function () {
       expect(result.parsed).to.deep.equal(['title', '=', '"Hamlet"'])
     })
 
+    it('returns parsed AST array for complex queries', function () {
+      const result = new CqlQuery('author="Shakespeare" AND (language="English" OR genre="tragedy")').displayParsed()
+      expect(result).to.have.property('parsed')
+      expect(result).to.not.have.property('error')
+      expect(result.parsed).to.deep.equal([
+        ['author', '=', '"Shakespeare"'],
+        'AND',
+        [
+          ['language', '=', '"English"'],
+          'OR',
+          ['genre', '=', '"tragedy"']
+        ]
+      ])
+    })
+
     it('returns error message for invalid queries', function () {
       const result = new CqlQuery('title="Hamlet" AND').displayParsed()
       expect(result).to.have.property('error')
       expect(result).to.not.have.property('parsed')
       expect(result.error).to.include('parsing error')
+    })
+
+    it('returns specific error message for partially valid queries', function () {
+      const result = new CqlQuery('badscope="Hamlet" AND title="Dogs"').displayParsed()
+      expect(result).to.have.property('error')
+      expect(result).to.not.have.property('parsed')
+      expect(result.error).to.include('Parsing error likely near end of')
     })
   })
 })
