@@ -35,6 +35,13 @@ describe('CQL Query Builder', function () {
       )
   })
 
+  it('Simple = query without quotes', function () {
+    expect(new CqlQuery('title=Hamlet').buildEsQuery())
+      .to.deep.equal(
+        simpleAdjQuery
+      )
+  })
+
   it('Simple adj query', function () {
     expect(new CqlQuery('title adj "Hamlet"').buildEsQuery())
       .to.deep.equal(
