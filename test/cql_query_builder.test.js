@@ -196,4 +196,11 @@ describe('CQL Query Builder', function () {
         exactMatchQuery
       )
   })
+
+  it('Handles query with funny casing', function () {
+    expect(buildEsQuery('AuThOr = "Shakespeare" aNd LaNgUaGe = "English"'))
+      .to.deep.equal(
+        binaryBooleanQuery
+      )
+  })
 })
