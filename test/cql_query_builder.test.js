@@ -127,7 +127,7 @@ describe('CQL Query Builder', function () {
   })
 
   it('Boolean query with parentheses and whitespace', function () {
-    expect(new CqlQuery('author = "Shakespeare"   AND ( language = "English" OR genre = "tragedy" )').buildEsQuery())
+    expect(new CqlQuery('  author = "Shakespeare"   AND ( language = "English" OR genre = "tragedy" )  ').buildEsQuery())
       .to.deep.equal(
         queryWithParentheses
       )
