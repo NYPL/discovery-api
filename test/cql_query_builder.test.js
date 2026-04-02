@@ -2,6 +2,7 @@ const { expect } = require('chai')
 
 const { CqlQuery } = require('../lib/elasticsearch/cql_query_builder')
 const ApiRequest = require('../lib/api-request')
+const { InvalidParameterError } = require('../lib/errors')
 const {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -194,6 +195,12 @@ describe('CQL Query Builder', function () {
       .to.deep.equal(
         dateEnclosesQuery
       )
+  })
+
+  it('Throws InvalidParameterError for invalid date formats', function () {
+    expect(() => new CqlQuery('date > "199"').buildEsQuery()).to.throw(InvalidParameterError, 'Dates must be of the form YYYY, YYYY/MM, or YYYY/MM/DD ')
+    expect(() => new CqlQuery('date > "1990/1"').buildEsQuery()).to.throw(InvalidParameterError, 'Dates must be of the form YYYY, YYYY/MM, or YYYY/MM/DD ')
+    expect(() => new CqlQuery('date > "not-a-date"').buildEsQuery()).to.throw(InvalidParameterError, 'Dates must be of the form YYYY, YYYY/MM, or YYYY/MM/DD ')
   })
 
   it('Query with applied filters', function () {
