@@ -36,6 +36,13 @@ describe('CQL Query Builder', function () {
       )
   })
 
+  it('Trims whitespace in query terms', function () {
+    expect(new CqlQuery('title="  Hamlet  "').buildEsQuery())
+      .to.deep.equal(
+        simpleAdjQuery
+      )
+  })
+
   it('Simple = query without quotes', function () {
     expect(new CqlQuery('title=Hamlet').buildEsQuery())
       .to.deep.equal(
