@@ -90,7 +90,7 @@ module.exports = function (app) {
    *
    *  e.g. discovery/resources/b1234-i9876
    */
-  app.get(`/api/v${VER}/discovery/resources/:uri-:itemUri([a-z]?i[0-9]+)`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/resources/:uri-:itemUri([a-z]?i[a-z0-9]+)`, function (req, res, next) {
     const params = { uri: req.params.uri, itemUri: req.params.itemUri }
 
     return app.resources.findByUri(params, { baseUrl: app.baseUrl }, req)
