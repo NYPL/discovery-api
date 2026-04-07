@@ -417,7 +417,7 @@ describe('ElasticQueryBuilder', () => {
         // Assert there's a multi-match:
         expect(query).to.nested
           .include({
-            // Multi-match on common series fields:
+            // Multi-match on series fields:
             'bool.must[0].bool.must[0].multi_match.fields[0]': 'series^2',
             'bool.must[0].bool.must[0].multi_match.fields[4]': 'seriesUniformTitle',
             'bool.must[0].bool.must[0].multi_match.fields[7]': 'seriesAddedEntry',
@@ -436,9 +436,9 @@ describe('ElasticQueryBuilder', () => {
         // Assert there's a multi-match:
         expect(query).to.nested
           .include({
-            // Multi-match on common genre fields:
+            // Multi-match on genre fields:
             'bool.must[0].bool.must[0].multi_match.fields[0]': 'genreForm^2',
-            'bool.must[0].bool.must[0].multi_match.fields[2]': 'parallelGenreForm^2',
+            'bool.must[0].bool.must[0].multi_match.fields[1]': 'genreForm.folded',
             'bool.must[0].bool.must[0].multi_match.query': 'toast'
           })
       })
