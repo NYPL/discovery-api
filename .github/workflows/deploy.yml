@@ -8,7 +8,7 @@ env:
   ECR_REPOSITORY: discovery-api
 
 jobs:
-  run_tests:
+  tests:
     name: Run Tests
     uses: ./.github/workflows/tests.yml
 
