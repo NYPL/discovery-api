@@ -3,12 +3,15 @@ name: Run Smoke Tests
 on:
   workflow_run:
     workflows: ["Deploy"]
-    types:
-      - completed
+    types: [completed]
+    branches: [production, qa]
 
 permissions:
   id-token: write
   contents: read
+
+env:
+  ENV: ${{ github.event.workflow_run.head_branch}}
 
 jobs:
   integration-test:
@@ -17,8 +20,6 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
