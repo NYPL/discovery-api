@@ -10,7 +10,7 @@ env:
 jobs:
   tests:
     name: Run Tests
-    uses: ./.github/workflows/tests.yml
+    uses: ./.github/workflows/test.yml
 
   deploy:
     permissions:
