@@ -1,9 +1,14 @@
-name: integration-test
+name: Run Smoke Tests
 
 on:
-  pull_request:
-    branches:
-      - production
+  workflow_run:
+    workflows: ["Unit tests / deploy"]
+    types:
+      - completed
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   integration-test:
@@ -17,6 +22,12 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
           aws-region: us-east-1
+      - name: Wait for stable service
+        uses: nick-fields/retry@v3
+        with:
+          max_attempts: 3
+          timeout_minutes: 10
+          command: aws ecs wait services-stable --cluster discovery-api-${{github.ref_name}} --services discovery-api-${{github.ref_name}}
       - uses: actions/checkout@v3
       - name: Set Node version
         uses: actions/setup-node@v3
