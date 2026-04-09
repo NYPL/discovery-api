@@ -1,4 +1,4 @@
-name: Unit Tests
+name: Deploy
 
 on: [push]
 
@@ -8,18 +8,9 @@ env:
   ECR_REPOSITORY: discovery-api
 
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set Node version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-      - name: npm install
-        run: npm ci
-      - name: Unit Tests
-        run: npm test
+  run_tests:
+    name: Run Tests
+    uses: ./.github/workflows/tests.yml
 
   deploy:
     permissions:

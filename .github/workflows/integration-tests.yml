@@ -2,7 +2,7 @@ name: Run Smoke Tests
 
 on:
   workflow_run:
-    workflows: ["Unit tests / deploy"]
+    workflows: ["Deploy"]
     types:
       - completed
 
