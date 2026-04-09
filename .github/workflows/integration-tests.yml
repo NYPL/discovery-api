@@ -27,7 +27,7 @@ jobs:
         with:
           max_attempts: 3
           timeout_minutes: 10
-          command: aws ecs wait services-stable --cluster collections-api-qa --services collections-api-qa
+          command: aws ecs wait services-stable --cluster discovery-api-qa --services discovery-api-qa
       - uses: actions/checkout@v3
       - name: Set Node version
         uses: actions/setup-node@v3
