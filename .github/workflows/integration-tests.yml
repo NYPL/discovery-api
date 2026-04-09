@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 env:
-  ENV: ${{ github.event.workflow_run.head_branch}}
+  ENV: ${{ github.event.workflow_run.head_branch }}
 
 jobs:
   integration-test:
@@ -30,15 +30,15 @@ jobs:
         with:
           max_attempts: 3
           timeout_minutes: 10
-          command: aws ecs wait services-stable --cluster discovery-api-${{github.ref_name}} --services discovery-api-${{github.ref_name}}
+          command: aws ecs wait services-stable --cluster discovery-api-${{env.ENV}} --services discovery-api-${{env.ENV}}
       - uses: actions/checkout@v3
       - name: Set Node version
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
       - name: npm install
         run: npm i
       - name: Run integration tests
-        env: 
-          ENV: 'qa'
+        env:
+          ENV: "qa"
         run: node test/integration/delivery-locations-by-barcode.test.js
