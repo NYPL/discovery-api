@@ -2,7 +2,7 @@ name: Run Smoke Tests
 
 on:
   workflow_run:
-    workflows: ["Deploy to QA"]
+    workflows: ["Unit tests / deploy"]
     types:
       - completed
 
@@ -27,7 +27,7 @@ jobs:
         with:
           max_attempts: 3
           timeout_minutes: 10
-          command: aws ecs wait services-stable --cluster discovery-api-qa --services discovery-api-qa
+          command: aws ecs wait services-stable --cluster discovery-api-${{github.ref_name}} --services discovery-api-${{github.ref_name}}
       - uses: actions/checkout@v3
       - name: Set Node version
         uses: actions/setup-node@v3
