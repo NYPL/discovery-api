@@ -38,11 +38,11 @@ const expectations = {
     scholar: { includes: [schomburg], excludes: [scholar, sasb, lpa] },
     general: { includes: [schomburg], excludes: [scholar, sasb, lpa] }
   },
-  // nyplM1: {
-  //   barcode: null,
-  //   scholar: { includes: [sasb], excludes: [scholar, lpa, schomburg] },
-  //   general: { includes: [sasb], excludes: [scholar, lpa, schomburg] }
-  // },
+  nyplM1: {
+    barcode: '33433084847221',
+    scholar: { includes: [sasb, scholar], excludes: [lpa, schomburg] },
+    general: { includes: [sasb], excludes: [scholar, lpa, schomburg] }
+  },
   nyplM2: {
     barcode: '33333069027734',
     scholar: { includes: [sasb, scholar], excludes: [lpa, schomburg] },
