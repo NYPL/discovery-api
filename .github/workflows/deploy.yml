@@ -58,3 +58,12 @@ jobs:
       - name: Force ECS Update
         run: |
           aws ecs update-service --cluster discovery-api-${{ env.ENV_TAG }} --service discovery-api-${{ env.ENV_TAG }} --force-new-deployment
+
+  smoke-test:
+    permissions:
+      id-token: write
+      contents: read
+    needs: deploy
+    uses: ./.github/workflows/integration-tests.yml
+    with:
+      branch: ${{ github.ref_name }}

@@ -1,17 +1,18 @@
 name: Run Smoke Tests
 
 on:
-  workflow_run:
-    workflows: ["Deploy"]
-    types: [completed]
-    branches: [production, qa, qa2]
+  workflow_call:
+    inputs:
+      branch:
+        required: true
+        type: string
 
 permissions:
   id-token: write
   contents: read
 
 env:
-  ENV: ${{ github.event.workflow_run.head_branch }}
+  ENV: ${{ inputs.branch }}
 
 jobs:
   integration-test:
