@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["Deploy"]
     types: [completed]
-    branches: [production, qa]
+    branches: [production, qa, qa2]
 
 permissions:
   id-token: write
