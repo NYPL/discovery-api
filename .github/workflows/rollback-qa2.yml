@@ -2,10 +2,14 @@ name: Rollback qa2
 
 on:
   workflow_call:
-
+    inputs:
+      branch: 
+        required: true
+        type: string
 jobs:
   # Rollback job in case of failure (Revert qa to the previous task definition)
   rollback:
+    if: ${{ inputs.branch == qa2 }}
     permissions:
         id-token: write
         contents: read
