@@ -1,12 +1,7 @@
 name: Rollback qa2
 
-on: 
-  workflow_run:
-    workflows: ["Run Smoke Test"]
-    types: [completed]
-
-env:
-  ENV: ${{ github.event.workflow_run.head_branch }}
+on:
+  workflow_call:
 
 jobs:
   # Rollback job in case of failure (Revert qa to the previous task definition)
@@ -16,7 +11,6 @@ jobs:
         contents: read
     name: Rollback to Previous Version
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.head_branch == 'qa2'}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
