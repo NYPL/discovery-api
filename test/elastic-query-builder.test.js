@@ -216,6 +216,42 @@ describe('ElasticQueryBuilder', () => {
     })
   })
 
+  describe('search_scope genre', () => {
+    it('generates a "genre" query', () => {
+      const request = new ApiRequest({ q: 'toast', search_scope: 'genre' })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect a multi_match on term:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
+        .include({ 'bool.must[0].multi_match.query': 'toast' })
+        .include({ 'bool.must[0].multi_match.fields[0]': 'genreForm^2' })
+
+      // Expect only common boosting clauses
+      expect(inst.query.toJson().bool.should)
+        .to.be.a('array')
+        .have.lengthOf(4)
+    })
+  })
+
+  describe('search_scope series', () => {
+    it('generates a "series" query', () => {
+      const request = new ApiRequest({ q: 'toast', search_scope: 'series' })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect a multi_match on term:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
+        .include({ 'bool.must[0].multi_match.query': 'toast' })
+        .include({ 'bool.must[0].multi_match.fields[0]': 'series^2' })
+
+      // Expect only common boosting clauses
+      expect(inst.query.toJson().bool.should)
+        .to.be.a('array')
+        .have.lengthOf(4)
+    })
+  })
+
   describe('multiple id query', () => {
     it('supports ids=x,y,z', () => {
       const request = new ApiRequest({ q: '', ids: ['id_a', 'id_b'] })
@@ -371,6 +407,43 @@ describe('ElasticQueryBuilder', () => {
       })
     })
 
+    describe('series=', () => {
+      it('applies series clauses to query', () => {
+        const request = new ApiRequest({ series: 'toast' })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Assert there's a multi-match:
+        expect(query).to.nested
+          .include({
+            // Multi-match on series fields:
+            'bool.must[0].bool.must[0].multi_match.fields[0]': 'series^2',
+            'bool.must[0].bool.must[0].multi_match.fields[4]': 'seriesUniformTitle',
+            'bool.must[0].bool.must[0].multi_match.fields[7]': 'seriesAddedEntry',
+            'bool.must[0].bool.must[0].multi_match.query': 'toast'
+          })
+      })
+    })
+
+    describe('genre=', () => {
+      it('applies genre clauses to query', () => {
+        const request = new ApiRequest({ genre: 'toast' })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Assert there's a multi-match:
+        expect(query).to.nested
+          .include({
+            // Multi-match on genre fields:
+            'bool.must[0].bool.must[0].multi_match.fields[0]': 'genreForm^2',
+            'bool.must[0].bool.must[0].multi_match.fields[1]': 'genreForm.folded',
+            'bool.must[0].bool.must[0].multi_match.query': 'toast'
+          })
+      })
+    })
+
     describe('subject_prefix=', () => {
       it('applies subject_prefix clauses to query', () => {
         const request = new ApiRequest({ subject_prefix: 'toast' })
@@ -517,7 +590,7 @@ describe('ElasticQueryBuilder', () => {
           }
         })
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020',
@@ -545,7 +618,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
@@ -568,7 +641,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
@@ -591,7 +664,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
@@ -614,7 +687,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
@@ -637,7 +710,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
