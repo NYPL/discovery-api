@@ -31,7 +31,7 @@ describe('ApiRequest', function () {
     request = ApiRequest.fromParams({ q: '"toast"' })
     expect(request.queryIsFullyQuoted()).to.eq(true)
 
-    // Test smart-quotes, the great scorge
+    // Test smart-quotes, the great scourge
     request = ApiRequest.fromParams({ q: '“toast“' })
     expect(request.queryIsFullyQuoted()).to.eq(true)
 
@@ -54,5 +54,8 @@ describe('ApiRequest', function () {
 
     request = ApiRequest.fromParams({ title: '"toast"', foo: 'bar' })
     expect(request.advancedSearchParamsThatAreAlsoScopes()).to.deep.eq(['title'])
+
+    request = ApiRequest.fromParams({ series: '"Greek volumes"', foo: 'bar' })
+    expect(request.advancedSearchParamsThatAreAlsoScopes()).to.deep.eq(['series'])
   })
 })
