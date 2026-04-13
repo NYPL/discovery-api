@@ -25,7 +25,11 @@ const {
   dateEnclosesQuery,
   filterQuery,
   multiAdjQuery,
-  exactMatchQuery
+  exactMatchQuery,
+  divisionAdj,
+  divisionAll,
+  divisionAny,
+  divisionExact
 } = require('./fixtures/cql_fixtures')
 
 describe('CQL Query Builder', function () {
@@ -267,6 +271,34 @@ describe('CQL Query Builder', function () {
       expect(result).to.have.property('error')
       expect(result).to.not.have.property('parsed')
       expect(result.error).to.include('Parsing error likely near end of')
+    })
+
+    it('Maps controlled vocab fields correctly for any', () => {
+      const result = new CqlQuery('division any "manuscript art"').buildEsQuery()
+      expect(result).to.deep.equal(
+        divisionAny
+      )
+    })
+
+    it('Maps controlled vocab fields correctly for all', () => {
+      const result = new CqlQuery('division all "manuscript art"').buildEsQuery()
+      expect(result).to.deep.equal(
+        divisionAll
+      )
+    })
+
+    it('Maps controlled vocab fields correctly for adj', () => {
+      const result = new CqlQuery('division adj "manuscripts archives"').buildEsQuery()
+      expect(result).to.deep.equal(
+        divisionAdj
+      )
+    })
+
+    it('Maps controlled vocab fields correctly for ==', () => {
+      const result = new CqlQuery('division == "mag"').buildEsQuery()
+      expect(result).to.deep.equal(
+        divisionExact
+      )
     })
   })
 })
