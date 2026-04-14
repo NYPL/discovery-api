@@ -1,9 +1,18 @@
-name: integration-test
+name: Run Smoke Tests
 
 on:
-  pull_request:
-    branches:
-      - production
+  workflow_call:
+    inputs:
+      branch:
+        required: true
+        type: string
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  ENV: ${{ inputs.branch }}
 
 jobs:
   integration-test:
@@ -17,14 +26,20 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::946183545209:role/GithubActionsDeployerRole
           aws-region: us-east-1
+      - name: Wait for stable service
+        uses: nick-fields/retry@v3
+        with:
+          max_attempts: 3
+          timeout_minutes: 10
+          command: aws ecs wait services-stable --cluster discovery-api-${{env.ENV}} --services discovery-api-${{env.ENV}}
       - uses: actions/checkout@v3
       - name: Set Node version
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
       - name: npm install
         run: npm i
       - name: Run integration tests
-        env: 
-          ENV: 'qa'
+        env:
+          ENV: "qa"
         run: node test/integration/delivery-locations-by-barcode.test.js

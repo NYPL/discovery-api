@@ -1,0 +1,47 @@
+name: Test-Deploy-Int-Roll
+
+on:
+  push:
+    branches:
+      - qa
+      - production
+      - qa2
+
+# Global environment variable based on the branch name
+env:
+  ENV_TAG: ${{ github.ref_name }}
+  ECR_REPOSITORY: discovery-api
+
+jobs:
+  tests:
+    name: Run Tests
+    uses: ./.github/workflows/test.yml
+
+  deploy:
+    permissions:
+      id-token: write
+      contents: read
+    needs: tests
+    uses: ./.github/workflows/deploy-image.yml
+    with:
+      env_tag: ${{ github.ref_name }}
+      image_tag: ${{ github.sha }}
+
+  smoke-test:
+    permissions:
+      id-token: write
+      contents: read
+    needs: deploy
+    uses: ./.github/workflows/integration-tests.yml
+    with:
+      branch: ${{ github.ref_name }}
+
+  rollback:
+    permissions:
+      id-token: write
+      contents: read
+    needs: smoke-test
+    if: ${{ failure() && needs.smoke-test.result == 'failure' &&  github.ref_name != 'production' }}
+    uses: ./.github/workflows/rollback.yml
+    with: 
+      branch: ${{ github.ref_name }}

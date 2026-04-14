@@ -1,0 +1,25 @@
+name: Unit Tests
+
+on: 
+  workflow_call:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    permissions:
+        id-token: write
+        contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set Node version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - name: npm install
+        run: npm ci
+      - name: Unit Tests
+        run: npm test
