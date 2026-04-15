@@ -19,15 +19,26 @@ describe('cql_query_builder date queries', () => {
         path: 'dates',
         query: {
           bool: {
-            should: [
+            must: [
               {
-                range: {
-                  'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                bool: {
+                  should: [
+                    {
+                      range: {
+                        'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                      }
+                    },
+                    {
+                      range: {
+                        'dates.range': { gte: '2000', relation: 'within', lt: '2001' }
+                      }
+                    }
+                  ]
                 }
               },
               {
-                range: {
-                  'dates.range': { gte: '2000', relation: 'within', lt: '2001' }
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
                 }
               }
             ]
@@ -53,13 +64,24 @@ describe('cql_query_builder date queries', () => {
           bool: {
             must: [
               {
-                range: {
-                  'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                bool: {
+                  must: [
+                    {
+                      range: {
+                        'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                      }
+                    },
+                    {
+                      range: {
+                        'dates.range': { gte: '2000', relation: 'within', lt: '2001' }
+                      }
+                    }
+                  ]
                 }
               },
               {
-                range: {
-                  'dates.range': { gte: '2000', relation: 'within', lt: '2001' }
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
                 }
               }
             ]
@@ -208,8 +230,19 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
+                }
+              }
+            ]
           }
         }
       }
@@ -229,8 +262,19 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': { gte: '1999-10', relation: 'within', lt: '1999-11' }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': { gte: '1999-10', relation: 'within', lt: '1999-11' }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
+                }
+              }
+            ]
           }
         }
       }
@@ -250,8 +294,19 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': { gte: '1999-10-15', relation: 'within', lte: '1999-10-15T23:59:59' }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': { gte: '1999-10-15', relation: 'within', lte: '1999-10-15T23:59:59' }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
+                }
+              }
+            ]
           }
         }
       }
@@ -271,8 +326,19 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': { gte: '1999-12', relation: 'within', lt: '2000' }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': { gte: '1999-12', relation: 'within', lt: '2000' }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
+                }
+              }
+            ]
           }
         }
       }
@@ -292,12 +358,23 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': {
-              gte: '2023-04-30',
-              relation: 'within',
-              lte: '2023-04-30T23:59:59'
-            }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': {
+                    gte: '2023-04-30',
+                    relation: 'within',
+                    lte: '2023-04-30T23:59:59'
+                  }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['e', 's', 'p', 'r', 't']
+                }
+              }
+            ]
           }
         }
       }
