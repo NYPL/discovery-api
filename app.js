@@ -1,5 +1,6 @@
 const express = require('express')
 const NyplSourceMapper = require('research-catalog-indexer/lib/utils/nypl-source-mapper')
+const ControlledVocabularies = require('./lib/models/ControlledVocabularies')
 
 const esClient = require('./lib/elasticsearch/client')
 const loadConfig = require('./lib/load-config')
@@ -69,6 +70,8 @@ app.init = async () => {
   app.use((err, req, res, next) => {
     handleError(err, req, res, next, app.logger)
   })
+
+  await ControlledVocabularies.initialize();
 
   return app
 }
