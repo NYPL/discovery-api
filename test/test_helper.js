@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 const loadConfig = require('../lib/load-config')
 const app = require('../app')
 const sinon = require('sinon')
+const ControlledVocabularies = require('../lib/models/ControlledVocabularies')
 
 before(async () => {
   if (!process.env.UPDATE_FIXTURES) {
@@ -27,6 +28,9 @@ before(async () => {
     process.env.ENV = 'qa'
     process.env.AWS_PROFILE = process.env.AWS_PROFILE || 'nypl-digital-dev'
   }
+
+  ControlledVocabularies.fetchedVocabularies = Promise.resolve(require('./fixtures/controlledVocabularies.json'))
+  ControlledVocabularies.initialize()
 
   await app.init()
 

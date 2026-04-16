@@ -3,6 +3,8 @@ const { expect } = require('chai')
 const { CqlQuery } = require('../lib/elasticsearch/cql_query_builder')
 const ApiRequest = require('../lib/api-request')
 const { InvalidParameterError } = require('../lib/errors')
+const ControlledVocabularies = require('../lib/models/ControlledVocabularies')
+const vocabFixture = require('./fixtures/controlledVocabularies.json')
 const {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -33,6 +35,10 @@ const {
 } = require('./fixtures/cql_fixtures')
 
 describe('CQL Query Builder', function () {
+  before(() => {
+    ControlledVocabularies.cachedData = vocabFixture
+  })
+
   it('Simple = query', function () {
     expect(new CqlQuery('title="Hamlet"').buildEsQuery())
       .to.deep.equal(
