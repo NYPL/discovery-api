@@ -16,8 +16,8 @@ function validateAtomicQuery (parsed, scope, relation, quotedTerm) {
   const relationNode = atomicQuery.children.find(child => child.type === 'relation')
   const relationTerm = relationNode.children.find(child => child.type === 'relation_term')
   expect(relationTerm.text).to.equal(relation)
-  const quotedTermNode = atomicQuery.children.find(child => child.type === 'quoted_term')
-  expect(quotedTermNode.text).to.equal(quotedTerm)
+  const searchTermNode = atomicQuery.children.find(child => child.type === 'search_term')
+  expect(searchTermNode.text).to.equal(quotedTerm)
 }
 
 describe('CQL Grammar', function () {
@@ -27,6 +27,16 @@ describe('CQL Grammar', function () {
       validateAtomicQuery(parseWithRightCql('author adj "shakespeare"'), 'author', 'adj', '"shakespeare"')
       validateAtomicQuery(parseWithRightCql('keyword  any "hamlet shakespeare"'), 'keyword', 'any', '"hamlet shakespeare"')
       validateAtomicQuery(parseWithRightCql('subject all "hamlet shakespeare"'), 'subject', 'all', '"hamlet shakespeare"')
+    })
+
+    it('parses single-word atomic queries without quotes', function () {
+      validateAtomicQuery(parseWithRightCql('title=hamlet'), 'title', '=', 'hamlet')
+    })
+
+    it('parses quoted queries containing special characters', function () {
+      validateAtomicQuery(parseWithRightCql('title="hamlet=prince"'), 'title', '=', '"hamlet=prince"')
+      validateAtomicQuery(parseWithRightCql('date > "1990 > 1980"'), 'date', '>', '"1990 > 1980"')
+      validateAtomicQuery(parseWithRightCql('author adj "shakespeare (william)"'), 'author', 'adj', '"shakespeare (william)"')
     })
 
     it('allows whitespace variants', function () {
