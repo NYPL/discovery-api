@@ -30,7 +30,7 @@ before(async () => {
   }
 
   ControlledVocabularies.fetchedVocabularies = Promise.resolve(require('./fixtures/controlledVocabularies.json'))
-  ControlledVocabularies.initialize() 
+  ControlledVocabularies.initialize()
 
   await app.init()
 

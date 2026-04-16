@@ -71,7 +71,7 @@ app.init = async () => {
     handleError(err, req, res, next, app.logger)
   })
 
-  await ControlledVocabularies.initialize();
+  await ControlledVocabularies.initialize(app)
 
   return app
 }
