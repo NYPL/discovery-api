@@ -1,6 +1,6 @@
 const simpleAdjQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -43,7 +43,7 @@ const simpleAdjQuery = {
 
 const multiAdjQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -86,7 +86,7 @@ const multiAdjQuery = {
 
 const prefixPhraseQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -160,7 +160,7 @@ const prefixPhraseQuery = {
 
 const simpleAnyQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -239,7 +239,7 @@ const simpleAnyQuery = {
 
 const anyWithPrefixQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -382,7 +382,7 @@ const anyWithPrefixQuery = {
 
 const simpleAllQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -461,7 +461,7 @@ const simpleAllQuery = {
 
 const keywordQueryForBarcode = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -527,7 +527,7 @@ const keywordQueryForBarcode = {
 
 const keywordQueryForShelfMark = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -601,7 +601,7 @@ const keywordQueryForShelfMark = {
 
 const keywordQueryForGeneralTerm = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -657,7 +657,7 @@ const keywordQueryForGeneralTerm = {
 
 const identifierQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -697,7 +697,7 @@ const identifierQuery = {
 
 const binaryBooleanQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           must: [
@@ -749,7 +749,7 @@ const binaryBooleanQuery = {
 
 const ternaryBooleanQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -826,7 +826,7 @@ const ternaryBooleanQuery = {
 
 const queryWithParentheses = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           must: [
@@ -903,7 +903,7 @@ const queryWithParentheses = {
 
 const negationQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           must: [
@@ -957,7 +957,7 @@ const negationQuery = {
 
 const dateAfterQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -976,7 +976,7 @@ const dateAfterQuery = {
 
 const dateBeforeQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -995,7 +995,7 @@ const dateBeforeQuery = {
 
 const dateBeforeOrOnQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -1014,7 +1014,7 @@ const dateBeforeOrOnQuery = {
 
 const dateAfterOrOnQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -1033,7 +1033,7 @@ const dateAfterOrOnQuery = {
 
 const dateWithinQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -1054,7 +1054,7 @@ const dateWithinQuery = {
 
 const dateEnclosesQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -1075,7 +1075,7 @@ const dateEnclosesQuery = {
 
 const filterQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
@@ -1117,7 +1117,7 @@ const filterQuery = {
 
 const exactMatchQuery = {
   bool: {
-    should: [
+    must: [
       {
         bool: {
           should: [
