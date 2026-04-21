@@ -731,9 +731,61 @@ const binaryBooleanQuery = {
                 should: [
                   {
                     bool: {
-                      should: [
-                        { term: { 'language.id': 'English' } },
-                        { term: { 'language.label': 'English' } }
+                      must: [
+                        {
+                          bool: {
+                            should: [
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:eng' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:eng' }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:enm' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:enm' }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:ang' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:ang' }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:cpe' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:cpe' }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -786,9 +838,77 @@ const ternaryBooleanQuery = {
                       should: [
                         {
                           bool: {
-                            should: [
-                              { term: { 'language.id': 'English' } },
-                              { term: { 'language.label': 'English' } }
+                            must: [
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:eng'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:eng'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:enm'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:enm'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:ang'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:ang'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:cpe'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:cpe'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
                             ]
                           }
                         }
@@ -863,9 +983,77 @@ const queryWithParentheses = {
                       should: [
                         {
                           bool: {
-                            should: [
-                              { term: { 'language.id': 'English' } },
-                              { term: { 'language.label': 'English' } }
+                            must: [
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:eng'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:eng'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:enm'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:enm'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:ang'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:ang'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      bool: {
+                                        should: [
+                                          {
+                                            term: {
+                                              'language.id': 'lang:cpe'
+                                            }
+                                          },
+                                          {
+                                            term: {
+                                              'language.label': 'lang:cpe'
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
                             ]
                           }
                         }
@@ -939,9 +1127,61 @@ const negationQuery = {
                 should: [
                   {
                     bool: {
-                      should: [
-                        { term: { 'language.id': 'English' } },
-                        { term: { 'language.label': 'English' } }
+                      must: [
+                        {
+                          bool: {
+                            should: [
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:eng' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:eng' }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:enm' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:enm' }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:ang' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:ang' }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                bool: {
+                                  should: [
+                                    {
+                                      term: { 'language.id': 'lang:cpe' }
+                                    },
+                                    {
+                                      term: { 'language.label': 'lang:cpe' }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -1154,6 +1394,168 @@ const exactMatchQuery = {
   }
 }
 
+const divisionAny = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'mao' } }]
+                          }
+                        },
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'scd' } }]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'mab' } }]
+                          }
+                        },
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'scc' } }]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const divisionAll = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                must: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'mao' } }]
+                          }
+                        },
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'scd' } }]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'mab' } }]
+                          }
+                        },
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'scc' } }]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const divisionAdj = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                must: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'scd' } }]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const divisionExact = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                must: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [{ term: { collectionIds: 'mag' } }]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -1176,5 +1578,9 @@ module.exports = {
   dateEnclosesQuery,
   filterQuery,
   multiAdjQuery,
-  exactMatchQuery
+  exactMatchQuery,
+  divisionAdj,
+  divisionAll,
+  divisionAny,
+  divisionExact
 }
