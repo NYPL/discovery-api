@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
  *  This file rebuilds data/annotated-marc-rules.json from data/webpub.def
+ *  Note that currently data/annotated-marc-rules.json intentionally diverges
+ *  from webpub.def, in particular 340 excludes subfield 2
  *
  *  Webpub.def is a Sierra configuration file, which controls how specific marc
  *  fields are rendered in the catalog. We use it to build our own "annotated-
