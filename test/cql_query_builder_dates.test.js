@@ -209,8 +209,19 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': { gte: '1990', lte: '1990', relation: 'contains' }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': { gte: '1990', lte: '1990', relation: 'contains' }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['c', 'd', 'i', 'k', 'm', 'q', 'u']
+                }
+              }
+            ]
           }
         }
       }
