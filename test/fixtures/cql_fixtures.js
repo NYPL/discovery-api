@@ -1204,7 +1204,7 @@ const dateAfterQuery = {
             {
               nested: {
                 path: 'dates',
-                query: { range: { 'dates.range': { gt: '1990' } } }
+                query: { range: { 'dates.range': { gte: '1991-01-01' } } }
               }
             }
           ]
@@ -1242,7 +1242,7 @@ const dateBeforeOrOnQuery = {
             {
               nested: {
                 path: 'dates',
-                query: { range: { 'dates.range': { lte: '1990' } } }
+                query: { range: { 'dates.range': { lt: '1991-01-01' } } }
               }
             }
           ]
@@ -1281,7 +1281,7 @@ const dateWithinQuery = {
               nested: {
                 path: 'dates',
                 query: {
-                  range: { 'dates.range': { gte: '1990', lte: '2000' } }
+                  range: { 'dates.range': { gte: '1990', lt: '2001-01-01' } }
                 }
               }
             }
@@ -1302,7 +1302,7 @@ const dateEnclosesQuery = {
               nested: {
                 path: 'dates',
                 query: {
-                  range: { 'dates.range': { gt: '1990', lt: '2000' } }
+                  range: { 'dates.range': { gte: '1990', lte: '1990', relation: 'contains' } }
                 }
               }
             }
