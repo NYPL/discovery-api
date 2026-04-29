@@ -927,7 +927,7 @@ const ternaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'tragedy',
-                            fields: ['genreForm'],
+                            fields: ['genreForm', 'genreForm.folded'],
                             type: 'phrase'
                           }
                         }
@@ -1069,7 +1069,7 @@ const queryWithParentheses = {
                               {
                                 multi_match: {
                                   query: 'tragedy',
-                                  fields: ['genreForm'],
+                                  fields: ['genreForm', 'genreForm.folded'],
                                   type: 'phrase'
                                 }
                               }
