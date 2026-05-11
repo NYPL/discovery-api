@@ -32,7 +32,7 @@ const {
   divisionAll,
   divisionAny,
   divisionExact
-} = require('./fixtures/cql_fixtures')
+} = require('./cql_es_queries')
 
 describe('CQL Query Builder', function () {
   before(() => {
