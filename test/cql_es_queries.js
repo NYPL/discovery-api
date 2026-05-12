@@ -927,7 +927,7 @@ const ternaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'tragedy',
-                            fields: ['genreForm'],
+                            fields: ['genreForm', 'genreForm.folded'],
                             type: 'phrase'
                           }
                         }
@@ -1069,7 +1069,7 @@ const queryWithParentheses = {
                               {
                                 multi_match: {
                                   query: 'tragedy',
-                                  fields: ['genreForm'],
+                                  fields: ['genreForm', 'genreForm.folded'],
                                   type: 'phrase'
                                 }
                               }
@@ -1204,7 +1204,7 @@ const dateAfterQuery = {
             {
               nested: {
                 path: 'dates',
-                query: { range: { 'dates.range': { gt: '1990' } } }
+                query: { range: { 'dates.range': { gte: '1991-01-01' } } }
               }
             }
           ]
@@ -1242,7 +1242,7 @@ const dateBeforeOrOnQuery = {
             {
               nested: {
                 path: 'dates',
-                query: { range: { 'dates.range': { lte: '1990' } } }
+                query: { range: { 'dates.range': { lt: '1991-01-01' } } }
               }
             }
           ]
@@ -1281,7 +1281,7 @@ const dateWithinQuery = {
               nested: {
                 path: 'dates',
                 query: {
-                  range: { 'dates.range': { gte: '1990', lte: '2000' } }
+                  range: { 'dates.range': { gte: '1990', lt: '2001-01-01' } }
                 }
               }
             }
@@ -1302,7 +1302,18 @@ const dateEnclosesQuery = {
               nested: {
                 path: 'dates',
                 query: {
-                  range: { 'dates.range': { gt: '1990', lt: '2000' } }
+                  bool: {
+                    must: [
+                      {
+                        range: { 'dates.range': { gte: '1990', lte: '1990', relation: 'contains' } }
+                      },
+                      {
+                        terms: {
+                          'dates.tag': ['c', 'd', 'i', 'k', 'm', 'q', 'u']
+                        }
+                      }
+                    ]
+                  }
                 }
               }
             }

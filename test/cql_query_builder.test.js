@@ -32,7 +32,7 @@ const {
   divisionAll,
   divisionAny,
   divisionExact
-} = require('./fixtures/cql_fixtures')
+} = require('./cql_es_queries')
 
 describe('CQL Query Builder', function () {
   before(() => {
@@ -208,7 +208,7 @@ describe('CQL Query Builder', function () {
   })
 
   it('Date encloses query', function () {
-    expect(new CqlQuery('date encloses "1990 2000"').buildEsQuery())
+    expect(new CqlQuery('date encloses "1990"').buildEsQuery())
       .to.deep.equal(
         dateEnclosesQuery
       )

@@ -25,12 +25,12 @@ describe('cql_query_builder date queries', () => {
                   should: [
                     {
                       range: {
-                        'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                        'dates.range': { gte: '1999', relation: 'within', lt: '2000-01-01' }
                       }
                     },
                     {
                       range: {
-                        'dates.range': { gte: '2000', relation: 'within', lt: '2001' }
+                        'dates.range': { gte: '2000', relation: 'within', lt: '2001-01-01' }
                       }
                     }
                   ]
@@ -68,12 +68,12 @@ describe('cql_query_builder date queries', () => {
                   must: [
                     {
                       range: {
-                        'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                        'dates.range': { gte: '1999', relation: 'within', lt: '2000-01-01' }
                       }
                     },
                     {
                       range: {
-                        'dates.range': { gte: '2000', relation: 'within', lt: '2001' }
+                        'dates.range': { gte: '2000', relation: 'within', lt: '2001-01-01' }
                       }
                     }
                   ]
@@ -105,7 +105,7 @@ describe('cql_query_builder date queries', () => {
         path: 'dates',
         query: {
           range: {
-            'dates.range': { gte: '1990', lte: '2000' }
+            'dates.range': { gte: '1990', lt: '2001-01-01' }
           }
         }
       }
@@ -147,7 +147,7 @@ describe('cql_query_builder date queries', () => {
         path: 'dates',
         query: {
           range: {
-            'dates.range': { gt: '1999' }
+            'dates.range': { gte: '2000-01-01' }
           }
         }
       }
@@ -189,19 +189,19 @@ describe('cql_query_builder date queries', () => {
         path: 'dates',
         query: {
           range: {
-            'dates.range': { lte: '1999' }
+            'dates.range': { lt: '2000-01-01' }
           }
         }
       }
     })
   })
 
-  it('builds range query for relation "encloses" connecting two bounds', () => {
+  it('builds range query for relation "encloses"', () => {
     const query = buildAtomicMain({
       scope: 'date',
       relation: 'encloses',
-      terms: ['1990', '2000'],
-      term: '1990 2000',
+      terms: ['1990'],
+      term: '1990',
       fields: dateFields
     })
 
@@ -209,8 +209,19 @@ describe('cql_query_builder date queries', () => {
       nested: {
         path: 'dates',
         query: {
-          range: {
-            'dates.range': { gt: '1990', lt: '2000' }
+          bool: {
+            must: [
+              {
+                range: {
+                  'dates.range': { gte: '1990', lte: '1990', relation: 'contains' }
+                }
+              },
+              {
+                terms: {
+                  'dates.tag': ['c', 'd', 'i', 'k', 'm', 'q', 'u']
+                }
+              }
+            ]
           }
         }
       }
@@ -234,7 +245,7 @@ describe('cql_query_builder date queries', () => {
             must: [
               {
                 range: {
-                  'dates.range': { gte: '1999', relation: 'within', lt: '2000' }
+                  'dates.range': { gte: '1999', relation: 'within', lt: '2000-01-01' }
                 }
               },
               {
@@ -266,7 +277,7 @@ describe('cql_query_builder date queries', () => {
             must: [
               {
                 range: {
-                  'dates.range': { gte: '1999-10', relation: 'within', lt: '1999-11' }
+                  'dates.range': { gte: '1999-10', relation: 'within', lt: '1999-11-01' }
                 }
               },
               {
@@ -298,7 +309,7 @@ describe('cql_query_builder date queries', () => {
             must: [
               {
                 range: {
-                  'dates.range': { gte: '1999-10-15', relation: 'within', lte: '1999-10-15T23:59:59' }
+                  'dates.range': { gte: '1999-10-15', relation: 'within', lt: '1999-10-16' }
                 }
               },
               {
@@ -330,7 +341,7 @@ describe('cql_query_builder date queries', () => {
             must: [
               {
                 range: {
-                  'dates.range': { gte: '1999-12', relation: 'within', lt: '2000' }
+                  'dates.range': { gte: '1999-12', relation: 'within', lt: '2000-01-01' }
                 }
               },
               {
@@ -365,7 +376,7 @@ describe('cql_query_builder date queries', () => {
                   'dates.range': {
                     gte: '2023-04-30',
                     relation: 'within',
-                    lte: '2023-04-30T23:59:59'
+                    lt: '2023-05-01'
                   }
                 }
               },
