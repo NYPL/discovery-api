@@ -255,7 +255,7 @@ describe('Resources query', function () {
       // Expect one agg query for all the properties not involved in a filter:
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(numAggregations - 1)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      expect(queries[0].query.bool.filter[0].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
+      expect(queries[0].query.bool.filter[0].terms['subjectLiteral.keywordLowercasedStripped']).to.deep.equal(['S1', 'S1.'])
 
       // Expect second agg query for subjectLiteral - w/out the filter:
       expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
