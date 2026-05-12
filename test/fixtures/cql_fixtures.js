@@ -100,7 +100,7 @@ const prefixPhraseQuery = {
                   },
                   {
                     prefix: {
-                      'seriesStatement.raw': 'The Tragedy of Hamlet, Prince of Denmark'
+                      'series.keywordLowercasedStripped': 'The Tragedy of Hamlet, Prince of Denmark'
                     }
                   },
                   {
@@ -120,7 +120,7 @@ const prefixPhraseQuery = {
                   },
                   {
                     prefix: {
-                      'parallelSeries.raw': 'The Tragedy of Hamlet, Prince of Denmark'
+                      'parallelSeries.keywordLowercasedStripped': 'The Tragedy of Hamlet, Prince of Denmark'
                     }
                   },
                   {
@@ -145,7 +145,7 @@ const prefixPhraseQuery = {
                   },
                   {
                     prefix: {
-                      placeOfPublication: 'The Tragedy of Hamlet, Prince of Denmark'
+                      'placeOfPublication.keywordLowercasedStripped': 'The Tragedy of Hamlet, Prince of Denmark'
                     }
                   }
                 ]
@@ -255,7 +255,7 @@ const anyWithPrefixQuery = {
                           }
                         },
                         {
-                          prefix: { 'seriesStatement.raw': 'Tragedy' }
+                          prefix: { 'series.keywordLowercasedStripped': 'Tragedy' }
                         },
                         { prefix: { 'titleAlt.raw': 'Tragedy' } },
                         { prefix: { 'donor.raw': 'Tragedy' } },
@@ -263,7 +263,7 @@ const anyWithPrefixQuery = {
                           prefix: { 'parallelTitleAlt.raw': 'Tragedy' }
                         },
                         {
-                          prefix: { 'parallelSeries.raw': 'Tragedy' }
+                          prefix: { 'parallelSeries.keywordLowercasedStripped': 'Tragedy' }
                         },
                         {
                           prefix: { 'parallelCreatorLiteral.raw': 'Tragedy' }
@@ -275,7 +275,7 @@ const anyWithPrefixQuery = {
                         {
                           prefix: { 'addedAuthorTitle.raw': 'Tragedy' }
                         },
-                        { prefix: { placeOfPublication: 'Tragedy' } }
+                        { prefix: { 'placeOfPublication.keywordLowercasedStripped': 'Tragedy' } }
                       ]
                     }
                   },
@@ -287,14 +287,14 @@ const anyWithPrefixQuery = {
                             'title.keywordLowercasedStripped': 'Comedy'
                           }
                         },
-                        { prefix: { 'seriesStatement.raw': 'Comedy' } },
+                        { prefix: { 'series.keywordLowercasedStripped': 'Comedy' } },
                         { prefix: { 'titleAlt.raw': 'Comedy' } },
                         { prefix: { 'donor.raw': 'Comedy' } },
                         {
                           prefix: { 'parallelTitleAlt.raw': 'Comedy' }
                         },
                         {
-                          prefix: { 'parallelSeries.raw': 'Comedy' }
+                          prefix: { 'parallelSeries.keywordLowercasedStripped': 'Comedy' }
                         },
                         {
                           prefix: { 'parallelCreatorLiteral.raw': 'Comedy' }
@@ -306,7 +306,7 @@ const anyWithPrefixQuery = {
                         {
                           prefix: { 'addedAuthorTitle.raw': 'Comedy' }
                         },
-                        { prefix: { placeOfPublication: 'Comedy' } }
+                        { prefix: { 'placeOfPublication.keywordLowercasedStripped': 'Comedy' } }
                       ]
                     }
                   },
