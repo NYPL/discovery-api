@@ -39,7 +39,7 @@ describe('ElasticQueryBuilder', () => {
         },
         {
           path: undefined,
-          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
+          clause: { terms: { 'subjectLiteral.keywordLowercasedStripped': ['spaghetti', 'spaghetti.'] } }
         }
       ])
     })
@@ -54,7 +54,7 @@ describe('ElasticQueryBuilder', () => {
         },
         {
           path: undefined,
-          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
+          clause: { terms: { 'subjectLiteral.keywordLowercasedStripped': ['spaghetti', 'spaghetti.'] } }
         }
       ])
     })
@@ -68,8 +68,8 @@ describe('ElasticQueryBuilder', () => {
           clause: {
             bool: {
               should: [
-                { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } },
-                { terms: { 'subjectLiteral.raw': ['meatballs', 'meatballs.'] } }
+                { terms: { 'subjectLiteral.keywordLowercasedStripped': ['spaghetti', 'spaghetti.'] } },
+                { terms: { 'subjectLiteral.keywordLowercasedStripped': ['meatballs', 'meatballs.'] } }
               ]
             }
           }
@@ -455,7 +455,7 @@ describe('ElasticQueryBuilder', () => {
         expect(query.bool.must[0].bool.should[0])
         expect(query.bool.must[0].bool.should[0]).to.deep.equal({
           prefix: {
-            'subjectLiteral.raw': {
+            'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 1
             }
@@ -463,7 +463,7 @@ describe('ElasticQueryBuilder', () => {
         })
         expect(query.bool.must[0].bool.should[1]).to.deep.equal({
           prefix: {
-            'parallelSubjectLiteral.raw': {
+            'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 1
             }
@@ -472,7 +472,7 @@ describe('ElasticQueryBuilder', () => {
 
         expect(query.bool.should[0]).to.deep.equal({
           term: {
-            'subjectLiteral.raw': {
+            'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 50
             }
@@ -481,7 +481,7 @@ describe('ElasticQueryBuilder', () => {
 
         expect(query.bool.should[1]).to.deep.equal({
           term: {
-            'parallelSubjectLiteral.raw': {
+            'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 50
             }
