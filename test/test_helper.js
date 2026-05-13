@@ -31,9 +31,9 @@ before(async () => {
 
   ControlledVocabularies.fetchedVocabularies = Promise.resolve(require('./fixtures/controlledVocabularies.json'))
   ControlledVocabularies.initialize()
-
   await app.init()
-
+  // we don't need these for testing purposes, so disabling for fixture generation
+  process.env.NAME_QUERIES = false
   // Establish base url for local queries:
   global.TEST_BASE_URL = `http://localhost:${process.env.PORT}`
 })
