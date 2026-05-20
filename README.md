@@ -30,6 +30,7 @@ To start the container with AWS creds so that the app can decrypt config from `c
 ```
 
 After making changes, rebuild the image:
+
 ```
 docker-compose build
 ```
@@ -61,9 +62,10 @@ This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.c
 ### Deploying
 
 App deploys through [GH Actions](./.github/workflows/test-and-deploy.yml) to ECS when updates are made to deployment branches:
- - `qa`: discovery-api-qa.nypl.org
- - `qa2`: discovery-api-qa2.nypl.org
- - `production`: discovery-api-production.nypl.org
+
+- `qa`: discovery-api-qa.nypl.org
+- `qa2`: discovery-api-qa2.nypl.org
+- `production`: discovery-api-production.nypl.org
 
 ## Testing
 
@@ -72,6 +74,14 @@ Run all tests:
 ```
 npm test
 ```
+
+### API testing
+
+API integration tests are in active development under test/integration. Currently they are only for NYQL but will be improved and grow based on additional features as they're developed.
+To run them locally in terminal:
+npx mocha test/integration/nyql-api.test.js
+or
+npm run api-test
 
 ### Adding fixtures
 
@@ -113,7 +123,7 @@ For example, you could `q` alone without filters to retrieve records matching wa
 
 > /resources?q=war dateStartYear:[1999 TO 2012]
 
-.. Or get things created in 1999 *or later*:
+.. Or get things created in 1999 _or later_:
 
 > /resources?q=dateStartYear:>1999
 
@@ -131,7 +141,7 @@ Filters are applied using a `filters` param that expects this syntax on the quer
 
 Where `property*` is one of: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.
 
-The value given should be *exact*. Do not use quotes.
+The value given should be _exact_. Do not use quotes.
 
 For example, to filter by English language:
 
@@ -165,16 +175,16 @@ Note that dateStartYear and dateEndYear are often very broad, causing the above 
 
 All search queries support:
 
- - `page`: Integer. Page number to retrieve. (Default 1)
- - `per_page`: Integer. Number of results to retrieve at a time. Default 50. Valid range 0-100.
+- `page`: Integer. Page number to retrieve. (Default 1)
+- `per_page`: Integer. Number of results to retrieve at a time. Default 50. Valid range 0-100.
 
 ### Sorting
 
 All search queries support `sort`ing on:
 
- - `title`: Case insensitive sort on title. Default ascending.
- - `date`: Sort on dateStartYear. Default descending.
- - `creator`: Case insensitive sort on first creator. (Note the "first" creator may not be the best creator.) Default ascending.
+- `title`: Case insensitive sort on title. Default ascending.
+- `date`: Sort on dateStartYear. Default descending.
+- `creator`: Case insensitive sort on first creator. (Note the "first" creator may not be the best creator.) Default ascending.
 
 To set a non-default direction use `sort_direction=(asc|desc)`. To sort by relevance (i.e. keyword query), omit the `sort` param.
 
@@ -210,7 +220,6 @@ Note that `page=` is not supported for aggregations (ES doesn't seem to offer a 
 
 There is currently one feature flag in this app, which is 'no-on-site-edd'. When it is set, all onsite items have an eddRequestable property of false.
 
-NB: numAvailable and numItem*Parsed counts do not **exclude** the e-item, but these items are not indexed with statuses, volumes, or date ranges, and are therefore not actually included in this count.
+NB: numAvailable and numItem\*Parsed counts do not **exclude** the e-item, but these items are not indexed with statuses, volumes, or date ranges, and are therefore not actually included in this count.
 
 NB: As the table above indicates, there is a mismatch between what the front end and API regard as "electronic items". As far as the API is concerned, there is only at most ONE electronic item, which can have many electronic locator values. `numElectronicResources` counts these locator values, but the other item count values treat all the electronic resources as a single item.
-
