@@ -1,5 +1,6 @@
 const request = require("supertest");
 const { expect } = require("chai");
+const { format } = require("winston");
 
 const getId = (item) => item?.result?.["@id"];
 const getTitle = (item) =>
@@ -17,30 +18,155 @@ const testCases = [
       contributor: "Meillassoux, Quentin",
     },
   },
+  {
+    name: "keyword search",
+    nyql: {
+      q: 'keyword = "pterosaur"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "pterosaur",
+    },
+  },
+  {
+    name: "cat in the hat title search",
+    nyql: {
+      q: 'title = "the cat in the hat"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      title: '"the cat in the hat"',
+    },
+  },
+  {
+    name: "call number search",
+    nyql: {
+      q: 'callnumber = "^JFE 24"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      callnumber: "JFE 24",
+    },
+  },
+  {
+    name: "subject search",
+    nyql: {
+      q: 'subject = "Mitanni (Ancient kingdom)"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      subject: "Mitanni (Ancient kingdom)",
+    },
+  },
+  {
+    name: "Schwarzman location search",
+    nyql: {
+      q: 'center = "Schwarzman"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      filters: {
+        buildingLocation: ["ma"],
+      },
+    },
+  },
+  {
+    name: "SASB location search",
+    nyql: {
+      q: 'center = "SASB"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      filters: {
+        buildingLocation: ["ma"],
+      },
+    },
+  },
+  {
+    name: 'language = "Irish"',
+    nyql: {
+      q: 'language = "Irish"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      filters: {
+        language: ["lang:gle", "lang:mga", "lang:sga"],
+      },
+    },
+  },
+  {
+    name: 'format = "tablet"',
+    nyql: {
+      q: 'format = "tablet"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      filters: {
+        format: ["4"], // formatId for "tablet"
+      },
+    },
+  },
+  {
+    name: 'author = "Poe, Edgar Allan", page 2, sort A - Z',
+    nyql: {
+      q: 'author = "Poe, Edgar Allan"',
+      search_scope: "cql",
+      page: 2,
+      sort: "title",
+      sort_direction: "asc",
+    },
+    advanced: {
+      q: "",
+      contributor: "Poe, Edgar Allan",
+      page: 2,
+      sort: "title",
+      sort_direction: "asc",
+    },
+  },
+  {
+    name: 'author all "Isaac Asimov"',
+    nyql: {
+      q: 'author = "Isaac Asimov"',
+      search_scope: "cql",
+    },
+    advanced: {
+      q: "",
+      contributor: "Isaac Asimov",
+    },
+    // advancedEndpoint: "/discovery/resources/aggregations",
+  },
 ];
 
 describe("Discovery API - NYQL vs Advanced Search equivalence", function () {
   this.timeout(30000);
 
-  testCases.forEach(({ name, nyql, advanced }) => {
+  testCases.forEach(({ name, nyql, advanced, advancedEndpoint }) => {
     it(`should match results for ${name}`, async () => {
       const baseUrl = "https://qa-platform.nypl.org/api/v0.1";
       const endpoint = "/discovery/resources";
+      const advEndpoint = advancedEndpoint || endpoint;
       const nyqlUrl = `${baseUrl}${endpoint}?${new URLSearchParams(nyql).toString()}`;
-      const advancedUrl = `${baseUrl}${endpoint}?${new URLSearchParams(advanced).toString()}`;
+      const advancedUrl = `${baseUrl}${advEndpoint}?${new URLSearchParams(advanced).toString()}`;
 
       console.log("NYQL URL:", nyqlUrl);
       console.log("Advanced URL:", advancedUrl);
 
       const nyqlRes = await request(baseUrl)
         .get(endpoint)
-        .query(nyql)
+        .query({ ...nyql, per_page: 100 })
         .timeout(30000)
         .expect(200);
 
       const advancedRes = await request(baseUrl)
-        .get(endpoint)
-        .query(advanced)
+        .get(advEndpoint)
+        .query({ ...advanced, per_page: 100 })
         .timeout(30000)
         .expect(200);
 
@@ -71,15 +197,15 @@ describe("Discovery API - NYQL vs Advanced Search equivalence", function () {
       console.log("NYQL-only sample IDs:", nyqlOnly.slice(0, 5));
       console.log("Advanced-only sample IDs:", advancedOnly.slice(0, 5));
 
-      console.log("NYQL top titles:");
-      nyqlRes.body.itemListElement.slice(0, 6).forEach((item, idx) => {
-        console.log(`  ${idx + 1}. ${getTitle(item)} - ${getId(item)}`);
-      });
+      // console.log("NYQL top titles:");
+      // nyqlRes.body.itemListElement.slice(0, 3).forEach((item, idx) => {
+      //   console.log(`  ${idx + 1}. ${getTitle(item)} - ${getId(item)}`);
+      // });
 
-      console.log("Advanced top titles:");
-      advancedRes.body.itemListElement.slice(0, 6).forEach((item, idx) => {
-        console.log(`  ${idx + 1}. ${getTitle(item)} - ${getId(item)}`);
-      });
+      // console.log("Advanced top titles:");
+      // advancedRes.body.itemListElement.slice(0, 3).forEach((item, idx) => {
+      //   console.log(`  ${idx + 1}. ${getTitle(item)} - ${getId(item)}`);
+      // });
     });
   });
 });
