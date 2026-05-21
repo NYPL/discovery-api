@@ -259,8 +259,8 @@ describe('Resources query', function () {
       // Expect first agg query to include all filters:
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf(numAggregations - 2)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      // Expect the subjectLiteral filter:
-      expect(queries[0].query.bool.filter[1].terms['subjectLiteral.keywordLowercasedStripped']).to.deep.equal(['S1', 'S1.'])
+      // Expect correct es fields are included in query
+      verifyFilterFields(['collection', 'subjectLiteral'], JSON.stringify(queries))
       // .. And the collection filters:
       expect(queries[0]).to.nested.include({ 'query.bool.filter[0].bool.should[0].term.collectionIds': 'C1' })
       expect(queries[0]).to.nested.include({ 'query.bool.filter[0].bool.should[1].term.collectionIds': 'C2' })
