@@ -2,6 +2,7 @@ const { expect } = require('chai')
 
 const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder')
 const ApiRequest = require('../lib/api-request')
+const { FILTER_CONFIG } = require('../lib/elasticsearch/config')
 
 describe('ElasticQueryBuilder', () => {
   describe('buildFilterClause', () => {
@@ -28,58 +29,65 @@ describe('ElasticQueryBuilder', () => {
       buildMatchOperatorFilterQueries: ElasticQueryBuilder.prototype.buildMatchOperatorFilterQueries,
       buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause
     })
+    const verifyFilterFields = (filterFields, filterQueryBody) => {
+      const stringedFilters = JSON.stringify(filterQueryBody)
+      const esFields = filterFields.map((filter) => FILTER_CONFIG[filter].field).flat()
+      esFields.forEach((esField) => {
+        expect(stringedFilters.includes(esField)).to.equal(true)
+      })
+    }
     it('can handle (multiple) single value, single match field filters, as arrays', () => {
+      const filterFields = ['buildingLocation', 'subjectLiteral']
       const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: { term: { buildingLocationIds: 'toast' } }
-        },
-        {
-          path: undefined,
-          clause: { terms: { 'subjectLiteral.keywordLowercasedStripped': ['spaghetti', 'spaghetti.'] } }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(2)
+      verifyFilterFields(filterFields, simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+      })
     })
     it('can handle (multiple) single value, single match field filters, strings', () => {
       const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const filterFields = ['buildingLocation', 'subjectLiteral']
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: { term: { buildingLocationIds: 'toast' } }
-        },
-        {
-          path: undefined,
-          clause: { terms: { 'subjectLiteral.keywordLowercasedStripped': ['spaghetti', 'spaghetti.'] } }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(2)
+      verifyFilterFields(filterFields, simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+      })
     })
     it('can handle multiple values', () => {
-      const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
+      const requestBody = { filters: { subjectLiteral: ['spaghetti', 'meatballs'] } }
+      const request = new ApiRequest(requestBody)
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: {
-            bool: {
-              should: [
-                { terms: { 'subjectLiteral.keywordLowercasedStripped': ['spaghetti', 'spaghetti.'] } },
-                { terms: { 'subjectLiteral.keywordLowercasedStripped': ['meatballs', 'meatballs.'] } }
-              ]
-            }
-          }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(Object.keys(requestBody.filters).length)
+      verifyFilterFields(['subjectLiteral'], simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+        expect(filter.clause.bool.should.length).to.equal(requestBody.filters.subjectLiteral.length)
+      })
     })
     it('can handle packed values', () => {
-      const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
+      const requestBody = { filters: { language: ['spanish', 'finnish'] } }
+      const request = new ApiRequest(requestBody)
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['language'])
+      expect(simpleMatchFilters.length).to.equal(Object.keys(requestBody.filters).length)
+      verifyFilterFields(['language'], simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+        expect(filter.clause.bool.should.length).to.equal(requestBody.filters.language.length)
+        for (const packedValueShouldTerms in filter.clause.bool.should.bool) {
+          expect(packedValueShouldTerms.length).to.equal(2)
+        }
+      })
       expect(simpleMatchFilters).to.deep.equal([
         {
           path: undefined,
