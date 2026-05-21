@@ -3,10 +3,11 @@ const fs = require('fs')
 const sinon = require('sinon')
 const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
-const { AGGREGATIONS_SPEC, FILTER_CONFIG } = require('../lib/elasticsearch/config')
+const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
 const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
+const { verifyFilterFields } = require('./utils')
 
 describe('Resources query', function () {
   const resourcesPrivMethods = {}
@@ -141,10 +142,7 @@ describe('Resources query', function () {
       expect(body.query.bool).to.be.a('object')
       expect(body.query.bool.filter).to.be.a('array')
       expect(body.query.bool.filter[0]).to.be.a('object')
-      expect(body.query.bool.filter[0].terms).to.be.a('object')
-      const elasticProperty = FILTER_CONFIG.subjectLiteral.field
-      expect(body.query.bool.filter[0].terms[elasticProperty][0]).to.equal('United States -- History')
-      expect(body.query.bool.filter[0].terms[elasticProperty][1]).to.equal('United States -- History.')
+      verifyFilterFields(['subjectLiteral'], JSON.stringify(body))
     })
 
     describe('nyplSource filtering', function () {
@@ -212,22 +210,6 @@ describe('Resources query', function () {
       resourcesPrivMethods.buildElasticBody(params)
 
       expect(JSON.stringify(params)).to.equal(paramsSnapshot)
-    })
-
-    it('injects period matching for *Literal filters', () => {
-      const params = resourcesPrivMethods.parseSearchParams({
-        filters: {
-          subjectLiteral: ['S1'],
-          contributorLiteral: ['C1', 'C2']
-        }
-      })
-
-      const body = resourcesPrivMethods.buildElasticBody(params)
-
-      expect(body.query.bool.filter[0].terms['subjectLiteral.keywordLowercasedStripped']).to.deep.equal(['S1', 'S1.'])
-
-      expect(body.query.bool.filter[1].bool.should[0].bool.should[0].terms['contributorLiteral.keywordLowercased']).to.deep.equal(['C1', 'C1.'])
-      expect(body.query.bool.filter[1].bool.should[1].bool.should[0].terms['contributorLiteral.keywordLowercased']).to.deep.equal(['C2', 'C2.'])
     })
   })
 

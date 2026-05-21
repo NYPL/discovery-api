@@ -2,7 +2,7 @@ const { expect } = require('chai')
 
 const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder')
 const ApiRequest = require('../lib/api-request')
-const { FILTER_CONFIG } = require('../lib/elasticsearch/config')
+const { verifyFilterFields } = require('./utils.js')
 
 describe('ElasticQueryBuilder', () => {
   describe('buildFilterClause', () => {
@@ -29,13 +29,6 @@ describe('ElasticQueryBuilder', () => {
       buildMatchOperatorFilterQueries: ElasticQueryBuilder.prototype.buildMatchOperatorFilterQueries,
       buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause
     })
-    const verifyFilterFields = (filterFields, filterQueryBody) => {
-      const stringedFilters = JSON.stringify(filterQueryBody)
-      const esFields = filterFields.map((filter) => FILTER_CONFIG[filter].field).flat()
-      esFields.forEach((esField) => {
-        expect(stringedFilters.includes(esField)).to.equal(true)
-      })
-    }
     it('can handle (multiple) single value, single match field filters, as arrays', () => {
       const filterFields = ['buildingLocation', 'subjectLiteral']
       const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
