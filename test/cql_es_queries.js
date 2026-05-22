@@ -1,3 +1,5 @@
+const { SEARCH_SCOPES } = require('../lib/elasticsearch/config')
+
 const simpleAdjQuery = {
   bool: {
     must: [
@@ -10,24 +12,7 @@ const simpleAdjQuery = {
                   {
                     multi_match: {
                       query: 'Hamlet',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'titleAlt.folded',
-                        'uniformTitle.folded',
-                        'titleDisplay.folded',
-                        'series.folded',
-                        'contentsTitle.folded',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelSeries.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle'
-                      ],
+                      fields: SEARCH_SCOPES.title.fields,
                       type: 'phrase'
                     }
                   }
@@ -53,24 +38,7 @@ const multiAdjQuery = {
                   {
                     multi_match: {
                       query: 'Hamlet, Prince',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'titleAlt.folded',
-                        'uniformTitle.folded',
-                        'titleDisplay.folded',
-                        'series.folded',
-                        'contentsTitle.folded',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelSeries.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle'
-                      ],
+                      fields: SEARCH_SCOPES.title.fields,
                       type: 'phrase'
                     }
                   }
@@ -173,24 +141,7 @@ const simpleAnyQuery = {
                         {
                           multi_match: {
                             query: 'Hamlet',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'series.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeries.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -203,24 +154,7 @@ const simpleAnyQuery = {
                         {
                           multi_match: {
                             query: 'Othello',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'series.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeries.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -395,24 +329,7 @@ const simpleAllQuery = {
                         {
                           multi_match: {
                             query: 'Hamlet',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'series.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeries.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -425,24 +342,7 @@ const simpleAllQuery = {
                         {
                           multi_match: {
                             query: 'Othello',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'series.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeries.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -471,37 +371,7 @@ const keywordQueryForBarcode = {
                   {
                     multi_match: {
                       query: '123456',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'description.foldedStemmed',
-                        'subjectLiteral',
-                        'subjectLiteral.folded',
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'note.label.foldedStemmed',
-                        'publisherLiteral.folded',
-                        'series.folded',
-                        'titleAlt.folded',
-                        'titleDisplay.folded',
-                        'contentsTitle.folded',
-                        'tableOfContents.folded',
-                        'genreForm',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelSeries.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelPublisher',
-                        'parallelPublisherLiteral',
-                        'uniformTitle.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle',
-                        'placeOfPublication.folded'
-                      ],
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
                       type: 'phrase'
                     }
                   }
@@ -537,37 +407,7 @@ const keywordQueryForShelfMark = {
                   {
                     multi_match: {
                       query: 'B 12',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'description.foldedStemmed',
-                        'subjectLiteral',
-                        'subjectLiteral.folded',
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'note.label.foldedStemmed',
-                        'publisherLiteral.folded',
-                        'series.folded',
-                        'titleAlt.folded',
-                        'titleDisplay.folded',
-                        'contentsTitle.folded',
-                        'tableOfContents.folded',
-                        'genreForm',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelSeries.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelPublisher',
-                        'parallelPublisherLiteral',
-                        'uniformTitle.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle',
-                        'placeOfPublication.folded'
-                      ],
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
                       type: 'phrase'
                     }
                   }
@@ -611,37 +451,7 @@ const keywordQueryForGeneralTerm = {
                   {
                     multi_match: {
                       query: 'Hamlet',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'description.foldedStemmed',
-                        'subjectLiteral',
-                        'subjectLiteral.folded',
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'note.label.foldedStemmed',
-                        'publisherLiteral.folded',
-                        'series.folded',
-                        'titleAlt.folded',
-                        'titleDisplay.folded',
-                        'contentsTitle.folded',
-                        'tableOfContents.folded',
-                        'genreForm',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelSeries.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelPublisher',
-                        'parallelPublisherLiteral',
-                        'uniformTitle.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle',
-                        'placeOfPublication.folded'
-                      ],
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
                       type: 'phrase'
                     }
                   }
@@ -710,13 +520,7 @@ const binaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'Shakespeare',
-                            fields: [
-                              'creatorLiteral',
-                              'creatorLiteral.folded',
-                              'contributorLiteral.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelContributorLiteral.folded'
-                            ],
+                            fields: SEARCH_SCOPES.contributor.fields,
                             type: 'phrase'
                           }
                         }
@@ -817,13 +621,7 @@ const ternaryBooleanQuery = {
                               {
                                 multi_match: {
                                   query: 'Shakespeare',
-                                  fields: [
-                                    'creatorLiteral',
-                                    'creatorLiteral.folded',
-                                    'contributorLiteral.folded',
-                                    'parallelCreatorLiteral.folded',
-                                    'parallelContributorLiteral.folded'
-                                  ],
+                                  fields: SEARCH_SCOPES.contributor.fields,
                                   type: 'phrase'
                                 }
                               }
@@ -927,7 +725,7 @@ const ternaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'tragedy',
-                            fields: ['genreForm', 'genreForm.folded'],
+                            fields: SEARCH_SCOPES.genre.fields,
                             type: 'phrase'
                           }
                         }

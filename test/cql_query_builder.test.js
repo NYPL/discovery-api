@@ -15,7 +15,6 @@ const {
   identifierQuery,
   binaryBooleanQuery,
   ternaryBooleanQuery,
-  queryWithParentheses,
   dateBeforeQuery,
   dateBeforeOrOnQuery,
   dateAfterQuery,
@@ -159,13 +158,25 @@ describe('CQL Query Builder', function () {
   })
 
   it('Boolean query with parentheses', function () {
-    expect(new CqlQuery('author = "Shakespeare" AND (language = "English" OR genre = "tragedy")').buildEsQuery())
-      .to.deep.equal(
-        queryWithParentheses
-      )
+    const queryWithParentheses = new CqlQuery('author = "Shakespeare" AND (language = "English" OR genre = "tragedy")').buildEsQuery()
+    const musts = queryWithParentheses.bool.must[0].bool.must
+    // one must for each top level clause
+    expect(musts.length).to.equal(2)
+    const multiMatch = musts[0].bool.should[0].bool.should[0].multi_match
+    expect(multiMatch.query).to.equal('Shakespeare')
+    expect(multiMatch.fields).to.have.members(SEARCH_SCOPES.contributor.fields)
+    expect(multiMatch.type).to.equal('phrase')
+    const languageClauses = musts[1].bool.should[0].bool.should[0].bool.must[0].bool.should
+    // expect all relevant ids for english language to be present
+    expect(languageClauses.length).to.equal(4)
+    expect(languageClauses.every(isValidLanguageQuery))
+    const genreClause = musts[1].bool.should[1].bool.should[0].bool.should[0].multi_match
+    expect(genreClause.query).to.equal('tragedy')
+    expect(genreClause.fields).to.have.members(SEARCH_SCOPES.genre.fields)
+    expect(genreClause.type).to.equal('phrase')
   })
 
-  it('Boolean parenthesis and whitespace are ignored', function () {
+  it('whitespace is ignored with parens', function () {
     expect(new CqlQuery('  author = "Shakespeare"   AND ( language = "English" OR genre = "tragedy" )  ').buildEsQuery())
       .to.deep.equal(
         new CqlQuery('author = "Shakespeare" AND (language = "English" OR genre = "tragedy")').buildEsQuery()
