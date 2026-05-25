@@ -39,7 +39,7 @@
     "deploy-qa": "git checkout qa && git pull origin qa && eb deploy discovery-api-qa --profile nypl-digital-dev",
     "deploy-production": "git checkout production && git pull origin qa && eb deploy discovery-api-production --profile nypl-digital-dev",
     "rebuild-annotated-marc-rules": "./scripts/update-annotated-marc-rules.js --refetch",
-    "api-test": "npx mocha test/integration/nyql-api.test.js --exit"
+    "nyql-api-test": "npx mocha test/integration/nyql/*.test.js"
   },
   "description": "Discovery API as an AWS Lambda.",
   "license": "MIT",
