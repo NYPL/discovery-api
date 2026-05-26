@@ -1,11 +1,12 @@
 const { expect } = require('chai')
 
 const { CqlQuery } = require('../lib/elasticsearch/cql_query_builder')
-// const ApiRequest = require('../lib/api-request')
+const ApiRequest = require('../lib/api-request')
 const { InvalidParameterError } = require('../lib/errors')
 const ControlledVocabularies = require('../lib/models/ControlledVocabularies')
 const vocabFixture = require('./fixtures/controlledVocabularies.json')
 const {
+  filterQuery,
   simpleAdjQuery,
   simpleAnyQuery,
   simpleAllQuery,
@@ -253,8 +254,9 @@ describe('CQL Query Builder', function () {
   })
 
   it('Query with applied filters', function () {
-    // const apiRequest = new ApiRequest({ filters: { language: ['Klingon'] }, search_scope: 'cql' })
-    // const filterQuery = new CqlQuery('author="Shakespeare"').buildEsQuery(apiRequest)
+    const apiRequest = new ApiRequest({ filters: { language: ['Klingon'] }, search_scope: 'cql' })
+    const theThing = new CqlQuery('author="Shakespeare"').buildEsQuery(apiRequest)
+    expect(theThing).to.deep.equal(filterQuery)
   })
 
   it('Exact match query', function () {

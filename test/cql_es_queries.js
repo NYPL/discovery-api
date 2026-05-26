@@ -383,7 +383,16 @@ const keywordQueryForBarcode = {
                 path: 'items',
                 query: {
                   bool: {
-                    should: [{ term: { 'items.idBarcode': '123456' } }]
+                    should: [
+                      {
+                        multi_match: {
+                          fields: [
+                            'items.idBarcode'
+                          ],
+                          query: '123456',
+                          type: 'phrase'
+                        }
+                      }, { term: { 'items.idBarcode': '123456' } }]
                   }
                 }
               }
@@ -1134,13 +1143,7 @@ const filterQuery = {
                   {
                     multi_match: {
                       query: 'Shakespeare',
-                      fields: [
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelContributorLiteral.folded'
-                      ],
+                      fields: SEARCH_SCOPES.contributor.fields,
                       type: 'phrase'
                     }
                   }
