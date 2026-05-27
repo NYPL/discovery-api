@@ -1567,6 +1567,41 @@ const divisionExact = {
   }
 }
 
+const englishExactLanguageQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                must: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [
+                              { term: { 'language.id': 'lang:eng' } },
+                              {
+                                term: { 'language.label': 'lang:eng' }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 const wildcardQueryNoShelfMark = {
   bool: {
     must: [
@@ -1585,12 +1620,12 @@ const wildcardQueryNoShelfMark = {
                         'titleAlt.folded',
                         'uniformTitle.folded',
                         'titleDisplay.folded',
-                        'seriesStatement.folded',
+                        'series.folded',
                         'contentsTitle.folded',
                         'donor.folded',
                         'parallelTitle.folded',
                         'parallelTitleDisplay.folded',
-                        'parallelSeriesStatement.folded',
+                        'parallelSeries.folded',
                         'parallelTitleAlt.folded',
                         'parallelCreatorLiteral.folded',
                         'parallelUniformTitle',
@@ -1635,7 +1670,7 @@ const wildcardQueryWithShelfMark = {
                         'contributorLiteral.folded',
                         'note.label.foldedStemmed',
                         'publisherLiteral.folded',
-                        'seriesStatement.folded',
+                        'series.folded',
                         'titleAlt.folded',
                         'titleDisplay.folded',
                         'contentsTitle.folded',
@@ -1645,7 +1680,7 @@ const wildcardQueryWithShelfMark = {
                         'parallelTitle.folded',
                         'parallelTitleDisplay.folded',
                         'parallelTitleAlt.folded',
-                        'parallelSeriesStatement.folded',
+                        'parallelSeries.folded',
                         'parallelCreatorLiteral.folded',
                         'parallelPublisher',
                         'parallelPublisherLiteral',
@@ -1715,6 +1750,7 @@ module.exports = {
   divisionAll,
   divisionAny,
   divisionExact,
+  englishExactLanguageQuery,
   wildcardQueryNoShelfMark,
   wildcardQueryWithShelfMark
 }
