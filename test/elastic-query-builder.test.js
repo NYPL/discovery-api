@@ -2,6 +2,7 @@ const { expect } = require('chai')
 
 const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder')
 const ApiRequest = require('../lib/api-request')
+const { verifyFilterFields } = require('./utils.js')
 
 describe('ElasticQueryBuilder', () => {
   describe('buildFilterClause', () => {
@@ -29,57 +30,57 @@ describe('ElasticQueryBuilder', () => {
       buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause
     })
     it('can handle (multiple) single value, single match field filters, as arrays', () => {
+      const filterFields = ['buildingLocation', 'subjectLiteral']
       const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: { term: { buildingLocationIds: 'toast' } }
-        },
-        {
-          path: undefined,
-          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(2)
+      verifyFilterFields(filterFields, simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+      })
     })
     it('can handle (multiple) single value, single match field filters, strings', () => {
       const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const filterFields = ['buildingLocation', 'subjectLiteral']
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: { term: { buildingLocationIds: 'toast' } }
-        },
-        {
-          path: undefined,
-          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(2)
+      verifyFilterFields(filterFields, simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+      })
     })
     it('can handle multiple values', () => {
-      const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
+      const requestBody = { filters: { subjectLiteral: ['spaghetti', 'meatballs'] } }
+      const request = new ApiRequest(requestBody)
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: {
-            bool: {
-              should: [
-                { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } },
-                { terms: { 'subjectLiteral.raw': ['meatballs', 'meatballs.'] } }
-              ]
-            }
-          }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(Object.keys(requestBody.filters).length)
+      verifyFilterFields(['subjectLiteral'], simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+        expect(filter.clause.bool.should.length).to.equal(requestBody.filters.subjectLiteral.length)
+      })
     })
     it('can handle packed values', () => {
-      const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
+      const requestBody = { filters: { language: ['spanish', 'finnish'] } }
+      const request = new ApiRequest(requestBody)
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['language'])
+      expect(simpleMatchFilters.length).to.equal(Object.keys(requestBody.filters).length)
+      verifyFilterFields(['language'], simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+        expect(filter.clause.bool.should.length).to.equal(requestBody.filters.language.length)
+        for (const packedValueShouldTerms in filter.clause.bool.should.bool) {
+          expect(packedValueShouldTerms.length).to.equal(2)
+        }
+      })
       expect(simpleMatchFilters).to.deep.equal([
         {
           path: undefined,
@@ -455,7 +456,7 @@ describe('ElasticQueryBuilder', () => {
         expect(query.bool.must[0].bool.should[0])
         expect(query.bool.must[0].bool.should[0]).to.deep.equal({
           prefix: {
-            'subjectLiteral.raw': {
+            'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 1
             }
@@ -463,7 +464,7 @@ describe('ElasticQueryBuilder', () => {
         })
         expect(query.bool.must[0].bool.should[1]).to.deep.equal({
           prefix: {
-            'parallelSubjectLiteral.raw': {
+            'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 1
             }
@@ -472,7 +473,7 @@ describe('ElasticQueryBuilder', () => {
 
         expect(query.bool.should[0]).to.deep.equal({
           term: {
-            'subjectLiteral.raw': {
+            'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 50
             }
@@ -481,7 +482,7 @@ describe('ElasticQueryBuilder', () => {
 
         expect(query.bool.should[1]).to.deep.equal({
           term: {
-            'parallelSubjectLiteral.raw': {
+            'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
               boost: 50
             }

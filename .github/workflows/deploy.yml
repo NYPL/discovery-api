@@ -41,7 +41,7 @@ jobs:
       id-token: write
       contents: read
     needs: smoke-test
-    if: ${{ failure() && needs.smoke-test.result == 'failure' &&  github.ref_name != 'production' }}
+    if: ${{ failure() && needs.smoke-test.result == 'failure' }}
     uses: ./.github/workflows/rollback.yml
     with: 
       branch: ${{ github.ref_name }}

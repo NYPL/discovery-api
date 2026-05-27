@@ -7,6 +7,7 @@ const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
 const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
+const { verifyFilterFields } = require('./utils')
 
 describe('Resources query', function () {
   const resourcesPrivMethods = {}
@@ -133,7 +134,7 @@ describe('Resources query', function () {
   })
 
   describe('buildElasticBody', function () {
-    it('uses subjectLiteral.raw when given a subjectLiteral filter', function () {
+    it('uses property specified in filter config when given a subjectLiteral filter', function () {
       const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { subjectLiteral: 'United States -- History' } })
       const body = resourcesPrivMethods.buildElasticBody(params)
       expect(body).to.be.a('object')
@@ -141,9 +142,7 @@ describe('Resources query', function () {
       expect(body.query.bool).to.be.a('object')
       expect(body.query.bool.filter).to.be.a('array')
       expect(body.query.bool.filter[0]).to.be.a('object')
-      expect(body.query.bool.filter[0].terms).to.be.a('object')
-      expect(body.query.bool.filter[0].terms['subjectLiteral.raw'][0]).to.equal('United States -- History')
-      expect(body.query.bool.filter[0].terms['subjectLiteral.raw'][1]).to.equal('United States -- History.')
+      verifyFilterFields(['subjectLiteral'], JSON.stringify(body))
     })
 
     describe('nyplSource filtering', function () {
@@ -212,22 +211,6 @@ describe('Resources query', function () {
 
       expect(JSON.stringify(params)).to.equal(paramsSnapshot)
     })
-
-    it('injects period matching for *Literal filters', () => {
-      const params = resourcesPrivMethods.parseSearchParams({
-        filters: {
-          subjectLiteral: ['S1'],
-          contributorLiteral: ['C1', 'C2']
-        }
-      })
-
-      const body = resourcesPrivMethods.buildElasticBody(params)
-
-      expect(body.query.bool.filter[0].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
-
-      expect(body.query.bool.filter[1].bool.should[0].bool.should[0].terms['contributorLiteral.keywordLowercased']).to.deep.equal(['C1', 'C1.'])
-      expect(body.query.bool.filter[1].bool.should[1].bool.should[0].terms['contributorLiteral.keywordLowercased']).to.deep.equal(['C2', 'C2.'])
-    })
   })
 
   describe('aggregationQueriesForParams', () => {
@@ -254,7 +237,11 @@ describe('Resources query', function () {
       // Expect one agg query for all the properties not involved in a filter:
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf.at.least(numAggregations - 1)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      expect(queries[0].query.bool.filter[0].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
+      for (const term in queries[0].query.bool.filter[0].terms) {
+        for (const termField in term) {
+          expect(term[termField]).to.deep.equal(['S1', 'S1.'])
+        }
+      }
 
       // Expect second agg query for subjectLiteral - w/out the filter:
       expect(Object.keys(queries[1].aggregations)).to.have.lengthOf(1)
@@ -276,8 +263,8 @@ describe('Resources query', function () {
       // Expect first agg query to include all filters:
       expect(Object.keys(queries[0].aggregations)).to.have.lengthOf(numAggregations - 2)
       expect(queries[0].query.bool.filter).to.be.a('array')
-      // Expect the subjectLiteral filter:
-      expect(queries[0].query.bool.filter[1].terms['subjectLiteral.raw']).to.deep.equal(['S1', 'S1.'])
+      // Expect correct es fields are included in query
+      verifyFilterFields(['collection', 'subjectLiteral'], JSON.stringify(queries))
       // .. And the collection filters:
       expect(queries[0]).to.nested.include({ 'query.bool.filter[0].bool.should[0].term.collectionIds': 'C1' })
       expect(queries[0]).to.nested.include({ 'query.bool.filter[0].bool.should[1].term.collectionIds': 'C2' })

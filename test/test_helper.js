@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 const loadConfig = require('../lib/load-config')
 const app = require('../app')
 const sinon = require('sinon')
+const ControlledVocabularies = require('../lib/models/ControlledVocabularies')
 
 before(async () => {
   if (!process.env.UPDATE_FIXTURES) {
@@ -28,8 +29,11 @@ before(async () => {
     process.env.AWS_PROFILE = process.env.AWS_PROFILE || 'nypl-digital-dev'
   }
 
+  ControlledVocabularies.fetchedVocabularies = Promise.resolve(require('./fixtures/controlledVocabularies.json'))
+  ControlledVocabularies.initialize()
   await app.init()
-
+  // we don't need these for testing purposes, so disabling for fixture generation
+  process.env.NAME_QUERIES = false
   // Establish base url for local queries:
   global.TEST_BASE_URL = `http://localhost:${process.env.PORT}`
 })
