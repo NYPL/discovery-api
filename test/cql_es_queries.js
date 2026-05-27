@@ -1567,6 +1567,127 @@ const divisionExact = {
   }
 }
 
+const wildcardQueryNoShelfMark = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    query_string: {
+                      query: 'Ham*let',
+                      fields: [
+                        'title',
+                        'title.folded',
+                        'titleAlt.folded',
+                        'uniformTitle.folded',
+                        'titleDisplay.folded',
+                        'seriesStatement.folded',
+                        'contentsTitle.folded',
+                        'donor.folded',
+                        'parallelTitle.folded',
+                        'parallelTitleDisplay.folded',
+                        'parallelSeriesStatement.folded',
+                        'parallelTitleAlt.folded',
+                        'parallelCreatorLiteral.folded',
+                        'parallelUniformTitle',
+                        'formerTitle',
+                        'addedAuthorTitle'
+                      ],
+                      type: 'phrase',
+                      analyze_wildcard: true,
+                      default_operator: 'AND'
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const wildcardQueryWithShelfMark = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    query_string: {
+                      query: 'B 12*',
+                      fields: [
+                        'title',
+                        'title.folded',
+                        'description.foldedStemmed',
+                        'subjectLiteral',
+                        'subjectLiteral.folded',
+                        'creatorLiteral',
+                        'creatorLiteral.folded',
+                        'contributorLiteral.folded',
+                        'note.label.foldedStemmed',
+                        'publisherLiteral.folded',
+                        'seriesStatement.folded',
+                        'titleAlt.folded',
+                        'titleDisplay.folded',
+                        'contentsTitle.folded',
+                        'tableOfContents.folded',
+                        'genreForm',
+                        'donor.folded',
+                        'parallelTitle.folded',
+                        'parallelTitleDisplay.folded',
+                        'parallelTitleAlt.folded',
+                        'parallelSeriesStatement.folded',
+                        'parallelCreatorLiteral.folded',
+                        'parallelPublisher',
+                        'parallelPublisherLiteral',
+                        'uniformTitle.folded',
+                        'parallelUniformTitle',
+                        'formerTitle',
+                        'addedAuthorTitle',
+                        'placeOfPublication.folded'
+                      ],
+                      type: 'phrase',
+                      analyze_wildcard: true,
+                      default_operator: 'AND'
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: {
+                path: 'items',
+                query: {
+                  bool: {
+                    should: [
+                      {
+                        multi_match: {
+                          query: 'B 12*',
+                          fields: ['items.shelfMark'],
+                          type: 'phrase'
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -1593,5 +1714,7 @@ module.exports = {
   divisionAdj,
   divisionAll,
   divisionAny,
-  divisionExact
+  divisionExact,
+  wildcardQueryNoShelfMark,
+  wildcardQueryWithShelfMark
 }
