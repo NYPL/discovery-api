@@ -28,6 +28,8 @@ const resultContainsCallnumber = (result, callnumber) => {
 
 const getId = (item) => item?.result?.["@id"];
 
+// These are some tests to verify that certain NYQL queries are returning results with the expected precision, especially for fields like call numbers where we want to ensure that the query is matching the intended values and not over- or under-matching.
+
 describe("Discovery API - NYQL precision tests", function () {
   this.timeout(30000);
 
@@ -55,8 +57,8 @@ describe("Discovery API - NYQL precision tests", function () {
     const result = res.body.itemListElement[0].result;
     expect(resultContainsCallnumber(result, callnumber)).to.be.true;
 
-    console.log("Result ID:", result["@id"]);
-    console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
+    // console.log("Result ID:", result["@id"]);
+    // console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
   });
 
   it('all returned bibs should contain callnumber = "MGZMD"', async () => {
@@ -91,17 +93,17 @@ describe("Discovery API - NYQL precision tests", function () {
           : []),
       ].filter(Boolean);
 
-      console.log(`[${idx}] ID: ${result["@id"]}, Shelf marks:`, shelfMarks);
+      // console.log(`[${idx}] ID: ${result["@id"]}, Shelf marks:`, shelfMarks);
 
       expect(resultContainsCallnumber(result, callnumber)).to.be.true;
     });
 
-    console.log("Result ID:", res.body.itemListElement[0].result["@id"]);
-    console.log(
-      "Result title:",
-      res.body.itemListElement[0].result.titleDisplay?.[0] ||
-        res.body.itemListElement[0].result.title?.[0],
-    );
+    // console.log("Result ID:", res.body.itemListElement[0].result["@id"]);
+    // console.log(
+    //   "Result title:",
+    //   res.body.itemListElement[0].result.titleDisplay?.[0] ||
+    //     res.body.itemListElement[0].result.title?.[0],
+    // );
   });
 
   it('should return exactly one result for identifier = "b10670401"', async () => {
@@ -128,10 +130,10 @@ describe("Discovery API - NYQL precision tests", function () {
     const result = res.body.itemListElement[0].result;
     expect(result["@id"]).to.equal(`res:${identifier}`);
 
-    console.log("Result ID:", result["@id"]);
-    console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
-    // log the url
-    console.log("Result URL:", result.url?.[0]);
+    // console.log("Result ID:", result["@id"]);
+    // console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
+    // // log the url
+    // console.log("Result URL:", result.url?.[0]);
   });
 
   it('should combine results for OR query: author = "Meillassoux, Quentin" OR title="the cat in the hat"', async () => {
@@ -488,8 +490,8 @@ describe("Discovery API - NYQL precision tests", function () {
     expect(res.body.itemListElement.length).to.equal(1);
 
     const result = res.body.itemListElement[0].result;
-    console.log("Result ID:", result["@id"]);
-    console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
+    // console.log("Result ID:", result["@id"]);
+    // console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
   });
   it('keyword any "pterosaur pterosaurs" matches "pterosaur" and "pterosaurs" results', async () => {
     const baseUrl = "https://qa-platform.nypl.org/api/v0.1";
@@ -546,9 +548,9 @@ describe("Discovery API - NYQL precision tests", function () {
     pterosaurIds.forEach((id) => expect(anyIds).to.include(id));
     pterosaursIds.forEach((id) => expect(anyIds).to.include(id));
 
-    console.log("pterosaur total:", pterosaurTotal);
-    console.log("pterosaurs total:", pterosaursTotal);
-    console.log("any total:", anyTotal);
+    // console.log("pterosaur total:", pterosaurTotal);
+    // console.log("pterosaurs total:", pterosaursTotal);
+    // console.log("any total:", anyTotal);
   });
 
   it('should return exactly one result for keyword = "33433076754203"', async () => {
@@ -572,8 +574,8 @@ describe("Discovery API - NYQL precision tests", function () {
     expect(res.body.itemListElement.length).to.equal(1);
 
     const result = res.body.itemListElement[0].result;
-    console.log("Result ID:", result["@id"]);
-    console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
+    // console.log("Result ID:", result["@id"]);
+    // console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
   });
 
   it('keyword adj "jurassic pterosaur" matches only the pterosaur result with Jurassic in the title', async () => {
@@ -633,16 +635,16 @@ describe("Discovery API - NYQL precision tests", function () {
       expect(adjIds).to.include(getId(item));
     });
 
-    console.log("pterosaur total:", pterosaurRes.body.totalResults);
-    console.log("adj total:", adjRes.body.totalResults);
-    console.log("adj IDs:", adjIds);
-    adjRes.body.itemListElement.forEach((item) => {
-      console.log(
-        " -",
-        getId(item),
-        item.result?.titleDisplay?.[0] || item.result?.title?.[0],
-      );
-    });
+    // console.log("pterosaur total:", pterosaurRes.body.totalResults);
+    // console.log("adj total:", adjRes.body.totalResults);
+    // console.log("adj IDs:", adjIds);
+    // adjRes.body.itemListElement.forEach((item) => {
+    //   console.log(
+    //     " -",
+    //     getId(item),
+    //     item.result?.titleDisplay?.[0] || item.result?.title?.[0],
+    //   );
+    // });
   });
 
   it('keyword all "pterosaur pterosaurs" matches only results containing both keywords', async () => {
@@ -702,9 +704,9 @@ describe("Discovery API - NYQL precision tests", function () {
       expect(pterosaursIds).to.include(id);
     });
 
-    console.log("pterosaur total:", pterosaurTotal);
-    console.log("pterosaurs total:", pterosaursTotal);
-    console.log("all total:", allTotal);
+    // console.log("pterosaur total:", pterosaurTotal);
+    // console.log("pterosaurs total:", pterosaursTotal);
+    // console.log("all total:", allTotal);
   });
 
   it('author = "Meillassoux, Quentin" AND date >= "2011" matches only results with date >= 2011', async () => {
