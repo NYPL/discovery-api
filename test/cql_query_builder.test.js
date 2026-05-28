@@ -27,6 +27,7 @@ const {
   divisionAll,
   divisionAny,
   divisionExact,
+  englishExactLanguageQuery,
   wildcardQueryNoShelfMark,
   wildcardQueryWithShelfMark
 } = require('./cql_es_queries')
@@ -357,6 +358,29 @@ describe('CQL Query Builder', function () {
       expect(result).to.deep.equal(
         divisionExact
       )
+    })
+
+    it('Maps controlled vocab fields correctly for == when label is used instead of value', () => {
+      const result = new CqlQuery('division == "Milstein Division"').buildEsQuery()
+      console.dir(result, { depth: null })
+      expect(result).to.deep.equal(
+        divisionExact
+      )
+    })
+
+    it('generates correct controlled vocab query for == with language scope based on label', () => {
+      const result = new CqlQuery('language == "English"').buildEsQuery()
+      expect(result).to.deep.equal(englishExactLanguageQuery)
+    })
+
+    it('generates correct controlled vocab query for == with language scope based on value', () => {
+      const result = new CqlQuery('language == "lang:eng"').buildEsQuery()
+      expect(result).to.deep.equal(englishExactLanguageQuery)
+    })
+
+    it('generates correct controlled vocab query for == with language scope based on value without lang: prefix', () => {
+      const result = new CqlQuery('language == "eng"').buildEsQuery()
+      expect(result).to.deep.equal(englishExactLanguageQuery)
     })
   })
 })
