@@ -31,7 +31,9 @@ const {
   divisionAdj,
   divisionAll,
   divisionAny,
-  divisionExact
+  divisionExact,
+  wildcardQueryNoShelfMark,
+  wildcardQueryWithShelfMark
 } = require('./cql_es_queries')
 
 describe('CQL Query Builder', function () {
@@ -239,6 +241,20 @@ describe('CQL Query Builder', function () {
     expect(new CqlQuery('AuThOr = "Shakespeare" aNd LaNgUaGe = "English"').buildEsQuery())
       .to.deep.equal(
         binaryBooleanQuery
+      )
+  })
+
+  it('Wildcard query without shelfMark fields', function () {
+    expect(new CqlQuery('title="Ham*let"').buildEsQuery())
+      .to.deep.equal(
+        wildcardQueryNoShelfMark
+      )
+  })
+
+  it('Wildcard query with shelfMark fields', function () {
+    expect(new CqlQuery('keyword="B 12*"').buildEsQuery())
+      .to.deep.equal(
+        wildcardQueryWithShelfMark
       )
   })
 
