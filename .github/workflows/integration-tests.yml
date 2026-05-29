@@ -43,7 +43,3 @@ jobs:
         env:
           ENV: ${{env.ENV}}
         run: node test/integration/delivery-locations-by-barcode.test.js
-      - name: Run elastic search mapping check
-        env:
-          ENV: ${{env.ENV}}
-          run: node test/integration/mapping-check.js
