@@ -82,7 +82,7 @@ To run them locally in terminal:
 npx mocha test/integration/nyql-api.test.js
 npx mocha test/integration/nyql-precision.test.js
 or
-npm run api-test, to run both files.
+npm run nyql-api-test, to run both files.
 
 ### Adding fixtures
 
