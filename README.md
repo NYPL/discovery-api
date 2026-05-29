@@ -75,6 +75,15 @@ Run all tests:
 npm test
 ```
 
+### API testing
+
+API integration tests are in active development under test/integration/nyql. Currently they are only for NYQL but will be improved and grow based on additional features as they're developed.
+To run them locally in terminal:
+npx mocha test/integration/nyql-api.test.js
+npx mocha test/integration/nyql-precision.test.js
+or
+npm run api-test, to run both files.
+
 ### Adding fixtures
 
 Almost all HTTP dependencies are rerouted to fixtures (except for requesting nypl-core mapping files). All fixtures can be updated dynamically (using creds in `./config/production.env`) via the following:
