@@ -2,6 +2,17 @@ const { loadConfig } = require('../../lib/load-config')
 const client = require('../../lib/elasticsearch/client')
 const { SEARCH_SCOPES, FILTER_CONFIG } = require('../../lib/elasticsearch/config')
 
+/**
+ * Verify if current filter and search scope config is compatible with an elastic search index. Config is incompatible if it includes fields that do not exist in the mapping.
+ *    By default, the script checks the environment's config file for an index name and fetches that index's mappings.
+ *    Optional param skips fetch and instead validates against local mapping file.
+ * Usage:
+ *    ENV={env} node mapping-check.js {schema-file-path}
+ * Params:
+ *    schema-file-path: absolute path to your local copy of research-catalog-indexer/lib/elastic-search/index-schema.js.
+ *
+*/
+
 const schemaFilePath = process.argv[2] || null
 /**
  * Extract all unique field names from SEARCH_SCOPES and FILTER_CONFIG,
