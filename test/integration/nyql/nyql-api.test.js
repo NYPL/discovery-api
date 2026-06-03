@@ -60,6 +60,7 @@ const testCases = [
       q: "",
       callnumber: "JFE 24",
     },
+    compareTotalResultsOnly: true,
   },
   {
     name: "subject search",
@@ -84,6 +85,7 @@ const testCases = [
         buildingLocation: ["ma"],
       },
     },
+    compareTotalResultsOnly: true,
   },
   {
     name: "SASB location search",
@@ -97,6 +99,7 @@ const testCases = [
         buildingLocation: ["ma"],
       },
     },
+    compareTotalResultsOnly: true,
   },
   {
     name: 'division = "Manuscript"',
