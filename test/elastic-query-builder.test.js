@@ -364,7 +364,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'title.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 50
+              boost: 50,
+              _name: 'prefix title.keywordLowercasedStripped'
             }
           }
         })
@@ -392,7 +393,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'creatorLiteralNormalized.keywordLowercased': {
               value: 'toast',
-              boost: 100
+              boost: 100,
+              _name: 'prefix creatorLiteralNormalized.keywordLowercased'
             }
           }
         })
@@ -449,7 +451,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 1
+              boost: 1,
+              _name: 'prefix subjectLiteral.keywordLowercasedStripped'
             }
           }
         })
@@ -457,7 +460,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 1
+              boost: 1,
+              _name: 'prefix parallelSubjectLiteral.keywordLowercasedStripped'
             }
           }
         })
@@ -466,7 +470,8 @@ describe('ElasticQueryBuilder', () => {
           term: {
             'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 50
+              boost: 50,
+              _name: 'term subjectLiteral.keywordLowercasedStripped'
             }
           }
         })
@@ -475,7 +480,8 @@ describe('ElasticQueryBuilder', () => {
           term: {
             'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 50
+              boost: 50,
+              _name: 'term parallelSubjectLiteral.keywordLowercasedStripped'
             }
           }
         })
@@ -512,7 +518,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'title.keywordLowercasedStripped': {
               value: 'title value',
-              boost: 50
+              boost: 50,
+              _name: 'prefix title.keywordLowercasedStripped'
             }
           }
         })
@@ -524,7 +531,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'creatorLiteralNormalized.keywordLowercased': {
               value: 'contributor value',
-              boost: 100
+              boost: 100,
+              _name: 'prefix creatorLiteralNormalized.keywordLowercased'
             }
           }
         })
@@ -565,7 +573,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'title.keywordLowercasedStripped': {
               value: 'title value',
-              boost: 50
+              boost: 50,
+              _name: 'prefix title.keywordLowercasedStripped'
             }
           }
         })
@@ -577,7 +586,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'creatorLiteralNormalized.keywordLowercased': {
               value: 'contributor value',
-              boost: 100
+              boost: 100,
+              _name: 'prefix creatorLiteralNormalized.keywordLowercased'
             }
           }
         })
