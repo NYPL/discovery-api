@@ -79,8 +79,8 @@ npm test
 
 API integration tests are in active development under test/integration/nyql. Currently they are only for NYQL but will be improved and grow based on additional features as they're developed.
 To run them locally in terminal:
-npx mocha test/integration/nyql-api.test.js
-npx mocha test/integration/nyql-precision.test.js
+npx mocha test/integration/nyql/nyql-api.test.js
+npx mocha test/integration/nyql/nyql-precision.test.js
 or
 npm run nyql-api-test, to run both files.
 
