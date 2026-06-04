@@ -4,7 +4,7 @@ const sasb = 'schwarzman'
 const scholar = 'scholar'
 const ptypes = {
   scholar: '5427701',
-  general: '67427431'
+  general: '6742743'
 }
 const expectations = {
   princeton: {
