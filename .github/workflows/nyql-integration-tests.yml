@@ -1,0 +1,21 @@
+name: NYQL Integration Tests
+
+on:
+    pull_request:
+
+permissions:
+    contents: read
+
+jobs:
+    nyql-integration-tests:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Set Node version
+              uses: actions/setup-node@v3
+              with:
+                  node-version-file: ".nvmrc"
+            - name: npm install
+              run: npm ci
+            - name: Run NYQL integration tests
+              run: npm run nyql-api-test
