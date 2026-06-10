@@ -205,7 +205,8 @@ describe('Response with updated availability', function () {
       })
 
       it('updates recapCustomerCode when item\'s code does not match SCSB', () => {
-        return availabilityResolver.responseWithUpdatedAvailability()
+        availabilityResolver = new AvailabilityResolver(recapScsbQueryMismatch())
+        return availabilityResolver.responseWithUpdatedAvailability({ queryRecapCustomerCode: true })
           .then((response) => {
             const items = response.hits.hits[0]._source.items
             // A ReCAP item with customer code XX
@@ -217,9 +218,24 @@ describe('Response with updated availability', function () {
       })
 
       it('does nothing when current recapCustomerCode and SCSB code are a match', () => {
-        availabilityResolver = new AvailabilityResolver(recapScsbQueryMatch())
+        availabilityResolver = new AvailabilityResolver(recapScsbQueryMatch({ queryRecapCustomerCode: true }))
         const loggerSpy = sinon.spy(logger, 'error')
         return availabilityResolver.responseWithUpdatedAvailability()
+          .then(() => {
+            expect(loggerSpy.notCalled).to.equal(true)
+            logger.error.restore()
+          })
+      })
+
+      it('discounts namespace prefixes on customer codes when comparing codes to those in SCSB', () => {
+        // Amend fixture to emulate it having been indexed with a prefixed
+        // customer code:
+        const esResponse = JSON.parse(JSON.stringify(recapScsbQueryMatch()))
+        esResponse.hits.hits[0]._source.items[0].recapCustomerCode = ['someprefix:NC']
+
+        availabilityResolver = new AvailabilityResolver(esResponse)
+        const loggerSpy = sinon.spy(logger, 'error')
+        return availabilityResolver.responseWithUpdatedAvailability({ queryRecapCustomerCode: true })
           .then(() => {
             expect(loggerSpy.notCalled).to.equal(true)
             logger.error.restore()
