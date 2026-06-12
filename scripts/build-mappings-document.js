@@ -70,7 +70,7 @@ const fetchRcLabels = async () => {
 const buildBrowseTermsSubfieldLookup = async () => {
   console.info('Retrieving Browse-Term module subfields...')
 
-  const mappingsReq = await fetch('https://raw.githubusercontent.com/NYPL/browse-term/41224f6718583510528287e72a1705535424c5a7/src/data/mappings.json')
+  const mappingsReq = await fetch('https://raw.githubusercontent.com/NYPL/browse-term/main/src/data/mappings.json')
   const mappings = await mappingsReq.json()
 
   const subjectsMappings = mappings.subjects.first.concat(mappings.subjects.last)
