@@ -54,9 +54,6 @@ describe('Discovery API - NYQL precision tests', function () {
     // Assert the result contains the target call number
     const result = res.body.itemListElement[0].result
     expect(resultContainsCallnumber(result, callnumber)).to.equal(true)
-
-    // console.log("Result ID:", result["@id"]);
-    // console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
   })
 
   it('all returned bibs should contain callnumber = "MGZMD"', async () => {
@@ -82,17 +79,8 @@ describe('Discovery API - NYQL precision tests', function () {
     res.body.itemListElement.forEach((item, idx) => {
       const result = item.result
 
-      // console.log(`[${idx}] ID: ${result["@id"]}, Shelf marks:`, shelfMarks);
-
       expect(resultContainsCallnumber(result, callnumber)).to.equal(true)
     })
-
-    // console.log("Result ID:", res.body.itemListElement[0].result["@id"]);
-    // console.log(
-    //   "Result title:",
-    //   res.body.itemListElement[0].result.titleDisplay?.[0] ||
-    //     res.body.itemListElement[0].result.title?.[0],
-    // );
   })
 
   it('should return exactly one result for identifier = "b10670401"', async () => {
@@ -117,10 +105,5 @@ describe('Discovery API - NYQL precision tests', function () {
     // Assert the result contains the target identifier
     const result = res.body.itemListElement[0].result
     expect(result['@id']).to.equal(`res:${identifier}`)
-
-    // console.log("Result ID:", result["@id"]);
-    // console.log("Result title:", result.titleDisplay?.[0] || result.title?.[0]);
-    // // log the url
-    // console.log("Result URL:", result.url?.[0]);
   })
 })

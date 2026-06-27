@@ -77,12 +77,19 @@ npm test
 
 ### API testing
 
-API integration tests are in active development under test/integration/nyql. Currently they are only for NYQL but will be improved and grow based on additional features as they're developed.
-To run them locally in terminal:
-npx mocha test/integration/nyql/nyql-api.test.js
-npx mocha test/integration/nyql/nyql-precision.test.js
-or
-npm run nyql-api-test, to run both files.
+NYQL integration tests are a QA contract suite in `test/integration/nyql/`. They verify that NYQL queries return the expected results against live QA data and are not run by default during `npm test` to avoid adding latency to CI.
+
+To run them locally:
+
+```bash
+npm run nyql-api-test
+```
+
+To override the QA URL (e.g., to test against your local environment):
+
+```bash
+NYQL_TEST_BASE_URL=http://localhost:3000/api/v0.1 npm run nyql-api-test
+```
 
 ### Adding fixtures
 
