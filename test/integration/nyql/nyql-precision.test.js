@@ -1,6 +1,6 @@
 const request = require('supertest')
 const { expect } = require('chai')
-const { baseUrl, getId } = require('./helpers')
+const { baseUrl } = require('./helpers')
 
 const normalizeCallnumber = (value) =>
   String(value || '')
