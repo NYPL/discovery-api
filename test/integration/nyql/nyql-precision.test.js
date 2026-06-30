@@ -12,7 +12,7 @@ describe('Discovery API - NYQL precision tests', function () {
     const res = await search({
       q: `callnumber = "${callnumber}"`
     })
-  
+
     expect(res.body.itemListElement).to.be.an('array')
 
     // Assert exactly one result
