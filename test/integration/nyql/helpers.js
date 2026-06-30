@@ -39,7 +39,6 @@ const resultContainsCallnumber = (result, callnumber) => {
   )
 }
 
-
 module.exports = {
   baseUrl,
   getId,
