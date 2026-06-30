@@ -8,6 +8,7 @@ const { preflightCheck } = require('./lib/preflight_check')
 const { loadNyplCoreData } = require('./lib/load_nypl_core')
 const handleError = require('./lib/handle-error')
 const { NotFoundError } = require('./lib/errors')
+const { makeNyplDataApiClient } = require('./lib/data-api-client')
 
 const swaggerDocs = require('./swagger.v1.1.x.json')
 
@@ -28,6 +29,9 @@ app.init = async () => {
   await loadNyplCoreData()
   await NyplSourceMapper.loadInstance()
   preflightCheck()
+
+  // Eagerly instantiate the NYPL Data API Client to avoid lazy-load issues during traffic spikes
+  makeNyplDataApiClient()
 
   // Load logger after running above to ensure we respect LOG_LEVEL if set
   app.logger = require('./lib/logger')
