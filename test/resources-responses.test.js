@@ -103,7 +103,7 @@ describe('Test Resources responses', function () {
       })
     })
     it('returns numItemsMatched for bib with location query', (done) => {
-      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?item_location=loc:mal82'
+      const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b10833141?item_location=ma'
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
@@ -161,7 +161,7 @@ describe('Test Resources responses', function () {
         })
       })
       it('item_format is same as bib material type, multiple filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text&item_location=loc:mal92'
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text&item_location=ma'
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
