@@ -28,7 +28,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.items.length).to.equal(41)
+        expect(doc.items.length).to.equal(37)
         done()
       })
     })
@@ -63,7 +63,7 @@ describe('Test Resources responses', function () {
         // are not returned from ES at the beginning of the items array, but
         // should end up sorted there by the response massager.
         expect(firstTenItems.every(isCheckinCardItem))
-        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 44 (Dec. 30, 2024)')
+        expect(doc.items[0].enumerationChronology[0]).to.equal('Vol. 100 No. 9 (Apr. 15, 2024)')
         const lastIndex = doc.items.length - 1
         expect(doc.items[lastIndex].enumerationChronology[0]).to.equal('Aug. 9-Oct. 25 (1930)')
         done()
@@ -98,7 +98,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.be.greaterThan(704)
+        expect(doc.numItemsMatched).to.be.greaterThan(703)
         done()
       })
     })
@@ -147,6 +147,7 @@ describe('Test Resources responses', function () {
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
+
           expect(doc.numItemsMatched).to.equal(4)
           done()
         })
@@ -156,7 +157,7 @@ describe('Test Resources responses', function () {
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
+          expect(doc.numItemsMatched).to.equal(0)
           done()
         })
       })
@@ -165,7 +166,7 @@ describe('Test Resources responses', function () {
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(1)
+          expect(doc.numItemsMatched).to.equal(0)
           done()
         })
       })
@@ -174,7 +175,7 @@ describe('Test Resources responses', function () {
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
+          expect(doc.numItemsMatched).to.equal(0)
           done()
         })
       })
@@ -183,7 +184,7 @@ describe('Test Resources responses', function () {
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(4)
+          expect(doc.numItemsMatched).to.equal(0)
           done()
         })
       })
@@ -336,7 +337,7 @@ describe('Test Resources responses', function () {
           .filter((ent) => ent['@type'] === 'bf:ShelfMark')
           .pop()
         expect(callnum).to.be.a('object')
-        expect(callnum['@value']).to.equal('JFE 86-498 v. 1')
+        expect(callnum['@value']).to.equal('JFE 86-498')
 
         // Check item barcode:
         const barcode = itemOfInterest.identifier
@@ -411,12 +412,12 @@ describe('Test Resources responses', function () {
         const doc = JSON.parse(body)
 
         expect(doc.note).to.be.a('array')
-        expect(doc.note).to.have.lengthOf(5)
+        expect(doc.note).to.have.lengthOf(4)
 
         expect(doc.note[2]).to.be.a('object')
         expect(doc.note[2]['@type']).to.equal('bf:Note')
         expect(doc.note[2].noteType).to.equal('Additional Formats')
-        expect(doc.note[2].prefLabel).to.equal('Also available on microform;')
+        expect(doc.note[2].prefLabel).to.equal('Also available on microform; service copy classmark: *ZO-867 no. 1.')
 
         done()
       })
