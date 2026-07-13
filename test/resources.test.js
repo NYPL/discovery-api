@@ -8,6 +8,7 @@ const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
 const { verifyFilterFields } = require('./utils')
+const { ITEM_LOCATION_AGG_SCRIPT, ITEM_LOCATION_FILTER_SCRIPT } = require('../lib/util')
 
 describe('Resources query', function () {
   const resourcesPrivMethods = {}
@@ -475,7 +476,7 @@ describe('Resources query', function () {
           item_location: {
             nested: { path: 'items' },
             aggs: {
-              _nested: { terms: { size: 100, script: { source: "def locs = doc['items.holdingLocation.id']; if (locs.size() == 0) return null; def loc = locs.value; int colonIdx = loc.indexOf(':'); if (colonIdx == -1) return null; def locId = loc.substring(colonIdx + 1); if (locId.length() < 2) return null; def parentLoc = locId.substring(0, 2); if (['ma', 'pa', 'sc', 'rc', 'bu'].contains(parentLoc)) { return parentLoc; } return null;" } } }
+              _nested: { terms: { size: 100, script: { source: ITEM_LOCATION_AGG_SCRIPT } } }
             }
           },
           item_status: {
@@ -595,7 +596,7 @@ describe('Resources query', function () {
               {
                 script: {
                   script: {
-                    source: "def locs = doc['items.holdingLocation.id']; if (locs.size() == 0) return false; def loc = locs.value; int colonIdx = loc.indexOf(':'); if (colonIdx == -1) return false; def locId = loc.substring(colonIdx + 1); if (locId.length() < 2) return false; def parentLoc = locId.substring(0, 2); return ['ma', 'pa', 'sc', 'rc', 'bu'].contains(parentLoc) && params.locations.contains(parentLoc);",
+                    source: ITEM_LOCATION_FILTER_SCRIPT,
                     params: {
                       locations: [
                         'SASB',
@@ -678,7 +679,7 @@ describe('Resources query', function () {
 
     it('should return filters for location in case there is a location', () => {
       expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] } }))
-        .to.deep.equal({ filter: [{ script: { script: { source: "def locs = doc['items.holdingLocation.id']; if (locs.size() == 0) return false; def loc = locs.value; int colonIdx = loc.indexOf(':'); if (colonIdx == -1) return false; def locId = loc.substring(colonIdx + 1); if (locId.length() < 2) return false; def parentLoc = locId.substring(0, 2); return ['ma', 'pa', 'sc', 'rc', 'bu'].contains(parentLoc) && params.locations.contains(parentLoc);", params: { locations: ['ma', 'pa', 'sc'] } } } }] })
+        .to.deep.equal({ filter: [{ script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['ma', 'pa', 'sc'] } } } }] })
     })
 
     it('should return filters for status in case there is a status', () => {
@@ -700,7 +701,7 @@ describe('Resources query', function () {
           { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
           { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
           { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
-          { script: { script: { source: "def locs = doc['items.holdingLocation.id']; if (locs.size() == 0) return false; def loc = locs.value; int colonIdx = loc.indexOf(':'); if (colonIdx == -1) return false; def locId = loc.substring(colonIdx + 1); if (locId.length() < 2) return false; def parentLoc = locId.substring(0, 2); return ['ma', 'pa', 'sc', 'rc', 'bu'].contains(parentLoc) && params.locations.contains(parentLoc);", params: { locations: ['ma', 'pa', 'sc'] } } } },
+          { script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['ma', 'pa', 'sc'] } } } },
           { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
         ]
       })
@@ -708,7 +709,7 @@ describe('Resources query', function () {
 
     it('should ignore all other parameters', () => {
       expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] }, something: 'else' }))
-        .to.deep.equal({ filter: [{ script: { script: { source: "def locs = doc['items.holdingLocation.id']; if (locs.size() == 0) return false; def loc = locs.value; int colonIdx = loc.indexOf(':'); if (colonIdx == -1) return false; def locId = loc.substring(colonIdx + 1); if (locId.length() < 2) return false; def parentLoc = locId.substring(0, 2); return ['ma', 'pa', 'sc', 'rc', 'bu'].contains(parentLoc) && params.locations.contains(parentLoc);", params: { locations: ['ma', 'pa', 'sc'] } } } }] })
+        .to.deep.equal({ filter: [{ script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['ma', 'pa', 'sc'] } } } }] })
     })
   })
 
@@ -825,7 +826,7 @@ describe('Resources query', function () {
                             },
                             filter: [
                               { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
-                              { script: { script: { source: "def locs = doc['items.holdingLocation.id']; if (locs.size() == 0) return false; def loc = locs.value; int colonIdx = loc.indexOf(':'); if (colonIdx == -1) return false; def locId = loc.substring(colonIdx + 1); if (locId.length() < 2) return false; def parentLoc = locId.substring(0, 2); return ['ma', 'pa', 'sc', 'rc', 'bu'].contains(parentLoc) && params.locations.contains(parentLoc);", params: { locations: ['SASB', 'LPA'] } } } }
+                              { script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['SASB', 'LPA'] } } } }
                             ]
                           }
                         },
