@@ -1,5 +1,10 @@
 const request = require('supertest')
-const baseUrl = process.env.NYQL_TEST_BASE_URL || 'https://qa-platform.nypl.org/api/v0.1'
+
+const ENV = process.env.ENV || process.env.NODE_ENV
+const DEFAULT_BASE_URL = ENV === 'production'
+  ? 'https://platform.nypl.org/api/v0.1'
+  : 'https://qa-platform.nypl.org/api/v0.1'
+const baseUrl = process.env.NYQL_TEST_BASE_URL || DEFAULT_BASE_URL
 const getId = (item) => item?.result?.['@id']
 const endpoint = '/discovery/resources'
 const TIMEOUT = 30000

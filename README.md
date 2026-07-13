@@ -77,7 +77,7 @@ npm test
 
 ### API testing
 
-NYQL integration tests are a QA contract suite in `test/integration/nyql/`. They verify that NYQL queries return the expected results against live QA data and are not run by default during `npm test` to avoid adding latency to CI.
+NYQL integration tests are a QA contract suite in `test/integration/nyql/`. They verify that NYQL queries return the expected results against live QA data and are not run by default during `npm test` to avoid adding latency to CI.  They do, however, run after deploys to QA and Production.  The call to run them has been added to integration-tests.yml file.
 
 To run them locally:
 
