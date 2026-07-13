@@ -98,7 +98,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.be.greaterThan(703)
+        expect(doc.numItemsMatched).to.equal(704)
         done()
       })
     })
@@ -153,38 +153,38 @@ describe('Test Resources responses', function () {
         })
       })
       it('decrements - item_format is same as bib material type', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text'
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Book/text'
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(0)
+          expect(doc.numItemsMatched).to.equal(4)
           done()
         })
       })
       it('item_format is same as bib material type, multiple filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text&item_location=ma'
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Book/text&item_location=ma'
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(0)
+          expect(doc.numItemsMatched).to.equal(1)
           done()
         })
       })
       it('item_format is same as bib material type, multiple format filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text,anotherformat'
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Book/text,anotherformat'
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(0)
+          expect(doc.numItemsMatched).to.equal(4)
           done()
         })
       })
       it('item_format is same as bib material type, multiple format filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Text,anotherformat'
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Book/text,anotherformat'
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
-          expect(doc.numItemsMatched).to.equal(0)
+          expect(doc.numItemsMatched).to.equal(4)
           done()
         })
       })
