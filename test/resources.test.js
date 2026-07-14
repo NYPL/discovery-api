@@ -8,7 +8,6 @@ const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 
 const fixtures = require('./fixtures')
 const { verifyFilterFields } = require('./utils')
-const { ITEM_LOCATION_AGG_SCRIPT, ITEM_LOCATION_FILTER_SCRIPT } = require('../lib/util')
 
 describe('Resources query', function () {
   const resourcesPrivMethods = {}
@@ -476,7 +475,7 @@ describe('Resources query', function () {
           item_location: {
             nested: { path: 'items' },
             aggs: {
-              _nested: { terms: { size: 100, script: { source: ITEM_LOCATION_AGG_SCRIPT } } }
+              _nested: { terms: { size: 100, field: 'items.buildingLocation.id' } }
             }
           },
           item_status: {
@@ -559,7 +558,7 @@ describe('Resources query', function () {
         item_volume: '1-2',
         item_date: '3-4',
         item_format: 'text,microfilm',
-        item_location: 'SASB,LPA',
+        item_location: 'ma,pa',
         item_status: 'here,there'
       })
         // This call is going to error because the bnum is fake
@@ -594,16 +593,8 @@ describe('Resources query', function () {
                 }
               },
               {
-                script: {
-                  script: {
-                    source: ITEM_LOCATION_FILTER_SCRIPT,
-                    params: {
-                      locations: [
-                        'SASB',
-                        'LPA'
-                      ]
-                    }
-                  }
+                terms: {
+                  'items.buildingLocation.id': ['ma', 'pa']
                 }
               },
               {
@@ -679,7 +670,7 @@ describe('Resources query', function () {
 
     it('should return filters for location in case there is a location', () => {
       expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] } }))
-        .to.deep.equal({ filter: [{ script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['ma', 'pa', 'sc'] } } } }] })
+        .to.deep.equal({ filter: [{ terms: { 'items.buildinggLocation.id': ['ma', 'pa', 'sc'] } }] })
     })
 
     it('should return filters for status in case there is a status', () => {
@@ -701,7 +692,7 @@ describe('Resources query', function () {
           { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
           { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
           { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
-          { script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['ma', 'pa', 'sc'] } } } },
+          { terms: { 'items.holdingLocation.id': ['ma', 'pa', 'sc'] } },
           { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
         ]
       })
@@ -709,7 +700,7 @@ describe('Resources query', function () {
 
     it('should ignore all other parameters', () => {
       expect(resourcesPrivMethods.itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] }, something: 'else' }))
-        .to.deep.equal({ filter: [{ script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['ma', 'pa', 'sc'] } } } }] })
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } }] })
     })
   })
 
@@ -808,7 +799,7 @@ describe('Resources query', function () {
     it('should include filters for items', () => {
       expect(resourcesPrivMethods.addInnerHits(
         { query: { bool: {} } },
-        { size: 1, from: 2, query: { volume: [1, 2], location: ['SASB', 'LPA'], other: 'filter' } }
+        { size: 1, from: 2, query: { volume: [1, 2], location: ['ma', 'pa'], other: 'filter' } }
       )).to.deep.equal({
         query: {
           bool: {
@@ -826,7 +817,7 @@ describe('Resources query', function () {
                             },
                             filter: [
                               { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
-                              { script: { script: { source: ITEM_LOCATION_FILTER_SCRIPT, params: { locations: ['SASB', 'LPA'] } } } }
+                              { terms: { 'items.buildingLocation.id': ['ma', 'pa'] } }
                             ]
                           }
                         },
