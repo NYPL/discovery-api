@@ -482,7 +482,7 @@ describe('Resources query', function () {
           item_location: {
             nested: { path: 'items' },
             aggs: {
-              _nested: { terms: { size: 100, field: 'items.buildingLocation.id' } }
+              _nested: { terms: { size: 100, field: 'items.buildingLocationId' } }
             }
           },
           item_status: {
@@ -601,7 +601,7 @@ describe('Resources query', function () {
               },
               {
                 terms: {
-                  'items.buildingLocation.id': ['ma', 'pa']
+                  'items.buildingLocationId': ['ma', 'pa']
                 }
               },
               {
@@ -677,7 +677,7 @@ describe('Resources query', function () {
 
     it('should return filters for location in case there is a location', () => {
       expect(itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] } }))
-        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } }] })
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocationId': ['ma', 'pa', 'sc'] } }] })
     })
 
     it('should return filters for status in case there is a status', () => {
@@ -699,7 +699,7 @@ describe('Resources query', function () {
           { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
           { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
           { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
-          { terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } },
+          { terms: { 'items.buildingLocationId': ['ma', 'pa', 'sc'] } },
           { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
         ]
       })
@@ -707,7 +707,7 @@ describe('Resources query', function () {
 
     it('should ignore all other parameters', () => {
       expect(itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] }, something: 'else' }))
-        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } }] })
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocationId': ['ma', 'pa', 'sc'] } }] })
     })
   })
 
