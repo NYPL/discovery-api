@@ -676,8 +676,8 @@ describe('Resources query', function () {
     })
 
     it('should return filters for location in case there is a location', () => {
-      expect(itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] } }))
-        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
+      expect(itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] } }))
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } }] })
     })
 
     it('should return filters for status in case there is a status', () => {
@@ -699,15 +699,15 @@ describe('Resources query', function () {
           { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
           { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
           { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
-          { terms: { 'items.holdingLocation.id': ['ma', 'pa', 'sc'] } },
+          { terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } },
           { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
         ]
       })
     })
 
     it('should ignore all other parameters', () => {
-      expect(itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] }, something: 'else' }))
-        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
+      expect(itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] }, something: 'else' }))
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocation.id': ['ma', 'pa', 'sc'] } }] })
     })
   })
 
