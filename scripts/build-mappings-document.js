@@ -143,6 +143,12 @@ const propertyName = (field) => {
     .replace(/\^.*/, '')
 }
 
+const parallelName = (field) => {
+  const capitalizedName = field.charAt(0).toUpperCase() + field.slice(1)
+
+  return `parallel${capitalizedName}`
+}
+
 /**
  *  Build array of objects representing properties.
  *
@@ -156,17 +162,20 @@ const propertyName = (field) => {
  *                                    "editorial" document.
  *
  */
-const buildProperties = async (editorial) => {
+const buildProperties = async (editorial, parallels) => {
   const rcLabels = await fetchRcLabels()
   const { bibMappings, itemMappings } = await fetchRciMappings()
 
   const basicMappings = Object.entries(bibMappings).map(([name, config]) => {
+    name = name.replace('donorSponsor', 'donor')
+
     return {
       name,
       marc: config.paths,
       notes: config.notes,
       label: rcLabels[name],
-      ...(editorial[name] || {})
+      ...(editorial[name] || {}),
+      hasParallel: parallels.includes(parallelName(name))
     }
   })
     .concat(Object.entries(itemMappings).map(([name, config]) => {
@@ -200,6 +209,20 @@ const buildProperties = async (editorial) => {
   })
 }
 
+const buildParallelProperties = () => {
+  return Object.values(elasticConfig.SEARCH_SCOPES)
+    .reduce((a, config) => {
+      if (!config.fields) return a
+
+      return a.concat(
+        config.fields
+          .map((field) => field.field || field)
+          .map((field) => propertyName(field))
+          .filter((field) => field.indexOf('parallel') === 0)
+      )
+    }, [])
+}
+
 /**
  *  Build array of objects representing search scopes.
  *
@@ -215,17 +238,25 @@ const buildProperties = async (editorial) => {
 const buildSearchScopes = (editorial) => {
   return Object.entries(elasticConfig.SEARCH_SCOPES).map(([name, config]) => {
     let properties = null
+    let parallelProperties = null
+
     if (config.fields) {
       properties = [...new Set(
         config.fields
           .map((field) => field.field || field)
           .map((field) => propertyName(field))
-          .filter((field) => field.indexOf('parallel') !== 0)
       )]
+
+      parallelProperties = properties
+        .filter((field) => field.indexOf('parallel') === 0)
+
+      properties = properties
+        .filter((field) => field.indexOf('parallel') !== 0)
     }
     return {
       name,
       properties,
+      parallelProperties,
       ...(editorial[name] || {})
     }
   })
@@ -246,18 +277,28 @@ const buildSearchScopes = (editorial) => {
 const buildCqlIndexes = (editorial) => {
   return Object.entries(cqlConfig.indexMapping).map(([name, config]) => {
     let properties = null
+    let parallelProperties = null
+
     const fields = config.fields || config.term
+
     if (fields) {
       properties = [...new Set(
         fields
           .map((field) => field.field || field)
           .map((field) => propertyName(field))
-          .filter((field) => field.indexOf('parallel') !== 0)
       )]
+
+      parallelProperties = properties
+        .filter((field) => field.indexOf('parallel') === 0)
+
+      properties = properties
+        .filter((field) => field.indexOf('parallel') !== 0)
     }
+
     return {
       name,
       properties,
+      parallelProperties,
       ...(editorial[name] || {})
     }
   })
@@ -275,22 +316,31 @@ const parseArgs = () => {
 }
 
 /**
+ *  Builds mappings document, returning result.
+ */
+const buildMappingsDocument = async () => {
+  const editorial = await fetchEditorial()
+
+  const parallels = buildParallelProperties()
+
+  const properties = await buildProperties(editorial.properties, parallels)
+  const searchScopes = buildSearchScopes(editorial.searchScopes)
+  const cqlIndexes = buildCqlIndexes(editorial.cqlIndexes)
+
+  return {
+    properties,
+    searchScopes,
+    cqlIndexes
+  }
+}
+
+/**
  *  Main script function. Fetch and collate data. Write result to outfile.
  */
 const run = async () => {
   const args = parseArgs()
 
-  const editorial = await fetchEditorial()
-
-  const properties = await buildProperties(editorial.properties)
-  const searchScopes = buildSearchScopes(editorial.searchScopes)
-  const cqlIndexes = buildCqlIndexes(editorial.cqlIndexes)
-
-  const doc = {
-    properties,
-    searchScopes,
-    cqlIndexes
-  }
+  const doc = await buildMappingsDocument()
 
   const outDoc = JSON.stringify(doc, null, 2)
   if (args.outfile) {
@@ -303,4 +353,10 @@ const run = async () => {
   console.info('Done')
 }
 
-run()
+if (require.main === module) {
+  run()
+}
+
+module.exports = {
+  buildMappingsDocument
+}
