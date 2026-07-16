@@ -53,7 +53,7 @@ const parallelName = (field) => {
  * */
 const buildEntries = (scopesOrIndexes, propertyDefinitions) => {
   return scopesOrIndexes
-    .filter((scopeOrIndex) => scopeOrIndex.properties)
+    .filter((scopeOrIndex) => scopeOrIndex.notes || scopeOrIndex.properties)
     .map((scopeOrIndex) => {
       // Create a function to determine if a named property appears to have a
       // parallel equivalent in this scope/index:
@@ -63,7 +63,7 @@ const buildEntries = (scopesOrIndexes, propertyDefinitions) => {
 
       // Build marc fields content:
       const marcFields = scopeOrIndex.properties
-        .map((propertyName) => {
+        ?.map((propertyName) => {
           const property = propertyDefinitions.find((p) => p.name === propertyName)
           if (!property) {
             console.warn(`Warning: Couldn't find property ${propertyName}`)
