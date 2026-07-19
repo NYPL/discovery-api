@@ -1,4 +1,4 @@
-FROM node:20-bullseye AS production
+FROM node:25-bullseye AS production
 
 RUN apt-get update
 RUN apt-get upgrade -y
