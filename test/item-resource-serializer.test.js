@@ -59,6 +59,28 @@ describe('ItemResourceSerializer', () => {
       expect(doc.idNyplSourceId['@type']).to.eq('RecapHl')
       expect(doc.idNyplSourceId['@value']).to.eq('9876543210')
     })
+
+    it('adds item collection/division', async () => {
+      const item = await ItemResourceSerializer.addSourceIdentifier({
+        uri: 'i22566485',
+        identifier: [
+          'urn:barcode:33433058338470'
+        ],
+        collectionId: ['mal']
+      })
+      const doc = await ItemResourceSerializer.serialize(item)
+      expect(doc).to.be.a('object')
+      expect(doc['@id']).to.eq('res:i22566485')
+      expect(doc.identifier).to.be.a('array')
+      expect(doc.identifier[0]).to.eq('urn:barcode:33433058338470')
+      expect(doc.identifier[1]).to.eq('urn:SierraNypl:22566485')
+      expect(doc.collection).to.deep.equal([{
+        '@id': 'mal',
+        buildingLocationLabel: 'Stephen A. Schwarzman Building (SASB)',
+        locationsPath: 'locations/schwarzman/general-research-division',
+        prefLabel: 'General Research Division'
+      }])
+    })
   })
   describe('getFormattedHoldingLocation', () => {
     it('should return holding location with id, label, and collection access type', () => {

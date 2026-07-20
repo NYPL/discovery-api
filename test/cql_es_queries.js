@@ -1,3 +1,5 @@
+const { SEARCH_SCOPES } = require('../lib/elasticsearch/config')
+
 const simpleAdjQuery = {
   bool: {
     must: [
@@ -10,24 +12,7 @@ const simpleAdjQuery = {
                   {
                     multi_match: {
                       query: 'Hamlet',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'titleAlt.folded',
-                        'uniformTitle.folded',
-                        'titleDisplay.folded',
-                        'seriesStatement.folded',
-                        'contentsTitle.folded',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelSeriesStatement.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle'
-                      ],
+                      fields: SEARCH_SCOPES.title.fields,
                       type: 'phrase'
                     }
                   }
@@ -53,24 +38,7 @@ const multiAdjQuery = {
                   {
                     multi_match: {
                       query: 'Hamlet, Prince',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'titleAlt.folded',
-                        'uniformTitle.folded',
-                        'titleDisplay.folded',
-                        'seriesStatement.folded',
-                        'contentsTitle.folded',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelSeriesStatement.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle'
-                      ],
+                      fields: SEARCH_SCOPES.title.fields,
                       type: 'phrase'
                     }
                   }
@@ -100,7 +68,7 @@ const prefixPhraseQuery = {
                   },
                   {
                     prefix: {
-                      'seriesStatement.raw': 'The Tragedy of Hamlet, Prince of Denmark'
+                      'series.keywordLowercasedStripped': 'The Tragedy of Hamlet, Prince of Denmark'
                     }
                   },
                   {
@@ -120,7 +88,7 @@ const prefixPhraseQuery = {
                   },
                   {
                     prefix: {
-                      'parallelSeriesStatement.raw': 'The Tragedy of Hamlet, Prince of Denmark'
+                      'parallelSeries.keywordLowercasedStripped': 'The Tragedy of Hamlet, Prince of Denmark'
                     }
                   },
                   {
@@ -145,7 +113,7 @@ const prefixPhraseQuery = {
                   },
                   {
                     prefix: {
-                      placeOfPublication: 'The Tragedy of Hamlet, Prince of Denmark'
+                      'placeOfPublication.keywordLowercasedStripped': 'The Tragedy of Hamlet, Prince of Denmark'
                     }
                   }
                 ]
@@ -173,24 +141,7 @@ const simpleAnyQuery = {
                         {
                           multi_match: {
                             query: 'Hamlet',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'seriesStatement.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeriesStatement.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -203,24 +154,7 @@ const simpleAnyQuery = {
                         {
                           multi_match: {
                             query: 'Othello',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'seriesStatement.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeriesStatement.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -255,7 +189,7 @@ const anyWithPrefixQuery = {
                           }
                         },
                         {
-                          prefix: { 'seriesStatement.raw': 'Tragedy' }
+                          prefix: { 'series.keywordLowercasedStripped': 'Tragedy' }
                         },
                         { prefix: { 'titleAlt.raw': 'Tragedy' } },
                         { prefix: { 'donor.raw': 'Tragedy' } },
@@ -263,7 +197,7 @@ const anyWithPrefixQuery = {
                           prefix: { 'parallelTitleAlt.raw': 'Tragedy' }
                         },
                         {
-                          prefix: { 'parallelSeriesStatement.raw': 'Tragedy' }
+                          prefix: { 'parallelSeries.keywordLowercasedStripped': 'Tragedy' }
                         },
                         {
                           prefix: { 'parallelCreatorLiteral.raw': 'Tragedy' }
@@ -275,7 +209,7 @@ const anyWithPrefixQuery = {
                         {
                           prefix: { 'addedAuthorTitle.raw': 'Tragedy' }
                         },
-                        { prefix: { placeOfPublication: 'Tragedy' } }
+                        { prefix: { 'placeOfPublication.keywordLowercasedStripped': 'Tragedy' } }
                       ]
                     }
                   },
@@ -287,14 +221,14 @@ const anyWithPrefixQuery = {
                             'title.keywordLowercasedStripped': 'Comedy'
                           }
                         },
-                        { prefix: { 'seriesStatement.raw': 'Comedy' } },
+                        { prefix: { 'series.keywordLowercasedStripped': 'Comedy' } },
                         { prefix: { 'titleAlt.raw': 'Comedy' } },
                         { prefix: { 'donor.raw': 'Comedy' } },
                         {
                           prefix: { 'parallelTitleAlt.raw': 'Comedy' }
                         },
                         {
-                          prefix: { 'parallelSeriesStatement.raw': 'Comedy' }
+                          prefix: { 'parallelSeries.keywordLowercasedStripped': 'Comedy' }
                         },
                         {
                           prefix: { 'parallelCreatorLiteral.raw': 'Comedy' }
@@ -306,7 +240,7 @@ const anyWithPrefixQuery = {
                         {
                           prefix: { 'addedAuthorTitle.raw': 'Comedy' }
                         },
-                        { prefix: { placeOfPublication: 'Comedy' } }
+                        { prefix: { 'placeOfPublication.keywordLowercasedStripped': 'Comedy' } }
                       ]
                     }
                   },
@@ -322,12 +256,12 @@ const anyWithPrefixQuery = {
                               'titleAlt.folded',
                               'uniformTitle.folded',
                               'titleDisplay.folded',
-                              'seriesStatement.folded',
+                              'series.folded',
                               'contentsTitle.folded',
                               'donor.folded',
                               'parallelTitle.folded',
                               'parallelTitleDisplay.folded',
-                              'parallelSeriesStatement.folded',
+                              'parallelSeries.folded',
                               'parallelTitleAlt.folded',
                               'parallelCreatorLiteral.folded',
                               'parallelUniformTitle',
@@ -352,12 +286,12 @@ const anyWithPrefixQuery = {
                               'titleAlt.folded',
                               'uniformTitle.folded',
                               'titleDisplay.folded',
-                              'seriesStatement.folded',
+                              'series.folded',
                               'contentsTitle.folded',
                               'donor.folded',
                               'parallelTitle.folded',
                               'parallelTitleDisplay.folded',
-                              'parallelSeriesStatement.folded',
+                              'parallelSeries.folded',
                               'parallelTitleAlt.folded',
                               'parallelCreatorLiteral.folded',
                               'parallelUniformTitle',
@@ -395,24 +329,7 @@ const simpleAllQuery = {
                         {
                           multi_match: {
                             query: 'Hamlet',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'seriesStatement.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeriesStatement.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -425,24 +342,7 @@ const simpleAllQuery = {
                         {
                           multi_match: {
                             query: 'Othello',
-                            fields: [
-                              'title',
-                              'title.folded',
-                              'titleAlt.folded',
-                              'uniformTitle.folded',
-                              'titleDisplay.folded',
-                              'seriesStatement.folded',
-                              'contentsTitle.folded',
-                              'donor.folded',
-                              'parallelTitle.folded',
-                              'parallelTitleDisplay.folded',
-                              'parallelSeriesStatement.folded',
-                              'parallelTitleAlt.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelUniformTitle',
-                              'formerTitle',
-                              'addedAuthorTitle'
-                            ],
+                            fields: SEARCH_SCOPES.title.fields,
                             type: 'cross_fields'
                           }
                         }
@@ -471,37 +371,7 @@ const keywordQueryForBarcode = {
                   {
                     multi_match: {
                       query: '123456',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'description.foldedStemmed',
-                        'subjectLiteral',
-                        'subjectLiteral.folded',
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'note.label.foldedStemmed',
-                        'publisherLiteral.folded',
-                        'seriesStatement.folded',
-                        'titleAlt.folded',
-                        'titleDisplay.folded',
-                        'contentsTitle.folded',
-                        'tableOfContents.folded',
-                        'genreForm',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelSeriesStatement.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelPublisher',
-                        'parallelPublisherLiteral',
-                        'uniformTitle.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle',
-                        'placeOfPublication.folded'
-                      ],
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
                       type: 'phrase'
                     }
                   }
@@ -513,7 +383,16 @@ const keywordQueryForBarcode = {
                 path: 'items',
                 query: {
                   bool: {
-                    should: [{ term: { 'items.idBarcode': '123456' } }]
+                    should: [
+                      {
+                        multi_match: {
+                          fields: [
+                            'items.idBarcode'
+                          ],
+                          query: '123456',
+                          type: 'phrase'
+                        }
+                      }, { term: { 'items.idBarcode': '123456' } }]
                   }
                 }
               }
@@ -537,37 +416,7 @@ const keywordQueryForShelfMark = {
                   {
                     multi_match: {
                       query: 'B 12',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'description.foldedStemmed',
-                        'subjectLiteral',
-                        'subjectLiteral.folded',
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'note.label.foldedStemmed',
-                        'publisherLiteral.folded',
-                        'seriesStatement.folded',
-                        'titleAlt.folded',
-                        'titleDisplay.folded',
-                        'contentsTitle.folded',
-                        'tableOfContents.folded',
-                        'genreForm',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelSeriesStatement.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelPublisher',
-                        'parallelPublisherLiteral',
-                        'uniformTitle.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle',
-                        'placeOfPublication.folded'
-                      ],
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
                       type: 'phrase'
                     }
                   }
@@ -611,37 +460,7 @@ const keywordQueryForGeneralTerm = {
                   {
                     multi_match: {
                       query: 'Hamlet',
-                      fields: [
-                        'title',
-                        'title.folded',
-                        'description.foldedStemmed',
-                        'subjectLiteral',
-                        'subjectLiteral.folded',
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'note.label.foldedStemmed',
-                        'publisherLiteral.folded',
-                        'seriesStatement.folded',
-                        'titleAlt.folded',
-                        'titleDisplay.folded',
-                        'contentsTitle.folded',
-                        'tableOfContents.folded',
-                        'genreForm',
-                        'donor.folded',
-                        'parallelTitle.folded',
-                        'parallelTitleDisplay.folded',
-                        'parallelTitleAlt.folded',
-                        'parallelSeriesStatement.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelPublisher',
-                        'parallelPublisherLiteral',
-                        'uniformTitle.folded',
-                        'parallelUniformTitle',
-                        'formerTitle',
-                        'addedAuthorTitle',
-                        'placeOfPublication.folded'
-                      ],
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
                       type: 'phrase'
                     }
                   }
@@ -710,13 +529,7 @@ const binaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'Shakespeare',
-                            fields: [
-                              'creatorLiteral',
-                              'creatorLiteral.folded',
-                              'contributorLiteral.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelContributorLiteral.folded'
-                            ],
+                            fields: SEARCH_SCOPES.contributor.fields,
                             type: 'phrase'
                           }
                         }
@@ -817,13 +630,7 @@ const ternaryBooleanQuery = {
                               {
                                 multi_match: {
                                   query: 'Shakespeare',
-                                  fields: [
-                                    'creatorLiteral',
-                                    'creatorLiteral.folded',
-                                    'contributorLiteral.folded',
-                                    'parallelCreatorLiteral.folded',
-                                    'parallelContributorLiteral.folded'
-                                  ],
+                                  fields: SEARCH_SCOPES.contributor.fields,
                                   type: 'phrase'
                                 }
                               }
@@ -927,7 +734,7 @@ const ternaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'tragedy',
-                            fields: ['genreForm'],
+                            fields: SEARCH_SCOPES.genre.fields,
                             type: 'phrase'
                           }
                         }
@@ -1069,7 +876,7 @@ const queryWithParentheses = {
                               {
                                 multi_match: {
                                   query: 'tragedy',
-                                  fields: ['genreForm'],
+                                  fields: ['genreForm', 'genreForm.folded'],
                                   type: 'phrase'
                                 }
                               }
@@ -1204,7 +1011,7 @@ const dateAfterQuery = {
             {
               nested: {
                 path: 'dates',
-                query: { range: { 'dates.range': { gt: '1990' } } }
+                query: { range: { 'dates.range': { gte: '1991-01-01' } } }
               }
             }
           ]
@@ -1242,7 +1049,7 @@ const dateBeforeOrOnQuery = {
             {
               nested: {
                 path: 'dates',
-                query: { range: { 'dates.range': { lte: '1990' } } }
+                query: { range: { 'dates.range': { lt: '1991-01-01' } } }
               }
             }
           ]
@@ -1281,7 +1088,7 @@ const dateWithinQuery = {
               nested: {
                 path: 'dates',
                 query: {
-                  range: { 'dates.range': { gte: '1990', lte: '2000' } }
+                  range: { 'dates.range': { gte: '1990', lt: '2001-01-01' } }
                 }
               }
             }
@@ -1302,7 +1109,18 @@ const dateEnclosesQuery = {
               nested: {
                 path: 'dates',
                 query: {
-                  range: { 'dates.range': { gt: '1990', lt: '2000' } }
+                  bool: {
+                    must: [
+                      {
+                        range: { 'dates.range': { gte: '1990', lte: '1990', relation: 'contains' } }
+                      },
+                      {
+                        terms: {
+                          'dates.tag': ['c', 'd', 'i', 'k', 'm', 'q', 'u']
+                        }
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -1325,13 +1143,7 @@ const filterQuery = {
                   {
                     multi_match: {
                       query: 'Shakespeare',
-                      fields: [
-                        'creatorLiteral',
-                        'creatorLiteral.folded',
-                        'contributorLiteral.folded',
-                        'parallelCreatorLiteral.folded',
-                        'parallelContributorLiteral.folded'
-                      ],
+                      fields: SEARCH_SCOPES.contributor.fields,
                       type: 'phrase'
                     }
                   }
@@ -1556,6 +1368,115 @@ const divisionExact = {
   }
 }
 
+const englishExactLanguageQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                must: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          bool: {
+                            should: [
+                              { term: { 'language.id': 'lang:eng' } },
+                              {
+                                term: { 'language.label': 'lang:eng' }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const wildcardQueryNoShelfMark = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    query_string: {
+                      query: 'Ham*let',
+                      fields: SEARCH_SCOPES.title.fields,
+                      type: 'phrase',
+                      analyze_wildcard: true,
+                      default_operator: 'AND'
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const wildcardQueryWithShelfMark = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    query_string: {
+                      query: 'B 12*',
+                      fields: SEARCH_SCOPES.all.fields.filter(field => typeof field === 'string'),
+                      type: 'phrase',
+                      analyze_wildcard: true,
+                      default_operator: 'AND'
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              nested: {
+                path: 'items',
+                query: {
+                  bool: {
+                    should: [
+                      {
+                        multi_match: {
+                          query: 'B 12*',
+                          fields: ['items.shelfMark'],
+                          type: 'phrase'
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
@@ -1582,5 +1503,8 @@ module.exports = {
   divisionAdj,
   divisionAll,
   divisionAny,
-  divisionExact
+  divisionExact,
+  englishExactLanguageQuery,
+  wildcardQueryNoShelfMark,
+  wildcardQueryWithShelfMark
 }

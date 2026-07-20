@@ -39,7 +39,9 @@ jobs:
           node-version-file: ".nvmrc"
       - name: npm install
         run: npm i
-      - name: Run integration tests
+      - name: Run delivery location by barcode integration tests
         env:
-          ENV: "qa"
+          ENV: ${{env.ENV}}
         run: node test/integration/delivery-locations-by-barcode.test.js
+      - name: Run NYQL API tests
+        run: npm run nyql-api-test

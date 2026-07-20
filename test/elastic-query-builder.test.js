@@ -2,6 +2,7 @@ const { expect } = require('chai')
 
 const ElasticQueryBuilder = require('../lib/elasticsearch/elastic-query-builder')
 const ApiRequest = require('../lib/api-request')
+const { verifyFilterFields } = require('./utils.js')
 
 describe('ElasticQueryBuilder', () => {
   describe('buildFilterClause', () => {
@@ -29,57 +30,57 @@ describe('ElasticQueryBuilder', () => {
       buildFilterClause: ElasticQueryBuilder.prototype.buildFilterClause
     })
     it('can handle (multiple) single value, single match field filters, as arrays', () => {
+      const filterFields = ['buildingLocation', 'subjectLiteral']
       const request = new ApiRequest({ filters: { buildingLocation: ['toast'], subjectLiteral: ['spaghetti'] } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: { term: { buildingLocationIds: 'toast' } }
-        },
-        {
-          path: undefined,
-          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(2)
+      verifyFilterFields(filterFields, simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+      })
     })
     it('can handle (multiple) single value, single match field filters, strings', () => {
       const request = new ApiRequest({ filters: { buildingLocation: 'toast', subjectLiteral: 'spaghetti' } })
       const mockQueryBuilder = mockQueryBuilderFactory(request)
+      const filterFields = ['buildingLocation', 'subjectLiteral']
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['buildingLocation', 'subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: { term: { buildingLocationIds: 'toast' } }
-        },
-        {
-          path: undefined,
-          clause: { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(2)
+      verifyFilterFields(filterFields, simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+      })
     })
     it('can handle multiple values', () => {
-      const request = new ApiRequest({ filters: { subjectLiteral: ['spaghetti', 'meatballs'] } })
+      const requestBody = { filters: { subjectLiteral: ['spaghetti', 'meatballs'] } }
+      const request = new ApiRequest(requestBody)
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['subjectLiteral'])
-      expect(simpleMatchFilters).to.deep.equal([
-        {
-          path: undefined,
-          clause: {
-            bool: {
-              should: [
-                { terms: { 'subjectLiteral.raw': ['spaghetti', 'spaghetti.'] } },
-                { terms: { 'subjectLiteral.raw': ['meatballs', 'meatballs.'] } }
-              ]
-            }
-          }
-        }
-      ])
+      expect(simpleMatchFilters.length).to.equal(Object.keys(requestBody.filters).length)
+      verifyFilterFields(['subjectLiteral'], simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+        expect(filter.clause.bool.should.length).to.equal(requestBody.filters.subjectLiteral.length)
+      })
     })
     it('can handle packed values', () => {
-      const request = new ApiRequest({ filters: { language: ['spanish', 'finnish'] } })
+      const requestBody = { filters: { language: ['spanish', 'finnish'] } }
+      const request = new ApiRequest(requestBody)
       const mockQueryBuilder = mockQueryBuilderFactory(request)
       const simpleMatchFilters = mockQueryBuilder.buildMatchOperatorFilterQueries(['language'])
+      expect(simpleMatchFilters.length).to.equal(Object.keys(requestBody.filters).length)
+      verifyFilterFields(['language'], simpleMatchFilters)
+      simpleMatchFilters.forEach(filter => {
+        expect(filter.path).to.equal(undefined)
+        expect(filter.clause).not.to.equal(undefined)
+        expect(filter.clause.bool.should.length).to.equal(requestBody.filters.language.length)
+        for (const packedValueShouldTerms in filter.clause.bool.should.bool) {
+          expect(packedValueShouldTerms.length).to.equal(2)
+        }
+      })
       expect(simpleMatchFilters).to.deep.equal([
         {
           path: undefined,
@@ -216,6 +217,42 @@ describe('ElasticQueryBuilder', () => {
     })
   })
 
+  describe('search_scope genre', () => {
+    it('generates a "genre" query', () => {
+      const request = new ApiRequest({ q: 'toast', search_scope: 'genre' })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect a multi_match on term:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
+        .include({ 'bool.must[0].multi_match.query': 'toast' })
+        .include({ 'bool.must[0].multi_match.fields[0]': 'genreForm^2' })
+
+      // Expect only common boosting clauses
+      expect(inst.query.toJson().bool.should)
+        .to.be.a('array')
+        .have.lengthOf(4)
+    })
+  })
+
+  describe('search_scope series', () => {
+    it('generates a "series" query', () => {
+      const request = new ApiRequest({ q: 'toast', search_scope: 'series' })
+      const inst = ElasticQueryBuilder.forApiRequest(request)
+
+      // Expect a multi_match on term:
+      expect(inst.query.toJson()).to.nested
+        .include({ 'bool.must[0].multi_match.type': 'cross_fields' })
+        .include({ 'bool.must[0].multi_match.query': 'toast' })
+        .include({ 'bool.must[0].multi_match.fields[0]': 'series^2' })
+
+      // Expect only common boosting clauses
+      expect(inst.query.toJson().bool.should)
+        .to.be.a('array')
+        .have.lengthOf(4)
+    })
+  })
+
   describe('multiple id query', () => {
     it('supports ids=x,y,z', () => {
       const request = new ApiRequest({ q: '', ids: ['id_a', 'id_b'] })
@@ -256,15 +293,6 @@ describe('ElasticQueryBuilder', () => {
       // Expect the top level bool to now have a `filter` prop with the user filter:
       expect(inst.query.toJson()).to.nested
         .include({ 'bool.filter[0].term.buildingLocationIds': 'ma' })
-    })
-
-    it('applies genre filter to query', () => {
-      const request = new ApiRequest({ q: 'toast', filters: { genreForm: 'Maps' } })
-      const inst = ElasticQueryBuilder.forApiRequest(request)
-
-      // Expect the top level bool to now have a `filter` prop with the genreForm filter:
-      expect(inst.query.toJson()).to.nested
-        .include({ 'bool.filter[0].term.genreForm\\.raw': 'Maps' })
     })
 
     it('supports contributor + role', () => {
@@ -336,7 +364,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'title.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 50
+              boost: 50,
+              _name: 'prefix title.keywordLowercasedStripped'
             }
           }
         })
@@ -364,10 +393,48 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'creatorLiteralNormalized.keywordLowercased': {
               value: 'toast',
-              boost: 100
+              boost: 100,
+              _name: 'prefix creatorLiteralNormalized.keywordLowercased'
             }
           }
         })
+      })
+    })
+
+    describe('series=', () => {
+      it('applies series clauses to query', () => {
+        const request = new ApiRequest({ series: 'toast' })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Assert there's a multi-match:
+        expect(query).to.nested
+          .include({
+            // Multi-match on series fields:
+            'bool.must[0].bool.must[0].multi_match.fields[0]': 'series^2',
+            'bool.must[0].bool.must[0].multi_match.fields[4]': 'seriesUniformTitle',
+            'bool.must[0].bool.must[0].multi_match.fields[7]': 'seriesAddedEntry',
+            'bool.must[0].bool.must[0].multi_match.query': 'toast'
+          })
+      })
+    })
+
+    describe('genre=', () => {
+      it('applies genre clauses to query', () => {
+        const request = new ApiRequest({ genre: 'toast' })
+        const inst = ElasticQueryBuilder.forApiRequest(request)
+
+        const query = inst.query.toJson()
+
+        // Assert there's a multi-match:
+        expect(query).to.nested
+          .include({
+            // Multi-match on genre fields:
+            'bool.must[0].bool.must[0].multi_match.fields[0]': 'genreForm^2',
+            'bool.must[0].bool.must[0].multi_match.fields[1]': 'genreForm.folded',
+            'bool.must[0].bool.must[0].multi_match.query': 'toast'
+          })
       })
     })
 
@@ -382,35 +449,39 @@ describe('ElasticQueryBuilder', () => {
         expect(query.bool.must[0].bool.should[0])
         expect(query.bool.must[0].bool.should[0]).to.deep.equal({
           prefix: {
-            'subjectLiteral.raw': {
+            'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 1
+              boost: 1,
+              _name: 'prefix subjectLiteral.keywordLowercasedStripped'
             }
           }
         })
         expect(query.bool.must[0].bool.should[1]).to.deep.equal({
           prefix: {
-            'parallelSubjectLiteral.raw': {
+            'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 1
+              boost: 1,
+              _name: 'prefix parallelSubjectLiteral.keywordLowercasedStripped'
             }
           }
         })
 
         expect(query.bool.should[0]).to.deep.equal({
           term: {
-            'subjectLiteral.raw': {
+            'subjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 50
+              boost: 50,
+              _name: 'term subjectLiteral.keywordLowercasedStripped'
             }
           }
         })
 
         expect(query.bool.should[1]).to.deep.equal({
           term: {
-            'parallelSubjectLiteral.raw': {
+            'parallelSubjectLiteral.keywordLowercasedStripped': {
               value: 'toast',
-              boost: 50
+              boost: 50,
+              _name: 'term parallelSubjectLiteral.keywordLowercasedStripped'
             }
           }
         })
@@ -447,7 +518,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'title.keywordLowercasedStripped': {
               value: 'title value',
-              boost: 50
+              boost: 50,
+              _name: 'prefix title.keywordLowercasedStripped'
             }
           }
         })
@@ -459,7 +531,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'creatorLiteralNormalized.keywordLowercased': {
               value: 'contributor value',
-              boost: 100
+              boost: 100,
+              _name: 'prefix creatorLiteralNormalized.keywordLowercased'
             }
           }
         })
@@ -500,7 +573,8 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'title.keywordLowercasedStripped': {
               value: 'title value',
-              boost: 50
+              boost: 50,
+              _name: 'prefix title.keywordLowercasedStripped'
             }
           }
         })
@@ -512,12 +586,13 @@ describe('ElasticQueryBuilder', () => {
           prefix: {
             'creatorLiteralNormalized.keywordLowercased': {
               value: 'contributor value',
-              boost: 100
+              boost: 100,
+              _name: 'prefix creatorLiteralNormalized.keywordLowercased'
             }
           }
         })
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020',
@@ -545,7 +620,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
@@ -568,7 +643,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-12-31',
@@ -591,7 +666,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
@@ -614,7 +689,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
@@ -637,7 +712,7 @@ describe('ElasticQueryBuilder', () => {
 
         const query = inst.query.toJson()
 
-        // Asset filter clauses:
+        // Assert filter clauses:
         expect(query).to.nested.include({
           'bool.filter[0].bool.should[0].nested.path': 'dates',
           'bool.filter[0].bool.should[0].nested.query.range.dates\\.range.gte': '2020-01',
