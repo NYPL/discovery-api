@@ -19,7 +19,7 @@ describe('Discovery API - NYQL keyword operator tests', function () {
     expect(res.body.itemListElement).to.have.length(1)
   })
 
-  it('keyword any "pterosaur pterosaurs" returns at least as many results as either term alone', async () => {
+  it('keyword any "pterosaur pterosaurs" returns all the results from either search.', async () => {
     const [pterosaurRes, pterosaursRes, anyRes] = await Promise.all([
       search({ q: 'keyword = "pterosaur"' }),
       search({ q: 'keyword = "pterosaurs"' }),
@@ -41,7 +41,7 @@ describe('Discovery API - NYQL keyword operator tests', function () {
     pterosaursIds.forEach((id) => expect(anyIds).to.include(id))
   })
 
-  it('keyword all "pterosaur pterosaurs" returns no more results than either term alone', async () => {
+  it('keyword all "pterosaur pterosaurs" returns only results containing both terms', async () => {
     const [pterosaurRes, pterosaursRes, allRes] = await Promise.all([
       search({ q: 'keyword = "pterosaur"' }),
       search({ q: 'keyword = "pterosaurs"' }),
