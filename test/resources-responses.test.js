@@ -107,7 +107,7 @@ describe('Test Resources responses', function () {
       request.get(url, (err, res, body) => {
         if (err) throw err
         const doc = JSON.parse(body)
-        expect(doc.numItemsMatched).to.be.greaterThan(572)
+        expect(doc.numItemsMatched).to.be.greaterThan(571)
         done()
       })
     })

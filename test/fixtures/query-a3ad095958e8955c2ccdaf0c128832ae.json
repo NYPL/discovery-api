@@ -1,5 +1,5 @@
 {
-  "took": 2565,
+  "took": 35,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b20970375",
-        "_score": 4036.3945,
+        "_score": 4036.352,
         "_source": {
           "extent": [
             "119 pages : illustrations (color) ;"
@@ -96,7 +96,7 @@
           "contributors_displayPacked": [
             "Sung, Evan||Sung, Evan, photographer"
           ],
-          "updatedAt": 1779503645748,
+          "updatedAt": 1784240436268,
           "publicationStatement": [
             "London : Phaidon Press Limited, 2015.",
             "©2015"
@@ -152,9 +152,6 @@
               "label": "Includes index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Toast (Bread)"
           ],
           "numItemDatesParsed": [
             0
@@ -238,7 +235,7 @@
           ]
         },
         "sort": [
-          4036.3945,
+          4036.352,
           "b20970375"
         ],
         "matched_queries": [
@@ -260,7 +257,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b20970375",
                   "_nested": {
                     "field": "items",
@@ -277,6 +274,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -285,6 +285,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "dueDate": [
                       "2025-06-28"
@@ -361,9 +364,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb2817873",
-        "_score": 4027.3254,
+        "_score": 4027.2827,
         "_source": {
           "extent": [
             "191 p. ;"
@@ -428,7 +431,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779535530981,
+          "updatedAt": 1784290242024,
           "publicationStatement": [
             "Kraków : Wydawn. Literackie, 1967."
           ],
@@ -530,7 +533,7 @@
           ]
         },
         "sort": [
-          4027.3254,
+          4027.2827,
           "pb2817873"
         ],
         "matched_queries": [
@@ -550,7 +553,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb2817873",
                   "_nested": {
                     "field": "items",
@@ -642,9 +645,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb2847934",
-        "_score": 4027.3254,
+        "_score": 4027.2827,
         "_source": {
           "extent": [
             "103 p. ;"
@@ -704,7 +707,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779535957525,
+          "updatedAt": 1784290812557,
           "publicationStatement": [
             "London : Oberon, 1999."
           ],
@@ -818,7 +821,7 @@
           ]
         },
         "sort": [
-          4027.3254,
+          4027.2827,
           "pb2847934"
         ],
         "matched_queries": [
@@ -838,7 +841,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb2847934",
                   "_nested": {
                     "field": "items",
@@ -930,9 +933,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11361121",
-        "_score": 3922.242,
+        "_score": 3922.1997,
         "_source": {
           "extent": [
             "191 p. ;"
@@ -993,7 +996,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779330618050,
+          "updatedAt": 1784090868481,
           "publicationStatement": [
             "Krakow : Wydawnictwo Literackie, 1974."
           ],
@@ -1096,7 +1099,7 @@
           ]
         },
         "sort": [
-          3922.242,
+          3922.1997,
           "b11361121"
         ],
         "matched_queries": [
@@ -1118,7 +1121,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11361121",
                   "_nested": {
                     "field": "items",
@@ -1135,6 +1138,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -1143,6 +1149,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -1210,9 +1219,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b17982563",
-        "_score": 3922.242,
+        "_score": 3922.1997,
         "_source": {
           "note": [
             {
@@ -1223,9 +1232,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Artists' books"
           ],
           "numItemDatesParsed": [
             0
@@ -1287,7 +1293,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779479300938,
+          "updatedAt": 1784214161286,
           "publicationStatement": [
             "Ithaca, NY: Julia Featheringill, 2001"
           ],
@@ -1353,7 +1359,7 @@
           ]
         },
         "sort": [
-          3922.242,
+          3922.1997,
           "b17982563"
         ],
         "matched_queries": [
@@ -1375,7 +1381,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b17982563",
                   "_nested": {
                     "field": "items",
@@ -1395,6 +1401,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Featheringill%2C+Julia&CallNumber=MEMZ+%28Featheringill%29+09-981&Date=++++&Form=30&Genre=book+non-circ&ItemInfo1=Permit+needed&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db17982563&ItemISxN=i174467412&ItemPlace=Ithaca%2C+NY%3A+Julia+Featheringill%2C+2001&Location=Schwarzman+Prints+and+Photographs+Division&ReferenceNumber=b17982563x&Site=SASPR&Title=Toast"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -1403,6 +1412,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
+                    ],
+                    "collectionId": [
+                      "mau"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -1468,9 +1480,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b17759113",
-        "_score": 3921.242,
+        "_score": 3921.1997,
         "_source": {
           "extent": [
             "1 film reel (12 min.) : sd., col. ;"
@@ -1515,7 +1527,7 @@
             "Hoffman, Daniel||Hoffman, Daniel, director",
             "Earth Chronicles (Firm)||Earth Chronicles (Firm)"
           ],
-          "updatedAt": 1779477831727,
+          "updatedAt": 1784212596809,
           "publicationStatement": [
             "[S.l.] : [s.n.], 1974."
           ],
@@ -1564,10 +1576,6 @@
               "label": "Narration, Michael Ryan ; music, Klaus Schulze, Achim Reichel, Kraftwerk.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Fuel",
-            "Energy conservation"
           ],
           "numItemDatesParsed": [
             0
@@ -1641,7 +1649,7 @@
           ]
         },
         "sort": [
-          3921.242,
+          3921.1997,
           "b17759113"
         ],
         "matched_queries": [
@@ -1662,7 +1670,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b17759113",
                   "_nested": {
                     "field": "items",
@@ -1682,6 +1690,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=M16+5213+T+C.1+REEL+1+OF+1&Date=1974&Form=30&Genre=rfvc+-+film&ItemInfo1=By+appointment+only&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db17759113&ItemISxN=i239658231&ItemNumber=33433081452009&ItemPlace=%5BS.l.%5D&ItemPublisher=%5Bs.n.%5D%2C+1974.&ItemVolume=C.1+REEL+1+OF+1&Location=ReCAP&ReferenceNumber=b177591134&Site=LPARF&SubLocation=rcpr8&Title=Toast"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:72",
@@ -1690,6 +1701,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:72||rfvc - film"
+                    ],
+                    "collectionId": [
+                      "pav"
                     ],
                     "enumerationChronology": [
                       "C.1 REEL 1 OF 1"
@@ -1767,9 +1781,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9928178733506421",
-        "_score": 3913.174,
+        "_score": 3913.131,
         "_source": {
           "extent": [
             "191 p. ;"
@@ -1836,7 +1850,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779621862656,
+          "updatedAt": 1784400768328,
           "publicationStatement": [
             "Kraków : Wydawn. Literackie, 1967."
           ],
@@ -1939,7 +1953,7 @@
           ]
         },
         "sort": [
-          3913.174,
+          3913.131,
           "pb9928178733506421"
         ],
         "matched_queries": [
@@ -1959,7 +1973,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9928178733506421",
                   "_nested": {
                     "field": "items",
@@ -2051,9 +2065,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9928479343506421",
-        "_score": 3913.174,
+        "_score": 3913.131,
         "_source": {
           "extent": [
             "103 p. ;"
@@ -2129,7 +2143,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779622002540,
+          "updatedAt": 1784401012403,
           "publicationStatement": [
             "London : Oberon, 1999."
           ],
@@ -2248,7 +2262,7 @@
           ]
         },
         "sort": [
-          3913.174,
+          3913.131,
           "pb9928479343506421"
         ],
         "matched_queries": [
@@ -2268,7 +2282,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9928479343506421",
                   "_nested": {
                     "field": "items",
@@ -2360,9 +2374,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990052336220203941",
-        "_score": 2330.5696,
+        "_score": 2330.543,
         "_source": {
           "extent": [
             "187 p."
@@ -2422,7 +2436,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779586119033,
+          "updatedAt": 1784355449763,
           "publicationStatement": [
             "Kraków, Wydawnictwo Literackie [1964]"
           ],
@@ -2534,7 +2548,7 @@
           ]
         },
         "sort": [
-          2330.5696,
+          2330.543,
           "hb990052336220203941"
         ],
         "matched_queries": [
@@ -2553,7 +2567,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990052336220203941",
                   "_nested": {
                     "field": "items",
@@ -2583,12 +2597,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:Slav 7147.24.2110 copy ",
+                      "urn:shelfmark:Slav 7147.24.2110",
                       "urn:barcode:HNAASE"
                     ],
                     "identifierV2": [
                       {
-                        "value": "Slav 7147.24.2110 copy ",
+                        "value": "Slav 7147.24.2110",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -2612,15 +2626,15 @@
                       "Slav 7147.24.2110"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "Slav 7147.24.2110 copy "
+                      "Slav 7147.24.2110"
                     ],
-                    "shelfMark_sort": "aSlav 7147.24.2110 copy ",
+                    "shelfMark_sort": "aSlav 7147.24.002110",
                     "status": [
                       {
                         "id": "status:a",
@@ -2645,9 +2659,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b17133475",
-        "_score": 881.34686,
+        "_score": 881.338,
         "_source": {
           "extent": [
             "1 v. (unpaged) : col. ill. ;"
@@ -2710,7 +2724,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779474262846,
+          "updatedAt": 1784208470175,
           "publicationStatement": [
             "Boston : Houghton Mifflin, c1997."
           ],
@@ -2756,12 +2770,6 @@
           ],
           "physicalDescription": [
             "1 v. (unpaged) : col. ill. ; 28 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Dogs",
-            "Dogs -- Fiction",
-            "Wishes",
-            "Wishes -- Fiction"
           ],
           "numItemDatesParsed": [
             0
@@ -2841,7 +2849,7 @@
           ]
         },
         "sort": [
-          881.34686,
+          881.338,
           "b17133475"
         ],
         "matched_queries": [
@@ -2861,7 +2869,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b17133475",
                   "_nested": {
                     "field": "items",
@@ -2878,6 +2886,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -2886,6 +2897,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -2962,9 +2976,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b21290385",
-        "_score": 797.53345,
+        "_score": 797.52344,
         "_source": {
           "note": [
             {
@@ -2983,18 +2997,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Attica Correctional Facility",
-            "Attica Correctional Facility -- Drama",
-            "Theater",
-            "Theater -- New York (State)",
-            "Theater -- New York (State) -- New York",
-            "Theater -- New York (State) -- New York -- Reviews",
-            "Andersen, Lemon. ToasT",
-            "Public Theater (New York, N.Y.)",
-            "Prisons",
-            "Prisons -- Drama"
           ],
           "numItemDatesParsed": [
             0
@@ -3051,7 +3053,7 @@
           "contributors_displayPacked": [
             "New York Public Library for the Performing Arts. Billy Rose Theatre Division||New York Public Library for the Performing Arts. Billy Rose Theatre Division, compiler"
           ],
-          "updatedAt": 1779506982146,
+          "updatedAt": 1784244261293,
           "genreForm": [
             "Reviews (document genre)."
           ],
@@ -3115,7 +3117,7 @@
           ]
         },
         "sort": [
-          797.53345,
+          797.52344,
           "b21290385"
         ],
         "matched_queries": [
@@ -3135,7 +3137,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b21290385",
                   "_nested": {
                     "field": "items",
@@ -3152,6 +3154,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:22",
@@ -3160,6 +3165,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:22||clipping files"
+                    ],
+                    "collectionId": [
+                      "pat"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -3216,9 +3224,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b21501833",
-        "_score": 797.53345,
+        "_score": 797.52344,
         "_source": {
           "note": [
             {
@@ -3242,21 +3250,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Theater",
-            "Theater -- New York (State)",
-            "Theater -- New York (State) -- New York",
-            "Theater -- New York (State) -- New York -- Reviews",
-            "Bean, Richard, 1956- Toast",
-            "Brits Off-Broadway",
-            "59E59 Theaters (New York, N.Y.)",
-            "Factories",
-            "Factories -- England",
-            "Factories -- England -- Drama",
-            "Employees",
-            "Employees -- England",
-            "Employees -- England -- Drama"
           ],
           "numItemDatesParsed": [
             0
@@ -3313,7 +3306,7 @@
           "contributors_displayPacked": [
             "New York Public Library for the Performing Arts. Billy Rose Theatre Division||New York Public Library for the Performing Arts. Billy Rose Theatre Division, compiler"
           ],
-          "updatedAt": 1779509062398,
+          "updatedAt": 1784246637732,
           "genreForm": [
             "Reviews (document genre)."
           ],
@@ -3378,7 +3371,7 @@
           ]
         },
         "sort": [
-          797.53345,
+          797.52344,
           "b21501833"
         ],
         "matched_queries": [
@@ -3398,7 +3391,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b21501833",
                   "_nested": {
                     "field": "items",
@@ -3415,6 +3408,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:22",
@@ -3423,6 +3419,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:22||clipping files"
+                    ],
+                    "collectionId": [
+                      "pat"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -3479,9 +3478,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b14570561",
-        "_score": 796.53345,
+        "_score": 796.52344,
         "_source": {
           "extent": [
             "[97] p., ill. ;"
@@ -3537,7 +3536,7 @@
           "contributors_displayPacked": [
             "Dwiggins, Clare Victor||Dwiggins, Clare Victor"
           ],
-          "updatedAt": 1779410746472,
+          "updatedAt": 1784150334370,
           "publicationStatement": [
             "Philadelphia : John C. Winston Co., c1905."
           ],
@@ -3588,9 +3587,6 @@
               "label": "Illustrated t.-p.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Toasts"
           ],
           "numItemDatesParsed": [
             0
@@ -3657,7 +3653,7 @@
           ]
         },
         "sort": [
-          796.53345,
+          796.52344,
           "b14570561"
         ],
         "matched_queries": [
@@ -3680,9 +3676,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b21965138",
-        "_score": 755.14124,
+        "_score": 755.132,
         "_source": {
           "extent": [
             "1 folder. "
@@ -3696,10 +3692,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Filloux-Bennett, Henry. Toast",
-            "Slater, Nigel. Toast"
           ],
           "numItemDatesParsed": [
             0
@@ -3742,7 +3734,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779514485816,
+          "updatedAt": 1784252831761,
           "genreForm": [
             "Programs."
           ],
@@ -3789,7 +3781,7 @@
           ]
         },
         "sort": [
-          755.14124,
+          755.132,
           "b21965138"
         ],
         "matched_queries": [
@@ -3809,7 +3801,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b21965138",
                   "_nested": {
                     "field": "items",
@@ -3829,6 +3821,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=*T-PRG+%28Toast+%28Filloux-Bennett%29%29&Form=30&Genre=archival+material&ItemInfo1=Supervised+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db21965138&ItemISxN=i373192253&ItemNumber=33433120459403&Location=Performing+Arts+Theatre+Division&ReferenceNumber=b219651383&Site=LPATH&Title=Toast+%28Filloux-Bennett%29+%3A+programs."
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:21",
@@ -3837,6 +3832,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:21||archival material"
+                    ],
+                    "collectionId": [
+                      "pat"
                     ],
                     "formatLiteral": [
                       "Archival mix"
@@ -3901,9 +3899,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18576841",
-        "_score": 754.14124,
+        "_score": 754.132,
         "_source": {
           "extent": [
             "386 pp."
@@ -3952,7 +3950,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779483855713,
+          "updatedAt": 1784218749725,
           "publicationStatement": [
             "Wolowiec : Czarne, 2010"
           ],
@@ -4019,7 +4017,7 @@
           ]
         },
         "sort": [
-          754.14124,
+          754.132,
           "b18576841"
         ],
         "matched_queries": [
@@ -4042,9 +4040,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18806309",
-        "_score": 754.14124,
+        "_score": 754.132,
         "_source": {
           "extent": [
             "386 p. : map ;"
@@ -4113,7 +4111,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779485114438,
+          "updatedAt": 1784220098697,
           "publicationStatement": [
             "Wołowiec : Wydawn. Czarne, 2010."
           ],
@@ -4172,10 +4170,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Seria Reportaż.||Seria Reportaż."
-          ],
-          "subjectLiteral_exploded": [
-            "Caucasus",
-            "Caucasus -- Civilization"
           ],
           "numItemDatesParsed": [
             0
@@ -4257,7 +4251,7 @@
           ]
         },
         "sort": [
-          754.14124,
+          754.132,
           "b18806309"
         ],
         "matched_queries": [
@@ -4276,7 +4270,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18806309",
                   "_nested": {
                     "field": "items",
@@ -4293,6 +4287,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -4301,6 +4298,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "dueDate": [
                       "2025-01-02"
@@ -4380,9 +4380,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11302028",
-        "_score": 748.0122,
+        "_score": 748.00244,
         "_source": {
           "extent": [
             "vi, 301 p. : ill. ;"
@@ -4451,7 +4451,7 @@
           "contributors_displayPacked": [
             "California Babies' and Children's Hospital. Women's Auxiliary||California Babies' and Children's Hospital. Women's Auxiliary"
           ],
-          "updatedAt": 1779329552574,
+          "updatedAt": 1784089597632,
           "publicationStatement": [
             "Los Angeles, Calif. : Women's Auxiliary of the California Babies' and Children's Hospital, 1950."
           ],
@@ -4499,11 +4499,6 @@
               "label": "Includes index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Cooking, American",
-            "Cooking, American -- California",
-            "Cooking, American -- California -- Los Angeles"
           ],
           "numItemDatesParsed": [
             0
@@ -4572,7 +4567,7 @@
           ]
         },
         "sort": [
-          748.0122,
+          748.00244,
           "b11302028"
         ],
         "matched_queries": [
@@ -4591,7 +4586,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11302028",
                   "_nested": {
                     "field": "items",
@@ -4608,6 +4603,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -4616,6 +4614,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -4683,21 +4684,44 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11373665",
-        "_score": 748.0122,
+        "_score": 748.00244,
         "_source": {
           "extent": [
             "1 ms. score (6 p.) ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Copyist's ms., in ink.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "For voice and piano.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Stamp on pp. [1] & 6: Fred P. Champlin, Autographing and Copying.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "language": [
             {
               "id": "lang:eng",
               "label": "English"
             }
+          ],
+          "numItemsTotal": [
+            1
           ],
           "buildingLocationIds": [
             "pa"
@@ -4706,19 +4730,41 @@
             1918
           ],
           "parallelSeriesAddedEntry": [],
+          "title": [
+            "The toast"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "JPB 84-312"
           ],
+          "createdString": [
+            "1918"
+          ],
+          "creatorLiteral": [
+            "Sousa, John Philip, 1854-1932"
+          ],
           "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Burnside, R. H. (Robert Hubberthorne), 1873-1952",
+            "Champlin, Fred P."
+          ],
           "dateStartYear": [
             1918
           ],
           "parallelContributors_displayPacked": [],
           "parallelCreatorLiteral": [
             null
+          ],
+          "idOclc": [
+            "NYPG004000622-C"
           ],
           "identifierV2": [
             {
@@ -4747,7 +4793,7 @@
             "Burnside, R. H. (Robert Hubberthorne), 1873-1952||Burnside, R. H. (Robert Hubberthorne), 1873-1952",
             "Champlin, Fred P.||Champlin, Fred P."
           ],
-          "updatedAt": 1779330819635,
+          "updatedAt": 1784091105254,
           "publicationStatement": [
             "[ca. 1918]"
           ],
@@ -4760,6 +4806,24 @@
           ],
           "creators_displayPacked": [
             "Sousa, John Philip, 1854-1932||Sousa, John Philip, 1854-1932"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:not",
+              "label": "Notated music"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1918"
           ],
           "dates": [
             {
@@ -4781,102 +4845,36 @@
           "subjectLiteral": [
             "Songs (Medium voice) with piano."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "d",
-          "collectionIds": [
-            "pam"
-          ],
-          "physicalDescription": [
-            "1 ms. score (6 p.) ; 34 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Copyist's ms., in ink.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "For voice and piano.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "Stamp on pp. [1] & 6: Fred P. Champlin, Autographing and Copying.",
-              "type": "bf:Note"
-            }
-          ],
-          "subjectLiteral_exploded": [
-            "Songs (Medium voice) with piano"
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "The toast"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1918"
-          ],
-          "creatorLiteral": [
-            "Sousa, John Philip, 1854-1932"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "contributorLiteral": [
-            "Burnside, R. H. (Robert Hubberthorne), 1873-1952",
-            "Champlin, Fred P."
-          ],
-          "idOclc": [
-            "NYPG004000622-C"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:not",
-              "label": "Notated music"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1918"
-          ],
           "titleDisplay": [
             "The toast / words by R.J. Burnside ; music by John Philip Sousa."
           ],
           "uri": "b11373665",
+          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelContributorLiteral": [
             null,
             null
           ],
+          "parallelSubjectLiteral": [],
+          "formatId": "d",
           "recordTypeId": "d",
+          "collectionIds": [
+            "pam"
+          ],
           "issuance": [
             {
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
           ],
+          "physicalDescription": [
+            "1 ms. score (6 p.) ; 34 cm."
+          ],
           "dimensions": [
             "34 cm."
           ]
         },
         "sort": [
-          748.0122,
+          748.00244,
           "b11373665"
         ],
         "matched_queries": [
@@ -4895,7 +4893,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11373665",
                   "_nested": {
                     "field": "items",
@@ -4915,6 +4913,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Sousa%2C+John+Philip%2C+1854-1932&CallNumber=JPB+84-312&Date=1918&Form=30&Genre=book+non-circ&ItemInfo1=Supervised+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db11373665&ItemISxN=i158970068&ItemPublisher=%5Bca.+1918%5D&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b113736654&Site=LPAMR&Title=The+toast"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -4923,6 +4924,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Manuscript notated music"
@@ -4979,9 +4983,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18054582",
-        "_score": 748.0122,
+        "_score": 748.00244,
         "_source": {
           "extent": [
             "1 videodisc (approximately 52 min.) : sound, color ;"
@@ -5075,7 +5079,7 @@
             "Zweites Deutsches Fernsehen||Zweites Deutsches Fernsehen",
             "Association relative à la télévision européenne||Association relative à la télévision européenne"
           ],
-          "updatedAt": 1779480096602,
+          "updatedAt": 1784215017810,
           "publicationStatement": [
             "Oley, PA : Bullfrog Films, [2005]"
           ],
@@ -5146,13 +5150,6 @@
               "label": "In English.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Love",
-            "Love -- Drama",
-            "Television operas",
-            "Vignettes",
-            "Vignettes -- Drama"
           ],
           "numItemDatesParsed": [
             0
@@ -5296,7 +5293,7 @@
           ]
         },
         "sort": [
-          748.0122,
+          748.00244,
           "b18054582"
         ],
         "matched_queries": [
@@ -5315,7 +5312,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18054582",
                   "_nested": {
                     "field": "items",
@@ -5332,6 +5329,9 @@
                     "accessMessage_packed": [
                       "accessMessage:a||By appointment only"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:75",
@@ -5340,6 +5340,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:75||dvd"
+                    ],
+                    "collectionId": [
+                      "pav"
                     ],
                     "enumerationChronology": [
                       "C.1"
@@ -5407,9 +5410,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11373666",
-        "_score": 747.53345,
+        "_score": 747.52344,
         "_source": {
           "extent": [
             "1 ms. score (5 leaves) ;"
@@ -5443,10 +5446,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Sousa, John Philip, 1854-1932",
-            "Sousa, John Philip, 1854-1932 -- Manuscripts"
           ],
           "numItemDatesParsed": [
             0
@@ -5523,7 +5522,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779330819635,
+          "updatedAt": 1784091105254,
           "publicationStatement": [
             "1918 Mar. 15"
           ],
@@ -5601,7 +5600,7 @@
           ]
         },
         "sort": [
-          747.53345,
+          747.52344,
           "b11373666"
         ],
         "matched_queries": [
@@ -5620,7 +5619,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11373666",
                   "_nested": {
                     "field": "items",
@@ -5640,6 +5639,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Sousa%2C+John+Philip%2C+1854-1932&CallNumber=JPB+84-313&Date=1918&Form=30&Genre=book+non-circ&ItemInfo1=Supervised+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db11373666&ItemISxN=i15897007x&ItemPublisher=1918+Mar.+15&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b113736666&Site=LPAMR&Title=The+toast"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -5648,6 +5650,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Manuscript notated music"
@@ -5704,112 +5709,12 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11373667",
-        "_score": 747.53345,
+        "_score": 747.52344,
         "_source": {
           "extent": [
             "1 ms. score (14 p.) ;"
-          ],
-          "nyplSource": [
-            "sierra-nypl"
-          ],
-          "language": [
-            {
-              "id": "lang:zxx",
-              "label": "No linguistic content"
-            }
-          ],
-          "buildingLocationIds": [
-            "pa"
-          ],
-          "createdYear": [
-            1918
-          ],
-          "parallelSeriesAddedEntry": [],
-          "type": [
-            "nypl:Item"
-          ],
-          "shelfMark": [
-            "JPB 84-314"
-          ],
-          "parallelCreators_displayPacked": [],
-          "dateStartYear": [
-            1918
-          ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "JPB 84-314"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "11373667"
-            },
-            {
-              "type": "nypl:Oclc",
-              "value": "NYPG004000624-C"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "NNSZ00405624"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp1381623"
-            }
-          ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Burnside, R. H. (Robert Hubberthorne), 1873-1952||Burnside, R. H. (Robert Hubberthorne), 1873-1952"
-          ],
-          "updatedAt": 1779330819635,
-          "publicationStatement": [
-            "1918 Mar. 6"
-          ],
-          "identifier": [
-            "urn:shelfmark:JPB 84-314",
-            "urn:bnum:11373667",
-            "urn:oclc:NYPG004000624-C",
-            "urn:identifier:NNSZ00405624",
-            "urn:identifier:(WaOLN)nyp1381623"
-          ],
-          "creators_displayPacked": [
-            "Sousa, John Philip, 1854-1932||Sousa, John Philip, 1854-1932"
-          ],
-          "dates": [
-            {
-              "range": {
-                "lt": "1919",
-                "gte": "1918"
-              },
-              "raw": "850627s1918    nyusga         n    zxx dcdm a ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "seriesAddedEntry_displayPacked": [],
-          "subjectLiteral": [
-            "Sousa, John Philip, 1854-1932 -- Manuscripts.",
-            "Songs (Medium voice) with orchestra -- Scores."
-          ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "d",
-          "collectionIds": [
-            "pam"
-          ],
-          "physicalDescription": [
-            "1 ms. score (14 p.) ; 34 cm."
           ],
           "note": [
             {
@@ -5838,23 +5743,39 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Sousa, John Philip, 1854-1932",
-            "Sousa, John Philip, 1854-1932 -- Manuscripts",
-            "Songs (Medium voice) with orchestra",
-            "Songs (Medium voice) with orchestra -- Scores"
+          "nyplSource": [
+            "sierra-nypl"
           ],
           "numItemDatesParsed": [
             0
           ],
+          "language": [
+            {
+              "id": "lang:zxx",
+              "label": "No linguistic content"
+            }
+          ],
           "numItemsTotal": [
             1
           ],
+          "buildingLocationIds": [
+            "pa"
+          ],
+          "createdYear": [
+            1918
+          ],
+          "parallelSeriesAddedEntry": [],
           "title": [
             "The toast"
           ],
+          "type": [
+            "nypl:Item"
+          ],
           "numItemVolumesParsed": [
             0
+          ],
+          "shelfMark": [
+            "JPB 84-314"
           ],
           "createdString": [
             "1918"
@@ -5862,14 +5783,62 @@
           "creatorLiteral": [
             "Sousa, John Philip, 1854-1932"
           ],
+          "parallelCreators_displayPacked": [],
           "numElectronicResources": [
             0
           ],
           "contributorLiteral": [
             "Burnside, R. H. (Robert Hubberthorne), 1873-1952"
           ],
+          "dateStartYear": [
+            1918
+          ],
+          "parallelContributors_displayPacked": [],
+          "parallelCreatorLiteral": [
+            null
+          ],
           "idOclc": [
             "NYPG004000624-C"
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "JPB 84-314"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "11373667"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG004000624-C"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00405624"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp1381623"
+            }
+          ],
+          "seriesAddedEntry": [],
+          "contributors_displayPacked": [
+            "Burnside, R. H. (Robert Hubberthorne), 1873-1952||Burnside, R. H. (Robert Hubberthorne), 1873-1952"
+          ],
+          "updatedAt": 1784091105254,
+          "publicationStatement": [
+            "1918 Mar. 6"
+          ],
+          "identifier": [
+            "urn:shelfmark:JPB 84-314",
+            "urn:bnum:11373667",
+            "urn:oclc:NYPG004000624-C",
+            "urn:identifier:NNSZ00405624",
+            "urn:identifier:(WaOLN)nyp1381623"
+          ],
+          "creators_displayPacked": [
+            "Sousa, John Philip, 1854-1932||Sousa, John Philip, 1854-1932"
           ],
           "numCheckinCardItems": [
             0
@@ -5889,26 +5858,56 @@
           "dateString": [
             "1918"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1919",
+                "gte": "1918"
+              },
+              "raw": "850627s1918    nyusga         n    zxx dcdm a ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "seriesAddedEntry_displayPacked": [],
+          "subjectLiteral": [
+            "Sousa, John Philip, 1854-1932 -- Manuscripts.",
+            "Songs (Medium voice) with orchestra -- Scores."
+          ],
           "titleDisplay": [
             "The toast / words by Frank Warren & R.H. Burnside ; music by John Philip Sousa."
           ],
           "uri": "b11373667",
+          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelContributorLiteral": [
             null
           ],
+          "parallelSubjectLiteral": [],
+          "formatId": "d",
           "recordTypeId": "d",
+          "collectionIds": [
+            "pam"
+          ],
           "issuance": [
             {
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
           ],
+          "physicalDescription": [
+            "1 ms. score (14 p.) ; 34 cm."
+          ],
           "dimensions": [
             "34 cm."
           ]
         },
         "sort": [
-          747.53345,
+          747.52344,
           "b11373667"
         ],
         "matched_queries": [
@@ -5927,7 +5926,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11373667",
                   "_nested": {
                     "field": "items",
@@ -5947,6 +5946,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Sousa%2C+John+Philip%2C+1854-1932&CallNumber=JPB+84-314&Date=1918&Form=30&Genre=book+non-circ&ItemInfo1=Supervised+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db11373667&ItemISxN=i158970081&ItemPublisher=1918+Mar.+6&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b113736678&Site=LPAMR&Title=The+toast"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -5955,6 +5957,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Manuscript notated music"
@@ -6011,9 +6016,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b15876151",
-        "_score": 747.53345,
+        "_score": 747.52344,
         "_source": {
           "extent": [
             "1 sound disc : analog, 33 1/3 rpm ;"
@@ -6072,7 +6077,7 @@
             "Chevallier, Christian||Chevallier, Christian, performer",
             "Lafitte, Guy||Lafitte, Guy, performer"
           ],
-          "updatedAt": 1779429891706,
+          "updatedAt": 1784192069779,
           "publicationStatement": [
             "New York, [N.Y.] : Angel Records, [195-]"
           ],
@@ -6140,11 +6145,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Jazz series (Angel Records) ;||Jazz series (Angel Records) ; vol. 1, no. 10."
-          ],
-          "subjectLiteral_exploded": [
-            "Jazz",
-            "Jazz -- France",
-            "Jazz -- France -- 1951-1960"
           ],
           "numItemDatesParsed": [
             0
@@ -6230,7 +6230,7 @@
           ]
         },
         "sort": [
-          747.53345,
+          747.52344,
           "b15876151"
         ],
         "matched_queries": [
@@ -6249,7 +6249,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b15876151",
                   "_nested": {
                     "field": "items",
@@ -6269,6 +6269,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Persiany%2C+Andr%C3%A9&CallNumber=*LZO+356+%5BDisc%5D&Date=195&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db15876151&ItemISxN=i146601877&ItemNumber=33433035294234&ItemPlace=New+York%2C+%5BN.Y.%5D&ItemPublisher=Angel+Records%2C+%5B195-%5D&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b158761510&Site=LPAMRAMI&Title=French+toast"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:12",
@@ -6277,6 +6280,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:12||musical sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Musical recording"
@@ -6341,9 +6347,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b19650848",
-        "_score": 747.53345,
+        "_score": 747.52344,
         "_source": {
           "extent": [
             "256, 31 p. ;"
@@ -6404,7 +6410,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779489907711,
+          "updatedAt": 1784225375156,
           "publicationStatement": [
             "London : Metheun, 1916."
           ],
@@ -6514,7 +6520,7 @@
           ]
         },
         "sort": [
-          747.53345,
+          747.52344,
           "b19650848"
         ],
         "matched_queries": [
@@ -6533,7 +6539,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b19650848",
                   "_nested": {
                     "field": "items",
@@ -6550,6 +6556,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -6558,6 +6567,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -6625,9 +6637,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22227752",
-        "_score": 747.53345,
+        "_score": 747.52344,
         "_source": {
           "extent": [
             "1 volume (unpaged) : colour illustrations ;"
@@ -6698,7 +6710,7 @@
           "contributors_displayPacked": [
             "Thisdale, François, 1964-||Thisdale, François, 1964-, illustrator"
           ],
-          "updatedAt": 1779517958058,
+          "updatedAt": 1784258867986,
           "publicationStatement": [
             "Toronto, Ontario, Canada : Pajama Press, 2016."
           ],
@@ -6756,19 +6768,6 @@
               "label": "\"This is a first edition\"--Title page verso.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Racially mixed people",
-            "Racially mixed people -- Juvenile fiction",
-            "Grandmothers",
-            "Grandmothers -- Juvenile fiction",
-            "Blind",
-            "Blind -- Juvenile fiction",
-            "Human skin color",
-            "Human skin color -- Juvenile fiction",
-            "Self-esteem",
-            "Self-esteem -- Juvenile fiction",
-            "Picture books for children"
           ],
           "numItemDatesParsed": [
             0
@@ -6852,7 +6851,7 @@
           ]
         },
         "sort": [
-          747.53345,
+          747.52344,
           "b22227752"
         ],
         "matched_queries": [
@@ -6871,7 +6870,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22227752",
                   "_nested": {
                     "field": "items",
@@ -6888,6 +6887,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -6896,6 +6898,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -6969,9 +6974,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b14264413",
-        "_score": 747.0122,
+        "_score": 747.00244,
         "_source": {
           "extent": [
             "2 p.l., 7-73 p., 2 l."
@@ -7034,7 +7039,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779406050217,
+          "updatedAt": 1784145094920,
           "publicationStatement": [
             "Roma, Edizioni di Novissima [1937]"
           ],
@@ -7091,14 +7096,6 @@
               "label": "At head of title: G.C. Baravelli.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Stalin, Joseph, 1878-1953",
-            "Communism",
-            "Communism -- Soviet Union",
-            "Soviet Union",
-            "Soviet Union -- Economic conditions",
-            "Soviet Union -- Economic conditions -- 1917-1945"
           ],
           "numItemDatesParsed": [
             0
@@ -7162,7 +7159,7 @@
           ]
         },
         "sort": [
-          747.0122,
+          747.00244,
           "b14264413"
         ],
         "matched_queries": [
@@ -7184,9 +7181,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b12269299",
-        "_score": 746.53345,
+        "_score": 746.52344,
         "_source": {
           "note": [
             {
@@ -7200,9 +7197,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Gustafs skål (Dance)"
           ],
           "numItemDatesParsed": [
             0
@@ -7273,7 +7267,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779372283374,
+          "updatedAt": 1784109414881,
           "identifier": [
             "urn:shelfmark:*MGS (Scandinavian)",
             "urn:bnum:12269299",
@@ -7340,7 +7334,7 @@
           ]
         },
         "sort": [
-          746.53345,
+          746.52344,
           "b12269299"
         ],
         "matched_queries": [
@@ -7362,9 +7356,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb6955197",
-        "_score": 746.0733,
+        "_score": 746.0634,
         "_source": {
           "extent": [
             "386 p. ;"
@@ -7431,7 +7425,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779562679286,
+          "updatedAt": 1784325126884,
           "publicationStatement": [
             "Wołowiec : Wydawn. \"Czarne\", 2010."
           ],
@@ -7562,7 +7556,7 @@
           ]
         },
         "sort": [
-          746.0733,
+          746.0634,
           "pb6955197"
         ],
         "matched_queries": [
@@ -7580,7 +7574,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb6955197",
                   "_nested": {
                     "field": "items",
@@ -7672,9 +7666,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990099650640203941",
-        "_score": 745.61285,
+        "_score": 745.6028,
         "_source": {
           "extent": [
             "247 p. ;"
@@ -7734,7 +7728,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779600182453,
+          "updatedAt": 1784373525482,
           "publicationStatement": [
             "Holicong, PA : Cosmos Books, c2006, c2002."
           ],
@@ -7795,9 +7789,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222106586330003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Short stories"
           ],
           "numItemDatesParsed": [
             0
@@ -7880,7 +7871,7 @@
           ]
         },
         "sort": [
-          745.61285,
+          745.6028,
           "hb990099650640203941"
         ],
         "matched_queries": [
@@ -7898,7 +7889,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990099650640203941",
                   "_nested": {
                     "field": "items",
@@ -7928,12 +7919,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:PR6119.T79 T63 2006 copy ",
+                      "urn:shelfmark:PR6119.T79 T63 2006",
                       "urn:barcode:32044077499465"
                     ],
                     "identifierV2": [
                       {
-                        "value": "PR6119.T79 T63 2006 copy ",
+                        "value": "PR6119.T79 T63 2006",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -7957,15 +7948,15 @@
                       "PR6119.T79 T63 2006"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "PR6119.T79 T63 2006 copy "
+                      "PR6119.T79 T63 2006"
                     ],
-                    "shelfMark_sort": "aPR6119.T79 T63 2006 copy ",
+                    "shelfMark_sort": "aPR6119.T79 T63 002006",
                     "status": [
                       {
                         "id": "status:a",
@@ -7990,9 +7981,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9969551973506421",
-        "_score": 745.61285,
+        "_score": 745.6028,
         "_source": {
           "extent": [
             "386 pages : map ;"
@@ -8079,7 +8070,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779628932640,
+          "updatedAt": 1784409749821,
           "publicationStatement": [
             "Wołowiec : Wydawn. Czarne, 2010."
           ],
@@ -8139,10 +8130,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Seria Reportaż.||Seria Reportaż."
-          ],
-          "subjectLiteral_exploded": [
-            "Caucasus",
-            "Caucasus -- Civilization"
           ],
           "numItemDatesParsed": [
             0
@@ -8225,7 +8212,7 @@
           ]
         },
         "sort": [
-          745.61285,
+          745.6028,
           "pb9969551973506421"
         ],
         "matched_queries": [
@@ -8243,7 +8230,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9969551973506421",
                   "_nested": {
                     "field": "items",
@@ -8335,9 +8322,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b19635190",
-        "_score": 716.97205,
+        "_score": 716.96326,
         "_source": {
           "extent": [
             "1 sound disc (46 min.) : digital, mono. ;"
@@ -8407,7 +8394,7 @@
             "Hall, George, 1916-2002||Hall, George, 1916-2002, performer",
             "Cox, Wally, 1924-1973||Cox, Wally, 1924-1973, performer"
           ],
-          "updatedAt": 1779489754758,
+          "updatedAt": 1784225203458,
           "publicationStatement": [
             "1951."
           ],
@@ -8488,15 +8475,6 @@
               "label": "Archival original: (7 sound discs : analog, aluminum based lacquer, 78 rpm, mono. ; 12 in.) in *LJ-12 5896.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Hammerstein, Oscar, II, 1895-1960",
-            "Hammerstein, Oscar, II, 1895-1960 -- Interviews",
-            "Lyricists",
-            "Lyricists -- United States",
-            "Lyricists -- United States -- Biography",
-            "Musicals",
-            "Musicals -- Excerpts"
           ],
           "numItemDatesParsed": [
             0
@@ -8587,7 +8565,7 @@
           ]
         },
         "sort": [
-          716.97205,
+          716.96326,
           "b19635190"
         ],
         "matched_queries": [
@@ -8607,7 +8585,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b19635190",
                   "_nested": {
                     "field": "items",
@@ -8627,6 +8605,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=*LDC+37733&Date=1951&Form=30&Genre=archival+sound+recording&ItemInfo1=Use+in+library&ItemInfo2=Access+to+original+items+restricted.&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db19635190&ItemISxN=i288025581&ItemNumber=33433099082954&ItemPublisher=1951.&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b19635190x&Site=LPAMRAMI&Title=Toast+of+the+town.&Transaction.CustomFields.MapsLocationNote=%5BCD%5D"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:23",
@@ -8635,6 +8616,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:23||archival sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Music CD"
@@ -8699,9 +8683,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b19635203",
-        "_score": 716.97205,
+        "_score": 716.96326,
         "_source": {
           "extent": [
             "1 sound disc (46 min.) : digital, mono. ;"
@@ -8772,7 +8756,7 @@
             "Tabbert, William, 1919-1974||Tabbert, William, 1919-1974, performer",
             "Lawrence, Gertrude||Lawrence, Gertrude, performer"
           ],
-          "updatedAt": 1779489754758,
+          "updatedAt": 1784225203458,
           "publicationStatement": [
             "1951."
           ],
@@ -8854,17 +8838,6 @@
               "label": "Archival original: (7 sound discs : analog, aluminum based lacquer, 78 rpm, mono. ; 12 in.) in *LJ-12 5909.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Hammerstein, Oscar, II, 1895-1960",
-            "Hammerstein, Oscar, II, 1895-1960 -- Interviews",
-            "Rodgers, Richard, 1902-1979",
-            "Rodgers, Richard, 1902-1979 -- Interviews",
-            "Lyricists",
-            "Lyricists -- United States",
-            "Lyricists -- United States -- Biography",
-            "Musicals",
-            "Musicals -- Excerpts"
           ],
           "numItemDatesParsed": [
             0
@@ -8957,7 +8930,7 @@
           ]
         },
         "sort": [
-          716.97205,
+          716.96326,
           "b19635203"
         ],
         "matched_queries": [
@@ -8977,7 +8950,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b19635203",
                   "_nested": {
                     "field": "items",
@@ -8997,6 +8970,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=*LDC+50447&Date=1951&Form=30&Genre=archival+sound+recording&ItemInfo1=Use+in+library&ItemInfo2=Access+to+original+items+restricted.&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db19635203&ItemISxN=i288025854&ItemNumber=33433099082962&ItemPublisher=1951.&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b196352034&Site=LPAMRAMI&Title=Toast+of+the+town.&Transaction.CustomFields.MapsLocationNote=%5BCD%5D"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:23",
@@ -9005,6 +8981,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:23||archival sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Music CD"
@@ -9069,9 +9048,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b15868157",
-        "_score": 716.53076,
+        "_score": 716.5215,
         "_source": {
           "extent": [
             "64 p. : ill. ;"
@@ -9144,7 +9123,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779429767620,
+          "updatedAt": 1784191931521,
           "publicationStatement": [
             "Ibadan, Nigeria : Hope Publications, 2002."
           ],
@@ -9198,12 +9177,6 @@
           ],
           "tableOfContents": [
             "Moon among stars -- Vampires on rampage -- The dangling visionary saw -- Much to a name -- Dear mother -- La Rambla -- Personifying death -- Success turns albatross in the hall of nobility."
-          ],
-          "subjectLiteral_exploded": [
-            "Conduct of life",
-            "Conduct of life -- Poetry",
-            "Nigeria",
-            "Nigeria -- Poetry"
           ],
           "numItemDatesParsed": [
             0
@@ -9276,7 +9249,7 @@
           ]
         },
         "sort": [
-          716.53076,
+          716.5215,
           "b15868157"
         ],
         "matched_queries": [
@@ -9296,7 +9269,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b15868157",
                   "_nested": {
                     "field": "items",
@@ -9313,6 +9286,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:61",
@@ -9321,6 +9297,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:61||pamphlet volumes, bound with"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -9394,9 +9373,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b12004445",
-        "_score": 710.95105,
+        "_score": 710.9415,
         "_source": {
           "extent": [
             "124 p. ;"
@@ -9466,7 +9445,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779342465834,
+          "updatedAt": 1784104768648,
           "publicationStatement": [
             "Leoben : Kneipp, 1993."
           ],
@@ -9578,7 +9557,7 @@
           ]
         },
         "sort": [
-          710.95105,
+          710.9415,
           "b12004445"
         ],
         "matched_queries": [
@@ -9597,7 +9576,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b12004445",
                   "_nested": {
                     "field": "items",
@@ -9614,6 +9593,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -9622,6 +9604,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -9695,9 +9680,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16671423",
-        "_score": 705.14124,
+        "_score": 705.132,
         "_source": {
           "extent": [
             "1 folder"
@@ -9711,9 +9696,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Roma's Toast (song)"
           ],
           "numItemDatesParsed": [
             0
@@ -9778,7 +9760,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779469061378,
+          "updatedAt": 1784203322978,
           "genreForm": [
             "Clippings."
           ],
@@ -9840,7 +9822,7 @@
           ]
         },
         "sort": [
-          705.14124,
+          705.132,
           "b16671423"
         ],
         "matched_queries": [
@@ -9859,7 +9841,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16671423",
                   "_nested": {
                     "field": "items",
@@ -9879,6 +9861,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=M-Clippings+%28Subjects%29&Date=++++&Form=30&Genre=clipping+files&ItemInfo1=Supervised+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16671423&ItemISxN=i17393514x&ItemNumber=33433087491175&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b166714239&Site=LPAMR&Title=Roma%27s+Toast+%28song%29+%3A+clippings"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:22",
@@ -9887,6 +9872,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:22||clipping files"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Archival mix"
@@ -9951,9 +9939,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11294632",
-        "_score": 704.6819,
+        "_score": 704.67224,
         "_source": {
           "extent": [
             "xxi, 273 p. ;"
@@ -10033,7 +10021,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779329441733,
+          "updatedAt": 1784089456907,
           "publicationStatement": [
             "New York : Vintage Books, 1990, c1940."
           ],
@@ -10171,7 +10159,7 @@
           ]
         },
         "sort": [
-          704.6819,
+          704.67224,
           "b11294632"
         ],
         "matched_queries": [
@@ -10190,7 +10178,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11294632",
                   "_nested": {
                     "field": "items",
@@ -10207,6 +10195,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -10215,6 +10206,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -10282,9 +10276,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b13060795",
-        "_score": 704.6819,
+        "_score": 704.67224,
         "_source": {
           "extent": [
             "29 p. col. illus."
@@ -10340,7 +10334,7 @@
           "contributors_displayPacked": [
             "Wiese, Kurt, 1887-||Wiese, Kurt, 1887-, illustrator"
           ],
-          "updatedAt": 1779386328350,
+          "updatedAt": 1784123783708,
           "publicationStatement": [
             "New York, Coward-McCann, inc., c1942."
           ],
@@ -10457,7 +10451,7 @@
           ]
         },
         "sort": [
-          704.6819,
+          704.67224,
           "b13060795"
         ],
         "matched_queries": [
@@ -10476,7 +10470,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13060795",
                   "_nested": {
                     "field": "items",
@@ -10493,6 +10487,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:66",
@@ -10501,6 +10498,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:66||book, poor condition, non-MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -10568,9 +10568,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16436832",
-        "_score": 704.6819,
+        "_score": 704.67224,
         "_source": {
           "extent": [
             "on 1 side of 1 sound disc : analog, 78 rpm, mono. ;"
@@ -10639,7 +10639,7 @@
             "Gogorza, Emilio de, 1872-1949||Gogorza, Emilio de, 1872-1949, performer",
             "Victor Orchestra||Victor Orchestra, performer"
           ],
-          "updatedAt": 1779436758053,
+          "updatedAt": 1784200011488,
           "publicationStatement": [
             "Camden, NJ : Victor, [between 1908 and 1913]"
           ],
@@ -10707,10 +10707,6 @@
               "label": "Sung in French.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Operas",
-            "Operas -- Excerpts"
           ],
           "numItemDatesParsed": [
             0
@@ -10790,7 +10786,7 @@
           ]
         },
         "sort": [
-          704.6819,
+          704.67224,
           "b16436832"
         ],
         "matched_queries": [
@@ -10809,7 +10805,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16436832",
                   "_nested": {
                     "field": "items",
@@ -10829,6 +10825,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Bizet%2C+Georges%2C+1838-1875&CallNumber=*LO+338+%5BDisc%5D&Date=1908&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16436832&ItemISxN=i172397315&ItemNumber=33433070578319&ItemPlace=Camden%2C+NJ&ItemPublisher=Victor%2C+%5Bbetween+1908+and+1913%5D&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b164368322&Site=LPAMRAMI&Title=Carmen.+%5BVotre+toast%5D"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:12",
@@ -10837,6 +10836,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:12||musical sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Musical recording"
@@ -10901,9 +10903,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b13131869",
-        "_score": 704.14124,
+        "_score": 704.132,
         "_source": {
           "extent": [
             "242 p. ;"
@@ -10957,7 +10959,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779387466830,
+          "updatedAt": 1784125125152,
           "publicationStatement": [
             "Sydney [N.S.W.] : Kingston Press, 1920."
           ],
@@ -11059,7 +11061,7 @@
           ]
         },
         "sort": [
-          704.14124,
+          704.132,
           "b13131869"
         ],
         "matched_queries": [
@@ -11077,7 +11079,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13131869",
                   "_nested": {
                     "field": "items",
@@ -11094,6 +11096,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:32",
@@ -11102,6 +11107,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:32||google project, book"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -11178,9 +11186,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b17174971",
-        "_score": 704.14124,
+        "_score": 704.132,
         "_source": {
           "nyplSource": [
             "sierra-nypl"
@@ -11230,7 +11238,7 @@
           "contributors_displayPacked": [
             "Wiese, Kurt, 1887-||Wiese, Kurt, 1887-, illustrator"
           ],
-          "updatedAt": 1779474560028,
+          "updatedAt": 1784208770859,
           "publicationStatement": [
             "New York : Putnam, [1969, c1942]"
           ],
@@ -11347,7 +11355,7 @@
           ]
         },
         "sort": [
-          704.14124,
+          704.132,
           "b17174971"
         ],
         "matched_queries": [
@@ -11365,7 +11373,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b17174971",
                   "_nested": {
                     "field": "items",
@@ -11382,6 +11390,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -11390,6 +11401,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -11466,9 +11480,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b10981311",
-        "_score": 703.6819,
+        "_score": 703.67224,
         "_source": {
           "extent": [
             "1 miniature score (12 p.) ;"
@@ -11540,7 +11554,7 @@
           "contributors_displayPacked": [
             "Kostelanetz, Andre, 1901-1980||Kostelanetz, Andre, 1901-1980"
           ],
-          "updatedAt": 1779324369308,
+          "updatedAt": 1784083274028,
           "publicationStatement": [
             "[United States] : Jalni Publications : Boosey & Hawkes, sole selling agent, 1984, c1980."
           ],
@@ -11597,10 +11611,6 @@
               "label": "Duration: ca. 2:30.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Orchestral music",
-            "Orchestral music -- Scores"
           ],
           "numItemDatesParsed": [
             0
@@ -11677,7 +11687,7 @@
           ]
         },
         "sort": [
-          703.6819,
+          703.67224,
           "b10981311"
         ],
         "matched_queries": [
@@ -11695,7 +11705,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b10981311",
                   "_nested": {
                     "field": "items",
@@ -11712,6 +11722,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:57",
@@ -11720,6 +11733,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:57||printed music limited circ MaRLI"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Notated music"
@@ -11796,9 +11812,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb1808514",
-        "_score": 696.0733,
+        "_score": 696.0634,
         "_source": {
           "extent": [
             "1 score (3 unnumbered pages, 12 pages) ;"
@@ -11866,7 +11882,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779480345156,
+          "updatedAt": 1784215270420,
           "publicationStatement": [
             "[Place of publication not identified] : Jalni Publications ; New York, N.Y. : Boosey & Hawkes, sole selling agent, 1984, ©1980."
           ],
@@ -11950,10 +11966,6 @@
           "seriesUniformTitle_displayPacked": [
             "Hawkes pocket scores.||Hawkes pocket scores."
           ],
-          "subjectLiteral_exploded": [
-            "Orchestral music",
-            "Orchestral music -- Scores"
-          ],
           "numItemDatesParsed": [
             0
           ],
@@ -12035,7 +12047,7 @@
           ]
         },
         "sort": [
-          696.0733,
+          696.0634,
           "cb1808514"
         ],
         "matched_queries": [
@@ -12052,7 +12064,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb1808514",
                   "_nested": {
                     "field": "items",
@@ -12144,9 +12156,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb15861113",
-        "_score": 695.61285,
+        "_score": 695.6028,
         "_source": {
           "extent": [
             "288 pages ;"
@@ -12219,7 +12231,7 @@
           "contributors_displayPacked": [
             "Edwards, Jonathan||Edwards, Jonathan, editor"
           ],
-          "updatedAt": 1779429649371,
+          "updatedAt": 1784191817093,
           "publicationStatement": [
             "Cardigan : Parthian, 2022."
           ],
@@ -12339,7 +12351,7 @@
           ]
         },
         "sort": [
-          695.61285,
+          695.6028,
           "cb15861113"
         ],
         "matched_queries": [
@@ -12356,7 +12368,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb15861113",
                   "_nested": {
                     "field": "items",
@@ -12448,9 +12460,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb1869694",
-        "_score": 695.61285,
+        "_score": 695.6028,
         "_source": {
           "extent": [
             "2 volumes ;"
@@ -12517,7 +12529,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779484485733,
+          "updatedAt": 1784219457300,
           "publicationStatement": [
             "Albany : J.B. Lyon Company, Printers, 1908."
           ],
@@ -12620,7 +12632,7 @@
           ]
         },
         "sort": [
-          695.61285,
+          695.6028,
           "cb1869694"
         ],
         "matched_queries": [
@@ -12637,7 +12649,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb1869694",
                   "_nested": {
                     "field": "items",
@@ -12734,7 +12746,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb1869694",
                   "_nested": {
                     "field": "items",
@@ -12836,9 +12848,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b12471757",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "188 p., 13 leaves of plates : front., ill., ports. ;"
@@ -12892,7 +12904,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779375904650,
+          "updatedAt": 1784113208007,
           "publicationStatement": [
             "London : Phoenix House, 1950."
           ],
@@ -12932,9 +12944,6 @@
           ],
           "physicalDescription": [
             "188 p., 13 leaves of plates : front., ill., ports. ; 23 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Willis, Frederick"
           ],
           "numItemDatesParsed": [
             0
@@ -12999,7 +13008,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b12471757"
         ],
         "matched_queries": [
@@ -13018,7 +13027,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b12471757",
                   "_nested": {
                     "field": "items",
@@ -13035,6 +13044,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -13043,6 +13055,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -13110,9 +13125,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b13279082",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "41 p."
@@ -13177,7 +13192,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779389723027,
+          "updatedAt": 1784127701818,
           "publicationStatement": [
             "Cambridge, Harvard university press, 1937."
           ],
@@ -13229,9 +13244,6 @@
               "label": "\"An address delivered on January 16, 1936 before the Municipal art society of Baltimore city and now published under its auspices. Some of the ideas expressed were further developed in lectures given ... at the Rice institute of Houston, Texas, in January, 1937.\"",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Horace"
           ],
           "numItemDatesParsed": [
             0
@@ -13296,7 +13308,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b13279082"
         ],
         "matched_queries": [
@@ -13315,7 +13327,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13279082",
                   "_nested": {
                     "field": "items",
@@ -13332,6 +13344,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -13340,6 +13355,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -13407,9 +13425,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16019290",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "1 sound disc (29 min.) : analog, 33 1/3 rpm, stereo. ;"
@@ -13478,7 +13496,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779432002538,
+          "updatedAt": 1784194498287,
           "publicationStatement": [
             "Nashville, Tenn. : Mega, p1973."
           ],
@@ -13553,10 +13571,6 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Country music",
-            "Country music -- 1971-1980"
-          ],
           "numItemDatesParsed": [
             0
           ],
@@ -13619,7 +13633,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b16019290"
         ],
         "matched_queries": [
@@ -13638,7 +13652,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16019290",
                   "_nested": {
                     "field": "items",
@@ -13658,6 +13672,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Smith%2C+Sammi&CallNumber=*LZR+33485+%5BDisc%5D&Date=1973&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16019290&ItemISxN=i154315503&ItemNumber=33433036315707&ItemPlace=Nashville%2C+Tenn.&ItemPublisher=Mega%2C+p1973.&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b160192900&Site=LPAMRAMI&Title=The+toast+of+%2745"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:12",
@@ -13666,6 +13683,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:12||musical sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Musical recording"
@@ -13730,9 +13750,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16151201",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "1 sound disc : analog, 33 1/3 rpm ;"
@@ -13797,7 +13817,7 @@
             "Aguilera, F.||Aguilera, F., performer, editor, arranger",
             "García Matos, Manuel, 1912-||García Matos, Manuel, 1912-, conductor, editor, arranger"
           ],
-          "updatedAt": 1779433889165,
+          "updatedAt": 1784196767301,
           "publicationStatement": [
             "New York, N.Y. : Seeco, [19--?]"
           ],
@@ -13854,10 +13874,6 @@
               "label": "Sung in Spanish.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Popular music",
-            "Popular music -- Spain"
           ],
           "numItemDatesParsed": [
             0
@@ -13934,7 +13950,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b16151201"
         ],
         "matched_queries": [
@@ -13953,7 +13969,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16151201",
                   "_nested": {
                     "field": "items",
@@ -13973,6 +13989,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Flores%2C+Lola&CallNumber=*LZR+43109+%5BDisc%5D&Date=19uu&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16151201&ItemISxN=i155562502&ItemNumber=33433036075665&ItemPlace=New+York%2C+N.Y.&ItemPublisher=Seeco%2C+%5B19--%3F%5D&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b16151201x&Site=LPAMRAMI&Title=The+toast+of+Spain"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:12",
@@ -13981,6 +14000,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:12||musical sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Musical recording"
@@ -14045,9 +14067,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16579957",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "iv, 238 p. ;"
@@ -14109,7 +14131,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779468030069,
+          "updatedAt": 1784202239995,
           "publicationStatement": [
             "[Nigeria?] : S.M.K. Taribo, c1991."
           ],
@@ -14156,15 +14178,6 @@
           ],
           "physicalDescription": [
             "iv, 238 p. ; 21 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Nigeria",
-            "Nigeria -- Social conditions",
-            "Nigeria -- Social conditions -- 1960-",
-            "Nigeria -- Economic conditions",
-            "Nigeria -- Economic conditions -- 1960-",
-            "Nigeria -- Politics and government",
-            "Nigeria -- Politics and government -- 1960-"
           ],
           "numItemDatesParsed": [
             0
@@ -14229,7 +14242,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b16579957"
         ],
         "matched_queries": [
@@ -14248,7 +14261,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16579957",
                   "_nested": {
                     "field": "items",
@@ -14265,6 +14278,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -14273,6 +14289,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -14346,9 +14365,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16664914",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "1 folder"
@@ -14362,9 +14381,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "French Toast (Musical group)"
           ],
           "numItemDatesParsed": [
             0
@@ -14429,7 +14445,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779468972271,
+          "updatedAt": 1784203221046,
           "genreForm": [
             "Clippings."
           ],
@@ -14491,7 +14507,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b16664914"
         ],
         "matched_queries": [
@@ -14510,7 +14526,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16664914",
                   "_nested": {
                     "field": "items",
@@ -14530,6 +14546,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&CallNumber=M-Clippings+%28Subjects%29+French+Toast+%28Musical+group%29&Date=++++&Form=30&Genre=clipping+files&ItemInfo1=Supervised+use&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16664914&ItemISxN=i173869890&ItemNumber=33433085650764&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b166649144&Site=LPAMR&Title=French+Toast+%28Musical+group%29+%3A+clippings"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:22",
@@ -14538,6 +14557,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:22||clipping files"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Archival mix"
@@ -14602,9 +14624,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b10038245",
-        "_score": 666.53076,
+        "_score": 666.5215,
         "_source": {
           "extent": [
             "176 p. illus."
@@ -14676,7 +14698,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779307353177,
+          "updatedAt": 1784063463004,
           "publicationStatement": [
             "New York, Knopf, 1971."
           ],
@@ -14781,7 +14803,7 @@
           ]
         },
         "sort": [
-          666.53076,
+          666.5215,
           "b10038245"
         ],
         "matched_queries": [
@@ -14800,7 +14822,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b10038245",
                   "_nested": {
                     "field": "items",
@@ -14817,6 +14839,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -14825,6 +14850,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
