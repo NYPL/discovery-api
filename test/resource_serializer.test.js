@@ -82,4 +82,36 @@ describe('Resource Serializer', () => {
       ])
     })
   })
+  describe('electronicResources', () => {
+    it('splits electronicResources with an array of URLs into separate objects', async () => {
+      const esDoc = {
+        uri: 'b123',
+        electronicResources: [
+          {
+            prefLabel: 'Single URL',
+            url: 'http://example.com/1'
+          },
+          {
+            prefLabel: 'Multiple URLs',
+            url: ['http://example.com/2', 'http://example.com/3']
+          }
+        ]
+      }
+      const serialized = await ResourceSerializer.serialize(esDoc)
+      expect(serialized.electronicResources).to.deep.equal([
+        {
+          prefLabel: 'Single URL',
+          url: 'http://example.com/1'
+        },
+        {
+          prefLabel: 'Multiple URLs',
+          url: 'http://example.com/2'
+        },
+        {
+          prefLabel: 'Multiple URLs',
+          url: 'http://example.com/3'
+        }
+      ])
+    })
+  })
 })
