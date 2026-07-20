@@ -1,9 +1,9 @@
 {
-  "took": 214,
+  "took": 62,
   "timed_out": false,
   "_shards": {
-    "total": 1,
-    "successful": 1,
+    "total": 2,
+    "successful": 2,
     "skipped": 0,
     "failed": 0
   },
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-05-12",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22144813",
-        "_score": 496.98306,
+        "_score": 468.4834,
         "_source": {
           "extent": [
             "1234, [1] pages, x leaves : illustrations ;",
@@ -53,6 +53,10 @@
           "createdYear": [
             201
           ],
+          "parallelSeriesAddedEntry": [
+            "undefined undefined",
+            "undefined undefined"
+          ],
           "parallelTitle": [
             "‏כותר שאינו באותיות לטינית = зглавие руссий."
           ],
@@ -77,12 +81,6 @@
           ],
           "idIssn": [
             "ISSN -- 022"
-          ],
-          "seriesStatement": [
-            "440 Series ; v. number -- 440 b0",
-            "490 Series ; v. number  -- 490 0b",
-            "Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat). CMA Test Records -- 810 2b "
           ],
           "addedAuthorTitle": [
             "Cataloging test record. 700 1b with $t"
@@ -179,6 +177,10 @@
               "value": "Standard number (old RLIN, etc.) -- 035"
             }
           ],
+          "seriesAddedEntry": [
+            "Author, of series CMA Test Records. -- 800 1b",
+            "CMA (Cat) CMA Test Records -- 810 2b"
+          ],
           "formerTitle": [
             "Former title -- 247 00"
           ],
@@ -196,11 +198,9 @@
             "Cramer, Richard, 1948-||Cramer, Richard, 1948-, former owner",
             "Virtual collection -- 791 2b||Virtual collection -- 791 2b",
             "Local name -- 790 bb||Local name -- 790 bb",
-            "Local name test 2 -- 796 bb||Local name test 2 -- 796 bb",
-            "Author, of series||Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat)||CMA (Cat). CMA Test Records -- 810 2b"
+            "Local name test 2 -- 796 bb||Local name test 2 -- 796 bb"
           ],
-          "updatedAt": 1774481994876,
+          "updatedAt": 1784255657887,
           "publicationStatement": [
             "[s.l.] : Specious Publ. [prev.pub.-- 260.2b], 2001. ",
             "Long Island CIty, N.Y. : CopyCat pub. co. -- 260 bb, 2011.",
@@ -252,6 +252,10 @@
               "label": "unmediated"
             }
           ],
+          "seriesAddedEntry_displayPacked": [
+            "Author, of series CMA Test Records. -- 800 1b||Author, of series. CMA Test Records. -- 800 1b",
+            "CMA (Cat) CMA Test Records -- 810 2b||CMA (Cat). CMA Test Records -- 810 2b"
+          ],
           "subjectLiteral": [
             "Starving artist -- 600 00. I always wanted to write a book 600 $t. -- 600 00 with $t.",
             "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v.",
@@ -276,6 +280,7 @@
             "testing a testing e testing g -- testing v -- testing x -- testing y -- testing z.",
             "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z."
           ],
+          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelSubjectLiteral": [],
           "formatId": "a",
           "collectionIds": [
@@ -438,7 +443,12 @@
             },
             {
               "noteType": "Reproduction",
-              "label": "Microfilm.",
+              "label": "Microfilm. New York : New York Public Library, [19--]. 0  microfilm reels ; 35 mm. (MN *ZZ-00000) -- 533",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Original Version",
+              "label": "Reprint. Originally published in CATNYP. -- 534",
               "type": "bf:Note"
             },
             {
@@ -467,8 +477,8 @@
               "type": "bf:Note"
             },
             {
-              "noteType": "Source",
-              "label": "Source \\\\DO NOT DISPLAY\\\\ -- 541 bb $a",
+              "noteType": "Information Relating to Copyright Status",
+              "label": "© World Enterprises on back cover -- 542 bb $f$n",
               "type": "bf:Note"
             },
             {
@@ -552,11 +562,6 @@
               "type": "bf:Note"
             },
             {
-              "noteType": "Processing Action",
-              "label": "Processing Action \\\\DO NOT DISPLAY\\\\ -- 583 bb",
-              "type": "bf:Note"
-            },
-            {
               "noteType": "Exhibitions",
               "label": "Exhibitions -- 585",
               "type": "bf:Note"
@@ -572,6 +577,11 @@
               "type": "bf:Note"
             },
             {
+              "noteType": "Latest issue consulted",
+              "label": "Latest issue consulted: 1900/1901. -- 588 1b",
+              "type": "bf:Note"
+            },
+            {
               "noteType": "Local note",
               "label": "Local note display --  590 1b",
               "type": "bf:Note"
@@ -582,78 +592,8 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Starving artist",
-            "Starving artist -- 600 00. I always wanted to write a book 600 $t.",
-            "Starving artist -- 600 00. I always wanted to write a book 600 $t. -- 600 00 with $t",
-            "Artist, Starving, 1900-1999",
-            "Artist, Starving, 1900-1999 -- Autobiography.",
-            "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v",
-            "Corporate body subject.",
-            "Corporate body subject. --  610 20",
-            "Secret Society of Catalogers",
-            "Secret Society of Catalogers -- Periodicals.",
-            "Secret Society of Catalogers -- Periodicals. -- 610 20 $v",
-            "Conference subject entry.",
-            "Conference subject entry. --  611 20",
-            "Stonecutters' Annual Picnic (12th : 1995 : Springfield)",
-            "Stonecutters' Annual Picnic (12th : 1995 : Springfield) -- 611 20 $n, $d, $c",
-            "Uniform title. Subunit. Catalogerese.",
-            "Uniform title. Subunit. Catalogerese.  -- 630 00 $p, $l",
-            "Life is a common square. Esperanto",
-            "Life is a common square. Esperanto -- Criticism.",
-            "Life is a common square. Esperanto -- Criticism. -- 630 00 $l, $x",
-            "Textile industry testing datetesting",
-            "Textile industry testing datetesting -- 650 b0 $z, $x",
-            "Textile industry testing datetesting -- 650 b0 $z, $x -- India",
-            "Textile industry testing datetesting -- 650 b0 $z, $x -- India -- History",
-            "New York (N.Y.)",
-            "New York (N.Y.) -- 21st century",
-            "New York (N.Y.) -- 21st century -- Diaries.",
-            "New York (N.Y.) -- 21st century -- Diaries. -- 651 b0 $y, $x",
-            "Undiscovered country.",
-            "Undiscovered country. -- 651 b0",
-            "Indexed term",
-            "Indexed term -- 653",
-            "Local subject heading.",
-            "Local subject heading. -- 690 b4",
-            "Quantum pataphysics",
-            "Quantum pataphysics -- Australia",
-            "Quantum pataphysics -- Australia -- 21st century.",
-            "Quantum pataphysics -- Australia -- 21st century. -- 690 b4 $z, $y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing x as first subfield",
-            "testing x as first subfield -- testing v as second subfield.",
-            "testing x as first subfield -- testing v as second subfield. -- 610 10 $x$v only",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x -- testing y",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing b testing c testing d testing e",
-            "testing a testing b testing c testing d testing e -- testing v",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing e testing g",
-            "testing a testing e testing g -- testing v",
-            "testing a testing e testing g -- testing v -- testing x",
-            "testing a testing e testing g -- testing v -- testing x -- testing y",
-            "testing a testing e testing g -- testing v -- testing x -- testing y -- testing z"
+          "seriesUniformTitle_displayPacked": [
+            "CMA Test Records -- 830 b0||CMA Test Records -- 830 b0"
           ],
           "numItemDatesParsed": [
             0
@@ -699,7 +639,6 @@
           ],
           "popularity": 1,
           "uniformTitle": [
-            "CMA Test Records -- 830 b0",
             "T tagged 240 Uniform title -- t240",
             "Added title -- 730 0b"
           ],
@@ -725,6 +664,9 @@
             "",
             "",
             "зглавие руссий"
+          ],
+          "seriesUniformTitle": [
+            "CMA Test Records -- 830 b0"
           ],
           "summary": [
             "This record was originally created as a test record in CATNYP.  It was greatly expanded in ILS-STAFF to test the public display of various MARC fields. -- 520 (first)",
@@ -814,10 +756,7 @@
             "Latest Copyright Date -- 264 34 (RDA)"
           ],
           "series": [
-            "440 Series ;",
-            "490 Series ;",
-            "Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat). CMA Test Records -- 810 2b "
+            "490 Series ;"
           ],
           "issuance": [
             {
@@ -837,6 +776,9 @@
               "url": "http://www.ThereIsNoLabelSubfieldInThis856-4b-supplementary.com/"
             }
           ],
+          "series_displayPacked": [
+            "490 Series ;||490 Series ; v. number  -- 490 0b"
+          ],
           "dimensions": [
             "26 cm +",
             "26 cm. +",
@@ -849,7 +791,7 @@
           ]
         },
         "sort": [
-          496.98306,
+          468.4834,
           "b22144813"
         ],
         "matched_queries": [
@@ -868,7 +810,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -885,6 +827,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -894,12 +839,13 @@
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
                     ],
+                    "collectionId": [
+                      "mal"
+                    ],
                     "enumerationChronology": [
                       "v.1"
                     ],
-                    "enumerationChronology_sort": [
-                      "         1-"
-                    ],
+                    "enumerationChronology_sort": "         1-",
                     "formatLiteral": [
                       "Book/text"
                     ],
@@ -973,7 +919,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -990,6 +936,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:3",
@@ -998,6 +947,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "maf"
                     ],
                     "enumerationChronology": [
                       "nothing"

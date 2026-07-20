@@ -1,9 +1,9 @@
 {
-  "took": 788,
+  "took": 23,
   "timed_out": false,
   "_shards": {
-    "total": 1,
-    "successful": 1,
+    "total": 2,
+    "successful": 2,
     "skipped": 0,
     "failed": 0
   },
@@ -15,7 +15,7 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-05-12",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11481799",
         "_score": 16,
         "_source": {
@@ -92,10 +92,9 @@
             1991
           ],
           "parallelContributors_displayPacked": [],
-          "creatorsPacked": [
-            "Schumann, Robert, 1810-1856||Schumann, Robert, 1810-1856, composer."
+          "parallelCreatorLiteral": [
+            null
           ],
-          "parallelCreatorLiteral": [],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
@@ -746,6 +745,7 @@
               "value": "(OCoLC)25551434"
             }
           ],
+          "seriesAddedEntry": [],
           "contributors_displayPacked": [
             "Mayeda, Akio||Mayeda, Akio, editor",
             "Niemöller, Klaus Wolfgang||Niemöller, Klaus Wolfgang, editor",
@@ -753,12 +753,9 @@
             "Robert-Schumann-Gesellschaft Düsseldorf||Robert-Schumann-Gesellschaft Düsseldorf, issuing body",
             "Robert-Schumann-Haus Zwickau||Robert-Schumann-Haus Zwickau, issuing body"
           ],
-          "updatedAt": 1775620255270,
+          "updatedAt": 1784093511956,
           "publicationStatement": [
             "Mainz ; New York : Schott, 1991-<2023>"
-          ],
-          "creators_displayPpacked": [
-            "Schumann, Robert, 1810-1856||Schumann, Robert, 1810-1856, composer."
           ],
           "identifier": [
             "urn:shelfmark:JMN 91-37",
@@ -924,19 +921,6 @@
             "urn:identifier:(OCoLC)24261548 (OCoLC)24555199 (OCoLC)25341179 (OCoLC)921918725 (OCoLC)923345847 (OCoLC)974752377 (OCoLC)976558002 (OCoLC)987010083 (OCoLC)1045748175 (OCoLC)1057109311 (OCoLC)1066804977 (OCoLC)1109464156 (OCoLC)1180843906 (OCoLC)1225693248 (OCoLC)1229937286",
             "urn:identifier:(OCoLC)25551434"
           ],
-          "contributorRoleLiteral": [
-            "Schumann, Robert, 1810-1856",
-            "Schumann, Robert, 1810-1856||composer.",
-            "Mayeda, Akio",
-            "Mayeda, Akio||editor.",
-            "Niemöller, Klaus Wolfgang",
-            "Niemöller, Klaus Wolfgang||editor.",
-            "Paganini, Nicolò, 1782-1840",
-            "Robert-Schumann-Gesellschaft Düsseldorf",
-            "Robert-Schumann-Gesellschaft Düsseldorf||issuing body.",
-            "Robert-Schumann-Haus Zwickau",
-            "Robert-Schumann-Haus Zwickau||issuing body."
-          ],
           "creators_displayPacked": [
             "Schumann, Robert, 1810-1856||Schumann, Robert, 1810-1856, composer"
           ],
@@ -956,6 +940,7 @@
               "label": "unmediated"
             }
           ],
+          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Music.",
             "Vocal music -- Scores.",
@@ -1015,20 +1000,18 @@
               "noteType": "Language",
               "label": "German and Latin words.",
               "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "Staff notation.",
+              "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Music",
-            "Vocal music",
-            "Vocal music -- Scores",
-            "Instrumental music",
-            "Instrumental music -- Scores"
-          ],
           "numItemDatesParsed": [
-            2
+            0
           ],
           "numItemsTotal": [
-            99
+            53
           ],
           "dateEndString": [
             "9999"
@@ -1037,7 +1020,7 @@
             "Neue Ausgabe sämtlicher Werke"
           ],
           "numItemVolumesParsed": [
-            62
+            46
           ],
           "createdString": [
             "1991"
@@ -1570,7 +1553,7 @@
             "3795798876"
           ],
           "numCheckinCardItems": [
-            46
+            0
           ],
           "materialType": [
             {
@@ -1591,13 +1574,12 @@
             "Neue Ausgabe sämtlicher Werke / Robert Schumann ; herausgegeben von der Robert-Schumann-Gesellschaft Düsseldorf durch Akio Mayeda und Klaus Wolfgang Niemöller in Verbindung mit dem Robert-Schumann-Haus Zwickau."
           ],
           "uri": "b11481799",
-          "parallelContributorLiteral": [],
-          "contributorsPacked": [
-            "Mayeda, Akio||Mayeda, Akio, editor.",
-            "Niemöller, Klaus Wolfgang||Niemöller, Klaus Wolfgang, editor.",
-            "Paganini, Nicolò, 1782-1840||Container of (work): Paganini, Nicolò, 1782-1840. Caprices, violin, M.S. 25. Selections.",
-            "Robert-Schumann-Gesellschaft Düsseldorf||Robert-Schumann-Gesellschaft Düsseldorf, issuing body.",
-            "Robert-Schumann-Haus Zwickau||Robert-Schumann-Haus Zwickau, issuing body."
+          "parallelContributorLiteral": [
+            null,
+            null,
+            null,
+            null,
+            null
           ],
           "recordTypeId": "c",
           "placeOfPublication": [
@@ -1680,70 +1662,100 @@
           "items": {
             "hits": {
               "total": {
-                "value": 99,
+                "value": 53,
                 "relation": "eq"
               },
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11481799",
                   "_nested": {
                     "field": "items",
-                    "offset": 5
+                    "offset": 16
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "shelfMark_sort": "aJMN 91-000037",
                     "accessMessage": [
                       {
                         "id": "accessMessage:1",
                         "label": "Use in library"
                       }
                     ],
-                    "status_packed": [
-                      "status:na||Not available"
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
                     ],
-                    "enumerationChronology_sort": [
-                      "         8-"
+                    "buildingLocationId": [
+                      "pa"
                     ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "shelfMark": [
-                      "JMN 91-37"
-                    ],
-                    "uri": "i-h1061152-40",
-                    "identifierV2": [
+                    "catalogItemType": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "JMN 91-37"
+                        "id": "catalogItemType:7",
+                        "label": "printed music, non-circ"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:pam||Performing Arts Research Collections - Music"
+                    "catalogItemType_packed": [
+                      "catalogItemType:7||printed music, non-circ"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "enumerationChronology": [
-                      "Vol. 8 No. 6"
+                      "Ser. 6, Bd. 8"
                     ],
+                    "enumerationChronology_sort": "         8-",
                     "formatLiteral": [
                       "Notated music"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:pam",
+                        "id": "loc:pam32",
                         "label": "Performing Arts Research Collections - Music"
                       }
                     ],
-                    "status": [
+                    "holdingLocation_packed": [
+                      "loc:pam32||Performing Arts Research Collections - Music"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:JMN 91-37",
+                      "urn:barcode:33433137408989"
+                    ],
+                    "identifierV2": [
                       {
-                        "id": "status:na",
-                        "label": "Not available"
+                        "value": "JMN 91-37",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433137408989",
+                        "type": "bf:Barcode"
                       }
                     ],
+                    "idBarcode": [
+                      "33433137408989"
+                    ],
+                    "physicalLocation": [
+                      "JMN 91-37"
+                    ],
+                    "requestable": [
+                      false
+                    ],
+                    "shelfMark": [
+                      "JMN 91-37"
+                    ],
+                    "shelfMark_sort": "aJMN 91-000037",
+                    "status": [
+                      {
+                        "id": "status:b",
+                        "label": "New-in process"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:b||New-in process"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i40842752",
                     "volumeRange": [
                       {
                         "gte": 8,
@@ -1756,143 +1768,203 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11481799",
                   "_nested": {
                     "field": "items",
-                    "offset": 18
+                    "offset": 0
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "shelfMark_sort": "aJMN 91-000037",
                     "accessMessage": [
                       {
                         "id": "accessMessage:1",
                         "label": "Use in library"
                       }
                     ],
-                    "status_packed": [
-                      "status:na||Not available"
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
                     ],
-                    "enumerationChronology_sort": [
-                      "         8-"
+                    "buildingLocationId": [
+                      "pa"
                     ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "shelfMark": [
-                      "JMN 91-37"
-                    ],
-                    "uri": "i-h1061152-27",
-                    "identifierV2": [
+                    "catalogItemType": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "JMN 91-37"
+                        "id": "catalogItemType:7",
+                        "label": "printed music, non-circ"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:pam||Performing Arts Research Collections - Music"
+                    "catalogItemType_packed": [
+                      "catalogItemType:7||printed music, non-circ"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "enumerationChronology": [
-                      "Vol. 8 No. 2"
+                      "Ser. 6, Bd. 7 (Faksimile-Beiheft)"
                     ],
+                    "enumerationChronology_sort": "         7-",
                     "formatLiteral": [
                       "Notated music"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:pam",
+                        "id": "loc:pam32",
                         "label": "Performing Arts Research Collections - Music"
                       }
                     ],
-                    "status": [
+                    "holdingLocation_packed": [
+                      "loc:pam32||Performing Arts Research Collections - Music"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:JMN 91-37",
+                      "urn:barcode:33433124748363"
+                    ],
+                    "identifierV2": [
                       {
-                        "id": "status:na",
-                        "label": "Not available"
+                        "value": "JMN 91-37",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433124748363",
+                        "type": "bf:Barcode"
                       }
                     ],
+                    "idBarcode": [
+                      "33433124748363"
+                    ],
+                    "physicalLocation": [
+                      "JMN 91-37"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "JMN 91-37"
+                    ],
+                    "shelfMark_sort": "aJMN 91-000037",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i36373071",
                     "volumeRange": [
                       {
-                        "gte": 8,
-                        "lte": 8
+                        "gte": 7,
+                        "lte": 7
                       }
                     ]
                   },
                   "sort": [
-                    "         8-"
+                    "         7-"
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11481799",
                   "_nested": {
                     "field": "items",
-                    "offset": 21
+                    "offset": 17
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "shelfMark_sort": "aJMN 91-000037",
                     "accessMessage": [
                       {
                         "id": "accessMessage:1",
                         "label": "Use in library"
                       }
                     ],
-                    "status_packed": [
-                      "status:na||Not available"
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
                     ],
-                    "enumerationChronology_sort": [
-                      "         8-"
+                    "buildingLocationId": [
+                      "pa"
                     ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "shelfMark": [
-                      "JMN 91-37"
-                    ],
-                    "uri": "i-h1061152-24",
-                    "identifierV2": [
+                    "catalogItemType": [
                       {
-                        "type": "bf:ShelfMark",
-                        "value": "JMN 91-37"
+                        "id": "catalogItemType:7",
+                        "label": "printed music, non-circ"
                       }
                     ],
-                    "holdingLocation_packed": [
-                      "loc:pam||Performing Arts Research Collections - Music"
+                    "catalogItemType_packed": [
+                      "catalogItemType:7||printed music, non-circ"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "enumerationChronology": [
-                      "Vol. 8 No. 1"
+                      "Ser. 1, Wkg. 1, Bd. 6 (Faksimile-Beiheft)"
                     ],
+                    "enumerationChronology_sort": "         6-",
                     "formatLiteral": [
                       "Notated music"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:pam",
+                        "id": "loc:pam32",
                         "label": "Performing Arts Research Collections - Music"
                       }
                     ],
-                    "status": [
+                    "holdingLocation_packed": [
+                      "loc:pam32||Performing Arts Research Collections - Music"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:JMN 91-37",
+                      "urn:barcode:33433111848598"
+                    ],
+                    "identifierV2": [
                       {
-                        "id": "status:na",
-                        "label": "Not available"
+                        "value": "JMN 91-37",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433111848598",
+                        "type": "bf:Barcode"
                       }
                     ],
+                    "idBarcode": [
+                      "33433111848598"
+                    ],
+                    "physicalLocation": [
+                      "JMN 91-37"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "JMN 91-37"
+                    ],
+                    "shelfMark_sort": "aJMN 91-000037",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i31837146",
                     "volumeRange": [
                       {
-                        "gte": 8,
-                        "lte": 8
+                        "gte": 6,
+                        "lte": 6
                       }
                     ]
                   },
                   "sort": [
-                    "         8-"
+                    "         6-"
                   ]
                 }
               ]
@@ -1901,7 +1973,7 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-12",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22144813",
         "_score": 16,
         "_source": {
@@ -1939,6 +2011,10 @@
           "createdYear": [
             201
           ],
+          "parallelSeriesAddedEntry": [
+            "undefined undefined",
+            "undefined undefined"
+          ],
           "parallelTitle": [
             "‏כותר שאינו באותיות לטינית = зглавие руссий."
           ],
@@ -1963,12 +2039,6 @@
           ],
           "idIssn": [
             "ISSN -- 022"
-          ],
-          "seriesStatement": [
-            "440 Series ; v. number -- 440 b0",
-            "490 Series ; v. number  -- 490 0b",
-            "Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat). CMA Test Records -- 810 2b "
           ],
           "addedAuthorTitle": [
             "Cataloging test record. 700 1b with $t"
@@ -2065,6 +2135,10 @@
               "value": "Standard number (old RLIN, etc.) -- 035"
             }
           ],
+          "seriesAddedEntry": [
+            "Author, of series CMA Test Records. -- 800 1b",
+            "CMA (Cat) CMA Test Records -- 810 2b"
+          ],
           "formerTitle": [
             "Former title -- 247 00"
           ],
@@ -2082,11 +2156,9 @@
             "Cramer, Richard, 1948-||Cramer, Richard, 1948-, former owner",
             "Virtual collection -- 791 2b||Virtual collection -- 791 2b",
             "Local name -- 790 bb||Local name -- 790 bb",
-            "Local name test 2 -- 796 bb||Local name test 2 -- 796 bb",
-            "Author, of series||Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat)||CMA (Cat). CMA Test Records -- 810 2b"
+            "Local name test 2 -- 796 bb||Local name test 2 -- 796 bb"
           ],
-          "updatedAt": 1774481994876,
+          "updatedAt": 1784255657887,
           "publicationStatement": [
             "[s.l.] : Specious Publ. [prev.pub.-- 260.2b], 2001. ",
             "Long Island CIty, N.Y. : CopyCat pub. co. -- 260 bb, 2011.",
@@ -2138,6 +2210,10 @@
               "label": "unmediated"
             }
           ],
+          "seriesAddedEntry_displayPacked": [
+            "Author, of series CMA Test Records. -- 800 1b||Author, of series. CMA Test Records. -- 800 1b",
+            "CMA (Cat) CMA Test Records -- 810 2b||CMA (Cat). CMA Test Records -- 810 2b"
+          ],
           "subjectLiteral": [
             "Starving artist -- 600 00. I always wanted to write a book 600 $t. -- 600 00 with $t.",
             "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v.",
@@ -2162,6 +2238,7 @@
             "testing a testing e testing g -- testing v -- testing x -- testing y -- testing z.",
             "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z."
           ],
+          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelSubjectLiteral": [],
           "formatId": "a",
           "collectionIds": [
@@ -2324,7 +2401,12 @@
             },
             {
               "noteType": "Reproduction",
-              "label": "Microfilm.",
+              "label": "Microfilm. New York : New York Public Library, [19--]. 0  microfilm reels ; 35 mm. (MN *ZZ-00000) -- 533",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Original Version",
+              "label": "Reprint. Originally published in CATNYP. -- 534",
               "type": "bf:Note"
             },
             {
@@ -2353,8 +2435,8 @@
               "type": "bf:Note"
             },
             {
-              "noteType": "Source",
-              "label": "Source \\\\DO NOT DISPLAY\\\\ -- 541 bb $a",
+              "noteType": "Information Relating to Copyright Status",
+              "label": "© World Enterprises on back cover -- 542 bb $f$n",
               "type": "bf:Note"
             },
             {
@@ -2438,11 +2520,6 @@
               "type": "bf:Note"
             },
             {
-              "noteType": "Processing Action",
-              "label": "Processing Action \\\\DO NOT DISPLAY\\\\ -- 583 bb",
-              "type": "bf:Note"
-            },
-            {
               "noteType": "Exhibitions",
               "label": "Exhibitions -- 585",
               "type": "bf:Note"
@@ -2458,6 +2535,11 @@
               "type": "bf:Note"
             },
             {
+              "noteType": "Latest issue consulted",
+              "label": "Latest issue consulted: 1900/1901. -- 588 1b",
+              "type": "bf:Note"
+            },
+            {
               "noteType": "Local note",
               "label": "Local note display --  590 1b",
               "type": "bf:Note"
@@ -2468,78 +2550,8 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Starving artist",
-            "Starving artist -- 600 00. I always wanted to write a book 600 $t.",
-            "Starving artist -- 600 00. I always wanted to write a book 600 $t. -- 600 00 with $t",
-            "Artist, Starving, 1900-1999",
-            "Artist, Starving, 1900-1999 -- Autobiography.",
-            "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v",
-            "Corporate body subject.",
-            "Corporate body subject. --  610 20",
-            "Secret Society of Catalogers",
-            "Secret Society of Catalogers -- Periodicals.",
-            "Secret Society of Catalogers -- Periodicals. -- 610 20 $v",
-            "Conference subject entry.",
-            "Conference subject entry. --  611 20",
-            "Stonecutters' Annual Picnic (12th : 1995 : Springfield)",
-            "Stonecutters' Annual Picnic (12th : 1995 : Springfield) -- 611 20 $n, $d, $c",
-            "Uniform title. Subunit. Catalogerese.",
-            "Uniform title. Subunit. Catalogerese.  -- 630 00 $p, $l",
-            "Life is a common square. Esperanto",
-            "Life is a common square. Esperanto -- Criticism.",
-            "Life is a common square. Esperanto -- Criticism. -- 630 00 $l, $x",
-            "Textile industry testing datetesting",
-            "Textile industry testing datetesting -- 650 b0 $z, $x",
-            "Textile industry testing datetesting -- 650 b0 $z, $x -- India",
-            "Textile industry testing datetesting -- 650 b0 $z, $x -- India -- History",
-            "New York (N.Y.)",
-            "New York (N.Y.) -- 21st century",
-            "New York (N.Y.) -- 21st century -- Diaries.",
-            "New York (N.Y.) -- 21st century -- Diaries. -- 651 b0 $y, $x",
-            "Undiscovered country.",
-            "Undiscovered country. -- 651 b0",
-            "Indexed term",
-            "Indexed term -- 653",
-            "Local subject heading.",
-            "Local subject heading. -- 690 b4",
-            "Quantum pataphysics",
-            "Quantum pataphysics -- Australia",
-            "Quantum pataphysics -- Australia -- 21st century.",
-            "Quantum pataphysics -- Australia -- 21st century. -- 690 b4 $z, $y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing x as first subfield",
-            "testing x as first subfield -- testing v as second subfield.",
-            "testing x as first subfield -- testing v as second subfield. -- 610 10 $x$v only",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x -- testing y",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing b testing c testing d testing e",
-            "testing a testing b testing c testing d testing e -- testing v",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing e testing g",
-            "testing a testing e testing g -- testing v",
-            "testing a testing e testing g -- testing v -- testing x",
-            "testing a testing e testing g -- testing v -- testing x -- testing y",
-            "testing a testing e testing g -- testing v -- testing x -- testing y -- testing z"
+          "seriesUniformTitle_displayPacked": [
+            "CMA Test Records -- 830 b0||CMA Test Records -- 830 b0"
           ],
           "numItemDatesParsed": [
             0
@@ -2585,7 +2597,6 @@
           ],
           "popularity": 1,
           "uniformTitle": [
-            "CMA Test Records -- 830 b0",
             "T tagged 240 Uniform title -- t240",
             "Added title -- 730 0b"
           ],
@@ -2611,6 +2622,9 @@
             "",
             "",
             "зглавие руссий"
+          ],
+          "seriesUniformTitle": [
+            "CMA Test Records -- 830 b0"
           ],
           "summary": [
             "This record was originally created as a test record in CATNYP.  It was greatly expanded in ILS-STAFF to test the public display of various MARC fields. -- 520 (first)",
@@ -2700,10 +2714,7 @@
             "Latest Copyright Date -- 264 34 (RDA)"
           ],
           "series": [
-            "440 Series ;",
-            "490 Series ;",
-            "Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat). CMA Test Records -- 810 2b "
+            "490 Series ;"
           ],
           "issuance": [
             {
@@ -2722,6 +2733,9 @@
             {
               "url": "http://www.ThereIsNoLabelSubfieldInThis856-4b-supplementary.com/"
             }
+          ],
+          "series_displayPacked": [
+            "490 Series ;||490 Series ; v. number  -- 490 0b"
           ],
           "dimensions": [
             "26 cm +",
@@ -2752,7 +2766,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -2769,6 +2783,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -2778,12 +2795,13 @@
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
                     ],
+                    "collectionId": [
+                      "mal"
+                    ],
                     "enumerationChronology": [
                       "v.1"
                     ],
-                    "enumerationChronology_sort": [
-                      "         1-"
-                    ],
+                    "enumerationChronology_sort": "         1-",
                     "formatLiteral": [
                       "Book/text"
                     ],
@@ -2857,7 +2875,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -2874,6 +2892,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:3",
@@ -2882,6 +2903,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "maf"
                     ],
                     "enumerationChronology": [
                       "nothing"

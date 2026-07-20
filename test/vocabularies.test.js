@@ -40,7 +40,7 @@ describe('Vocabularies', function () {
     expect(results.languages).to.deep.equal(mockLanguages.values)
     expect(results.collections).to.be.an('array')
     expect(results.buildingLocations).to.be.an('array')
-    expect(results.buildingLocations[0]).to.have.keys(['value', 'label', 'nickname'])
+    expect(results.buildingLocations[0]).to.have.keys(['value', 'label', 'shortLabel', 'nickname'])
 
     // Check agg formats intersect with nyplCore formats
     results.formats.forEach(f => {

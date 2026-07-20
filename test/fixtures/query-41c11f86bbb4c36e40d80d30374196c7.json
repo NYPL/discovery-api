@@ -1,5 +1,5 @@
 {
-  "took": 1287,
+  "took": 35,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b20970375",
-        "_score": 4036.3945,
+        "_score": 4036.352,
         "_source": {
           "extent": [
             "119 pages : illustrations (color) ;"
@@ -96,7 +96,7 @@
           "contributors_displayPacked": [
             "Sung, Evan||Sung, Evan, photographer"
           ],
-          "updatedAt": 1779503645748,
+          "updatedAt": 1784240436268,
           "publicationStatement": [
             "London : Phaidon Press Limited, 2015.",
             "©2015"
@@ -152,9 +152,6 @@
               "label": "Includes index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Toast (Bread)"
           ],
           "numItemDatesParsed": [
             0
@@ -238,7 +235,7 @@
           ]
         },
         "sort": [
-          4036.3945,
+          4036.352,
           "b20970375"
         ],
         "matched_queries": [
@@ -260,7 +257,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b20970375",
                   "_nested": {
                     "field": "items",
@@ -277,6 +274,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -285,6 +285,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "dueDate": [
                       "2025-06-28"
@@ -361,9 +364,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb2847934",
-        "_score": 4027.3254,
+        "_score": 4027.2827,
         "_source": {
           "extent": [
             "103 p. ;"
@@ -423,7 +426,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779535957525,
+          "updatedAt": 1784290812557,
           "publicationStatement": [
             "London : Oberon, 1999."
           ],
@@ -537,7 +540,7 @@
           ]
         },
         "sort": [
-          4027.3254,
+          4027.2827,
           "pb2847934"
         ],
         "matched_queries": [
@@ -557,7 +560,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb2847934",
                   "_nested": {
                     "field": "items",
@@ -649,9 +652,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9928479343506421",
-        "_score": 3913.174,
+        "_score": 3913.131,
         "_source": {
           "extent": [
             "103 p. ;"
@@ -727,7 +730,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779622002540,
+          "updatedAt": 1784401012403,
           "publicationStatement": [
             "London : Oberon, 1999."
           ],
@@ -846,7 +849,7 @@
           ]
         },
         "sort": [
-          3913.174,
+          3913.131,
           "pb9928479343506421"
         ],
         "matched_queries": [
@@ -866,7 +869,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9928479343506421",
                   "_nested": {
                     "field": "items",
@@ -958,9 +961,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b17133475",
-        "_score": 881.34686,
+        "_score": 881.338,
         "_source": {
           "extent": [
             "1 v. (unpaged) : col. ill. ;"
@@ -1023,7 +1026,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779474262846,
+          "updatedAt": 1784208470175,
           "publicationStatement": [
             "Boston : Houghton Mifflin, c1997."
           ],
@@ -1069,12 +1072,6 @@
           ],
           "physicalDescription": [
             "1 v. (unpaged) : col. ill. ; 28 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Dogs",
-            "Dogs -- Fiction",
-            "Wishes",
-            "Wishes -- Fiction"
           ],
           "numItemDatesParsed": [
             0
@@ -1154,7 +1151,7 @@
           ]
         },
         "sort": [
-          881.34686,
+          881.338,
           "b17133475"
         ],
         "matched_queries": [
@@ -1174,7 +1171,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b17133475",
                   "_nested": {
                     "field": "items",
@@ -1191,6 +1188,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -1199,6 +1199,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -1275,9 +1278,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18806309",
-        "_score": 754.14124,
+        "_score": 754.132,
         "_source": {
           "extent": [
             "386 p. : map ;"
@@ -1346,7 +1349,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779485114438,
+          "updatedAt": 1784220098697,
           "publicationStatement": [
             "Wołowiec : Wydawn. Czarne, 2010."
           ],
@@ -1405,10 +1408,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Seria Reportaż.||Seria Reportaż."
-          ],
-          "subjectLiteral_exploded": [
-            "Caucasus",
-            "Caucasus -- Civilization"
           ],
           "numItemDatesParsed": [
             0
@@ -1490,7 +1489,7 @@
           ]
         },
         "sort": [
-          754.14124,
+          754.132,
           "b18806309"
         ],
         "matched_queries": [
@@ -1509,7 +1508,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18806309",
                   "_nested": {
                     "field": "items",
@@ -1526,6 +1525,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -1534,6 +1536,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "dueDate": [
                       "2025-01-02"
@@ -1613,9 +1618,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18054582",
-        "_score": 748.0122,
+        "_score": 748.00244,
         "_source": {
           "extent": [
             "1 videodisc (approximately 52 min.) : sound, color ;"
@@ -1709,7 +1714,7 @@
             "Zweites Deutsches Fernsehen||Zweites Deutsches Fernsehen",
             "Association relative à la télévision européenne||Association relative à la télévision européenne"
           ],
-          "updatedAt": 1779480096602,
+          "updatedAt": 1784215017810,
           "publicationStatement": [
             "Oley, PA : Bullfrog Films, [2005]"
           ],
@@ -1780,13 +1785,6 @@
               "label": "In English.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Love",
-            "Love -- Drama",
-            "Television operas",
-            "Vignettes",
-            "Vignettes -- Drama"
           ],
           "numItemDatesParsed": [
             0
@@ -1930,7 +1928,7 @@
           ]
         },
         "sort": [
-          748.0122,
+          748.00244,
           "b18054582"
         ],
         "matched_queries": [
@@ -1949,7 +1947,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18054582",
                   "_nested": {
                     "field": "items",
@@ -1966,6 +1964,9 @@
                     "accessMessage_packed": [
                       "accessMessage:a||By appointment only"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:75",
@@ -1974,6 +1975,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:75||dvd"
+                    ],
+                    "collectionId": [
+                      "pav"
                     ],
                     "enumerationChronology": [
                       "C.1"
@@ -2041,9 +2045,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22227752",
-        "_score": 747.53345,
+        "_score": 747.52344,
         "_source": {
           "extent": [
             "1 volume (unpaged) : colour illustrations ;"
@@ -2114,7 +2118,7 @@
           "contributors_displayPacked": [
             "Thisdale, François, 1964-||Thisdale, François, 1964-, illustrator"
           ],
-          "updatedAt": 1779517958058,
+          "updatedAt": 1784258867986,
           "publicationStatement": [
             "Toronto, Ontario, Canada : Pajama Press, 2016."
           ],
@@ -2172,19 +2176,6 @@
               "label": "\"This is a first edition\"--Title page verso.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Racially mixed people",
-            "Racially mixed people -- Juvenile fiction",
-            "Grandmothers",
-            "Grandmothers -- Juvenile fiction",
-            "Blind",
-            "Blind -- Juvenile fiction",
-            "Human skin color",
-            "Human skin color -- Juvenile fiction",
-            "Self-esteem",
-            "Self-esteem -- Juvenile fiction",
-            "Picture books for children"
           ],
           "numItemDatesParsed": [
             0
@@ -2268,7 +2259,7 @@
           ]
         },
         "sort": [
-          747.53345,
+          747.52344,
           "b22227752"
         ],
         "matched_queries": [
@@ -2287,7 +2278,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22227752",
                   "_nested": {
                     "field": "items",
@@ -2304,6 +2295,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -2312,6 +2306,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -2385,9 +2382,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb6955197",
-        "_score": 746.0733,
+        "_score": 746.0634,
         "_source": {
           "extent": [
             "386 p. ;"
@@ -2454,7 +2451,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779562679286,
+          "updatedAt": 1784325126884,
           "publicationStatement": [
             "Wołowiec : Wydawn. \"Czarne\", 2010."
           ],
@@ -2585,7 +2582,7 @@
           ]
         },
         "sort": [
-          746.0733,
+          746.0634,
           "pb6955197"
         ],
         "matched_queries": [
@@ -2603,7 +2600,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb6955197",
                   "_nested": {
                     "field": "items",
@@ -2695,9 +2692,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990099650640203941",
-        "_score": 745.61285,
+        "_score": 745.6028,
         "_source": {
           "extent": [
             "247 p. ;"
@@ -2757,7 +2754,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779600182453,
+          "updatedAt": 1784373525482,
           "publicationStatement": [
             "Holicong, PA : Cosmos Books, c2006, c2002."
           ],
@@ -2818,9 +2815,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222106586330003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Short stories"
           ],
           "numItemDatesParsed": [
             0
@@ -2903,7 +2897,7 @@
           ]
         },
         "sort": [
-          745.61285,
+          745.6028,
           "hb990099650640203941"
         ],
         "matched_queries": [
@@ -2921,7 +2915,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990099650640203941",
                   "_nested": {
                     "field": "items",
@@ -2951,12 +2945,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:PR6119.T79 T63 2006 copy ",
+                      "urn:shelfmark:PR6119.T79 T63 2006",
                       "urn:barcode:32044077499465"
                     ],
                     "identifierV2": [
                       {
-                        "value": "PR6119.T79 T63 2006 copy ",
+                        "value": "PR6119.T79 T63 2006",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -2980,15 +2974,15 @@
                       "PR6119.T79 T63 2006"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "PR6119.T79 T63 2006 copy "
+                      "PR6119.T79 T63 2006"
                     ],
-                    "shelfMark_sort": "aPR6119.T79 T63 2006 copy ",
+                    "shelfMark_sort": "aPR6119.T79 T63 002006",
                     "status": [
                       {
                         "id": "status:a",
@@ -3013,9 +3007,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9969551973506421",
-        "_score": 745.61285,
+        "_score": 745.6028,
         "_source": {
           "extent": [
             "386 pages : map ;"
@@ -3102,7 +3096,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779628932640,
+          "updatedAt": 1784409749821,
           "publicationStatement": [
             "Wołowiec : Wydawn. Czarne, 2010."
           ],
@@ -3162,10 +3156,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Seria Reportaż.||Seria Reportaż."
-          ],
-          "subjectLiteral_exploded": [
-            "Caucasus",
-            "Caucasus -- Civilization"
           ],
           "numItemDatesParsed": [
             0
@@ -3248,7 +3238,7 @@
           ]
         },
         "sort": [
-          745.61285,
+          745.6028,
           "pb9969551973506421"
         ],
         "matched_queries": [
@@ -3266,7 +3256,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9969551973506421",
                   "_nested": {
                     "field": "items",
@@ -3358,9 +3348,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b15868157",
-        "_score": 716.53076,
+        "_score": 716.5215,
         "_source": {
           "extent": [
             "64 p. : ill. ;"
@@ -3433,7 +3423,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779429767620,
+          "updatedAt": 1784191931521,
           "publicationStatement": [
             "Ibadan, Nigeria : Hope Publications, 2002."
           ],
@@ -3487,12 +3477,6 @@
           ],
           "tableOfContents": [
             "Moon among stars -- Vampires on rampage -- The dangling visionary saw -- Much to a name -- Dear mother -- La Rambla -- Personifying death -- Success turns albatross in the hall of nobility."
-          ],
-          "subjectLiteral_exploded": [
-            "Conduct of life",
-            "Conduct of life -- Poetry",
-            "Nigeria",
-            "Nigeria -- Poetry"
           ],
           "numItemDatesParsed": [
             0
@@ -3565,7 +3549,7 @@
           ]
         },
         "sort": [
-          716.53076,
+          716.5215,
           "b15868157"
         ],
         "matched_queries": [
@@ -3585,7 +3569,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b15868157",
                   "_nested": {
                     "field": "items",
@@ -3602,6 +3586,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:61",
@@ -3610,6 +3597,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:61||pamphlet volumes, bound with"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -3683,9 +3673,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b12004445",
-        "_score": 710.95105,
+        "_score": 710.9415,
         "_source": {
           "extent": [
             "124 p. ;"
@@ -3755,7 +3745,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779342465834,
+          "updatedAt": 1784104768648,
           "publicationStatement": [
             "Leoben : Kneipp, 1993."
           ],
@@ -3867,7 +3857,7 @@
           ]
         },
         "sort": [
-          710.95105,
+          710.9415,
           "b12004445"
         ],
         "matched_queries": [
@@ -3886,7 +3876,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b12004445",
                   "_nested": {
                     "field": "items",
@@ -3903,6 +3893,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -3911,6 +3904,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -3984,9 +3980,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b11294632",
-        "_score": 704.6819,
+        "_score": 704.67224,
         "_source": {
           "extent": [
             "xxi, 273 p. ;"
@@ -4066,7 +4062,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779329441733,
+          "updatedAt": 1784089456907,
           "publicationStatement": [
             "New York : Vintage Books, 1990, c1940."
           ],
@@ -4204,7 +4200,7 @@
           ]
         },
         "sort": [
-          704.6819,
+          704.67224,
           "b11294632"
         ],
         "matched_queries": [
@@ -4223,7 +4219,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b11294632",
                   "_nested": {
                     "field": "items",
@@ -4240,6 +4236,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -4248,6 +4247,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -4315,9 +4317,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb1808514",
-        "_score": 696.0733,
+        "_score": 696.0634,
         "_source": {
           "extent": [
             "1 score (3 unnumbered pages, 12 pages) ;"
@@ -4385,7 +4387,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779480345156,
+          "updatedAt": 1784215270420,
           "publicationStatement": [
             "[Place of publication not identified] : Jalni Publications ; New York, N.Y. : Boosey & Hawkes, sole selling agent, 1984, ©1980."
           ],
@@ -4469,10 +4471,6 @@
           "seriesUniformTitle_displayPacked": [
             "Hawkes pocket scores.||Hawkes pocket scores."
           ],
-          "subjectLiteral_exploded": [
-            "Orchestral music",
-            "Orchestral music -- Scores"
-          ],
           "numItemDatesParsed": [
             0
           ],
@@ -4554,7 +4552,7 @@
           ]
         },
         "sort": [
-          696.0733,
+          696.0634,
           "cb1808514"
         ],
         "matched_queries": [
@@ -4571,7 +4569,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb1808514",
                   "_nested": {
                     "field": "items",
@@ -4663,9 +4661,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb15861113",
-        "_score": 695.61285,
+        "_score": 695.6028,
         "_source": {
           "extent": [
             "288 pages ;"
@@ -4738,7 +4736,7 @@
           "contributors_displayPacked": [
             "Edwards, Jonathan||Edwards, Jonathan, editor"
           ],
-          "updatedAt": 1779429649371,
+          "updatedAt": 1784191817093,
           "publicationStatement": [
             "Cardigan : Parthian, 2022."
           ],
@@ -4858,7 +4856,7 @@
           ]
         },
         "sort": [
-          695.61285,
+          695.6028,
           "cb15861113"
         ],
         "matched_queries": [
@@ -4875,7 +4873,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb15861113",
                   "_nested": {
                     "field": "items",
@@ -4967,9 +4965,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16151201",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "1 sound disc : analog, 33 1/3 rpm ;"
@@ -5034,7 +5032,7 @@
             "Aguilera, F.||Aguilera, F., performer, editor, arranger",
             "García Matos, Manuel, 1912-||García Matos, Manuel, 1912-, conductor, editor, arranger"
           ],
-          "updatedAt": 1779433889165,
+          "updatedAt": 1784196767301,
           "publicationStatement": [
             "New York, N.Y. : Seeco, [19--?]"
           ],
@@ -5091,10 +5089,6 @@
               "label": "Sung in Spanish.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Popular music",
-            "Popular music -- Spain"
           ],
           "numItemDatesParsed": [
             0
@@ -5171,7 +5165,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b16151201"
         ],
         "matched_queries": [
@@ -5190,7 +5184,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16151201",
                   "_nested": {
                     "field": "items",
@@ -5210,6 +5204,9 @@
                     "aeonUrl": [
                       "https://nypl-aeon-test.aeon.atlas-sys.com/aeon/Aeon.dll?Action=10&Author=Flores%2C+Lola&CallNumber=*LZR+43109+%5BDisc%5D&Date=19uu&Form=30&Genre=musical+sound+recording&ItemInfo1=Use+in+library&ItemInfo3=https%3A%2F%2Fcatalog.nypl.org%2Frecord%3Db16151201&ItemISxN=i155562502&ItemNumber=33433036075665&ItemPlace=New+York%2C+N.Y.&ItemPublisher=Seeco%2C+%5B19--%3F%5D&Location=Performing+Arts+Music+and+Recorded+Sound+Division&ReferenceNumber=b16151201x&Site=LPAMRAMI&Title=The+toast+of+Spain"
                     ],
+                    "buildingLocationId": [
+                      "pa"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:12",
@@ -5218,6 +5215,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:12||musical sound recording"
+                    ],
+                    "collectionId": [
+                      "pah"
                     ],
                     "formatLiteral": [
                       "Musical recording"
@@ -5282,9 +5282,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16579957",
-        "_score": 666.97205,
+        "_score": 666.96326,
         "_source": {
           "extent": [
             "iv, 238 p. ;"
@@ -5346,7 +5346,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779468030069,
+          "updatedAt": 1784202239995,
           "publicationStatement": [
             "[Nigeria?] : S.M.K. Taribo, c1991."
           ],
@@ -5393,15 +5393,6 @@
           ],
           "physicalDescription": [
             "iv, 238 p. ; 21 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Nigeria",
-            "Nigeria -- Social conditions",
-            "Nigeria -- Social conditions -- 1960-",
-            "Nigeria -- Economic conditions",
-            "Nigeria -- Economic conditions -- 1960-",
-            "Nigeria -- Politics and government",
-            "Nigeria -- Politics and government -- 1960-"
           ],
           "numItemDatesParsed": [
             0
@@ -5466,7 +5457,7 @@
           ]
         },
         "sort": [
-          666.97205,
+          666.96326,
           "b16579957"
         ],
         "matched_queries": [
@@ -5485,7 +5476,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16579957",
                   "_nested": {
                     "field": "items",
@@ -5502,6 +5493,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -5510,6 +5504,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -5583,9 +5580,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b21766784",
-        "_score": 666.53076,
+        "_score": 666.5215,
         "_source": {
           "extent": [
             "75 pages ;"
@@ -5662,7 +5659,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779512068012,
+          "updatedAt": 1784249992296,
           "publicationStatement": [
             "Toronto, Canada : Quattro Poetry, 2018."
           ],
@@ -5792,7 +5789,7 @@
           ]
         },
         "sort": [
-          666.53076,
+          666.5215,
           "b21766784"
         ],
         "matched_queries": [
@@ -5811,7 +5808,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b21766784",
                   "_nested": {
                     "field": "items",
@@ -5828,6 +5825,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -5836,6 +5836,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -5909,9 +5912,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b12227432",
-        "_score": 665.97205,
+        "_score": 665.96326,
         "_source": {
           "note": [
             {
@@ -5925,11 +5928,6 @@
           ],
           "nyplSource": [
             "sierra-nypl"
-          ],
-          "subjectLiteral_exploded": [
-            "Martins, Peter, 1946-",
-            "New York City Ballet",
-            "Sleeping beauty (Choreographic work : Martins after Petipa, M)"
           ],
           "numItemDatesParsed": [
             0
@@ -6004,7 +6002,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779371797256,
+          "updatedAt": 1784108779678,
           "identifier": [
             "urn:shelfmark:*MGZA",
             "urn:bnum:12227432",
@@ -6075,7 +6073,7 @@
           ]
         },
         "sort": [
-          665.97205,
+          665.96326,
           "b12227432"
         ],
         "matched_queries": [
@@ -6097,9 +6095,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22244189",
-        "_score": 665.97205,
+        "_score": 665.96326,
         "_source": {
           "extent": [
             "1 online resource (1 sound file)"
@@ -6265,7 +6263,7 @@
             "Massenet, Jules, 1842-1912||Container of (work): Massenet, Jules, 1842-1912. Don César de Bazan. Sevillana",
             "Tasmanian Symphony Orchestra||Tasmanian Symphony Orchestra, instrumentalist"
           ],
-          "updatedAt": 1779518129209,
+          "updatedAt": 1784259178807,
           "publicationStatement": [
             "[Place of publication not identified] : ABC Classics, [2018]"
           ],
@@ -6331,12 +6329,6 @@
               "label": "Sung in French.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Operas",
-            "Operas -- Excerpts",
-            "Songs (High voice) with orchestra",
-            "Orchestral music"
           ],
           "numItemDatesParsed": [
             0
@@ -6427,7 +6419,7 @@
           ]
         },
         "sort": [
-          665.97205,
+          665.96326,
           "b22244189"
         ],
         "matched_queries": [
@@ -6449,9 +6441,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22839633",
-        "_score": 665.97205,
+        "_score": 665.96326,
         "_source": {
           "extent": [
             "1 online resource (1 sound file)"
@@ -6617,7 +6609,7 @@
             "Massenet, Jules, 1842-1912||Container of (work): Massenet, Jules, 1842-1912. Don César de Bazan. Sevillana",
             "Tasmanian Symphony Orchestra||Tasmanian Symphony Orchestra, instrumentalist"
           ],
-          "updatedAt": 1779524386943,
+          "updatedAt": 1784274206338,
           "publicationStatement": [
             "[Australia] : ABC Classics, [2018]"
           ],
@@ -6683,12 +6675,6 @@
               "label": "Sung in French.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Operas",
-            "Operas -- Excerpts",
-            "Songs (High voice) with orchestra",
-            "Orchestral music"
           ],
           "numItemDatesParsed": [
             0
@@ -6779,7 +6765,7 @@
           ]
         },
         "sort": [
-          665.97205,
+          665.96326,
           "b22839633"
         ],
         "matched_queries": [
@@ -6801,9 +6787,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b21897112",
-        "_score": 665.53076,
+        "_score": 665.5215,
         "_source": {
           "extent": [
             "1 online resource (1 sound file)"
@@ -6979,7 +6965,7 @@
           "contributors_displayPacked": [
             "Rose Ensemble||Rose Ensemble, performer"
           ],
-          "updatedAt": 1779513628635,
+          "updatedAt": 1784251808234,
           "publicationStatement": [
             "St. Paul, Minnesota : Rose Records, [2014]",
             "©2014"
@@ -7064,17 +7050,6 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Alcohol",
-            "Alcohol -- Songs and music",
-            "Temperance",
-            "Temperance -- Songs and music",
-            "Prohibition",
-            "Prohibition -- Songs and music",
-            "Choruses, Secular",
-            "Popular music",
-            "Popular music -- United States"
-          ],
           "numItemDatesParsed": [
             0
           ],
@@ -7152,7 +7127,7 @@
           ]
         },
         "sort": [
-          665.53076,
+          665.5215,
           "b21897112"
         ],
         "matched_queries": [
@@ -7174,9 +7149,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb5714692",
-        "_score": 657.9041,
+        "_score": 657.89465,
         "_source": {
           "extent": [
             "272 p. ;"
@@ -7255,7 +7230,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779557854741,
+          "updatedAt": 1784318911948,
           "publicationStatement": [
             "Northlands [South Africa] : Pan Macmillan, 2008."
           ],
@@ -7380,7 +7355,7 @@
           ]
         },
         "sort": [
-          657.9041,
+          657.89465,
           "pb5714692"
         ],
         "matched_queries": [
@@ -7397,7 +7372,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb5714692",
                   "_nested": {
                     "field": "items",
@@ -7489,9 +7464,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9957146923506421",
-        "_score": 657.46173,
+        "_score": 657.45197,
         "_source": {
           "extent": [
             "272 p. ;"
@@ -7570,7 +7545,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779627449782,
+          "updatedAt": 1784407970264,
           "publicationStatement": [
             "Northlands [South Africa] : Pan Macmillan, 2008."
           ],
@@ -7697,7 +7672,7 @@
           ]
         },
         "sort": [
-          657.46173,
+          657.45197,
           "pb9957146923506421"
         ],
         "matched_queries": [
@@ -7714,7 +7689,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9957146923506421",
                   "_nested": {
                     "field": "items",
@@ -7806,9 +7781,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b17794539",
-        "_score": 650.542,
+        "_score": 650.5333,
         "_source": {
           "extent": [
             "118 p. ;"
@@ -7867,7 +7842,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779478063667,
+          "updatedAt": 1784212854458,
           "publicationStatement": [
             "New York : Holiday House, c1999."
           ],
@@ -7913,14 +7888,6 @@
           ],
           "physicalDescription": [
             "118 p. ; 22 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Dragons",
-            "Dragons -- Fiction",
-            "Moving, Household",
-            "Moving, Household -- Fiction",
-            "Arizona",
-            "Arizona -- Fiction"
           ],
           "numItemDatesParsed": [
             0
@@ -7997,7 +7964,7 @@
           ]
         },
         "sort": [
-          650.542,
+          650.5333,
           "b17794539"
         ],
         "matched_queries": [
@@ -8016,7 +7983,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b17794539",
                   "_nested": {
                     "field": "items",
@@ -8033,6 +8000,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -8041,6 +8011,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -8117,9 +8090,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990094818300203941",
-        "_score": 642.8826,
+        "_score": 642.8739,
         "_source": {
           "extent": [
             "64 p. : ill. ;"
@@ -8179,7 +8152,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779598505797,
+          "updatedAt": 1784371520505,
           "publicationStatement": [
             "Ibadan, Nigeria : Hope Publications, c2002."
           ],
@@ -8236,12 +8209,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222089710600003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Conduct of life",
-            "Conduct of life -- Poetry",
-            "Nigeria",
-            "Nigeria -- Poetry"
           ],
           "numItemDatesParsed": [
             0
@@ -8315,7 +8282,7 @@
           ]
         },
         "sort": [
-          642.8826,
+          642.8739,
           "hb990094818300203941"
         ],
         "matched_queries": [
@@ -8333,7 +8300,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990094818300203941",
                   "_nested": {
                     "field": "items",
@@ -8363,12 +8330,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:PR9387.9.O314 T63 2002 copy ",
+                      "urn:shelfmark:PR9387.9.O314 T63 2002",
                       "urn:barcode:32044089630495"
                     ],
                     "identifierV2": [
                       {
-                        "value": "PR9387.9.O314 T63 2002 copy ",
+                        "value": "PR9387.9.O314 T63 2002",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -8392,15 +8359,15 @@
                       "PR9387.9.O314 T63 2002"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "PR9387.9.O314 T63 2002 copy "
+                      "PR9387.9.O314 T63 2002"
                     ],
-                    "shelfMark_sort": "aPR9387.9.O314 T63 2002 copy ",
+                    "shelfMark_sort": "aPR9387.9.O314 T63 002002",
                     "status": [
                       {
                         "id": "status:a",
@@ -8425,9 +8392,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18437590",
-        "_score": 632.77124,
+        "_score": 632.7628,
         "_source": {
           "extent": [
             "xii, 156 p. ;"
@@ -8500,7 +8467,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779483098824,
+          "updatedAt": 1784218033532,
           "publicationStatement": [
             "Ilesa : Keynotes Publishers, c2008."
           ],
@@ -8551,12 +8518,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Patriotic reflections on Ijesaland ;||Patriotic reflections on Ijesaland ; no. 2."
-          ],
-          "subjectLiteral_exploded": [
-            "Ijesa (African people)",
-            "Ijesa (African people) -- Biography",
-            "Ilesa (Nigeria)",
-            "Ilesa (Nigeria) -- Description and travel"
           ],
           "numItemDatesParsed": [
             0
@@ -8638,7 +8599,7 @@
           ]
         },
         "sort": [
-          632.77124,
+          632.7628,
           "b18437590"
         ],
         "matched_queries": [
@@ -8657,7 +8618,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18437590",
                   "_nested": {
                     "field": "items",
@@ -8674,6 +8635,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -8682,6 +8646,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -8755,9 +8722,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22185434",
-        "_score": 632.3468,
+        "_score": 632.33795,
         "_source": {
           "extent": [
             "166 p. ;"
@@ -8826,7 +8793,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779517168075,
+          "updatedAt": 1784257273897,
           "publicationStatement": [
             "New York : Ecco, c2010."
           ],
@@ -8875,17 +8842,6 @@
           ],
           "physicalDescription": [
             "166 p. ; 22 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Rosenblatt, Roger",
-            "Rosenblatt, Roger -- Family",
-            "Grandparent and child",
-            "Bereavement",
-            "Parenting",
-            "Grandparents as parents",
-            "Daughters",
-            "Daughters -- Death",
-            "Grandparents"
           ],
           "numItemDatesParsed": [
             0
@@ -8958,7 +8914,7 @@
           ]
         },
         "sort": [
-          632.3468,
+          632.33795,
           "b22185434"
         ],
         "matched_queries": [
@@ -8977,7 +8933,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22185434",
                   "_nested": {
                     "field": "items",
@@ -8994,6 +8950,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -9002,6 +8961,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -9075,9 +9037,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b13111567",
-        "_score": 631.3468,
+        "_score": 631.33795,
         "_source": {
           "extent": [
             "v."
@@ -9142,7 +9104,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779387175635,
+          "updatedAt": 1784124787029,
           "publicationStatement": [
             "New York, The Nation Press, 1909-"
           ],
@@ -9262,7 +9224,7 @@
           ]
         },
         "sort": [
-          631.3468,
+          631.33795,
           "b13111567"
         ],
         "matched_queries": [
@@ -9280,7 +9242,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13111567",
                   "_nested": {
                     "field": "items",
@@ -9297,6 +9259,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:32",
@@ -9305,6 +9270,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:32||google project, book"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "enumerationChronology": [
                       "ser. 2"
@@ -9379,7 +9347,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13111567",
                   "_nested": {
                     "field": "items",
@@ -9396,6 +9364,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:32",
@@ -9404,6 +9375,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:32||google project, book"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "enumerationChronology": [
                       "ser. 1"
@@ -9483,9 +9457,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b20569949",
-        "_score": 623.0325,
+        "_score": 623.0248,
         "_source": {
           "extent": [
             "1 online resource."
@@ -9542,7 +9516,7 @@
             "Twist, John, 1898-1976||Twist, John, 1898-1976",
             "Sayre, Joel, 1900-1979||Sayre, Joel, 1900-1979"
           ],
-          "updatedAt": 1779499269033,
+          "updatedAt": 1784235609137,
           "publicationStatement": [
             "Alexandria, VA : Alexander Street Press, 2007."
           ],
@@ -9688,7 +9662,7 @@
           ]
         },
         "sort": [
-          623.0325,
+          623.0248,
           "b20569949"
         ],
         "matched_queries": [
@@ -9711,9 +9685,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22202337",
-        "_score": 601.542,
+        "_score": 601.5333,
         "_source": {
           "extent": [
             "xiii, 218 p. : col. ill. ;"
@@ -9779,7 +9753,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779517482922,
+          "updatedAt": 1784257901931,
           "publicationStatement": [
             "Crows Nest, N.S.W. : Fairfax Books, 2012."
           ],
@@ -9835,9 +9809,6 @@
               "label": "Includes index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Cooking"
           ],
           "numItemDatesParsed": [
             0
@@ -9916,7 +9887,7 @@
           ]
         },
         "sort": [
-          601.542,
+          601.5333,
           "b22202337"
         ],
         "matched_queries": [
@@ -9935,7 +9906,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22202337",
                   "_nested": {
                     "field": "items",
@@ -9952,6 +9923,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -9960,6 +9934,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -10033,9 +10010,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b22904468",
-        "_score": 601.542,
+        "_score": 601.5333,
         "_source": {
           "extent": [
             "189 pages : color illustrations ;"
@@ -10113,7 +10090,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779525127537,
+          "updatedAt": 1784276406814,
           "publicationStatement": [
             "New York : Bloomsbury Publishing, 2022.",
             "©2022"
@@ -10174,10 +10151,6 @@
               "label": "Includes index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Toast (Bread)",
-            "Cooking (Bread)"
           ],
           "numItemDatesParsed": [
             0
@@ -10260,7 +10233,7 @@
           ]
         },
         "sort": [
-          601.542,
+          601.5333,
           "b22904468"
         ],
         "matched_queries": [
@@ -10279,7 +10252,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b22904468",
                   "_nested": {
                     "field": "items",
@@ -10296,6 +10269,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -10304,6 +10280,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -10377,9 +10356,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb11446537",
-        "_score": 592.473,
+        "_score": 592.46387,
         "_source": {
           "extent": [
             "viii, 82 pages ;"
@@ -10469,7 +10448,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779332358767,
+          "updatedAt": 1784092864213,
           "publicationStatement": [
             "New Delhi : Oxford University Press, 2014."
           ],
@@ -10521,10 +10500,6 @@
           ],
           "physicalDescription": [
             "viii, 82 pages ; 22 cm"
-          ],
-          "subjectLiteral_exploded": [
-            "Bangalore (India)",
-            "Bangalore (India) -- Drama"
           ],
           "numItemDatesParsed": [
             0
@@ -10604,7 +10579,7 @@
           ]
         },
         "sort": [
-          592.473,
+          592.46387,
           "cb11446537"
         ],
         "matched_queries": [
@@ -10621,7 +10596,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb11446537",
                   "_nested": {
                     "field": "items",
@@ -10713,9 +10688,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb13686426",
-        "_score": 589.5575,
+        "_score": 589.54944,
         "_source": {
           "extent": [
             "volume : color illustrations ;"
@@ -10795,7 +10770,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779396564986,
+          "updatedAt": 1784135021360,
           "publicationStatement": [
             "[Nantes] : Éditions Coiffard, [2018-]"
           ],
@@ -10855,15 +10830,6 @@
               "label": "Includes glossary.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Pʻirosmanašvili, Niko, 1862?-1918",
-            "Pʻirosmanašvili, Niko, 1862?-1918 -- Criticism and interpretation",
-            "Painting, Georgian (South Caucasian)",
-            "Painting, Georgian (South Caucasian) -- 19th century",
-            "Painting, Georgian (South Caucasian) -- 19th century -- History and criticism",
-            "Painting, Georgian (South Caucasian) -- 20th century",
-            "Painting, Georgian (South Caucasian) -- 20th century -- History and criticism"
           ],
           "numItemDatesParsed": [
             0
@@ -10941,7 +10907,7 @@
           ]
         },
         "sort": [
-          589.5575,
+          589.54944,
           "cb13686426"
         ],
         "matched_queries": [
@@ -10959,7 +10925,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb13686426",
                   "_nested": {
                     "field": "items",
@@ -11061,9 +11027,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b16478384",
-        "_score": 573.63873,
+        "_score": 573.6304,
         "_source": {
           "extent": [
             "xi, 353 p. ;"
@@ -11135,7 +11101,7 @@
           "contributors_displayPacked": [
             "Games, Stephen||Games, Stephen"
           ],
-          "updatedAt": 1779437419032,
+          "updatedAt": 1784200655641,
           "publicationStatement": [
             "London : John Murray, 2006."
           ],
@@ -11189,10 +11155,6 @@
               "label": "Includes index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Radio programs",
-            "Radio programs -- Great Britain"
           ],
           "numItemDatesParsed": [
             0
@@ -11269,7 +11231,7 @@
           ]
         },
         "sort": [
-          573.63873,
+          573.6304,
           "b16478384"
         ],
         "matched_queries": [
@@ -11288,7 +11250,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b16478384",
                   "_nested": {
                     "field": "items",
@@ -11305,6 +11267,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -11313,6 +11278,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -11386,9 +11354,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b19838551",
-        "_score": 573.63873,
+        "_score": 573.6304,
         "_source": {
           "extent": [
             "112 p. ;"
@@ -11461,7 +11429,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779492079967,
+          "updatedAt": 1784227710698,
           "publicationStatement": [
             "Ibadan, Oyo State, Nigeria : Kraft Books, 2006."
           ],
@@ -11525,15 +11493,6 @@
           ],
           "seriesUniformTitle_displayPacked": [
             "Short stories (Ibadan, Nigeria)||Short stories (Ibadan, Nigeria)"
-          ],
-          "subjectLiteral_exploded": [
-            "Short stories, Nigerian (English)",
-            "Nigerians",
-            "Nigerians -- Conduct of life",
-            "Nigerians -- Conduct of life -- Fiction",
-            "Nigeria",
-            "Nigeria -- Social conditions",
-            "Nigeria -- Social conditions -- Fiction"
           ],
           "numItemDatesParsed": [
             0
@@ -11618,7 +11577,7 @@
           ]
         },
         "sort": [
-          573.63873,
+          573.6304,
           "b19838551"
         ],
         "matched_queries": [
@@ -11637,7 +11596,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b19838551",
                   "_nested": {
                     "field": "items",
@@ -11654,6 +11613,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:61",
@@ -11662,6 +11624,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:61||pamphlet volumes, bound with"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "enumerationChronology": [
                       "no. 1-4"
@@ -11745,9 +11710,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18036289",
-        "_score": 573.0325,
+        "_score": 573.0248,
         "_source": {
           "extent": [
             "1 score (14 p.) + 2 parts : port. ;"
@@ -11821,7 +11786,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779479969661,
+          "updatedAt": 1784214901230,
           "publicationStatement": [
             "King of Prussia, PA : T. Presser, c2005."
           ],
@@ -11889,10 +11854,6 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Trios (Piano, flutes (2))",
-            "Trios (Piano, flutes (2)) -- Scores and parts"
-          ],
           "numItemDatesParsed": [
             0
           ],
@@ -11955,7 +11916,7 @@
           ]
         },
         "sort": [
-          573.0325,
+          573.0248,
           "b18036289"
         ],
         "matched_queries": [
@@ -11973,7 +11934,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18036289",
                   "_nested": {
                     "field": "items",
@@ -11990,6 +11951,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:57",
@@ -11998,6 +11962,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:57||printed music limited circ MaRLI"
+                    ],
+                    "collectionId": [
+                      "pam"
                     ],
                     "formatLiteral": [
                       "Notated music"
@@ -12074,9 +12041,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990092192200203941",
-        "_score": 565.9692,
+        "_score": 565.96094,
         "_source": {
           "extent": [
             "247 p. ;"
@@ -12147,7 +12114,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779597479953,
+          "updatedAt": 1784370206692,
           "publicationStatement": [
             "London ; New York : Fourth Estate, 2003."
           ],
@@ -12203,14 +12170,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222073168680003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Slater, Nigel",
-            "Slater, Nigel -- Childhood and youth",
-            "Food habits",
-            "Food habits -- England",
-            "Food habits -- England -- History",
-            "Food habits -- England -- History -- 20th century"
           ],
           "numItemDatesParsed": [
             0
@@ -12281,7 +12240,7 @@
           ]
         },
         "sort": [
-          565.9692,
+          565.96094,
           "hb990092192200203941"
         ],
         "matched_queries": [
@@ -12299,7 +12258,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990092192200203941",
                   "_nested": {
                     "field": "items",
@@ -12329,12 +12288,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:TX649.S5 A3 2003 copy ",
+                      "urn:shelfmark:TX649.S5 A3 2003",
                       "urn:barcode:HXSKRU"
                     ],
                     "identifierV2": [
                       {
-                        "value": "TX649.S5 A3 2003 copy ",
+                        "value": "TX649.S5 A3 2003",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -12358,15 +12317,15 @@
                       "TX649.S5 A3 2003"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       false
                     ],
                     "shelfMark": [
-                      "TX649.S5 A3 2003 copy "
+                      "TX649.S5 A3 2003"
                     ],
-                    "shelfMark_sort": "aTX649.S5 A3 2003 copy ",
+                    "shelfMark_sort": "aTX649.S5 A3 002003",
                     "status": [
                       {
                         "id": "status:na",
@@ -12391,9 +12350,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "cb5358913",
-        "_score": 564.96454,
+        "_score": 564.9562,
         "_source": {
           "extent": [
             "80 pages ;"
@@ -12461,7 +12420,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779556066541,
+          "updatedAt": 1784316531374,
           "publicationStatement": [
             "Tarset : Bloodaxe, 2005."
           ],
@@ -12571,7 +12530,7 @@
           ]
         },
         "sort": [
-          564.96454,
+          564.9562,
           "cb5358913"
         ],
         "matched_queries": [
@@ -12588,7 +12547,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "cb5358913",
                   "_nested": {
                     "field": "items",
@@ -12680,9 +12639,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990094315110203941",
-        "_score": 564.96454,
+        "_score": 564.9562,
         "_source": {
           "extent": [
             "271 p. ;"
@@ -12753,7 +12712,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779598338026,
+          "updatedAt": 1784371283580,
           "publicationStatement": [
             "Toronto : HarperCollins, c2004."
           ],
@@ -12813,9 +12772,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222083339720003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Short stories, Canadian"
           ],
           "numItemDatesParsed": [
             0
@@ -12896,7 +12852,7 @@
           ]
         },
         "sort": [
-          564.96454,
+          564.9562,
           "hb990094315110203941"
         ],
         "matched_queries": [
@@ -12913,7 +12869,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990094315110203941",
                   "_nested": {
                     "field": "items",
@@ -12943,12 +12899,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:PR9199.3.I83 P63 2004 copy ",
+                      "urn:shelfmark:PR9199.3.I83 P63 2004",
                       "urn:barcode:32044105914865"
                     ],
                     "identifierV2": [
                       {
-                        "value": "PR9199.3.I83 P63 2004 copy ",
+                        "value": "PR9199.3.I83 P63 2004",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -12972,15 +12928,15 @@
                       "PR9199.3.I83 P63 2004"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "PR9199.3.I83 P63 2004 copy "
+                      "PR9199.3.I83 P63 2004"
                     ],
-                    "shelfMark_sort": "aPR9199.3.I83 P63 2004 copy ",
+                    "shelfMark_sort": "aPR9199.3.I83 P63 002004",
                     "status": [
                       {
                         "id": "status:a",
@@ -13005,9 +12961,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990117890200203941",
-        "_score": 564.96454,
+        "_score": 564.9562,
         "_source": {
           "extent": [
             "62 p. ;"
@@ -13071,7 +13027,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779602923730,
+          "updatedAt": 1784376825391,
           "publicationStatement": [
             "New York, NY : Samuel French, c2008."
           ],
@@ -13126,18 +13082,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222119612490003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Holmes, Sherlock (Fictitious character)",
-            "Holmes, Sherlock (Fictitious character) -- Drama",
-            "Holmes, Sherlock",
-            "Holmes, Sherlock -- Drama",
-            "Watson, John H. (Fictitious character)",
-            "Watson, John H. (Fictitious character) -- Drama",
-            "Chaplin, Charlie, 1889-1977",
-            "Chaplin, Charlie, 1889-1977 -- Drama",
-            "London (England)",
-            "London (England) -- Drama"
           ],
           "numItemDatesParsed": [
             0
@@ -13216,7 +13160,7 @@
           ]
         },
         "sort": [
-          564.96454,
+          564.9562,
           "hb990117890200203941"
         ],
         "matched_queries": [
@@ -13233,7 +13177,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990117890200203941",
                   "_nested": {
                     "field": "items",
@@ -13263,12 +13207,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:PS3561.A43 F56 2008 copy ",
+                      "urn:shelfmark:PS3561.A43 F56 2008",
                       "urn:barcode:32044108950577"
                     ],
                     "identifierV2": [
                       {
-                        "value": "PS3561.A43 F56 2008 copy ",
+                        "value": "PS3561.A43 F56 2008",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -13292,15 +13236,15 @@
                       "PS3561.A43 F56 2008"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "PS3561.A43 F56 2008 copy "
+                      "PS3561.A43 F56 2008"
                     ],
-                    "shelfMark_sort": "aPS3561.A43 F56 2008 copy ",
+                    "shelfMark_sort": "aPS3561.A43 F56 002008",
                     "status": [
                       {
                         "id": "status:a",
@@ -13325,9 +13269,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9911624953506421",
-        "_score": 564.96454,
+        "_score": 564.9562,
         "_source": {
           "extent": [
             "1 score (9 pages) ;"
@@ -13416,7 +13360,7 @@
           "contributors_displayPacked": [
             "Bertolino, James, 1942-||Bertolino, James, 1942-"
           ],
-          "updatedAt": 1779613258235,
+          "updatedAt": 1784389652720,
           "publicationStatement": [
             "Victoria, B.C. : AdLar Publications, ©1994."
           ],
@@ -13486,12 +13430,6 @@
               "label": "Duration: 3:30.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Songs (High voice) with instrumental ensemble",
-            "Songs (High voice) with instrumental ensemble -- Scores",
-            "Bertolino, James, 1942-",
-            "Bertolino, James, 1942- -- Musical settings"
           ],
           "numItemDatesParsed": [
             0
@@ -13570,7 +13508,7 @@
           ]
         },
         "sort": [
-          564.96454,
+          564.9562,
           "pb9911624953506421"
         ],
         "matched_queries": [
@@ -13587,7 +13525,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9911624953506421",
                   "_nested": {
                     "field": "items",
@@ -13679,9 +13617,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb9921391513506421",
-        "_score": 564.96454,
+        "_score": 564.9562,
         "_source": {
           "extent": [
             "ix, 226 pages : illustrations, portraits ;"
@@ -13761,7 +13699,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779618785782,
+          "updatedAt": 1784396715682,
           "publicationStatement": [
             "London : André Deutsch, 1997."
           ],
@@ -13810,11 +13748,6 @@
           "collectionIds": [],
           "physicalDescription": [
             "ix, 226 pages : illustrations, portraits ; 25 cm"
-          ],
-          "subjectLiteral_exploded": [
-            "Drinking in literature",
-            "Drinking",
-            "Drinking -- Literary collections"
           ],
           "numItemDatesParsed": [
             0
@@ -13891,7 +13824,7 @@
           ]
         },
         "sort": [
-          564.96454,
+          564.9562,
           "pb9921391513506421"
         ],
         "matched_queries": [
@@ -13908,7 +13841,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb9921391513506421",
                   "_nested": {
                     "field": "items",
@@ -14000,9 +13933,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990074688990203941",
-        "_score": 564.5697,
+        "_score": 564.5608,
         "_source": {
           "extent": [
             "359 p. : ill. ;"
@@ -14069,7 +14002,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779591318478,
+          "updatedAt": 1784362371801,
           "publicationStatement": [
             "Harare, Zimbabwe : Harper Collins, 1995."
           ],
@@ -14188,7 +14121,7 @@
           ]
         },
         "sort": [
-          564.5697,
+          564.5608,
           "hb990074688990203941"
         ],
         "matched_queries": [
@@ -14205,7 +14138,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990074688990203941",
                   "_nested": {
                     "field": "items",
@@ -14235,12 +14168,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:MLCS 96/01149 (P) copy ",
+                      "urn:shelfmark:MLCS 96/01149 (P)",
                       "urn:barcode:HNGRR7"
                     ],
                     "identifierV2": [
                       {
-                        "value": "MLCS 96/01149 (P) copy ",
+                        "value": "MLCS 96/01149 (P)",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -14264,15 +14197,15 @@
                       "MLCS 96/01149 (P)"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "MLCS 96/01149 (P) copy "
+                      "MLCS 96/01149 (P)"
                     ],
-                    "shelfMark_sort": "aMLCS 96/01149 (P) copy ",
+                    "shelfMark_sort": "aMLCS 96/01149 (P)",
                     "status": [
                       {
                         "id": "status:a",
@@ -14297,9 +14230,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "hb990088521070203941",
-        "_score": 564.5697,
+        "_score": 564.5608,
         "_source": {
           "nyplSource": [
             "recap-hl"
@@ -14359,7 +14292,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779596232045,
+          "updatedAt": 1784368528079,
           "publicationStatement": [
             "Sidney, B.C. : Heirloom Books, 2001."
           ],
@@ -14408,14 +14341,6 @@
               "label": "committed to retain 20181001 in perpetuity ReCAP Shared Collection HUL 222074350610003941",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Schiller, Jeannette, 1911-",
-            "Teachers",
-            "Teachers -- Saskatchewan",
-            "Teachers -- Saskatchewan -- Biography",
-            "Teachers -- British Columbia",
-            "Teachers -- British Columbia -- Biography"
           ],
           "numItemDatesParsed": [
             0
@@ -14483,7 +14408,7 @@
           ]
         },
         "sort": [
-          564.5697,
+          564.5608,
           "hb990088521070203941"
         ],
         "matched_queries": [
@@ -14500,7 +14425,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "hb990088521070203941",
                   "_nested": {
                     "field": "items",
@@ -14530,12 +14455,12 @@
                       "Book/text"
                     ],
                     "identifier": [
-                      "urn:shelfmark:LA2325.S34 A3 2001 copy ",
+                      "urn:shelfmark:LA2325.S34 A3 2001",
                       "urn:barcode:HXL53Z"
                     ],
                     "identifierV2": [
                       {
-                        "value": "LA2325.S34 A3 2001 copy ",
+                        "value": "LA2325.S34 A3 2001",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -14559,15 +14484,15 @@
                       "LA2325.S34 A3 2001"
                     ],
                     "recapCustomerCode": [
-                      "HW"
+                      "hd:HW"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "LA2325.S34 A3 2001 copy "
+                      "LA2325.S34 A3 2001"
                     ],
-                    "shelfMark_sort": "aLA2325.S34 A3 2001 copy ",
+                    "shelfMark_sort": "aLA2325.S34 A3 002001",
                     "status": [
                       {
                         "id": "status:a",
@@ -14592,15 +14517,18 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb2139151",
-        "_score": 564.5697,
+        "_score": 564.5608,
         "_source": {
           "extent": [
             "ix, 226 p. : ill., ports. ;"
           ],
           "nyplSource": [
             "recap-pul"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "André Deutsch"
@@ -14611,6 +14539,9 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
@@ -14618,17 +14549,36 @@
             1997
           ],
           "parallelSeriesAddedEntry": [],
+          "title": [
+            "Creative spirits : a toast to literary drinkers"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [],
+          "createdString": [
+            "1997"
+          ],
+          "creatorLiteral": [
+            "Booth, John"
+          ],
           "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
           "dateStartYear": [
             1997
           ],
           "parallelContributors_displayPacked": [],
           "parallelCreatorLiteral": [
             null
+          ],
+          "idOclc": [
+            "ocm41333062",
+            "SCSB-506538"
           ],
           "identifierV2": [
             {
@@ -14650,7 +14600,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779507859772,
+          "updatedAt": 1784245219242,
           "publicationStatement": [
             "London : André Deutsch, 1997."
           ],
@@ -14662,6 +14612,24 @@
           ],
           "creators_displayPacked": [
             "Booth, John||Booth, John"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1997"
           ],
           "dates": [
             {
@@ -14684,68 +14652,16 @@
             "Drinking in literature -- Collections.",
             "Drinking -- Literary collections."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [],
-          "physicalDescription": [
-            "ix, 226 p. : ill., ports. ; 25 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "Drinking in literature",
-            "Drinking in literature -- Collections",
-            "Drinking",
-            "Drinking -- Literary collections"
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Creative spirits : a toast to literary drinkers"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1997"
-          ],
-          "creatorLiteral": [
-            "Booth, John"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "ocm41333062",
-            "SCSB-506538"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1997"
-          ],
           "titleDisplay": [
             "Creative spirits : a toast to literary drinkers / John Booth."
           ],
           "uri": "pb2139151",
+          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelContributorLiteral": [],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [],
           "placeOfPublication": [
             "London"
           ],
@@ -14755,12 +14671,15 @@
               "label": "monograph/item"
             }
           ],
+          "physicalDescription": [
+            "ix, 226 p. : ill., ports. ; 25 cm."
+          ],
           "dimensions": [
             "25 cm."
           ]
         },
         "sort": [
-          564.5697,
+          564.5608,
           "pb2139151"
         ],
         "matched_queries": [
@@ -14777,7 +14696,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb2139151",
                   "_nested": {
                     "field": "items",
@@ -14869,9 +14788,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b13555237",
-        "_score": 548.6255,
+        "_score": 548.61804,
         "_source": {
           "extent": [
             "257 p. ;"
@@ -14949,7 +14868,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779394505199,
+          "updatedAt": 1784132515426,
           "publicationStatement": [
             "New York : Doubleday, 1998."
           ],
@@ -14998,14 +14917,6 @@
           ],
           "physicalDescription": [
             "257 p. ; 25 cm."
-          ],
-          "subjectLiteral_exploded": [
-            "African Americans",
-            "African Americans -- New York (State)",
-            "African Americans -- New York (State) -- New York",
-            "African Americans -- New York (State) -- New York -- Fiction",
-            "Harlem (New York, N.Y.)",
-            "Harlem (New York, N.Y.) -- Fiction"
           ],
           "numItemDatesParsed": [
             0
@@ -15075,7 +14986,7 @@
           ]
         },
         "sort": [
-          548.6255,
+          548.61804,
           "b13555237"
         ],
         "matched_queries": [
@@ -15094,7 +15005,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13555237",
                   "_nested": {
                     "field": "items",
@@ -15111,6 +15022,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -15119,6 +15033,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -15187,7 +15104,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b13555237",
                   "_nested": {
                     "field": "items",
@@ -15204,6 +15121,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -15212,6 +15132,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -15285,9 +15208,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b18012067",
-        "_score": 548.2455,
+        "_score": 548.2374,
         "_source": {
           "extent": [
             "97 p. : ill. (chiefly col.) ;"
@@ -15369,7 +15292,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779479601828,
+          "updatedAt": 1784214500035,
           "publicationStatement": [
             "Minneapolis, Minn. : Coffee House Press, 2009."
           ],
@@ -15488,7 +15411,7 @@
           ]
         },
         "sort": [
-          548.2455,
+          548.2374,
           "b18012067"
         ],
         "matched_queries": [
@@ -15507,7 +15430,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18012067",
                   "_nested": {
                     "field": "items",
@@ -15524,6 +15447,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -15532,6 +15458,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "scf"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -15600,7 +15529,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b18012067",
                   "_nested": {
                     "field": "items",
@@ -15617,6 +15546,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -15625,6 +15557,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -15698,9 +15633,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "b21091000",
-        "_score": 548.2455,
+        "_score": 548.2374,
         "_source": {
           "extent": [
             "vii, 216 pages : color illustrations ;"
@@ -15777,7 +15712,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779504665093,
+          "updatedAt": 1784241637377,
           "publicationStatement": [
             "New York : Abrams Image, 2016."
           ],
@@ -15839,15 +15774,6 @@
               "label": "Includes bibliographical references (pages 203-204) and index.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Alcoholic beverages",
-            "Alcoholic beverages -- United States",
-            "Alcoholic beverages -- United States -- History",
-            "Drinking of alcoholic beverages",
-            "Drinking of alcoholic beverages -- United States",
-            "Drinking of alcoholic beverages -- United States -- History",
-            "Cocktails"
           ],
           "numItemDatesParsed": [
             0
@@ -15920,7 +15846,7 @@
           ]
         },
         "sort": [
-          548.2455,
+          548.2374,
           "b21091000"
         ],
         "matched_queries": [
@@ -15939,7 +15865,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "b21091000",
                   "_nested": {
                     "field": "items",
@@ -15956,6 +15882,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -15964,6 +15893,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "formatLiteral": [
                       "Book/text"
@@ -16037,9 +15969,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-05-27",
+        "_index": "resources-qa-2026-07-14",
         "_id": "pb1162495",
-        "_score": 539.17645,
+        "_score": 539.1679,
         "_source": {
           "extent": [
             "1 score (9 p.) ;"
@@ -16106,7 +16038,7 @@
           ],
           "seriesAddedEntry": [],
           "contributors_displayPacked": [],
-          "updatedAt": 1779335691151,
+          "updatedAt": 1784096733522,
           "publicationStatement": [
             "Victoria, British Columbia : AdLar Publications, c1994."
           ],
@@ -16171,12 +16103,6 @@
               "label": "Duration: 3:30.",
               "type": "bf:Note"
             }
-          ],
-          "subjectLiteral_exploded": [
-            "Bertolino, James, 1942-",
-            "Bertolino, James, 1942- -- Musical settings",
-            "Songs (High voice) with instrumental ensemble",
-            "Songs (High voice) with instrumental ensemble -- Scores"
           ],
           "numItemDatesParsed": [
             0
@@ -16244,7 +16170,7 @@
           ]
         },
         "sort": [
-          539.17645,
+          539.1679,
           "pb1162495"
         ],
         "matched_queries": [
@@ -16261,7 +16187,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-27",
+                  "_index": "resources-qa-2026-07-14",
                   "_id": "pb1162495",
                   "_nested": {
                     "field": "items",
