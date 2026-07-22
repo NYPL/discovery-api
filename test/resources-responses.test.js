@@ -551,6 +551,22 @@ describe('Test Resources responses', function () {
       })
     })
 
+    it('Resource search with include_aggregations returns search results and aggregations', function (done) {
+      request.get(`${searchAllUrl}toast&include_aggregations=true`, function (err, response, body) {
+        if (err) throw err
+
+        const doc = JSON.parse(body)
+
+        console.dir(doc, { depth: null })
+
+        expect(doc.itemListElement).to.be.a('array')
+        expect(doc.aggregations).to.be.a('array')
+        expect(doc.aggregations.length).to.be.above(0)
+
+        done()
+      })
+    })
+
     describe('Filter by format', function () {
       it('returns only items with format a', (done) => {
         const format = 'a'
