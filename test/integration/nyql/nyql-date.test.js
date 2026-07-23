@@ -19,19 +19,23 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'author = "Meillassoux, Quentin" AND date >= "2011"' })
     ])
 
+    // filtered results should not exceed total unfiltered results
     const authorTotal = normalize(authorRes.body.totalResults) || 0
     const dateTotal = normalize(dateRes.body.totalResults) || 0
     expect(dateTotal).to.be.at.most(authorTotal)
 
+    // every filtered result should also appear in the unfiltered results
     const authorIds = authorRes.body.itemListElement.map(getId).filter(Boolean)
     dateRes.body.itemListElement.map(getId).filter(Boolean)
       .forEach((id) => expect(authorIds).to.include(id))
 
+    // every filtered result with date data should have at least one date >= 2011
     dateRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
       if (dates.length > 0) expect(dates.some((d) => d >= 2011)).to.equal(true)
     })
 
+    // unfiltered results where every date is before 2011 should not appear in filtered results
     const dateIdSet = new Set(dateRes.body.itemListElement.map(getId).filter(Boolean))
     authorRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
@@ -47,19 +51,23 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'author = "Meillassoux, Quentin" AND date > "2011"' })
     ])
 
+    // filtered results should not exceed total unfiltered results
     const authorTotal = normalize(authorRes.body.totalResults) || 0
     const dateTotal = normalize(dateRes.body.totalResults) || 0
     expect(dateTotal).to.be.at.most(authorTotal)
 
+    // every filtered result should also appear in the unfiltered results
     const authorIds = authorRes.body.itemListElement.map(getId).filter(Boolean)
     dateRes.body.itemListElement.map(getId).filter(Boolean)
       .forEach((id) => expect(authorIds).to.include(id))
 
+    // every filtered result with date data should have at least one date > 2011
     dateRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
       if (dates.length > 0) expect(dates.some((d) => d > 2011)).to.equal(true)
     })
 
+    // unfiltered results where every date is 2011 or earlier should not appear in filtered results
     const dateIdSet = new Set(dateRes.body.itemListElement.map(getId).filter(Boolean))
     authorRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
@@ -75,19 +83,23 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'author = "Meillassoux, Quentin" AND date <= "2011"' })
     ])
 
+    // filtered results should not exceed total unfiltered results
     const authorTotal = normalize(authorRes.body.totalResults) || 0
     const dateTotal = normalize(dateRes.body.totalResults) || 0
     expect(dateTotal).to.be.at.most(authorTotal)
 
+    // every filtered result should also appear in the unfiltered results
     const authorIds = authorRes.body.itemListElement.map(getId).filter(Boolean)
     dateRes.body.itemListElement.map(getId).filter(Boolean)
       .forEach((id) => expect(authorIds).to.include(id))
 
+    // every filtered result with date data should have at least one date <= 2011
     dateRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
       if (dates.length > 0) expect(dates.some((d) => d <= 2011)).to.equal(true)
     })
 
+    // unfiltered results where every date is after 2011 should not appear in filtered results
     const dateIdSet = new Set(dateRes.body.itemListElement.map(getId).filter(Boolean))
     authorRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
@@ -103,19 +115,23 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'author = "Meillassoux, Quentin" AND date < "2011"' })
     ])
 
+    // filtered results should not exceed total unfiltered results
     const authorTotal = normalize(authorRes.body.totalResults) || 0
     const dateTotal = normalize(dateRes.body.totalResults) || 0
     expect(dateTotal).to.be.at.most(authorTotal)
 
+    // every filtered result should also appear in the unfiltered results
     const authorIds = authorRes.body.itemListElement.map(getId).filter(Boolean)
     dateRes.body.itemListElement.map(getId).filter(Boolean)
       .forEach((id) => expect(authorIds).to.include(id))
 
+    // every filtered result with date data should have at least one date < 2011
     dateRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
       if (dates.length > 0) expect(dates.some((d) => d < 2011)).to.equal(true)
     })
 
+    // unfiltered results where every date is 2011 or later should not appear in filtered results
     const dateIdSet = new Set(dateRes.body.itemListElement.map(getId).filter(Boolean))
     authorRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
@@ -131,19 +147,23 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'author = "Meillassoux, Quentin" AND date = "2015"' })
     ])
 
+    // filtered results should not exceed total unfiltered results
     const authorTotal = normalize(authorRes.body.totalResults) || 0
     const dateTotal = normalize(dateRes.body.totalResults) || 0
     expect(dateTotal).to.be.at.most(authorTotal)
 
+    // every filtered result should also appear in the unfiltered results
     const authorIds = authorRes.body.itemListElement.map(getId).filter(Boolean)
     const dateIds = dateRes.body.itemListElement.map(getId).filter(Boolean)
     dateIds.forEach((id) => expect(authorIds).to.include(id))
 
+    // every filtered result with date data should have at least one date equal to 2015
     dateRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
       if (dates.length > 0) expect(dates.some((d) => d === 2015)).to.equal(true)
     })
 
+    // unfiltered results where no date equals 2015 should not appear in filtered results
     const dateIdSet = new Set(dateIds)
     authorRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
@@ -174,19 +194,19 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'author = "Meillassoux, Quentin" AND date <= "2014"' })
     ])
 
+    // filtered results should not exceed unfiltered, >= "2011", or <= "2014" results
     const authorTotal = normalize(authorRes.body.totalResults) || 0
     const withinTotal = normalize(withinRes.body.totalResults) || 0
-    const gteTotal = normalize(gteRes.body.totalResults) || 0
-    const lteTotal = normalize(lteRes.body.totalResults) || 0
-
     expect(withinTotal).to.be.at.most(authorTotal)
-    expect(withinTotal).to.be.at.most(gteTotal)
-    expect(withinTotal).to.be.at.most(lteTotal)
+    expect(withinTotal).to.be.at.most(normalize(gteRes.body.totalResults) || 0)
+    expect(withinTotal).to.be.at.most(normalize(lteRes.body.totalResults) || 0)
 
+    // every filtered result should also appear in the unfiltered results
     const authorIds = authorRes.body.itemListElement.map(getId).filter(Boolean)
     const withinIds = withinRes.body.itemListElement.map(getId).filter(Boolean)
     withinIds.forEach((id) => expect(authorIds).to.include(id))
 
+    // every filtered result with date data should have at least one date in [2011, 2014]
     withinRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
       if (dates.length > 0) {
@@ -194,6 +214,7 @@ describe('Discovery API - NYQL date operator tests', function () {
       }
     })
 
+    // unfiltered results where every date is outside [2011, 2014] should not appear in filtered results
     const withinIdSet = new Set(withinIds)
     authorRes.body.itemListElement.forEach((item) => {
       const dates = getDates(item)
@@ -209,10 +230,12 @@ describe('Discovery API - NYQL date operator tests', function () {
       search({ q: 'title = "journal of paleontology" AND date > "2000" AND date encloses "1928"' })
     ])
 
+    // filtered results should not exceed total base results
     const baseTotal = normalize(baseRes.body.totalResults) || 0
     const enclosesTotal = normalize(enclosesRes.body.totalResults) || 0
     expect(enclosesTotal).to.be.at.most(baseTotal)
 
+    // every filtered result should also appear in the base results
     const baseIds = baseRes.body.itemListElement.map(getId).filter(Boolean)
     enclosesRes.body.itemListElement.map(getId).filter(Boolean)
       .forEach((id) => expect(baseIds).to.include(id))
