@@ -557,8 +557,6 @@ describe('Test Resources responses', function () {
 
         const doc = JSON.parse(body)
 
-        console.dir(doc, { depth: null })
-
         expect(doc.itemListElement).to.be.a('array')
         expect(doc.aggregations).to.be.a('array')
         expect(doc.aggregations.length).to.be.above(0)
