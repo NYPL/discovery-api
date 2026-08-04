@@ -12,14 +12,14 @@ exports.config = {
   application_logging: {
     enabled: true,
     forwarding: {
-      enabled: true,
+      enabled: true
     },
     metrics: {
-      enabled: true,
+      enabled: true
     },
     local_decorating: {
-      enabled: true,
-    },
+      enabled: true
+    }
   },
   /**
    * This provides instrumentation for `setTimeout` and `setInterval` calls.
