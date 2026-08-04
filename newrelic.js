@@ -7,7 +7,7 @@
  */
 exports.config = {
   logging: {
-    level: 'debug'
+    level: 'info'
   },
   application_logging: {
     enabled: true,
