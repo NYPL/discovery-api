@@ -19,6 +19,13 @@ Note that when developing locally, if connecting to a IP ACL protected index (a 
 error: Error connecting to index: 403: {"Message":"User: anonymous is not authorized to perform: es:ESHttpPost because no resource-based policy allows the es:ESHttpPost action"}
 ```
 
+### Running with NewRelic Locally
+
+If you want to test the newrelic integration locally, get a license key from newrelic, and pass it in as an environment variable locally:
+```
+nvm use; ENV=qa LOCAL=true NEW_RELIC_LICENSE_KEY=mylicensekey npm start
+```
+
 ### Using Docker
 
 Docker files are included for deployment and can be used locally.
