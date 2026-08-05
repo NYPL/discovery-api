@@ -6,7 +6,11 @@ else
   if [[ -n "${LOCAL}" ]]; then
     export NEW_RELIC_APP_NAME="Discovery API (local)"
   else
-    export NEW_RELIC_APP_NAME="Discovery API (${ENV})"
+    if [[ -n "${NODE_ENV}" ]]; then
+      export NEW_RELIC_APP_NAME="Discovery API (${NODE_ENV})"
+    else
+      export NEW_RELIC_APP_NAME="Discovery API (${ENV})"
+    fi
   fi
 
   node -r newrelic server.js
