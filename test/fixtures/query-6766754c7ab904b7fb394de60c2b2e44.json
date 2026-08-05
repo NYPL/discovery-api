@@ -1,0 +1,520 @@
+{
+  "took": 2,
+  "responses": [
+    {
+      "took": 2,
+      "timed_out": false,
+      "_shards": {
+        "total": 2,
+        "successful": 2,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": {
+          "value": 1517,
+          "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+      },
+      "aggregations": {
+        "format": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "a",
+              "doc_count": 874
+            },
+            {
+              "key": "j",
+              "doc_count": 202
+            },
+            {
+              "key": "w",
+              "doc_count": 193
+            },
+            {
+              "key": "c",
+              "doc_count": 94
+            },
+            {
+              "key": "y",
+              "doc_count": 45
+            },
+            {
+              "key": "h",
+              "doc_count": 32
+            },
+            {
+              "key": "k",
+              "doc_count": 14
+            },
+            {
+              "key": "g",
+              "doc_count": 12
+            },
+            {
+              "key": "i",
+              "doc_count": 11
+            },
+            {
+              "key": "s",
+              "doc_count": 11
+            },
+            {
+              "key": "v",
+              "doc_count": 9
+            },
+            {
+              "key": "p",
+              "doc_count": 8
+            },
+            {
+              "key": "d",
+              "doc_count": 4
+            },
+            {
+              "key": "z",
+              "doc_count": 4
+            },
+            {
+              "key": "t",
+              "doc_count": 3
+            },
+            {
+              "key": "e",
+              "doc_count": 1
+            }
+          ]
+        },
+        "buildingLocation": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "rc",
+              "doc_count": 724
+            },
+            {
+              "key": "pa",
+              "doc_count": 280
+            },
+            {
+              "key": "ma",
+              "doc_count": 246
+            },
+            {
+              "key": "sc",
+              "doc_count": 41
+            }
+          ]
+        },
+        "language": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "lang:eng||English",
+              "doc_count": 1105
+            },
+            {
+              "key": "lang:fre||French",
+              "doc_count": 111
+            },
+            {
+              "key": "lang:mul||Multiple languages",
+              "doc_count": 58
+            },
+            {
+              "key": "lang:ger||German",
+              "doc_count": 56
+            },
+            {
+              "key": "lang:zxx||No linguistic content",
+              "doc_count": 46
+            },
+            {
+              "key": "lang:ita||Italian",
+              "doc_count": 28
+            },
+            {
+              "key": "lang:pol||Polish",
+              "doc_count": 10
+            },
+            {
+              "key": "lang:heb||Hebrew",
+              "doc_count": 8
+            },
+            {
+              "key": "lang:rus||Russian",
+              "doc_count": 7
+            },
+            {
+              "key": "lang:dut||Dutch",
+              "doc_count": 4
+            },
+            {
+              "key": "lang:fin||Finnish",
+              "doc_count": 4
+            },
+            {
+              "key": "lang:srp||Serbian",
+              "doc_count": 4
+            },
+            {
+              "key": "lang:hun||Hungarian",
+              "doc_count": 3
+            },
+            {
+              "key": "lang:spa||Spanish",
+              "doc_count": 3
+            },
+            {
+              "key": "lang:yid||Yiddish",
+              "doc_count": 3
+            },
+            {
+              "key": "lang:N/A||",
+              "doc_count": 2
+            },
+            {
+              "key": "lang:jpn||Japanese",
+              "doc_count": 2
+            },
+            {
+              "key": "lang:por||Portuguese",
+              "doc_count": 2
+            },
+            {
+              "key": "lang:und||Undetermined",
+              "doc_count": 2
+            },
+            {
+              "key": "lang:cze||Czech",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:est||Estonian",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:geo||Georgian",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:kan||Kannada",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:lat||Latin",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:tat||Tatar",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:|||||",
+              "doc_count": 1
+            }
+          ]
+        },
+        "collection": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "mal",
+              "doc_count": 301
+            },
+            {
+              "key": "pah",
+              "doc_count": 173
+            },
+            {
+              "key": "pam",
+              "doc_count": 91
+            },
+            {
+              "key": "scf",
+              "doc_count": 41
+            },
+            {
+              "key": "pad",
+              "doc_count": 32
+            },
+            {
+              "key": "pat",
+              "doc_count": 26
+            },
+            {
+              "key": "mag",
+              "doc_count": 19
+            },
+            {
+              "key": "mar",
+              "doc_count": 11
+            },
+            {
+              "key": "mae",
+              "doc_count": 8
+            },
+            {
+              "key": "mau",
+              "doc_count": 8
+            },
+            {
+              "key": "mab",
+              "doc_count": 6
+            },
+            {
+              "key": "pav",
+              "doc_count": 6
+            },
+            {
+              "key": "scb",
+              "doc_count": 6
+            },
+            {
+              "key": "maq",
+              "doc_count": 4
+            },
+            {
+              "key": "scd",
+              "doc_count": 4
+            },
+            {
+              "key": "mac",
+              "doc_count": 3
+            },
+            {
+              "key": "maf",
+              "doc_count": 2
+            },
+            {
+              "key": "paf",
+              "doc_count": 2
+            },
+            {
+              "key": "mak",
+              "doc_count": 1
+            },
+            {
+              "key": "map",
+              "doc_count": 1
+            }
+          ]
+        },
+        "subjectLiteral": {
+          "doc_count_error_upper_bound": 4,
+          "sum_other_doc_count": 2984,
+          "buckets": [
+            {
+              "key": "Operas -- Excerpts.",
+              "doc_count": 150
+            },
+            {
+              "key": "Musicals -- Excerpts.",
+              "doc_count": 40
+            },
+            {
+              "key": "Motion picture music -- Excerpts.",
+              "doc_count": 22
+            },
+            {
+              "key": "Songs (High voice) with orchestra.",
+              "doc_count": 22
+            },
+            {
+              "key": "Musicals -- Excerpts -- Vocal scores with piano.",
+              "doc_count": 21
+            },
+            {
+              "key": "Motion picture music -- Excerpts -- Vocal scores with piano.",
+              "doc_count": 20
+            },
+            {
+              "key": "Songs (Medium voice) with piano.",
+              "doc_count": 16
+            },
+            {
+              "key": "Songs with piano.",
+              "doc_count": 16
+            },
+            {
+              "key": "Orchestral music.",
+              "doc_count": 15
+            },
+            {
+              "key": "Songs, English -- Early works to 1800.",
+              "doc_count": 15
+            },
+            {
+              "key": "Toasts.",
+              "doc_count": 15
+            },
+            {
+              "key": "Popular music.",
+              "doc_count": 13
+            },
+            {
+              "key": "Cooking.",
+              "doc_count": 12
+            },
+            {
+              "key": "Popular music -- United States -- 1941-1950.",
+              "doc_count": 12
+            },
+            {
+              "key": "Jazz.",
+              "doc_count": 11
+            },
+            {
+              "key": "Songs (Low voice) with piano.",
+              "doc_count": 11
+            },
+            {
+              "key": "American poetry -- 21st century.",
+              "doc_count": 10
+            },
+            {
+              "key": "American poetry.",
+              "doc_count": 10
+            },
+            {
+              "key": "Big band music.",
+              "doc_count": 10
+            },
+            {
+              "key": "Operas -- Excerpts -- Vocal scores with piano.",
+              "doc_count": 10
+            },
+            {
+              "key": "Piano music.",
+              "doc_count": 10
+            },
+            {
+              "key": "Songs (Medium voice) with orchestra.",
+              "doc_count": 10
+            },
+            {
+              "key": "Overtures.",
+              "doc_count": 9
+            },
+            {
+              "key": "American wit and humor.",
+              "doc_count": 8
+            },
+            {
+              "key": "Ballets.",
+              "doc_count": 8
+            },
+            {
+              "key": "Songs (High voice) with piano.",
+              "doc_count": 8
+            },
+            {
+              "key": "Songs, English.",
+              "doc_count": 8
+            },
+            {
+              "key": "Suites (Orchestra)",
+              "doc_count": 8
+            },
+            {
+              "key": "Motion picture music.",
+              "doc_count": 7
+            },
+            {
+              "key": "Musicals.",
+              "doc_count": 7
+            },
+            {
+              "key": "Television. Toast of the town.",
+              "doc_count": 7
+            },
+            {
+              "key": "American poetry -- 20th century.",
+              "doc_count": 6
+            },
+            {
+              "key": "Piano music, Arranged.",
+              "doc_count": 6
+            },
+            {
+              "key": "Popular music -- United States -- 1931-1940.",
+              "doc_count": 6
+            },
+            {
+              "key": "Revues -- Excerpts -- Vocal scores with piano.",
+              "doc_count": 6
+            },
+            {
+              "key": "American poetry -- African American authors.",
+              "doc_count": 5
+            },
+            {
+              "key": "Choruses, Sacred (Mixed voices) with orchestra.",
+              "doc_count": 5
+            },
+            {
+              "key": "Cooking, American.",
+              "doc_count": 5
+            },
+            {
+              "key": "Musicals -- Excerpts, Arranged.",
+              "doc_count": 5
+            },
+            {
+              "key": "Operas -- Excerpts, Arranged.",
+              "doc_count": 5
+            },
+            {
+              "key": "Poetry.",
+              "doc_count": 5
+            },
+            {
+              "key": "African Americans -- Folklore.",
+              "doc_count": 4
+            },
+            {
+              "key": "Businessmen -- United States -- Biography.",
+              "doc_count": 4
+            },
+            {
+              "key": "Choruses, Secular (Mixed voices) with orchestra.",
+              "doc_count": 4
+            },
+            {
+              "key": "Christmas music.",
+              "doc_count": 4
+            },
+            {
+              "key": "Ed Sullivan show (Television program)",
+              "doc_count": 4
+            },
+            {
+              "key": "Murder -- Investigation -- Fiction.",
+              "doc_count": 4
+            },
+            {
+              "key": "New York (N.Y.) -- Fiction.",
+              "doc_count": 4
+            },
+            {
+              "key": "Piano music (Jazz)",
+              "doc_count": 4
+            },
+            {
+              "key": "Popular music -- 1931-1940.",
+              "doc_count": 4
+            }
+          ]
+        }
+      },
+      "status": 200
+    }
+  ]
+}

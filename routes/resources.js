@@ -23,9 +23,26 @@ module.exports = function (app) {
 
   app.get(`/api/v${VER}/discovery/resources$`, function (req, res, next) {
     const params = req.query
-    return app.resources.search(params, { baseUrl: app.baseUrl }, req)
-      .then((resp) => respond(res, resp, params))
-      .catch((error) => next(error))
+
+    const hasFilters = params.filters && Object.keys(params.filters).length > 0
+
+    if (params.include_aggregations === 'true' && !hasFilters) {
+      return app.resources.search(params, { baseUrl: app.baseUrl, include_aggregations: true }, req)
+        .then((resp) => respond(res, resp, params))
+        .catch((error) => next(error))
+    } else if (params.include_aggregations === 'true') {
+      return Promise.all([
+        app.resources.search(params, { baseUrl: app.baseUrl }, req),
+        app.resources.aggregations(params, { baseUrl: app.baseUrl })
+      ]).then(([searchResp, aggsResp]) => {
+        searchResp.aggregations = aggsResp.itemListElement
+        return respond(res, searchResp, params)
+      }).catch((error) => next(error))
+    } else {
+      return app.resources.search(params, { baseUrl: app.baseUrl }, req)
+        .then((resp) => respond(res, resp, params))
+        .catch((error) => next(error))
+    }
   })
 
   app.get(`/api/v${VER}/discovery/resources/aggregations`, function (req, res, next) {

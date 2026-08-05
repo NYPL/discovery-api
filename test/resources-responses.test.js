@@ -551,6 +551,48 @@ describe('Test Resources responses', function () {
       })
     })
 
+    it('Resource search with include_aggregations returns search results and aggregations', function (done) {
+      app.esClient.search.resetHistory()
+      app.esClient.msearch.resetHistory()
+
+      request.get(`${searchAllUrl}toast&include_aggregations=true`, function (err, response, body) {
+        if (err) throw err
+
+        const doc = JSON.parse(body)
+
+        expect(doc.itemListElement).to.be.a('array')
+        expect(doc.aggregations).to.be.a('array')
+        expect(doc.aggregations.length).to.be.above(0)
+
+        // confirm just search was used
+        expect(app.esClient.search.called).to.equal(true)
+        expect(app.esClient.msearch.called).to.equal(false)
+
+        done()
+      })
+    })
+
+    it('Resource search with include_aggregations AND filters returns search results and aggregations', function (done) {
+      app.esClient.search.resetHistory()
+      app.esClient.msearch.resetHistory()
+
+      request.get(`${searchAllUrl}toast&include_aggregations=true&filters[format]=a`, function (err, response, body) {
+        if (err) throw err
+
+        const doc = JSON.parse(body)
+
+        expect(doc.itemListElement).to.be.a('array')
+        expect(doc.aggregations).to.be.a('array')
+        expect(doc.aggregations.length).to.be.above(0)
+
+        // confirm search and msearch for aggregations was used
+        expect(app.esClient.search.called).to.equal(true)
+        expect(app.esClient.msearch.called).to.equal(true)
+
+        done()
+      })
+    })
+
     describe('Filter by format', function () {
       it('returns only items with format a', (done) => {
         const format = 'a'
