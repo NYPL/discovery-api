@@ -731,6 +731,54 @@ describe('Resources query', function () {
     })
   })
 
+  describe('query with included aggregations', () => {
+    beforeEach(() => {
+      sinon.stub(app.esClient, 'search').callsFake((req) => {
+        return Promise.resolve({ hits: { total: { value: 0 }, hits: [] } })
+      })
+    })
+
+    afterEach(() => {
+      app.esClient.search.restore()
+    })
+
+    it('should include aggregations in ES payload when include_aggregations is true and there are no filters', async () => {
+      await app.resources.search({ q: 'test' }, { include_aggregations: true })
+
+      expect(app.esClient.search.called).to.equal(true)
+      const searchBody = app.esClient.search.getCall(0).args[0]
+
+      expect(searchBody).to.have.property('aggregations')
+      expect(Object.keys(searchBody.aggregations).length).to.equal(numAggregations)
+    })
+
+    it('should not include aggregations in ES payload when there are filters', async () => {
+      await app.resources.search({ q: 'test', filters: { subjectLiteral: ['S1'] } }, { include_aggregations: true })
+
+      const searchBody = app.esClient.search.getCall(0).args[0]
+      expect(searchBody).to.not.have.property('aggregations')
+    })
+  })
+
+  describe('search query with CQL', () => {
+    beforeEach(() => {
+      sinon.stub(app.esClient, 'search').callsFake(() => {
+        return Promise.resolve({ hits: { total: { value: 0 }, hits: [] } })
+      })
+    })
+
+    afterEach(() => {
+      app.esClient.search.restore()
+    })
+
+    it('includes the parsed CQL in the debug response', async function () {
+      const params = { q: 'title="Hamlet"', search_scope: 'cql' }
+      const resp = await app.resources.search(params, {}, {})
+      expect(resp.debug).to.have.property('parsed')
+      expect(resp.debug.parsed).to.deep.equal(['title', '=', '"Hamlet"'])
+    })
+  })
+
   describe('search exception handling', () => {
     describe('lexical error', () => {
       before(() => {
