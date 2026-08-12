@@ -760,6 +760,25 @@ describe('Resources query', function () {
     })
   })
 
+  describe('search query with CQL', () => {
+    beforeEach(() => {
+      sinon.stub(app.esClient, 'search').callsFake(() => {
+        return Promise.resolve({ hits: { total: { value: 0 }, hits: [] } })
+      })
+    })
+
+    afterEach(() => {
+      app.esClient.search.restore()
+    })
+
+    it('includes the parsed CQL in the debug response', async function () {
+      const params = { q: 'title="Hamlet"', search_scope: 'cql' }
+      const resp = await app.resources.search(params, {}, {})
+      expect(resp.debug).to.have.property('parsed')
+      expect(resp.debug.parsed).to.deep.equal(['title', '=', '"Hamlet"'])
+    })
+  })
+
   describe('search exception handling', () => {
     describe('lexical error', () => {
       before(() => {
