@@ -1,0 +1,473 @@
+{
+  "took": 4459,
+  "responses": [
+    {
+      "took": 4459,
+      "timed_out": false,
+      "_shards": {
+        "total": 2,
+        "successful": 2,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": {
+          "value": 874,
+          "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+      },
+      "aggregations": {
+        "buildingLocation": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "rc",
+              "doc_count": 564
+            },
+            {
+              "key": "ma",
+              "doc_count": 239
+            },
+            {
+              "key": "sc",
+              "doc_count": 36
+            },
+            {
+              "key": "pa",
+              "doc_count": 24
+            }
+          ]
+        },
+        "language": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "lang:eng||English",
+              "doc_count": 764
+            },
+            {
+              "key": "lang:fre||French",
+              "doc_count": 53
+            },
+            {
+              "key": "lang:ger||German",
+              "doc_count": 15
+            },
+            {
+              "key": "lang:pol||Polish",
+              "doc_count": 10
+            },
+            {
+              "key": "lang:heb||Hebrew",
+              "doc_count": 7
+            },
+            {
+              "key": "lang:dut||Dutch",
+              "doc_count": 4
+            },
+            {
+              "key": "lang:srp||Serbian",
+              "doc_count": 4
+            },
+            {
+              "key": "lang:spa||Spanish",
+              "doc_count": 2
+            },
+            {
+              "key": "lang:est||Estonian",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:jpn||Japanese",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:kan||Kannada",
+              "doc_count": 1
+            },
+            {
+              "key": "lang:tat||Tatar",
+              "doc_count": 1
+            }
+          ]
+        },
+        "collection": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "mal",
+              "doc_count": 280
+            },
+            {
+              "key": "scf",
+              "doc_count": 41
+            },
+            {
+              "key": "mag",
+              "doc_count": 18
+            },
+            {
+              "key": "pam",
+              "doc_count": 14
+            },
+            {
+              "key": "pat",
+              "doc_count": 13
+            },
+            {
+              "key": "mar",
+              "doc_count": 11
+            },
+            {
+              "key": "pad",
+              "doc_count": 8
+            },
+            {
+              "key": "mab",
+              "doc_count": 6
+            },
+            {
+              "key": "mae",
+              "doc_count": 6
+            },
+            {
+              "key": "mau",
+              "doc_count": 4
+            },
+            {
+              "key": "maq",
+              "doc_count": 3
+            },
+            {
+              "key": "mac",
+              "doc_count": 2
+            },
+            {
+              "key": "maf",
+              "doc_count": 2
+            },
+            {
+              "key": "scd",
+              "doc_count": 2
+            },
+            {
+              "key": "mak",
+              "doc_count": 1
+            },
+            {
+              "key": "pah",
+              "doc_count": 1
+            },
+            {
+              "key": "scb",
+              "doc_count": 1
+            }
+          ]
+        },
+        "subjectLiteral": {
+          "doc_count_error_upper_bound": 3,
+          "sum_other_doc_count": 1902,
+          "buckets": [
+            {
+              "key": "Cooking.",
+              "doc_count": 11
+            },
+            {
+              "key": "Toasts.",
+              "doc_count": 11
+            },
+            {
+              "key": "American poetry -- 21st century.",
+              "doc_count": 10
+            },
+            {
+              "key": "American poetry.",
+              "doc_count": 10
+            },
+            {
+              "key": "Poetry.",
+              "doc_count": 7
+            },
+            {
+              "key": "American poetry -- 20th century.",
+              "doc_count": 6
+            },
+            {
+              "key": "American wit and humor.",
+              "doc_count": 6
+            },
+            {
+              "key": "Cooking, American.",
+              "doc_count": 6
+            },
+            {
+              "key": "American poetry -- African American authors.",
+              "doc_count": 5
+            },
+            {
+              "key": "New Zealand poetry -- 21st century.",
+              "doc_count": 5
+            },
+            {
+              "key": "Singers -- Biography.",
+              "doc_count": 5
+            },
+            {
+              "key": "Businessmen -- United States -- Biography.",
+              "doc_count": 4
+            },
+            {
+              "key": "Food -- Social aspects.",
+              "doc_count": 4
+            },
+            {
+              "key": "Lincoln, Abraham, 1809-1865.",
+              "doc_count": 4
+            },
+            {
+              "key": "May, Alice, approximately 1847-1887.",
+              "doc_count": 4
+            },
+            {
+              "key": "Murder -- Investigation -- Fiction.",
+              "doc_count": 4
+            },
+            {
+              "key": "New York (N.Y.) -- Fiction.",
+              "doc_count": 4
+            },
+            {
+              "key": "Quick and easy cooking.",
+              "doc_count": 4
+            },
+            {
+              "key": "Short stories, American.",
+              "doc_count": 4
+            },
+            {
+              "key": "Songsters.",
+              "doc_count": 4
+            },
+            {
+              "key": "Drinking customs.",
+              "doc_count": 3
+            },
+            {
+              "key": "Food in literature.",
+              "doc_count": 3
+            },
+            {
+              "key": "Fourth of July orations.",
+              "doc_count": 3
+            },
+            {
+              "key": "Graffiti.",
+              "doc_count": 3
+            },
+            {
+              "key": "Mallarmé, Stéphane, 1842-1898 -- Criticism and interpretation.",
+              "doc_count": 3
+            },
+            {
+              "key": "Pianists -- United States -- Biography.",
+              "doc_count": 3
+            },
+            {
+              "key": "Songs -- Texts.",
+              "doc_count": 3
+            },
+            {
+              "key": "Songs, English -- United States -- Texts.",
+              "doc_count": 3
+            },
+            {
+              "key": "Sound recording industry -- California -- San Francisco -- History.",
+              "doc_count": 3
+            },
+            {
+              "key": "Street art.",
+              "doc_count": 3
+            },
+            {
+              "key": "Television personalities -- United States -- Biography.",
+              "doc_count": 3
+            },
+            {
+              "key": "Theater -- New York (State) -- New York -- Reviews.",
+              "doc_count": 3
+            },
+            {
+              "key": "United States -- History -- Civil War, 1861-1865 -- Anecdotes.",
+              "doc_count": 3
+            },
+            {
+              "key": "Women detectives -- Fiction.",
+              "doc_count": 3
+            },
+            {
+              "key": "AIDS (Disease) -- Patients -- South Africa -- Biography.",
+              "doc_count": 2
+            },
+            {
+              "key": "Adirondack Mountains (N.Y.)",
+              "doc_count": 2
+            },
+            {
+              "key": "African American businesspeople -- Michigan -- Detroit.",
+              "doc_count": 2
+            },
+            {
+              "key": "African American college students -- Political activity -- Comic books, strips, etc.",
+              "doc_count": 2
+            },
+            {
+              "key": "African Americans -- Poetry.",
+              "doc_count": 2
+            },
+            {
+              "key": "After-dinner speeches.",
+              "doc_count": 2
+            },
+            {
+              "key": "American fiction -- 20th century.",
+              "doc_count": 2
+            },
+            {
+              "key": "American poetry -- Women authors.",
+              "doc_count": 2
+            },
+            {
+              "key": "Authors, English -- 20th century -- Biography.",
+              "doc_count": 2
+            },
+            {
+              "key": "Biya, Paul, 1933-",
+              "doc_count": 2
+            },
+            {
+              "key": "Cameroon -- Politics and government -- 21st century -- Chronology.",
+              "doc_count": 2
+            },
+            {
+              "key": "Celebrities -- United States -- Biography.",
+              "doc_count": 2
+            },
+            {
+              "key": "Christianity -- 20th century.",
+              "doc_count": 2
+            },
+            {
+              "key": "Church and state -- France.",
+              "doc_count": 2
+            },
+            {
+              "key": "Clothing and dress -- Social aspects.",
+              "doc_count": 2
+            },
+            {
+              "key": "Coates, James H.",
+              "doc_count": 2
+            }
+          ]
+        }
+      },
+      "status": 200
+    },
+    {
+      "took": 210,
+      "timed_out": false,
+      "_shards": {
+        "total": 2,
+        "successful": 2,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": {
+          "value": 1517,
+          "relation": "eq"
+        },
+        "max_score": null,
+        "hits": []
+      },
+      "aggregations": {
+        "format": {
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0,
+          "buckets": [
+            {
+              "key": "a",
+              "doc_count": 874
+            },
+            {
+              "key": "j",
+              "doc_count": 202
+            },
+            {
+              "key": "w",
+              "doc_count": 193
+            },
+            {
+              "key": "c",
+              "doc_count": 94
+            },
+            {
+              "key": "y",
+              "doc_count": 45
+            },
+            {
+              "key": "h",
+              "doc_count": 32
+            },
+            {
+              "key": "k",
+              "doc_count": 14
+            },
+            {
+              "key": "g",
+              "doc_count": 12
+            },
+            {
+              "key": "i",
+              "doc_count": 11
+            },
+            {
+              "key": "s",
+              "doc_count": 11
+            },
+            {
+              "key": "v",
+              "doc_count": 9
+            },
+            {
+              "key": "p",
+              "doc_count": 8
+            },
+            {
+              "key": "d",
+              "doc_count": 4
+            },
+            {
+              "key": "z",
+              "doc_count": 4
+            },
+            {
+              "key": "t",
+              "doc_count": 3
+            },
+            {
+              "key": "e",
+              "doc_count": 1
+            }
+          ]
+        }
+      },
+      "status": 200
+    }
+  ]
+}
