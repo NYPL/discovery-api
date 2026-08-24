@@ -7,7 +7,13 @@ module.exports = function (app) {
     res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
     app.baseUrl = `http${req.secure ? 's' : ''}://${req.get('host')}/api/v${VER}/discovery`
-    const requestLogObject = { ip: req.ip, path: req.path, body: req.body, query: req.query, method: req.method }
+    const requestLogObject = {
+      ip: req.ip,
+      path: req.path,
+      body: req.body,
+      query: req.query,
+      method: req.method
+    }
     logger.info(`${req.method} request to ${req.path}:`, requestLogObject)
     next()
   })
@@ -158,8 +164,12 @@ module.exports = function (app) {
     function (req, res, next) {
       const params = Object.assign({}, req.query, { uri: req.params.uri })
 
-      if (Number.isInteger(parseInt(req.query.items_size))) { params.items_size = req.query.items_size }
-      if (Number.isInteger(parseInt(req.query.items_from))) { params.items_from = req.query.items_from }
+      if (Number.isInteger(parseInt(req.query.items_size))) {
+        params.items_size = req.query.items_size
+      }
+      if (Number.isInteger(parseInt(req.query.items_from))) {
+        params.items_from = req.query.items_from
+      }
 
       let handler = app.resources.findByUri
 
