@@ -9,12 +9,12 @@ describe('Display field parser', () => {
       expect(Object.keys(displayFieldsUnpacked).length).to.equal(2)
       expect(displayFieldsUnpacked).to.deep.equal({
         testDisplay: [
-          { label: 'Smith, John, author', name: 'Smith, John', nameTitle: 'Smith, John' },
-          { label: 'Bayer, Jeffrey. Cataloging test record.', name: 'Bayer, Jeffrey', nameTitle: 'Bayer, Jeffrey. Cataloging test record' },
-          { label: 'Org Inc.', name: 'Org Inc', nameTitle: 'Org Inc' }
+          { displayLabel: 'Smith, John, author', name: 'Smith, John', nameTitle: 'Smith, John' },
+          { displayLabel: 'Bayer, Jeffrey. Cataloging test record.', name: 'Bayer, Jeffrey', nameTitle: 'Bayer, Jeffrey Cataloging test record' },
+          { displayLabel: 'Org Inc.', name: 'Org Inc', nameTitle: 'Org Inc' }
         ],
         testOtherDisplay: [
-          { label: 'Bean, Richard, 1956-, editor', name: 'Bean, Richard, 1956-', nameTitle: 'Bean, Richard, 1956-' }
+          { displayLabel: 'Bean, Richard, 1956-, editor', name: 'Bean, Richard, 1956-', nameTitle: 'Bean, Richard, 1956-' }
         ]
       })
     })
