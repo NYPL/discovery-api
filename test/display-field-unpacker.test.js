@@ -10,7 +10,7 @@ describe('Display field parser', () => {
       expect(displayFieldsUnpacked).to.deep.equal({
         testDisplay: [
           { displayLabel: 'Smith, John, author', name: 'Smith, John', nameTitle: 'Smith, John' },
-          { displayLabel: 'Bayer, Jeffrey. Cataloging test record.', name: 'Bayer, Jeffrey', nameTitle: 'Bayer, Jeffrey. Cataloging test record' },
+          { displayLabel: 'Bayer, Jeffrey. Cataloging test record.', name: 'Bayer, Jeffrey', nameTitle: 'Bayer, Jeffrey Cataloging test record' },
           { displayLabel: 'Org Inc.', name: 'Org Inc', nameTitle: 'Org Inc' }
         ],
         testOtherDisplay: [
