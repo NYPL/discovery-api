@@ -1,9 +1,9 @@
 {
-  "took": 250,
+  "took": 133,
   "timed_out": false,
   "_shards": {
-    "total": 1,
-    "successful": 1,
+    "total": 2,
+    "successful": 2,
     "skipped": 0,
     "failed": 0
   },
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-05-12",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b22144813",
-        "_score": 754.59357,
+        "_score": 721.5851,
         "_source": {
           "extent": [
             "1234, [1] pages, x leaves : illustrations ;",
@@ -26,6 +26,20 @@
           ],
           "partOf": [
             "In: -- 773 0b"
+          ],
+          "series_displayComponents": [
+            {
+              "role": "",
+              "name": "440 Series ;",
+              "label": "440 Series ; v. number -- 440 b0",
+              "title": "v. number -- 440 b0"
+            },
+            {
+              "role": "",
+              "name": "490 Series ;",
+              "label": "490 Series ; v. number  -- 490 0b",
+              "title": "v. number  -- 490 0b"
+            }
           ],
           "nyplSource": [
             "sierra-nypl"
@@ -72,29 +86,37 @@
             "UPC",
             "EAN"
           ],
-          "parallelCreators_displayPacked": [
-            "גלוגר,מרים פ||‏גלוגר,מרים פ"
-          ],
           "idIssn": [
             "ISSN -- 022"
-          ],
-          "seriesStatement": [
-            "440 Series ; v. number -- 440 b0",
-            "490 Series ; v. number  -- 490 0b",
-            "Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat). CMA Test Records -- 810 2b "
           ],
           "addedAuthorTitle": [
             "Cataloging test record. 700 1b with $t"
           ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Gloger, Miriam",
+              "label": "Gloger, Miriam",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "BookOps. Cataloging. --110 2b ab",
+              "label": "BookOps. Cataloging. --110 2b ab",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)",
+              "label": "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             201
           ],
-          "parallelContributors_displayPacked": [],
           "parallelCreatorLiteral": [
-            "גלוגר,מרים פ",
-            null,
-            null
+            "גלוגר,מרים פ"
           ],
           "identifierV2": [
             {
@@ -179,28 +201,14 @@
               "value": "Standard number (old RLIN, etc.) -- 035"
             }
           ],
+          "seriesAddedEntry": [
+            "Author, of series CMA Test Records. -- 800 1b",
+            "CMA (Cat) CMA Test Records -- 810 2b"
+          ],
           "formerTitle": [
             "Former title -- 247 00"
           ],
-          "contributors_displayPacked": [
-            "Cramer, Richard, 1948-||Cramer, Richard, 1948-, original author -- 700 1b with $e",
-            "Cramer, Richard, 1948- ||Cramer, Richard, 1948- , aut -- 700 1b with $4",
-            "Cramer, Richard, 1948- ||Cramer, Richard, 1948- , author -- 700 1b with $e",
-            "Bayer, Jeffrey||Bayer, Jeffrey. Cataloging test record. 700 1b with $t",
-            "Bayer, Jeffrey||Bayer, Jeffrey, artist, printer. 700 1b with multiple $e",
-            "Bayer, Jeffrey||Bayer, Jeffrey, artist, prt 700 1b with multiple $4",
-            "Bayer, Jeffrey||Bayer, Jeffrey, printer, art 700 1b with multiple $4 reversed order",
-            "New York Public Library Database Management Group. -- 710 2b||New York Public Library Database Management Group. -- 710 2b",
-            "Conference added author.  711 2b||Conference added author.  711 2b",
-            "Added entry (uncontrolled name) -- 7201||Added entry (uncontrolled name) -- 7201",
-            "Cramer, Richard, 1948-||Cramer, Richard, 1948-, former owner",
-            "Virtual collection -- 791 2b||Virtual collection -- 791 2b",
-            "Local name -- 790 bb||Local name -- 790 bb",
-            "Local name test 2 -- 796 bb||Local name test 2 -- 796 bb",
-            "Author, of series||Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat)||CMA (Cat). CMA Test Records -- 810 2b"
-          ],
-          "updatedAt": 1774481994876,
+          "updatedAt": 1787810107619,
           "publicationStatement": [
             "[s.l.] : Specious Publ. [prev.pub.-- 260.2b], 2001. ",
             "Long Island CIty, N.Y. : CopyCat pub. co. -- 260 bb, 2011.",
@@ -240,10 +248,91 @@
             "urn:identifier:Publisher no. -- 028 02  ",
             "urn:identifier:Standard number (old RLIN, etc.) -- 035"
           ],
-          "creators_displayPacked": [
-            "Gloger, Miriam||Gloger, Miriam",
-            "BookOps. Cataloging. --110 2b ab||BookOps. Cataloging. --110 2b ab",
-            "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)||Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)"
+          "contributor_displayComponents": [
+            {
+              "role": "original author -- 700 1b with $e",
+              "name": "Cramer, Richard, 1948-",
+              "label": "Cramer, Richard, 1948-, original author -- 700 1b with $e",
+              "title": ""
+            },
+            {
+              "role": "aut -- 700 1b with $4",
+              "name": "Cramer, Richard, 1948- ",
+              "label": "Cramer, Richard, 1948- , aut -- 700 1b with $4",
+              "title": ""
+            },
+            {
+              "role": "author -- 700 1b with $e",
+              "name": "Cramer, Richard, 1948- ",
+              "label": "Cramer, Richard, 1948- , author -- 700 1b with $e",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey. Cataloging test record. 700 1b with $t",
+              "title": "Cataloging test record. 700 1b with $t"
+            },
+            {
+              "role": "artist, printer. 700 1b with multiple $e",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey, artist, printer. 700 1b with multiple $e",
+              "title": ""
+            },
+            {
+              "role": "artist, prt 700 1b with multiple $4",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey, artist, prt 700 1b with multiple $4",
+              "title": ""
+            },
+            {
+              "role": "printer, art 700 1b with multiple $4 reversed order",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey, printer, art 700 1b with multiple $4 reversed order",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "New York Public Library Database Management Group. -- 710 2b",
+              "label": "New York Public Library Database Management Group. -- 710 2b",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Conference added author.  711 2b",
+              "label": "Conference added author.  711 2b",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Added entry (uncontrolled name) -- 7201",
+              "label": "Added entry (uncontrolled name) -- 7201",
+              "title": ""
+            },
+            {
+              "role": "former owner",
+              "name": "Cramer, Richard, 1948-",
+              "label": "Cramer, Richard, 1948-, former owner",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Virtual collection -- 791 2b",
+              "label": "Virtual collection -- 791 2b",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Local name -- 790 bb",
+              "label": "Local name -- 790 bb",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Local name test 2 -- 796 bb",
+              "label": "Local name test 2 -- 796 bb",
+              "title": ""
+            }
           ],
           "dates": [],
           "mediaType": [
@@ -302,6 +391,14 @@
             "246 1 blank",
             "Zaglavie Russiĭi",
             "Added title -- 740 0b"
+          ],
+          "seriesUniformTitle_displayComponents": [
+            {
+              "role": "",
+              "name": "CMA Test Records -- 830 b0",
+              "label": "CMA Test Records -- 830 b0",
+              "title": ""
+            }
           ],
           "physicalDescription": [
             "1234, [1] pages, x leaves : illustrations ; 26 cm +  CD rom -- 300 (RDA) (1nd instance)",
@@ -438,7 +535,12 @@
             },
             {
               "noteType": "Reproduction",
-              "label": "Microfilm.",
+              "label": "Microfilm. New York : New York Public Library, [19--]. 0  microfilm reels ; 35 mm. (MN *ZZ-00000) -- 533",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Original Version",
+              "label": "Reprint. Originally published in CATNYP. -- 534",
               "type": "bf:Note"
             },
             {
@@ -467,8 +569,8 @@
               "type": "bf:Note"
             },
             {
-              "noteType": "Source",
-              "label": "Source \\\\DO NOT DISPLAY\\\\ -- 541 bb $a",
+              "noteType": "Information Relating to Copyright Status",
+              "label": "© World Enterprises on back cover -- 542 bb $f$n",
               "type": "bf:Note"
             },
             {
@@ -552,11 +654,6 @@
               "type": "bf:Note"
             },
             {
-              "noteType": "Processing Action",
-              "label": "Processing Action \\\\DO NOT DISPLAY\\\\ -- 583 bb",
-              "type": "bf:Note"
-            },
-            {
               "noteType": "Exhibitions",
               "label": "Exhibitions -- 585",
               "type": "bf:Note"
@@ -572,6 +669,11 @@
               "type": "bf:Note"
             },
             {
+              "noteType": "Latest issue consulted",
+              "label": "Latest issue consulted: 1900/1901. -- 588 1b",
+              "type": "bf:Note"
+            },
+            {
               "noteType": "Local note",
               "label": "Local note display --  590 1b",
               "type": "bf:Note"
@@ -582,81 +684,22 @@
               "type": "bf:Note"
             }
           ],
-          "subjectLiteral_exploded": [
-            "Starving artist",
-            "Starving artist -- 600 00. I always wanted to write a book 600 $t.",
-            "Starving artist -- 600 00. I always wanted to write a book 600 $t. -- 600 00 with $t",
-            "Artist, Starving, 1900-1999",
-            "Artist, Starving, 1900-1999 -- Autobiography.",
-            "Artist, Starving, 1900-1999 -- Autobiography. -- 600 10 with $d $v",
-            "Corporate body subject.",
-            "Corporate body subject. --  610 20",
-            "Secret Society of Catalogers",
-            "Secret Society of Catalogers -- Periodicals.",
-            "Secret Society of Catalogers -- Periodicals. -- 610 20 $v",
-            "Conference subject entry.",
-            "Conference subject entry. --  611 20",
-            "Stonecutters' Annual Picnic (12th : 1995 : Springfield)",
-            "Stonecutters' Annual Picnic (12th : 1995 : Springfield) -- 611 20 $n, $d, $c",
-            "Uniform title. Subunit. Catalogerese.",
-            "Uniform title. Subunit. Catalogerese.  -- 630 00 $p, $l",
-            "Life is a common square. Esperanto",
-            "Life is a common square. Esperanto -- Criticism.",
-            "Life is a common square. Esperanto -- Criticism. -- 630 00 $l, $x",
-            "Textile industry testing datetesting",
-            "Textile industry testing datetesting -- 650 b0 $z, $x",
-            "Textile industry testing datetesting -- 650 b0 $z, $x -- India",
-            "Textile industry testing datetesting -- 650 b0 $z, $x -- India -- History",
-            "New York (N.Y.)",
-            "New York (N.Y.) -- 21st century",
-            "New York (N.Y.) -- 21st century -- Diaries.",
-            "New York (N.Y.) -- 21st century -- Diaries. -- 651 b0 $y, $x",
-            "Undiscovered country.",
-            "Undiscovered country. -- 651 b0",
-            "Indexed term",
-            "Indexed term -- 653",
-            "Local subject heading.",
-            "Local subject heading. -- 690 b4",
-            "Quantum pataphysics",
-            "Quantum pataphysics -- Australia",
-            "Quantum pataphysics -- Australia -- 21st century.",
-            "Quantum pataphysics -- Australia -- 21st century. -- 690 b4 $z, $y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing x as first subfield",
-            "testing x as first subfield -- testing v as second subfield.",
-            "testing x as first subfield -- testing v as second subfield. -- 610 10 $x$v only",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x -- testing y",
-            "testing a testing c testing d testing e testing f testing g testing h testing j testing k testing l testing n testing p testing q testing s testing t testing u -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x -- testing y",
-            "testing a testing d testing e testing f testing g testing h testing k testing l testing m testing n testing o testing p testing r testing s testing t -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing b testing c testing d testing e",
-            "testing a testing b testing c testing d testing e -- testing v",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y",
-            "testing a testing b testing c testing d testing e -- testing v -- testing x -- testing y -- testing z",
-            "testing a testing e testing g",
-            "testing a testing e testing g -- testing v",
-            "testing a testing e testing g -- testing v -- testing x",
-            "testing a testing e testing g -- testing v -- testing x -- testing y",
-            "testing a testing e testing g -- testing v -- testing x -- testing y -- testing z"
-          ],
           "numItemDatesParsed": [
             0
+          ],
+          "seriesAddedEntry_displayComponents": [
+            {
+              "role": "",
+              "name": "Author, of series",
+              "label": "Author, of series. CMA Test Records. -- 800 1b",
+              "title": "CMA Test Records. -- 800 1b"
+            },
+            {
+              "role": "",
+              "name": "CMA (Cat)",
+              "label": "CMA (Cat). CMA Test Records -- 810 2b",
+              "title": "CMA Test Records -- 810 2b"
+            }
           ],
           "numItemsTotal": [
             2
@@ -699,7 +742,6 @@
           ],
           "popularity": 1,
           "uniformTitle": [
-            "CMA Test Records -- 830 b0",
             "T tagged 240 Uniform title -- t240",
             "Added title -- 730 0b"
           ],
@@ -726,6 +768,9 @@
             "",
             "зглавие руссий"
           ],
+          "seriesUniformTitle": [
+            "CMA Test Records -- 830 b0"
+          ],
           "summary": [
             "This record was originally created as a test record in CATNYP.  It was greatly expanded in ILS-STAFF to test the public display of various MARC fields. -- 520 (first)",
             "Use this record to test CATALOG, OPAC, ENCORE, and BIBLIOCOMMONS display of MARC fields -- 520 (second)"
@@ -740,8 +785,30 @@
             "9780123456786 (qualifier)",
             "ISBN -- 020"
           ],
+          "parallelContributorNameTitle": [
+            "גלוגר,מרים פ"
+          ],
           "numCheckinCardItems": [
             0
+          ],
+          "contributorNameTitle": [
+            "Gloger, Miriam",
+            "BookOps. Cataloging. --110 2b ab",
+            "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)",
+            "Cramer, Richard, 1948-",
+            "Cramer, Richard, 1948- ",
+            "Cramer, Richard, 1948- ",
+            "Bayer, Jeffrey Cataloging test record. 700 1b with $t",
+            "Bayer, Jeffrey",
+            "Bayer, Jeffrey",
+            "Bayer, Jeffrey",
+            "New York Public Library Database Management Group. -- 710 2b",
+            "Conference added author.  711 2b",
+            "Added entry (uncontrolled name) -- 7201",
+            "Cramer, Richard, 1948-",
+            "Virtual collection -- 791 2b",
+            "Local name -- 790 bb",
+            "Local name test 2 -- 796 bb"
           ],
           "materialType": [
             {
@@ -762,19 +829,6 @@
             "Life is a strange circle (updated 20180627) --245 10 $a, Test record --$k current April 19, 2013 --$f, Testing period --$g [Virtual-- 245 $h] (245-- $n) Titles, includes RDA specific fields -- 245 $p : Maintenance test record-- 245 $b,  Version--$s / CMA division -- 245 $c."
           ],
           "uri": "b22144813",
-          "parallelContributorLiteral": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
           "electronicResources": [
             {
               "label": "856 40",
@@ -815,9 +869,7 @@
           ],
           "series": [
             "440 Series ;",
-            "490 Series ;",
-            "Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat). CMA Test Records -- 810 2b "
+            "490 Series ;"
           ],
           "issuance": [
             {
@@ -837,6 +889,14 @@
               "url": "http://www.ThereIsNoLabelSubfieldInThis856-4b-supplementary.com/"
             }
           ],
+          "parallelCreators_displayComponents": [
+            {
+              "role": "",
+              "name": "גלוגר,מרים פ",
+              "label": "‏גלוגר,מרים פ",
+              "title": ""
+            }
+          ],
           "dimensions": [
             "26 cm +",
             "26 cm. +",
@@ -849,7 +909,7 @@
           ]
         },
         "sort": [
-          754.59357,
+          721.5851,
           "b22144813"
         ],
         "matched_queries": [
@@ -868,7 +928,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -885,6 +945,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -894,12 +957,13 @@
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
                     ],
+                    "collectionId": [
+                      "mal"
+                    ],
                     "enumerationChronology": [
                       "v.1"
                     ],
-                    "enumerationChronology_sort": [
-                      "         1-"
-                    ],
+                    "enumerationChronology_sort": "         1-",
                     "formatLiteral": [
                       "Book/text"
                     ],
@@ -913,12 +977,12 @@
                       "loc:mall1||Schwarzman Building - Main Reading Room 315 - Reference"
                     ],
                     "identifier": [
-                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                      "urn:shelfmark:Q-TAG (852 8b q tag.  Staff call in bib.)",
                       "urn:barcode:3333333333"
                     ],
                     "identifierV2": [
                       {
-                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                        "value": "Q-TAG (852 8b q tag.  Staff call in bib.)",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -939,15 +1003,15 @@
                       "orgs:1101||General Research Division"
                     ],
                     "physicalLocation": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
                     "requestable": [
                       false
                     ],
                     "shelfMark": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
-                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER",
+                    "shelfMark_sort": "aQ-TAG (852 8b q tag. Staff call in bib.)",
                     "status": [
                       {
                         "id": "status:k",
@@ -973,7 +1037,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-05-12",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -990,6 +1054,9 @@
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:3",
@@ -998,6 +1065,9 @@
                     ],
                     "catalogItemType_packed": [
                       "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "maf"
                     ],
                     "enumerationChronology": [
                       "nothing"
@@ -1015,12 +1085,12 @@
                       "loc:rcmf2||Offsite"
                     ],
                     "identifier": [
-                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                      "urn:shelfmark:Q-TAG (852 8b q tag.  Staff call in bib.)",
                       "urn:barcode:44455533322211"
                     ],
                     "identifierV2": [
                       {
-                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                        "value": "Q-TAG (852 8b q tag.  Staff call in bib.)",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -1041,15 +1111,15 @@
                       "orgs:1103||Dorot Jewish Division"
                     ],
                     "physicalLocation": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
-                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER",
+                    "shelfMark_sort": "aQ-TAG (852 8b q tag. Staff call in bib.)",
                     "status": [
                       {
                         "id": "status:a",

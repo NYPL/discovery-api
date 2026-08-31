@@ -1,5 +1,5 @@
 {
-  "took": 6,
+  "took": 17,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.73737,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-2024-10-22",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b14937001",
-        "_score": 15.73737,
+        "_score": 15.700724,
         "_source": {
           "note": [
             {
@@ -54,15 +54,15 @@
           "numItemsTotal": [
             4
           ],
+          "buildingLocationIds": [
+            "rc",
+            "ma"
+          ],
           "createdYear": [
             1855
           ],
           "dateEndString": [
             "1uuu"
-          ],
-          "buildingLocationIds": [
-            "rc",
-            "ma"
           ],
           "title": [
             "Morgenblatt für gebildete leser."
@@ -70,15 +70,16 @@
           "type": [
             "nypl:Item"
           ],
-          "shelfMark": [
-            "*DF+ (Morgenblatt für gebildete Leser)"
-          ],
           "numItemVolumesParsed": [
             0
+          ],
+          "shelfMark": [
+            "*DF+ (Morgenblatt für gebildete Leser)"
           ],
           "createdString": [
             "1855"
           ],
+          "creatorLiteral": [],
           "idLccn": [
             "cau08001961"
           ],
@@ -117,10 +118,11 @@
               "value": "(WaOLN)ret0001042"
             }
           ],
+          "popularity": 4,
           "dateEndYear": [
             1
           ],
-          "updatedAt": 1711598098379,
+          "updatedAt": 1787858775196,
           "publicationStatement": [
             "Stuttgart, Tübingen [etc.], J. G. Cotta'sche buchhandlung."
           ],
@@ -150,12 +152,23 @@
           "dateString": [
             "1855"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2000",
+                "gte": "1855"
+              },
+              "raw": "750907d18551uuugw uu p       0    0ger dnasM  ",
+              "tag": "d"
+            }
+          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
               "label": "unmediated"
             }
           ],
+          "subjectLiteral": [],
           "titleDisplay": [
             "Morgenblatt für gebildete leser."
           ],
@@ -514,6 +527,12 @@
               "url": "http://hdl.handle.net/2027/njp.32101064488156"
             }
           ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
+          "recordTypeId": "a",
+          "collectionIds": [
+            "mal"
+          ],
           "placeOfPublication": [
             "Stuttgart, Tübingen [etc.]"
           ],
@@ -534,7 +553,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14937001",
                   "_nested": {
                     "field": "items",
@@ -542,25 +561,29 @@
                   },
                   "_score": null,
                   "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
                     "accessMessage_packed": [
                       "accessMessage:2||Request in advance"
                     ],
-                    "owner": [
+                    "buildingLocationId": [
+                      "rc"
+                    ],
+                    "catalogItemType": [
                       {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
+                        "id": "catalogItemType:3",
+                        "label": "serial"
                       }
                     ],
-                    "identifier": [
-                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser) Jahrg. Mar.-May 1933",
-                      "urn:barcode:33433088646033"
-                    ],
-                    "physicalLocation": [
-                      "*DF+ (Morgenblatt für gebildete Leser)"
-                    ],
-                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. Mar.-May 001933",
                     "catalogItemType_packed": [
                       "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "mal"
                     ],
                     "dateRange": [
                       {
@@ -568,58 +591,12 @@
                         "lte": "1933"
                       }
                     ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "enumerationChronology_sort": [
-                      "          -1933"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "shelfMark": [
-                      "*DF+ (Morgenblatt für gebildete Leser) Jahrg. Mar.-May 1933"
-                    ],
-                    "uri": "i28309666",
-                    "identifierV2": [
-                      {
-                        "type": "bf:ShelfMark",
-                        "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. Mar.-May 1933"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433088646033"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
                     "enumerationChronology": [
                       "Jahrg. Mar.-May 1933"
                     ],
-                    "idBarcode": [
-                      "33433088646033"
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
+                    "enumerationChronology_sort": "          -1933",
                     "formatLiteral": [
-                      "Text"
+                      "Book/text"
                     ],
                     "holdingLocation": [
                       {
@@ -627,31 +604,25 @@
                         "label": "Offsite"
                       }
                     ],
-                    "recapCustomerCode": [
-                      "NA"
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
                     ],
-                    "status": [
+                    "identifier": [
+                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser)",
+                      "urn:barcode:33433088646033"
+                    ],
+                    "identifierV2": [
                       {
-                        "id": "status:a",
-                        "label": "Available"
+                        "value": "*DF+ (Morgenblatt für gebildete Leser)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433088646033",
+                        "type": "bf:Barcode"
                       }
-                    ]
-                  },
-                  "sort": [
-                    "          -1933"
-                  ]
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b14937001",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 2
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
+                    ],
+                    "idBarcode": [
+                      "33433088646033"
                     ],
                     "owner": [
                       {
@@ -659,197 +630,42 @@
                         "label": "Stephen A. Schwarzman Building"
                       }
                     ],
-                    "identifier": [
-                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1861",
-                      "urn:barcode:33433088646041"
-                    ],
-                    "physicalLocation": [
-                      "*DF+ (Morgenblatt für gebildete Leser)"
-                    ],
-                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. 001861",
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "1861",
-                        "lte": "1861"
-                      }
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "enumerationChronology_sort": [
-                      "          -1861"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "shelfMark": [
-                      "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1861"
-                    ],
-                    "uri": "i28309668",
-                    "identifierV2": [
-                      {
-                        "type": "bf:ShelfMark",
-                        "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1861"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433088646041"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "enumerationChronology": [
-                      "Jahrg. 1861"
-                    ],
-                    "idBarcode": [
-                      "33433088646041"
-                    ],
                     "owner_packed": [
                       "orgs:1000||Stephen A. Schwarzman Building"
                     ],
-                    "requestable": [
-                      true
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
-                      }
+                    "physicalLocation": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
                     ],
                     "recapCustomerCode": [
                       "NA"
                     ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser)",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
-                      }
-                    ]
-                  },
-                  "sort": [
-                    "          -1861"
-                  ]
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b14937001",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 3
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860",
-                      "urn:barcode:33433097964930"
-                    ],
-                    "m2CustomerCode": [
-                      "XA"
-                    ],
-                    "physicalLocation": [
-                      "*DF+ (Morgenblatt für gebildete Leser)"
-                    ],
-                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. 001860",
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "1860",
-                        "lte": "1860"
-                      }
-                    ],
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
                       }
                     ],
                     "status_packed": [
                       "status:a||Available"
                     ],
-                    "enumerationChronology_sort": [
-                      "          -1860"
-                    ],
                     "type": [
                       "bf:Item"
                     ],
-                    "shelfMark": [
-                      "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
-                    ],
-                    "uri": "i28543800",
-                    "identifierV2": [
-                      {
-                        "type": "bf:ShelfMark",
-                        "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 1860"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433097964930"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:mal92||Schwarzman Building M2 - General Research Room 315"
-                    ],
-                    "enumerationChronology": [
-                      "Jahrg. 1860"
-                    ],
-                    "idBarcode": [
-                      "33433097964930"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "formatLiteral": [
-                      "Text"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:mal92",
-                        "label": "Schwarzman Building M2 - General Research Room 315"
-                      }
-                    ],
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ]
+                    "uri": "i28309666"
                   },
                   "sort": [
-                    "          -1860"
+                    "          -1933"
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14937001",
                   "_nested": {
                     "field": "items",
@@ -857,75 +673,17 @@
                   },
                   "_score": null,
                   "_source": {
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
-                      }
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser) Jahrg. 49 (1855)",
-                      "urn:barcode:33433096425198"
-                    ],
-                    "physicalLocation": [
-                      "*DF+ (Morgenblatt für gebildete Leser)"
-                    ],
-                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser) Jahrg. 49 (1855)",
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "1855",
-                        "lte": "1855"
-                      }
-                    ],
                     "accessMessage": [
                       {
                         "id": "accessMessage:2",
                         "label": "Request in advance"
                       }
                     ],
-                    "status_packed": [
-                      "status:a||Available"
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
                     ],
-                    "enumerationChronology_sort": [
-                      "          -1855"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "shelfMark": [
-                      "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 49 (1855)"
-                    ],
-                    "uri": "i28309648",
-                    "identifierV2": [
-                      {
-                        "type": "bf:ShelfMark",
-                        "value": "*DF+ (Morgenblatt für gebildete Leser) Jahrg. 49 (1855)"
-                      },
-                      {
-                        "type": "bf:Barcode",
-                        "value": "33433096425198"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "enumerationChronology": [
-                      "Jahrg. 49 (1855)"
-                    ],
-                    "idBarcode": [
-                      "33433096425198"
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "requestable": [
-                      true
+                    "buildingLocationId": [
+                      "rc"
                     ],
                     "catalogItemType": [
                       {
@@ -933,8 +691,24 @@
                         "label": "serial"
                       }
                     ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "mal"
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "1861",
+                        "lte": "1861"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "Jahrg. 1861"
+                    ],
+                    "enumerationChronology_sort": "          -1861",
                     "formatLiteral": [
-                      "Text"
+                      "Book/text"
                     ],
                     "holdingLocation": [
                       {
@@ -942,15 +716,276 @@
                         "label": "Offsite"
                       }
                     ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser)",
+                      "urn:barcode:33433088646041"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DF+ (Morgenblatt für gebildete Leser)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433088646041",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "idBarcode": [
+                      "33433088646041"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "physicalLocation": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
                     "recapCustomerCode": [
                       "NA"
                     ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser)",
                     "status": [
                       {
                         "id": "status:a",
                         "label": "Available"
                       }
-                    ]
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i28309668"
+                  },
+                  "sort": [
+                    "          -1861"
+                  ]
+                },
+                {
+                  "_index": "resources-qa-2026-08-25",
+                  "_id": "b14937001",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 2
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:1||Use in library"
+                    ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "mal"
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "1860",
+                        "lte": "1860"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "Jahrg. 1860"
+                    ],
+                    "enumerationChronology_sort": "          -1860",
+                    "formatLiteral": [
+                      "Book/text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:mal92",
+                        "label": "Schwarzman Building - General Research Room 315"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:mal92||Schwarzman Building - General Research Room 315"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser)",
+                      "urn:barcode:33433097964930"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DF+ (Morgenblatt für gebildete Leser)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433097964930",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "idBarcode": [
+                      "33433097964930"
+                    ],
+                    "m2CustomerCode": [
+                      "XA"
+                    ],
+                    "physicalLocation": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser)",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i28543800"
+                  },
+                  "sort": [
+                    "          -1860"
+                  ]
+                },
+                {
+                  "_index": "resources-qa-2026-08-25",
+                  "_id": "b14937001",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 3
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "buildingLocationId": [
+                      "rc"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:3",
+                        "label": "serial"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:3||serial"
+                    ],
+                    "collectionId": [
+                      "mal"
+                    ],
+                    "dateRange": [
+                      {
+                        "gte": "1855",
+                        "lte": "1855"
+                      }
+                    ],
+                    "enumerationChronology": [
+                      "Jahrg. 49 (1855)"
+                    ],
+                    "enumerationChronology_sort": "          -1855",
+                    "formatLiteral": [
+                      "Book/text"
+                    ],
+                    "holdingLocation": [
+                      {
+                        "id": "loc:rc2ma",
+                        "label": "Offsite"
+                      }
+                    ],
+                    "holdingLocation_packed": [
+                      "loc:rc2ma||Offsite"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser)",
+                      "urn:barcode:33433096425198"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "*DF+ (Morgenblatt für gebildete Leser)",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "33433096425198",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "idBarcode": [
+                      "33433096425198"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:1000",
+                        "label": "Stephen A. Schwarzman Building"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:1000||Stephen A. Schwarzman Building"
+                    ],
+                    "physicalLocation": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "*DF+ (Morgenblatt für gebildete Leser)"
+                    ],
+                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser)",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "i28309648"
                   },
                   "sort": [
                     "          -1855"
@@ -975,7 +1010,7 @@
             "doc_count": 3
           },
           {
-            "key": "loc:mal92||Schwarzman Building M2 - General Research Room 315",
+            "key": "loc:mal92||Schwarzman Building - General Research Room 315",
             "doc_count": 1
           }
         ]
@@ -988,7 +1023,7 @@
         "sum_other_doc_count": 0,
         "buckets": [
           {
-            "key": "Text",
+            "key": "Book/text",
             "doc_count": 4
           }
         ]
