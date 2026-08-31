@@ -12,18 +12,21 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.701117,
+    "max_score": 15.701122,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b14332438",
-        "_score": 15.701117,
+        "_score": 15.701122,
         "_source": {
           "extent": [
             "4 v."
           ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "The ninth edition, in which is included the posthumous volume, containing the history of Virginia to the year 1688, and of New England to the year 1652. [Edited by his son.]"
@@ -37,26 +40,52 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "ma"
           ],
           "createdYear": [
             1800
           ],
-          "parallelSeriesAddedEntry": [],
+          "title": [
+            "The history of America ..."
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "*KF 1800 (Robertson, W. History of America)"
           ],
-          "parallelCreators_displayPacked": [],
+          "createdString": [
+            "1800"
+          ],
+          "creatorLiteral": [
+            "Robertson, William, 1721-1793"
+          ],
+          "numElectronicResources": [
+            4
+          ],
+          "contributorLiteral": [
+            "Robertson, William, 1753-1835"
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Robertson, William, 1721-1793",
+              "label": "Robertson, William, 1721-1793",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1800
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "7127252"
           ],
           "identifierV2": [
             {
@@ -76,11 +105,7 @@
               "value": "(WaOLN)R220000327"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Robertson, William, 1753-1835||Robertson, William, 1753-1835"
-          ],
-          "updatedAt": 1784146265332,
+          "updatedAt": 1787861065204,
           "publicationStatement": [
             "London, A. Strahan, 1800."
           ],
@@ -90,8 +115,35 @@
             "urn:oclc:7127252",
             "urn:identifier:(WaOLN)R220000327"
           ],
-          "creators_displayPacked": [
-            "Robertson, William, 1721-1793||Robertson, William, 1721-1793"
+          "contributor_displayComponents": [
+            {
+              "role": "",
+              "name": "Robertson, William, 1753-1835",
+              "label": "Robertson, William, 1753-1835",
+              "title": ""
+            }
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Robertson, William, 1721-1793",
+            "Robertson, William, 1753-1835"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1800"
           ],
           "dates": [
             {
@@ -109,73 +161,15 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "America -- Discovery and exploration.",
             "America -- History.",
             "Virginia -- History -- Colonial period, ca. 1600-1775."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "mar"
-          ],
-          "physicalDescription": [
-            "4 v. ; 8vo."
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "The history of America ..."
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1800"
-          ],
-          "creatorLiteral": [
-            "Robertson, William, 1721-1793"
-          ],
-          "numElectronicResources": [
-            4
-          ],
-          "contributorLiteral": [
-            "Robertson, William, 1753-1835"
-          ],
-          "idOclc": [
-            "7127252"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1800"
-          ],
           "titleDisplay": [
             "The history of America ..."
           ],
           "uri": "b14332438",
-          "parallelContributorLiteral": [
-            null
-          ],
           "electronicResources": [
             {
               "label": "Full text available via HathiTrust - v.1",
@@ -194,7 +188,12 @@
               "url": "http://hdl.handle.net/2027/mdp.39015016750955"
             }
           ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "mar"
+          ],
           "placeOfPublication": [
             "London"
           ],
@@ -203,6 +202,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "4 v. ; 8vo."
           ],
           "dimensions": [
             "8vo."
@@ -218,7 +220,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14332438",
                   "_nested": {
                     "field": "items",

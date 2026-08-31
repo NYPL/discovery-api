@@ -1,5 +1,5 @@
 {
-  "took": 13,
+  "took": 6,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,18 +12,28 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.701117,
+    "max_score": 15.701122,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "cb4032259",
-        "_score": 15.701117,
+        "_score": 15.701122,
         "_source": {
           "extent": [
             "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ;"
           ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliographical footnotes.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "recap-cul"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Nelson"
@@ -34,27 +44,51 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             1966
           ],
-          "parallelSeriesAddedEntry": [],
+          "title": [
+            "Plenty and want ; a social history of diet in England from 1815 to the present day."
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [],
+          "createdString": [
+            "1966"
+          ],
+          "creatorLiteral": [
+            "Burnett, John, 1925-2006"
+          ],
           "idLccn": [
             "66070181"
           ],
-          "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Burnett, John, 1925-2006",
+              "label": "Burnett, John, 1925-2006",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1966
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "ocm01650294",
+            "SCSB-4764019"
           ],
           "identifierV2": [
             {
@@ -86,9 +120,7 @@
               "value": "4032259"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784306415586,
+          "updatedAt": 1787716684969,
           "publicationStatement": [
             "[London] : Nelson, 1966."
           ],
@@ -101,8 +133,26 @@
             "urn:identifier:(NNC)4032259",
             "urn:identifier:4032259"
           ],
-          "creators_displayPacked": [
-            "Burnett, John, 1925-2006||Burnett, John, 1925-2006"
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Burnett, John, 1925-2006"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1966"
           ],
           "dates": [
             {
@@ -120,77 +170,21 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Diet -- Great Britain.",
             "Food consumption -- Great Britain."
-          ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "lccClassification": [
-            "TX360.G7 B8"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [],
-          "physicalDescription": [
-            "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ; 23 cm"
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Bibliographical footnotes.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Plenty and want ; a social history of diet in England from 1815 to the present day."
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1966"
-          ],
-          "creatorLiteral": [
-            "Burnett, John, 1925-2006"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "ocm01650294",
-            "SCSB-4764019"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1966"
           ],
           "titleDisplay": [
             "Plenty and want ; a social history of diet in England from 1815 to the present day."
           ],
           "uri": "cb4032259",
-          "parallelContributorLiteral": [],
+          "lccClassification": [
+            "TX360.G7 B8"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [],
           "placeOfPublication": [
             "[London]"
           ],
@@ -199,6 +193,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ; 23 cm"
           ],
           "dimensions": [
             "23 cm"
@@ -214,7 +211,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "cb4032259",
                   "_nested": {
                     "field": "items",

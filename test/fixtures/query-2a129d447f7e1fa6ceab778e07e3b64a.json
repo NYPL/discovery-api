@@ -1,5 +1,5 @@
 {
-  "took": 5,
+  "took": 17,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,115 +12,15 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10001936",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "400 p. ;"
-          ],
-          "nyplSource": [
-            "sierra-nypl"
-          ],
-          "publisherLiteral": [
-            "Tparan Hovhannu Tēr-Abrahamian"
-          ],
-          "language": [
-            {
-              "id": "lang:arm",
-              "label": "Armenian"
-            }
-          ],
-          "buildingLocationIds": [
-            "rc"
-          ],
-          "createdYear": [
-            1891
-          ],
-          "parallelSeriesAddedEntry": [],
-          "type": [
-            "nypl:Item"
-          ],
-          "shelfMark": [
-            "*ONR 84-743"
-          ],
-          "parallelCreators_displayPacked": [],
-          "dateStartYear": [
-            1891
-          ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
-          ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*ONR 84-743"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10001936"
-            },
-            {
-              "type": "nypl:Oclc",
-              "value": "NYPG002001377-B"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "NNSZ00201976"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(WaOLN)nyp0201934"
-            }
-          ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784062724919,
-          "publicationStatement": [
-            "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
-          ],
-          "identifier": [
-            "urn:shelfmark:*ONR 84-743",
-            "urn:bnum:10001936",
-            "urn:oclc:NYPG002001377-B",
-            "urn:identifier:NNSZ00201976",
-            "urn:identifier:(WaOLN)nyp0201934"
-          ],
-          "creators_displayPacked": [
-            "Shermazanian, Galust||Shermazanian, Galust"
-          ],
-          "dates": [
-            {
-              "range": {
-                "lt": "1892",
-                "gte": "1891"
-              },
-              "raw": "850225s1891    ru       b    000 0carm dcam i ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "seriesAddedEntry_displayPacked": [],
-          "subjectLiteral": [
-            "Armenians -- Iran -- History."
-          ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "mal"
-          ],
-          "physicalDescription": [
-            "400 p. ; 21 cm."
           ],
           "note": [
             {
@@ -144,17 +44,41 @@
               "type": "bf:Note"
             }
           ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
           "numItemDatesParsed": [
             0
+          ],
+          "publisherLiteral": [
+            "Tparan Hovhannu Tēr-Abrahamian"
+          ],
+          "language": [
+            {
+              "id": "lang:arm",
+              "label": "Armenian"
+            }
           ],
           "numItemsTotal": [
             1
           ],
+          "buildingLocationIds": [
+            "rc"
+          ],
+          "createdYear": [
+            1891
+          ],
           "title": [
             "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan"
           ],
+          "type": [
+            "nypl:Item"
+          ],
           "numItemVolumesParsed": [
             0
+          ],
+          "shelfMark": [
+            "*ONR 84-743"
           ],
           "createdString": [
             "1891"
@@ -165,12 +89,59 @@
           "numElectronicResources": [
             1
           ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Shermazanian, Galust",
+              "label": "Shermazanian, Galust",
+              "title": ""
+            }
+          ],
+          "dateStartYear": [
+            1891
+          ],
           "idOclc": [
             "NYPG002001377-B"
           ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*ONR 84-743"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10001936"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "NYPG002001377-B"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "NNSZ00201976"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(WaOLN)nyp0201934"
+            }
+          ],
           "popularity": 3,
+          "updatedAt": 1787698629070,
+          "publicationStatement": [
+            "Ṛostov (Doni Vra) : Tparan Hovhannu Tēr-Abrahamian, 1890 [i.e. 1891]"
+          ],
+          "identifier": [
+            "urn:shelfmark:*ONR 84-743",
+            "urn:bnum:10001936",
+            "urn:oclc:NYPG002001377-B",
+            "urn:identifier:NNSZ00201976",
+            "urn:identifier:(WaOLN)nyp0201934"
+          ],
           "numCheckinCardItems": [
             0
+          ],
+          "contributorNameTitle": [
+            "Shermazanian, Galust"
           ],
           "materialType": [
             {
@@ -187,18 +158,41 @@
           "dateString": [
             "1891"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1892",
+                "gte": "1891"
+              },
+              "raw": "850225s1891    ru       b    000 0carm dcam i ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Armenians -- Iran -- History."
+          ],
           "titleDisplay": [
             "Niwtʻer azgayin patmutʻian hamar Ereveli hay kazunkʻ ; Parskastan / Ashkhatasirutʻiamb Galust Shermazaniani."
           ],
           "uri": "b10001936",
-          "parallelContributorLiteral": [],
           "electronicResources": [
             {
               "label": "Full text available via HathiTrust",
               "url": "http://hdl.handle.net/2027/nyp.33433001892276"
             }
           ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "mal"
+          ],
           "placeOfPublication": [
             "Ṛostov (Doni Vra)"
           ],
@@ -207,6 +201,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "400 p. ; 21 cm."
           ],
           "dimensions": [
             "21 cm."
@@ -222,7 +219,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10001936",
                   "_nested": {
                     "field": "items",

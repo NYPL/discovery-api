@@ -1,5 +1,5 @@
 {
-  "took": 6,
+  "took": 8,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,15 +12,35 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b14937001",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "From 1807-June 1837 title reads: Morgenblatt für gebildete stände.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Note",
+              "label": "Kunst-blatt. Stuttgart, 1816-1849.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Supplement",
+              "label": "Includes the current supplements Literatur-blatt 1817-1849; Kunstblatt 1816-1849; Intelligenz-blatt 1817-1847.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            4
           ],
           "publisherLiteral": [
             "J. G. Cotta'sche buchhandlung."
@@ -31,6 +51,9 @@
               "label": "German"
             }
           ],
+          "numItemsTotal": [
+            4
+          ],
           "buildingLocationIds": [
             "rc",
             "ma"
@@ -38,22 +61,37 @@
           "createdYear": [
             1855
           ],
-          "parallelSeriesAddedEntry": [],
+          "dateEndString": [
+            "1uuu"
+          ],
+          "title": [
+            "Morgenblatt für gebildete leser."
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "*DF+ (Morgenblatt für gebildete Leser)"
           ],
+          "createdString": [
+            "1855"
+          ],
+          "creatorLiteral": [],
           "idLccn": [
             "cau08001961"
           ],
-          "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            88
+          ],
           "dateStartYear": [
             1855
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [],
+          "idOclc": [
+            "1608345"
+          ],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
@@ -80,9 +118,11 @@
               "value": "(WaOLN)ret0001042"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784156767853,
+          "popularity": 4,
+          "dateEndYear": [
+            1
+          ],
+          "updatedAt": 1787858775196,
           "publicationStatement": [
             "Stuttgart, Tübingen [etc.], J. G. Cotta'sche buchhandlung."
           ],
@@ -93,77 +133,6 @@
             "urn:lccn:cau08001961",
             "urn:identifier:0494254",
             "urn:identifier:(WaOLN)ret0001042"
-          ],
-          "creators_displayPacked": [],
-          "dates": [
-            {
-              "range": {
-                "lt": "2000",
-                "gte": "1855"
-              },
-              "raw": "750907d18551uuugw uu p       0    0ger dnasM  ",
-              "tag": "d"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "seriesAddedEntry_displayPacked": [],
-          "subjectLiteral": [],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "mal"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "From 1807-June 1837 title reads: Morgenblatt für gebildete stände.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Note",
-              "label": "Kunst-blatt. Stuttgart, 1816-1849.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Supplement",
-              "label": "Includes the current supplements Literatur-blatt 1817-1849; Kunstblatt 1816-1849; Intelligenz-blatt 1817-1847.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            4
-          ],
-          "numItemsTotal": [
-            4
-          ],
-          "dateEndString": [
-            "1uuu"
-          ],
-          "title": [
-            "Morgenblatt für gebildete leser."
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1855"
-          ],
-          "creatorLiteral": [],
-          "numElectronicResources": [
-            88
-          ],
-          "idOclc": [
-            "1608345"
-          ],
-          "popularity": 4,
-          "dateEndYear": [
-            1
           ],
           "numCheckinCardItems": [
             0
@@ -183,11 +152,27 @@
           "dateString": [
             "1855"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2000",
+                "gte": "1855"
+              },
+              "raw": "750907d18551uuugw uu p       0    0ger dnasM  ",
+              "tag": "d"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [],
           "titleDisplay": [
             "Morgenblatt für gebildete leser."
           ],
           "uri": "b14937001",
-          "parallelContributorLiteral": [],
           "electronicResources": [
             {
               "label": "Full text available via HathiTrust - jahrg.11:Jan.-June (1817)",
@@ -542,7 +527,12 @@
               "url": "http://hdl.handle.net/2027/njp.32101064488156"
             }
           ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "mal"
+          ],
           "placeOfPublication": [
             "Stuttgart, Tübingen [etc.]"
           ],
@@ -563,7 +553,7 @@
               "max_score": 0,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14937001",
                   "_nested": {
                     "field": "items",
@@ -672,7 +662,7 @@
                   }
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14937001",
                   "_nested": {
                     "field": "items",
@@ -781,7 +771,7 @@
                   }
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14937001",
                   "_nested": {
                     "field": "items",
@@ -892,7 +882,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b14937001",
                   "_nested": {
                     "field": "items",

@@ -1,5 +1,5 @@
 {
-  "took": 7,
+  "took": 13,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,18 +12,28 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10022734",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "xiv, 381 p., [16] leaves of plates : ill. ;"
           ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "1st ed."
@@ -37,6 +47,9 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            3
+          ],
           "buildingLocationIds": [
             "sc",
             "ma"
@@ -44,25 +57,45 @@
           "createdYear": [
             1981
           ],
-          "parallelSeriesAddedEntry": [],
+          "title": [
+            "When Harlem was in vogue"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "IEC 81-1139",
             "Sc *700-L (Lewis, D. When Harlem was in vogue)",
             "Sc E 96-780"
           ],
+          "createdString": [
+            "1981"
+          ],
+          "creatorLiteral": [
+            "Lewis, David Levering, 1936-"
+          ],
           "idLccn": [
             "80002704"
           ],
-          "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Lewis, David Levering, 1936-",
+              "label": "Lewis, David Levering, 1936-",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1981
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "NYPG25743597-B"
           ],
           "identifierV2": [
             {
@@ -98,11 +131,13 @@
               "value": "(WaOLN)nyp0022812"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784063152596,
+          "popularity": 179,
+          "updatedAt": 1787860889973,
           "publicationStatement": [
             "New York : Knopf : distributed by Random House, 1981."
+          ],
+          "idIsbn": [
+            "0394495721"
           ],
           "identifier": [
             "urn:shelfmark:IEC 81-1139",
@@ -114,8 +149,26 @@
             "urn:lccn:80002704",
             "urn:identifier:(WaOLN)nyp0022812"
           ],
-          "creators_displayPacked": [
-            "Lewis, David Levering, 1936-||Lewis, David Levering, 1936-"
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Lewis, David Levering, 1936-"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1981"
           ],
           "dates": [
             {
@@ -133,7 +186,6 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "African American arts -- New York (State) -- New York.",
             "Arts, Modern -- 20th century -- New York (State) -- New York.",
@@ -141,78 +193,20 @@
             "Harlem (New York, N.Y.)",
             "Black author."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
+          "titleDisplay": [
+            "When Harlem was in vogue / David Levering Lewis."
+          ],
+          "uri": "b10022734",
           "lccClassification": [
             "NX511.N4 L48 1981"
           ],
           "parallelSubjectLiteral": [],
           "formatId": "a",
+          "recordTypeId": "a",
           "collectionIds": [
             "scf",
             "mag"
           ],
-          "physicalDescription": [
-            "xiv, 381 p., [16] leaves of plates : ill. ; 24 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references and index.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            3
-          ],
-          "title": [
-            "When Harlem was in vogue"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1981"
-          ],
-          "creatorLiteral": [
-            "Lewis, David Levering, 1936-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "NYPG25743597-B"
-          ],
-          "popularity": 179,
-          "idIsbn": [
-            "0394495721"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1981"
-          ],
-          "titleDisplay": [
-            "When Harlem was in vogue / David Levering Lewis."
-          ],
-          "uri": "b10022734",
-          "parallelContributorLiteral": [],
-          "recordTypeId": "a",
           "placeOfPublication": [
             "New York"
           ],
@@ -221,6 +215,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "xiv, 381 p., [16] leaves of plates : ill. ; 24 cm."
           ],
           "dimensions": [
             "24 cm."
@@ -239,7 +236,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022734",
                   "_nested": {
                     "field": "items",
@@ -338,7 +335,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022734",
                   "_nested": {
                     "field": "items",
@@ -437,7 +434,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022734",
                   "_nested": {
                     "field": "items",

@@ -1,5 +1,5 @@
 {
-  "took": 23,
+  "took": 12,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,7 +15,7 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b11481799",
         "_score": 16,
         "_source": {
@@ -40,7 +40,6 @@
           "createdYear": [
             1991
           ],
-          "parallelSeriesAddedEntry": [],
           "type": [
             "nypl:Item"
           ],
@@ -84,16 +83,19 @@
             "M001131667",
             "M001133623"
           ],
-          "parallelCreators_displayPacked": [],
           "addedAuthorTitle": [
             "Caprices"
           ],
+          "creator_displayComponents": [
+            {
+              "role": "composer",
+              "name": "Schumann, Robert, 1810-1856",
+              "label": "Schumann, Robert, 1810-1856, composer",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1991
-          ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
           ],
           "identifierV2": [
             {
@@ -745,15 +747,7 @@
               "value": "(OCoLC)25551434"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Mayeda, Akio||Mayeda, Akio, editor",
-            "Niemöller, Klaus Wolfgang||Niemöller, Klaus Wolfgang, editor",
-            "Paganini, Nicolò, 1782-1840||Container of (work): Paganini, Nicolò, 1782-1840. Caprices, violin, M.S. 25. Selections",
-            "Robert-Schumann-Gesellschaft Düsseldorf||Robert-Schumann-Gesellschaft Düsseldorf, issuing body",
-            "Robert-Schumann-Haus Zwickau||Robert-Schumann-Haus Zwickau, issuing body"
-          ],
-          "updatedAt": 1784093511956,
+          "updatedAt": 1787741649192,
           "publicationStatement": [
             "Mainz ; New York : Schott, 1991-<2023>"
           ],
@@ -921,8 +915,43 @@
             "urn:identifier:(OCoLC)24261548 (OCoLC)24555199 (OCoLC)25341179 (OCoLC)921918725 (OCoLC)923345847 (OCoLC)974752377 (OCoLC)976558002 (OCoLC)987010083 (OCoLC)1045748175 (OCoLC)1057109311 (OCoLC)1066804977 (OCoLC)1109464156 (OCoLC)1180843906 (OCoLC)1225693248 (OCoLC)1229937286",
             "urn:identifier:(OCoLC)25551434"
           ],
-          "creators_displayPacked": [
-            "Schumann, Robert, 1810-1856||Schumann, Robert, 1810-1856, composer"
+          "contributor_displayComponents": [
+            {
+              "role": "composer",
+              "name": "Schumann, Robert, 1810-1856",
+              "label": "Schumann, Robert, 1810-1856, composer",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Mayeda, Akio",
+              "label": "Mayeda, Akio, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Niemöller, Klaus Wolfgang",
+              "label": "Niemöller, Klaus Wolfgang, editor",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Paganini, Nicolò, 1782-1840",
+              "label": "Container of (work): Paganini, Nicolò, 1782-1840. Caprices, violin, M.S. 25. Selections",
+              "title": "Caprices, violin, M.S. 25. Selections"
+            },
+            {
+              "role": "issuing body",
+              "name": "Robert-Schumann-Gesellschaft Düsseldorf",
+              "label": "Robert-Schumann-Gesellschaft Düsseldorf, issuing body",
+              "title": ""
+            },
+            {
+              "role": "issuing body",
+              "name": "Robert-Schumann-Haus Zwickau",
+              "label": "Robert-Schumann-Haus Zwickau, issuing body",
+              "title": ""
+            }
           ],
           "dates": [
             {
@@ -940,13 +969,11 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Music.",
             "Vocal music -- Scores.",
             "Instrumental music -- Scores."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
           "lccClassification": [
             "M3 .S3927 1991"
           ],
@@ -1555,6 +1582,14 @@
           "numCheckinCardItems": [
             0
           ],
+          "contributorNameTitle": [
+            "Schumann, Robert, 1810-1856",
+            "Mayeda, Akio",
+            "Niemöller, Klaus Wolfgang",
+            "Paganini, Nicolò, 1782-1840 Caprices, violin, M.S. 25. Selections",
+            "Robert-Schumann-Gesellschaft Düsseldorf",
+            "Robert-Schumann-Haus Zwickau"
+          ],
           "materialType": [
             {
               "id": "resourcetypes:not",
@@ -1574,13 +1609,6 @@
             "Neue Ausgabe sämtlicher Werke / Robert Schumann ; herausgegeben von der Robert-Schumann-Gesellschaft Düsseldorf durch Akio Mayeda und Klaus Wolfgang Niemöller in Verbindung mit dem Robert-Schumann-Haus Zwickau."
           ],
           "uri": "b11481799",
-          "parallelContributorLiteral": [
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
           "recordTypeId": "c",
           "placeOfPublication": [
             "Mainz ; New York"
@@ -1668,7 +1696,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b11481799",
                   "_nested": {
                     "field": "items",
@@ -1768,7 +1796,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b11481799",
                   "_nested": {
                     "field": "items",
@@ -1868,7 +1896,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b11481799",
                   "_nested": {
                     "field": "items",
@@ -1973,7 +2001,7 @@
         }
       },
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b22144813",
         "_score": 16,
         "_source": {
@@ -1984,6 +2012,20 @@
           ],
           "partOf": [
             "In: -- 773 0b"
+          ],
+          "series_displayComponents": [
+            {
+              "role": "",
+              "name": "440 Series ;",
+              "label": "440 Series ; v. number -- 440 b0",
+              "title": "v. number -- 440 b0"
+            },
+            {
+              "role": "",
+              "name": "490 Series ;",
+              "label": "490 Series ; v. number  -- 490 0b",
+              "title": "v. number  -- 490 0b"
+            }
           ],
           "nyplSource": [
             "sierra-nypl"
@@ -2011,10 +2053,6 @@
           "createdYear": [
             201
           ],
-          "parallelSeriesAddedEntry": [
-            "undefined undefined",
-            "undefined undefined"
-          ],
           "parallelTitle": [
             "‏כותר שאינו באותיות לטינית = зглавие руссий."
           ],
@@ -2034,23 +2072,37 @@
             "UPC",
             "EAN"
           ],
-          "parallelCreators_displayPacked": [
-            "גלוגר,מרים פ||‏גלוגר,מרים פ"
-          ],
           "idIssn": [
             "ISSN -- 022"
           ],
           "addedAuthorTitle": [
             "Cataloging test record. 700 1b with $t"
           ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Gloger, Miriam",
+              "label": "Gloger, Miriam",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "BookOps. Cataloging. --110 2b ab",
+              "label": "BookOps. Cataloging. --110 2b ab",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)",
+              "label": "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             201
           ],
-          "parallelContributors_displayPacked": [],
           "parallelCreatorLiteral": [
-            "גלוגר,מרים פ",
-            null,
-            null
+            "גלוגר,מרים פ"
           ],
           "identifierV2": [
             {
@@ -2142,23 +2194,7 @@
           "formerTitle": [
             "Former title -- 247 00"
           ],
-          "contributors_displayPacked": [
-            "Cramer, Richard, 1948-||Cramer, Richard, 1948-, original author -- 700 1b with $e",
-            "Cramer, Richard, 1948- ||Cramer, Richard, 1948- , aut -- 700 1b with $4",
-            "Cramer, Richard, 1948- ||Cramer, Richard, 1948- , author -- 700 1b with $e",
-            "Bayer, Jeffrey||Bayer, Jeffrey. Cataloging test record. 700 1b with $t",
-            "Bayer, Jeffrey||Bayer, Jeffrey, artist, printer. 700 1b with multiple $e",
-            "Bayer, Jeffrey||Bayer, Jeffrey, artist, prt 700 1b with multiple $4",
-            "Bayer, Jeffrey||Bayer, Jeffrey, printer, art 700 1b with multiple $4 reversed order",
-            "New York Public Library Database Management Group. -- 710 2b||New York Public Library Database Management Group. -- 710 2b",
-            "Conference added author.  711 2b||Conference added author.  711 2b",
-            "Added entry (uncontrolled name) -- 7201||Added entry (uncontrolled name) -- 7201",
-            "Cramer, Richard, 1948-||Cramer, Richard, 1948-, former owner",
-            "Virtual collection -- 791 2b||Virtual collection -- 791 2b",
-            "Local name -- 790 bb||Local name -- 790 bb",
-            "Local name test 2 -- 796 bb||Local name test 2 -- 796 bb"
-          ],
-          "updatedAt": 1784255657887,
+          "updatedAt": 1787810107619,
           "publicationStatement": [
             "[s.l.] : Specious Publ. [prev.pub.-- 260.2b], 2001. ",
             "Long Island CIty, N.Y. : CopyCat pub. co. -- 260 bb, 2011.",
@@ -2198,10 +2234,91 @@
             "urn:identifier:Publisher no. -- 028 02  ",
             "urn:identifier:Standard number (old RLIN, etc.) -- 035"
           ],
-          "creators_displayPacked": [
-            "Gloger, Miriam||Gloger, Miriam",
-            "BookOps. Cataloging. --110 2b ab||BookOps. Cataloging. --110 2b ab",
-            "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)||Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)"
+          "contributor_displayComponents": [
+            {
+              "role": "original author -- 700 1b with $e",
+              "name": "Cramer, Richard, 1948-",
+              "label": "Cramer, Richard, 1948-, original author -- 700 1b with $e",
+              "title": ""
+            },
+            {
+              "role": "aut -- 700 1b with $4",
+              "name": "Cramer, Richard, 1948- ",
+              "label": "Cramer, Richard, 1948- , aut -- 700 1b with $4",
+              "title": ""
+            },
+            {
+              "role": "author -- 700 1b with $e",
+              "name": "Cramer, Richard, 1948- ",
+              "label": "Cramer, Richard, 1948- , author -- 700 1b with $e",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey. Cataloging test record. 700 1b with $t",
+              "title": "Cataloging test record. 700 1b with $t"
+            },
+            {
+              "role": "artist, printer. 700 1b with multiple $e",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey, artist, printer. 700 1b with multiple $e",
+              "title": ""
+            },
+            {
+              "role": "artist, prt 700 1b with multiple $4",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey, artist, prt 700 1b with multiple $4",
+              "title": ""
+            },
+            {
+              "role": "printer, art 700 1b with multiple $4 reversed order",
+              "name": "Bayer, Jeffrey",
+              "label": "Bayer, Jeffrey, printer, art 700 1b with multiple $4 reversed order",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "New York Public Library Database Management Group. -- 710 2b",
+              "label": "New York Public Library Database Management Group. -- 710 2b",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Conference added author.  711 2b",
+              "label": "Conference added author.  711 2b",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Added entry (uncontrolled name) -- 7201",
+              "label": "Added entry (uncontrolled name) -- 7201",
+              "title": ""
+            },
+            {
+              "role": "former owner",
+              "name": "Cramer, Richard, 1948-",
+              "label": "Cramer, Richard, 1948-, former owner",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Virtual collection -- 791 2b",
+              "label": "Virtual collection -- 791 2b",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Local name -- 790 bb",
+              "label": "Local name -- 790 bb",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Local name test 2 -- 796 bb",
+              "label": "Local name test 2 -- 796 bb",
+              "title": ""
+            }
           ],
           "dates": [],
           "mediaType": [
@@ -2209,10 +2326,6 @@
               "id": "mediatypes:n",
               "label": "unmediated"
             }
-          ],
-          "seriesAddedEntry_displayPacked": [
-            "Author, of series CMA Test Records. -- 800 1b||Author, of series. CMA Test Records. -- 800 1b",
-            "CMA (Cat) CMA Test Records -- 810 2b||CMA (Cat). CMA Test Records -- 810 2b"
           ],
           "subjectLiteral": [
             "Starving artist -- 600 00. I always wanted to write a book 600 $t. -- 600 00 with $t.",
@@ -2238,7 +2351,6 @@
             "testing a testing e testing g -- testing v -- testing x -- testing y -- testing z.",
             "testing a testing b testing c testing d testing e testing f testing g testing h testing j testing k testing l testing m testing n testing o testing p testing q testing r testing s testing t testing u -- testing v -- testing x -- testing y -- testing z."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelSubjectLiteral": [],
           "formatId": "a",
           "collectionIds": [
@@ -2265,6 +2377,14 @@
             "246 1 blank",
             "Zaglavie Russiĭi",
             "Added title -- 740 0b"
+          ],
+          "seriesUniformTitle_displayComponents": [
+            {
+              "role": "",
+              "name": "CMA Test Records -- 830 b0",
+              "label": "CMA Test Records -- 830 b0",
+              "title": ""
+            }
           ],
           "physicalDescription": [
             "1234, [1] pages, x leaves : illustrations ; 26 cm +  CD rom -- 300 (RDA) (1nd instance)",
@@ -2550,11 +2670,22 @@
               "type": "bf:Note"
             }
           ],
-          "seriesUniformTitle_displayPacked": [
-            "CMA Test Records -- 830 b0||CMA Test Records -- 830 b0"
-          ],
           "numItemDatesParsed": [
             0
+          ],
+          "seriesAddedEntry_displayComponents": [
+            {
+              "role": "",
+              "name": "Author, of series",
+              "label": "Author, of series. CMA Test Records. -- 800 1b",
+              "title": "CMA Test Records. -- 800 1b"
+            },
+            {
+              "role": "",
+              "name": "CMA (Cat)",
+              "label": "CMA (Cat). CMA Test Records -- 810 2b",
+              "title": "CMA Test Records -- 810 2b"
+            }
           ],
           "numItemsTotal": [
             2
@@ -2640,8 +2771,30 @@
             "9780123456786 (qualifier)",
             "ISBN -- 020"
           ],
+          "parallelContributorNameTitle": [
+            "גלוגר,מרים פ"
+          ],
           "numCheckinCardItems": [
             0
+          ],
+          "contributorNameTitle": [
+            "Gloger, Miriam",
+            "BookOps. Cataloging. --110 2b ab",
+            "Congress (13th : 2013 : LIC, Queens) -- 111 2b (ndc)",
+            "Cramer, Richard, 1948-",
+            "Cramer, Richard, 1948- ",
+            "Cramer, Richard, 1948- ",
+            "Bayer, Jeffrey Cataloging test record. 700 1b with $t",
+            "Bayer, Jeffrey",
+            "Bayer, Jeffrey",
+            "Bayer, Jeffrey",
+            "New York Public Library Database Management Group. -- 710 2b",
+            "Conference added author.  711 2b",
+            "Added entry (uncontrolled name) -- 7201",
+            "Cramer, Richard, 1948-",
+            "Virtual collection -- 791 2b",
+            "Local name -- 790 bb",
+            "Local name test 2 -- 796 bb"
           ],
           "materialType": [
             {
@@ -2662,19 +2815,6 @@
             "Life is a strange circle (updated 20180627) --245 10 $a, Test record --$k current April 19, 2013 --$f, Testing period --$g [Virtual-- 245 $h] (245-- $n) Titles, includes RDA specific fields -- 245 $p : Maintenance test record-- 245 $b,  Version--$s / CMA division -- 245 $c."
           ],
           "uri": "b22144813",
-          "parallelContributorLiteral": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
           "electronicResources": [
             {
               "label": "856 40",
@@ -2714,6 +2854,7 @@
             "Latest Copyright Date -- 264 34 (RDA)"
           ],
           "series": [
+            "440 Series ;",
             "490 Series ;"
           ],
           "issuance": [
@@ -2734,8 +2875,13 @@
               "url": "http://www.ThereIsNoLabelSubfieldInThis856-4b-supplementary.com/"
             }
           ],
-          "series_displayPacked": [
-            "490 Series ;||490 Series ; v. number  -- 490 0b"
+          "parallelCreators_displayComponents": [
+            {
+              "role": "",
+              "name": "גלוגר,מרים פ",
+              "label": "‏גלוגר,מרים פ",
+              "title": ""
+            }
           ],
           "dimensions": [
             "26 cm +",
@@ -2766,7 +2912,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -2815,12 +2961,12 @@
                       "loc:mall1||Schwarzman Building - Main Reading Room 315 - Reference"
                     ],
                     "identifier": [
-                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                      "urn:shelfmark:Q-TAG (852 8b q tag.  Staff call in bib.)",
                       "urn:barcode:3333333333"
                     ],
                     "identifierV2": [
                       {
-                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                        "value": "Q-TAG (852 8b q tag.  Staff call in bib.)",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -2841,15 +2987,15 @@
                       "orgs:1101||General Research Division"
                     ],
                     "physicalLocation": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
                     "requestable": [
                       false
                     ],
                     "shelfMark": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
-                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER",
+                    "shelfMark_sort": "aQ-TAG (852 8b q tag. Staff call in bib.)",
                     "status": [
                       {
                         "id": "status:k",
@@ -2875,7 +3021,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b22144813",
                   "_nested": {
                     "field": "items",
@@ -2923,12 +3069,12 @@
                       "loc:rcmf2||Offsite"
                     ],
                     "identifier": [
-                      "urn:shelfmark:J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                      "urn:shelfmark:Q-TAG (852 8b q tag.  Staff call in bib.)",
                       "urn:barcode:44455533322211"
                     ],
                     "identifierV2": [
                       {
-                        "value": "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER",
+                        "value": "Q-TAG (852 8b q tag.  Staff call in bib.)",
                         "type": "bf:ShelfMark"
                       },
                       {
@@ -2949,15 +3095,15 @@
                       "orgs:1103||Dorot Jewish Division"
                     ],
                     "physicalLocation": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
                     "requestable": [
                       true
                     ],
                     "shelfMark": [
-                      "J-LANG FORMAT Branch --  091 (C-Tag Branch call) Biographee CUTTER"
+                      "Q-TAG (852 8b q tag.  Staff call in bib.)"
                     ],
-                    "shelfMark_sort": "aJ-LANG FORMAT Branch -- 091 (C-Tag Branch call) Biographee CUTTER",
+                    "shelfMark_sort": "aQ-TAG (852 8b q tag. Staff call in bib.)",
                     "status": [
                       {
                         "id": "status:a",

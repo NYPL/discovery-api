@@ -1,5 +1,5 @@
 {
-  "took": 11,
+  "took": 9,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,18 +12,33 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10015541",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "v. : ill. ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Vol. 2 has title: A history and genealogy of the families of Howland, Brown, Follett, Van Dyke, Lamb, Spaulding, and Davidson with related lines of Treat, Botsford, Parker, Burwell, Clark, Andrews, Symmonds, Burnaman, Ashbaugh, and Smith from Holland, England, Scotland, and France to Massachusetts, Connecticut, New York, New Jersey, Ohio, Iowa, Indiana, Nebraska, Kansas, and Texas from \"The Mayflower\" pilgrims in 1620 to the 1980s / by Dorothy Davidson Symmonds.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and indexes.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "D. Symmonds"
@@ -34,29 +49,55 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            2
+          ],
           "buildingLocationIds": [
             "ma"
           ],
           "createdYear": [
             1985
           ],
-          "parallelSeriesAddedEntry": [],
+          "dateEndString": [
+            "9999"
+          ],
+          "title": [
+            "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            2
           ],
           "shelfMark": [
             "APV (Pritchett) 87-2820"
           ],
+          "createdString": [
+            "1985"
+          ],
+          "creatorLiteral": [
+            "Symmonds, Dorothy"
+          ],
           "idLccn": [
             "85239758"
           ],
-          "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Symmonds, Dorothy",
+              "label": "Symmonds, Dorothy",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1985
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "NYPG017000068-B"
           ],
           "identifierV2": [
             {
@@ -80,9 +121,10 @@
               "value": "(WaOLN)nyp0215498"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784062994198,
+          "dateEndYear": [
+            9999
+          ],
+          "updatedAt": 1787991352044,
           "publicationStatement": [
             "Bellaire, Tex. (P.O. Box 26, Bellaire 77401) : D. Symmonds, c1985-<c1989   >"
           ],
@@ -93,8 +135,26 @@
             "urn:lccn:85239758",
             "urn:identifier:(WaOLN)nyp0215498"
           ],
-          "creators_displayPacked": [
-            "Symmonds, Dorothy||Symmonds, Dorothy"
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Symmonds, Dorothy"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1985"
           ],
           "dates": [
             {
@@ -112,90 +172,24 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Pritchard family.",
             "Rimmer family.",
             "Jacobs family."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
+          "titleDisplay": [
+            "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s / by Dorothy Symmonds."
+          ],
+          "uri": "b10015541",
           "lccClassification": [
             "CS71.P9615 1985"
           ],
           "parallelSubjectLiteral": [],
           "formatId": "a",
+          "recordTypeId": "a",
           "collectionIds": [
             "mag"
           ],
-          "physicalDescription": [
-            "v. : ill. ; 28 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Vol. 2 has title: A history and genealogy of the families of Howland, Brown, Follett, Van Dyke, Lamb, Spaulding, and Davidson with related lines of Treat, Botsford, Parker, Burwell, Clark, Andrews, Symmonds, Burnaman, Ashbaugh, and Smith from Holland, England, Scotland, and France to Massachusetts, Connecticut, New York, New Jersey, Ohio, Iowa, Indiana, Nebraska, Kansas, and Texas from \"The Mayflower\" pilgrims in 1620 to the 1980s / by Dorothy Davidson Symmonds.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references and indexes.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            2
-          ],
-          "dateEndString": [
-            "9999"
-          ],
-          "title": [
-            "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s"
-          ],
-          "numItemVolumesParsed": [
-            2
-          ],
-          "createdString": [
-            "1985"
-          ],
-          "creatorLiteral": [
-            "Symmonds, Dorothy"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "NYPG017000068-B"
-          ],
-          "dateEndYear": [
-            9999
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1985"
-          ],
-          "titleDisplay": [
-            "A history and genealogy of the Pritchett, Rimmer, Jacobs, Hamilton, Eldridge, Etheridge, Smith, Brown, and Davidson families from North Carolina, Tennessee, Illinois, Missouri, and Kansas in the early 1800s to 1900s / by Dorothy Symmonds."
-          ],
-          "uri": "b10015541",
-          "parallelContributorLiteral": [],
-          "recordTypeId": "a",
           "placeOfPublication": [
             "Bellaire, Tex. (P.O. Box 26, Bellaire 77401)"
           ],
@@ -204,6 +198,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "v. : ill. ; 28 cm."
           ],
           "dimensions": [
             "28 cm."
@@ -219,7 +216,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10015541",
                   "_nested": {
                     "field": "items",
@@ -322,7 +319,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10015541",
                   "_nested": {
                     "field": "items",

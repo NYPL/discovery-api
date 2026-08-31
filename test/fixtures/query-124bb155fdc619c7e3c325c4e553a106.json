@@ -1,5 +1,5 @@
 {
-  "took": 18,
+  "took": 6,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,18 +12,28 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10628074",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "387 p. ;"
           ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references and index.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Scolar Press"
@@ -34,29 +44,53 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             1979
           ],
-          "parallelSeriesAddedEntry": [],
+          "title": [
+            "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "JLD 80-944"
           ],
+          "createdString": [
+            "1979"
+          ],
+          "creatorLiteral": [
+            "Burnett, John, 1925-"
+          ],
           "idLccn": [
             "79322081"
           ],
-          "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Burnett, John, 1925-",
+              "label": "Burnett, John, 1925-",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1979
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "5330384",
+            "NYPG804170330-B"
           ],
           "identifierV2": [
             {
@@ -96,11 +130,13 @@
               "value": "(OCoLC)5330384"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784075927036,
+          "popularity": 9,
+          "updatedAt": 1787753426943,
           "publicationStatement": [
             "London : Scolar Press, 1979."
+          ],
+          "idIsbn": [
+            "0859674614"
           ],
           "identifier": [
             "urn:shelfmark:JLD 80-944",
@@ -113,8 +149,26 @@
             "urn:identifier:(WaOLN)nyp0633800",
             "urn:identifier:(OCoLC)5330384"
           ],
-          "creators_displayPacked": [
-            "Burnett, John, 1925-||Burnett, John, 1925-"
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Burnett, John, 1925-"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1979"
           ],
           "dates": [
             {
@@ -132,83 +186,23 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Diet -- Great Britain.",
             "Food consumption -- Great Britain."
-          ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "lccClassification": [
-            "TX360.G7 B8 1979"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "mal"
-          ],
-          "physicalDescription": [
-            "387 p. ; 21 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references and index.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1979"
-          ],
-          "creatorLiteral": [
-            "Burnett, John, 1925-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "5330384",
-            "NYPG804170330-B"
-          ],
-          "popularity": 9,
-          "idIsbn": [
-            "0859674614"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1979"
           ],
           "titleDisplay": [
             "Plenty and want : a social history of diet in England from 1815 to the present day / John Burnett. Rev. ed."
           ],
           "uri": "b10628074",
-          "parallelContributorLiteral": [],
+          "lccClassification": [
+            "TX360.G7 B8 1979"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "mal"
+          ],
           "placeOfPublication": [
             "London"
           ],
@@ -217,6 +211,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "387 p. ; 21 cm."
           ],
           "dimensions": [
             "21 cm."
@@ -235,7 +232,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10628074",
                   "_nested": {
                     "field": "items",

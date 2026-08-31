@@ -12,18 +12,21 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10022950",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "224 p. ;"
           ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "[D. Kirshenbaum]"
@@ -34,26 +37,49 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "ma"
           ],
           "createdYear": [
             1974
           ],
-          "parallelSeriesAddedEntry": [],
+          "title": [
+            "Religion--love or hate?"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "*PGZ 81-1452"
           ],
-          "parallelCreators_displayPacked": [],
+          "createdString": [
+            "1974"
+          ],
+          "creatorLiteral": [
+            "Kirshenbaum, D. (David), 1902-"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Kirshenbaum, D. (David), 1902-",
+              "label": "Kirshenbaum, D. (David), 1902-",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1974
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "NYPG25881442-B"
           ],
           "identifierV2": [
             {
@@ -73,9 +99,8 @@
               "value": "(WaOLN)nyp0023028"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784063152597,
+          "popularity": 1,
+          "updatedAt": 1787977632160,
           "publicationStatement": [
             "New York : [D. Kirshenbaum], 1974."
           ],
@@ -85,8 +110,26 @@
             "urn:oclc:NYPG25881442-B",
             "urn:identifier:(WaOLN)nyp0023028"
           ],
-          "creators_displayPacked": [
-            "Kirshenbaum, D. (David), 1902-||Kirshenbaum, D. (David), 1902-"
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Kirshenbaum, D. (David), 1902-"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1974"
           ],
           "dates": [
             {
@@ -104,71 +147,19 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Christianity and other religions -- Judaism."
-          ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "maf"
-          ],
-          "titleAlt": [
-            "Love or hate."
-          ],
-          "physicalDescription": [
-            "224 p. ; 24 cm."
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Religion--love or hate?"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1974"
-          ],
-          "creatorLiteral": [
-            "Kirshenbaum, D. (David), 1902-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "NYPG25881442-B"
-          ],
-          "popularity": 1,
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1974"
           ],
           "titleDisplay": [
             "Religion--love or hate? / by David Kirshenbaum."
           ],
           "uri": "b10022950",
-          "parallelContributorLiteral": [],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "maf"
+          ],
           "placeOfPublication": [
             "New York"
           ],
@@ -177,6 +168,12 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "titleAlt": [
+            "Love or hate."
+          ],
+          "physicalDescription": [
+            "224 p. ; 24 cm."
           ],
           "dimensions": [
             "24 cm."
@@ -192,7 +189,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022950",
                   "_nested": {
                     "field": "items",

@@ -1,5 +1,5 @@
 {
-  "took": 13,
+  "took": 11,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b13565153",
-        "_score": 2441.2761,
+        "_score": 2441.268,
         "_source": {
           "extent": [
             "430 p. : ill. ;"
@@ -43,20 +43,22 @@
           "createdYear": [
             1854
           ],
-          "parallelSeriesAddedEntry": [],
           "type": [
             "nypl:Item"
           ],
           "shelfMark": [
             "VQG (Loudon, J. W. Gardening for ladies. 1854)"
           ],
-          "parallelCreators_displayPacked": [],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Loudon, Mrs. (Jane), 1807-1858",
+              "label": "Loudon, Mrs. (Jane), 1807-1858",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1854
-          ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
           ],
           "identifierV2": [
             {
@@ -76,11 +78,7 @@
               "value": "(WaOLN)nyp3539974"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Downing, A. J. (Andrew Jackson), 1815-1852||Downing, A. J. (Andrew Jackson), 1815-1852"
-          ],
-          "updatedAt": 1784132723942,
+          "updatedAt": 1787855760324,
           "publicationStatement": [
             "New York : John Wiley, 1854, c1853."
           ],
@@ -90,8 +88,13 @@
             "urn:oclc:31237346",
             "urn:identifier:(WaOLN)nyp3539974"
           ],
-          "creators_displayPacked": [
-            "Loudon, Mrs. (Jane), 1807-1858||Loudon, Mrs. (Jane), 1807-1858"
+          "contributor_displayComponents": [
+            {
+              "role": "",
+              "name": "Downing, A. J. (Andrew Jackson), 1815-1852",
+              "label": "Downing, A. J. (Andrew Jackson), 1815-1852",
+              "title": ""
+            }
           ],
           "dates": [
             {
@@ -117,12 +120,10 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Gardening.",
             "Flower gardening."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelSubjectLiteral": [],
           "formatId": "a",
           "collectionIds": [
@@ -189,6 +190,10 @@
           "numCheckinCardItems": [
             0
           ],
+          "contributorNameTitle": [
+            "Loudon, Mrs. (Jane), 1807-1858",
+            "Downing, A. J. (Andrew Jackson), 1815-1852"
+          ],
           "materialType": [
             {
               "id": "resourcetypes:txt",
@@ -208,9 +213,6 @@
             "Gardening for ladies : and, Companion to the flower-garden / by Mrs. Loudon."
           ],
           "uri": "b13565153",
-          "parallelContributorLiteral": [
-            null
-          ],
           "electronicResources": [
             {
               "label": "Full text available via HathiTrust",
@@ -232,7 +234,7 @@
           ]
         },
         "sort": [
-          2441.2761,
+          2441.268,
           "b13565153"
         ],
         "matched_queries": [
@@ -249,7 +251,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b13565153",
                   "_nested": {
                     "field": "items",

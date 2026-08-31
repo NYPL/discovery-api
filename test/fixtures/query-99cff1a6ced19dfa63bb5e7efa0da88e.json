@@ -1,5 +1,5 @@
 {
-  "took": 27,
+  "took": 31,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10833141",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "volumes : illustrations ;"
@@ -46,7 +46,6 @@
           "createdYear": [
             1925
           ],
-          "parallelSeriesAddedEntry": [],
           "type": [
             "nypl:Item"
           ],
@@ -56,15 +55,12 @@
           "idLccn": [
             "28005329"
           ],
-          "parallelCreators_displayPacked": [],
           "idIssn": [
             "0028-792X"
           ],
           "dateStartYear": [
             1925
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
@@ -95,18 +91,7 @@
               "value": "(OCoLC)1760231"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Ross, Harold Wallace, 1892-1951||Ross, Harold Wallace, 1892-1951, editor",
-            "Shawn, William||Shawn, William, editor",
-            "Brown, Tina||Brown, Tina, editor",
-            "Remnick, David||Remnick, David, editor",
-            "White, Katharine Sergeant Angell||White, Katharine Sergeant Angell, contributor, fiction editor",
-            "White, E. B. (Elwyn Brooks), 1899-1985||White, E. B. (Elwyn Brooks), 1899-1985, contributor",
-            "Irvin, Rea, 1881-1972||Irvin, Rea, 1881-1972, art editor",
-            "Angell, Roger||Angell, Roger, contributor, fiction editor"
-          ],
-          "updatedAt": 1784080226888,
+          "updatedAt": 1787743348582,
           "publicationStatement": [
             "New York : F-R Pub. Corp., 1925-",
             "[New York] : D. Carey",
@@ -121,7 +106,56 @@
             "urn:identifier:(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305",
             "urn:identifier:(OCoLC)1760231"
           ],
-          "creators_displayPacked": [],
+          "contributor_displayComponents": [
+            {
+              "role": "editor",
+              "name": "Ross, Harold Wallace, 1892-1951",
+              "label": "Ross, Harold Wallace, 1892-1951, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Shawn, William",
+              "label": "Shawn, William, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Brown, Tina",
+              "label": "Brown, Tina, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Remnick, David",
+              "label": "Remnick, David, editor",
+              "title": ""
+            },
+            {
+              "role": "contributor, fiction editor",
+              "name": "White, Katharine Sergeant Angell",
+              "label": "White, Katharine Sergeant Angell, contributor, fiction editor",
+              "title": ""
+            },
+            {
+              "role": "contributor",
+              "name": "White, E. B. (Elwyn Brooks), 1899-1985",
+              "label": "White, E. B. (Elwyn Brooks), 1899-1985, contributor",
+              "title": ""
+            },
+            {
+              "role": "art editor",
+              "name": "Irvin, Rea, 1881-1972",
+              "label": "Irvin, Rea, 1881-1972, art editor",
+              "title": ""
+            },
+            {
+              "role": "contributor, fiction editor",
+              "name": "Angell, Roger",
+              "label": "Angell, Roger, contributor, fiction editor",
+              "title": ""
+            }
+          ],
           "dates": [
             {
               "range": {
@@ -138,12 +172,10 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "New York (N.Y.) -- Intellectual life -- Directories.",
             "Literature -- Collections -- Periodicals."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
           "lccClassification": [
             "AP2 .N6763"
           ],
@@ -1325,6 +1357,16 @@
           "numCheckinCardItems": [
             97
           ],
+          "contributorNameTitle": [
+            "Ross, Harold Wallace, 1892-1951",
+            "Shawn, William",
+            "Brown, Tina",
+            "Remnick, David",
+            "White, Katharine Sergeant Angell",
+            "White, E. B. (Elwyn Brooks), 1899-1985",
+            "Irvin, Rea, 1881-1972",
+            "Angell, Roger"
+          ],
           "materialType": [
             {
               "id": "resourcetypes:txt",
@@ -1344,16 +1386,6 @@
             "The New Yorker."
           ],
           "uri": "b10833141",
-          "parallelContributorLiteral": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
           "recordTypeId": "a",
           "placeOfPublication": [
             "New York",
@@ -1379,7 +1411,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -1494,7 +1526,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -1609,7 +1641,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -1724,7 +1756,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -1839,7 +1871,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -1954,7 +1986,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2069,7 +2101,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2184,7 +2216,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2299,7 +2331,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2414,7 +2446,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2532,7 +2564,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2650,7 +2682,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2768,7 +2800,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -2886,7 +2918,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3004,7 +3036,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3122,7 +3154,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3240,7 +3272,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3358,7 +3390,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3476,7 +3508,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3594,7 +3626,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3712,7 +3744,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3830,7 +3862,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -3948,7 +3980,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4063,7 +4095,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4181,7 +4213,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4299,7 +4331,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4414,7 +4446,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4532,7 +4564,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4650,7 +4682,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4768,7 +4800,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4886,7 +4918,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5004,7 +5036,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5122,7 +5154,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5240,7 +5272,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5358,7 +5390,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5476,7 +5508,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5594,7 +5626,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5712,7 +5744,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5830,7 +5862,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5948,7 +5980,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6066,7 +6098,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6181,7 +6213,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6296,7 +6328,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6411,7 +6443,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6526,7 +6558,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6641,7 +6673,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6756,7 +6788,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6871,7 +6903,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -6986,7 +7018,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7101,7 +7133,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7216,7 +7248,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7331,7 +7363,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7446,7 +7478,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7561,7 +7593,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7676,7 +7708,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7791,7 +7823,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -7906,7 +7938,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8021,7 +8053,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8136,7 +8168,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8251,7 +8283,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8366,7 +8398,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8481,7 +8513,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8596,7 +8628,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8711,7 +8743,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8826,7 +8858,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -8941,7 +8973,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9056,7 +9088,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9171,7 +9203,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9286,7 +9318,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9401,7 +9433,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9516,7 +9548,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9631,7 +9663,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9746,7 +9778,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9861,7 +9893,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -9976,7 +10008,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10091,7 +10123,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10206,7 +10238,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10321,7 +10353,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10436,7 +10468,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10551,7 +10583,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10666,7 +10698,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10781,7 +10813,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -10896,7 +10928,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11011,7 +11043,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11126,7 +11158,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11241,7 +11273,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11356,7 +11388,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11471,7 +11503,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11586,7 +11618,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11701,7 +11733,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11816,7 +11848,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -11931,7 +11963,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12046,7 +12078,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12161,7 +12193,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12276,7 +12308,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12391,7 +12423,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12506,7 +12538,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12621,7 +12653,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12736,7 +12768,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -12851,7 +12883,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",

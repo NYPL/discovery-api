@@ -1,5 +1,5 @@
 {
-  "took": 21,
+  "took": 70,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b11826883",
-        "_score": 1942.3933,
+        "_score": 1942.3878,
         "_source": {
           "extent": [
             "v. : ill. ;"
@@ -44,7 +44,6 @@
           "createdYear": [
             1965
           ],
-          "parallelSeriesAddedEntry": [],
           "type": [
             "nypl:Item"
           ],
@@ -54,15 +53,12 @@
           "idLccn": [
             "66053650 //r89"
           ],
-          "parallelCreators_displayPacked": [],
           "idIssn": [
             "0016-3058"
           ],
           "dateStartYear": [
             1965
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
@@ -93,11 +89,7 @@
               "value": "(WaOLN)nyp1832956"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Furniture History Society (London, England)||Furniture History Society (London, England)"
-          ],
-          "updatedAt": 1784101174384,
+          "updatedAt": 1787722803804,
           "publicationStatement": [
             "[London] : The Society"
           ],
@@ -110,7 +102,14 @@
             "urn:identifier:0280126",
             "urn:identifier:(WaOLN)nyp1832956"
           ],
-          "creators_displayPacked": [],
+          "contributor_displayComponents": [
+            {
+              "role": "",
+              "name": "Furniture History Society (London, England)",
+              "label": "Furniture History Society (London, England)",
+              "title": ""
+            }
+          ],
           "dates": [
             {
               "range": {
@@ -127,11 +126,9 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Furniture -- England -- History -- Periodicals."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
           "lccClassification": [
             "NK2528 .F8"
           ],
@@ -527,6 +524,9 @@
           "numCheckinCardItems": [
             1
           ],
+          "contributorNameTitle": [
+            "Furniture History Society (London, England)"
+          ],
           "materialType": [
             {
               "id": "resourcetypes:txt",
@@ -546,9 +546,6 @@
             "Furniture history : the journal of the Furniture History Society."
           ],
           "uri": "b11826883",
-          "parallelContributorLiteral": [
-            null
-          ],
           "recordTypeId": "a",
           "placeOfPublication": [
             "[London]"
@@ -564,7 +561,7 @@
           ]
         },
         "sort": [
-          1942.3933,
+          1942.3878,
           "b11826883"
         ],
         "matched_queries": [
@@ -581,7 +578,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b11826883",
                   "_nested": {
                     "field": "items",
@@ -664,6 +661,9 @@
                     "physicalLocation": [
                       "JQL 08-18"
                     ],
+                    "recapCustomerCode": [
+                      "NA"
+                    ],
                     "requestable": [
                       false
                     ],
@@ -696,7 +696,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b11826883",
                   "_nested": {
                     "field": "items",
@@ -814,7 +814,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b11826883",
                   "_nested": {
                     "field": "items",

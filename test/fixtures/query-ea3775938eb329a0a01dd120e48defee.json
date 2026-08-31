@@ -1,5 +1,5 @@
 {
-  "took": 2180,
+  "took": 740,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,15 +15,33 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10000103",
         "_score": 0,
         "_source": {
           "extent": [
             "11, 602 p.: port.;"
           ],
+          "note": [
+            {
+              "noteType": "Language",
+              "label": "In Arabic.",
+              "type": "bf:Note"
+            }
+          ],
+          "series_displayComponents": [
+            {
+              "role": "",
+              "name": "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir;",
+              "label": "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1",
+              "title": "1"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ"
@@ -34,29 +52,52 @@
               "label": "Arabic"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             1967
           ],
-          "parallelSeriesAddedEntry": [],
+          "title": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "*OFA 82-5137"
           ],
+          "createdString": [
+            "1967"
+          ],
+          "creatorLiteral": [
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979"
+          ],
           "idLccn": [
             "75960366"
           ],
-          "parallelCreators_displayPacked": [],
+          "numElectronicResources": [
+            0
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Khalīfah, Muḥammad al-ʻĪd, 1904-1979",
+              "label": "Khalīfah, Muḥammad al-ʻĪd, 1904-1979",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1967
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "NYPG001000051-B"
           ],
           "identifierV2": [
             {
@@ -84,9 +125,8 @@
               "value": "(WaOLN)nyp0200102"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [],
-          "updatedAt": 1784062693324,
+          "popularity": 1,
+          "updatedAt": 1787742324908,
           "publicationStatement": [
             "[al-Jazāʼir]: al-Sharikah al-Waṭanīyah lil-Nashr wa-al-Tawzīʻ, 1967."
           ],
@@ -98,8 +138,26 @@
             "urn:identifier:NNSZ00100051",
             "urn:identifier:(WaOLN)nyp0200102"
           ],
-          "creators_displayPacked": [
-            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979||Khalīfah, Muḥammad al-ʻĪd, 1904-1979"
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1967"
           ],
           "dates": [
             {
@@ -117,76 +175,20 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [],
-          "parallelSeriesAddedEntry_displayPacked": [],
+          "titleDisplay": [
+            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
+          ],
+          "uri": "b10000103",
           "lccClassification": [
             "PJ7842.H2937 A17 1967"
           ],
           "parallelSubjectLiteral": [],
           "formatId": "a",
+          "recordTypeId": "a",
           "collectionIds": [
             "mal"
           ],
-          "physicalDescription": [
-            "11, 602 p.: : port.; ; 24 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Language",
-              "label": "In Arabic.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1967"
-          ],
-          "creatorLiteral": [
-            "Khalīfah, Muḥammad al-ʻĪd, 1904-1979"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "NYPG001000051-B"
-          ],
-          "popularity": 1,
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1967"
-          ],
-          "titleDisplay": [
-            "Dīwān Muḥammad al-ʻĪd Muḥammad ʻAlī Khalīfah."
-          ],
-          "uri": "b10000103",
-          "parallelContributorLiteral": [],
-          "recordTypeId": "a",
           "placeOfPublication": [
             "[al-Jazāʼir]"
           ],
@@ -199,8 +201,8 @@
               "label": "monograph/item"
             }
           ],
-          "series_displayPacked": [
-            "Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir;||Manshūrāt Wizārat al-Tarbiyah al-Waṭanīyah bi-al-Jazāʼir; 1"
+          "physicalDescription": [
+            "11, 602 p.: : port.; ; 24 cm."
           ],
           "dimensions": [
             "24 cm."
@@ -220,7 +222,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10000103",
                   "_nested": {
                     "field": "items",

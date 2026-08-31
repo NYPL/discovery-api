@@ -1,5 +1,5 @@
 {
-  "took": 10,
+  "took": 17,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,24 +12,47 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b18932917",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "52 linear ft., 127 boxes"
           ],
+          "note": [
+            {
+              "noteType": "Source",
+              "label": "Phelps-Stokes Fund Gift 1980, 1981 SCM 80-19, SCM 81-17",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Biography",
+              "label": "The Phelps and Stokes families had long been associated with a variety of philanthropic enterprises in the 19th and 20th centuries. The Phelps-Stokes Fund was created in 1911 as a non-profit foundation under the will of Caroline Phelps Stokes. Its original objectives were to improve housing for the poor in New York City, and the \"education of Negroes, both in Africa and the United States, North American Indians, and needy and deserving white students.\" The contacts maintained by the staff and trustees of the Fund through correspondence, travel, and service on numerous boards and commissions often had a greater impact than any direct financial assistance rendered by the Fund. For the period of these records, it served as a headquarters for visiting African educators, students and government officials, and, in addition to sponsoring its own commissions and reports, became a clearinghouse for information on the intellectual and political life of colonial and post-colonial Africa",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Indexes/Finding Aids",
+              "label": "Finding aid available.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "language": [
             {
               "id": "lang:eng",
               "label": "English"
             }
+          ],
+          "numItemsTotal": [
+            128
           ],
           "buildingLocationIds": [
             "rc",
@@ -38,20 +61,53 @@
           "createdYear": [
             1893
           ],
-          "parallelSeriesAddedEntry": [],
+          "dateEndString": [
+            "1970"
+          ],
+          "title": [
+            "Phelps-Stokes Fund records"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            128
           ],
           "shelfMark": [
             "Sc MG 162"
           ],
-          "parallelCreators_displayPacked": [],
+          "createdString": [
+            "1893"
+          ],
+          "creatorLiteral": [
+            "Phelps-Stokes Fund"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Jones, Thomas Jesse, 1873-1950",
+            "Stokes, Anson Phelps, 1874-1958",
+            "Tobias, Channing H.",
+            "Patterson, Frederick D. (Frederick Douglass), 1901-1988",
+            "Dillon, Wilton S., 1923-",
+            "Brown, Aaron, 1904-1992",
+            "Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944",
+            "Ross, Emory"
+          ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Phelps-Stokes Fund",
+              "label": "Phelps-Stokes Fund",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1893
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [
-            null
+          "idOclc": [
+            "715462601"
           ],
           "identifierV2": [
             {
@@ -71,26 +127,100 @@
               "value": "(OCoLC)715462601"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Jones, Thomas Jesse, 1873-1950||Jones, Thomas Jesse, 1873-1950",
-            "Stokes, Anson Phelps, 1874-1958||Stokes, Anson Phelps, 1874-1958",
-            "Tobias, Channing H.||Tobias, Channing H.",
-            "Patterson, Frederick D. (Frederick Douglass), 1901-1988||Patterson, Frederick D. (Frederick Douglass), 1901-1988",
-            "Dillon, Wilton S., 1923-||Dillon, Wilton S., 1923-",
-            "Brown, Aaron, 1904-1992||Brown, Aaron, 1904-1992",
-            "Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944||Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944",
-            "Ross, Emory||Ross, Emory"
+          "popularity": 919,
+          "dateEndYear": [
+            1970
           ],
-          "updatedAt": 1784220791728,
+          "updatedAt": 1787992232270,
+          "summary": [
+            "The Phelps-Stokes Fund Records contain administrative records including trustee and committee minutes, correspondence, memoranda, financial records, legal documents, speeches, reports, occasional papers, and printed material, such as pamphlets, brochures, clippings, articles, press releases and programs. Records concern the early work of the Fund in researching and supporting education for Africans and African Americans and improvement in housing conditions, through study commissions, reports, and project grants, as well as its engagement in contemporary debates concerning the philosophy and policies of Booker T. Washington and W. E. B. Du Bois. To a lesser extent, the Fund provided early support for surveys of American Indian schools and administration, such as the 1928 Lewis Meriam study and the 1939 Navajo Indian study. Later endeavors included administering grants for conferences on race relations, exchange and training programs, cooperative programs with other foundations, government aid programs, and a number of cultural projects.",
+            "The bulk of the collection contains the office files of the four principal leaders of the Fund, Anson Phelps Stokes (1924-1946), Thomas Jesse Jones (1917-1946), Channing Tobias (1946-1953), and Frederick D. Patterson (1953-1969). Of particular interest is material concerning the Fund's relationships with organizations such as Agricultural Missions; Booker T. Washington Agricultural and Industrial Institute of Liberia, founded by the Fund in 1929; British and Foreign Bible Society; Capahosic (VA) Conferences, where black and white leaders gathered for off-the-record conferences; Carnegie Corporation; Committee on Negro Americans in the Defense Industry; Cooperative College Development Program to assist historically black colleges in coordinating development programs and improving management resources; General Education Board; Harmon Foundation; Highlander Folk School; International Missionary Council; Jeanes and Slater Funds; National Association for the Advancement of Colored People, including its disagreements with Fund policies; Rosenwald Fund; South African Institute of Race Relations; Southern Regional Council; YMCA National Council, including South African Work of the Foreign Committee, as well as historically black schools and colleges, especially Bethune-Cookman, Calhoun, Fisk, Hampton, Manassas, Penn School, Talladega, and Tuskegee.",
+            "Significant correspondents include diplomats, educators, reformers, and foundation officials, such as Ralph J. Bunche; W. E. B. Dubois, particularly regarding the Encyclopedia of the Negro project and opposition to the Fund in the 1930s and 1940s; NAACP director Walter White, who also disagreed with certain Fund activities; educators James E. K. Aggrey, Will Alexander, Aaron Brown, Nannie Burroughs, James H. Dillard,  Clark Foreman, Charles S. Johnson, Guy B. Johnson, Thomas Elsa Jones, Charles L. Loram, Robert R. Moton, Harold Odum, Emmett Scott, Booker T. Washington, Carter G. Woodson, especially his controversy with Thomas Jesse Jones in the 1920s, Thomas J. Woofter, and cultural figures and organizations including ethnomusicologist Laura C. Boulton and the Harmon Foundation. Other significant correspondents include foundation officials Jackson Davis, Emory Ross, Wallace Buttrick, Abraham Flexner, Isaac Newton Phelps Stokes, Oswald Garrison Villard, L. Hollingsworth Wood, George Foster Peabody, and William J. Schiefflein; and journalists Lester Walton and Claude A. Barnett;"
+          ],
           "identifier": [
             "urn:shelfmark:Sc MG 162",
             "urn:bnum:18932917",
             "urn:oclc:715462601",
             "urn:identifier:(OCoLC)715462601"
           ],
-          "creators_displayPacked": [
-            "Phelps-Stokes Fund||Phelps-Stokes Fund"
+          "contributor_displayComponents": [
+            {
+              "role": "",
+              "name": "Jones, Thomas Jesse, 1873-1950",
+              "label": "Jones, Thomas Jesse, 1873-1950",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Stokes, Anson Phelps, 1874-1958",
+              "label": "Stokes, Anson Phelps, 1874-1958",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Tobias, Channing H.",
+              "label": "Tobias, Channing H.",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Patterson, Frederick D. (Frederick Douglass), 1901-1988",
+              "label": "Patterson, Frederick D. (Frederick Douglass), 1901-1988",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Dillon, Wilton S., 1923-",
+              "label": "Dillon, Wilton S., 1923-",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Brown, Aaron, 1904-1992",
+              "label": "Brown, Aaron, 1904-1992",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944",
+              "label": "Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944",
+              "title": ""
+            },
+            {
+              "role": "",
+              "name": "Ross, Emory",
+              "label": "Ross, Emory",
+              "title": ""
+            }
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Phelps-Stokes Fund",
+            "Jones, Thomas Jesse, 1873-1950",
+            "Stokes, Anson Phelps, 1874-1958",
+            "Tobias, Channing H.",
+            "Patterson, Frederick D. (Frederick Douglass), 1901-1988",
+            "Dillon, Wilton S., 1923-",
+            "Brown, Aaron, 1904-1992",
+            "Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944",
+            "Ross, Emory"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:mix",
+              "label": "Mixed material"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1893"
           ],
           "dates": [
             {
@@ -108,7 +238,6 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Bunche, Ralph J. (Ralph Johnson), 1904-1971.",
             "Du Bois, W. E. B. (William Edward Burghardt), 1868-1963.",
@@ -175,111 +304,16 @@
             "United States -- Race relations.",
             "United States -- Foreign relations -- South Africa."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
-          "parallelSubjectLiteral": [],
-          "formatId": "p",
-          "collectionIds": [
-            "scd"
-          ],
-          "physicalDescription": [
-            "52 linear ft., 127 boxes"
-          ],
-          "note": [
-            {
-              "noteType": "Source",
-              "label": "Phelps-Stokes Fund Gift 1980, 1981 SCM 80-19, SCM 81-17",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Biography",
-              "label": "The Phelps and Stokes families had long been associated with a variety of philanthropic enterprises in the 19th and 20th centuries. The Phelps-Stokes Fund was created in 1911 as a non-profit foundation under the will of Caroline Phelps Stokes. Its original objectives were to improve housing for the poor in New York City, and the \"education of Negroes, both in Africa and the United States, North American Indians, and needy and deserving white students.\" The contacts maintained by the staff and trustees of the Fund through correspondence, travel, and service on numerous boards and commissions often had a greater impact than any direct financial assistance rendered by the Fund. For the period of these records, it served as a headquarters for visiting African educators, students and government officials, and, in addition to sponsoring its own commissions and reports, became a clearinghouse for information on the intellectual and political life of colonial and post-colonial Africa",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Indexes/Finding Aids",
-              "label": "Finding aid available.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            128
-          ],
-          "dateEndString": [
-            "1970"
-          ],
-          "title": [
-            "Phelps-Stokes Fund records"
-          ],
-          "numItemVolumesParsed": [
-            128
-          ],
-          "createdString": [
-            "1893"
-          ],
-          "creatorLiteral": [
-            "Phelps-Stokes Fund"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "contributorLiteral": [
-            "Jones, Thomas Jesse, 1873-1950",
-            "Stokes, Anson Phelps, 1874-1958",
-            "Tobias, Channing H.",
-            "Patterson, Frederick D. (Frederick Douglass), 1901-1988",
-            "Dillon, Wilton S., 1923-",
-            "Brown, Aaron, 1904-1992",
-            "Stokes, I. N. Phelps (Isaac Newton Phelps), 1867-1944",
-            "Ross, Emory"
-          ],
-          "idOclc": [
-            "715462601"
-          ],
-          "popularity": 919,
-          "dateEndYear": [
-            1970
-          ],
-          "summary": [
-            "The Phelps-Stokes Fund Records contain administrative records including trustee and committee minutes, correspondence, memoranda, financial records, legal documents, speeches, reports, occasional papers, and printed material, such as pamphlets, brochures, clippings, articles, press releases and programs. Records concern the early work of the Fund in researching and supporting education for Africans and African Americans and improvement in housing conditions, through study commissions, reports, and project grants, as well as its engagement in contemporary debates concerning the philosophy and policies of Booker T. Washington and W. E. B. Du Bois. To a lesser extent, the Fund provided early support for surveys of American Indian schools and administration, such as the 1928 Lewis Meriam study and the 1939 Navajo Indian study. Later endeavors included administering grants for conferences on race relations, exchange and training programs, cooperative programs with other foundations, government aid programs, and a number of cultural projects.",
-            "The bulk of the collection contains the office files of the four principal leaders of the Fund, Anson Phelps Stokes (1924-1946), Thomas Jesse Jones (1917-1946), Channing Tobias (1946-1953), and Frederick D. Patterson (1953-1969). Of particular interest is material concerning the Fund's relationships with organizations such as Agricultural Missions; Booker T. Washington Agricultural and Industrial Institute of Liberia, founded by the Fund in 1929; British and Foreign Bible Society; Capahosic (VA) Conferences, where black and white leaders gathered for off-the-record conferences; Carnegie Corporation; Committee on Negro Americans in the Defense Industry; Cooperative College Development Program to assist historically black colleges in coordinating development programs and improving management resources; General Education Board; Harmon Foundation; Highlander Folk School; International Missionary Council; Jeanes and Slater Funds; National Association for the Advancement of Colored People, including its disagreements with Fund policies; Rosenwald Fund; South African Institute of Race Relations; Southern Regional Council; YMCA National Council, including South African Work of the Foreign Committee, as well as historically black schools and colleges, especially Bethune-Cookman, Calhoun, Fisk, Hampton, Manassas, Penn School, Talladega, and Tuskegee.",
-            "Significant correspondents include diplomats, educators, reformers, and foundation officials, such as Ralph J. Bunche; W. E. B. Dubois, particularly regarding the Encyclopedia of the Negro project and opposition to the Fund in the 1930s and 1940s; NAACP director Walter White, who also disagreed with certain Fund activities; educators James E. K. Aggrey, Will Alexander, Aaron Brown, Nannie Burroughs, James H. Dillard,  Clark Foreman, Charles S. Johnson, Guy B. Johnson, Thomas Elsa Jones, Charles L. Loram, Robert R. Moton, Harold Odum, Emmett Scott, Booker T. Washington, Carter G. Woodson, especially his controversy with Thomas Jesse Jones in the 1920s, Thomas J. Woofter, and cultural figures and organizations including ethnomusicologist Laura C. Boulton and the Harmon Foundation. Other significant correspondents include foundation officials Jackson Davis, Emory Ross, Wallace Buttrick, Abraham Flexner, Isaac Newton Phelps Stokes, Oswald Garrison Villard, L. Hollingsworth Wood, George Foster Peabody, and William J. Schiefflein; and journalists Lester Walton and Claude A. Barnett;"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:mix",
-              "label": "Mixed material"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1893"
-          ],
           "titleDisplay": [
             "Phelps-Stokes Fund records, 1893-1970."
           ],
           "uri": "b18932917",
-          "parallelContributorLiteral": [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "p",
           "recordTypeId": "p",
+          "collectionIds": [
+            "scd"
+          ],
           "issuance": [
             {
               "id": "urn:biblevel:c",
@@ -291,6 +325,9 @@
               "label": "Finding aid",
               "url": "http://archives.nypl.org/scm/20936"
             }
+          ],
+          "physicalDescription": [
+            "52 linear ft., 127 boxes"
           ]
         },
         "inner_hits": {
@@ -303,7 +340,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -406,7 +443,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -509,7 +546,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -612,7 +649,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -715,7 +752,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -818,7 +855,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -921,7 +958,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1024,7 +1061,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1127,7 +1164,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1230,7 +1267,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1333,7 +1370,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1436,7 +1473,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1539,7 +1576,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1642,7 +1679,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1745,7 +1782,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1848,7 +1885,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -1951,7 +1988,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2054,7 +2091,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2157,7 +2194,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2260,7 +2297,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2363,7 +2400,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2466,7 +2503,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2569,7 +2606,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2672,7 +2709,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2775,7 +2812,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2878,7 +2915,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -2981,7 +3018,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3084,7 +3121,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3187,7 +3224,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3290,7 +3327,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3393,7 +3430,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3496,7 +3533,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3599,7 +3636,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3702,7 +3739,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3805,7 +3842,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -3908,7 +3945,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4011,7 +4048,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4114,7 +4151,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4217,7 +4254,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4320,7 +4357,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4423,7 +4460,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4526,7 +4563,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4629,7 +4666,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4732,7 +4769,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4835,7 +4872,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -4938,7 +4975,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5041,7 +5078,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5144,7 +5181,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5247,7 +5284,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5350,7 +5387,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5453,7 +5490,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5556,7 +5593,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5659,7 +5696,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5762,7 +5799,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5865,7 +5902,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -5968,7 +6005,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6071,7 +6108,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6174,7 +6211,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6277,7 +6314,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6380,7 +6417,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6483,7 +6520,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6586,7 +6623,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6689,7 +6726,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6792,7 +6829,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6895,7 +6932,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -6998,7 +7035,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7101,7 +7138,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7204,7 +7241,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7307,7 +7344,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7410,7 +7447,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7513,7 +7550,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7616,7 +7653,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7719,7 +7756,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7822,7 +7859,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -7925,7 +7962,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8028,7 +8065,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8131,7 +8168,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8234,7 +8271,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8337,7 +8374,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8440,7 +8477,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8543,7 +8580,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8646,7 +8683,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8749,7 +8786,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8852,7 +8889,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -8955,7 +8992,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9058,7 +9095,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9161,7 +9198,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9264,7 +9301,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9367,7 +9404,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9470,7 +9507,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9573,7 +9610,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9676,7 +9713,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9779,7 +9816,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9882,7 +9919,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -9985,7 +10022,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -10091,7 +10128,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -10194,7 +10231,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -10297,7 +10334,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -10400,7 +10437,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",
@@ -10503,7 +10540,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-07-14",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b18932917",
                   "_nested": {
                     "field": "items",

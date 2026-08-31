@@ -1,5 +1,5 @@
 {
-  "took": 28,
+  "took": 22,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.700712,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-qa-2026-07-14",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b15109087",
-        "_score": 15.700712,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "v. : ill. ;"
@@ -40,19 +40,15 @@
           "createdYear": [
             17
           ],
-          "parallelSeriesAddedEntry": [],
           "type": [
             "nypl:Item"
           ],
           "shelfMark": [
             "*DM (Esprit des Journaux, françois et etrangers)"
           ],
-          "parallelCreators_displayPacked": [],
           "dateStartYear": [
             17
           ],
-          "parallelContributors_displayPacked": [],
-          "parallelCreatorLiteral": [],
           "identifierV2": [
             {
               "type": "bf:ShelfMark",
@@ -75,11 +71,7 @@
               "value": "(WaOLN)Z150000218"
             }
           ],
-          "seriesAddedEntry": [],
-          "contributors_displayPacked": [
-            "Société de gens de lettres||Société de gens de lettres"
-          ],
-          "updatedAt": 1784163615959,
+          "updatedAt": 1787857546669,
           "publicationStatement": [
             "Paris : Valade"
           ],
@@ -90,7 +82,14 @@
             "urn:identifier:0246617",
             "urn:identifier:(WaOLN)Z150000218"
           ],
-          "creators_displayPacked": [],
+          "contributor_displayComponents": [
+            {
+              "role": "",
+              "name": "Société de gens de lettres",
+              "label": "Société de gens de lettres",
+              "title": ""
+            }
+          ],
           "dates": [
             {
               "range": {
@@ -107,11 +106,9 @@
               "label": "unmediated"
             }
           ],
-          "seriesAddedEntry_displayPacked": [],
           "subjectLiteral": [
             "Periodicals."
           ],
-          "parallelSeriesAddedEntry_displayPacked": [],
           "parallelSubjectLiteral": [],
           "formatId": "a",
           "collectionIds": [
@@ -33819,6 +33816,9 @@
           "numCheckinCardItems": [
             0
           ],
+          "contributorNameTitle": [
+            "Société de gens de lettres"
+          ],
           "materialType": [
             {
               "id": "resourcetypes:txt",
@@ -33841,9 +33841,6 @@
             "L'Esprit des journaux, françois et étrangers / par une Société de gens-de-lettres."
           ],
           "uri": "b15109087",
-          "parallelContributorLiteral": [
-            null
-          ],
           "electronicResources": [
             {
               "label": "Full text available via HathiTrust--Table (1782-1784)",
