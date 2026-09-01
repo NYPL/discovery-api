@@ -1,5 +1,5 @@
 {
-  "took": 6,
+  "took": 7,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -881,6 +881,16 @@
                   }
                 }
               ]
+            }
+          },
+          "items": {
+            "hits": {
+              "total": {
+                "value": 0,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": []
             }
           }
         }
