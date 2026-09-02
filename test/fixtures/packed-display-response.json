@@ -3,13 +3,13 @@
     "hits": [
       {
         "_source": {
-          "test_displayPacked": [
-            "someValue||someDisplay",
-            "someValueB||someDisplayB",
-            "someValueC"
+          "test_displayComponents": [
+            { "name": "Smith, John", "role": "author", "title": null, "label": "Smith, John, author" },
+            { "name": "Bayer, Jeffrey", "role": null, "title": "Cataloging test record", "label": "Bayer, Jeffrey. Cataloging test record." },
+            { "name": "Org Inc", "role": null, "title": null, "label": "Org Inc." }
           ],
-          "testOther_displayPacked": [
-            "otherValue||otherDisplay"
+          "testOther_displayComponents": [
+            { "name": "Bean, Richard, 1956-", "role": "editor", "title": null, "label": "Bean, Richard, 1956-, editor" }
           ]
         }
       }

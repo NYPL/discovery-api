@@ -1,5 +1,5 @@
 {
-  "took": 24,
+  "took": 17,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,15 +12,184 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 14.890072,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-2024-10-22",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10833141",
-        "_score": 14.890072,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "volumes : illustrations ;"
+          ],
+          "nyplSource": [
+            "sierra-nypl"
+          ],
+          "serialPublicationDates": [
+            "Began with issue for Feb. 21, 1925."
+          ],
+          "publisherLiteral": [
+            "F-R Pub. Corp.",
+            "D. Carey",
+            "Condé Nast Publications"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "buildingLocationIds": [
+            "ma",
+            "rc"
+          ],
+          "createdYear": [
+            1925
+          ],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [
+            "*DA+ (New Yorker)"
+          ],
+          "idLccn": [
+            "28005329"
+          ],
+          "idIssn": [
+            "0028-792X"
+          ],
+          "dateStartYear": [
+            1925
+          ],
+          "identifierV2": [
+            {
+              "type": "bf:ShelfMark",
+              "value": "*DA+ (New Yorker)"
+            },
+            {
+              "type": "nypl:Bnumber",
+              "value": "10833141"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "1760231"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "28005329"
+            },
+            {
+              "type": "bf:Issn",
+              "value": "0028-792X"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)1760231"
+            }
+          ],
+          "updatedAt": 1787743348582,
+          "publicationStatement": [
+            "New York : F-R Pub. Corp., 1925-",
+            "[New York] : D. Carey",
+            "[New York] : Condé Nast Publications"
+          ],
+          "identifier": [
+            "urn:shelfmark:*DA+ (New Yorker)",
+            "urn:bnum:10833141",
+            "urn:oclc:1760231",
+            "urn:lccn:28005329",
+            "urn:issn:0028-792X",
+            "urn:identifier:(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305",
+            "urn:identifier:(OCoLC)1760231"
+          ],
+          "contributor_displayComponents": [
+            {
+              "role": "editor",
+              "name": "Ross, Harold Wallace, 1892-1951",
+              "label": "Ross, Harold Wallace, 1892-1951, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Shawn, William",
+              "label": "Shawn, William, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Brown, Tina",
+              "label": "Brown, Tina, editor",
+              "title": ""
+            },
+            {
+              "role": "editor",
+              "name": "Remnick, David",
+              "label": "Remnick, David, editor",
+              "title": ""
+            },
+            {
+              "role": "contributor, fiction editor",
+              "name": "White, Katharine Sergeant Angell",
+              "label": "White, Katharine Sergeant Angell, contributor, fiction editor",
+              "title": ""
+            },
+            {
+              "role": "contributor",
+              "name": "White, E. B. (Elwyn Brooks), 1899-1985",
+              "label": "White, E. B. (Elwyn Brooks), 1899-1985, contributor",
+              "title": ""
+            },
+            {
+              "role": "art editor",
+              "name": "Irvin, Rea, 1881-1972",
+              "label": "Irvin, Rea, 1881-1972, art editor",
+              "title": ""
+            },
+            {
+              "role": "contributor, fiction editor",
+              "name": "Angell, Roger",
+              "label": "Angell, Roger, contributor, fiction editor",
+              "title": ""
+            }
+          ],
+          "dates": [
+            {
+              "range": {
+                "gte": "1925",
+                "lte": "9999"
+              },
+              "raw": "751101c19259999nyuwn p   r   0   a0eng  cas a ",
+              "tag": "c"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "New York (N.Y.) -- Intellectual life -- Directories.",
+            "Literature -- Collections -- Periodicals."
+          ],
+          "lccClassification": [
+            "AP2 .N6763"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "3",
+          "collectionIds": [
+            "mal"
+          ],
+          "titleAlt": [
+            "New Yorker",
+            "The New Yorker"
+          ],
+          "physicalDescription": [
+            "volumes : illustrations ; 28-31 cm"
           ],
           "note": [
             {
@@ -47,49 +216,23 @@
               "noteType": "Source of Description",
               "label": "Vol. 90, no. 24 (Aug. 25, 2014).",
               "type": "bf:Note"
+            },
+            {
+              "noteType": "Latest issue consulted",
+              "label": "Vol. 90, no. 24 (Aug. 25, 2014).",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Local note",
+              "label": "Library also has an additional copy on  microfilm and a  DVD version cataloged as: The complete New Yorker.",
+              "type": "bf:Note"
             }
-          ],
-          "nyplSource": [
-            "sierra-nypl"
-          ],
-          "serialPublicationDates": [
-            "Began with issue for Feb. 21, 1925."
-          ],
-          "subjectLiteral_exploded": [
-            "Literature",
-            "Literature -- Collections",
-            "Literature -- Collections -- Periodicals",
-            "Intellectual life",
-            "Electronic journals",
-            "New York (N.Y.)",
-            "New York (N.Y.) -- Intellectual life",
-            "New York (N.Y.) -- Intellectual life -- Directories",
-            "New York (State)",
-            "New York (State) -- New York"
           ],
           "numItemDatesParsed": [
-            843
-          ],
-          "publisherLiteral": [
-            "F-R Pub. Corp.",
-            "D. Carey",
-            "Condé Nast Publications"
-          ],
-          "language": [
-            {
-              "id": "lang:eng",
-              "label": "English"
-            }
+            796
           ],
           "numItemsTotal": [
-            848
-          ],
-          "buildingLocationIds": [
-            "ma",
-            "rc"
-          ],
-          "createdYear": [
-            1925
+            801
           ],
           "dateEndString": [
             "9999"
@@ -97,24 +240,13 @@
           "title": [
             "The New Yorker."
           ],
-          "type": [
-            "nypl:Item"
-          ],
           "numItemVolumesParsed": [
-            778
-          ],
-          "shelfMark": [
-            "*DA+ (New Yorker)"
+            731
           ],
           "createdString": [
             "1925"
           ],
-          "idLccn": [
-            "28005329"
-          ],
-          "idIssn": [
-            "0028-792X"
-          ],
+          "creatorLiteral": [],
           "numElectronicResources": [
             0
           ],
@@ -128,46 +260,13 @@
             "Irvin, Rea, 1881-1972",
             "Angell, Roger"
           ],
-          "dateStartYear": [
-            1925
-          ],
           "donor": [
             "Gift of the DeWitt Wallace Endowment Fund, named in honor of the founder of Reader's Digest (copy held in Per. Sect.)"
           ],
           "idOclc": [
             "1760231"
           ],
-          "identifierV2": [
-            {
-              "type": "bf:ShelfMark",
-              "value": "*DA+ (New Yorker)"
-            },
-            {
-              "type": "nypl:Bnumber",
-              "value": "10833141"
-            },
-            {
-              "type": "nypl:Oclc",
-              "value": "1760231"
-            },
-            {
-              "type": "bf:Lccn",
-              "value": "28005329"
-            },
-            {
-              "type": "bf:Issn",
-              "value": "0028-792X"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(OCoLC)1760231"
-            },
-            {
-              "type": "bf:Identifier",
-              "value": "(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305"
-            }
-          ],
-          "popularity": 1042,
+          "popularity": 957,
           "uniformTitle": [
             "New Yorker (New York, N.Y. : 1925)"
           ],
@@ -175,255 +274,6 @@
             9999
           ],
           "holdings": [
-            {
-              "checkInBoxes": [
-                {
-                  "coverage": "Vol. 97 No. 1 (Feb. 15, 2021)",
-                  "position": 1,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 2 (Mar. 1, 2021)",
-                  "position": 2,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 3 (Mar. 8, 2021)",
-                  "position": 3,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 4 (Mar. 15, 2021)",
-                  "position": 4,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 5 (Mar. 22, 2021)",
-                  "position": 5,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 6 (Mar. 29, 2021)",
-                  "position": 6,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 7 (Apr. 5, 2021)",
-                  "position": 7,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 8 (Apr. 12, 2021)",
-                  "position": 8,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 9 (Apr. 19, 2021)",
-                  "position": 9,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 10 (Apr. 26, 2021 - May. 3, 2021)",
-                  "position": 10,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 11 (May. 10, 2021)",
-                  "position": 11,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 12 (May. 17, 2021)",
-                  "position": 12,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 13 (May. 24, 2021)",
-                  "position": 13,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 14 (May. 31, 2021)",
-                  "position": 14,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 15 (Jun. 7, 2021)",
-                  "position": 15,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 16 (Jun. 14, 2021)",
-                  "position": 16,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 17 (Jun. 21, 2021)",
-                  "position": 17,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 18 (Jun. 28, 2021)",
-                  "position": 18,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 19 (Jul. 5, 2021)",
-                  "position": 19,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 20 (Jul. 12, 2021)",
-                  "position": 20,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 21 (Jul. 26, 2021)",
-                  "position": 21,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 22 (Aug. 2, 2021)",
-                  "position": 22,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 23 (Aug. 9, 2021)",
-                  "position": 23,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                },
-                {
-                  "coverage": "Vol. 97 No. 24 (Aug. 16, 2021)",
-                  "position": 24,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "To Bind"
-                }
-              ],
-              "holdingStatement": [
-                "[Bound vols.] 1(1925)-June, Sept.1951-68:9(1992), 68:11(1992)-69:4(1993), 69:6(1993)-72:25(1996), 72:27(1996)-75:25(1999), 75:27(1999)-76:45(2001), 77:1(2001)-77:27(2001), 77:29(2001)-81:15(2005), 81:18(2005)-83:13(2007), 83:17(2007)-85:22(2009), 85:24(2009)-86:11(2010), 86:13(2010)-88:12(2012), 88:14(2012)-88:20(2012), 88:39(2012)-90:38(2014), 91:5(2015), 91:9(2015), 91:14(2015)-92:36(2016), 92:38(2016)-97(2021)-"
-              ],
-              "identifier": [
-                {
-                  "type": "bf:shelfMark",
-                  "value": "*DA+ (New Yorker)"
-                }
-              ],
-              "notes": [
-                "ROOM 108"
-              ],
-              "physicalLocation": [
-                "*DA+ (New Yorker)"
-              ],
-              "format": [
-                "FEB. 15/22, 2021 - AUG. 16, 2021",
-                "PRINT"
-              ],
-              "location": [
-                {
-                  "code": "loc:makk3",
-                  "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                }
-              ],
-              "shelfMark": [
-                "*DA+ (New Yorker)"
-              ],
-              "uri": "h1059671"
-            },
             {
               "checkInBoxes": [
                 {
@@ -1171,308 +1021,47 @@
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Arrived"
+                  "status": "Expected"
                 },
                 {
-                  "coverage": "Vol. 100 No. 11 (May. 6, 2024)",
+                  "coverage": "Vol. 100 No. 11 (Apr. 29, 2024)",
                   "position": 84,
                   "type": "nypl:CheckInBox",
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Arrived"
+                  "status": "Expected"
                 },
                 {
-                  "coverage": "Vol. 100 No. 12 (May. 13, 2024)",
+                  "coverage": "Vol. 100 No. 12 (May. 6, 2024)",
                   "position": 85,
                   "type": "nypl:CheckInBox",
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Arrived"
+                  "status": "Expected"
                 },
                 {
-                  "coverage": "Vol. 100 No. 13 (May. 20, 2024)",
+                  "coverage": "Vol. 100 No. 13 (May. 13, 2024)",
                   "position": 86,
                   "type": "nypl:CheckInBox",
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Arrived"
+                  "status": "Expected"
                 },
                 {
-                  "coverage": "Vol. 100 No. 14 (May. 27, 2024)",
+                  "coverage": "Vol. 100 No. 14 (May. 20, 2024)",
                   "position": 87,
                   "type": "nypl:CheckInBox",
                   "shelfMark": [
                     "*DA+ (New Yorker)"
                   ],
-                  "status": "Arrived"
+                  "status": "Expected"
                 },
                 {
-                  "coverage": "Vol. 100 No. 15 (Jun. 3, 2024)",
+                  "coverage": "Vol. 100 No. 15 (May. 27, 2024)",
                   "position": 88,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 16 (Jun. 10, 2024)",
-                  "position": 89,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 17 (Jun. 17, 2024)",
-                  "position": 90,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 18 (Jun. 24, 2024)",
-                  "position": 91,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 19 (Jul. 1, 2024)",
-                  "position": 92,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 20 (Jul. 8, 2024)",
-                  "position": 93,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 21 (Jul. 22, 2024)",
-                  "position": 94,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 22 (Jul. 29, 2024)",
-                  "position": 95,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 23 (Aug. 5, 2024)",
-                  "position": 96,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 24 (Aug. 12, 2024)",
-                  "position": 97,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 25 (Aug. 19, 2024)",
-                  "position": 98,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 26 (Aug. 26, 2024)",
-                  "position": 99,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 27 (Sep. 2, 2024)",
-                  "position": 100,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 28 (Sep. 9, 2024)",
-                  "position": 101,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 29 (Sep. 16, 2024)",
-                  "position": 102,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 30 (Sep. 23, 2024)",
-                  "position": 103,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 31 (Sep. 30, 2024)",
-                  "position": 104,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 32 (Oct. 7, 2024)",
-                  "position": 105,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 33 (Oct. 14, 2024)",
-                  "position": 106,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 34 (Oct. 21, 2024)",
-                  "position": 107,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 35 (Oct. 28, 2024)",
-                  "position": 108,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 36 (Nov. 4, 2024)",
-                  "position": 109,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 37 (Nov. 11, 2024)",
-                  "position": 110,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 38 (Nov. 18, 2024)",
-                  "position": 111,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Arrived"
-                },
-                {
-                  "coverage": "Vol. 100 No. 39 (Nov. 25, 2024)",
-                  "position": 112,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 100 No. 40 (Dec. 2, 2024)",
-                  "position": 113,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 100 No. 41 (Dec. 9, 2024)",
-                  "position": 114,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 100 No. 42 (Dec. 16, 2024)",
-                  "position": 115,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 100 No. 43 (Dec. 23, 2024)",
-                  "position": 116,
-                  "type": "nypl:CheckInBox",
-                  "shelfMark": [
-                    "*DA+ (New Yorker)"
-                  ],
-                  "status": "Expected"
-                },
-                {
-                  "coverage": "Vol. 100 No. 44 (Dec. 30, 2024)",
-                  "position": 117,
                   "type": "nypl:CheckInBox",
                   "shelfMark": [
                     "*DA+ (New Yorker)"
@@ -1482,7 +1071,7 @@
               ],
               "holdingStatement": [
                 "[Bound vols.] 1(1925)-June, Sept.1951-68:9(1992), 68:11(1992)-69:4(1993), 69:6(1993)-72:25(1996), 72:27(1996)-75:25(1999), 75:27(1999)-76:45(2001), 77:1(2001)-77:27(2001), 77:29(2001)-81:15(2005), 81:18(2005)-83:13(2007), 83:17(2007)-85:22(2009), 85:24(2009)-86:11(2010), 86:13(2010)-88:12(2012), 88:14(2012)-88:20(2012), 88:39(2012)-90:38(2014), 91:5(2015), 91:9(2015), 91:14(2015)-92:36(2016), 92:38(2016)-97(2021)--",
-                "v. 99, no. 37 (2023-11-13); v. 99, no. 48 (2024-02-05); v. 100, no. 2 (2024-02-26); v. 100, no. 38 (2024-11-18)"
+                "v. 99, no. 37 (2023-11-13); v. 99, no. 48 (2024-02-05); v. 100, no. 2 (2024-02-26)"
               ],
               "identifier": [
                 {
@@ -1509,30 +1098,274 @@
                 "*DA+ (New Yorker)"
               ],
               "uri": "h1144777"
+            },
+            {
+              "checkInBoxes": [
+                {
+                  "coverage": "Vol. 97 No. 1 (Feb. 15, 2021)",
+                  "position": 1,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 2 (Mar. 1, 2021)",
+                  "position": 2,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 3 (Mar. 8, 2021)",
+                  "position": 3,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 4 (Mar. 15, 2021)",
+                  "position": 4,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 5 (Mar. 22, 2021)",
+                  "position": 5,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 6 (Mar. 29, 2021)",
+                  "position": 6,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 7 (Apr. 5, 2021)",
+                  "position": 7,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 8 (Apr. 12, 2021)",
+                  "position": 8,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 9 (Apr. 19, 2021)",
+                  "position": 9,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 10 (Apr. 26, 2021 - May. 3, 2021)",
+                  "position": 10,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 11 (May. 10, 2021)",
+                  "position": 11,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 12 (May. 17, 2021)",
+                  "position": 12,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 13 (May. 24, 2021)",
+                  "position": 13,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 14 (May. 31, 2021)",
+                  "position": 14,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 15 (Jun. 7, 2021)",
+                  "position": 15,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 16 (Jun. 14, 2021)",
+                  "position": 16,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 17 (Jun. 21, 2021)",
+                  "position": 17,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 18 (Jun. 28, 2021)",
+                  "position": 18,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 19 (Jul. 5, 2021)",
+                  "position": 19,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 20 (Jul. 12, 2021)",
+                  "position": 20,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 21 (Jul. 26, 2021)",
+                  "position": 21,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 22 (Aug. 2, 2021)",
+                  "position": 22,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 23 (Aug. 9, 2021)",
+                  "position": 23,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                },
+                {
+                  "coverage": "Vol. 97 No. 24 (Aug. 16, 2021)",
+                  "position": 24,
+                  "type": "nypl:CheckInBox",
+                  "shelfMark": [
+                    "*DA+ (New Yorker)"
+                  ],
+                  "status": "To Bind"
+                }
+              ],
+              "holdingStatement": [
+                "[Bound vols.] 1(1925)-June, Sept.1951-68:9(1992), 68:11(1992)-69:4(1993), 69:6(1993)-72:25(1996), 72:27(1996)-75:25(1999), 75:27(1999)-76:45(2001), 77:1(2001)-77:27(2001), 77:29(2001)-81:15(2005), 81:18(2005)-83:13(2007), 83:17(2007)-85:22(2009), 85:24(2009)-86:11(2010), 86:13(2010)-88:12(2012), 88:14(2012)-88:20(2012), 88:39(2012)-90:38(2014), 91:5(2015), 91:9(2015), 91:14(2015)-92:36(2016), 92:38(2016)-97(2021)--"
+              ],
+              "identifier": [
+                {
+                  "type": "bf:shelfMark",
+                  "value": "*DA+ (New Yorker)"
+                }
+              ],
+              "notes": [
+                "ROOM 108"
+              ],
+              "physicalLocation": [
+                "*DA+ (New Yorker)"
+              ],
+              "format": [
+                "FEB. 15/22, 2021 - AUG. 16, 2021",
+                "PRINT"
+              ],
+              "location": [
+                {
+                  "code": "loc:makk3",
+                  "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
+                }
+              ],
+              "shelfMark": [
+                "*DA+ (New Yorker)"
+              ],
+              "uri": "h1059671"
             }
-          ],
-          "updatedAt": 1731688335474,
-          "publicationStatement": [
-            "New York : F-R Pub. Corp., 1925-",
-            "[New York] : D. Carey",
-            "[New York] : Condé Nast Publications"
           ],
           "genreForm": [
             "Collections.",
             "Directories.",
             "Periodicals."
           ],
-          "identifier": [
-            "urn:shelfmark:*DA+ (New Yorker)",
-            "urn:bnum:10833141",
-            "urn:oclc:1760231",
-            "urn:lccn:28005329",
-            "urn:issn:0028-792X",
-            "urn:identifier:(OCoLC)1760231",
-            "urn:identifier:(OCoLC)228666271 (OCoLC)315923316 (OCoLC)813435753 (OCoLC)972367546 (OCoLC)973902298 (OCoLC)1032835230 (OCoLC)1038943160 (OCoLC)1041661831 (OCoLC)1054975031 (OCoLC)1058338019 (OCoLC)1065410087 (OCoLC)1078551167 (OCoLC)1081045337 (OCoLC)1082980679 (OCoLC)1114402509 (OCoLC)1134878896 (OCoLC)1134879337 (OCoLC)1144737766 (OCoLC)1167086187 (OCoLC)1294152325 (OCoLC)1302429095 (OCoLC)1319602865 (OCoLC)1322139476 (OCoLC)1332666305"
-          ],
           "numCheckinCardItems": [
-            141
+            97
+          ],
+          "contributorNameTitle": [
+            "Ross, Harold Wallace, 1892-1951",
+            "Shawn, William",
+            "Brown, Tina",
+            "Remnick, David",
+            "White, Katharine Sergeant Angell",
+            "White, E. B. (Elwyn Brooks), 1899-1985",
+            "Irvin, Rea, 1881-1972",
+            "Angell, Roger"
           ],
           "materialType": [
             {
@@ -1549,27 +1382,11 @@
           "dateString": [
             "1925"
           ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Literature -- Collections -- Periodicals.",
-            "Intellectual life.",
-            "Literature.",
-            "Electronic journals.",
-            "New York (N.Y.) -- Intellectual life -- Directories.",
-            "New York (State) -- New York."
-          ],
           "titleDisplay": [
             "The New Yorker."
           ],
           "uri": "b10833141",
-          "lccClassification": [
-            "AP2 .N6763"
-          ],
+          "recordTypeId": "a",
           "placeOfPublication": [
             "New York",
             "[New York]"
@@ -1580,10 +1397,6 @@
               "label": "serial"
             }
           ],
-          "titleAlt": [
-            "New Yorker",
-            "The New Yorker"
-          ],
           "dimensions": [
             "28-31 cm"
           ]
@@ -1592,17 +1405,17 @@
           "items": {
             "hits": {
               "total": {
-                "value": 41,
+                "value": 37,
                 "relation": "eq"
               },
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 782
+                    "offset": 58
                   },
                   "_score": null,
                   "_source": {
@@ -1624,9 +1437,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 43 (Dec. 27, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-12-27"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-12-27",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -1661,15 +1472,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-41",
+                    "uri": "i-h1144777-12",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 43"
                     ]
                   },
                   "sort": [
@@ -1677,11 +1485,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 781
+                    "offset": 60
                   },
                   "_score": null,
                   "_source": {
@@ -1703,9 +1511,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 41 (Dec. 13, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-12-13"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-12-13",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -1740,15 +1546,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-42",
+                    "uri": "i-h1144777-13",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 41"
                     ]
                   },
                   "sort": [
@@ -1756,11 +1559,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 780
+                    "offset": 61
                   },
                   "_score": null,
                   "_source": {
@@ -1782,9 +1585,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 40 (Dec. 6, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-12-06"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-12-06",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -1819,15 +1620,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-43",
+                    "uri": "i-h1144777-14",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 40"
                     ]
                   },
                   "sort": [
@@ -1835,11 +1633,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 779
+                    "offset": 62
                   },
                   "_score": null,
                   "_source": {
@@ -1861,9 +1659,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 39 (Nov. 29, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-11-29"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-11-29",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -1898,15 +1694,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-44",
+                    "uri": "i-h1144777-15",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 39"
                     ]
                   },
                   "sort": [
@@ -1914,90 +1707,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 778
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021-11-22",
-                        "lte": "2021-11-22"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "Vol. 97 No. 38 (Nov. 22, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-11-22"
-                    ],
-                    "formatLiteral": [
-                      "AUG. 23, 2021-CURRENT"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:makk3",
-                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker)",
-                        "type": "bf:ShelfMark"
-                      }
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker)",
-                    "status": [
-                      {
-                        "id": "status:i",
-                        "label": "At bindery"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:i||At bindery"
-                    ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "uri": "i-h1144777-45",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 38"
-                    ]
-                  },
-                  "sort": [
-                    "        97-2021-11-22"
-                  ]
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 777
+                    "offset": 63
                   },
                   "_score": null,
                   "_source": {
@@ -2019,9 +1733,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 37 (Nov. 15, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-11-15"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-11-15",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2056,15 +1768,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-46",
+                    "uri": "i-h1144777-17",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 37"
                     ]
                   },
                   "sort": [
@@ -2072,11 +1781,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 775
+                    "offset": 65
                   },
                   "_score": null,
                   "_source": {
@@ -2098,9 +1807,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 35 (Nov. 1, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-11-01"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-11-01",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2135,15 +1842,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-48",
+                    "uri": "i-h1144777-19",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 35"
                     ]
                   },
                   "sort": [
@@ -2151,11 +1855,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 774
+                    "offset": 66
                   },
                   "_score": null,
                   "_source": {
@@ -2177,9 +1881,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 34 (Oct. 25, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-10-25"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-10-25",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2214,15 +1916,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-49",
+                    "uri": "i-h1144777-20",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 34"
                     ]
                   },
                   "sort": [
@@ -2230,11 +1929,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 773
+                    "offset": 67
                   },
                   "_score": null,
                   "_source": {
@@ -2256,9 +1955,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 33 (Oct. 18, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-10-18"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-10-18",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2293,15 +1990,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-50",
+                    "uri": "i-h1144777-21",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 33"
                     ]
                   },
                   "sort": [
@@ -2309,11 +2003,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 772
+                    "offset": 68
                   },
                   "_score": null,
                   "_source": {
@@ -2335,9 +2029,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 32 (Oct. 11, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-10-11"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-10-11",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2372,15 +2064,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-51",
+                    "uri": "i-h1144777-22",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 32"
                     ]
                   },
                   "sort": [
@@ -2388,90 +2077,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 771
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021-10-04",
-                        "lte": "2021-10-04"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "Vol. 97 No. 31 (Oct. 4, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-10-04"
-                    ],
-                    "formatLiteral": [
-                      "AUG. 23, 2021-CURRENT"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:makk3",
-                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker)",
-                        "type": "bf:ShelfMark"
-                      }
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker)",
-                    "status": [
-                      {
-                        "id": "status:i",
-                        "label": "At bindery"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:i||At bindery"
-                    ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "uri": "i-h1144777-52",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 31"
-                    ]
-                  },
-                  "sort": [
-                    "        97-2021-10-04"
-                  ]
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 714
+                    "offset": 69
                   },
                   "_score": null,
                   "_source": {
@@ -2493,9 +2103,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 30 (Sep. 27, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-09-27"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-09-27",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2530,15 +2138,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-109",
+                    "uri": "i-h1144777-80",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 30"
                     ]
                   },
                   "sort": [
@@ -2546,11 +2151,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 770
+                    "offset": 70
                   },
                   "_score": null,
                   "_source": {
@@ -2572,9 +2177,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 29 (Sep. 20, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-09-20"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-09-20",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2609,15 +2212,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-53",
+                    "uri": "i-h1144777-24",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 29"
                     ]
                   },
                   "sort": [
@@ -2625,11 +2225,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 769
+                    "offset": 71
                   },
                   "_score": null,
                   "_source": {
@@ -2651,9 +2251,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 28 (Sep. 13, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-09-13"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-09-13",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2688,15 +2286,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-54",
+                    "uri": "i-h1144777-25",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 28"
                     ]
                   },
                   "sort": [
@@ -2704,11 +2299,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 768
+                    "offset": 72
                   },
                   "_score": null,
                   "_source": {
@@ -2730,9 +2325,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 27 (Sep. 6, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-09-06"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-09-06",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2767,15 +2360,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-55",
+                    "uri": "i-h1144777-26",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 27"
                     ]
                   },
                   "sort": [
@@ -2783,11 +2373,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 767
+                    "offset": 73
                   },
                   "_score": null,
                   "_source": {
@@ -2809,9 +2399,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 26 (Aug. 30, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-08-30"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-08-30",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2846,15 +2434,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-56",
+                    "uri": "i-h1144777-27",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 26"
                     ]
                   },
                   "sort": [
@@ -2862,11 +2447,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 713
+                    "offset": 74
                   },
                   "_score": null,
                   "_source": {
@@ -2888,9 +2473,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 25 (Aug. 23, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-08-23"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-08-23",
                     "formatLiteral": [
                       "AUG. 23, 2021-CURRENT"
                     ],
@@ -2925,15 +2508,12 @@
                     "type": [
                       "nypl:CheckinCardItem"
                     ],
-                    "uri": "i-h1144777-110",
+                    "uri": "i-h1144777-81",
                     "volumeRange": [
                       {
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 25"
                     ]
                   },
                   "sort": [
@@ -2941,11 +2521,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 841
+                    "offset": 75
                   },
                   "_score": null,
                   "_source": {
@@ -2967,9 +2547,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 24 (Aug. 16, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-08-16"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-08-16",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3010,9 +2588,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 24"
                     ]
                   },
                   "sort": [
@@ -3020,11 +2595,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 831
+                    "offset": 76
                   },
                   "_score": null,
                   "_source": {
@@ -3046,9 +2621,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 23 (Aug. 9, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-08-09"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-08-09",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3089,9 +2662,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 23"
                     ]
                   },
                   "sort": [
@@ -3099,11 +2669,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 830
+                    "offset": 77
                   },
                   "_score": null,
                   "_source": {
@@ -3125,9 +2695,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 22 (Aug. 2, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-08-02"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-08-02",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3168,9 +2736,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 22"
                     ]
                   },
                   "sort": [
@@ -3178,11 +2743,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 829
+                    "offset": 78
                   },
                   "_score": null,
                   "_source": {
@@ -3204,9 +2769,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 21 (Jul. 26, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-07-26"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-07-26",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3247,9 +2810,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 21"
                     ]
                   },
                   "sort": [
@@ -3257,11 +2817,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 826
+                    "offset": 79
                   },
                   "_score": null,
                   "_source": {
@@ -3283,9 +2843,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 20 (Jul. 12, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-07-12"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-07-12",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3326,9 +2884,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 20"
                     ]
                   },
                   "sort": [
@@ -3336,11 +2891,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 832
+                    "offset": 80
                   },
                   "_score": null,
                   "_source": {
@@ -3362,9 +2917,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 19 (Jul. 5, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-07-05"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-07-05",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3405,9 +2958,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 19"
                     ]
                   },
                   "sort": [
@@ -3415,11 +2965,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 833
+                    "offset": 81
                   },
                   "_score": null,
                   "_source": {
@@ -3441,9 +2991,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 18 (Jun. 28, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-06-28"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-06-28",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3484,9 +3032,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 18"
                     ]
                   },
                   "sort": [
@@ -3494,11 +3039,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 834
+                    "offset": 82
                   },
                   "_score": null,
                   "_source": {
@@ -3520,9 +3065,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 17 (Jun. 21, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-06-21"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-06-21",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3563,9 +3106,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 17"
                     ]
                   },
                   "sort": [
@@ -3573,11 +3113,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 835
+                    "offset": 83
                   },
                   "_score": null,
                   "_source": {
@@ -3599,9 +3139,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 16 (Jun. 14, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-06-14"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-06-14",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3642,9 +3180,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 16"
                     ]
                   },
                   "sort": [
@@ -3652,11 +3187,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 836
+                    "offset": 84
                   },
                   "_score": null,
                   "_source": {
@@ -3678,9 +3213,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 15 (Jun. 7, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-06-07"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-06-07",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3721,9 +3254,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 15"
                     ]
                   },
                   "sort": [
@@ -3731,90 +3261,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 837
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021-05-31",
-                        "lte": "2021-05-31"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "Vol. 97 No. 14 (May. 31, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-05-31"
-                    ],
-                    "formatLiteral": [
-                      "FEB. 15/22, 2021 - AUG. 16, 2021"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:makk3",
-                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker)",
-                        "type": "bf:ShelfMark"
-                      }
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker)",
-                    "status": [
-                      {
-                        "id": "status:i",
-                        "label": "At bindery"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:i||At bindery"
-                    ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "uri": "i-h1059671-10",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 14"
-                    ]
-                  },
-                  "sort": [
-                    "        97-2021-05-31"
-                  ]
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 838
+                    "offset": 85
                   },
                   "_score": null,
                   "_source": {
@@ -3836,9 +3287,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 13 (May. 24, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-05-24"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-05-24",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3879,9 +3328,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 13"
                     ]
                   },
                   "sort": [
@@ -3889,11 +3335,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 839
+                    "offset": 86
                   },
                   "_score": null,
                   "_source": {
@@ -3915,9 +3361,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 12 (May. 17, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-05-17"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-05-17",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -3958,9 +3402,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 12"
                     ]
                   },
                   "sort": [
@@ -3968,11 +3409,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 840
+                    "offset": 87
                   },
                   "_score": null,
                   "_source": {
@@ -3994,9 +3435,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 11 (May. 10, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-05-10"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-05-10",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4037,9 +3476,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 11"
                     ]
                   },
                   "sort": [
@@ -4047,11 +3483,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 847
+                    "offset": 88
                   },
                   "_score": null,
                   "_source": {
@@ -4073,9 +3509,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 10 (Apr. 26, 2021 - May. 3, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-04-26"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-04-26",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4116,9 +3550,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 10"
                     ]
                   },
                   "sort": [
@@ -4126,11 +3557,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 828
+                    "offset": 89
                   },
                   "_score": null,
                   "_source": {
@@ -4152,9 +3583,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 9 (Apr. 19, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-04-19"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-04-19",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4195,9 +3624,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 9"
                     ]
                   },
                   "sort": [
@@ -4205,11 +3631,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 824
+                    "offset": 90
                   },
                   "_score": null,
                   "_source": {
@@ -4231,9 +3657,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 8 (Apr. 12, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-04-12"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-04-12",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4274,9 +3698,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 8"
                     ]
                   },
                   "sort": [
@@ -4284,11 +3705,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 827
+                    "offset": 91
                   },
                   "_score": null,
                   "_source": {
@@ -4310,9 +3731,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 7 (Apr. 5, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-04-05"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-04-05",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4353,9 +3772,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 7"
                     ]
                   },
                   "sort": [
@@ -4363,11 +3779,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 846
+                    "offset": 92
                   },
                   "_score": null,
                   "_source": {
@@ -4389,9 +3805,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 6 (Mar. 29, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-03-29"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-03-29",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4432,9 +3846,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 6"
                     ]
                   },
                   "sort": [
@@ -4442,11 +3853,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 845
+                    "offset": 93
                   },
                   "_score": null,
                   "_source": {
@@ -4468,9 +3879,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 5 (Mar. 22, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-03-22"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-03-22",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4511,9 +3920,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 5"
                     ]
                   },
                   "sort": [
@@ -4521,11 +3927,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 844
+                    "offset": 94
                   },
                   "_score": null,
                   "_source": {
@@ -4547,9 +3953,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 4 (Mar. 15, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-03-15"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-03-15",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4590,9 +3994,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 4"
                     ]
                   },
                   "sort": [
@@ -4600,90 +4001,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 843
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:1",
-                        "label": "Use in library"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:1||Use in library"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "2021-03-08",
-                        "lte": "2021-03-08"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "Vol. 97 No. 3 (Mar. 8, 2021)"
-                    ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-03-08"
-                    ],
-                    "formatLiteral": [
-                      "FEB. 15/22, 2021 - AUG. 16, 2021"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:makk3",
-                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DA+ (New Yorker)",
-                        "type": "bf:ShelfMark"
-                      }
-                    ],
-                    "shelfMark": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "shelfMark_sort": "a*DA+ (New Yorker)",
-                    "status": [
-                      {
-                        "id": "status:i",
-                        "label": "At bindery"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:i||At bindery"
-                    ],
-                    "type": [
-                      "nypl:CheckinCardItem"
-                    ],
-                    "uri": "i-h1059671-4",
-                    "volumeRange": [
-                      {
-                        "gte": 97,
-                        "lte": 97
-                      }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 3"
-                    ]
-                  },
-                  "sort": [
-                    "        97-2021-03-08"
-                  ]
-                },
-                {
-                  "_index": "resources-2024-10-22",
-                  "_id": "b10833141",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 842
+                    "offset": 95
                   },
                   "_score": null,
                   "_source": {
@@ -4705,9 +4027,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 2 (Mar. 1, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-03-01"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-03-01",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4748,9 +4068,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 2"
                     ]
                   },
                   "sort": [
@@ -4758,11 +4075,11 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
-                    "offset": 825
+                    "offset": 96
                   },
                   "_score": null,
                   "_source": {
@@ -4784,9 +4101,7 @@
                     "enumerationChronology": [
                       "Vol. 97 No. 1 (Feb. 15, 2021)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021-02-15"
-                    ],
+                    "enumerationChronology_sort": "        97-2021-02-15",
                     "formatLiteral": [
                       "FEB. 15/22, 2021 - AUG. 16, 2021"
                     ],
@@ -4827,9 +4142,6 @@
                         "gte": 97,
                         "lte": 97
                       }
-                    ],
-                    "volumeRaw": [
-                      "Vol. 97 No. 1"
                     ]
                   },
                   "sort": [
@@ -4842,13 +4154,13 @@
           "allItems": {
             "hits": {
               "total": {
-                "value": 848,
+                "value": 801,
                 "relation": "eq"
               },
               "max_score": 0,
               "hits": [
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4858,82 +4170,45 @@
                   "_source": {
                     "accessMessage": [
                       {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
                     "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
+                      "accessMessage:1||Use in library"
                     ],
                     "dateRange": [
                       {
-                        "gte": "2021",
-                        "lte": "2021"
+                        "gte": "2024-04-15",
+                        "lte": "2024-04-15"
                       }
                     ],
                     "enumerationChronology": [
-                      "v. 97 (May 10-July 26, 2021)"
+                      "Vol. 100 No. 9 (Apr. 15, 2024)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021"
-                    ],
+                    "enumerationChronology_sort": "       100-2024-04-15",
                     "formatLiteral": [
-                      "Text"
+                      "AUG. 23, 2021-CURRENT"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:mal82",
-                        "label": "Schwarzman Building - Main Reading Room 315"
+                        "id": "loc:makk3",
+                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                    ],
-                    "idBarcode": [
-                      "33433136780354"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
-                      "urn:barcode:33433136780354"
+                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
                     ],
                     "identifierV2": [
                       {
-                        "value": "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)",
+                        "value": "*DA+ (New Yorker)",
                         "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433136780354",
-                        "type": "bf:Barcode"
                       }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "requestable": [
-                      true
                     ],
                     "shelfMark": [
-                      "*DA+ (New Yorker) v. 97 (May 10-July 26, 2021)"
+                      "*DA+ (New Yorker)"
                     ],
-                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (May 10-July 26, 2021)",
+                    "shelfMark_sort": "a*DA+ (New Yorker)",
                     "status": [
                       {
                         "id": "status:a",
@@ -4944,19 +4219,19 @@
                       "status:a||Available"
                     ],
                     "type": [
-                      "bf:Item"
+                      "nypl:CheckinCardItem"
                     ],
-                    "uri": "i40904678",
+                    "uri": "i-h1144777-6",
                     "volumeRange": [
                       {
-                        "gte": 97,
-                        "lte": 97
+                        "gte": 100,
+                        "lte": 100
                       }
                     ]
                   }
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -4966,82 +4241,45 @@
                   "_source": {
                     "accessMessage": [
                       {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
                     "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
+                      "accessMessage:1||Use in library"
                     ],
                     "dateRange": [
                       {
-                        "gte": "2021",
-                        "lte": "2021"
+                        "gte": "2024-04-08",
+                        "lte": "2024-04-08"
                       }
                     ],
                     "enumerationChronology": [
-                      "v. 97 (Feb 15-May 3, 2021)"
+                      "Vol. 100 No. 8 (Apr. 8, 2024)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021"
-                    ],
+                    "enumerationChronology_sort": "       100-2024-04-08",
                     "formatLiteral": [
-                      "Text"
+                      "AUG. 23, 2021-CURRENT"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:mal82",
-                        "label": "Schwarzman Building - Main Reading Room 315"
+                        "id": "loc:makk3",
+                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                    ],
-                    "idBarcode": [
-                      "33433136780347"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
-                      "urn:barcode:33433136780347"
+                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
                     ],
                     "identifierV2": [
                       {
-                        "value": "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)",
+                        "value": "*DA+ (New Yorker)",
                         "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433136780347",
-                        "type": "bf:Barcode"
                       }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "requestable": [
-                      true
                     ],
                     "shelfMark": [
-                      "*DA+ (New Yorker) v. 97 (Feb 15-May 3, 2021)"
+                      "*DA+ (New Yorker)"
                     ],
-                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Feb 15-May 3, 2021)",
+                    "shelfMark_sort": "a*DA+ (New Yorker)",
                     "status": [
                       {
                         "id": "status:a",
@@ -5052,19 +4290,19 @@
                       "status:a||Available"
                     ],
                     "type": [
-                      "bf:Item"
+                      "nypl:CheckinCardItem"
                     ],
-                    "uri": "i40904674",
+                    "uri": "i-h1144777-7",
                     "volumeRange": [
                       {
-                        "gte": 97,
-                        "lte": 97
+                        "gte": 100,
+                        "lte": 100
                       }
                     ]
                   }
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10833141",
                   "_nested": {
                     "field": "items",
@@ -5074,82 +4312,45 @@
                   "_source": {
                     "accessMessage": [
                       {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
+                        "id": "accessMessage:1",
+                        "label": "Use in library"
                       }
                     ],
                     "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
+                      "accessMessage:1||Use in library"
                     ],
                     "dateRange": [
                       {
-                        "gte": "2021",
-                        "lte": "2021"
+                        "gte": "2024-04-01",
+                        "lte": "2024-04-01"
                       }
                     ],
                     "enumerationChronology": [
-                      "v. 97 (Aug. 2-Oct 25, 2021)"
+                      "Vol. 100 No. 7 (Apr. 1, 2024)"
                     ],
-                    "enumerationChronology_sort": [
-                      "        97-2021"
-                    ],
+                    "enumerationChronology_sort": "       100-2024-04-01",
                     "formatLiteral": [
-                      "Text"
+                      "AUG. 23, 2021-CURRENT"
                     ],
                     "holdingLocation": [
                       {
-                        "id": "loc:mal82",
-                        "label": "Schwarzman Building - Main Reading Room 315"
+                        "id": "loc:makk3",
+                        "label": "Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
                       }
                     ],
                     "holdingLocation_packed": [
-                      "loc:mal82||Schwarzman Building - Main Reading Room 315"
-                    ],
-                    "idBarcode": [
-                      "33433136780362"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
-                      "urn:barcode:33433136780362"
+                      "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108"
                     ],
                     "identifierV2": [
                       {
-                        "value": "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)",
+                        "value": "*DA+ (New Yorker)",
                         "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433136780362",
-                        "type": "bf:Barcode"
                       }
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1101",
-                        "label": "General Research Division"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1101||General Research Division"
-                    ],
-                    "physicalLocation": [
-                      "*DA+ (New Yorker)"
-                    ],
-                    "requestable": [
-                      true
                     ],
                     "shelfMark": [
-                      "*DA+ (New Yorker) v. 97 (Aug. 2-Oct 25, 2021)"
+                      "*DA+ (New Yorker)"
                     ],
-                    "shelfMark_sort": "a*DA+ (New Yorker) v. 000097 (Aug. 2-Oct 25, 2021)",
+                    "shelfMark_sort": "a*DA+ (New Yorker)",
                     "status": [
                       {
                         "id": "status:a",
@@ -5160,13 +4361,13 @@
                       "status:a||Available"
                     ],
                     "type": [
-                      "bf:Item"
+                      "nypl:CheckinCardItem"
                     ],
-                    "uri": "i40904679",
+                    "uri": "i-h1144777-8",
                     "volumeRange": [
                       {
-                        "gte": 97,
-                        "lte": 97
+                        "gte": 100,
+                        "lte": 100
                       }
                     ]
                   }
@@ -5180,18 +4381,18 @@
   },
   "aggregations": {
     "item_location": {
-      "doc_count": 848,
+      "doc_count": 801,
       "_nested": {
         "doc_count_error_upper_bound": 0,
         "sum_other_doc_count": 0,
         "buckets": [
           {
             "key": "loc:mal82||Schwarzman Building - Main Reading Room 315",
-            "doc_count": 575
+            "doc_count": 572
           },
           {
             "key": "loc:makk3||Schwarzman Building - Dewitt Wallace Reference Desk Room 108",
-            "doc_count": 141
+            "doc_count": 97
           },
           {
             "key": "loc:rc2ma||Offsite",
@@ -5205,47 +4406,43 @@
       }
     },
     "item_format": {
-      "doc_count": 848,
+      "doc_count": 801,
       "_nested": {
         "doc_count_error_upper_bound": 0,
         "sum_other_doc_count": 0,
         "buckets": [
           {
-            "key": "Text",
-            "doc_count": 707
+            "key": "E-video",
+            "doc_count": 704
           },
           {
             "key": "AUG. 23, 2021-CURRENT",
-            "doc_count": 117
+            "doc_count": 75
           },
           {
             "key": "FEB. 15/22, 2021 - AUG. 16, 2021",
-            "doc_count": 24
+            "doc_count": 22
           }
         ]
       }
     },
     "item_status": {
-      "doc_count": 848,
+      "doc_count": 801,
       "_nested": {
         "doc_count_error_upper_bound": 0,
         "sum_other_doc_count": 0,
         "buckets": [
           {
             "key": "status:a||Available",
-            "doc_count": 784
+            "doc_count": 755
           },
           {
             "key": "status:i||At bindery",
-            "doc_count": 41
+            "doc_count": 37
           },
           {
             "key": "status:co||Loaned",
-            "doc_count": 12
-          },
-          {
-            "key": "status:na||Not available",
-            "doc_count": 7
+            "doc_count": 5
           },
           {
             "key": "status:t||In transit",
@@ -5256,7 +4453,7 @@
             "doc_count": 1
           },
           {
-            "key": "status:oh||On Holdshelf",
+            "key": "status:na||Not available",
             "doc_count": 1
           }
         ]
