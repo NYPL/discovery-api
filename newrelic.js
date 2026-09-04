@@ -18,7 +18,7 @@ exports.config = {
       enabled: true
     },
     local_decorating: {
-      enabled: true
+      enabled: false
     }
   },
   /**
