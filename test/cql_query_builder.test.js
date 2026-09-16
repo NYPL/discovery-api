@@ -6,6 +6,7 @@ const { InvalidParameterError } = require('../lib/errors')
 const ControlledVocabularies = require('../lib/models/ControlledVocabularies')
 const vocabFixture = require('./fixtures/controlledVocabularies.json')
 const {
+  boostedContributorFields,
   filterQuery,
   simpleAdjQuery,
   simpleAnyQuery,
@@ -168,7 +169,7 @@ describe('CQL Query Builder', function () {
     expect(musts.length).to.equal(2)
     const multiMatch = musts[0].bool.should[0].bool.should[0].multi_match
     expect(multiMatch.query).to.equal('Shakespeare')
-    expect(multiMatch.fields).to.have.members(SEARCH_SCOPES.contributor.fields)
+    expect(multiMatch.fields).to.have.members(boostedContributorFields)
     expect(multiMatch.type).to.equal('phrase')
     const languageClauses = musts[1].bool.should[0].bool.should[0].bool.must[0].bool.should
     // expect all relevant ids for english language to be present
@@ -201,7 +202,7 @@ describe('CQL Query Builder', function () {
     expect(outerMusts.length).to.equal(1)
     expect(outerMustNot.length).to.equal(1)
     const authorClause = outerMusts[0]
-    expect(authorClause.bool.should[0].bool.should[0].multi_match.fields).to.have.members(SEARCH_SCOPES.contributor.fields)
+    expect(authorClause.bool.should[0].bool.should[0].multi_match.fields).to.have.members(boostedContributorFields)
     const languageClauses = outerMustNot[0].bool.should[0].bool.must[0].bool.should
     // expect all relevant ids for english language to be present
     expect(languageClauses.length).to.equal(4)
@@ -275,7 +276,7 @@ describe('CQL Query Builder', function () {
     // expect a must for both queries
     expect(outerMusts.length).to.equal(2)
     const authorClause = outerMusts[0]
-    expect(authorClause.bool.should[0].bool.should[0].multi_match.fields).to.have.members(SEARCH_SCOPES.contributor.fields)
+    expect(authorClause.bool.should[0].bool.should[0].multi_match.fields).to.have.members(boostedContributorFields)
     const languageClauses = outerMusts[1].bool.should[0].bool.must[0].bool.should
     // expect all relevant ids for english language to be present
     expect(languageClauses.length).to.equal(4)
