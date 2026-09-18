@@ -14,7 +14,7 @@ const swaggerDocs = require('./swagger.v1.1.x.json')
 
 const pjson = require('./package.json')
 
-// Concurrent outbound requests always exceed Node's default listener cap (10)
+// Concurrent outbound requests always exceed node's default listener cap (10)
 require('events').EventEmitter.defaultMaxListeners = 0
 
 const app = express()
