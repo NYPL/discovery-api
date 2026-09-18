@@ -38,6 +38,6 @@ before(async () => {
   global.TEST_BASE_URL = `http://localhost:${process.env.PORT}`
 })
 
-// chai-as-promised is ESM-only, so `require` yields the module namespace, not the plugin fn
+// chai-as-promised is ESM-only
 chai.use(chaiAsPromised.default || chaiAsPromised)
 global.expect = chai.expect
