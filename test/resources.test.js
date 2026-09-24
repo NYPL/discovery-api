@@ -151,6 +151,13 @@ describe('Resources query', function () {
       verifyFilterFields(['subjectLiteral'], JSON.stringify(body))
     })
 
+    it('uses property specified in filter config when given a contributorNameTitle filter', function () {
+      const params = resourcesPrivMethods.parseSearchParams({ q: '', filters: { contributorNameTitle: 'Smith Collected works' } })
+      const body = buildElasticBody(params)
+      expect(body.query.bool.filter).to.be.a('array')
+      verifyFilterFields(['contributorNameTitle'], JSON.stringify(body))
+    })
+
     describe('nyplSource filtering', function () {
       it('does not filter by nyplSource when HIDE_NYPL_SOURCE is not set', function () {
         delete process.env.HIDE_NYPL_SOURCE
