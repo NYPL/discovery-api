@@ -35,7 +35,6 @@ resource "aws_cloudwatch_metric_alarm" "scsb_outage" {
   threshold           = 5
   treat_missing_data  = "notBreaching"
   alarm_actions       = var.alarm_sns_topic_arns
-  ok_actions          = var.alarm_sns_topic_arns
 }
 
 # Unhandled TypeErrors (shows up in stack)
@@ -65,7 +64,6 @@ resource "aws_cloudwatch_metric_alarm" "type_error" {
   threshold           = 1
   treat_missing_data  = "notBreaching"
   alarm_actions       = var.alarm_sns_topic_arns
-  ok_actions          = var.alarm_sns_topic_arns
 }
 
 # ES rejected execution (thread pool maxed out)
