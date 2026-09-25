@@ -200,7 +200,7 @@ describe('Resources query', function () {
     it('processes lccn correctly', () => {
       const params = resourcesPrivMethods.parseSearchParams({ lccn: '00068799' })
       const body = buildElasticBody(params)
-      expect(body).to.nested.include({ 'query.bool.must[0].regexp.idLccn\\.clean.value': '[^\\d]*00068799[^\\d]*' })
+      expect(body).to.nested.include({ 'query.bool.must[0].regexp.idLccn.value': '[^\\d]*00068799[^\\d]*' })
     })
 
     it('processes oclc correctly', () => {
