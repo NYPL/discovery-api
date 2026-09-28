@@ -514,6 +514,106 @@ const identifierQuery = {
   }
 }
 
+const issnQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idIssn.clean': '1234-5678' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const isbnQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idIsbn.clean': '978-3-16-148410-0' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const oclcQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idOclc.clean': 'ocm12345' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const lccnQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idLccn.clean': 'n78890351' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const bibNumberQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { uri: 'b1234' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 const binaryBooleanQuery = {
   bool: {
     must: [
@@ -1487,6 +1587,11 @@ module.exports = {
   keywordQueryForShelfMark,
   keywordQueryForGeneralTerm,
   identifierQuery,
+  issnQuery,
+  isbnQuery,
+  oclcQuery,
+  lccnQuery,
+  bibNumberQuery,
   binaryBooleanQuery,
   ternaryBooleanQuery,
   queryWithParentheses,
