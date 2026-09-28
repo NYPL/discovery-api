@@ -14,6 +14,11 @@ const {
   keywordQueryForShelfMark,
   keywordQueryForGeneralTerm,
   identifierQuery,
+  issnQuery,
+  isbnQuery,
+  oclcQuery,
+  lccnQuery,
+  bibNumberQuery,
   binaryBooleanQuery,
   ternaryBooleanQuery,
   dateBeforeQuery,
@@ -144,6 +149,41 @@ describe('CQL Query Builder', function () {
     expect(new CqlQuery('identifier = "b1234"').buildEsQuery())
       .to.deep.equal(
         identifierQuery
+      )
+  })
+
+  it('Issn query', function () {
+    expect(new CqlQuery('issn = "1234-5678"').buildEsQuery())
+      .to.deep.equal(
+        issnQuery
+      )
+  })
+
+  it('Isbn query', function () {
+    expect(new CqlQuery('isbn = "978-3-16-148410-0"').buildEsQuery())
+      .to.deep.equal(
+        isbnQuery
+      )
+  })
+
+  it('Oclc query', function () {
+    expect(new CqlQuery('oclc = "ocm12345"').buildEsQuery())
+      .to.deep.equal(
+        oclcQuery
+      )
+  })
+
+  it('Lccn query', function () {
+    expect(new CqlQuery('lccn = "n78890351"').buildEsQuery())
+      .to.deep.equal(
+        lccnQuery
+      )
+  })
+
+  it('Bib number query', function () {
+    expect(new CqlQuery('bib number = "b1234"').buildEsQuery())
+      .to.deep.equal(
+        bibNumberQuery
       )
   })
 
