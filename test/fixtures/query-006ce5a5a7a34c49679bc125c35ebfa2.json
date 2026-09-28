@@ -1,5 +1,5 @@
 {
-  "took": 31,
+  "took": 876,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -15,9 +15,9 @@
     "max_score": null,
     "hits": [
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b20970375",
-        "_score": 4036.3572,
+        "_score": 4036.3855,
         "_source": {
           "extent": [
             "119 pages : illustrations (color) ;"
@@ -236,14 +236,10 @@
           ],
           "dimensions": [
             "25 cm"
-          ],
-          "idIsbn_clean": [
-            "9780714869551",
-            "0714869554"
           ]
         },
         "sort": [
-          4036.3572,
+          4036.3855,
           "b20970375"
         ],
         "matched_queries": [
@@ -265,7 +261,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b20970375",
                   "_nested": {
                     "field": "items",
@@ -372,9 +368,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb2847934",
-        "_score": 4027.2874,
+        "_score": 4027.3152,
         "_source": {
           "extent": [
             "103 p. ;"
@@ -539,13 +535,10 @@
           ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "1840021047"
           ]
         },
         "sort": [
-          4027.2874,
+          4027.3152,
           "pb2847934"
         ],
         "matched_queries": [
@@ -565,7 +558,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb2847934",
                   "_nested": {
                     "field": "items",
@@ -657,9 +650,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb9928479343506421",
-        "_score": 3913.133,
+        "_score": 3913.1602,
         "_source": {
           "extent": [
             "103 p. ;"
@@ -845,13 +838,10 @@
           ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "1840021047"
           ]
         },
         "sort": [
-          3913.133,
+          3913.1602,
           "pb9928479343506421"
         ],
         "matched_queries": [
@@ -871,7 +861,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb9928479343506421",
                   "_nested": {
                     "field": "items",
@@ -963,9 +953,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b17133475",
-        "_score": 881.34235,
+        "_score": 881.3479,
         "_source": {
           "extent": [
             "1 v. (unpaged) : col. ill. ;"
@@ -1143,14 +1133,10 @@
           ],
           "dimensions": [
             "28 cm."
-          ],
-          "idIsbn_clean": [
-            "0395796180",
-            "0618111212"
           ]
         },
         "sort": [
-          881.34235,
+          881.3479,
           "b17133475"
         ],
         "matched_queries": [
@@ -1170,7 +1156,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b17133475",
                   "_nested": {
                     "field": "items",
@@ -1277,12 +1263,24 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b18806309",
-        "_score": 754.1354,
+        "_score": 754.141,
         "_source": {
           "extent": [
             "386 p. : map ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references (p. 383-[387])",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In Polish.",
+              "type": "bf:Note"
+            }
           ],
           "series_displayComponents": [
             {
@@ -1294,6 +1292,9 @@
           ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "Wyd. 1."
@@ -1307,17 +1308,35 @@
               "label": "Polish"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             2010
           ],
+          "title": [
+            "Toast za przodków"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [
             "ReCAP 11-4380"
+          ],
+          "createdString": [
+            "2010"
+          ],
+          "creatorLiteral": [
+            "Górecki, Wojciech, 1970-"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "creator_displayComponents": [
             {
@@ -1329,6 +1348,9 @@
           ],
           "dateStartYear": [
             2010
+          ],
+          "idOclc": [
+            "671293997"
           ],
           "identifierV2": [
             {
@@ -1356,9 +1378,17 @@
               "value": "(OCoLC)671293997"
             }
           ],
-          "updatedAt": 1787714961036,
+          "popularity": 3,
+          "updatedAt": 1788368526494,
           "publicationStatement": [
             "Wołowiec : Wydawn. Czarne, 2010."
+          ],
+          "seriesUniformTitle": [
+            "Seria Reportaż"
+          ],
+          "idIsbn": [
+            "9788375361940 (pbk)",
+            "8375361941 (pbk)"
           ],
           "identifier": [
             "urn:shelfmark:ReCAP 11-4380",
@@ -1367,86 +1397,6 @@
             "urn:isbn:8375361941 (pbk)",
             "urn:oclc:671293997",
             "urn:identifier:(OCoLC)671293997"
-          ],
-          "dates": [
-            {
-              "range": {
-                "lt": "2011",
-                "gte": "2010"
-              },
-              "raw": "101021s2010    pl b     b    000 0 pol  camIa ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Caucasus.",
-            "Caucasus -- Civilization."
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "mal"
-          ],
-          "seriesUniformTitle_displayComponents": [
-            {
-              "role": "",
-              "name": "Seria Reportaż",
-              "label": "Seria Reportaż",
-              "title": ""
-            }
-          ],
-          "physicalDescription": [
-            "386 p. : map ; 20 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references (p. 383-[387])",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In Polish.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Toast za przodków"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2010"
-          ],
-          "creatorLiteral": [
-            "Górecki, Wojciech, 1970-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "671293997"
-          ],
-          "popularity": 3,
-          "seriesUniformTitle": [
-            "Seria Reportaż"
-          ],
-          "idIsbn": [
-            "9788375361940 (pbk)",
-            "8375361941 (pbk)"
           ],
           "numCheckinCardItems": [
             0
@@ -1469,11 +1419,36 @@
           "dateString": [
             "2010"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2011",
+                "gte": "2010"
+              },
+              "raw": "101021s2010    pl b     b    000 0 pol  camIa ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Caucasus.",
+            "Caucasus -- Civilization."
+          ],
           "titleDisplay": [
             "Toast za przodków / Wojciech Górecki."
           ],
           "uri": "b18806309",
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "mal"
+          ],
           "placeOfPublication": [
             "Wołowiec"
           ],
@@ -1486,16 +1461,23 @@
               "label": "monograph/item"
             }
           ],
+          "seriesUniformTitle_displayComponents": [
+            {
+              "role": "",
+              "name": "Seria Reportaż",
+              "label": "Seria Reportaż.",
+              "title": ""
+            }
+          ],
+          "physicalDescription": [
+            "386 p. : map ; 20 cm."
+          ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "9788375361940",
-            "8375361941"
           ]
         },
         "sort": [
-          754.1354,
+          754.141,
           "b18806309"
         ],
         "matched_queries": [
@@ -1514,7 +1496,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b18806309",
                   "_nested": {
                     "field": "items",
@@ -1624,15 +1606,40 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b18054582",
-        "_score": 748.0052,
+        "_score": 748.01135,
         "_source": {
           "extent": [
             "1 videodisc (approximately 52 min.) : sound, color ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "Original comic opera.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Credits",
+              "label": "Larry Weinstein, director; Jessica Daniel, Matthew Hornburg, Larry Weinstein, producers; David Franco, director of photography.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "System Details",
+              "label": "DVD-R format.",
+              "type": "bf:Note"
+            },
+            {
+              "noteType": "Language",
+              "label": "In English.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "publisherLiteral": [
             "Bullfrog Films"
@@ -1643,18 +1650,70 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "pa"
           ],
           "createdYear": [
             2005
           ],
+          "title": [
+            "Burnt toast"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [],
+          "createdString": [
+            "2005"
+          ],
+          "creatorLiteral": [],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Weinstein, Larry",
+            "Louie, Alexina, 1949-",
+            "Redican, Dan",
+            "Daniel, Jessica",
+            "Hornburg, Matthew",
+            "Franco, David, 1963-",
+            "Gross, Paul, 1959-",
+            "Szabó, Krisztina (Mezzo-soprano)",
+            "Houtman, Martin",
+            "McGillivray, Peter",
+            "Mercer, Shannon",
+            "Stilwell, Jean, 1955-",
+            "Butterfield, Benjamin",
+            "Bayrakdarian, Isabel",
+            "Martin, Bob, 1962-",
+            "Balaban, Liane, 1980-",
+            "Colvin, Michael (Tenor)",
+            "Sadiq, Zorana",
+            "Braun, Russell, 1968-",
+            "Monoyios, Ann, 1949-",
+            "McNaughton, Doug",
+            "Hannigan, Barbara",
+            "Pauk, Alex, 1945-",
+            "Esprit Orchestra",
+            "Bullfrog Films",
+            "Rhombus Media (Firm)",
+            "Canadian Television Fund",
+            "Canadian Broadcasting Corporation",
+            "Channel Four Films (Firm)",
+            "Zweites Deutsches Fernsehen",
+            "Association relative à la télévision européenne"
+          ],
           "dateStartYear": [
             2005
+          ],
+          "idOclc": [
+            "191872445"
           ],
           "identifierV2": [
             {
@@ -1682,9 +1741,22 @@
               "value": "(OCoLC)191872445"
             }
           ],
+          "popularity": 2,
           "updatedAt": 1787741134631,
           "publicationStatement": [
             "Oley, PA : Bullfrog Films, [2005]"
+          ],
+          "summary": [
+            "\"Comprised of a series of eight comedic mini-operas, each depicting a different stage of a romantic relationship set in contemporary settings. With original music and libretti, each vignette is a self-contained story, but together they work as a cohesive single piece\"--Container."
+          ],
+          "genreForm": [
+            "Drama.",
+            "Feature films.",
+            "Musical films."
+          ],
+          "idIsbn": [
+            "1594583560",
+            "9781594583568"
           ],
           "identifier": [
             "urn:bnum:18054582",
@@ -1882,131 +1954,6 @@
               "title": ""
             }
           ],
-          "dates": [
-            {
-              "range": {
-                "lt": "2006",
-                "gte": "2005"
-              },
-              "raw": "080207s2005    pau052            vleng dcgm4a ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Love -- Drama.",
-            "Television operas.",
-            "Vignettes -- Drama."
-          ],
-          "lccClassification": [
-            "PN1997.2 .B87 2005"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "v",
-          "collectionIds": [
-            "pav"
-          ],
-          "physicalDescription": [
-            "1 videodisc (approximately 52 min.) : sound, color ; 4 3/4 in."
-          ],
-          "tableOfContents": [
-            "The 8 stages of love. Stage 1: Attraction ; Stage 2: Connection ; Stage 3: Commitment ; Stage 4: Marriage ; Stage 5: Consummation ; Stage 6: Perseverance ; Stage 7: Disintegration ; Stage 8: Starting over."
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "Original comic opera.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Credits",
-              "label": "Larry Weinstein, director; Jessica Daniel, Matthew Hornburg, Larry Weinstein, producers; David Franco, director of photography.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "System Details",
-              "label": "DVD-R format.",
-              "type": "bf:Note"
-            },
-            {
-              "noteType": "Language",
-              "label": "In English.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Burnt toast"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2005"
-          ],
-          "creatorLiteral": [],
-          "numElectronicResources": [
-            0
-          ],
-          "contributorLiteral": [
-            "Weinstein, Larry",
-            "Louie, Alexina, 1949-",
-            "Redican, Dan",
-            "Daniel, Jessica",
-            "Hornburg, Matthew",
-            "Franco, David, 1963-",
-            "Gross, Paul, 1959-",
-            "Szabó, Krisztina (Mezzo-soprano)",
-            "Houtman, Martin",
-            "McGillivray, Peter",
-            "Mercer, Shannon",
-            "Stilwell, Jean, 1955-",
-            "Butterfield, Benjamin",
-            "Bayrakdarian, Isabel",
-            "Martin, Bob, 1962-",
-            "Balaban, Liane, 1980-",
-            "Colvin, Michael (Tenor)",
-            "Sadiq, Zorana",
-            "Braun, Russell, 1968-",
-            "Monoyios, Ann, 1949-",
-            "McNaughton, Doug",
-            "Hannigan, Barbara",
-            "Pauk, Alex, 1945-",
-            "Esprit Orchestra",
-            "Bullfrog Films",
-            "Rhombus Media (Firm)",
-            "Canadian Television Fund",
-            "Canadian Broadcasting Corporation",
-            "Channel Four Films (Firm)",
-            "Zweites Deutsches Fernsehen",
-            "Association relative à la télévision européenne"
-          ],
-          "idOclc": [
-            "191872445"
-          ],
-          "popularity": 2,
-          "summary": [
-            "\"Comprised of a series of eight comedic mini-operas, each depicting a different stage of a romantic relationship set in contemporary settings. With original music and libretti, each vignette is a self-contained story, but together they work as a cohesive single piece\"--Container."
-          ],
-          "genreForm": [
-            "Drama.",
-            "Feature films.",
-            "Musical films."
-          ],
-          "idIsbn": [
-            "1594583560",
-            "9781594583568"
-          ],
           "numCheckinCardItems": [
             0
           ],
@@ -2058,11 +2005,40 @@
           "dateString": [
             "2005"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2006",
+                "gte": "2005"
+              },
+              "raw": "080207s2005    pau052            vleng dcgm4a ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Love -- Drama.",
+            "Television operas.",
+            "Vignettes -- Drama."
+          ],
           "titleDisplay": [
             "Burnt toast / Bullfrog Films presents Rhombus Media and marblemedia present a film by Larry Weinstein ; music by Alexina Louie ; words by Dan Redican ; produced with the participation of the Canadian Television Fund ; produced in association with the Canadian Broadcasting Corporation ; Channel Four Television Corporation ; ZDF in cooperation with ARTE."
           ],
           "uri": "b18054582",
+          "lccClassification": [
+            "PN1997.2 .B87 2005"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "v",
           "recordTypeId": "g",
+          "collectionIds": [
+            "pav"
+          ],
           "placeOfPublication": [
             "Oley, PA"
           ],
@@ -2072,16 +2048,18 @@
               "label": "monograph/item"
             }
           ],
+          "physicalDescription": [
+            "1 videodisc (approximately 52 min.) : sound, color ; 4 3/4 in."
+          ],
+          "tableOfContents": [
+            "The 8 stages of love. Stage 1: Attraction ; Stage 2: Connection ; Stage 3: Commitment ; Stage 4: Marriage ; Stage 5: Consummation ; Stage 6: Perseverance ; Stage 7: Disintegration ; Stage 8: Starting over."
+          ],
           "dimensions": [
             "4 3/4 in."
-          ],
-          "idIsbn_clean": [
-            "1594583560",
-            "9781594583568"
           ]
         },
         "sort": [
-          748.0052,
+          748.01135,
           "b18054582"
         ],
         "matched_queries": [
@@ -2100,7 +2078,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b18054582",
                   "_nested": {
                     "field": "items",
@@ -2188,15 +2166,25 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b22227752",
-        "_score": 747.5266,
+        "_score": 747.53326,
         "_source": {
           "extent": [
             "1 volume (unpaged) : colour illustrations ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"This is a first edition\"--Title page verso.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "First edition."
@@ -2210,17 +2198,38 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "ma"
           ],
           "createdYear": [
             2016
           ],
+          "title": [
+            "French toast"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [
             "JFF 17-1945"
+          ],
+          "createdString": [
+            "2016"
+          ],
+          "creatorLiteral": [
+            "Winters, Kari-Lynn, 1969-"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "contributorLiteral": [
+            "Thisdale, François, 1964-"
           ],
           "creator_displayComponents": [
             {
@@ -2232,6 +2241,9 @@
           ],
           "dateStartYear": [
             2016
+          ],
+          "idOclc": [
+            "943594881"
           ],
           "identifierV2": [
             {
@@ -2263,6 +2275,17 @@
           "publicationStatement": [
             "Toronto, Ontario, Canada : Pajama Press, 2016."
           ],
+          "summary": [
+            "While out on a walk with her blind grandmother, Phoebe tries to describe the skin color of members of her family by comparing them to various foods."
+          ],
+          "genreForm": [
+            "Fiction.",
+            "Juvenile works."
+          ],
+          "idIsbn": [
+            "9781772780062",
+            "1772780065"
+          ],
           "identifier": [
             "urn:shelfmark:JFF 17-1945",
             "urn:bnum:22227752",
@@ -2284,6 +2307,28 @@
               "label": "Thisdale, François, 1964-, illustrator",
               "title": ""
             }
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Winters, Kari-Lynn, 1969-",
+            "Thisdale, François, 1964-"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "2016"
           ],
           "dates": [
             {
@@ -2309,89 +2354,19 @@
             "Self-esteem -- Juvenile fiction.",
             "Picture books for children."
           ],
+          "titleDisplay": [
+            "French toast / written by Kari-Lynn Winters ; illustrated by François Thisdale."
+          ],
+          "uri": "b22227752",
           "lccClassification": [
             "PZ7.W7674 Fr 2016"
           ],
           "parallelSubjectLiteral": [],
           "formatId": "a",
+          "recordTypeId": "a",
           "collectionIds": [
             "mal"
           ],
-          "physicalDescription": [
-            "1 volume (unpaged) : colour illustrations ; 24 x 27 cm"
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "\"This is a first edition\"--Title page verso.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "French toast"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2016"
-          ],
-          "creatorLiteral": [
-            "Winters, Kari-Lynn, 1969-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "contributorLiteral": [
-            "Thisdale, François, 1964-"
-          ],
-          "idOclc": [
-            "943594881"
-          ],
-          "summary": [
-            "While out on a walk with her blind grandmother, Phoebe tries to describe the skin color of members of her family by comparing them to various foods."
-          ],
-          "genreForm": [
-            "Fiction.",
-            "Juvenile works."
-          ],
-          "idIsbn": [
-            "9781772780062",
-            "1772780065"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "contributorNameTitle": [
-            "Winters, Kari-Lynn, 1969-",
-            "Thisdale, François, 1964-"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "2016"
-          ],
-          "titleDisplay": [
-            "French toast / written by Kari-Lynn Winters ; illustrated by François Thisdale."
-          ],
-          "uri": "b22227752",
-          "recordTypeId": "a",
           "placeOfPublication": [
             "Toronto, Ontario, Canada"
           ],
@@ -2401,16 +2376,15 @@
               "label": "monograph/item"
             }
           ],
+          "physicalDescription": [
+            "1 volume (unpaged) : colour illustrations ; 24 x 27 cm"
+          ],
           "dimensions": [
             "24 x 27 cm"
-          ],
-          "idIsbn_clean": [
-            "9781772780062",
-            "1772780065"
           ]
         },
         "sort": [
-          747.5266,
+          747.53326,
           "b22227752"
         ],
         "matched_queries": [
@@ -2429,7 +2403,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b22227752",
                   "_nested": {
                     "field": "items",
@@ -2533,12 +2507,19 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb6955197",
-        "_score": 746.0663,
+        "_score": 746.07153,
         "_source": {
           "extent": [
             "386 p. ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "series_displayComponents": [
             {
@@ -2550,6 +2531,9 @@
           ],
           "nyplSource": [
             "recap-pul"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "Wyd. 1."
@@ -2563,16 +2547,34 @@
               "label": "Polish"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             2010
           ],
+          "title": [
+            "Toast za przodków"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [],
+          "createdString": [
+            "2010"
+          ],
+          "creatorLiteral": [
+            "Górecki, Wojciech, 1970-"
+          ],
+          "numElectronicResources": [
+            0
+          ],
           "creator_displayComponents": [
             {
               "role": "",
@@ -2583,6 +2585,10 @@
           ],
           "dateStartYear": [
             2010
+          ],
+          "idOclc": [
+            "ocn671293997",
+            "SCSB-1622764"
           ],
           "identifierV2": [
             {
@@ -2610,9 +2616,15 @@
               "value": "(OCoLC)ocn671293997"
             }
           ],
-          "updatedAt": 1787980359382,
+          "updatedAt": 1788370927691,
           "publicationStatement": [
             "Wołowiec : Wydawn. \"Czarne\", 2010."
+          ],
+          "seriesUniformTitle": [
+            "Reportaż"
+          ],
+          "idIsbn": [
+            "9788375361940"
           ],
           "identifier": [
             "urn:bnum:6955197",
@@ -2621,78 +2633,6 @@
             "urn:oclc:SCSB-1622764",
             "urn:identifier:(PlWaKWL)lx2010024594",
             "urn:identifier:(OCoLC)ocn671293997"
-          ],
-          "dates": [
-            {
-              "range": {
-                "lt": "2011",
-                "gte": "2010"
-              },
-              "raw": "100505s2010    pl       b    000 0 pol  ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [],
-          "lccClassification": [
-            "PG7223.I78 T627 2010"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [],
-          "seriesUniformTitle_displayComponents": [
-            {
-              "role": "",
-              "name": "Reportaż",
-              "label": "Reportaż",
-              "title": ""
-            }
-          ],
-          "physicalDescription": [
-            "386 p. ; 20 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Toast za przodków"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2010"
-          ],
-          "creatorLiteral": [
-            "Górecki, Wojciech, 1970-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "ocn671293997",
-            "SCSB-1622764"
-          ],
-          "seriesUniformTitle": [
-            "Reportaż"
-          ],
-          "idIsbn": [
-            "9788375361940"
           ],
           "numCheckinCardItems": [
             0
@@ -2715,11 +2655,34 @@
           "dateString": [
             "2010"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2011",
+                "gte": "2010"
+              },
+              "raw": "100505s2010    pl       b    000 0 pol  ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [],
           "titleDisplay": [
             "Toast za przodków / Wojciech Górecki."
           ],
           "uri": "pb6955197",
+          "lccClassification": [
+            "PG7223.I78 T627 2010"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [],
           "placeOfPublication": [
             "Wołowiec"
           ],
@@ -2732,15 +2695,23 @@
               "label": "monograph/item"
             }
           ],
+          "seriesUniformTitle_displayComponents": [
+            {
+              "role": "",
+              "name": "Reportaż",
+              "label": "Reportaż.",
+              "title": ""
+            }
+          ],
+          "physicalDescription": [
+            "386 p. ; 20 cm."
+          ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "9788375361940"
           ]
         },
         "sort": [
-          746.0663,
+          746.07153,
           "pb6955197"
         ],
         "matched_queries": [
@@ -2758,7 +2729,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb6955197",
                   "_nested": {
                     "field": "items",
@@ -2850,9 +2821,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990099650640203941",
-        "_score": 745.60596,
+        "_score": 745.6118,
         "_source": {
           "extent": [
             "247 p. ;"
@@ -3046,13 +3017,10 @@
           ],
           "dimensions": [
             "23 cm."
-          ],
-          "idIsbn_clean": [
-            "0809556030"
           ]
         },
         "sort": [
-          745.60596,
+          745.6118,
           "hb990099650640203941"
         ],
         "matched_queries": [
@@ -3070,7 +3038,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990099650640203941",
                   "_nested": {
                     "field": "items",
@@ -3162,12 +3130,19 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb9969551973506421",
-        "_score": 745.60596,
+        "_score": 745.6118,
         "_source": {
           "extent": [
             "386 pages : map ;"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Includes bibliographical references.",
+              "type": "bf:Note"
+            }
           ],
           "series_displayComponents": [
             {
@@ -3179,6 +3154,9 @@
           ],
           "nyplSource": [
             "recap-pul"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "Wyd. 1."
@@ -3192,16 +3170,34 @@
               "label": "Polish"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             2010
           ],
+          "title": [
+            "Toast za przodków"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [],
+          "createdString": [
+            "2010"
+          ],
+          "creatorLiteral": [
+            "Górecki, Wojciech, 1970-"
+          ],
+          "numElectronicResources": [
+            0
+          ],
           "creator_displayComponents": [
             {
               "role": "",
@@ -3212,6 +3208,11 @@
           ],
           "dateStartYear": [
             2010
+          ],
+          "idOclc": [
+            "ocn671293997",
+            "671293997",
+            "SCSB-1622764"
           ],
           "identifierV2": [
             {
@@ -3259,9 +3260,16 @@
               "value": "(OCoLC)671293997"
             }
           ],
-          "updatedAt": 1787879714379,
+          "updatedAt": 1788401228215,
           "publicationStatement": [
             "Wołowiec : Wydawn. Czarne, 2010."
+          ],
+          "seriesUniformTitle": [
+            "Seria Reportaż"
+          ],
+          "idIsbn": [
+            "9788375361940",
+            "8375361941"
           ],
           "identifier": [
             "urn:bnum:9969551973506421",
@@ -3275,83 +3283,6 @@
             "urn:identifier:(OCoLC)ocn671293997",
             "urn:identifier:(NjP)Voyager6955197",
             "urn:identifier:(OCoLC)671293997"
-          ],
-          "dates": [
-            {
-              "range": {
-                "lt": "2011",
-                "gte": "2010"
-              },
-              "raw": "101021s2010    pl b     b    000 0 pol  ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Caucasus.",
-            "Caucasus -- Civilization."
-          ],
-          "lccClassification": [
-            "PG7223.I78 T627 2010"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [],
-          "seriesUniformTitle_displayComponents": [
-            {
-              "role": "",
-              "name": "Seria Reportaż",
-              "label": "Seria Reportaż",
-              "title": ""
-            }
-          ],
-          "physicalDescription": [
-            "386 pages : map ; 20 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Bibliography",
-              "label": "Includes bibliographical references.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Toast za przodków"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2010"
-          ],
-          "creatorLiteral": [
-            "Górecki, Wojciech, 1970-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "ocn671293997",
-            "671293997",
-            "SCSB-1622764"
-          ],
-          "seriesUniformTitle": [
-            "Seria Reportaż"
-          ],
-          "idIsbn": [
-            "9788375361940",
-            "8375361941"
           ],
           "numCheckinCardItems": [
             0
@@ -3374,11 +3305,37 @@
           "dateString": [
             "2010"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2011",
+                "gte": "2010"
+              },
+              "raw": "101021s2010    pl b     b    000 0 pol  ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Caucasus.",
+            "Caucasus -- Civilization."
+          ],
           "titleDisplay": [
             "Toast za przodków / Wojciech Górecki."
           ],
           "uri": "pb9969551973506421",
+          "lccClassification": [
+            "PG7223.I78 T627 2010"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [],
           "placeOfPublication": [
             "Wołowiec"
           ],
@@ -3391,16 +3348,23 @@
               "label": "monograph/item"
             }
           ],
+          "seriesUniformTitle_displayComponents": [
+            {
+              "role": "",
+              "name": "Seria Reportaż",
+              "label": "Seria Reportaż. http://id.loc.gov/authorities/names/no2009076301",
+              "title": ""
+            }
+          ],
+          "physicalDescription": [
+            "386 pages : map ; 20 cm."
+          ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "9788375361940",
-            "8375361941"
           ]
         },
         "sort": [
-          745.60596,
+          745.6118,
           "pb9969551973506421"
         ],
         "matched_queries": [
@@ -3418,7 +3382,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb9969551973506421",
                   "_nested": {
                     "field": "items",
@@ -3510,9 +3474,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b15868157",
-        "_score": 716.52563,
+        "_score": 716.53143,
         "_source": {
           "extent": [
             "64 p. : ill. ;"
@@ -3701,14 +3665,10 @@
           ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "9783654845",
-            "9789783654846"
           ]
         },
         "sort": [
-          716.52563,
+          716.53143,
           "b15868157"
         ],
         "matched_queries": [
@@ -3728,7 +3688,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b15868157",
                   "_nested": {
                     "field": "items",
@@ -3832,9 +3792,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b12004445",
-        "_score": 710.9463,
+        "_score": 710.95154,
         "_source": {
           "extent": [
             "124 p. ;"
@@ -4007,13 +3967,10 @@
           ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "3900696349"
           ]
         },
         "sort": [
-          710.9463,
+          710.95154,
           "b12004445"
         ],
         "matched_queries": [
@@ -4032,7 +3989,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b12004445",
                   "_nested": {
                     "field": "items",
@@ -4136,15 +4093,25 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b11294632",
-        "_score": 704.67596,
+        "_score": 704.6822,
         "_source": {
           "extent": [
             "xxi, 273 p. ;"
           ],
+          "note": [
+            {
+              "noteType": "Note",
+              "label": "\"Originally published ... by Charles Scribner's Sons ... in 1940\"--T.p. verso.",
+              "type": "bf:Note"
+            }
+          ],
           "nyplSource": [
             "sierra-nypl"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "1st Vintage Books ed."
@@ -4158,20 +4125,41 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "ma"
           ],
           "createdYear": [
             1990
           ],
+          "dateEndString": [
+            "1940"
+          ],
+          "title": [
+            "Angels on toast"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "JFD 90-6303"
           ],
+          "createdString": [
+            "1990"
+          ],
+          "creatorLiteral": [
+            "Powell, Dawn"
+          ],
           "idLccn": [
             "89040281"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "creator_displayComponents": [
             {
@@ -4183,6 +4171,10 @@
           ],
           "dateStartYear": [
             1990
+          ],
+          "idOclc": [
+            "70304237",
+            "NYPG90-B53168"
           ],
           "identifierV2": [
             {
@@ -4218,9 +4210,16 @@
               "value": "(OCoLC)70304237"
             }
           ],
+          "popularity": 2,
+          "dateEndYear": [
+            1940
+          ],
           "updatedAt": 1787855878039,
           "publicationStatement": [
             "New York : Vintage Books, 1990, c1940."
+          ],
+          "idIsbn": [
+            "0679726861"
           ],
           "identifier": [
             "urn:shelfmark:JFD 90-6303",
@@ -4231,6 +4230,27 @@
             "urn:lccn:89040281",
             "urn:identifier:(WaOLN)nyp1302350",
             "urn:identifier:(OCoLC)70304237"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "contributorNameTitle": [
+            "Powell, Dawn"
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1990"
           ],
           "dates": [
             {
@@ -4257,85 +4277,19 @@
             }
           ],
           "subjectLiteral": [],
+          "titleDisplay": [
+            "Angels on toast / Dawn Powell ; with an introduction by Gore Vidal."
+          ],
+          "uri": "b11294632",
           "lccClassification": [
             "PS3531.O936 A83 1989"
           ],
           "parallelSubjectLiteral": [],
           "formatId": "a",
+          "recordTypeId": "a",
           "collectionIds": [
             "mal"
           ],
-          "physicalDescription": [
-            "xxi, 273 p. ; 21 cm."
-          ],
-          "note": [
-            {
-              "noteType": "Note",
-              "label": "\"Originally published ... by Charles Scribner's Sons ... in 1940\"--T.p. verso.",
-              "type": "bf:Note"
-            }
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "dateEndString": [
-            "1940"
-          ],
-          "title": [
-            "Angels on toast"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "1990"
-          ],
-          "creatorLiteral": [
-            "Powell, Dawn"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "70304237",
-            "NYPG90-B53168"
-          ],
-          "popularity": 2,
-          "dateEndYear": [
-            1940
-          ],
-          "idIsbn": [
-            "0679726861"
-          ],
-          "numCheckinCardItems": [
-            0
-          ],
-          "contributorNameTitle": [
-            "Powell, Dawn"
-          ],
-          "materialType": [
-            {
-              "id": "resourcetypes:txt",
-              "label": "Text"
-            }
-          ],
-          "carrierType": [
-            {
-              "id": "carriertypes:nc",
-              "label": "volume"
-            }
-          ],
-          "dateString": [
-            "1990"
-          ],
-          "titleDisplay": [
-            "Angels on toast / Dawn Powell ; with an introduction by Gore Vidal."
-          ],
-          "uri": "b11294632",
-          "recordTypeId": "a",
           "placeOfPublication": [
             "New York"
           ],
@@ -4345,15 +4299,15 @@
               "label": "monograph/item"
             }
           ],
+          "physicalDescription": [
+            "xxi, 273 p. ; 21 cm."
+          ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "0679726861"
           ]
         },
         "sort": [
-          704.67596,
+          704.6822,
           "b11294632"
         ],
         "matched_queries": [
@@ -4372,7 +4326,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b11294632",
                   "_nested": {
                     "field": "items",
@@ -4470,9 +4424,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "cb1808514",
-        "_score": 696.0663,
+        "_score": 696.07153,
         "_source": {
           "extent": [
             "1 score (3 unnumbered pages, 12 pages) ;"
@@ -4548,7 +4502,7 @@
               "value": "1808514"
             }
           ],
-          "updatedAt": 1787721871228,
+          "updatedAt": 1788368548359,
           "publicationStatement": [
             "[Place of publication not identified] : Jalni Publications ; New York, N.Y. : Boosey & Hawkes, sole selling agent, 1984, ©1980."
           ],
@@ -4598,7 +4552,7 @@
             {
               "role": "",
               "name": "Hawkes pocket scores",
-              "label": "Hawkes pocket scores",
+              "label": "Hawkes pocket scores. http://id.loc.gov/authorities/names/n42012426",
               "title": ""
             }
           ],
@@ -4712,7 +4666,7 @@
           ]
         },
         "sort": [
-          696.0663,
+          696.07153,
           "cb1808514"
         ],
         "matched_queries": [
@@ -4729,7 +4683,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "cb1808514",
                   "_nested": {
                     "field": "items",
@@ -4821,9 +4775,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "cb15861113",
-        "_score": 695.60596,
+        "_score": 695.6118,
         "_source": {
           "extent": [
             "288 pages ;"
@@ -5017,14 +4971,10 @@
           ],
           "dimensions": [
             "21 cm"
-          ],
-          "idIsbn_clean": [
-            "9781912681877",
-            "1912681870"
           ]
         },
         "sort": [
-          695.60596,
+          695.6118,
           "cb15861113"
         ],
         "matched_queries": [
@@ -5041,7 +4991,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "cb15861113",
                   "_nested": {
                     "field": "items",
@@ -5133,9 +5083,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b16151201",
-        "_score": 666.9671,
+        "_score": 666.9723,
         "_source": {
           "extent": [
             "1 sound disc : analog, 33 1/3 rpm ;"
@@ -5245,7 +5195,7 @@
               "value": "(WaOLN)A070000038"
             }
           ],
-          "updatedAt": 1787716036217,
+          "updatedAt": 1788405816292,
           "publicationStatement": [
             "New York, N.Y. : Seeco, [19--?]"
           ],
@@ -5351,7 +5301,7 @@
           ]
         },
         "sort": [
-          666.9671,
+          666.9723,
           "b16151201"
         ],
         "matched_queries": [
@@ -5370,7 +5320,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b16151201",
                   "_nested": {
                     "field": "items",
@@ -5468,9 +5418,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b16579957",
-        "_score": 666.9671,
+        "_score": 666.9723,
         "_source": {
           "extent": [
             "iv, 238 p. ;"
@@ -5640,7 +5590,7 @@
           ]
         },
         "sort": [
-          666.9671,
+          666.9723,
           "b16579957"
         ],
         "matched_queries": [
@@ -5659,7 +5609,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b16579957",
                   "_nested": {
                     "field": "items",
@@ -5763,9 +5713,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b21766784",
-        "_score": 666.52563,
+        "_score": 666.53143,
         "_source": {
           "extent": [
             "75 pages ;"
@@ -5970,14 +5920,10 @@
           ],
           "dimensions": [
             "22 cm"
-          ],
-          "idIsbn_clean": [
-            "9781988254616",
-            "1988254612"
           ]
         },
         "sort": [
-          666.52563,
+          666.53143,
           "b21766784"
         ],
         "matched_queries": [
@@ -5996,7 +5942,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b21766784",
                   "_nested": {
                     "field": "items",
@@ -6100,9 +6046,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b12227432",
-        "_score": 665.9671,
+        "_score": 665.9723,
         "_source": {
           "note": [
             {
@@ -6258,7 +6204,7 @@
           ]
         },
         "sort": [
-          665.9671,
+          665.9723,
           "b12227432"
         ],
         "matched_queries": [
@@ -6280,9 +6226,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b22244189",
-        "_score": 665.9671,
+        "_score": 665.9723,
         "_source": {
           "extent": [
             "1 online resource (1 sound file)"
@@ -6670,7 +6616,7 @@
           ]
         },
         "sort": [
-          665.9671,
+          665.9723,
           "b22244189"
         ],
         "matched_queries": [
@@ -6692,9 +6638,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b22839633",
-        "_score": 665.9671,
+        "_score": 665.9723,
         "_source": {
           "extent": [
             "1 online resource (1 sound file)"
@@ -7082,7 +7028,7 @@
           ]
         },
         "sort": [
-          665.9671,
+          665.9723,
           "b22839633"
         ],
         "matched_queries": [
@@ -7104,9 +7050,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b21897112",
-        "_score": 665.52563,
+        "_score": 665.53143,
         "_source": {
           "extent": [
             "1 online resource (1 sound file)"
@@ -7441,7 +7387,7 @@
           ]
         },
         "sort": [
-          665.52563,
+          665.53143,
           "b21897112"
         ],
         "matched_queries": [
@@ -7463,9 +7409,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb5714692",
-        "_score": 657.898,
+        "_score": 657.9027,
         "_source": {
           "extent": [
             "272 p. ;"
@@ -7659,14 +7605,10 @@
           ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "9781770100671",
-            "1770100679"
           ]
         },
         "sort": [
-          657.898,
+          657.9027,
           "pb5714692"
         ],
         "matched_queries": [
@@ -7683,7 +7625,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb5714692",
                   "_nested": {
                     "field": "items",
@@ -7775,9 +7717,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb9957146923506421",
-        "_score": 657.4556,
+        "_score": 657.46106,
         "_source": {
           "extent": [
             "272 p. ;"
@@ -7973,14 +7915,10 @@
           ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "9781770100671",
-            "1770100679"
           ]
         },
         "sort": [
-          657.4556,
+          657.46106,
           "pb9957146923506421"
         ],
         "matched_queries": [
@@ -7997,7 +7935,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb9957146923506421",
                   "_nested": {
                     "field": "items",
@@ -8089,9 +8027,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b17794539",
-        "_score": 650.538,
+        "_score": 650.5432,
         "_source": {
           "extent": [
             "118 p. ;"
@@ -8263,13 +8201,10 @@
           ],
           "dimensions": [
             "22 cm."
-          ],
-          "idIsbn_clean": [
-            "0823414302"
           ]
         },
         "sort": [
-          650.538,
+          650.5432,
           "b17794539"
         ],
         "matched_queries": [
@@ -8288,7 +8223,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b17794539",
                   "_nested": {
                     "field": "items",
@@ -8395,9 +8330,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990094818300203941",
-        "_score": 642.8779,
+        "_score": 642.88184,
         "_source": {
           "extent": [
             "64 p. : ill. ;"
@@ -8578,13 +8513,10 @@
           ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "9783654845"
           ]
         },
         "sort": [
-          642.8779,
+          642.88184,
           "hb990094818300203941"
         ],
         "matched_queries": [
@@ -8602,7 +8534,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990094818300203941",
                   "_nested": {
                     "field": "items",
@@ -8694,9 +8626,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b18437590",
-        "_score": 632.7671,
+        "_score": 632.7718,
         "_source": {
           "extent": [
             "xii, 156 p. ;"
@@ -8712,6 +8644,9 @@
           "nyplSource": [
             "sierra-nypl"
           ],
+          "numItemDatesParsed": [
+            0
+          ],
           "publisherLiteral": [
             "Keynotes Publishers"
           ],
@@ -8721,20 +8656,38 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "sc"
           ],
           "createdYear": [
             2008
           ],
+          "title": [
+            "A toast of Ijesa people"
+          ],
           "type": [
             "nypl:Item"
+          ],
+          "numItemVolumesParsed": [
+            0
           ],
           "shelfMark": [
             "Sc D 10-1128"
           ],
+          "createdString": [
+            "2008"
+          ],
+          "creatorLiteral": [
+            "Fatubarin, Ayo"
+          ],
           "idLccn": [
             "2009382032"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "creator_displayComponents": [
             {
@@ -8746,6 +8699,9 @@
           ],
           "dateStartYear": [
             2008
+          ],
+          "idOclc": [
+            "318127683"
           ],
           "identifierV2": [
             {
@@ -8777,9 +8733,17 @@
               "value": "(OCoLC)318127683"
             }
           ],
-          "updatedAt": 1787673065457,
+          "popularity": 1,
+          "updatedAt": 1788368870619,
           "publicationStatement": [
             "Ilesa : Keynotes Publishers, c2008."
+          ],
+          "seriesUniformTitle": [
+            "Patriotic reflections on Ijesaland ;"
+          ],
+          "idIsbn": [
+            "978375842X",
+            "9789783758421"
           ],
           "identifier": [
             "urn:shelfmark:Sc D 10-1128",
@@ -8789,77 +8753,6 @@
             "urn:oclc:318127683",
             "urn:lccn:2009382032",
             "urn:identifier:(OCoLC)318127683"
-          ],
-          "dates": [
-            {
-              "range": {
-                "lt": "2009",
-                "gte": "2008"
-              },
-              "raw": "090317s2008    |||           000 0 eng dcamIa ",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Ijesa (African people) -- Biography.",
-            "Ilesa (Nigeria) -- Description and travel."
-          ],
-          "lccClassification": [
-            "DT515.45.I348 F384 2008"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [
-            "scf"
-          ],
-          "seriesUniformTitle_displayComponents": [
-            {
-              "role": "",
-              "name": "Patriotic reflections on Ijesaland ;",
-              "label": "Patriotic reflections on Ijesaland ; no. 2",
-              "title": ""
-            }
-          ],
-          "physicalDescription": [
-            "xii, 156 p. ; 21 cm."
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "A toast of Ijesa people"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2008"
-          ],
-          "creatorLiteral": [
-            "Fatubarin, Ayo"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "318127683"
-          ],
-          "popularity": 1,
-          "seriesUniformTitle": [
-            "Patriotic reflections on Ijesaland ;"
-          ],
-          "idIsbn": [
-            "978375842X",
-            "9789783758421"
           ],
           "numCheckinCardItems": [
             0
@@ -8882,11 +8775,39 @@
           "dateString": [
             "2008"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2009",
+                "gte": "2008"
+              },
+              "raw": "090317s2008    |||           000 0 eng dcamIa ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Ijesa (African people) -- Biography.",
+            "Ilesa (Nigeria) -- Description and travel."
+          ],
           "titleDisplay": [
             "A toast of Ijesa people / Ayo Fatubarin."
           ],
           "uri": "b18437590",
+          "lccClassification": [
+            "DT515.45.I348 F384 2008"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [
+            "scf"
+          ],
           "placeOfPublication": [
             "Ilesa"
           ],
@@ -8899,16 +8820,23 @@
               "label": "monograph/item"
             }
           ],
+          "seriesUniformTitle_displayComponents": [
+            {
+              "role": "",
+              "name": "Patriotic reflections on Ijesaland ;",
+              "label": "Patriotic reflections on Ijesaland ; no. 2.",
+              "title": ""
+            }
+          ],
+          "physicalDescription": [
+            "xii, 156 p. ; 21 cm."
+          ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "978375842X",
-            "9789783758421"
           ]
         },
         "sort": [
-          632.7671,
+          632.7718,
           "b18437590"
         ],
         "matched_queries": [
@@ -8927,7 +8855,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b18437590",
                   "_nested": {
                     "field": "items",
@@ -9031,9 +8959,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b22185434",
-        "_score": 632.34235,
+        "_score": 632.3479,
         "_source": {
           "extent": [
             "166 p. ;"
@@ -9213,14 +9141,10 @@
           ],
           "dimensions": [
             "22 cm."
-          ],
-          "idIsbn_clean": [
-            "006182593X",
-            "9780061825934"
           ]
         },
         "sort": [
-          632.34235,
+          632.3479,
           "b22185434"
         ],
         "matched_queries": [
@@ -9239,7 +9163,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b22185434",
                   "_nested": {
                     "field": "items",
@@ -9343,9 +9267,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b13111567",
-        "_score": 631.34235,
+        "_score": 631.3479,
         "_source": {
           "extent": [
             "v."
@@ -9527,7 +9451,7 @@
           ]
         },
         "sort": [
-          631.34235,
+          631.3479,
           "b13111567"
         ],
         "matched_queries": [
@@ -9545,7 +9469,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b13111567",
                   "_nested": {
                     "field": "items",
@@ -9650,7 +9574,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b13111567",
                   "_nested": {
                     "field": "items",
@@ -9760,9 +9684,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b20569949",
-        "_score": 623.02954,
+        "_score": 623.03357,
         "_source": {
           "extent": [
             "1 online resource."
@@ -9823,7 +9747,7 @@
               "value": "(WaSeSS)ssj0001177068"
             }
           ],
-          "updatedAt": 1787731830465,
+          "updatedAt": 1788368352591,
           "publicationStatement": [
             "Alexandria, VA : Alexander Street Press, 2007."
           ],
@@ -9879,7 +9803,7 @@
             {
               "role": "",
               "name": "American film scripts online",
-              "label": "American film scripts online",
+              "label": "American film scripts online.",
               "title": ""
             }
           ],
@@ -9987,7 +9911,7 @@
           ]
         },
         "sort": [
-          623.02954,
+          623.03357,
           "b20569949"
         ],
         "matched_queries": [
@@ -10010,9 +9934,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b22202337",
-        "_score": 601.538,
+        "_score": 601.5432,
         "_source": {
           "extent": [
             "xiii, 218 p. : col. ill. ;"
@@ -10202,14 +10126,10 @@
           ],
           "dimensions": [
             "24 cm"
-          ],
-          "idIsbn_clean": [
-            "9781742379418",
-            "1742379419"
           ]
         },
         "sort": [
-          601.538,
+          601.5432,
           "b22202337"
         ],
         "matched_queries": [
@@ -10228,7 +10148,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b22202337",
                   "_nested": {
                     "field": "items",
@@ -10332,9 +10252,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b22904468",
-        "_score": 601.538,
+        "_score": 601.5432,
         "_source": {
           "extent": [
             "189 pages : color illustrations ;"
@@ -10551,16 +10471,10 @@
           ],
           "dimensions": [
             "22 cm"
-          ],
-          "idIsbn_clean": [
-            "9781639730711",
-            "1639730710",
-            "9781526654236",
-            "1526654237"
           ]
         },
         "sort": [
-          601.538,
+          601.5432,
           "b22904468"
         ],
         "matched_queries": [
@@ -10579,7 +10493,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b22904468",
                   "_nested": {
                     "field": "items",
@@ -10683,15 +10597,18 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "cb11446537",
-        "_score": 592.468,
+        "_score": 592.4729,
         "_source": {
           "extent": [
             "viii, 82 pages ;"
           ],
           "nyplSource": [
             "recap-cul"
+          ],
+          "numItemDatesParsed": [
+            0
           ],
           "editionStatement": [
             "First edition."
@@ -10705,18 +10622,36 @@
               "label": "English"
             }
           ],
+          "numItemsTotal": [
+            1
+          ],
           "buildingLocationIds": [
             "rc"
           ],
           "createdYear": [
             2014
           ],
+          "title": [
+            "Boiled beans on toast : a play"
+          ],
           "type": [
             "nypl:Item"
           ],
+          "numItemVolumesParsed": [
+            0
+          ],
           "shelfMark": [],
+          "createdString": [
+            "2014"
+          ],
+          "creatorLiteral": [
+            "Karnad, Girish Raghunath, 1938-"
+          ],
           "idLccn": [
             "2014355883"
+          ],
+          "numElectronicResources": [
+            0
           ],
           "creator_displayComponents": [
             {
@@ -10728,6 +10663,11 @@
           ],
           "dateStartYear": [
             2014
+          ],
+          "idOclc": [
+            "ocn869791542",
+            "869791542",
+            "SCSB-5805984"
           ],
           "identifierV2": [
             {
@@ -10775,9 +10715,19 @@
               "value": "11446537"
             }
           ],
+          "uniformTitle": [
+            "Benda kạḷu ān ṭōsṭ. English"
+          ],
           "updatedAt": 1787967176463,
           "publicationStatement": [
             "New Delhi : Oxford University Press, 2014."
+          ],
+          "genreForm": [
+            "Drama."
+          ],
+          "idIsbn": [
+            "9780198098607 (pbk.)",
+            "019809860X (pbk.)"
           ],
           "identifier": [
             "urn:bnum:11446537",
@@ -10800,73 +10750,6 @@
               "title": ""
             }
           ],
-          "dates": [
-            {
-              "range": {
-                "lt": "2015",
-                "gte": "2014"
-              },
-              "raw": "140123s2014    ii            000 d eng d",
-              "tag": "s"
-            }
-          ],
-          "mediaType": [
-            {
-              "id": "mediatypes:n",
-              "label": "unmediated"
-            }
-          ],
-          "subjectLiteral": [
-            "Bangalore (India) -- Drama."
-          ],
-          "lccClassification": [
-            "PL4659.K325 B65 2014"
-          ],
-          "parallelSubjectLiteral": [],
-          "formatId": "a",
-          "collectionIds": [],
-          "titleAlt": [
-            "Benda kạḷu ān ṭōsṭ."
-          ],
-          "physicalDescription": [
-            "viii, 82 pages ; 22 cm"
-          ],
-          "numItemDatesParsed": [
-            0
-          ],
-          "numItemsTotal": [
-            1
-          ],
-          "title": [
-            "Boiled beans on toast : a play"
-          ],
-          "numItemVolumesParsed": [
-            0
-          ],
-          "createdString": [
-            "2014"
-          ],
-          "creatorLiteral": [
-            "Karnad, Girish Raghunath, 1938-"
-          ],
-          "numElectronicResources": [
-            0
-          ],
-          "idOclc": [
-            "ocn869791542",
-            "869791542",
-            "SCSB-5805984"
-          ],
-          "uniformTitle": [
-            "Benda kạḷu ān ṭōsṭ. English"
-          ],
-          "genreForm": [
-            "Drama."
-          ],
-          "idIsbn": [
-            "9780198098607 (pbk.)",
-            "019809860X (pbk.)"
-          ],
           "numCheckinCardItems": [
             0
           ],
@@ -10888,11 +10771,36 @@
           "dateString": [
             "2014"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "2015",
+                "gte": "2014"
+              },
+              "raw": "140123s2014    ii            000 d eng d",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:n",
+              "label": "unmediated"
+            }
+          ],
+          "subjectLiteral": [
+            "Bangalore (India) -- Drama."
+          ],
           "titleDisplay": [
             "Boiled beans on toast : a play / Girish Karnad."
           ],
           "uri": "cb11446537",
+          "lccClassification": [
+            "PL4659.K325 B65 2014"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
           "recordTypeId": "a",
+          "collectionIds": [],
           "placeOfPublication": [
             "New Delhi"
           ],
@@ -10902,16 +10810,18 @@
               "label": "monograph/item"
             }
           ],
+          "titleAlt": [
+            "Benda kạḷu ān ṭōsṭ."
+          ],
+          "physicalDescription": [
+            "viii, 82 pages ; 22 cm"
+          ],
           "dimensions": [
             "22 cm"
-          ],
-          "idIsbn_clean": [
-            "9780198098607",
-            "019809860X"
           ]
         },
         "sort": [
-          592.468,
+          592.4729,
           "cb11446537"
         ],
         "matched_queries": [
@@ -10928,7 +10838,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "cb11446537",
                   "_nested": {
                     "field": "items",
@@ -11020,9 +10930,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "cb13686426",
-        "_score": 589.55383,
+        "_score": 589.55725,
         "_source": {
           "extent": [
             "volume : color illustrations ;"
@@ -11238,13 +11148,10 @@
           ],
           "dimensions": [
             "24 cm"
-          ],
-          "idIsbn_clean": [
-            "97829193395561"
           ]
         },
         "sort": [
-          589.55383,
+          589.55725,
           "cb13686426"
         ],
         "matched_queries": [
@@ -11262,7 +11169,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "cb13686426",
                   "_nested": {
                     "field": "items",
@@ -11364,9 +11271,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b16478384",
-        "_score": 573.63513,
+        "_score": 573.64014,
         "_source": {
           "extent": [
             "xi, 353 p. ;"
@@ -11563,14 +11470,10 @@
           ],
           "dimensions": [
             "23 cm."
-          ],
-          "idIsbn_clean": [
-            "0719561264",
-            "9780719561269"
           ]
         },
         "sort": [
-          573.63513,
+          573.64014,
           "b16478384"
         ],
         "matched_queries": [
@@ -11589,7 +11492,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b16478384",
                   "_nested": {
                     "field": "items",
@@ -11693,9 +11596,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b19838551",
-        "_score": 573.63513,
+        "_score": 573.64014,
         "_source": {
           "extent": [
             "112 p. ;"
@@ -11776,7 +11679,7 @@
               "value": "(OCoLC)277051218"
             }
           ],
-          "updatedAt": 1787673371925,
+          "updatedAt": 1788388316193,
           "publicationStatement": [
             "Ibadan, Oyo State, Nigeria : Kraft Books, 2006."
           ],
@@ -11916,14 +11819,10 @@
           ],
           "dimensions": [
             "22 cm."
-          ],
-          "idIsbn_clean": [
-            "9780391738",
-            "9789780391737"
           ]
         },
         "sort": [
-          573.63513,
+          573.64014,
           "b19838551"
         ],
         "matched_queries": [
@@ -11942,7 +11841,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b19838551",
                   "_nested": {
                     "field": "items",
@@ -12056,9 +11955,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b18036289",
-        "_score": 573.02954,
+        "_score": 573.03357,
         "_source": {
           "extent": [
             "1 score (14 p.) + 2 parts : port. ;"
@@ -12259,7 +12158,7 @@
           ]
         },
         "sort": [
-          573.02954,
+          573.03357,
           "b18036289"
         ],
         "matched_queries": [
@@ -12277,7 +12176,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b18036289",
                   "_nested": {
                     "field": "items",
@@ -12384,9 +12283,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990092192200203941",
-        "_score": 565.96545,
+        "_score": 565.9696,
         "_source": {
           "extent": [
             "247 p. ;"
@@ -12574,13 +12473,10 @@
           ],
           "dimensions": [
             "20 cm."
-          ],
-          "idIsbn_clean": [
-            "1841152897"
           ]
         },
         "sort": [
-          565.96545,
+          565.9696,
           "hb990092192200203941"
         ],
         "matched_queries": [
@@ -12598,7 +12494,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990092192200203941",
                   "_nested": {
                     "field": "items",
@@ -12690,9 +12586,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "cb5358913",
-        "_score": 564.96045,
+        "_score": 564.96405,
         "_source": {
           "extent": [
             "80 pages ;"
@@ -12861,13 +12757,10 @@
           ],
           "dimensions": [
             "22 cm"
-          ],
-          "idIsbn_clean": [
-            "1852246774"
           ]
         },
         "sort": [
-          564.96045,
+          564.96405,
           "cb5358913"
         ],
         "matched_queries": [
@@ -12884,7 +12777,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "cb5358913",
                   "_nested": {
                     "field": "items",
@@ -12976,9 +12869,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990094315110203941",
-        "_score": 564.96045,
+        "_score": 564.96405,
         "_source": {
           "extent": [
             "271 p. ;"
@@ -13179,14 +13072,10 @@
           ],
           "dimensions": [
             "23 cm."
-          ],
-          "idIsbn_clean": [
-            "0002005840",
-            "9780002005845"
           ]
         },
         "sort": [
-          564.96045,
+          564.96405,
           "hb990094315110203941"
         ],
         "matched_queries": [
@@ -13203,7 +13092,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990094315110203941",
                   "_nested": {
                     "field": "items",
@@ -13295,9 +13184,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990117890200203941",
-        "_score": 564.96045,
+        "_score": 564.96405,
         "_source": {
           "extent": [
             "62 p. ;"
@@ -13484,14 +13373,10 @@
           ],
           "dimensions": [
             "21 cm."
-          ],
-          "idIsbn_clean": [
-            "9780573663772",
-            "0573663777"
           ]
         },
         "sort": [
-          564.96045,
+          564.96405,
           "hb990117890200203941"
         ],
         "matched_queries": [
@@ -13508,7 +13393,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990117890200203941",
                   "_nested": {
                     "field": "items",
@@ -13600,9 +13485,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb9911624953506421",
-        "_score": 564.96045,
+        "_score": 564.96405,
         "_source": {
           "extent": [
             "1 score (9 pages) ;"
@@ -13841,7 +13726,7 @@
           ]
         },
         "sort": [
-          564.96045,
+          564.96405,
           "pb9911624953506421"
         ],
         "matched_queries": [
@@ -13858,7 +13743,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb9911624953506421",
                   "_nested": {
                     "field": "items",
@@ -13950,9 +13835,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb9921391513506421",
-        "_score": 564.96045,
+        "_score": 564.96405,
         "_source": {
           "extent": [
             "ix, 226 pages : illustrations, portraits ;"
@@ -14147,14 +14032,10 @@
           ],
           "dimensions": [
             "25 cm"
-          ],
-          "idIsbn_clean": [
-            "0233991840",
-            "9780233991849"
           ]
         },
         "sort": [
-          564.96045,
+          564.96405,
           "pb9921391513506421"
         ],
         "matched_queries": [
@@ -14171,7 +14052,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb9921391513506421",
                   "_nested": {
                     "field": "items",
@@ -14263,9 +14144,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990074688990203941",
-        "_score": 564.5652,
+        "_score": 564.5698,
         "_source": {
           "extent": [
             "359 p. : ill. ;"
@@ -14442,13 +14323,10 @@
           ],
           "dimensions": [
             "18 cm."
-          ],
-          "idIsbn_clean": [
-            "1779040105"
           ]
         },
         "sort": [
-          564.5652,
+          564.5698,
           "hb990074688990203941"
         ],
         "matched_queries": [
@@ -14465,7 +14343,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990074688990203941",
                   "_nested": {
                     "field": "items",
@@ -14557,9 +14435,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "hb990088521070203941",
-        "_score": 564.5652,
+        "_score": 564.5698,
         "_source": {
           "note": [
             {
@@ -14726,13 +14604,10 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
-          ],
-          "idIsbn_clean": [
-            "0968979203"
           ]
         },
         "sort": [
-          564.5652,
+          564.5698,
           "hb990088521070203941"
         ],
         "matched_queries": [
@@ -14749,7 +14624,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "hb990088521070203941",
                   "_nested": {
                     "field": "items",
@@ -14841,9 +14716,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb2139151",
-        "_score": 564.5652,
+        "_score": 564.5698,
         "_source": {
           "extent": [
             "ix, 226 p. : ill., ports. ;"
@@ -15000,7 +14875,7 @@
           ]
         },
         "sort": [
-          564.5652,
+          564.5698,
           "pb2139151"
         ],
         "matched_queries": [
@@ -15017,7 +14892,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb2139151",
                   "_nested": {
                     "field": "items",
@@ -15109,9 +14984,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b13555237",
-        "_score": 548.6229,
+        "_score": 548.6267,
         "_source": {
           "extent": [
             "257 p. ;"
@@ -15298,13 +15173,10 @@
           ],
           "dimensions": [
             "25 cm."
-          ],
-          "idIsbn_clean": [
-            "0385485247"
           ]
         },
         "sort": [
-          548.6229,
+          548.6267,
           "b13555237"
         ],
         "matched_queries": [
@@ -15323,7 +15195,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b13555237",
                   "_nested": {
                     "field": "items",
@@ -15422,7 +15294,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b13555237",
                   "_nested": {
                     "field": "items",
@@ -15526,9 +15398,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b18012067",
-        "_score": 548.2424,
+        "_score": 548.2471,
         "_source": {
           "extent": [
             "97 p. : ill. (chiefly col.) ;"
@@ -15719,14 +15591,10 @@
           ],
           "dimensions": [
             "23 cm."
-          ],
-          "idIsbn_clean": [
-            "9781566892223",
-            "1566892228"
           ]
         },
         "sort": [
-          548.2424,
+          548.2471,
           "b18012067"
         ],
         "matched_queries": [
@@ -15745,7 +15613,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b18012067",
                   "_nested": {
                     "field": "items",
@@ -15844,7 +15712,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b18012067",
                   "_nested": {
                     "field": "items",
@@ -15948,9 +15816,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "b21091000",
-        "_score": 548.2424,
+        "_score": 548.2471,
         "_source": {
           "extent": [
             "vii, 216 pages : color illustrations ;"
@@ -16159,14 +16027,10 @@
           ],
           "dimensions": [
             "21 cm"
-          ],
-          "idIsbn_clean": [
-            "9781419722301",
-            "1419722301"
           ]
         },
         "sort": [
-          548.2424,
+          548.2471,
           "b21091000"
         ],
         "matched_queries": [
@@ -16185,7 +16049,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "b21091000",
                   "_nested": {
                     "field": "items",
@@ -16289,9 +16153,9 @@
         }
       },
       {
-        "_index": "resources-qa-2026-08-25",
+        "_index": "resources-qa-2026-09-21",
         "_id": "pb1162495",
-        "_score": 539.1724,
+        "_score": 539.17676,
         "_source": {
           "extent": [
             "1 score (9 p.) ;"
@@ -16487,7 +16351,7 @@
           ]
         },
         "sort": [
-          539.1724,
+          539.17676,
           "pb1162495"
         ],
         "matched_queries": [
@@ -16504,7 +16368,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-qa-2026-08-25",
+                  "_index": "resources-qa-2026-09-21",
                   "_id": "pb1162495",
                   "_nested": {
                     "field": "items",
@@ -16594,6 +16458,43 @@
             }
           }
         }
+      }
+    ]
+  },
+  "suggest": {
+    "q.0": [
+      {
+        "text": "toast",
+        "offset": 0,
+        "length": 5,
+        "options": []
+      }
+    ],
+    "q.1": [
+      {
+        "text": "toast",
+        "offset": 0,
+        "length": 5,
+        "options": []
+      }
+    ],
+    "q.2": [
+      {
+        "text": "toast",
+        "offset": 0,
+        "length": 5,
+        "options": [
+          {
+            "text": "tost",
+            "highlighted": "<em>tost</em>",
+            "score": 0.0012436508
+          },
+          {
+            "text": "tast",
+            "highlighted": "<em>tast</em>",
+            "score": 0.0008457682
+          }
+        ]
       }
     ]
   }
