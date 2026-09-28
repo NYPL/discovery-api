@@ -184,4 +184,21 @@ module.exports = function (app) {
         .catch((error) => next(error))
     }
   )
+
+  /**
+   * Autocomplete route
+   */
+  app.get(
+    `/api/v${VER}/discovery/autocomplete`,
+    function (req, res, next) {
+      const params = req.query
+      console.log('AC raw params: ', params)
+
+      const handler = app.resources.autocomplete
+
+      return handler(params)
+        .then((responseBody) => respond(res, responseBody, params))
+        .catch((error) => next(error))
+    }
+  )
 }
