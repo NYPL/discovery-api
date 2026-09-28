@@ -154,7 +154,7 @@ Filters are applied using a `filters` param that expects this syntax on the quer
 
 > /resources?filters[property1]=value1&filters[property2]=value2
 
-Where `property*` is one of: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.
+Where `property*` is one of: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'contributorNameTitle', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.
 
 The value given should be _exact_. Do not use quotes.
 

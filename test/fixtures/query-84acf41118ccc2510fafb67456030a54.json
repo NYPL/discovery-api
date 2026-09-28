@@ -1,5 +1,5 @@
 {
-  "took": 5,
+  "took": 1,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -17,31 +17,31 @@
   },
   "aggregations": {
     "statuses": {
-      "doc_count": 806,
+      "doc_count": 801,
       "nonrecap_statuses": {
-        "doc_count": 674,
+        "doc_count": 669,
         "nonrecap_status_buckets": {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0,
           "buckets": [
             {
               "key": "status:a||Available",
-              "doc_count": 654
+              "doc_count": 624
             },
             {
-              "key": "status:na||Not available",
-              "doc_count": 13
+              "key": "status:i||At bindery",
+              "doc_count": 37
             },
             {
               "key": "status:co||Loaned",
-              "doc_count": 4
-            },
-            {
-              "key": "status:d||Damaged",
-              "doc_count": 1
+              "doc_count": 5
             },
             {
               "key": "status:m||Missing",
+              "doc_count": 1
+            },
+            {
+              "key": "status:na||Not available",
               "doc_count": 1
             },
             {

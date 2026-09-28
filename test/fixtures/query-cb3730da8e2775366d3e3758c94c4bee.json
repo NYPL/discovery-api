@@ -1,5 +1,5 @@
 {
-  "took": 5,
+  "took": 6,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -544,13 +544,13 @@
           ]
         },
         "inner_hits": {
-          "items": {
+          "allItems": {
             "hits": {
               "total": {
                 "value": 4,
                 "relation": "eq"
               },
-              "max_score": null,
+              "max_score": 0,
               "hits": [
                 {
                   "_index": "resources-qa-2026-08-25",
@@ -559,7 +559,7 @@
                     "field": "items",
                     "offset": 0
                   },
-                  "_score": null,
+                  "_score": 0,
                   "_source": {
                     "accessMessage": [
                       {
@@ -659,10 +659,7 @@
                       "bf:Item"
                     ],
                     "uri": "i28309666"
-                  },
-                  "sort": [
-                    "          -1933"
-                  ]
+                  }
                 },
                 {
                   "_index": "resources-qa-2026-08-25",
@@ -671,7 +668,7 @@
                     "field": "items",
                     "offset": 1
                   },
-                  "_score": null,
+                  "_score": 0,
                   "_source": {
                     "accessMessage": [
                       {
@@ -771,10 +768,7 @@
                       "bf:Item"
                     ],
                     "uri": "i28309668"
-                  },
-                  "sort": [
-                    "          -1861"
-                  ]
+                  }
                 },
                 {
                   "_index": "resources-qa-2026-08-25",
@@ -783,7 +777,7 @@
                     "field": "items",
                     "offset": 2
                   },
-                  "_score": null,
+                  "_score": 0,
                   "_source": {
                     "accessMessage": [
                       {
@@ -874,124 +868,19 @@
                       "bf:Item"
                     ],
                     "uri": "i28543800"
-                  },
-                  "sort": [
-                    "          -1860"
-                  ]
-                },
-                {
-                  "_index": "resources-qa-2026-08-25",
-                  "_id": "b14937001",
-                  "_nested": {
-                    "field": "items",
-                    "offset": 3
-                  },
-                  "_score": null,
-                  "_source": {
-                    "accessMessage": [
-                      {
-                        "id": "accessMessage:2",
-                        "label": "Request in advance"
-                      }
-                    ],
-                    "accessMessage_packed": [
-                      "accessMessage:2||Request in advance"
-                    ],
-                    "buildingLocationId": [
-                      "rc"
-                    ],
-                    "catalogItemType": [
-                      {
-                        "id": "catalogItemType:3",
-                        "label": "serial"
-                      }
-                    ],
-                    "catalogItemType_packed": [
-                      "catalogItemType:3||serial"
-                    ],
-                    "collectionId": [
-                      "mal"
-                    ],
-                    "dateRange": [
-                      {
-                        "gte": "1855",
-                        "lte": "1855"
-                      }
-                    ],
-                    "enumerationChronology": [
-                      "Jahrg. 49 (1855)"
-                    ],
-                    "enumerationChronology_sort": "          -1855",
-                    "formatLiteral": [
-                      "Book/text"
-                    ],
-                    "holdingLocation": [
-                      {
-                        "id": "loc:rc2ma",
-                        "label": "Offsite"
-                      }
-                    ],
-                    "holdingLocation_packed": [
-                      "loc:rc2ma||Offsite"
-                    ],
-                    "identifier": [
-                      "urn:shelfmark:*DF+ (Morgenblatt für gebildete Leser)",
-                      "urn:barcode:33433096425198"
-                    ],
-                    "identifierV2": [
-                      {
-                        "value": "*DF+ (Morgenblatt für gebildete Leser)",
-                        "type": "bf:ShelfMark"
-                      },
-                      {
-                        "value": "33433096425198",
-                        "type": "bf:Barcode"
-                      }
-                    ],
-                    "idBarcode": [
-                      "33433096425198"
-                    ],
-                    "owner": [
-                      {
-                        "id": "orgs:1000",
-                        "label": "Stephen A. Schwarzman Building"
-                      }
-                    ],
-                    "owner_packed": [
-                      "orgs:1000||Stephen A. Schwarzman Building"
-                    ],
-                    "physicalLocation": [
-                      "*DF+ (Morgenblatt für gebildete Leser)"
-                    ],
-                    "recapCustomerCode": [
-                      "NA"
-                    ],
-                    "requestable": [
-                      true
-                    ],
-                    "shelfMark": [
-                      "*DF+ (Morgenblatt für gebildete Leser)"
-                    ],
-                    "shelfMark_sort": "a*DF+ (Morgenblatt für gebildete Leser)",
-                    "status": [
-                      {
-                        "id": "status:a",
-                        "label": "Available"
-                      }
-                    ],
-                    "status_packed": [
-                      "status:a||Available"
-                    ],
-                    "type": [
-                      "bf:Item"
-                    ],
-                    "uri": "i28309648"
-                  },
-                  "sort": [
-                    "          -1855"
-                  ]
+                  }
                 }
               ]
+            }
+          },
+          "items": {
+            "hits": {
+              "total": {
+                "value": 0,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": []
             }
           }
         }

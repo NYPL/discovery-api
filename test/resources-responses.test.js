@@ -162,7 +162,7 @@ describe('Test Resources responses', function () {
         })
       })
       it('item_format is same as bib material type, multiple filters', (done) => {
-        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Book/text&item_location=ma'
+        const url = global.TEST_BASE_URL + '/api/v0.1/discovery/resources/b14937001?item_format=Book/text&item_location=loc:mal92'
         request.get(url, (err, res, body) => {
           if (err) throw err
           const doc = JSON.parse(body)
