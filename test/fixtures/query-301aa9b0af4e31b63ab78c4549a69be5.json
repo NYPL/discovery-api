@@ -1,0 +1,55 @@
+{
+  "took": 26,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 0,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "suggest": {
+    "q.0": [
+      {
+        "text": "toast",
+        "offset": 0,
+        "length": 5,
+        "options": []
+      }
+    ],
+    "q.1": [
+      {
+        "text": "toast",
+        "offset": 0,
+        "length": 5,
+        "options": []
+      }
+    ],
+    "q.2": [
+      {
+        "text": "toast",
+        "offset": 0,
+        "length": 5,
+        "options": [
+          {
+            "text": "tost",
+            "highlighted": "<em>tost</em>",
+            "score": 0.0012436508
+          },
+          {
+            "text": "tast",
+            "highlighted": "<em>tast</em>",
+            "score": 0.0008457682
+          }
+        ]
+      }
+    ]
+  }
+}
