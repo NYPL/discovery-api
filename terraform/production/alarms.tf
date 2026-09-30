@@ -144,7 +144,7 @@ resource "aws_cloudwatch_log_metric_filter" "log_error" {
   region         = "us-east-1"
 
   metric_transformation {
-    name      = "DiscoveryApiError"
+    name      = "DiscoveryApiLogError"
     namespace = "LogMetrics"
     unit      = "None"
     value     = "1"
@@ -152,7 +152,7 @@ resource "aws_cloudwatch_log_metric_filter" "log_error" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "log_error" {
-  alarm_name          = "DiscoveryApiErrorAlarm"
+  alarm_name          = "DiscoveryApiGenericLogErrorAlarm"
   alarm_description   = "Error-level logs from Discovery API not already covered by a more specific alarm."
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 1
