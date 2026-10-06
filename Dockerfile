@@ -1,4 +1,4 @@
-FROM node:20-bookworm AS production
+FROM node:25-bookworm AS production
 
 RUN apt-get update
 RUN apt-get upgrade -y
