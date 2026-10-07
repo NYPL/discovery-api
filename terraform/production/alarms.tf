@@ -12,7 +12,7 @@ locals {
 resource "aws_cloudwatch_log_metric_filter" "scsb_outage" {
   log_group_name = local.log_group_name
   name           = "DiscoveryApiSCSBOutage"
-  pattern        = "{ $.message = \"*SCSB*\" }"
+  pattern        = "{ $.type = \"scsb_outage\" }"
   region         = "us-east-1"
 
   metric_transformation {
@@ -41,7 +41,7 @@ resource "aws_cloudwatch_metric_alarm" "scsb_outage" {
 resource "aws_cloudwatch_log_metric_filter" "type_error" {
   log_group_name = local.log_group_name
   name           = "DiscoveryApiTypeError"
-  pattern        = "{ $.stack = \"TypeError*\" }"
+  pattern        = "{ $.type = \"unhandled_type_error\" }"
   region         = "us-east-1"
 
   metric_transformation {
@@ -70,7 +70,7 @@ resource "aws_cloudwatch_metric_alarm" "type_error" {
 resource "aws_cloudwatch_log_metric_filter" "es_rejected_execution" {
   log_group_name = local.log_group_name
   name           = "DiscoveryApiESRejectedExecution"
-  pattern        = "{ $.message = \"*es_rejected_execution_exception*\" }"
+  pattern        = "{ $.type = \"es_rejected_execution\" }"
   region         = "us-east-1"
 
   metric_transformation {
@@ -99,7 +99,7 @@ resource "aws_cloudwatch_metric_alarm" "es_rejected_execution" {
 resource "aws_cloudwatch_log_metric_filter" "es_timeout" {
   log_group_name = local.log_group_name
   name           = "DiscoveryApiESTimeout"
-  pattern        = "{ $.name = \"TimeoutError\" }"
+  pattern        = "{ $.type = \"es_timeout\" }"
   region         = "us-east-1"
 
   metric_transformation {
@@ -140,7 +140,7 @@ import {
 resource "aws_cloudwatch_log_metric_filter" "log_error" {
   log_group_name = local.log_group_name
   name           = "DiscoveryApiError"
-  pattern        = "{ ($.level = \"error\") && ($.message != \"*SCSB*\") && ($.stack != \"TypeError*\") && ($.message != \"*es_rejected_execution_exception*\") && ($.name != \"TimeoutError\") }"
+  pattern        = "{ ($.level = \"error\") && ($.type != \"scsb_outage\") && ($.type != \"unhandled_type_error\") && ($.type != \"es_rejected_execution\") && ($.type != \"es_timeout\") }"
   region         = "us-east-1"
 
   metric_transformation {
