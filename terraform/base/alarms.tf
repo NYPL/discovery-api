@@ -1,0 +1,20 @@
+/* 
+DevOps covers these metric alarms for the production and qa environments:
+discovery-api-qa2_cpu
+discovery-api-qa2_alb500_scale_up
+discovery-api-qa2-min-task-count
+discovery-api-qa2-task-deploy
+discovery-api-qa2-min-instance-count
+discovery-api-qa2_memory
+discovery-api-qa-min-task-count
+discovery-api-qa_alb500_scale_up
+discovery-api-qa-min-instance-count
+discovery-api-qa_cpu
+discovery-api-qa_memory
+discovery-api-qa-task-deploy
+discovery-api-production-task-deploy
+discovery-api-production_cpu
+discovery-api-production-min-task-count
+discovery-api-production_alb500_scale_up
+discovery-api-production-min-instance-count
+*/
