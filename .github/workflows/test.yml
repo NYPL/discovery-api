@@ -8,6 +8,20 @@ permissions:
   contents: read
 
 jobs:
+  changelog:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/qa' || github.ref == 'refs/heads/production')
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Enforce CHANGELOG update
+        uses: dangoslen/changelog-enforcer@v3
+        with:
+          skipLabels: 'skip-changelog'
   tests:
     permissions:
         id-token: write
