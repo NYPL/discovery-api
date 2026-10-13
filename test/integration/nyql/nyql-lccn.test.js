@@ -4,7 +4,7 @@ const { getId, search } = require('./helpers')
 // These tests verify that the lccn index finds records by their LCCN number.
 // Test data comes from the Acceptance Criteria tab of the linking fields
 // requirements doc ("LCCN Numbers" section).
-  
+
 // Runs an lccn search and checks that the expected bib comes back.
 const expectBib = async (q, bnum) => {
   const res = await search({ q })
@@ -23,7 +23,6 @@ describe('Discovery API - NYQL lccn tests - type: dashes optional', function () 
     await expectBib('lccn = 2001233910', 'b15888643')
     await expectBib('lccn = 2001-233910', 'b15888643')
   })
-  
 })
 describe('Discovery API - NYQL lccn tests - type: extra leading/trailing spaces are ignored', function () {
   this.timeout(30000)
@@ -31,7 +30,7 @@ describe('Discovery API - NYQL lccn tests - type: extra leading/trailing spaces 
     await expectBib('lccn =  93656168 ', 'b15986028')
   })
   it('lccn = 92641021 finds b21457839 with extra spaces', async () => {
-    await expectBib('lccn =  92641021 ', 'b21457839') 
+    await expectBib('lccn =  92641021 ', 'b21457839')
   })
 })
 describe('Discovery API - NYQL lccn tests - type: zero padding doesnt matter', function () {
@@ -42,7 +41,6 @@ describe('Discovery API - NYQL lccn tests - type: zero padding doesnt matter', f
     await expectBib('lccn = 67-62762', 'b14262371')
     await expectBib('lccn = 92641021', 'b21457839')
     await expectBib('lccn =  92641021 ', 'b21457839')
-
   })
 })
 describe('Discovery API - NYQL lccn tests - type: suffix handling', function () {

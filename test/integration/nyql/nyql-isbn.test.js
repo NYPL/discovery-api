@@ -15,7 +15,7 @@ const expectBib = async (q, bnum) => {
 
 describe('Discovery API - NYQL isbn tests', function () {
   this.timeout(30000)
-  //confirm ISBN search works and ignores formatting noise.
+  // confirm ISBN search works and ignores formatting noise.
   it('isbn = 9780822945833 finds b22021020', async () => {
     await expectBib('isbn = 9780822945833', 'b22021020')
   })
@@ -41,5 +41,4 @@ describe('Discovery API - NYQL isbn tests', function () {
   it('isbn = "9780071544115 (alk. paper)" finds b16868578', async () => {
     await expectBib('isbn = "9780071544115 (alk. paper)"', 'b16868578')
   })
-
 })

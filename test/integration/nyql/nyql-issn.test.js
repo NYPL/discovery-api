@@ -15,7 +15,7 @@ const expectBib = async (q, bnum) => {
 
 describe('Discovery API - NYQL issn tests', function () {
   this.timeout(30000)
-  //confirm ISSN search works with and without the dash.
+  // confirm ISSN search works with and without the dash.
   it('issn = 0042-1014 finds b10585778', async () => {
     await expectBib('issn = 0042-1014', 'b10585778')
     await expectBib('issn = 00421014', 'b10585778')
