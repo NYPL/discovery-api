@@ -19,4 +19,32 @@ describe('Display field parser', () => {
       })
     })
   })
+
+  describe('When a display components array contains null entries', () => {
+    it('maps null/undefined entries to null instead of throwing to preserve index alignment', () => {
+      const response = {
+        hits: {
+          hits: [
+            {
+              _source: {
+                contributor_displayComponents: [
+                  null,
+                  { name: 'Smith, John', title: null, label: 'Smith, John' },
+                  undefined
+                ]
+              }
+            }
+          ]
+        }
+      }
+      const displayFieldsUnpacked = displayFieldsUnpacker(response).hits.hits[0]._source
+      expect(displayFieldsUnpacked).to.deep.equal({
+        contributorDisplay: [
+          null,
+          { displayLabel: 'Smith, John', name: 'Smith, John', nameTitle: 'Smith, John' },
+          null
+        ]
+      })
+    })
+  })
 })
