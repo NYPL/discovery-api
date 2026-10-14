@@ -1,6 +1,6 @@
 const { SEARCH_SCOPES } = require('../lib/elasticsearch/config')
 
-const simplejournaltitleQuery = {
+const simpleJournalTitleQuery = {
   bool: {
     must: [
       {
@@ -1632,7 +1632,7 @@ module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
   simpleAllQuery,
-  simplejournaltitleQuery,
+  simpleJournalTitleQuery,
   prefixPhraseQuery,
   anyWithPrefixQuery,
   keywordQueryForBarcode,

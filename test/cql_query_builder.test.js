@@ -35,7 +35,7 @@ const {
   englishExactLanguageQuery,
   wildcardQueryNoShelfMark,
   wildcardQueryWithShelfMark,
-  simplejournaltitleQuery
+  simpleJournalTitleQuery
 } = require('./cql_es_queries')
 const { FILTER_CONFIG, SEARCH_SCOPES } = require('../lib/elasticsearch/config')
 
@@ -50,9 +50,10 @@ describe('CQL Query Builder', function () {
   })
 
   describe('journaltitle query', () => {
-    expect(new CqlQuery('journaltitle=spaghetti').buildEsQuery())
-      .to.deep.equal(simplejournaltitleQuery)
+    expect(new CqlQuery('journaltitle any "spaghetti"').buildEsQuery())
+      .to.deep.equal(simpleJournalTitleQuery)
   })
+
   it('Simple = query', function () {
     expect(new CqlQuery('title="Hamlet"').buildEsQuery())
       .to.deep.equal(
