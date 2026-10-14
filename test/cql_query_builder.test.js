@@ -50,8 +50,10 @@ describe('CQL Query Builder', function () {
   })
 
   describe('journaltitle query', () => {
-   it(()=>{ expect(new CqlQuery('journaltitle any "spaghetti"').buildEsQuery())
-      .to.deep.equal(simpleJournalTitleQuery)})
+    it('journaltitle any spaghetti', () => {
+      expect(new CqlQuery('journaltitle any "spaghetti"').buildEsQuery())
+        .to.deep.equal(simpleJournalTitleQuery)
+    })
   })
 
   it('Simple = query', function () {
