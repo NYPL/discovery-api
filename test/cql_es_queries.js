@@ -654,7 +654,7 @@ const bibNumberQuery = {
             {
               bool: {
                 should: [
-                  { term: { uri: 'b1234' } }
+                  { term: { 'uri.clean': 'b1234' } }
                 ]
               }
             }
