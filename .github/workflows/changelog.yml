@@ -1,0 +1,26 @@
+name: Changelog
+
+on:
+  push:
+    branches:
+      - main
+      - qa
+      - production
+
+permissions:
+  contents: read
+
+jobs:
+  changelog:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Enforce CHANGELOG update
+        uses: dangoslen/changelog-enforcer@v3
+        with:
+          skipLabels: 'skip-changelog'
