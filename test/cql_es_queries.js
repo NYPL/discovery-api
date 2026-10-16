@@ -1,5 +1,10 @@
 const { SEARCH_SCOPES } = require('../lib/elasticsearch/config')
 
+// SEARCH_SCOPES.contributor.fields with the author-scope NYQL boosting applied to parallelCreatorLiteral.folded
+const boostedContributorFields = SEARCH_SCOPES.contributor.fields.map(
+  field => field === 'parallelCreatorLiteral.folded' ? 'parallelCreatorLiteral.folded^2' : field
+)
+
 const simpleAdjQuery = {
   bool: {
     must: [
@@ -629,7 +634,7 @@ const binaryBooleanQuery = {
                         {
                           multi_match: {
                             query: 'Shakespeare',
-                            fields: SEARCH_SCOPES.contributor.fields,
+                            fields: boostedContributorFields,
                             type: 'phrase'
                           }
                         }
@@ -730,7 +735,7 @@ const ternaryBooleanQuery = {
                               {
                                 multi_match: {
                                   query: 'Shakespeare',
-                                  fields: SEARCH_SCOPES.contributor.fields,
+                                  fields: boostedContributorFields,
                                   type: 'phrase'
                                 }
                               }
@@ -866,13 +871,7 @@ const queryWithParentheses = {
                         {
                           multi_match: {
                             query: 'Shakespeare',
-                            fields: [
-                              'creatorLiteral',
-                              'creatorLiteral.folded',
-                              'contributorLiteral.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelContributorLiteral.folded'
-                            ],
+                            fields: boostedContributorFields,
                             type: 'phrase'
                           }
                         }
@@ -1011,13 +1010,7 @@ const negationQuery = {
                         {
                           multi_match: {
                             query: 'Shakespeare',
-                            fields: [
-                              'creatorLiteral',
-                              'creatorLiteral.folded',
-                              'contributorLiteral.folded',
-                              'parallelCreatorLiteral.folded',
-                              'parallelContributorLiteral.folded'
-                            ],
+                            fields: boostedContributorFields,
                             type: 'phrase'
                           }
                         }
@@ -1243,7 +1236,7 @@ const filterQuery = {
                   {
                     multi_match: {
                       query: 'Shakespeare',
-                      fields: SEARCH_SCOPES.contributor.fields,
+                      fields: boostedContributorFields,
                       type: 'phrase'
                     }
                   }
@@ -1578,6 +1571,7 @@ const wildcardQueryWithShelfMark = {
 }
 
 module.exports = {
+  boostedContributorFields,
   simpleAdjQuery,
   simpleAnyQuery,
   simpleAllQuery,
