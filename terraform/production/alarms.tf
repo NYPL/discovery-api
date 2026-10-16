@@ -126,17 +126,6 @@ resource "aws_cloudwatch_metric_alarm" "es_timeout" {
 
 # Catch-all for error-level logs not already covered by a more specific filter above
 
-# Will remove once `apply`ed
-import {
-  to = aws_cloudwatch_log_metric_filter.log_error
-  id = "/ecs/discovery-api-production:DiscoveryApiError"
-}
-
-import {
-  to = aws_cloudwatch_metric_alarm.log_error
-  id = "DiscoveryApiErrorAlarm"
-}
-
 resource "aws_cloudwatch_log_metric_filter" "log_error" {
   log_group_name = local.log_group_name
   name           = "DiscoveryApiError"
