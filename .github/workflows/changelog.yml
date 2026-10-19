@@ -1,0 +1,34 @@
+name: Changelog
+
+on:
+  pull_request:
+    branches:
+      - main
+      - qa
+      - production
+
+permissions:
+  contents: read
+
+jobs:
+  changelog:
+    # Skip back-merges 
+    if: |
+      !(
+        (github.event.pull_request.base.ref == 'main' &&
+          contains(fromJSON('["qa", "production"]'), github.event.pull_request.head.ref)) ||
+        (github.event.pull_request.base.ref == 'qa' &&
+          github.event.pull_request.head.ref == 'production')
+      )
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Enforce CHANGELOG update
+        uses: dangoslen/changelog-enforcer@v3
+        with:
+          skipLabels: 'skip-changelog'
