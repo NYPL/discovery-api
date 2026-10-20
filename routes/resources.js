@@ -107,6 +107,18 @@ module.exports = function (app) {
     }
   )
 
+  app.get(
+    `/api/v${VER}/discovery/resources/linked_entry/:uri/:marcTag/:index/:hash`,
+    function (req, res, next) {
+      const params = req.params
+
+      return app.resources
+        .linkedEntry(params, { baseUrl: app.baseUrl }, req)
+        .then((resp) => respond(res, resp, params))
+        .catch((error) => next(error))
+    }
+  )
+
   app.get(`/api/v${VER}/discovery/vocabularies`, function (req, res, next) {
     const params = Object.assign({}, req.query, req.params)
 
