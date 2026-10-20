@@ -1,5 +1,56 @@
 const { SEARCH_SCOPES } = require('../lib/elasticsearch/config')
 
+const simpleJournalTitleQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          multi_match: {
+                            query: 'spaghetti',
+                            fields: [
+                              'title^5',
+                              'title.folded^2',
+                              'titleAlt.folded',
+                              'uniformTitle.folded',
+                              'titleDisplay.folded',
+                              'contentsTitle.folded',
+                              'donor.folded',
+                              'parallelTitle.folded^5',
+                              'parallelTitleDisplay.folded',
+                              'parallelTitleAlt.folded',
+                              'parallelCreatorLiteral.folded',
+                              'parallelUniformTitle',
+                              'formerTitle',
+                              'addedAuthorTitle',
+                              'seriesUniformTitle',
+                              'parallelSeriesUniformTitle'
+                            ],
+                            type: 'cross_fields'
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                minimum_should_match: 1,
+                filter: [{ term: { 'issuance.id': 'urn:biblevel:s' } }]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 const simpleAdjQuery = {
   bool: {
     must: [
@@ -1581,6 +1632,7 @@ module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
   simpleAllQuery,
+  simpleJournalTitleQuery,
   prefixPhraseQuery,
   anyWithPrefixQuery,
   keywordQueryForBarcode,

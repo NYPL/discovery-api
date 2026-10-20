@@ -34,7 +34,8 @@ const {
   divisionExact,
   englishExactLanguageQuery,
   wildcardQueryNoShelfMark,
-  wildcardQueryWithShelfMark
+  wildcardQueryWithShelfMark,
+  simpleJournalTitleQuery
 } = require('./cql_es_queries')
 const { FILTER_CONFIG, SEARCH_SCOPES } = require('../lib/elasticsearch/config')
 
@@ -46,6 +47,13 @@ const isValidLanguageQuery = (clause) => {
 describe('CQL Query Builder', function () {
   before(() => {
     ControlledVocabularies.cachedData = vocabFixture
+  })
+
+  describe('journaltitle query', () => {
+    it('journaltitle any spaghetti', () => {
+      expect(new CqlQuery('journaltitle any "spaghetti"').buildEsQuery())
+        .to.deep.equal(simpleJournalTitleQuery)
+    })
   })
 
   it('Simple = query', function () {
