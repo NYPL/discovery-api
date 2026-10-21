@@ -38,7 +38,7 @@ const fetchAllResults = async (q) => {
 describe('Discovery API - NYQL journaltitle scope tests', function () {
   this.timeout(120000)
   let totalResults, results
-  before(async() => {
+  before(async () => {
     const resp = await fetchAllResults('journaltitle = "nature"')
     totalResults = resp.totalResults
     results = resp.results
