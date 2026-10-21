@@ -19,6 +19,8 @@ module.exports = function (app) {
   })
 
   const respond = (res, _resp, params) => {
+    console.log('&&&&&& respond')
+    console.log(res)
     let contentType = 'application/ld+json'
     if (params.ext === 'ntriples') contentType = 'text/plain'
 
@@ -109,9 +111,8 @@ module.exports = function (app) {
 
   app.get(
     `/api/v${VER}/discovery/resources/linked_entry/:uri/:marcTag/:index/:hash`,
-    function (req, res, next) {
+    async function (req, res, next) {
       const params = req.params
-
       return app.resources
         .linkedEntry(params, { baseUrl: app.baseUrl }, req)
         .then((resp) => respond(res, resp, params))
