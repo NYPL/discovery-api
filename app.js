@@ -72,7 +72,6 @@ app.init = async () => {
   })
 
   app.use((err, req, res, next) => {
-    console.log('*****')
     handleError(err, req, res, next, app.logger)
   })
 

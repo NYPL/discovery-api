@@ -109,7 +109,7 @@ module.exports = function (app) {
 
   app.get(
     `/api/v${VER}/discovery/resources/linked_entry/:uri/:marcTag/:marcTagIndex/:hash`,
-    async function (req, res, next) {
+    function (req, res, next) {
       const params = req.params
       return app.resources
         .linkedEntry(params, { baseUrl: app.baseUrl }, req)
