@@ -79,13 +79,13 @@ Example format:
 3. File a pull request against `main` and assign reviewers
 4. After the PR is accepted, merge into `main`
 5. Merge `main` > `qa`
-6. Confirm app deploys to QA and run appropriate testing
+6. Confirm app deployed to QA and run appropriate testing
 7. Check out `qa` branch
    - Update the `Prerelease` section heading to the next logical version (major.minor.patch), considering all the changes included, and the current date (e.g., `## [1.0.1] - 2026-10-15`)
    - Update the `package.json` with the new version 
 10. Create a PR to merge `qa` > `production` (indicate release version in the PR description)
 11. After approval:
-   - Merge to production and test
+   - Confirm app deployed to production and test
    - Git tag of the code on production will be created automatically
    - Back-merge `qa` > `main` manually and handle any CHANGELOG conflicts
 
