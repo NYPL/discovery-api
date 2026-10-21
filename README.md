@@ -19,6 +19,13 @@ Note that when developing locally, if connecting to a IP ACL protected index (a 
 error: Error connecting to index: 403: {"Message":"User: anonymous is not authorized to perform: es:ESHttpPost because no resource-based policy allows the es:ESHttpPost action"}
 ```
 
+### Running with NewRelic Locally
+
+If you want to test the newrelic integration locally, get a license key from newrelic, and pass it in as an environment variable locally:
+```
+nvm use; ENV=qa LOCAL=true NEW_RELIC_LICENSE_KEY=mylicensekey npm start
+```
+
 ### Using Docker
 
 Docker files are included for deployment and can be used locally.
@@ -45,21 +52,45 @@ docker run --name discovery-api -e ENV=qa -e AWS_ACCESS_KEY_ID=... -e AWS_SECRET
 
 ## Contributing
 
-This app uses a [PRs Target Main, Merge to Deployment Branches](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#prs-target-main-merge-to-deployment-branches) git workflow.
+This app uses a [Main-QA-Production](https://github.com/NYPL/engineering-general/blob/master/standards/git-workflow.md#main-qa-production) git workflow.  
 
-[`main`](https://github.com/NYPL-discovery/discovery-api/tree/main) has the lastest-and-greatest commits, [`production`](https://github.com/NYPL-discovery/discovery-api/tree/production) should represent what's in our production environment. Because we deploy often, `main` and `production` will often be in parity.
+Our `main` is essentially a staging area for `qa`, but merging into `main` indicates it's dev-approved and ready for other developers to pull it down into their own feature work.
 
-### Ideal Workflow
+### Changelog
+
+This project maintains a [CHANGELOG](./CHANGELOG.md).
+
+- All PRs should include a relevant CHANGELOG entry with a brief summary of the PR's changes and the relevant ticket (if there is one) in the `Prerelease` section
+- For releases to production, update the `Prerelease` section with the next version and the current date (e.g., `## [1.0.1] - 2026-10-15`)
+- To skip CHANGELOG enforcement, add the `skip-changelog` label to your PR. Generally, avoid this (hot fixes need a CHANGELOG entry even if you're in a rush) 
+
+Example format:
+```
+## Prerelease
+
+- Removed every letter Z (SCC-0123)
+- Updated EDD criteria thresholds and added unit tests for availability resolver (SCC-1234)
+```
+
+### Development workflow
 
 1. Cut a feature branch off of `main`
-1. Commit changes to your feature branch
-1. File a pull request against `main` and assign a reviewer
-1. After the PR is accepted, merge into `main`
-1. Merge `main` > `qa`
-1. Confirm app deploys to QA and run appropriate testing
-1. Merge `main` > `production`
+2. Commit changes to your feature branch
+3. File a pull request against `main` and assign reviewers
+4. After the PR is accepted, merge into `main`
+5. Merge `main` > `qa`
+6. Confirm app deploys to QA and run appropriate testing
+7. Check out `qa` branch
+8. Update the `Prerelease` section heading to the next logical version with the current date (e.g., `## [1.0.1] - 2026-10-15`)
+9. Commit that update directly to `qa`
+10. Create a PR to merge `qa` > `production` (indicate release version in the PR)
+11. After approval:
+   - Merge to production and test
+   - Create a git tag: `git tag v1.0.1` and push tags
+   - Back-merge `qa` > `main` manually and handle any CHANGELOG conflicts
 
-### Deploying
+
+## Deploying
 
 App deploys through [GH Actions](./.github/workflows/test-and-deploy.yml) to ECS when updates are made to deployment branches:
 
@@ -147,7 +178,7 @@ Filters are applied using a `filters` param that expects this syntax on the quer
 
 > /resources?filters[property1]=value1&filters[property2]=value2
 
-Where `property*` is one of: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.
+Where `property*` is one of: 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'contributorNameTitle', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'.
 
 The value given should be _exact_. Do not use quotes.
 

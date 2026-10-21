@@ -116,9 +116,24 @@ function enableEsFixtures () {
         }
       })
     })
+    // Add msearch to get aggregations if needed
+    const originalEsMsearch = app.esClient.msearch.bind(app.esClient)
+
+    sinon.stub(app.esClient, 'msearch').callsFake(function (properties) {
+      return esFixtureExists(properties).then((exists) => {
+        if (process.env.UPDATE_FIXTURES === 'all' || !exists) {
+          console.log(`Writing ${esFixturePath(properties)} because ${process.env.UPDATE_FIXTURES === 'all' ? 'we\'re updating everything' : 'it doesn\'t exist'}`)
+          return originalEsMsearch(properties)
+            .then((resp) => writeEsResponseToFixture(properties, resp))
+            .then(() => esClientSearchViaFixtures(properties))
+        } else {
+          return esClientSearchViaFixtures(properties)
+        }
+      })
+    })
   } else {
-    // Any internal call to app.esClient.search should load a local fixture:
     sinon.stub(app.esClient, 'search').callsFake(esClientSearchViaFixtures)
+    sinon.stub(app.esClient, 'msearch').callsFake(esClientSearchViaFixtures)
   }
 }
 
@@ -129,6 +144,9 @@ function disableEsFixtures () {
   const app = require('../app')
 
   app.esClient.search.restore()
+  if (app.esClient.msearch && app.esClient.msearch.restore) {
+    app.esClient.msearch.restore()
+  }
 }
 
 /** **************************************************************************

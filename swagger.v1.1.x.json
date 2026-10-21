@@ -97,7 +97,7 @@
           {
             "name": "filters[*]",
             "in": "query",
-            "description": "Specify a hash of filters to apply, where key is: 'format', 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "description": "Specify a hash of filters to apply, where key is: 'format', 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'contributorNameTitle', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
             "required": false,
             "type": "string"
           },
@@ -299,7 +299,7 @@
           {
             "name": "filters[*]",
             "in": "query",
-            "description": "Specify a hash of filters to apply, where key is: 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
+            "description": "Specify a hash of filters to apply, where key is: 'buildingLocation', 'owner', 'subjectLiteral', 'holdingLocation', 'deliveryLocation', 'language', 'materialType', 'mediaType', 'carrierType', 'publisher', 'contributor', 'creator', 'contributorNameTitle', 'issuance', 'createdYear', 'dateAfter', or 'dateBefore'",
             "required": false,
             "type": "string"
           }

@@ -1,5 +1,56 @@
 const { SEARCH_SCOPES } = require('../lib/elasticsearch/config')
 
+const simpleJournalTitleQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  {
+                    bool: {
+                      should: [
+                        {
+                          multi_match: {
+                            query: 'spaghetti',
+                            fields: [
+                              'title^5',
+                              'title.folded^2',
+                              'titleAlt.folded',
+                              'uniformTitle.folded',
+                              'titleDisplay.folded',
+                              'contentsTitle.folded',
+                              'donor.folded',
+                              'parallelTitle.folded^5',
+                              'parallelTitleDisplay.folded',
+                              'parallelTitleAlt.folded',
+                              'parallelCreatorLiteral.folded',
+                              'parallelUniformTitle',
+                              'formerTitle',
+                              'addedAuthorTitle',
+                              'seriesUniformTitle',
+                              'parallelSeriesUniformTitle'
+                            ],
+                            type: 'cross_fields'
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                minimum_should_match: 1,
+                filter: [{ term: { 'issuance.id': 'urn:biblevel:s' } }]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
 const simpleAdjQuery = {
   bool: {
     must: [
@@ -505,6 +556,106 @@ const identifierQuery = {
                     ]
                   }
                 }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const issnQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idIssn.clean': '1234-5678' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const isbnQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idIsbn.clean': '978-3-16-148410-0' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const oclcQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idOclc.clean': 'ocm12345' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const lccnQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'idLccn.clean': 'n78890351' } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+const bibNumberQuery = {
+  bool: {
+    must: [
+      {
+        bool: {
+          should: [
+            {
+              bool: {
+                should: [
+                  { term: { 'uri.clean': 'b1234' } }
+                ]
               }
             }
           ]
@@ -1481,12 +1632,18 @@ module.exports = {
   simpleAdjQuery,
   simpleAnyQuery,
   simpleAllQuery,
+  simpleJournalTitleQuery,
   prefixPhraseQuery,
   anyWithPrefixQuery,
   keywordQueryForBarcode,
   keywordQueryForShelfMark,
   keywordQueryForGeneralTerm,
   identifierQuery,
+  issnQuery,
+  isbnQuery,
+  oclcQuery,
+  lccnQuery,
+  bibNumberQuery,
   binaryBooleanQuery,
   ternaryBooleanQuery,
   queryWithParentheses,

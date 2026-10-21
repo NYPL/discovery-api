@@ -1,5 +1,5 @@
 {
-  "took": 11,
+  "took": 5,
   "timed_out": false,
   "_shards": {
     "total": 2,
@@ -12,12 +12,12 @@
       "value": 1,
       "relation": "eq"
     },
-    "max_score": 15.73737,
+    "max_score": 15.700724,
     "hits": [
       {
-        "_index": "resources-2024-10-22",
+        "_index": "resources-qa-2026-08-25",
         "_id": "b10022734",
-        "_score": 15.73737,
+        "_score": 15.700724,
         "_source": {
           "extent": [
             "xiv, 381 p., [16] leaves of plates : ill. ;"
@@ -32,19 +32,11 @@
           "nyplSource": [
             "sierra-nypl"
           ],
-          "subjectLiteral_exploded": [
-            "African American arts",
-            "African American arts -- New York (State)",
-            "African American arts -- New York (State) -- New York",
-            "Arts, Modern",
-            "Arts, Modern -- 20th century",
-            "Arts, Modern -- 20th century -- New York (State)",
-            "Arts, Modern -- 20th century -- New York (State) -- New York",
-            "Harlem Renaissance",
-            "Harlem (New York, N.Y.)"
-          ],
           "numItemDatesParsed": [
             0
+          ],
+          "editionStatement": [
+            "1st ed."
           ],
           "publisherLiteral": [
             "Knopf : distributed by Random House"
@@ -58,12 +50,12 @@
           "numItemsTotal": [
             3
           ],
-          "createdYear": [
-            1981
-          ],
           "buildingLocationIds": [
             "sc",
             "ma"
+          ],
+          "createdYear": [
+            1981
           ],
           "title": [
             "When Harlem was in vogue"
@@ -71,11 +63,13 @@
           "type": [
             "nypl:Item"
           ],
-          "shelfMark": [
-            "IEC 81-1139"
-          ],
           "numItemVolumesParsed": [
             0
+          ],
+          "shelfMark": [
+            "IEC 81-1139",
+            "Sc *700-L (Lewis, D. When Harlem was in vogue)",
+            "Sc E 96-780"
           ],
           "createdString": [
             "1981"
@@ -89,6 +83,14 @@
           "numElectronicResources": [
             0
           ],
+          "creator_displayComponents": [
+            {
+              "role": "",
+              "name": "Lewis, David Levering, 1936-",
+              "label": "Lewis, David Levering, 1936-",
+              "title": ""
+            }
+          ],
           "dateStartYear": [
             1981
           ],
@@ -99,6 +101,14 @@
             {
               "type": "bf:ShelfMark",
               "value": "IEC 81-1139"
+            },
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc *700-L (Lewis, D. When Harlem was in vogue)"
+            },
+            {
+              "type": "bf:ShelfMark",
+              "value": "Sc E 96-780"
             },
             {
               "type": "nypl:Bnumber",
@@ -121,8 +131,8 @@
               "value": "(WaOLN)nyp0022812"
             }
           ],
-          "popularity": 181,
-          "updatedAt": 1729020843838,
+          "popularity": 179,
+          "updatedAt": 1787860889973,
           "publicationStatement": [
             "New York : Knopf : distributed by Random House, 1981."
           ],
@@ -131,6 +141,8 @@
           ],
           "identifier": [
             "urn:shelfmark:IEC 81-1139",
+            "urn:shelfmark:Sc *700-L (Lewis, D. When Harlem was in vogue)",
+            "urn:shelfmark:Sc E 96-780",
             "urn:bnum:10022734",
             "urn:isbn:0394495721",
             "urn:oclc:NYPG25743597-B",
@@ -139,6 +151,9 @@
           ],
           "numCheckinCardItems": [
             0
+          ],
+          "contributorNameTitle": [
+            "Lewis, David Levering, 1936-"
           ],
           "materialType": [
             {
@@ -155,6 +170,16 @@
           "dateString": [
             "1981"
           ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1982",
+                "gte": "1981"
+              },
+              "raw": "810724s1981    nyuaf    b    001 0 eng  cam i ",
+              "tag": "s"
+            }
+          ],
           "mediaType": [
             {
               "id": "mediatypes:n",
@@ -165,7 +190,8 @@
             "African American arts -- New York (State) -- New York.",
             "Arts, Modern -- 20th century -- New York (State) -- New York.",
             "Harlem Renaissance.",
-            "Harlem (New York, N.Y.)"
+            "Harlem (New York, N.Y.)",
+            "Black author."
           ],
           "titleDisplay": [
             "When Harlem was in vogue / David Levering Lewis."
@@ -173,6 +199,13 @@
           "uri": "b10022734",
           "lccClassification": [
             "NX511.N4 L48 1981"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
+          "recordTypeId": "a",
+          "collectionIds": [
+            "scf",
+            "mag"
           ],
           "placeOfPublication": [
             "New York"
@@ -182,6 +215,9 @@
               "id": "urn:biblevel:m",
               "label": "monograph/item"
             }
+          ],
+          "physicalDescription": [
+            "xiv, 381 p., [16] leaves of plates : ill. ; 24 cm."
           ],
           "dimensions": [
             "24 cm."
@@ -200,7 +236,7 @@
               "max_score": null,
               "hits": [
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022734",
                   "_nested": {
                     "field": "items",
@@ -217,6 +253,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -226,8 +265,11 @@
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
                     ],
+                    "collectionId": [
+                      "scf"
+                    ],
                     "formatLiteral": [
-                      "Text"
+                      "Book/text"
                     ],
                     "holdingLocation": [
                       {
@@ -237,9 +279,6 @@
                     ],
                     "holdingLocation_packed": [
                       "loc:scff2||Schomburg Center - Research & Reference"
-                    ],
-                    "idBarcode": [
-                      "33433034124614"
                     ],
                     "identifier": [
                       "urn:shelfmark:Sc E 96-780",
@@ -254,6 +293,9 @@
                         "value": "33433034124614",
                         "type": "bf:Barcode"
                       }
+                    ],
+                    "idBarcode": [
+                      "33433034124614"
                     ],
                     "owner": [
                       {
@@ -293,7 +335,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022734",
                   "_nested": {
                     "field": "items",
@@ -310,6 +352,9 @@
                     "accessMessage_packed": [
                       "accessMessage:-||No restrictions"
                     ],
+                    "buildingLocationId": [
+                      "sc"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:2",
@@ -319,8 +364,11 @@
                     "catalogItemType_packed": [
                       "catalogItemType:2||book non-circ"
                     ],
+                    "collectionId": [
+                      "scf"
+                    ],
                     "formatLiteral": [
-                      "Text"
+                      "Book/text"
                     ],
                     "holdingLocation": [
                       {
@@ -330,9 +378,6 @@
                     ],
                     "holdingLocation_packed": [
                       "loc:scff1||Schomburg Center - Research & Reference - Open Shelf"
-                    ],
-                    "idBarcode": [
-                      "33433015873411"
                     ],
                     "identifier": [
                       "urn:shelfmark:Sc *700-L (Lewis, D. When Harlem was in vogue)",
@@ -347,6 +392,9 @@
                         "value": "33433015873411",
                         "type": "bf:Barcode"
                       }
+                    ],
+                    "idBarcode": [
+                      "33433015873411"
                     ],
                     "owner": [
                       {
@@ -386,7 +434,7 @@
                   ]
                 },
                 {
-                  "_index": "resources-2024-10-22",
+                  "_index": "resources-qa-2026-08-25",
                   "_id": "b10022734",
                   "_nested": {
                     "field": "items",
@@ -403,6 +451,9 @@
                     "accessMessage_packed": [
                       "accessMessage:1||Use in library"
                     ],
+                    "buildingLocationId": [
+                      "ma"
+                    ],
                     "catalogItemType": [
                       {
                         "id": "catalogItemType:55",
@@ -412,8 +463,11 @@
                     "catalogItemType_packed": [
                       "catalogItemType:55||book, limited circ, MaRLI"
                     ],
+                    "collectionId": [
+                      "mag"
+                    ],
                     "formatLiteral": [
-                      "Text"
+                      "Book/text"
                     ],
                     "holdingLocation": [
                       {
@@ -423,9 +477,6 @@
                     ],
                     "holdingLocation_packed": [
                       "loc:mag82||Schwarzman Building - Milstein Division Room 121"
-                    ],
-                    "idBarcode": [
-                      "33433035187214"
                     ],
                     "identifier": [
                       "urn:shelfmark:IEC 81-1139",
@@ -440,6 +491,9 @@
                         "value": "33433035187214",
                         "type": "bf:Barcode"
                       }
+                    ],
+                    "idBarcode": [
+                      "33433035187214"
                     ],
                     "owner": [
                       {
@@ -514,7 +568,7 @@
         "sum_other_doc_count": 0,
         "buckets": [
           {
-            "key": "Text",
+            "key": "Book/text",
             "doc_count": 3
           }
         ]
