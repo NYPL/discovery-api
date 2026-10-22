@@ -1,13 +1,10 @@
-name: Changelog and versioning
+name: Changelog
 
 on:
   pull_request:
     branches:
       - main
       - qa
-      - production
-  push:
-    branches:
       - production
 
 permissions:
@@ -36,50 +33,3 @@ jobs:
         uses: dangoslen/changelog-enforcer@v3
         with:
           skipLabels: 'skip-changelog'
-
-  version-bump:
-    # for PRs merging into production, unless labeled to skip
-    if: |
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.base.ref == 'production' &&
-      !contains(github.event.pull_request.labels.*.name, 'skip-versionbump')
-    permissions:
-      contents: read
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Enforce package version bump
-        run: |
-          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
-          base_version=$(git show origin/${{ github.event.pull_request.base.ref }}:package.json | node -pe 'JSON.parse(require("fs").readFileSync(0, "utf8")).version')
-          head_version=$(node -pe 'require("./package.json").version')
-          if [ "$base_version" = "$head_version" ]; then
-            echo "package version ($head_version) must be bumped from ${{ github.event.pull_request.base.ref }}'s version ($base_version)."
-            exit 1
-          fi
-          echo "version bumped $base_version -> $head_version"
-
-  tag-release:
-    # tag production with the package version once a version-bump PR is merged
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/production')
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Tag release
-        run: |
-          version=$(node -pe 'require("./package.json").version')
-          tag="v$version"
-          if git ls-remote --tags origin | grep -q "refs/tags/$tag$"; then
-            echo "Tag $tag already exists on origin, skipping."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag "$tag"
-          git push origin "$tag"
