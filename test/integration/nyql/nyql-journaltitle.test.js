@@ -39,23 +39,24 @@ describe('Discovery API - NYQL journaltitle scope tests', function () {
   this.timeout(120000)
   let totalResults, results
   before(async () => {
-    const resp = await fetchAllResults('journaltitle = "nature"')
+    const resp = await fetchAllResults('journaltitle = "vogue"')
     totalResults = resp.totalResults
     results = resp.results
   })
 
-  it('journaltitle = "nature" returns results', async () => {
+  it('journaltitle = "vogue" returns results', async () => {
+    console.log(totalResults)
     expect(totalResults).to.be.above(0)
   })
 
-  it('journaltitle = "nature" returns only results with "nature" in some title field, across all pages', async () => {
+  it('journaltitle = "vogue" returns only results with "vogue" in some title field, across all pages', async () => {
     results.forEach((result) => {
       const titles = titleValues(result)
-      expect(titles.some((title) => title.includes('nature'))).to.equal(true)
+      expect(titles.some((title) => title.includes('vogue'))).to.equal(true)
     })
   })
 
-  it('journaltitle = "nature" returns only results marked as serials (issuance urn:biblevel:s), across all pages', async () => {
+  it('journaltitle = "vogue" returns only results marked as serials (issuance urn:biblevel:s), across all pages', async () => {
     results.forEach((result) => {
       const issuanceIds = (result?.issuance || []).map((issuance) => issuance['@id'])
       expect(issuanceIds).to.include(JOURNAL_ISSUANCE_ID)
