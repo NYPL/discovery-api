@@ -75,10 +75,10 @@ describe('JSONLD Serializers', () => {
       )
     })
 
-    describe('linkedEntry', () => {
+    describe('linkingEntry', () => {
       it('does omits parallels if they don\'t exist', async () => {
         const serialized = await ResourceSerializer.serialize({
-          linkedEntry:
+          linkingEntry:
         [
           {
             parallelDisplay: null,
@@ -121,11 +121,11 @@ describe('JSONLD Serializers', () => {
           }
         ]
         })
-        expect(serialized.parallelLinkedEntry).to.equal(undefined)
+        expect(serialized.parallelLinkingEntry).to.equal(undefined)
       })
       it('includes parallels with null padding when there are some parallels', async () => {
         const serialized = await ResourceSerializer.serialize({
-          linkedEntry:
+          linkingEntry:
         [
           {
             parallelDisplay: null,
@@ -168,12 +168,12 @@ describe('JSONLD Serializers', () => {
           }
         ]
         })
-        expect(serialized.parallelLinkedEntry.length).to.equal(serialized.linkedEntry.length)
-        expect(serialized.parallelLinkedEntry[0]).to.be.equal(null)
+        expect(serialized.parallelLinkingEntry.length).to.equal(serialized.linkingEntry.length)
+        expect(serialized.parallelLinkingEntry[0]).to.be.equal(null)
       })
       it('includes query label and display values', async () => {
         const serialized = await ResourceSerializer.serialize({
-          linkedEntry:
+          linkingEntry:
         [
           {
             parallelDisplay: null,
@@ -216,7 +216,7 @@ describe('JSONLD Serializers', () => {
           }
         ]
         })
-        expect(serialized.linkedEntry.every((entry) => entry.label && entry.query && entry.display))
+        expect(serialized.linkingEntry.every((entry) => entry.label && entry.query && entry.display))
       })
     })
 
