@@ -3,7 +3,7 @@ const sinon = require('sinon')
 
 const esClient = require('../lib/elasticsearch/client')
 const { NotFoundError } = require('../lib/errors')
-const { theThing } = require('../lib/linked-entry')
+const { theThing, generateNyqlQuery } = require('../lib/linked-entry')
 
 // Note: lib/linked-entry.js destructures `getLinkedEntryForUri` off of the
 // client module at require-time, so stubbing `esClient.getLinkedEntryForUri`
@@ -15,11 +15,32 @@ const stubLinkedEntries = (linkedEntries) => {
 }
 
 describe('linked-entry', () => {
+  describe('generateNyqlQuery', () => {
+    it('generates a query when all the fields are present, with array id fields', () => {
+      const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['oclc1', 'oclc2'], author: 'author', title: 'title', language: 'language' }
+      const query = generateNyqlQuery(123, fakeLinkingEntry)
+      expect(query).to.equal('((author adj author and title adj title and language = language) or (isbn = isbn or lccn = lccn or oclc = oclc1 or oclc = oclc2 or lccn = lccn)) not bibnumber = 123')
+    })
+    it('generates a query when some the fields are absent, with array id fields', () => {
+      const fakeLinkingEntry = { isbn: 'isbn', oclc: ['oclc1', 'oclc2'], title: 'title' }
+      const query = generateNyqlQuery(123, fakeLinkingEntry)
+      expect(query).to.equal('((title adj title) or (isbn = isbn or oclc = oclc1 or oclc = oclc2)) not bibnumber = 123')
+    })
+    it('generates a query when there is only one id field', () => {
+      const fakeLinkingEntry = { isbn: 'isbn' }
+      const query = generateNyqlQuery(123, fakeLinkingEntry)
+      expect(query).to.equal('((isbn = isbn)) not bibnumber = 123')
+    })
+    it('generates a query when there is only one id field', () => {
+      const fakeLinkingEntry = { title: 'title' }
+      const query = generateNyqlQuery(123, fakeLinkingEntry)
+      expect(query).to.equal('((title adj title)) not bibnumber = 123')
+    })
+  })
   describe('theThing', () => {
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
     })
-
     describe('when no linkedEntry matches the given params', () => {
       beforeEach(() => {
         stubLinkedEntries([
