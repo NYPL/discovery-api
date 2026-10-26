@@ -12,8 +12,9 @@ permissions:
 
 jobs:
   changelog:
-    # Skip back-merges 
+    # skip back-merges 
     if: |
+      github.event_name == 'pull_request' &&
       !(
         (github.event.pull_request.base.ref == 'main' &&
           contains(fromJSON('["qa", "production"]'), github.event.pull_request.head.ref)) ||
