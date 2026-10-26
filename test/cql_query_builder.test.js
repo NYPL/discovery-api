@@ -189,7 +189,7 @@ describe('CQL Query Builder', function () {
   })
 
   it('Bib number query', function () {
-    expect(new CqlQuery('bib number = "b1234"').buildEsQuery())
+    expect(new CqlQuery('bibnumber = "b1234"').buildEsQuery())
       .to.deep.equal(
         bibNumberQuery
       )
@@ -410,7 +410,6 @@ describe('CQL Query Builder', function () {
 
     it('Maps controlled vocab fields correctly for == when label is used instead of value', () => {
       const result = new CqlQuery('division == "Milstein Division"').buildEsQuery()
-      console.dir(result, { depth: null })
       expect(result).to.deep.equal(
         divisionExact
       )
