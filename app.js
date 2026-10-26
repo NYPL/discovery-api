@@ -55,20 +55,12 @@ app.init = async () => {
   })
 
   app.get('/', function (req, res) {
-    res.send({
-      version: pjson.version,
-      resourcesIndex: process.env.RESOURCES_INDEX,
-      browseIndex: process.env.BROWSE_INDEX
-    })
+    res.send(pjson.version)
   })
 
   // Just testing route
   app.get('/api/v0.1/discovery', function (req, res) {
-    res.send({
-      version: pjson.version,
-      resourcesIndex: process.env.RESOURCES_INDEX,
-      browseIndex: process.env.BROWSE_INDEX
-    })
+    res.send(pjson.version)
   })
 
   app.get('/api/v0.1/discovery/swagger', function (req, res) {
