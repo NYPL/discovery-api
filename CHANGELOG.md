@@ -7,3 +7,4 @@
 - Include journaltitle NYQL scope (SCC-5463) and integration tests
 - Add version bump and git tag hooks, and resources/browse index to the JSON returned by health check "/" (SCC-5390)
 - Bump to Node 22
+- Stop logging full patron response (QA-20)
