@@ -1,6 +1,6 @@
 # Changelog
 
-## [Prerelease]
+## [1.2.0] - 2026-10-27
 
 - Default to false requestabilities for missing ReCAP customer codes (SCC-5697)
 - Start of Discovery API changelog + documentation and changelog-enforcing (SCC-5390)
