@@ -8,3 +8,4 @@
 - Add version bump and git tag hooks, and resources/browse index to the JSON returned by health check "/" (SCC-5390)
 - Bump to Node 22
 - Stop logging full patron response (QA-20)
+- Add idNyplSourceId to bibs (SCC-5619)
