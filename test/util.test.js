@@ -223,4 +223,14 @@ describe('Util', function () {
       expect(util.barcodeFromItem({ identifier: [null] })).to.equal(null)
     })
   })
+
+  describe('shishToCamelCase', () => {
+    it('correctly converts from shish kebab to camel case', () => {
+      expect(util.shishToCamelCase('sierra-nypl')).to.eq('SierraNypl')
+      expect(util.shishToCamelCase('recap-cul')).to.eq('RecapCul')
+      expect(util.shishToCamelCase('recap-pul')).to.eq('RecapPul')
+      expect(util.shishToCamelCase('recap-hl')).to.eq('RecapHl')
+      expect(util.shishToCamelCase('recap-someotherlibraryacronym')).to.eq('RecapSomeotherlibraryacronym')
+    })
+  })
 })

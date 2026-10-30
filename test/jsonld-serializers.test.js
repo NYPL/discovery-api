@@ -1,7 +1,6 @@
 const { expect } = require('chai')
 
 const {
-  JsonLdItemSerializer,
   AggregationsSerializer,
   ItemResultsSerializer,
   ItemResourceSerializer,
@@ -11,18 +10,6 @@ const {
 const NyplSourceMapper = require('research-catalog-indexer/lib/utils/nypl-source-mapper')
 
 describe('JSONLD Serializers', () => {
-  describe('JsonLdItemSerializer', () => {
-    describe('getNyplSourceCamelCase', () => {
-      it('produces camel case form of nypl source', () => {
-        expect(JsonLdItemSerializer.getNyplSourceCamelCase('sierra-nypl')).to.eq('SierraNypl')
-        expect(JsonLdItemSerializer.getNyplSourceCamelCase('recap-cul')).to.eq('RecapCul')
-        expect(JsonLdItemSerializer.getNyplSourceCamelCase('recap-pul')).to.eq('RecapPul')
-        expect(JsonLdItemSerializer.getNyplSourceCamelCase('recap-hl')).to.eq('RecapHl')
-        expect(JsonLdItemSerializer.getNyplSourceCamelCase('recap-someotherlibraryacronym')).to.eq('RecapSomeotherlibraryacronym')
-      })
-    })
-  })
-
   describe('ResourceSerializer', () => {
     describe('idNyplSourceId', () => {
       it('adds correct idNyplSourceId for SierraNypl bib', async () => {
