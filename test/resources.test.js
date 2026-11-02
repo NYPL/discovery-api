@@ -12,6 +12,7 @@ const {
   buildElasticQuery,
   buildElasticBody
 } = require('../lib/elasticsearch/elastic-body-builder')
+const linkingEntry = require('../lib/linked-entry.js')
 
 const fixtures = require('./fixtures')
 const { verifyFilterFields } = require('./utils')
@@ -34,49 +35,24 @@ describe('Resources query', function () {
   })
 
   describe('linkingEntry', function () {
-    // NOTE: lib/resources.js destructures `theThing` off of lib/linked-entry
-    // at require-time, so we drive these tests through the real `theThing`
-    // implementation, stubbing `esClient.get` (the lowest-level dependency)
-    // the way lib/linked-entry.js and lib/elasticsearch/client.js consume it.
+    const nyqlQueryReturnValue = { query: '(author = shakespeare) and not (bibnumber = b123)', partialMatch: true }
+    before(() => {
+      sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
+      sinon.stub(linkingEntry, 'getNyqlQueryForParams').resolves(nyqlQueryReturnValue)
+    })
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
+      if (esClient.search.restore) esClient.search.restore()
+      if (app.resources.search.restore) app.resources.search.restore()
     })
 
-    it('parses uri/marcTag/marcTagIndex/hash params and looks up the matching entry', async () => {
-      sinon.stub(esClient, 'get').resolves({
-        _source: { linkingEntry: [{ hash: 123, marcTag: '700', marcTagIndex: 0 }] }
-      })
-
-      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '0', hash: '123' }
-
+    it('triggers a search call with generated nyql query, and indication of partial match', async () => {
+      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '1', hash: '123' }
       const resp = await app.resources.linkingEntry(params)
 
-      sinon.assert.calledWith(esClient.get, sinon.match({ id: 'b1234' }))
-      expect(resp).to.deep.equal({ message: 'nyql query response' })
-    })
-
-    it('rejects with NotFoundError when no linkingEntry matches the parsed params', async () => {
-      sinon.stub(esClient, 'get').resolves({
-        _source: { linkingEntry: [{ hash: 999, marcTag: '710', marcTagIndex: 1 }] }
-      })
-
-      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '0', hash: '123' }
-
-      await expect(app.resources.linkingEntry(params)).to.be.rejectedWith(errors.NotFoundError)
-    })
-
-    it('coerces marcTagIndex and hash to integers before matching', async () => {
-      // Only matches if marcTagIndex (1) and hash (123) are compared as
-      // numbers, not the raw string params ('1', '123') from the route.
-      sinon.stub(esClient, 'get').resolves({
-        _source: { linkingEntry: [{ hash: 123, marcTag: '700', marcTagIndex: 1 }] }
-      })
-
-      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '1', hash: '123' }
-
-      // A match found here (rather than NotFoundError) confirms
-      // marcTagIndex/hash were coerced to numbers before comparison.
-      await expect(app.resources.linkingEntry(params)).to.not.be.rejected
+      sinon.assert.calledWith(app.resources.search, sinon.match({ q: '(author = shakespeare) and not (bibnumber = b123)' }))
+      expect(resp['@type']).to.equal('linkingEntryItemList')
+      expect(resp.resultsDerivedFromPartialMatch).to.equal(true)
     })
   })
 
