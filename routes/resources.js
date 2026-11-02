@@ -112,7 +112,7 @@ module.exports = function (app) {
     function (req, res, next) {
       const params = req.params
       return app.resources
-        .linkedEntry(params, { baseUrl: app.baseUrl }, req)
+        .linkingEntry(params, { baseUrl: app.baseUrl }, req)
         .then((resp) => respond(res, resp, params))
         .catch((error) => next(error))
     }
