@@ -3,7 +3,7 @@ const sinon = require('sinon')
 
 const esClient = require('../lib/elasticsearch/client')
 const { NotFoundError } = require('../lib/errors')
-const { generateNyqlQuery, getNyqlQueryForParams } = require('../lib/linked-entry')
+const { generateNyqlQuery, getNyqlQueryForParams, findMatchingLinkingEntry } = require('../lib/linked-entry')
 
 // Note: lib/linked-entry.js destructures `getLinkingEntriesForUri` off of the
 // client module at require-time, so stubbing `esClient.getLinkingEntriesForUri`
@@ -78,32 +78,97 @@ describe('linked-entry', () => {
         await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
       })
     })
+    describe.only('findMatchingLinkingEntry', () => {
+      it('when a linkingEntry matches on hash and marcTag, but marcTagIndex differs it returns partial match', async () => {
+        const entry = { hash: 123, marcTag: '700', marcTagIndex: 5 }
 
-    describe('when a linkingEntry matches on hash and marcTag, but marcTagIndex differs (partial match)', () => {
-      beforeEach(() => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 5 }
-        ])
-      })
-
-      it('resolves with a response flagged as potentially stale', async () => {
         const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response', potentiallyStaleData: true })
-      })
-    })
-
-    describe('when a linkingEntry matches on hash, marcTag, and marcTagIndex (whole match)', () => {
-      beforeEach(() => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 0 }
-        ])
+        const resp = findMatchingLinkingEntry(params, [entry])
+        expect(resp).to.deep.equal({ linkingEntry: entry, partialMatch: true })
       })
 
-      it('resolves with the nyql query response, not flagged as stale', async () => {
+      it('indicates when whole match is found', async () => {
         const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
+        const entry = { hash: 123, marcTag: '700', marcTagIndex: 0 }
+        const resp = findMatchingLinkingEntry(params, [{ hash: 123, marcTag: '700', marcTagIndex: 0 }])
+        expect(resp).to.deep.equal({ linkingEntry: entry, partialMatch: false })
+      })
+      describe('with multiple linked entries sharing some fields', () => {
+        const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
+
+        it('selects the whole match and ignores decoys that only share one field', async () => {
+          const entries = [
+            { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
+            { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
+            { hash: 999, marcTag: '710', marcTagIndex: 0 }, // marcTagIndex matches only
+            { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real whole match
+          ]
+
+          const resp = findMatchingLinkingEntry(params, entries)
+          expect(resp).to.deep.equal({ linkingEntry: entries[3], partialMatch: false })
+        })
+
+        it('returns null when no matches exist', async () => {
+          const entries = [
+            { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
+            { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
+            { hash: 999, marcTag: '710', marcTagIndex: 0 } // marcTagIndex matches only
+          ]
+
+          expect(findMatchingLinkingEntry(params, entries)).to.deep.equal(null)
+        })
+
+        it('selects the matching entry when several entries share the same hash but different marcTags', async () => {
+          const entries = [
+            { hash: 123, marcTag: '650', marcTagIndex: 0 },
+            { hash: 123, marcTag: '651', marcTagIndex: 0 },
+            { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real match
+          ]
+
+          const resp = findMatchingLinkingEntry(params, entries)
+          expect(resp).to.deep.equal({ linkingEntry: entries[2], partialMatch: false })
+        })
+
+        it('selects the matching entry when several entries share hash and marcTag but differ by index', async () => {
+          const entries = [
+            { hash: 123, marcTag: '700', marcTagIndex: 0 }, // the real whole match, listed first
+            { hash: 123, marcTag: '700', marcTagIndex: 1 },
+            { hash: 123, marcTag: '700', marcTagIndex: 2 }
+          ]
+
+          const resp = findMatchingLinkingEntry(params, entries)
+          expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
+        })
+
+        it('can handle duplicated entries', async () => {
+          const entries = [
+            { hash: 123, marcTag: '700', marcTagIndex: 0 },
+            { hash: 123, marcTag: '700', marcTagIndex: 0 }
+          ]
+
+          const resp = findMatchingLinkingEntry(params, entries)
+          expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
+        })
+
+        it('prefers the whole match over a partial match that precedes it in the array', async () => {
+          const entries = [
+            { hash: 123, marcTag: '700', marcTagIndex: 5 }, // partial match, listed first
+            { hash: 123, marcTag: '700', marcTagIndex: 0 } // whole match, listed second
+          ]
+
+          const resp = findMatchingLinkingEntry(params, entries)
+          expect(resp).to.deep.equal({ linkingEntry: entries[1], partialMatch: false })
+        })
+
+        it('finds the whole match when it precedes a partial match in the array', async () => {
+          const entries = [
+            { hash: 123, marcTag: '700', marcTagIndex: 0 }, // whole match, listed first
+            { hash: 123, marcTag: '700', marcTagIndex: 5 } // partial match, listed second
+          ]
+
+          const resp = findMatchingLinkingEntry(params, entries)
+          expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
+        })
       })
     })
 
@@ -123,97 +188,6 @@ describe('linked-entry', () => {
 
       const params = { uri: 'b1234', hash: 1, marcTag: '700', marcTagIndex: 0 }
       await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError, /Record not found: b1234/)
-    })
-
-    describe('with multiple linked entries sharing some fields', () => {
-      const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-
-      it('selects the whole match and ignores decoys that only share one field', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
-          { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
-          { hash: 999, marcTag: '710', marcTagIndex: 0 }, // marcTagIndex matches only
-          { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real whole match
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
-      })
-
-      it('rejects with NotFoundError when every entry shares at most one field with params', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
-          { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
-          { hash: 999, marcTag: '710', marcTagIndex: 0 } // marcTagIndex matches only
-        ])
-
-        await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
-      })
-
-      it('selects the matching entry when several entries share the same hash but different marcTags', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '650', marcTagIndex: 0 },
-          { hash: 123, marcTag: '651', marcTagIndex: 0 },
-          { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real match
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
-      })
-
-      it('selects the matching entry when several entries share hash and marcTag but differ by index', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 0 }, // the real whole match, listed first
-          { hash: 123, marcTag: '700', marcTagIndex: 1 },
-          { hash: 123, marcTag: '700', marcTagIndex: 2 }
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
-      })
-
-      it('resolves without error when the matching entry is duplicated verbatim', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 0 },
-          { hash: 123, marcTag: '700', marcTagIndex: 0 }
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
-      })
-
-      // `findMatchingLinkingEntry` (lib/linked-entry.js) prefers an exact
-      // (whole) match over a partial one regardless of array order. These
-      // tests verify that preference holds in both orderings.
-      it('prefers the whole match over a partial match that precedes it in the array', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 5 }, // partial match, listed first
-          { hash: 123, marcTag: '700', marcTagIndex: 0 } // whole match, listed second
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
-      })
-
-      it('finds the whole match when it precedes a partial match in the array', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 0 }, // whole match, listed first
-          { hash: 123, marcTag: '700', marcTagIndex: 5 } // partial match, listed second
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response' })
-      })
-
-      it('flags data as stale only when no whole match exists, regardless of partial-match position', async () => {
-        stubLinkedEntries([
-          { hash: 123, marcTag: '700', marcTagIndex: 5 },
-          { hash: 123, marcTag: '700', marcTagIndex: 9 }
-        ])
-
-        const resp = await getNyqlQueryForParams(params)
-        expect(resp).to.deep.equal({ message: 'nyql query response', potentiallyStaleData: true })
-      })
     })
   })
 })
