@@ -16,22 +16,22 @@ describe('linked-entry', () => {
       buildElasticQuery({ q: query, search_scope: 'cql' })
     }
     it('generates a query when all the fields are present, with array id fields', () => {
-      const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['(OCLC)oclc1', 'oclc2'], author: 'author of a book', title: 'title of a book', language: 'language' }
+      const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['(OCLC) oclc1', 'oclc2'], author: 'author of a book', title: 'title of a book', language: 'language' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
       expect(testQueryBuilding(query))
-      expect(query).to.equal('((author adj "author of a book" and title adj "title of a book" and language = "language") or (isbn = isbn or lccn = lccn or oclc = oclc1 or oclc = oclc2 or lccn = lccn)) not bibnumber = 123')
+      expect(query).to.equal('((author adj "author of a book" and title adj "title of a book" and language = "language") or (isbn = "isbn" or oclc = "(OCLC) oclc1" or oclc = "oclc2" or lccn = "lccn")) not bibnumber = 123')
     })
     it('generates a query when some the fields are absent, with array id fields', () => {
-      const fakeLinkingEntry = { isbn: 'isbn', oclc: ['oclc1', 'oclc2'], title: 'title of a book' }
+      const fakeLinkingEntry = { isbn: 'isbn', oclc: ['(OCLC) oclc1', 'oclc2'], title: 'title of a book' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
       expect(testQueryBuilding(query))
-      expect(query).to.equal('((title adj "title of a book") or (isbn = isbn or oclc = oclc1 or oclc = oclc2)) not bibnumber = 123')
+      expect(query).to.equal('((title adj "title of a book") or (isbn = "isbn" or oclc = "(OCLC) oclc1" or oclc = "oclc2")) not bibnumber = 123')
     })
     it('generates a query when there is only one id field', () => {
       const fakeLinkingEntry = { isbn: 'isbn' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
       expect(testQueryBuilding(query))
-      expect(query).to.equal('((isbn = isbn)) not bibnumber = 123')
+      expect(query).to.equal('((isbn = "isbn")) not bibnumber = 123')
     })
     it('generates a query when there is only one id field', () => {
       const fakeLinkingEntry = { title: 'title of a book' }
