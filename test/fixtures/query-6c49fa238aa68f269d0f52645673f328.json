@@ -1,0 +1,346 @@
+{
+  "took": 13,
+  "timed_out": false,
+  "_shards": {
+    "total": 2,
+    "successful": 2,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 1,
+      "relation": "eq"
+    },
+    "max_score": 15.701117,
+    "hits": [
+      {
+        "_index": "resources-qa-2026-07-14",
+        "_id": "cb4032259",
+        "_score": 15.701117,
+        "_source": {
+          "extent": [
+            "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ;"
+          ],
+          "nyplSource": [
+            "recap-cul"
+          ],
+          "publisherLiteral": [
+            "Nelson"
+          ],
+          "language": [
+            {
+              "id": "lang:eng",
+              "label": "English"
+            }
+          ],
+          "buildingLocationIds": [
+            "rc"
+          ],
+          "createdYear": [
+            1966
+          ],
+          "parallelSeriesAddedEntry": [],
+          "type": [
+            "nypl:Item"
+          ],
+          "shelfMark": [],
+          "idLccn": [
+            "66070181"
+          ],
+          "parallelCreators_displayPacked": [],
+          "dateStartYear": [
+            1966
+          ],
+          "parallelContributors_displayPacked": [],
+          "parallelCreatorLiteral": [
+            null
+          ],
+          "identifierV2": [
+            {
+              "type": "nypl:Bnumber",
+              "value": "4032259"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "ocm01650294"
+            },
+            {
+              "type": "nypl:Oclc",
+              "value": "SCSB-4764019"
+            },
+            {
+              "type": "bf:Lccn",
+              "value": "66070181"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(OCoLC)ocm01650294"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "(NNC)4032259"
+            },
+            {
+              "type": "bf:Identifier",
+              "value": "4032259"
+            }
+          ],
+          "seriesAddedEntry": [],
+          "contributors_displayPacked": [],
+          "updatedAt": 1784306415586,
+          "publicationStatement": [
+            "[London] : Nelson, 1966."
+          ],
+          "identifier": [
+            "urn:bnum:4032259",
+            "urn:oclc:ocm01650294",
+            "urn:oclc:SCSB-4764019",
+            "urn:lccn:66070181",
+            "urn:identifier:(OCoLC)ocm01650294",
+            "urn:identifier:(NNC)4032259",
+            "urn:identifier:4032259"
+          ],
+          "creators_displayPacked": [
+            "Burnett, John, 1925-2006||Burnett, John, 1925-2006"
+          ],
+          "dates": [
+            {
+              "range": {
+                "lt": "1967",
+                "gte": "1966"
+              },
+              "raw": "750923s1966    enkacfh  b    000 0 eng  ",
+              "tag": "s"
+            }
+          ],
+          "mediaType": [
+            {
+              "id": "mediatypes:undefined",
+              "label": "unmediated"
+            }
+          ],
+          "seriesAddedEntry_displayPacked": [],
+          "subjectLiteral": [
+            "Diet -- Great Britain.",
+            "Food consumption -- Great Britain."
+          ],
+          "parallelSeriesAddedEntry_displayPacked": [],
+          "lccClassification": [
+            "TX360.G7 B8"
+          ],
+          "parallelSubjectLiteral": [],
+          "formatId": "a",
+          "collectionIds": [],
+          "physicalDescription": [
+            "x, 296 pages, 12 plates (including ports.~|~|~ facsims.) : tables ; 23 cm"
+          ],
+          "note": [
+            {
+              "noteType": "Bibliography",
+              "label": "Bibliographical footnotes.",
+              "type": "bf:Note"
+            }
+          ],
+          "numItemDatesParsed": [
+            0
+          ],
+          "numItemsTotal": [
+            1
+          ],
+          "title": [
+            "Plenty and want ; a social history of diet in England from 1815 to the present day."
+          ],
+          "numItemVolumesParsed": [
+            0
+          ],
+          "createdString": [
+            "1966"
+          ],
+          "creatorLiteral": [
+            "Burnett, John, 1925-2006"
+          ],
+          "numElectronicResources": [
+            0
+          ],
+          "idOclc": [
+            "ocm01650294",
+            "SCSB-4764019"
+          ],
+          "numCheckinCardItems": [
+            0
+          ],
+          "materialType": [
+            {
+              "id": "resourcetypes:txt",
+              "label": "Text"
+            }
+          ],
+          "carrierType": [
+            {
+              "id": "carriertypes:nc",
+              "label": "volume"
+            }
+          ],
+          "dateString": [
+            "1966"
+          ],
+          "titleDisplay": [
+            "Plenty and want ; a social history of diet in England from 1815 to the present day."
+          ],
+          "uri": "cb4032259",
+          "parallelContributorLiteral": [],
+          "recordTypeId": "a",
+          "placeOfPublication": [
+            "[London]"
+          ],
+          "issuance": [
+            {
+              "id": "urn:biblevel:m",
+              "label": "monograph/item"
+            }
+          ],
+          "dimensions": [
+            "23 cm"
+          ]
+        },
+        "inner_hits": {
+          "items": {
+            "hits": {
+              "total": {
+                "value": 1,
+                "relation": "eq"
+              },
+              "max_score": null,
+              "hits": [
+                {
+                  "_index": "resources-qa-2026-07-14",
+                  "_id": "cb4032259",
+                  "_nested": {
+                    "field": "items",
+                    "offset": 0
+                  },
+                  "_score": null,
+                  "_source": {
+                    "accessMessage": [
+                      {
+                        "id": "accessMessage:2",
+                        "label": "Request in advance"
+                      }
+                    ],
+                    "accessMessage_packed": [
+                      "accessMessage:2||Request in advance"
+                    ],
+                    "catalogItemType": [
+                      {
+                        "id": "catalogItemType:1",
+                        "label": "non-circ"
+                      }
+                    ],
+                    "catalogItemType_packed": [
+                      "catalogItemType:1||non-circ"
+                    ],
+                    "formatLiteral": [
+                      "Book/text"
+                    ],
+                    "identifier": [
+                      "urn:shelfmark:TX360.G79 B93 1966",
+                      "urn:barcode:HS65164695"
+                    ],
+                    "identifierV2": [
+                      {
+                        "value": "TX360.G79 B93 1966",
+                        "type": "bf:ShelfMark"
+                      },
+                      {
+                        "value": "HS65164695",
+                        "type": "bf:Barcode"
+                      }
+                    ],
+                    "idBarcode": [
+                      "HS65164695"
+                    ],
+                    "owner": [
+                      {
+                        "id": "orgs:0002",
+                        "label": "Columbia University Libraries"
+                      }
+                    ],
+                    "owner_packed": [
+                      "orgs:0002||Columbia University Libraries"
+                    ],
+                    "physicalLocation": [
+                      "TX360.G79 B93 1966"
+                    ],
+                    "recapCustomerCode": [
+                      "HS"
+                    ],
+                    "requestable": [
+                      true
+                    ],
+                    "shelfMark": [
+                      "TX360.G79 B93 1966"
+                    ],
+                    "shelfMark_sort": "aTX360.G79 B93 001966",
+                    "status": [
+                      {
+                        "id": "status:a",
+                        "label": "Available"
+                      }
+                    ],
+                    "status_packed": [
+                      "status:a||Available"
+                    ],
+                    "type": [
+                      "bf:Item"
+                    ],
+                    "uri": "ci4087955"
+                  },
+                  "sort": [
+                    null
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations": {
+    "item_location": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": []
+      }
+    },
+    "item_format": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "Book/text",
+            "doc_count": 1
+          }
+        ]
+      }
+    },
+    "item_status": {
+      "doc_count": 1,
+      "_nested": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": "status:a||Available",
+            "doc_count": 1
+          }
+        ]
+      }
+    }
+  }
+}
