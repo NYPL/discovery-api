@@ -11,6 +11,24 @@ const NyplSourceMapper = require('research-catalog-indexer/lib/utils/nypl-source
 
 describe('JSONLD Serializers', () => {
   describe('ResourceSerializer', () => {
+    describe('idNyplSourceId', () => {
+      it('adds correct idNyplSourceId for SierraNypl bib', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          uri: 'b15704876',
+          identifier: ['urn:bnum:b15704876']
+        })
+        expect(serialized.idNyplSourceId).to.deep.equal({ '@type': 'SierraNypl', '@value': '15704876' })
+      })
+
+      it('adds correct idNyplSourceId for RecapCul bib', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          uri: 'cb13686426',
+          identifier: ['urn:bnum:cb13686426']
+        })
+        expect(serialized.idNyplSourceId).to.deep.equal({ '@type': 'RecapCul', '@value': '13686426' })
+      })
+    })
+
     it('enables hasItemDates when numItemsTotal is above thresshold', async () => {
       const esDoc = {
         uri: 'b123',
@@ -73,6 +91,151 @@ describe('JSONLD Serializers', () => {
           expect(serialized.hasItemDates).to.equal(false)
         })
       )
+    })
+
+    describe('linkingEntry', () => {
+      it('does omits parallels if they don\'t exist', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          linkingEntry:
+        [
+          {
+            parallelDisplay: null,
+            label: 'Continues',
+            display: 'linked entry with no parallel',
+            marcTag: '780',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 6357638185,
+            marcTagIndex: 0
+          },
+          {
+            parallelDisplay: null,
+            label: 'Continues',
+            display: 'Si hai zhi you 1974-1984',
+            marcTag: '780',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 6357638185,
+            marcTagIndex: 0
+          },
+          {
+            parallelDisplay: null,
+            label: 'Continued By',
+            display: 'Hong guan',
+            marcTag: '785',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 4789475577,
+            marcTagIndex: 0
+          }
+        ]
+        })
+        expect(serialized.parallelLinkingEntry).to.equal(undefined)
+      })
+      it('includes parallels with null padding when there are some parallels', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          linkingEntry:
+        [
+          {
+            parallelDisplay: null,
+            label: 'Continues',
+            display: 'linked entry with no parallel',
+            marcTag: '780',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 6357638185,
+            marcTagIndex: 0
+          },
+          {
+            parallelDisplay: '四海 之 友 1974-1984',
+            label: 'Continues',
+            display: 'Si hai zhi you 1974-1984',
+            marcTag: '780',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 6357638185,
+            marcTagIndex: 0
+          },
+          {
+            parallelDisplay: '宏觀',
+            label: 'Continued By',
+            display: 'Hong guan',
+            marcTag: '785',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 4789475577,
+            marcTagIndex: 0
+          }
+        ]
+        })
+        expect(serialized.parallelLinkingEntry.length).to.equal(serialized.linkingEntry.length)
+        expect(serialized.parallelLinkingEntry[0]).to.be.equal(null)
+      })
+      it('includes query label and display values', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          linkingEntry:
+        [
+          {
+            parallelDisplay: null,
+            label: 'Continues',
+            display: 'linked entry with no parallel',
+            marcTag: '780',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 6357638185,
+            marcTagIndex: 0
+          },
+          {
+            parallelDisplay: '四海 之 友 1974-1984',
+            label: 'Continues',
+            display: 'Si hai zhi you 1974-1984',
+            marcTag: '780',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 6357638185,
+            marcTagIndex: 0
+          },
+          {
+            parallelDisplay: '宏觀',
+            label: 'Continued By',
+            display: 'Hong guan',
+            marcTag: '785',
+            issn: null,
+            isbn: null,
+            language: null,
+            oclc: null,
+            lccn: null,
+            hash: 4789475577,
+            marcTagIndex: 0
+          }
+        ]
+        })
+        expect(serialized.linkingEntry.every((entry) => entry.label && entry.query && entry.display))
+      })
     })
 
     describe('format', () => {

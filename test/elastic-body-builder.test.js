@@ -210,7 +210,7 @@ describe('bodyForFindByUri', function () {
             _nested: {
               terms: {
                 size: 100,
-                field: 'items.holdingLocation_packed'
+                field: 'items.buildingLocationId'
               }
             }
           }
@@ -336,7 +336,7 @@ describe('bodyForFindByUri', function () {
             _nested: {
               terms: {
                 size: 100,
-                field: 'items.holdingLocation_packed'
+                field: 'items.buildingLocationId'
               }
             }
           }
