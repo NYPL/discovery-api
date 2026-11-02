@@ -6,7 +6,7 @@
 
 - Updates item location filter to use `buildingLocationId` (SCC-5490)
 - Adds `shortLabel`s to the building locations
-- Updates resources indexes: `resoruces-qa-2026-10-23`, `resources-prod-2026-10-29`
+- Updates resources indexes: `resources-qa-2026-10-23`, `resources-prod-2026-10-29`
 - Updates NYPL core version to `2.43`
 - Stop logging full patron response (QA-20)
 
