@@ -3,15 +3,15 @@ const sinon = require('sinon')
 
 const esClient = require('../lib/elasticsearch/client')
 const { NotFoundError } = require('../lib/errors')
-const { theThing, generateNyqlQuery } = require('../lib/linked-entry')
+const { generateNyqlQuery, getNyqlQueryForParams } = require('../lib/linked-entry')
 
-// Note: lib/linked-entry.js destructures `getLinkedEntryForUri` off of the
-// client module at require-time, so stubbing `esClient.getLinkedEntryForUri`
-// directly would have no effect on `theThing`. `getLinkedEntryForUri`
+// Note: lib/linked-entry.js destructures `getLinkingEntriesForUri` off of the
+// client module at require-time, so stubbing `esClient.getLinkingEntriesForUri`
+// directly would have no effect on `getNyqlQueryForParams`. `getLinkingEntriesForUri`
 // internally calls `clientWrapper.get` via a live property lookup, so we stub
 // `esClient.get` (the lowest level we can intercept) to drive these tests.
 const stubLinkedEntries = (linkedEntries) => {
-  return sinon.stub(esClient, 'get').resolves({ _source: { linkedEntry: linkedEntries } })
+  return sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: linkedEntries } })
 }
 
 describe('linked-entry', () => {
@@ -19,29 +19,30 @@ describe('linked-entry', () => {
     it('generates a query when all the fields are present, with array id fields', () => {
       const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['oclc1', 'oclc2'], author: 'author', title: 'title', language: 'language' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((author adj author and title adj title and language = language) or (isbn = isbn or lccn = lccn or oclc = oclc1 or oclc = oclc2 or lccn = lccn)) not bibnumber = 123')
+      expect(query).to.equal('((author adj author and title adj title and language = language) or (isbn = isbn or lccn = lccn or oclc = oclc1 or oclc = oclc2 or lccn = lccn)) and not (bibnumber = 123)')
     })
     it('generates a query when some the fields are absent, with array id fields', () => {
       const fakeLinkingEntry = { isbn: 'isbn', oclc: ['oclc1', 'oclc2'], title: 'title' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((title adj title) or (isbn = isbn or oclc = oclc1 or oclc = oclc2)) not bibnumber = 123')
+      expect(query).to.equal('((title adj title) or (isbn = isbn or oclc = oclc1 or oclc = oclc2)) and not (bibnumber = 123)')
     })
     it('generates a query when there is only one id field', () => {
       const fakeLinkingEntry = { isbn: 'isbn' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((isbn = isbn)) not bibnumber = 123')
+      expect(query).to.equal('((isbn = isbn)) and not (bibnumber = 123)')
     })
     it('generates a query when there is only one id field', () => {
       const fakeLinkingEntry = { title: 'title' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((title adj title)) not bibnumber = 123')
+      expect(query).to.equal('((title adj title)) and not (bibnumber = 123)')
     })
   })
-  describe('theThing', () => {
+
+  describe('getNyqlQueryForParams', () => {
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
     })
-    describe('when no linkedEntry matches the given params', () => {
+    describe('when no linkingEntry matches the given params', () => {
       beforeEach(() => {
         stubLinkedEntries([
           { hash: 111, marcTag: '700', marcTagIndex: 0 },
@@ -51,14 +52,14 @@ describe('linked-entry', () => {
 
       it('throws a NotFoundError', async () => {
         const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
-        await expect(theThing(params)).to.be.rejectedWith(NotFoundError)
+        await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
       })
 
       it('includes the params and linkedEntries in the error message', async () => {
         const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
         try {
-          await theThing(params)
-          throw new Error('expected theThing to reject')
+          await getNyqlQueryForParams(params)
+          throw new Error('expected getNyqlQueryForParams to reject')
         } catch (e) {
           expect(e).to.be.instanceOf(NotFoundError)
           expect(e.message).to.include('b1234')
@@ -74,11 +75,11 @@ describe('linked-entry', () => {
 
       it('rejects with a NotFoundError', async () => {
         const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
-        await expect(theThing(params)).to.be.rejectedWith(NotFoundError)
+        await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
       })
     })
 
-    describe('when a linkedEntry matches on hash and marcTag, but marcTagIndex differs (partial match)', () => {
+    describe('when a linkingEntry matches on hash and marcTag, but marcTagIndex differs (partial match)', () => {
       beforeEach(() => {
         stubLinkedEntries([
           { hash: 123, marcTag: '700', marcTagIndex: 5 }
@@ -87,12 +88,12 @@ describe('linked-entry', () => {
 
       it('resolves with a response flagged as potentially stale', async () => {
         const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response', potentiallyStaleData: true })
       })
     })
 
-    describe('when a linkedEntry matches on hash, marcTag, and marcTagIndex (whole match)', () => {
+    describe('when a linkingEntry matches on hash, marcTag, and marcTagIndex (whole match)', () => {
       beforeEach(() => {
         stubLinkedEntries([
           { hash: 123, marcTag: '700', marcTagIndex: 0 }
@@ -101,7 +102,7 @@ describe('linked-entry', () => {
 
       it('resolves with the nyql query response, not flagged as stale', async () => {
         const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
     })
@@ -110,7 +111,7 @@ describe('linked-entry', () => {
       const getStub = stubLinkedEntries([{ hash: 1, marcTag: '700', marcTagIndex: 0 }])
 
       const params = { uri: 'b1234', hash: 1, marcTag: '700', marcTagIndex: 0 }
-      await theThing(params).catch(() => {})
+      await getNyqlQueryForParams(params).catch(() => {})
 
       sinon.assert.calledWith(getStub, sinon.match({ id: 'b1234' }))
     })
@@ -121,7 +122,7 @@ describe('linked-entry', () => {
       sinon.stub(esClient, 'get').rejects(notFoundError)
 
       const params = { uri: 'b1234', hash: 1, marcTag: '700', marcTagIndex: 0 }
-      await expect(theThing(params)).to.be.rejectedWith(NotFoundError, /Record not found: b1234/)
+      await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError, /Record not found: b1234/)
     })
 
     describe('with multiple linked entries sharing some fields', () => {
@@ -135,7 +136,7 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real whole match
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
 
@@ -146,7 +147,7 @@ describe('linked-entry', () => {
           { hash: 999, marcTag: '710', marcTagIndex: 0 } // marcTagIndex matches only
         ])
 
-        await expect(theThing(params)).to.be.rejectedWith(NotFoundError)
+        await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
       })
 
       it('selects the matching entry when several entries share the same hash but different marcTags', async () => {
@@ -156,7 +157,7 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real match
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
 
@@ -167,7 +168,7 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 2 }
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
 
@@ -177,11 +178,11 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 0 }
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
 
-      // `findMatchingLinkedEntry` (lib/linked-entry.js) prefers an exact
+      // `findMatchingLinkingEntry` (lib/linked-entry.js) prefers an exact
       // (whole) match over a partial one regardless of array order. These
       // tests verify that preference holds in both orderings.
       it('prefers the whole match over a partial match that precedes it in the array', async () => {
@@ -190,7 +191,7 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 0 } // whole match, listed second
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
 
@@ -200,7 +201,7 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 5 } // partial match, listed second
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response' })
       })
 
@@ -210,7 +211,7 @@ describe('linked-entry', () => {
           { hash: 123, marcTag: '700', marcTagIndex: 9 }
         ])
 
-        const resp = await theThing(params)
+        const resp = await getNyqlQueryForParams(params)
         expect(resp).to.deep.equal({ message: 'nyql query response', potentiallyStaleData: true })
       })
     })

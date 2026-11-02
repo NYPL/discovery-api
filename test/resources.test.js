@@ -33,7 +33,7 @@ describe('Resources query', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe('linkedEntry', function () {
+  describe('linkingEntry', function () {
     // NOTE: lib/resources.js destructures `theThing` off of lib/linked-entry
     // at require-time, so we drive these tests through the real `theThing`
     // implementation, stubbing `esClient.get` (the lowest-level dependency)
@@ -44,39 +44,39 @@ describe('Resources query', function () {
 
     it('parses uri/marcTag/marcTagIndex/hash params and looks up the matching entry', async () => {
       sinon.stub(esClient, 'get').resolves({
-        _source: { linkedEntry: [{ hash: 123, marcTag: '700', marcTagIndex: 0 }] }
+        _source: { linkingEntry: [{ hash: 123, marcTag: '700', marcTagIndex: 0 }] }
       })
 
       const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '0', hash: '123' }
 
-      const resp = await app.resources.linkedEntry(params)
+      const resp = await app.resources.linkingEntry(params)
 
       sinon.assert.calledWith(esClient.get, sinon.match({ id: 'b1234' }))
       expect(resp).to.deep.equal({ message: 'nyql query response' })
     })
 
-    it('rejects with NotFoundError when no linkedEntry matches the parsed params', async () => {
+    it('rejects with NotFoundError when no linkingEntry matches the parsed params', async () => {
       sinon.stub(esClient, 'get').resolves({
-        _source: { linkedEntry: [{ hash: 999, marcTag: '710', marcTagIndex: 1 }] }
+        _source: { linkingEntry: [{ hash: 999, marcTag: '710', marcTagIndex: 1 }] }
       })
 
       const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '0', hash: '123' }
 
-      await expect(app.resources.linkedEntry(params)).to.be.rejectedWith(errors.NotFoundError)
+      await expect(app.resources.linkingEntry(params)).to.be.rejectedWith(errors.NotFoundError)
     })
 
     it('coerces marcTagIndex and hash to integers before matching', async () => {
       // Only matches if marcTagIndex (1) and hash (123) are compared as
       // numbers, not the raw string params ('1', '123') from the route.
       sinon.stub(esClient, 'get').resolves({
-        _source: { linkedEntry: [{ hash: 123, marcTag: '700', marcTagIndex: 1 }] }
+        _source: { linkingEntry: [{ hash: 123, marcTag: '700', marcTagIndex: 1 }] }
       })
 
       const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '1', hash: '123' }
 
       // A match found here (rather than NotFoundError) confirms
       // marcTagIndex/hash were coerced to numbers before comparison.
-      await expect(app.resources.linkedEntry(params)).to.not.be.rejected
+      await expect(app.resources.linkingEntry(params)).to.not.be.rejected
     })
   })
 
