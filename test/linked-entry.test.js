@@ -4,37 +4,45 @@ const sinon = require('sinon')
 const esClient = require('../lib/elasticsearch/client')
 const { NotFoundError } = require('../lib/errors')
 const { generateNyqlQuery, getNyqlQueryForParams, findMatchingLinkingEntry } = require('../lib/linked-entry')
+const { buildElasticQuery } = require('../lib/elasticsearch/elastic-body-builder')
 
 // Note: lib/linked-entry.js destructures `getLinkingEntriesForUri` off of the
 // client module at require-time, so stubbing `esClient.getLinkingEntriesForUri`
 // directly would have no effect on `getNyqlQueryForParams`. `getLinkingEntriesForUri`
 // internally calls `clientWrapper.get` via a live property lookup, so we stub
 // `esClient.get` (the lowest level we can intercept) to drive these tests.
-const stubLinkedEntries = (linkedEntries) => {
-  return sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: linkedEntries } })
+const stubLinkingEntries = (linkingEntries) => {
+  return sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: linkingEntries } })
 }
 
 describe('linked-entry', () => {
   describe('generateNyqlQuery', () => {
+    const testQueryBuilding = (query) => {
+      buildElasticQuery({ q: query, search_scope: 'cql' })
+    }
     it('generates a query when all the fields are present, with array id fields', () => {
-      const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['oclc1', 'oclc2'], author: 'author', title: 'title', language: 'language' }
+      const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['(OCLC)oclc1', 'oclc2'], author: 'author of a book', title: 'title of a book', language: 'language' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((author adj author and title adj title and language = language) or (isbn = isbn or lccn = lccn or oclc = oclc1 or oclc = oclc2 or lccn = lccn)) and not (bibnumber = 123)')
+      expect(testQueryBuilding(query))
+      expect(query).to.equal('((author adj "author of a book" and title adj "title of a book" and language = "language") or (isbn = isbn or lccn = lccn or oclc = oclc1 or oclc = oclc2 or lccn = lccn)) not bibnumber = 123')
     })
     it('generates a query when some the fields are absent, with array id fields', () => {
-      const fakeLinkingEntry = { isbn: 'isbn', oclc: ['oclc1', 'oclc2'], title: 'title' }
+      const fakeLinkingEntry = { isbn: 'isbn', oclc: ['oclc1', 'oclc2'], title: 'title of a book' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((title adj title) or (isbn = isbn or oclc = oclc1 or oclc = oclc2)) and not (bibnumber = 123)')
+      expect(testQueryBuilding(query))
+      expect(query).to.equal('((title adj "title of a book") or (isbn = isbn or oclc = oclc1 or oclc = oclc2)) not bibnumber = 123')
     })
     it('generates a query when there is only one id field', () => {
       const fakeLinkingEntry = { isbn: 'isbn' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((isbn = isbn)) and not (bibnumber = 123)')
+      expect(testQueryBuilding(query))
+      expect(query).to.equal('((isbn = isbn)) not bibnumber = 123')
     })
     it('generates a query when there is only one id field', () => {
-      const fakeLinkingEntry = { title: 'title' }
+      const fakeLinkingEntry = { title: 'title of a book' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
-      expect(query).to.equal('((title adj title)) and not (bibnumber = 123)')
+      expect(testQueryBuilding(query))
+      expect(query).to.equal('((title adj "title of a book")) not bibnumber = 123')
     })
   })
   describe('findMatchingLinkingEntry', () => {
@@ -137,7 +145,7 @@ describe('linked-entry', () => {
     })
     describe('when no linkingEntry matches the given params', () => {
       beforeEach(() => {
-        stubLinkedEntries([
+        stubLinkingEntries([
           { hash: 111, marcTag: '700', marcTagIndex: 0 },
           { hash: 222, marcTag: '710', marcTagIndex: 1 }
         ])
@@ -148,7 +156,7 @@ describe('linked-entry', () => {
         await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
       })
 
-      it('includes the params and linkedEntries in the error message', async () => {
+      it('includes the params and linkingEntries in the error message', async () => {
         const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
         try {
           await getNyqlQueryForParams(params)
@@ -161,13 +169,13 @@ describe('linked-entry', () => {
       })
     })
 
-    it('rejects with a NotFoundError when linkedEntries is an empty array', async () => {
-      stubLinkedEntries([])
+    it('rejects with a NotFoundError when linkingEntries is an empty array', async () => {
+      stubLinkingEntries([])
       const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
       await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
     })
     it('looks up the ES doc using the uri from params', async () => {
-      const getStub = stubLinkedEntries([{ hash: 1, marcTag: '700', marcTagIndex: 0 }])
+      const getStub = stubLinkingEntries([{ hash: 1, marcTag: '700', marcTagIndex: 0 }])
 
       const params = { uri: 'b1234', hash: 1, marcTag: '700', marcTagIndex: 0 }
       await getNyqlQueryForParams(params).catch(() => {})
