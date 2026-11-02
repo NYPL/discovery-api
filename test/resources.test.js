@@ -489,7 +489,7 @@ describe('Resources query', function () {
           item_location: {
             nested: { path: 'items' },
             aggs: {
-              _nested: { terms: { size: 100, field: 'items.holdingLocation_packed' } }
+              _nested: { terms: { size: 100, field: 'items.buildingLocationId' } }
             }
           },
           item_status: {
@@ -572,7 +572,7 @@ describe('Resources query', function () {
         item_volume: '1-2',
         item_date: '3-4',
         item_format: 'text,microfilm',
-        item_location: 'SASB,LPA',
+        item_location: 'ma,pa',
         item_status: 'here,there'
       })
         // This call is going to error because the bnum is fake
@@ -608,10 +608,7 @@ describe('Resources query', function () {
               },
               {
                 terms: {
-                  'items.holdingLocation.id': [
-                    'SASB',
-                    'LPA'
-                  ]
+                  'items.buildingLocationId': ['ma', 'pa']
                 }
               },
               {
@@ -686,8 +683,8 @@ describe('Resources query', function () {
     })
 
     it('should return filters for location in case there is a location', () => {
-      expect(itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] } }))
-        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
+      expect(itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] } }))
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocationId': ['ma', 'pa', 'sc'] } }] })
     })
 
     it('should return filters for status in case there is a status', () => {
@@ -701,7 +698,7 @@ describe('Resources query', function () {
           volume: [1, 2],
           date: [3, 4],
           format: ['text', 'microfilm', 'AV'],
-          location: ['SASB', 'LPA', 'Schomburg'],
+          location: ['ma', 'pa', 'sc'],
           status: ['Available', 'Unavailable', 'In Process']
         }
       })).to.deep.equal({
@@ -709,15 +706,15 @@ describe('Resources query', function () {
           { range: { 'items.volumeRange': { gte: 1, lte: 2 } } },
           { range: { 'items.dateRange': { gte: 3, lte: 4 } } },
           { terms: { 'items.formatLiteral': ['text', 'microfilm', 'AV'] } },
-          { terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } },
+          { terms: { 'items.buildingLocationId': ['ma', 'pa', 'sc'] } },
           { terms: { 'items.status.id': ['Available', 'Unavailable', 'In Process'] } }
         ]
       })
     })
 
     it('should ignore all other parameters', () => {
-      expect(itemsFilterContext({ query: { location: ['SASB', 'LPA', 'Schomburg'] }, something: 'else' }))
-        .to.deep.equal({ filter: [{ terms: { 'items.holdingLocation.id': ['SASB', 'LPA', 'Schomburg'] } }] })
+      expect(itemsFilterContext({ query: { location: ['ma', 'pa', 'sc'] }, something: 'else' }))
+        .to.deep.equal({ filter: [{ terms: { 'items.buildingLocationId': ['ma', 'pa', 'sc'] } }] })
     })
   })
 
