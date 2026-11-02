@@ -2,9 +2,11 @@
 
 ## Prerelease
 
-- Update item location filter to use `buildingLocationId` (SCC-5490)
+## [1.2.1] - 2026-11-03
+
+- Updates item location filter to use `buildingLocationId` (SCC-5490)
 - Adds `shortLabel`s to the building locations
-- Updates resources indexes: `resoruces-qa-2026-10-23`, `resources-prod-2026-1029`
+- Updates resources indexes: `resoruces-qa-2026-10-23`, `resources-prod-2026-10-29`
 - Updates NYPL core version to `2.43`
 
 ## [1.2.0] - 2026-10-27
