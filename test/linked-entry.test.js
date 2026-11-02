@@ -37,6 +37,99 @@ describe('linked-entry', () => {
       expect(query).to.equal('((title adj title)) and not (bibnumber = 123)')
     })
   })
+  describe('findMatchingLinkingEntry', () => {
+    it('when a linkingEntry matches on hash and marcTag, but marcTagIndex differs it returns partial match', async () => {
+      const entry = { hash: 123, marcTag: '700', marcTagIndex: 5 }
+
+      const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
+      const resp = findMatchingLinkingEntry(params, [entry])
+      expect(resp).to.deep.equal({ linkingEntry: entry, partialMatch: true })
+    })
+
+    it('indicates when whole match is found', async () => {
+      const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
+      const entry = { hash: 123, marcTag: '700', marcTagIndex: 0 }
+      const resp = findMatchingLinkingEntry(params, [{ hash: 123, marcTag: '700', marcTagIndex: 0 }])
+      expect(resp).to.deep.equal({ linkingEntry: entry, partialMatch: false })
+    })
+    describe('with multiple linked entries sharing some fields', () => {
+      const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
+
+      it('selects the whole match and ignores decoys that only share one field', async () => {
+        const entries = [
+          { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
+          { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
+          { hash: 999, marcTag: '710', marcTagIndex: 0 }, // marcTagIndex matches only
+          { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real whole match
+        ]
+
+        const resp = findMatchingLinkingEntry(params, entries)
+        expect(resp).to.deep.equal({ linkingEntry: entries[3], partialMatch: false })
+      })
+
+      it('returns null when no matches exist', async () => {
+        const entries = [
+          { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
+          { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
+          { hash: 999, marcTag: '710', marcTagIndex: 0 } // marcTagIndex matches only
+        ]
+
+        expect(findMatchingLinkingEntry(params, entries)).to.deep.equal(null)
+      })
+
+      it('selects the matching entry when several entries share the same hash but different marcTags', async () => {
+        const entries = [
+          { hash: 123, marcTag: '650', marcTagIndex: 0 },
+          { hash: 123, marcTag: '651', marcTagIndex: 0 },
+          { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real match
+        ]
+
+        const resp = findMatchingLinkingEntry(params, entries)
+        expect(resp).to.deep.equal({ linkingEntry: entries[2], partialMatch: false })
+      })
+
+      it('selects the matching entry when several entries share hash and marcTag but differ by index', async () => {
+        const entries = [
+          { hash: 123, marcTag: '700', marcTagIndex: 0 }, // the real whole match, listed first
+          { hash: 123, marcTag: '700', marcTagIndex: 1 },
+          { hash: 123, marcTag: '700', marcTagIndex: 2 }
+        ]
+
+        const resp = findMatchingLinkingEntry(params, entries)
+        expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
+      })
+
+      it('can handle duplicated entries', async () => {
+        const entries = [
+          { hash: 123, marcTag: '700', marcTagIndex: 0 },
+          { hash: 123, marcTag: '700', marcTagIndex: 0 }
+        ]
+
+        const resp = findMatchingLinkingEntry(params, entries)
+        expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
+      })
+
+      it('prefers the whole match over a partial match that precedes it in the array', async () => {
+        const entries = [
+          { hash: 123, marcTag: '700', marcTagIndex: 5 }, // partial match, listed first
+          { hash: 123, marcTag: '700', marcTagIndex: 0 } // whole match, listed second
+        ]
+
+        const resp = findMatchingLinkingEntry(params, entries)
+        expect(resp).to.deep.equal({ linkingEntry: entries[1], partialMatch: false })
+      })
+
+      it('finds the whole match when it precedes a partial match in the array', async () => {
+        const entries = [
+          { hash: 123, marcTag: '700', marcTagIndex: 0 }, // whole match, listed first
+          { hash: 123, marcTag: '700', marcTagIndex: 5 } // partial match, listed second
+        ]
+
+        const resp = findMatchingLinkingEntry(params, entries)
+        expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
+      })
+    })
+  })
 
   describe('getNyqlQueryForParams', () => {
     afterEach(() => {
@@ -68,110 +161,11 @@ describe('linked-entry', () => {
       })
     })
 
-    describe('when linkedEntries is an empty array', () => {
-      beforeEach(() => {
-        stubLinkedEntries([])
-      })
-
-      it('rejects with a NotFoundError', async () => {
-        const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
-        await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
-      })
+    it('rejects with a NotFoundError when linkedEntries is an empty array', async () => {
+      stubLinkedEntries([])
+      const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
+      await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
     })
-    describe.only('findMatchingLinkingEntry', () => {
-      it('when a linkingEntry matches on hash and marcTag, but marcTagIndex differs it returns partial match', async () => {
-        const entry = { hash: 123, marcTag: '700', marcTagIndex: 5 }
-
-        const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const resp = findMatchingLinkingEntry(params, [entry])
-        expect(resp).to.deep.equal({ linkingEntry: entry, partialMatch: true })
-      })
-
-      it('indicates when whole match is found', async () => {
-        const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const entry = { hash: 123, marcTag: '700', marcTagIndex: 0 }
-        const resp = findMatchingLinkingEntry(params, [{ hash: 123, marcTag: '700', marcTagIndex: 0 }])
-        expect(resp).to.deep.equal({ linkingEntry: entry, partialMatch: false })
-      })
-      describe('with multiple linked entries sharing some fields', () => {
-        const params = { uri: 'b1234', hash: 123, marcTag: '700', marcTagIndex: 0 }
-
-        it('selects the whole match and ignores decoys that only share one field', async () => {
-          const entries = [
-            { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
-            { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
-            { hash: 999, marcTag: '710', marcTagIndex: 0 }, // marcTagIndex matches only
-            { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real whole match
-          ]
-
-          const resp = findMatchingLinkingEntry(params, entries)
-          expect(resp).to.deep.equal({ linkingEntry: entries[3], partialMatch: false })
-        })
-
-        it('returns null when no matches exist', async () => {
-          const entries = [
-            { hash: 123, marcTag: '710', marcTagIndex: 9 }, // hash matches only
-            { hash: 999, marcTag: '700', marcTagIndex: 9 }, // marcTag matches only
-            { hash: 999, marcTag: '710', marcTagIndex: 0 } // marcTagIndex matches only
-          ]
-
-          expect(findMatchingLinkingEntry(params, entries)).to.deep.equal(null)
-        })
-
-        it('selects the matching entry when several entries share the same hash but different marcTags', async () => {
-          const entries = [
-            { hash: 123, marcTag: '650', marcTagIndex: 0 },
-            { hash: 123, marcTag: '651', marcTagIndex: 0 },
-            { hash: 123, marcTag: '700', marcTagIndex: 0 } // the real match
-          ]
-
-          const resp = findMatchingLinkingEntry(params, entries)
-          expect(resp).to.deep.equal({ linkingEntry: entries[2], partialMatch: false })
-        })
-
-        it('selects the matching entry when several entries share hash and marcTag but differ by index', async () => {
-          const entries = [
-            { hash: 123, marcTag: '700', marcTagIndex: 0 }, // the real whole match, listed first
-            { hash: 123, marcTag: '700', marcTagIndex: 1 },
-            { hash: 123, marcTag: '700', marcTagIndex: 2 }
-          ]
-
-          const resp = findMatchingLinkingEntry(params, entries)
-          expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
-        })
-
-        it('can handle duplicated entries', async () => {
-          const entries = [
-            { hash: 123, marcTag: '700', marcTagIndex: 0 },
-            { hash: 123, marcTag: '700', marcTagIndex: 0 }
-          ]
-
-          const resp = findMatchingLinkingEntry(params, entries)
-          expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
-        })
-
-        it('prefers the whole match over a partial match that precedes it in the array', async () => {
-          const entries = [
-            { hash: 123, marcTag: '700', marcTagIndex: 5 }, // partial match, listed first
-            { hash: 123, marcTag: '700', marcTagIndex: 0 } // whole match, listed second
-          ]
-
-          const resp = findMatchingLinkingEntry(params, entries)
-          expect(resp).to.deep.equal({ linkingEntry: entries[1], partialMatch: false })
-        })
-
-        it('finds the whole match when it precedes a partial match in the array', async () => {
-          const entries = [
-            { hash: 123, marcTag: '700', marcTagIndex: 0 }, // whole match, listed first
-            { hash: 123, marcTag: '700', marcTagIndex: 5 } // partial match, listed second
-          ]
-
-          const resp = findMatchingLinkingEntry(params, entries)
-          expect(resp).to.deep.equal({ linkingEntry: entries[0], partialMatch: false })
-        })
-      })
-    })
-
     it('looks up the ES doc using the uri from params', async () => {
       const getStub = stubLinkedEntries([{ hash: 1, marcTag: '700', marcTagIndex: 0 }])
 
