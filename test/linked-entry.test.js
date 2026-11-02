@@ -6,11 +6,6 @@ const { NotFoundError } = require('../lib/errors')
 const { generateNyqlQuery, getNyqlQueryForParams, findMatchingLinkingEntry } = require('../lib/linked-entry')
 const { buildElasticQuery } = require('../lib/elasticsearch/elastic-body-builder')
 
-// Note: lib/linked-entry.js destructures `getLinkingEntriesForUri` off of the
-// client module at require-time, so stubbing `esClient.getLinkingEntriesForUri`
-// directly would have no effect on `getNyqlQueryForParams`. `getLinkingEntriesForUri`
-// internally calls `clientWrapper.get` via a live property lookup, so we stub
-// `esClient.get` (the lowest level we can intercept) to drive these tests.
 const stubLinkingEntries = (linkingEntries) => {
   return sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: linkingEntries } })
 }
