@@ -2,7 +2,7 @@ const { expect } = require('chai')
 const sinon = require('sinon')
 
 const esClient = require('../lib/elasticsearch/client')
-const { NotFoundError } = require('../lib/errors')
+const { LinkingEntryBibNotFoundError, LinkingEntryBadLinkError } = require('../lib/errors')
 const { generateNyqlQuery, getNyqlQueryForParams, findMatchingLinkingEntry } = require('../lib/linked-entry')
 const { buildElasticQuery } = require('../lib/elasticsearch/elastic-body-builder')
 
@@ -146,20 +146,16 @@ describe('linked-entry', () => {
         ])
       })
 
-      it('throws a NotFoundError', async () => {
-        const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
-        await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
-      })
-
       it('includes the params and linkingEntries in the error message', async () => {
         const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
         try {
           await getNyqlQueryForParams(params)
           throw new Error('expected getNyqlQueryForParams to reject')
         } catch (e) {
-          expect(e).to.be.instanceOf(NotFoundError)
+          expect(e).to.be.instanceOf(LinkingEntryBadLinkError)
           expect(e.message).to.include('b1234')
-          expect(e.message).to.include('incorrect/out of date')
+          console.log(e.message)
+          expect(e.message).to.equal('Request params: {"uri":"b1234","hash":999,"marcTag":"700","marcTagIndex":0}\nLinking entries: [{"hash":111,"marcTag":"700","marcTagIndex":0},{"hash":222,"marcTag":"710","marcTagIndex":1}]')
         }
       })
     })
@@ -167,7 +163,7 @@ describe('linked-entry', () => {
     it('rejects with a NotFoundError when linkingEntries is an empty array', async () => {
       stubLinkingEntries([])
       const params = { uri: 'b1234', hash: 999, marcTag: '700', marcTagIndex: 0 }
-      await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError)
+      await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(LinkingEntryBadLinkError)
     })
     it('looks up the ES doc using the uri from params', async () => {
       const getStub = stubLinkingEntries([{ hash: 1, marcTag: '700', marcTagIndex: 0 }])
@@ -184,7 +180,7 @@ describe('linked-entry', () => {
       sinon.stub(esClient, 'get').rejects(notFoundError)
 
       const params = { uri: 'b1234', hash: 1, marcTag: '700', marcTagIndex: 0 }
-      await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(NotFoundError, /Record not found: b1234/)
+      await expect(getNyqlQueryForParams(params)).to.be.rejectedWith(LinkingEntryBibNotFoundError, 'b1234')
     })
   })
 })

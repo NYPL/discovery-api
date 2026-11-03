@@ -142,7 +142,7 @@ describe('Elasticsearch Client', () => {
       notFoundError.meta = { body: { found: false } }
       sinon.stub(esClient, 'get').rejects(notFoundError)
 
-      await expect(esClient.getLinkingEntriesForUri('b1234')).to.be.rejectedWith(errors.NotFoundError)
+      await expect(esClient.getLinkingEntriesForUri('b1234')).to.be.rejectedWith(errors.LinkingEntryBibNotFoundError)
     })
 
     it('swallows other errors and resolves undefined', async () => {
