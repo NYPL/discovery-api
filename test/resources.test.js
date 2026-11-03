@@ -12,7 +12,6 @@ const {
   buildElasticQuery,
   buildElasticBody
 } = require('../lib/elasticsearch/elastic-body-builder')
-const linkingEntry = require('../lib/linked-entry.js')
 
 const fixtures = require('./fixtures')
 const { verifyFilterFields } = require('./utils')
@@ -35,10 +34,10 @@ describe('Resources query', function () {
   })
 
   describe('linkingEntry', function () {
-    const nyqlQueryReturnValue = { query: '(author = shakespeare) and not (bibnumber = b123)', partialMatch: true }
     before(() => {
       sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
-      sinon.stub(linkingEntry, 'getNyqlQueryForParams').resolves(nyqlQueryReturnValue)
+      sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
+      // sinon.stub(linkingEntry, 'getNyqlQueryForParams').resolves(nyqlQueryReturnValue)
     })
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
@@ -47,12 +46,14 @@ describe('Resources query', function () {
     })
 
     it('triggers a search call with generated nyql query, and indication of partial match', async () => {
-      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: '1', hash: '123' }
+      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: 1, hash: 123 }
       const resp = await app.resources.linkingEntry(params)
 
-      sinon.assert.calledWith(app.resources.search, sinon.match({ q: '(author = shakespeare) and not (bibnumber = b123)' }))
+      sinon.assert.calledWith(app.resources.search, { q: '((author adj "shakespeare")) not bibnumber = b1234', search_scope: 'cql' })
       expect(resp['@type']).to.equal('linkingEntryItemList')
-      expect(resp.resultsDerivedFromPartialMatch).to.equal(true)
+      expect(resp.linkingEntryInfo.resultsDerivedFromPartialMatch).to.equal(true)
+      expect(resp.linkingEntryInfo.originalLinkingEntryField).to.be.a('string')
+      expect(resp.linkingEntryInfo.nyqlQuery).to.be.a('string')
     })
   })
 
