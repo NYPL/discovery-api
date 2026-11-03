@@ -1,5 +1,15 @@
 # Changelog
 
+## Prerelease
+
+## [1.2.1] - 2026-11-03
+
+- Updates item location filter to use `buildingLocationId` (SCC-5490)
+- Adds `shortLabel`s to the building locations
+- Updates resources indexes: `resources-qa-2026-10-23`, `resources-prod-2026-10-29`
+- Updates NYPL core version to `2.43`
+- Stop logging full patron response (QA-20)
+
 ## [1.2.0] - 2026-10-27
 
 - Default to false requestabilities for missing ReCAP customer codes (SCC-5697)
