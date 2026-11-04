@@ -1,6 +1,7 @@
 {
   "analyze": true,
   "author": "NYPL Digital",
+  "version": "1.2.1",
   "dependencies": {
     "@aws-sdk/client-kms": "^3.948.0",
     "@elastic/elasticsearch": "8.9.0",
@@ -61,7 +62,6 @@
       "/logs-to-tsv/*"
     ]
   },
-  "version": "1.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/NYPL/discovery-api.git"
