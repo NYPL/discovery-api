@@ -189,27 +189,27 @@ describe('resources search route error handling', function () {
   })
 })
 
-describe('resources linked_entry route', function () {
+describe('resources linking_entry route', function () {
   let app
-  let linkedEntryStub
+  let linkingEntryStub
 
   before(function () {
     app = require('../app')
   })
 
   beforeEach(function () {
-    linkedEntryStub = sinon.stub(app.resources, 'linkedEntry')
+    linkingEntryStub = sinon.stub(app.resources, 'linkingEntry')
       .callsFake(() => Promise.resolve({ message: 'nyql query response' }))
   })
 
   afterEach(() => {
-    app.resources.linkedEntry.restore()
+    app.resources.linkingEntry.restore()
   })
 
-  it('routes path params to app.resources.linkedEntry', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linked_entry/b1234/700/0/123`)
+  it('routes path params to app.resources.linkingEntry', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123`)
 
-    sinon.assert.calledWith(linkedEntryStub, {
+    sinon.assert.calledWith(linkingEntryStub, {
       uri: 'b1234',
       marcTag: '700',
       marcTagIndex: '0',
@@ -218,16 +218,16 @@ describe('resources linked_entry route', function () {
   })
 
   it('returns the resolved response body', async () => {
-    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linked_entry/b1234/700/0/123`)
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123`)
 
     expect(response.status).to.equal(200)
     expect(response.data).to.deep.equal({ message: 'nyql query response' })
   })
 
   it('returns 404 for NotFoundError', async () => {
-    linkedEntryStub.callsFake(() => Promise.reject(new NotFoundError('Record not found: b1234')))
+    linkingEntryStub.callsFake(() => Promise.reject(new NotFoundError('Record not found: b1234')))
 
-    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linked_entry/b1234/700/0/123`)
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123`)
       .catch(e => e.response)
 
     expect(response.status).to.equal(404)

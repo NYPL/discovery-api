@@ -110,30 +110,30 @@ describe('Elasticsearch Client', () => {
     })
   })
 
-  describe('getLinkedEntryForUri', () => {
+  describe('getLinkingEntriesForUri', () => {
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
     })
 
-    it('resolves the `linkedEntry` property of the ES doc `_source`', async () => {
+    it('resolves the `linkingEntry` property of the ES doc `_source`', async () => {
       sinon.stub(esClient, 'get').resolves({
-        _source: { linkedEntry: [{ hash: 1, marcTag: '700', marcTagIndex: 0 }] }
+        _source: { linkingEntry: [{ hash: 1, marcTag: '700', marcTagIndex: 0 }] }
       })
 
-      const resp = await esClient.getLinkedEntryForUri('b1234')
+      const resp = await esClient.getLinkingEntriesForUri('b1234')
 
       expect(resp).to.deep.equal([{ hash: 1, marcTag: '700', marcTagIndex: 0 }])
     })
 
-    it('queries ES using the uri as the doc id, scoped to `linkedEntry`', async () => {
-      const getStub = sinon.stub(esClient, 'get').resolves({ _source: { linkedEntry: [] } })
+    it('queries ES using the uri as the doc id, scoped to `linkingEntry`', async () => {
+      const getStub = sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [] } })
 
-      await esClient.getLinkedEntryForUri('b1234')
+      await esClient.getLinkingEntriesForUri('b1234')
 
       sinon.assert.calledWith(getStub, {
         index: process.env.RESOURCES_INDEX,
         id: 'b1234',
-        _source_includes: 'linkedEntry'
+        _source_includes: 'linkingEntry'
       })
     })
 
@@ -142,13 +142,13 @@ describe('Elasticsearch Client', () => {
       notFoundError.meta = { body: { found: false } }
       sinon.stub(esClient, 'get').rejects(notFoundError)
 
-      await expect(esClient.getLinkedEntryForUri('b1234')).to.be.rejectedWith(errors.NotFoundError)
+      await expect(esClient.getLinkingEntriesForUri('b1234')).to.be.rejectedWith(errors.LinkingEntryBibNotFoundError)
     })
 
     it('swallows other errors and resolves undefined', async () => {
       sinon.stub(esClient, 'get').rejects(new Error('some other ES error'))
 
-      await expect(esClient.getLinkedEntryForUri('b1234')).to.be.rejected
+      await expect(esClient.getLinkingEntriesForUri('b1234')).to.be.rejected
     })
   })
 })

@@ -108,11 +108,11 @@ module.exports = function (app) {
   )
 
   app.get(
-    `/api/v${VER}/discovery/resources/linked_entry/:uri/:marcTag/:marcTagIndex/:hash`,
+    `/api/v${VER}/discovery/resources/linking_entry/:uri/:marcTag/:marcTagIndex/:hash`,
     function (req, res, next) {
       const params = req.params
       return app.resources
-        .linkedEntry(params, { baseUrl: app.baseUrl }, req)
+        .linkingEntry(params, { baseUrl: app.baseUrl }, req)
         .then((resp) => respond(res, resp, params))
         .catch((error) => next(error))
     }
