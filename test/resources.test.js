@@ -34,7 +34,7 @@ describe('Resources query', function () {
   })
 
   describe('linkingEntry', function () {
-    before(() => {
+    beforeEach(() => {
       sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
       sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
       // sinon.stub(linkingEntry, 'getNyqlQueryForParams').resolves(nyqlQueryReturnValue)
@@ -54,6 +54,18 @@ describe('Resources query', function () {
       expect(resp.linkingEntryInfo.resultsDerivedFromPartialMatch).to.equal(true)
       expect(resp.linkingEntryInfo.originalLinkingEntryField).to.be.a('string')
       expect(resp.linkingEntryInfo.nyqlQuery).to.be.a('string')
+    })
+
+    it('forwards additional search params (e.g. page) while overriding q and search_scope', async () => {
+      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: 1, hash: 123, page: '2', per_page: '10' }
+      await app.resources.linkingEntry(params)
+
+      sinon.assert.calledWith(app.resources.search, {
+        page: '2',
+        per_page: '10',
+        q: '((author adj "shakespeare")) not bibnumber = b1234',
+        search_scope: 'cql'
+      })
     })
   })
 

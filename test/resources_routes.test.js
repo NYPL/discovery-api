@@ -217,6 +217,19 @@ describe('resources linking_entry route', function () {
     })
   })
 
+  it('routes query params alongside path params to app.resources.linkingEntry', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123?page=2&per_page=10`)
+
+    sinon.assert.calledWith(linkingEntryStub, {
+      uri: 'b1234',
+      marcTag: '700',
+      marcTagIndex: '0',
+      hash: '123',
+      page: '2',
+      per_page: '10'
+    })
+  })
+
   it('returns the resolved response body', async () => {
     const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123`)
 
