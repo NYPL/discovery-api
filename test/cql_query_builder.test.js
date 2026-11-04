@@ -188,7 +188,7 @@ describe('CQL Query Builder', function () {
       )
   })
 
-  it('Bib number query', function () {
+  it('bibnumber query', function () {
     expect(new CqlQuery('bibnumber = "b1234"').buildEsQuery())
       .to.deep.equal(
         bibNumberQuery
