@@ -15,6 +15,12 @@ describe('linked-entry', () => {
     const testQueryBuilding = (query) => {
       buildElasticQuery({ q: query, search_scope: 'cql' })
     }
+    it('generates a query when there are already double quotes in a field', () => {
+      const fakeLinkingEntry = { author: 'author of a "book"' }
+      const query = generateNyqlQuery(123, fakeLinkingEntry)
+      expect(testQueryBuilding(query))
+      expect(query).to.equal('((author adj "author of a \\"book\\"")) not bibnumber = 123')
+    })
     it('generates a query when all the fields are present, with array id fields', () => {
       const fakeLinkingEntry = { isbn: 'isbn', lccn: 'lccn', oclc: ['(OCLC) oclc1', 'oclc2'], author: 'author of a book', title: 'title of a book', language: 'language' }
       const query = generateNyqlQuery(123, fakeLinkingEntry)
