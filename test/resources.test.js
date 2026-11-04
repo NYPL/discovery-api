@@ -37,7 +37,6 @@ describe('Resources query', function () {
     beforeEach(() => {
       sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
       sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
-      // sinon.stub(linkingEntry, 'getNyqlQueryForParams').resolves(nyqlQueryReturnValue)
     })
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
