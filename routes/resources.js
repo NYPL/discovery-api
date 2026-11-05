@@ -1,11 +1,6 @@
 const VER = '0.1'
 const logger = require('../lib/logger')
-
-// redact patron ids
-const redactPatronId = (body) => {
-  if (!body || typeof body !== 'object' || !body.patronId) return body
-  return Object.assign({}, body, { patronId: '*****' })
-}
+const { redactPatronId } = require('../lib/util')
 
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
