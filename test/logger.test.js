@@ -85,4 +85,35 @@ describe('Logger', () => {
       }).to.not.throw()
     })
   })
+
+  describe('sensitive info redaction', () => {
+    it('redacts a top-level patronId', () => {
+      const result = logger.redactPatronId({ message: 'fetching delivery locations', patronId: '123456' })
+      expect(result.patronId).to.equal('*****')
+    })
+
+    it('redacts a patronId nested inside an object', () => {
+      const result = logger.redactPatronId({ message: 'request', params: { nested: { patronId: '654321' } } })
+      expect(result.params.nested.patronId).to.equal('*****')
+    })
+
+    it('redacts a patronId nested inside an array', () => {
+      const result = logger.redactPatronId({ message: 'batch of somehting', items: [{ barcode: 'bc1' }, { patronId: '999999' }] })
+      expect(result.items[1].patronId).to.equal('*****')
+    })
+
+    it('doesnt change the original object passed to the logger', () => {
+      const payload = { message: 'd', patronId: '333333' }
+      logger.redactPatronId(payload)
+      expect(payload.patronId).to.equal('333333')
+    })
+
+    it('redacts when logging at error, warn and info levels without throwing', () => {
+      expect(() => {
+        logger.error({ message: 'e', patronId: '444444' })
+        logger.warn({ message: 'f', patronId: '555555' })
+        logger.info({ message: 'g', patronId: '666666' })
+      }).to.not.throw()
+    })
+  })
 })
