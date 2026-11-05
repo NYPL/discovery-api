@@ -3,6 +3,7 @@
 ## Prerelease
 
 - Add idNyplSourceId to bibs (SCC-5619)
+- redact PII from logs (SCC-5792)
 
 ## [1.2.1] - 2026-11-03
 
