@@ -190,7 +190,7 @@ describe('resources search route error handling', function () {
   })
 })
 
-describe('resources linking_entry route', function () {
+describe('resources linking-entry route', function () {
   let app
 
   before(function () {
@@ -211,7 +211,7 @@ describe('resources linking_entry route', function () {
   })
 
   it('routes path params to app.resources.linkingEntry', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123`)
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123`)
 
     sinon.assert.calledWith(app.resources.linkingEntry, {
       uri: 'b1234',
@@ -222,7 +222,7 @@ describe('resources linking_entry route', function () {
   })
 
   it('routes query params alongside path params to app.resources.linkingEntry', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123?page=2&per_page=10`)
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123?page=2&per_page=10`)
 
     sinon.assert.calledWith(app.resources.linkingEntry, {
       uri: 'b1234',
@@ -235,7 +235,7 @@ describe('resources linking_entry route', function () {
   })
 
   it('returns the resolved response body', async () => {
-    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking_entry/b1234/700/0/123`)
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123`)
 
     expect(response.status).to.equal(200)
     // search results stubbed to just be number of results. in real life, there will be actual bib results included.

@@ -108,7 +108,7 @@ module.exports = function (app) {
   )
 
   app.get(
-    `/api/v${VER}/discovery/resources/linking_entry/:uri/:marcTag/:marcTagIndex/:hash`,
+    `/api/v${VER}/discovery/resources/linking-entry/:uri/:marcTag/:marcTagIndex/:hash`,
     function (req, res, next) {
       const params = Object.assign({}, req.query, req.params)
       return app.resources
