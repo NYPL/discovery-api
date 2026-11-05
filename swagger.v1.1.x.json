@@ -432,6 +432,94 @@
         }
       }
     },
+    "/v0.1/discovery/resources/linking-entry/{uri}/{marcTag}/{marcTagIndex}/{hash}": {
+      "get": {
+        "summary": "Resolve a MARC linking entry (76X-78X) field to matching resources",
+        "description": "Given a bib identifier and the details of one of its MARC linking entry fields (e.g. 780, 785), builds a search query from the linked record's author/title/identifiers and returns the matching resource(s). This supports resolving \"Preceding/Succeeding entry\"-style links that do not resolve directly to a bib id.\n",
+        "parameters": [
+          {
+            "name": "uri",
+            "in": "path",
+            "description": "URI (bib identifier) of the resource containing the linking entry field",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "marcTag",
+            "in": "path",
+            "description": "MARC tag of the linking entry field (e.g. \"780\")",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "marcTagIndex",
+            "in": "path",
+            "description": "Index of the linking entry field among repeated occurrences of the same marcTag on the resource",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "hash",
+            "in": "path",
+            "description": "Hash identifying the specific linking entry field, used to verify the field has not changed since the link was generated",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "tags": [
+          "discovery"
+        ],
+        "responses": {
+          "200": {
+            "description": "Resources matching the resolved linking entry",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryResponse"
+            }
+          },
+          "400": {
+            "description": "The query derived from the linking entry field could not be processed (name: IndexSearchError)",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
+            }
+          },
+          "404": {
+            "description": "Returned when the bib identified by uri can't be found (name: LinkingEntryBibNotFoundError), or when no linking entry field matching marcTag/marcTagIndex/hash is found on that bib, or the resolved entry matches no resource (name: LinkingEntryBadLinkError)",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
+            }
+          },
+          "422": {
+            "description": "One or more path parameters (uri, marcTag, marcTagIndex, hash) is missing or invalid (name: InvalidParameterError)",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "type": "aws_proxy",
+          "cacheKeyParameters": [
+            "method.request.path.uri",
+            "method.request.path.marcTag",
+            "method.request.path.marcTagIndex",
+            "method.request.path.hash"
+          ]
+        }
+      }
+    },
     "/v0.1/discovery/subjects/browse": {
       "get": {
         "tags": [
@@ -1024,6 +1112,71 @@
         },
         "fields": {
           "type": "string"
+        }
+      }
+    },
+    "LinkingEntryError": {
+      "type": "object",
+      "description": "Error shape returned by the linking-entry endpoint, as emitted by lib/handle-error.js",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "description": "HTTP status code"
+        },
+        "name": {
+          "type": "string",
+          "description": "Error type",
+          "enum": [
+            "InvalidParameterError",
+            "LinkingEntryBibNotFoundError",
+            "LinkingEntryBadLinkError",
+            "IndexSearchError"
+          ]
+        },
+        "error": {
+          "type": "string",
+          "description": "Error message"
+        }
+      }
+    },
+    "LinkingEntryResponse": {
+      "type": "object",
+      "description": "ResourcesResponse (itemList) augmented with information about the linking entry resolution",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "format": "url",
+          "description": "URL for JSONLD doc mapping short-hand property names to IRIs"
+        },
+        "@type": {
+          "type": "string",
+          "enum": [
+            "linkingEntryItemList"
+          ]
+        },
+        "itemListElement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ResourceResult"
+          }
+        },
+        "linkingEntryInfo": {
+          "type": "object",
+          "properties": {
+            "resultsDerivedFromPartialMatch": {
+              "type": "boolean",
+              "description": "True if the match was based on marcTag and hash only (i.e. marcTagIndex did not match), indicating the matched linking entry field may not be the exact one originally linked to"
+            },
+            "originalLinkingEntryField": {
+              "type": "string",
+              "description": "Label and display value of the original MARC linking entry field used to build the query (e.g. \"Preceding entry: Some Journal Title\")"
+            },
+            "nyqlQuery": {
+              "type": "string",
+              "description": "The NYQL query derived from the linking entry field and used to find matching resources"
+            }
+          }
         }
       }
     },
