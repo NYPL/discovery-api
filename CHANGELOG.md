@@ -3,6 +3,8 @@
 ## Prerelease
 
 - Add idNyplSourceId to bibs (SCC-5619)
+- add linking-entry endpoint (SCC-5598) 
+- change 'bib number' NYQL index to bibnumber
 
 ## [1.2.1] - 2026-11-03
 

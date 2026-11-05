@@ -1,6 +1,7 @@
 const axios = require('axios')
 const sinon = require('sinon')
 const { InvalidParameterError, NotFoundError, IndexSearchError, IndexConnectionError } = require('../lib/errors')
+const esClient = require('../lib/elasticsearch/client')
 
 describe('resources routes', function () {
   let app
@@ -186,5 +187,68 @@ describe('resources search route error handling', function () {
     expect(response.status).to.equal(500)
     expect(response.data).to.have.property('name', 'IndexConnectionError')
     expect(response.data).to.have.property('error', 'ES down')
+  })
+})
+
+describe('resources linking-entry route', function () {
+  let app
+
+  before(function () {
+    app = require('../app')
+  })
+
+  beforeEach(function () {
+    sinon.spy(app.resources, 'linkingEntry')
+    sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
+    sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], display: 'display', label: 'Label', hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
+  })
+
+  afterEach(() => {
+    if (esClient.get.restore) esClient.get.restore()
+    if (esClient.search.restore) esClient.search.restore()
+    if (app.resources.search.restore) app.resources.search.restore()
+    app.resources.linkingEntry.restore?.()
+  })
+
+  it('routes path params to app.resources.linkingEntry', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123`)
+
+    sinon.assert.calledWith(app.resources.linkingEntry, {
+      uri: 'b1234',
+      marcTag: '700',
+      marcTagIndex: '0',
+      hash: '123'
+    })
+  })
+
+  it('routes query params alongside path params to app.resources.linkingEntry', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123?page=2&per_page=10`)
+
+    sinon.assert.calledWith(app.resources.linkingEntry, {
+      uri: 'b1234',
+      marcTag: '700',
+      marcTagIndex: '0',
+      hash: '123',
+      page: '2',
+      per_page: '10'
+    })
+  })
+
+  it('returns the resolved response body', async () => {
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123`)
+
+    expect(response.status).to.equal(200)
+    // search results stubbed to just be number of results. in real life, there will be actual bib results included.
+    expect(response.data).to.deep.equal(
+      {
+        '@type': 'linkingEntryItemList',
+        linkingEntryInfo: {
+          nyqlQuery: '((author adj "shakespeare")) not bibnumber = b1234',
+          originalLinkingEntryField: 'Label: display',
+          resultsDerivedFromPartialMatch: false
+        },
+        totalResults: 125
+      }
+    )
   })
 })
