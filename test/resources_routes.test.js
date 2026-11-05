@@ -191,14 +191,23 @@ describe('resources search route error handling', function () {
 })
 
 describe('request logging', function () {
+  let app
   let infoSpy
+  let deliveryLocationsByBarcodeStub
+
+  before(function () {
+    app = require('../app')
+  })
 
   beforeEach(function () {
     infoSpy = sinon.spy(logger, 'info')
+    deliveryLocationsByBarcodeStub = sinon.stub(app.resources, 'deliveryLocationsByBarcode')
+      .callsFake(() => Promise.resolve({ response: 'ok' }))
   })
 
   afterEach(function () {
     logger.info.restore()
+    deliveryLocationsByBarcodeStub.restore()
   })
 
   it('redacts patronId from logged request query', async function () {
