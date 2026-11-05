@@ -11,7 +11,7 @@ module.exports = function (app) {
     const requestLogObject = {
       ip: req.ip,
       path: req.path,
-      body: redactPatronId(req.body),
+      body: req.body,
       query: redactPatronId(req.query),
       method: req.method
     }

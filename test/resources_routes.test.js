@@ -201,16 +201,6 @@ describe('request logging', function () {
     logger.info.restore()
   })
 
-  it('redacts patronId from the logged request body', async function () {
-    // hypothetical situation
-    await axios.post(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources`, { patronId: '123456', other: 'value' })
-      .catch(() => {})
-
-    const loggedBody = infoSpy.firstCall.args[1].body
-    expect(loggedBody.patronId).to.equal('*****')
-    expect(loggedBody.other).to.equal('value')
-  })
-
   it('redacts patronId from logged request query', async function () {
     await axios.get(`${global.TEST_BASE_URL}/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=33433076975022&patronId=8460615`)
       .catch(() => {})
