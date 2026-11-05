@@ -1,16 +1,6 @@
 const { ItemResourceSerializer } = require('../lib/jsonld_serializers')
 
 describe('ItemResourceSerializer', () => {
-  describe('sourceIdentifierPrefixByNyplSource', () => {
-    it('produces camel case form of nypl source', () => {
-      expect(ItemResourceSerializer.sourceIdentifierPrefixByNyplSource('sierra-nypl')).to.eq('SierraNypl')
-      expect(ItemResourceSerializer.sourceIdentifierPrefixByNyplSource('recap-cul')).to.eq('RecapCul')
-      expect(ItemResourceSerializer.sourceIdentifierPrefixByNyplSource('recap-pul')).to.eq('RecapPul')
-      expect(ItemResourceSerializer.sourceIdentifierPrefixByNyplSource('recap-hl')).to.eq('RecapHl')
-      expect(ItemResourceSerializer.sourceIdentifierPrefixByNyplSource('recap-someotherlibraryacronym')).to.eq('RecapSomeotherlibraryacronym')
-    })
-  })
-
   describe('serialize', () => {
     it('adds entity form of NYPL source identifier', async () => {
       const item = await ItemResourceSerializer.addSourceIdentifier({

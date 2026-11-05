@@ -1,5 +1,6 @@
 const VER = '0.1'
 const logger = require('../lib/logger')
+const { redactPatronId } = require('../lib/util')
 
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
@@ -11,7 +12,7 @@ module.exports = function (app) {
       ip: req.ip,
       path: req.path,
       body: req.body,
-      query: req.query,
+      query: redactPatronId(req.query),
       method: req.method
     }
     logger.info(`${req.method} request to ${req.path}:`, requestLogObject)

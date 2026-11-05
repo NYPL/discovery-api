@@ -2,6 +2,11 @@
 
 ## Prerelease
 
+## [1.2.2] - 2026-11-05
+
+- Add idNyplSourceId to bibs (SCC-5619)
+- redact PII from logs (SCC-5792)
+
 ## [1.2.1] - 2026-11-03
 
 - Updates item location filter to use `buildingLocationId` (SCC-5490)

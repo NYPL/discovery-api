@@ -11,6 +11,24 @@ const NyplSourceMapper = require('research-catalog-indexer/lib/utils/nypl-source
 
 describe('JSONLD Serializers', () => {
   describe('ResourceSerializer', () => {
+    describe('idNyplSourceId', () => {
+      it('adds correct idNyplSourceId for SierraNypl bib', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          uri: 'b15704876',
+          identifier: ['urn:bnum:b15704876']
+        })
+        expect(serialized.idNyplSourceId).to.deep.equal({ '@type': 'SierraNypl', '@value': '15704876' })
+      })
+
+      it('adds correct idNyplSourceId for RecapCul bib', async () => {
+        const serialized = await ResourceSerializer.serialize({
+          uri: 'cb13686426',
+          identifier: ['urn:bnum:cb13686426']
+        })
+        expect(serialized.idNyplSourceId).to.deep.equal({ '@type': 'RecapCul', '@value': '13686426' })
+      })
+    })
+
     it('enables hasItemDates when numItemsTotal is above thresshold', async () => {
       const esDoc = {
         uri: 'b123',
