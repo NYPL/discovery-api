@@ -1,6 +1,12 @@
 const VER = '0.1'
 const logger = require('../lib/logger')
 
+// redact patron ids
+const redactPatronId = (body) => {
+  if (!body || typeof body !== 'object' || !body.patronId) return body
+  return Object.assign({}, body, { patronId: '*****' })
+}
+
 module.exports = function (app) {
   app.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
@@ -10,8 +16,8 @@ module.exports = function (app) {
     const requestLogObject = {
       ip: req.ip,
       path: req.path,
-      body: req.body,
-      query: req.query,
+      body: redactPatronId(req.body),
+      query: redactPatronId(req.query),
       method: req.method
     }
     logger.info(`${req.method} request to ${req.path}:`, requestLogObject)
