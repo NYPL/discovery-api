@@ -4,6 +4,7 @@ const sinon = require('sinon')
 const scsbClient = require('../lib/scsb-client')
 const errors = require('../lib/errors')
 const { AGGREGATIONS_SPEC } = require('../lib/elasticsearch/config')
+const esClient = require('../lib/elasticsearch/client')
 const numAggregations = Object.keys(AGGREGATIONS_SPEC).length
 const {
   itemsFilterContext,
@@ -30,6 +31,41 @@ describe('Resources query', function () {
 
   after(() => {
     fixtures.disableScsbFixtures()
+  })
+
+  describe('linkingEntry', function () {
+    beforeEach(() => {
+      sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
+      sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
+    })
+    afterEach(() => {
+      if (esClient.get.restore) esClient.get.restore()
+      if (esClient.search.restore) esClient.search.restore()
+      if (app.resources.search.restore) app.resources.search.restore()
+    })
+
+    it('triggers a search call with generated nyql query, and indication of partial match', async () => {
+      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: 1, hash: 123 }
+      const resp = await app.resources.linkingEntry(params)
+
+      sinon.assert.calledWith(app.resources.search, { q: '((author adj "shakespeare")) not bibnumber = b1234', search_scope: 'cql' })
+      expect(resp['@type']).to.equal('linkingEntryItemList')
+      expect(resp.linkingEntryInfo.resultsDerivedFromPartialMatch).to.equal(true)
+      expect(resp.linkingEntryInfo.originalLinkingEntryField).to.be.a('string')
+      expect(resp.linkingEntryInfo.nyqlQuery).to.be.a('string')
+    })
+
+    it('forwards additional search params (e.g. page) while overriding q and search_scope', async () => {
+      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: 1, hash: 123, page: '2', per_page: '10' }
+      await app.resources.linkingEntry(params)
+
+      sinon.assert.calledWith(app.resources.search, {
+        page: '2',
+        per_page: '10',
+        q: '((author adj "shakespeare")) not bibnumber = b1234',
+        search_scope: 'cql'
+      })
+    })
   })
 
   describe('parseSearchParams', function () {
