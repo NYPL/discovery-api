@@ -2,6 +2,7 @@ const axios = require('axios')
 const sinon = require('sinon')
 const { InvalidParameterError, NotFoundError, IndexSearchError, IndexConnectionError } = require('../lib/errors')
 const esClient = require('../lib/elasticsearch/client')
+const logger = require('../lib/logger')
 
 describe('resources routes', function () {
   let app
@@ -187,6 +188,43 @@ describe('resources search route error handling', function () {
     expect(response.status).to.equal(500)
     expect(response.data).to.have.property('name', 'IndexConnectionError')
     expect(response.data).to.have.property('error', 'ES down')
+  })
+})
+
+describe('request logging', function () {
+  let app
+  let infoSpy
+  let deliveryLocationsByBarcodeStub
+  before(function () {
+    app = require('../app')
+  })
+
+  beforeEach(function () {
+    infoSpy = sinon.spy(logger, 'info')
+    deliveryLocationsByBarcodeStub = sinon.stub(app.resources, 'deliveryLocationsByBarcode')
+      .callsFake(() => Promise.resolve({ response: 'ok' }))
+  })
+
+  afterEach(function () {
+    logger.info.restore()
+    deliveryLocationsByBarcodeStub.restore()
+  })
+
+  it('redacts patronId from logged request query', async function () {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/request/deliveryLocationsByBarcode?barcodes[]=33433076975022&patronId=8460615`)
+      .catch(() => {})
+
+    const loggedQuery = infoSpy.firstCall.args[1].query
+    expect(loggedQuery.patronId).to.equal('*****')
+    expect(loggedQuery.barcodes).to.deep.equal(['33433076975022'])
+  })
+
+  it('leaves request queries without a patronId untouched', async function () {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=test`)
+      .catch(() => {})
+
+    const loggedQuery = infoSpy.firstCall.args[1].query
+    expect(loggedQuery).to.deep.equal({ q: 'test' })
   })
 })
 
