@@ -31,35 +31,32 @@ module.exports = function (app) {
     return true
   }
 
-  app.get(`/api/v${VER}/discovery/resources$`, function (req, res, next) {
+  app.get(`/api/v${VER}/discovery/resources$`, async function (req, res, next) {
     const params = req.query
 
     const hasFilters = params.filters && Object.keys(params.filters).length > 0
-
-    if (params.include_aggregations === 'true' && !hasFilters) {
-      return app.resources
-        .search(
-          params,
-          { baseUrl: app.baseUrl, include_aggregations: true },
-          req
-        )
-        .then((resp) => respond(res, resp, params))
-        .catch((error) => next(error))
-    } else if (params.include_aggregations === 'true') {
-      return Promise.all([
-        app.resources.search(params, { baseUrl: app.baseUrl }, req),
-        app.resources.aggregations(params, { baseUrl: app.baseUrl })
-      ])
-        .then(([searchResp, aggsResp]) => {
-          searchResp.aggregations = aggsResp.itemListElement
-          return respond(res, searchResp, params)
-        })
-        .catch((error) => next(error))
-    } else {
-      return app.resources
-        .search(params, { baseUrl: app.baseUrl }, req)
-        .then((resp) => respond(res, resp, params))
-        .catch((error) => next(error))
+    try {
+      let searchResp
+      if (params.include_aggregations === 'true' && !hasFilters) {
+        searchResp = await app.resources
+          .search(
+            params,
+            { baseUrl: app.baseUrl, include_aggregations: true },
+            req
+          )
+      } else if (params.include_aggregations === 'true') {
+        const [searchResp, aggsResp] = await Promise.all([
+          app.resources.search(params, { baseUrl: app.baseUrl }, req),
+          app.resources.aggregations(params, { baseUrl: app.baseUrl })
+        ])
+        searchResp.aggregations = aggsResp.itemListElement
+      } else {
+        searchResp = await app.resources
+          .search(params, { baseUrl: app.baseUrl }, req)
+      }
+      return respond(res, searchResp, params)
+    } catch (e) {
+      next(e)
     }
   })
 
