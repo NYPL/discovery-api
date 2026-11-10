@@ -32,10 +32,10 @@ module.exports = function (app) {
   }
 
   app.get(`/api/v${VER}/discovery/resources$`, async function (req, res, next) {
-    const params = req.query
-
-    const hasFilters = params.filters && Object.keys(params.filters).length > 0
     try {
+      const { params, linkingEntryInfo } = await app.resources.parseLinkingEntryParams(req.query)
+
+      const hasFilters = params.filters && Object.keys(params.filters).length > 0
       let searchResp
       if (params.include_aggregations === 'true' && !hasFilters) {
         searchResp = await app.resources
@@ -56,6 +56,12 @@ module.exports = function (app) {
         searchResp = await app.resources
           .search(params, { baseUrl: app.baseUrl }, req)
       }
+
+      if (linkingEntryInfo) {
+        searchResp['@type'] = 'linkingEntryItemList'
+        searchResp.linkingEntryInfo = linkingEntryInfo
+      }
+
       return respond(res, searchResp, params)
     } catch (e) {
       next(e)
@@ -102,17 +108,6 @@ module.exports = function (app) {
 
       return app.contributors
         .browse(params, { baseUrl: app.baseUrl }, req)
-        .then((resp) => respond(res, resp, params))
-        .catch((error) => next(error))
-    }
-  )
-
-  app.get(
-    `/api/v${VER}/discovery/resources/linking-entry/:uri/:marcTag/:marcTagIndex/:hash`,
-    function (req, res, next) {
-      const params = Object.assign({}, req.query, req.params)
-      return app.resources
-        .linkingEntry(params, { baseUrl: app.baseUrl }, req)
         .then((resp) => respond(res, resp, params))
         .catch((error) => next(error))
     }

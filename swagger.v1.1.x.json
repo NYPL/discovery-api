@@ -142,13 +142,55 @@
             "type": "string",
             "in": "query",
             "description": "Match on OCLC number"
+          },
+          {
+            "name": "linking_entry_uri",
+            "type": "string",
+            "in": "query",
+            "description": "URI (bib identifier) of the resource containing a MARC linking entry (76X-78X) field. When supplied alongside linking_entry_marc_tag, linking_entry_marc_tag_index, and linking_entry_hash, this builds a search query from the linked record's author/title/identifiers (ignoring q/search_scope/filters) and returns the matching resource(s) instead of performing a normal search. This supports resolving \"Preceding/Succeeding entry\"-style links that do not resolve directly to a bib id."
+          },
+          {
+            "name": "linking_entry_marc_tag",
+            "type": "string",
+            "in": "query",
+            "description": "MARC tag of the linking entry field (e.g. \"780\"). Required alongside linking_entry_uri, linking_entry_marc_tag_index, and linking_entry_hash to trigger linking entry resolution."
+          },
+          {
+            "name": "linking_entry_marc_tag_index",
+            "type": "integer",
+            "in": "query",
+            "description": "Index of the linking entry field among repeated occurrences of the same linking_entry_marc_tag on the resource. Required alongside linking_entry_uri, linking_entry_marc_tag, and linking_entry_hash to trigger linking entry resolution."
+          },
+          {
+            "name": "linking_entry_hash",
+            "type": "integer",
+            "in": "query",
+            "description": "Hash identifying the specific linking entry field, used to verify the field has not changed since the link was generated. Required alongside linking_entry_uri, linking_entry_marc_tag, and linking_entry_marc_tag_index to trigger linking entry resolution."
           }
         ],
         "responses": {
           "200": {
-            "description": "An array of resources",
+            "description": "An array of resources. If linking_entry_uri, linking_entry_marc_tag, linking_entry_marc_tag_index, and linking_entry_hash are all supplied, the response is instead a LinkingEntryResponse describing resources matching the resolved linking entry.",
             "schema": {
               "$ref": "#/definitions/ResourcesResponse"
+            }
+          },
+          "400": {
+            "description": "The query derived from the linking entry params could not be processed (name: IndexSearchError)",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
+            }
+          },
+          "404": {
+            "description": "Returned when the bib identified by linking_entry_uri can't be found (name: LinkingEntryBibNotFoundError), or when no linking entry field matching linking_entry_marc_tag/linking_entry_marc_tag_index/linking_entry_hash is found on that bib, or the resolved entry matches no resource (name: LinkingEntryBadLinkError)",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
+            }
+          },
+          "422": {
+            "description": "One or more linking entry params (linking_entry_uri, linking_entry_marc_tag, linking_entry_marc_tag_index, linking_entry_hash) is invalid (name: InvalidParameterError)",
+            "schema": {
+              "$ref": "#/definitions/LinkingEntryError"
             }
           },
           "default": {
@@ -174,7 +216,11 @@
             "method.request.querystring.page",
             "method.request.querystring.per_page",
             "method.request.querystring.sort",
-            "method.request.querystring.sort_direction"
+            "method.request.querystring.sort_direction",
+            "method.request.querystring.linking_entry_uri",
+            "method.request.querystring.linking_entry_marc_tag",
+            "method.request.querystring.linking_entry_marc_tag_index",
+            "method.request.querystring.linking_entry_hash"
           ]
         }
       }
@@ -429,94 +475,6 @@
             "method.request.path.id"
           ],
           "contentHandling": "CONVERT_TO_TEXT"
-        }
-      }
-    },
-    "/v0.1/discovery/resources/linking-entry/{uri}/{marcTag}/{marcTagIndex}/{hash}": {
-      "get": {
-        "summary": "Resolve a MARC linking entry (76X-78X) field to matching resources",
-        "description": "Given a bib identifier and the details of one of its MARC linking entry fields (e.g. 780, 785), builds a search query from the linked record's author/title/identifiers and returns the matching resource(s). This supports resolving \"Preceding/Succeeding entry\"-style links that do not resolve directly to a bib id.\n",
-        "parameters": [
-          {
-            "name": "uri",
-            "in": "path",
-            "description": "URI (bib identifier) of the resource containing the linking entry field",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "marcTag",
-            "in": "path",
-            "description": "MARC tag of the linking entry field (e.g. \"780\")",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "marcTagIndex",
-            "in": "path",
-            "description": "Index of the linking entry field among repeated occurrences of the same marcTag on the resource",
-            "required": true,
-            "type": "integer"
-          },
-          {
-            "name": "hash",
-            "in": "path",
-            "description": "Hash identifying the specific linking entry field, used to verify the field has not changed since the link was generated",
-            "required": true,
-            "type": "integer"
-          }
-        ],
-        "tags": [
-          "discovery"
-        ],
-        "responses": {
-          "200": {
-            "description": "Resources matching the resolved linking entry",
-            "schema": {
-              "$ref": "#/definitions/LinkingEntryResponse"
-            }
-          },
-          "400": {
-            "description": "The query derived from the linking entry field could not be processed (name: IndexSearchError)",
-            "schema": {
-              "$ref": "#/definitions/LinkingEntryError"
-            }
-          },
-          "404": {
-            "description": "Returned when the bib identified by uri can't be found (name: LinkingEntryBibNotFoundError), or when no linking entry field matching marcTag/marcTagIndex/hash is found on that bib, or the resolved entry matches no resource (name: LinkingEntryBadLinkError)",
-            "schema": {
-              "$ref": "#/definitions/LinkingEntryError"
-            }
-          },
-          "422": {
-            "description": "One or more path parameters (uri, marcTag, marcTagIndex, hash) is missing or invalid (name: InvalidParameterError)",
-            "schema": {
-              "$ref": "#/definitions/LinkingEntryError"
-            }
-          },
-          "default": {
-            "description": "Unexpected error",
-            "schema": {
-              "$ref": "#/definitions/LinkingEntryError"
-            }
-          }
-        },
-        "x-amazon-apigateway-integration": {
-          "responses": {
-            "default": {
-              "statusCode": "200"
-            }
-          },
-          "uri": "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:224280085904:function:discovery-api/invocations",
-          "passthroughBehavior": "when_no_match",
-          "httpMethod": "POST",
-          "type": "aws_proxy",
-          "cacheKeyParameters": [
-            "method.request.path.uri",
-            "method.request.path.marcTag",
-            "method.request.path.marcTagIndex",
-            "method.request.path.hash"
-          ]
         }
       }
     },
@@ -1117,7 +1075,7 @@
     },
     "LinkingEntryError": {
       "type": "object",
-      "description": "Error shape returned by the linking-entry endpoint, as emitted by lib/handle-error.js",
+      "description": "Error shape returned when linking entry resolution fails on the resources endpoint, as emitted by lib/handle-error.js",
       "properties": {
         "status": {
           "type": "integer",
