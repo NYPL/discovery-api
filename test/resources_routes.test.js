@@ -228,7 +228,7 @@ describe('request logging', function () {
   })
 })
 
-describe('resources linking-entry query params', function () {
+describe('resources linking_entry search scope', function () {
   let app
 
   before(function () {
@@ -248,32 +248,28 @@ describe('resources linking-entry query params', function () {
     app.resources.parseLinkingEntryParams.restore?.()
   })
 
-  it('routes linking-entry query params to app.resources.parseLinkingEntryParams', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?linking_entry_uri=b1234&linking_entry_marc_tag=700&linking_entry_marc_tag_index=0&linking_entry_hash=123`)
+  it('routes search_scope=linking_entry and packed q to app.resources.parseLinkingEntryParams', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=b1234/700/0/123&search_scope=linking_entry`)
 
     sinon.assert.calledWith(app.resources.parseLinkingEntryParams, {
-      linking_entry_uri: 'b1234',
-      linking_entry_marc_tag: '700',
-      linking_entry_marc_tag_index: '0',
-      linking_entry_hash: '123'
+      q: 'b1234/700/0/123',
+      search_scope: 'linking_entry'
     })
   })
 
-  it('routes other query params alongside linking-entry params', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?linking_entry_uri=b1234&linking_entry_marc_tag=700&linking_entry_marc_tag_index=0&linking_entry_hash=123&page=2&per_page=10`)
+  it('routes other query params alongside the linking_entry scope', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=b1234/700/0/123&search_scope=linking_entry&page=2&per_page=10`)
 
     sinon.assert.calledWith(app.resources.parseLinkingEntryParams, {
-      linking_entry_uri: 'b1234',
-      linking_entry_marc_tag: '700',
-      linking_entry_marc_tag_index: '0',
-      linking_entry_hash: '123',
+      q: 'b1234/700/0/123',
+      search_scope: 'linking_entry',
       page: '2',
       per_page: '10'
     })
   })
 
   it('returns the resolved response body', async () => {
-    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?linking_entry_uri=b1234&linking_entry_marc_tag=700&linking_entry_marc_tag_index=0&linking_entry_hash=123`)
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=b1234/700/0/123&search_scope=linking_entry`)
 
     expect(response.status).to.equal(200)
     // search results stubbed to just be number of results. in real life, there will be actual bib results included.

@@ -79,7 +79,7 @@
           {
             "name": "search_scope",
             "in": "query",
-            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber, standard_number). See https://github.com/NYPL/discovery-api/blob/main/lib/resources.js to review specific fields matched in each scope and how they're boosted.",
+            "description": "Specify what (group of) fields to match against (all, title, contributor, subject, series, callnumber, standard_number), or 'linking_entry' to resolve a MARC linking entry (76X-78X) field to matching resources. See https://github.com/NYPL/discovery-api/blob/main/lib/resources.js to review specific fields matched in each scope and how they're boosted.\n\nWhen search_scope is 'linking_entry', q must be of the form `uri/marcTag/marcTagIndex/hash` (e.g. `b1234/780/0/123`), identifying the bib containing the linking entry field (uri), the MARC tag of that field (marcTag, e.g. \"780\"), its index among repeated occurrences of that tag on the bib (marcTagIndex), and a hash verifying the field hasn't changed since the link was generated (hash). Given these, a search query is built from the linked record's author/title/identifiers (ignoring filters) and the matching resource(s) are returned. This supports resolving \"Preceding/Succeeding entry\"-style links that do not resolve directly to a bib id.",
             "required": false,
             "type": "string",
             "enum": [
@@ -90,7 +90,8 @@
               "subject",
               "series",
               "callnumber",
-              "standard_number"
+              "standard_number",
+              "linking_entry"
             ],
             "default": "all"
           },
@@ -142,53 +143,29 @@
             "type": "string",
             "in": "query",
             "description": "Match on OCLC number"
-          },
-          {
-            "name": "linking_entry_uri",
-            "type": "string",
-            "in": "query",
-            "description": "URI (bib identifier) of the resource containing a MARC linking entry (76X-78X) field. When supplied alongside linking_entry_marc_tag, linking_entry_marc_tag_index, and linking_entry_hash, this builds a search query from the linked record's author/title/identifiers (ignoring q/search_scope/filters) and returns the matching resource(s) instead of performing a normal search. This supports resolving \"Preceding/Succeeding entry\"-style links that do not resolve directly to a bib id."
-          },
-          {
-            "name": "linking_entry_marc_tag",
-            "type": "string",
-            "in": "query",
-            "description": "MARC tag of the linking entry field (e.g. \"780\"). Required alongside linking_entry_uri, linking_entry_marc_tag_index, and linking_entry_hash to trigger linking entry resolution."
-          },
-          {
-            "name": "linking_entry_marc_tag_index",
-            "type": "integer",
-            "in": "query",
-            "description": "Index of the linking entry field among repeated occurrences of the same linking_entry_marc_tag on the resource. Required alongside linking_entry_uri, linking_entry_marc_tag, and linking_entry_hash to trigger linking entry resolution."
-          },
-          {
-            "name": "linking_entry_hash",
-            "type": "integer",
-            "in": "query",
-            "description": "Hash identifying the specific linking entry field, used to verify the field has not changed since the link was generated. Required alongside linking_entry_uri, linking_entry_marc_tag, and linking_entry_marc_tag_index to trigger linking entry resolution."
           }
         ],
         "responses": {
           "200": {
-            "description": "An array of resources. If linking_entry_uri, linking_entry_marc_tag, linking_entry_marc_tag_index, and linking_entry_hash are all supplied, the response is instead a LinkingEntryResponse describing resources matching the resolved linking entry.",
+            "description": "An array of resources. If search_scope=linking_entry, the response is instead a LinkingEntryResponse describing resources matching the resolved linking entry.",
             "schema": {
               "$ref": "#/definitions/ResourcesResponse"
             }
           },
           "400": {
-            "description": "The query derived from the linking entry params could not be processed (name: IndexSearchError)",
+            "description": "The query derived from the linking entry q could not be processed (name: IndexSearchError)",
             "schema": {
               "$ref": "#/definitions/LinkingEntryError"
             }
           },
           "404": {
-            "description": "Returned when the bib identified by linking_entry_uri can't be found (name: LinkingEntryBibNotFoundError), or when no linking entry field matching linking_entry_marc_tag/linking_entry_marc_tag_index/linking_entry_hash is found on that bib, or the resolved entry matches no resource (name: LinkingEntryBadLinkError)",
+            "description": "Returned when search_scope=linking_entry and the bib identified by uri can't be found (name: LinkingEntryBibNotFoundError), or when no linking entry field matching marcTag/marcTagIndex/hash is found on that bib, or the resolved entry matches no resource (name: LinkingEntryBadLinkError)",
             "schema": {
               "$ref": "#/definitions/LinkingEntryError"
             }
           },
           "422": {
-            "description": "One or more linking entry params (linking_entry_uri, linking_entry_marc_tag, linking_entry_marc_tag_index, linking_entry_hash) is invalid (name: InvalidParameterError)",
+            "description": "search_scope=linking_entry but q is missing or not of the form uri/marcTag/marcTagIndex/hash (name: InvalidParameterError)",
             "schema": {
               "$ref": "#/definitions/LinkingEntryError"
             }
@@ -216,11 +193,7 @@
             "method.request.querystring.page",
             "method.request.querystring.per_page",
             "method.request.querystring.sort",
-            "method.request.querystring.sort_direction",
-            "method.request.querystring.linking_entry_uri",
-            "method.request.querystring.linking_entry_marc_tag",
-            "method.request.querystring.linking_entry_marc_tag_index",
-            "method.request.querystring.linking_entry_hash"
+            "method.request.querystring.sort_direction"
           ]
         }
       }

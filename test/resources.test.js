@@ -41,7 +41,7 @@ describe('Resources query', function () {
       if (esClient.get.restore) esClient.get.restore()
     })
 
-    it('returns params unchanged and null linkingEntryInfo when linking-entry params are absent', async () => {
+    it('returns params unchanged and null linkingEntryInfo when search_scope is not linking_entry', async () => {
       const params = { q: 'test' }
       const resp = await app.resources.parseLinkingEntryParams(params)
 
@@ -49,7 +49,7 @@ describe('Resources query', function () {
     })
 
     it('resolves a generated nyql query, and indication of partial match', async () => {
-      const params = { linking_entry_uri: 'b1234', linking_entry_marc_tag: '700', linking_entry_marc_tag_index: 1, linking_entry_hash: 123 }
+      const params = { q: 'b1234/700/1/123', search_scope: 'linking_entry' }
       const resp = await app.resources.parseLinkingEntryParams(params)
 
       expect(resp.params).to.deep.equal({ q: '((author adj "shakespeare")) not bibnumber = b1234', search_scope: 'cql' })
@@ -59,7 +59,7 @@ describe('Resources query', function () {
     })
 
     it('forwards additional search params (e.g. page) while overriding q and search_scope', async () => {
-      const params = { linking_entry_uri: 'b1234', linking_entry_marc_tag: '700', linking_entry_marc_tag_index: 1, linking_entry_hash: 123, page: '2', per_page: '10' }
+      const params = { q: 'b1234/700/1/123', search_scope: 'linking_entry', page: '2', per_page: '10' }
       const resp = await app.resources.parseLinkingEntryParams(params)
 
       expect(resp.params).to.deep.equal({
@@ -68,6 +68,18 @@ describe('Resources query', function () {
         q: '((author adj "shakespeare")) not bibnumber = b1234',
         search_scope: 'cql'
       })
+    })
+
+    it('throws InvalidParameterError when q does not have 4 segments', async () => {
+      const params = { q: 'b1234/700/1', search_scope: 'linking_entry' }
+
+      await expect(app.resources.parseLinkingEntryParams(params)).to.be.rejectedWith(errors.InvalidParameterError)
+    })
+
+    it('throws InvalidParameterError when marcTagIndex or hash are not integers', async () => {
+      const params = { q: 'b1234/700/x/123', search_scope: 'linking_entry' }
+
+      await expect(app.resources.parseLinkingEntryParams(params)).to.be.rejectedWith(errors.InvalidParameterError)
     })
   })
 
