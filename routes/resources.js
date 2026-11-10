@@ -45,11 +45,13 @@ module.exports = function (app) {
             req
           )
       } else if (params.include_aggregations === 'true') {
-        const [searchResp, aggsResp] = await Promise.all([
+        const results = await Promise.all([
           app.resources.search(params, { baseUrl: app.baseUrl }, req),
           app.resources.aggregations(params, { baseUrl: app.baseUrl })
         ])
-        searchResp.aggregations = aggsResp.itemListElement
+        const [search, aggs] = results
+        searchResp = search
+        searchResp.aggregations = aggs.itemListElement
       } else {
         searchResp = await app.resources
           .search(params, { baseUrl: app.baseUrl }, req)
