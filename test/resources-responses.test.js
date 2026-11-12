@@ -579,7 +579,6 @@ describe('Test Resources responses', function () {
 
       request.get(`${searchAllUrl}toast&include_aggregations=true&filters[format]=a`, function (err, response, body) {
         if (err) throw err
-        console.dir(body)
         const doc = JSON.parse(body)
 
         expect(doc.itemListElement).to.be.a('array')

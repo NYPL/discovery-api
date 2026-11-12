@@ -159,7 +159,6 @@ describe('JSONLD Serializers', () => {
             }
           ]
         })
-        console.log(serialized.linkingEntry)
         expect(serialized.linkingEntry[0].path).to.eq(null)
       })
       it('includes query label and display values', async () => {
