@@ -1,6 +1,6 @@
 # Changelog
 
-## Prerelease
+## [1.3.0] 
 - add linking-entry endpoint (SCC-5598) 
 - change 'bib number' NYQL index to bibnumber
 

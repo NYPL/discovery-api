@@ -228,7 +228,7 @@ describe('request logging', function () {
   })
 })
 
-describe('resources linking-entry route', function () {
+describe('resources linking_entry search scope', function () {
   let app
 
   before(function () {
@@ -236,7 +236,7 @@ describe('resources linking-entry route', function () {
   })
 
   beforeEach(function () {
-    sinon.spy(app.resources, 'linkingEntry')
+    sinon.spy(app.resources, 'parseLinkingEntryParams')
     sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
     sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], display: 'display', label: 'Label', hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
   })
@@ -245,35 +245,31 @@ describe('resources linking-entry route', function () {
     if (esClient.get.restore) esClient.get.restore()
     if (esClient.search.restore) esClient.search.restore()
     if (app.resources.search.restore) app.resources.search.restore()
-    app.resources.linkingEntry.restore?.()
+    app.resources.parseLinkingEntryParams.restore?.()
   })
 
-  it('routes path params to app.resources.linkingEntry', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123`)
+  it('routes search_scope=linking_entry and packed q to app.resources.parseLinkingEntryParams', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=b1234/700/0/123&search_scope=linking_entry`)
 
-    sinon.assert.calledWith(app.resources.linkingEntry, {
-      uri: 'b1234',
-      marcTag: '700',
-      marcTagIndex: '0',
-      hash: '123'
+    sinon.assert.calledWith(app.resources.parseLinkingEntryParams, {
+      q: 'b1234/700/0/123',
+      search_scope: 'linking_entry'
     })
   })
 
-  it('routes query params alongside path params to app.resources.linkingEntry', async () => {
-    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123?page=2&per_page=10`)
+  it('routes other query params alongside the linking_entry scope', async () => {
+    await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=b1234/700/0/123&search_scope=linking_entry&page=2&per_page=10`)
 
-    sinon.assert.calledWith(app.resources.linkingEntry, {
-      uri: 'b1234',
-      marcTag: '700',
-      marcTagIndex: '0',
-      hash: '123',
+    sinon.assert.calledWith(app.resources.parseLinkingEntryParams, {
+      q: 'b1234/700/0/123',
+      search_scope: 'linking_entry',
       page: '2',
       per_page: '10'
     })
   })
 
   it('returns the resolved response body', async () => {
-    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources/linking-entry/b1234/700/0/123`)
+    const response = await axios.get(`${global.TEST_BASE_URL}/api/v0.1/discovery/resources?q=b1234/700/0/123&search_scope=linking_entry`)
 
     expect(response.status).to.equal(200)
     // search results stubbed to just be number of results. in real life, there will be actual bib results included.
