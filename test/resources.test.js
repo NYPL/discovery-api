@@ -33,38 +33,53 @@ describe('Resources query', function () {
     fixtures.disableScsbFixtures()
   })
 
-  describe('linkingEntry', function () {
+  describe('parseLinkingEntryParams', function () {
     beforeEach(() => {
-      sinon.stub(app.resources, 'search').resolves({ totalResults: 125 })
       sinon.stub(esClient, 'get').resolves({ _source: { linkingEntry: [{ author: ['shakespeare'], hash: 123, marcTag: '700', marcTagIndex: 0 }] } })
     })
     afterEach(() => {
       if (esClient.get.restore) esClient.get.restore()
-      if (esClient.search.restore) esClient.search.restore()
-      if (app.resources.search.restore) app.resources.search.restore()
     })
 
-    it('triggers a search call with generated nyql query, and indication of partial match', async () => {
-      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: 1, hash: 123 }
-      const resp = await app.resources.linkingEntry(params)
+    it('returns params unchanged and null linkingEntryInfo when search_scope is not linking_entry', async () => {
+      const params = { q: 'test' }
+      const resp = await app.resources.parseLinkingEntryParams(params)
 
-      sinon.assert.calledWith(app.resources.search, { q: '((author adj "shakespeare")) not bibnumber = b1234', search_scope: 'cql' })
-      expect(resp['@type']).to.equal('linkingEntryItemList')
+      expect(resp).to.deep.equal({ params, linkingEntryInfo: null })
+    })
+
+    it('resolves a generated nyql query, and indication of partial match', async () => {
+      const params = { q: 'b1234/700/1/123', search_scope: 'linking_entry' }
+      const resp = await app.resources.parseLinkingEntryParams(params)
+
+      expect(resp.params).to.deep.equal({ q: '((author adj "shakespeare")) not bibnumber = b1234', search_scope: 'cql' })
       expect(resp.linkingEntryInfo.resultsDerivedFromPartialMatch).to.equal(true)
       expect(resp.linkingEntryInfo.originalLinkingEntryField).to.be.a('string')
       expect(resp.linkingEntryInfo.nyqlQuery).to.be.a('string')
     })
 
     it('forwards additional search params (e.g. page) while overriding q and search_scope', async () => {
-      const params = { uri: 'b1234', marcTag: '700', marcTagIndex: 1, hash: 123, page: '2', per_page: '10' }
-      await app.resources.linkingEntry(params)
+      const params = { q: 'b1234/700/1/123', search_scope: 'linking_entry', page: '2', per_page: '10' }
+      const resp = await app.resources.parseLinkingEntryParams(params)
 
-      sinon.assert.calledWith(app.resources.search, {
+      expect(resp.params).to.deep.equal({
         page: '2',
         per_page: '10',
         q: '((author adj "shakespeare")) not bibnumber = b1234',
         search_scope: 'cql'
       })
+    })
+
+    it('throws InvalidParameterError when q does not have 4 segments', async () => {
+      const params = { q: 'b1234/700/1', search_scope: 'linking_entry' }
+
+      await expect(app.resources.parseLinkingEntryParams(params)).to.be.rejectedWith(errors.InvalidParameterError)
+    })
+
+    it('throws InvalidParameterError when marcTagIndex or hash are not integers', async () => {
+      const params = { q: 'b1234/700/x/123', search_scope: 'linking_entry' }
+
+      await expect(app.resources.parseLinkingEntryParams(params)).to.be.rejectedWith(errors.InvalidParameterError)
     })
   })
 

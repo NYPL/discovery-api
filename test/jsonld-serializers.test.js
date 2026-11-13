@@ -139,55 +139,27 @@ describe('JSONLD Serializers', () => {
           }
         ]
         })
-        expect(serialized.parallelLinkingEntry).to.equal(undefined)
+        expect(serialized.linkingEntry.filter(({ parallelDisplay }) => !!parallelDisplay)).to.have.lengthOf(0)
       })
-      it('includes parallels with null padding when there are some parallels', async () => {
+      it('omits url for orphan parallels', async () => {
         const serialized = await ResourceSerializer.serialize({
-          linkingEntry:
-        [
-          {
-            parallelDisplay: null,
-            label: 'Continues',
-            display: 'linked entry with no parallel',
-            marcTag: '780',
-            issn: null,
-            isbn: null,
-            language: null,
-            oclc: null,
-            lccn: null,
-            hash: 6357638185,
-            marcTagIndex: 0
-          },
-          {
-            parallelDisplay: '四海 之 友 1974-1984',
-            label: 'Continues',
-            display: 'Si hai zhi you 1974-1984',
-            marcTag: '780',
-            issn: null,
-            isbn: null,
-            language: null,
-            oclc: null,
-            lccn: null,
-            hash: 6357638185,
-            marcTagIndex: 0
-          },
-          {
-            parallelDisplay: '宏觀',
-            label: 'Continued By',
-            display: 'Hong guan',
-            marcTag: '785',
-            issn: null,
-            isbn: null,
-            language: null,
-            oclc: null,
-            lccn: null,
-            hash: 4789475577,
-            marcTagIndex: 0
-          }
-        ]
+          linkingEntry: [
+            {
+              parallelDisplay: '四海 之 友 1974-1984',
+              label: 'Continues',
+              display: null,
+              marcTag: '780',
+              issn: null,
+              isbn: null,
+              language: null,
+              oclc: null,
+              lccn: null,
+              hash: 6357638185,
+              marcTagIndex: 0
+            }
+          ]
         })
-        expect(serialized.parallelLinkingEntry.length).to.equal(serialized.linkingEntry.length)
-        expect(serialized.parallelLinkingEntry[0]).to.be.equal(null)
+        expect(serialized.linkingEntry[0].path).to.eq(null)
       })
       it('includes query label and display values', async () => {
         const serialized = await ResourceSerializer.serialize({
